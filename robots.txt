@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.aitoolbox.hk/sitemap.xml
+
+# AI Tool Lab - English Sitemap

@@ -1,0 +1,16 @@
+# Environment variables — never commit secrets
+.env
+.env.*
+!.env.example
+
+# DataForSEO keyword data — local only, never commit
+data/_kw/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# OS
+.DS_Store
+Thumbs.db
