@@ -32,6 +32,10 @@ BACK_TO_TOP_BLOCK = '''<button id="backToTop" aria-label="Back to top">
 document.addEventListener("DOMContentLoaded",function(){var b=document.getElementById("backToTop");if(!b)return;var s=function(){if(window.scrollY>400){b.classList.add("visible")}else{b.classList.remove("visible")}};window.addEventListener("scroll",s,{passive:true});s();b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"})});});
 </script>'''
 
+# ─── Verification tags (Google/Yandex/etc.) ──────────────────────────────────
+VERIFICATION_BLOCK = '''    <meta name="yandex-verification" content="5ae78527ec9bcb4b" />
+'''
+
 # ─── Global nav (English) ─────────────────────────────────────────────────────
 GLOBAL_NAV_EN = '''    <nav class="global-nav" aria-label="Global navigation">
         <div class="global-nav-inner">
@@ -356,7 +360,7 @@ def build_tool_page_en(tool: dict, all_tools: list, all_articles: list = None) -
     <script type="application/ld+json">{breadcrumb_json}</script>
     <script type="application/ld+json">{structured_json}</script>
     {faq_page_schema}
-{GA_BLOCK}
+{VERIFICATION_BLOCK}{GA_BLOCK}
 </head>
 <body>
 {header_html()}
@@ -510,7 +514,7 @@ def build_article_page_en(article: dict, all_articles: list, all_tools: list = N
     <link rel="stylesheet" href="/css/style.css">
     <script type="application/ld+json">{breadcrumb_json}</script>
     <script type="application/ld+json">{structured_json}</script>
-{GA_BLOCK}
+{VERIFICATION_BLOCK}{GA_BLOCK}
 </head>
 <body>
 {header_html()}
@@ -582,7 +586,7 @@ def build_category_page_en(cat_name: str, tools: list) -> str:
     <link rel="canonical" href="{SITE_DOMAIN}/category/{cat_slug}/">
 {hreflang}    <link rel="stylesheet" href="/css/style.css">
     <script type="application/ld+json">{breadcrumb_json}</script>
-{GA_BLOCK}
+{VERIFICATION_BLOCK}{GA_BLOCK}
 </head>
 <body>
 {header_html()}
@@ -632,7 +636,7 @@ def build_article_list_en(articles: list) -> str:
     <meta name="description" content="In-depth AI tool reviews, comparisons, and guides. Updated daily with practical advice for using AI to save time and make money.">
     <link rel="canonical" href="{SITE_DOMAIN}/articles/">
 {hreflang}    <link rel="stylesheet" href="/css/style.css">
-{GA_BLOCK}
+{VERIFICATION_BLOCK}{GA_BLOCK}
 </head>
 <body>
 {header_html()}
@@ -679,7 +683,7 @@ def build_category_index_en(tools_by_cat: dict) -> str:
     <meta name="description" content="Browse all AI tool categories. Find the best AI tools for writing, coding, image generation, video, and more.">
     <link rel="canonical" href="{SITE_DOMAIN}/category/">
 {hreflang}    <link rel="stylesheet" href="/css/style.css">
-{GA_BLOCK}
+{VERIFICATION_BLOCK}{GA_BLOCK}
 </head>
 <body>
 {header_html()}
@@ -770,7 +774,7 @@ def build_index_en(tools: list, articles: list) -> str:
     <meta name="twitter:description" content="Find the best AI tools for writing, coding, image generation, and productivity. Updated daily.">
     <meta name="twitter:image" content="{SITE_DOMAIN}/images/logo.png">
     <link rel="stylesheet" href="/css/style.css">
-{GA_BLOCK}
+{VERIFICATION_BLOCK}{GA_BLOCK}
 </head>
 <body>
 {header_html()}
