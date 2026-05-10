@@ -35,9 +35,9 @@ document.addEventListener("DOMContentLoaded",function(){var b=document.getElemen
 # ─── Global nav (English) ─────────────────────────────────────────────────────
 GLOBAL_NAV_EN = '''    <nav class="global-nav" aria-label="Global navigation">
         <div class="global-nav-inner">
-            <a href="category/" class="gn-item">📂 All Categories</a>
-            <a href="articles/" class="gn-item">📖 Articles</a>
-            <a href="" class="gn-item">🏠 Home</a>
+            <a href="/category/" class="gn-item">📂 All Categories</a>
+            <a href="/articles/" class="gn-item">📖 Articles</a>
+            <a href="/" class="gn-item">🏠 Home</a>
         </div>
     </nav>'''
 
@@ -152,7 +152,7 @@ def markdown_to_html(md: str) -> str:
 def header_html(title_text: str = "AI Tool Lab") -> str:
     return f'''    <header class="header">
         <div class="header-inner">
-            <a href="" style="text-decoration:none;">
+            <a href="/" style="text-decoration:none;">
                 <h1>🛠️ {SITE_NAME} <span>Daily updates · 500+ AI tools</span></h1>
             </a>
         </div>
@@ -207,7 +207,7 @@ def build_tool_page_en(tool: dict, all_tools: list, all_articles: list = None) -
     if selected:
         cards = ''
         for r in selected:
-            cards += f'''<a href="tools/{r['slug']}/" class="related-card">
+            cards += f'''<a href="/tools/{r['slug']}/" class="related-card">
                 <div style="font-size:24px;margin-bottom:8px;">{r['emoji']}</div>
                 <div style="font-weight:600;">{r['name']}</div>
                 <div style="font-size:13px;color:#666;">{r.get('category','')}</div>
@@ -227,7 +227,7 @@ def build_tool_page_en(tool: dict, all_tools: list, all_articles: list = None) -
         if matched:
             cards = ''
             for a in matched[:3]:
-                cards += f'''<a href="articles/{a['slug']}/" class="related-card">
+                cards += f'''<a href="/articles/{a['slug']}/" class="related-card">
                     <div style="font-weight:600;margin-bottom:4px;">📖 {escape_html(a['title'][:40])}</div>
                     <div style="font-size:13px;color:#666;">{a.get('dateFull', a.get('date',''))}</div>
                 </a>\n'''
@@ -362,7 +362,7 @@ def build_tool_page_en(tool: dict, all_tools: list, all_articles: list = None) -
 {header_html()}
 
     <nav class="breadcrumb" aria-label="Breadcrumb">
-        <a href="">Home</a> &gt; <a href="category/{cat_slug}/">{escape_html(cat)}</a> &gt; <span>{escape_html(name)}</span>
+        <a href="/">Home</a> &gt; <a href="/category/{cat_slug}/">{escape_html(cat)}</a> &gt; <span>{escape_html(name)}</span>
     </nav>
 
     <main class="article-container">
@@ -429,7 +429,7 @@ def build_article_page_en(article: dict, all_articles: list, all_tools: list = N
         if matched:
             cards = ''
             for t in matched[:5]:
-                cards += f'''<a href="tools/{t['slug']}/" class="related-card">
+                cards += f'''<a href="/tools/{t['slug']}/" class="related-card">
                     <div style="font-size:24px;margin-bottom:8px;">{t['emoji']}</div>
                     <div style="font-weight:600;">{escape_html(t['name'])}</div>
                     <div style="font-size:13px;color:#666;">{escape_html(t.get('category',''))}</div>
@@ -447,7 +447,7 @@ def build_article_page_en(article: dict, all_articles: list, all_tools: list = N
     if same_cat:
         cards = ''
         for a in same_cat[:3]:
-            cards += f'''<a href="articles/{a['slug']}/" class="related-card">
+            cards += f'''<a href="/articles/{a['slug']}/" class="related-card">
                 <div style="font-weight:600;margin-bottom:4px;">{escape_html(a['title'])}</div>
                 <div style="font-size:13px;color:#666;">{a.get('dateFull', a.get('date',''))}</div>
             </a>\n'''
@@ -516,7 +516,7 @@ def build_article_page_en(article: dict, all_articles: list, all_tools: list = N
 {header_html()}
 
     <nav class="breadcrumb" aria-label="Breadcrumb">
-        <a href="">Home</a> &gt; <a href="category/{cat_slug}/">{escape_html(cat)}</a> &gt; <span>{escape_html(title)[:30]}...</span>
+        <a href="/">Home</a> &gt; <a href="/category/{cat_slug}/">{escape_html(cat)}</a> &gt; <span>{escape_html(title)[:30]}...</span>
     </nav>
 
     <main class="article-container">
@@ -549,7 +549,7 @@ def build_category_page_en(cat_name: str, tools: list) -> str:
         if t.get('badge'):
             bc = {'hot':'#ff4444','new':'#00aa00','pick':'#667eea'}.get(t['badge'].get('type'),'#667eea')
             badge_html = f'<span class="badge" style="background:{bc};color:#fff;padding:2px 6px;border-radius:3px;font-size:11px;">{t["badge"]["text"]}</span>'
-        tool_cards += f'''<a href="tools/{t['slug']}/" class="tool-card">
+        tool_cards += f'''<a href="/tools/{t['slug']}/" class="tool-card">
             <div class="tool-icon" style="background:{t['color']};">{t['emoji']}</div>
             <div class="tool-info">
                 <h3>{escape_html(t['name'])} {badge_html}</h3>
@@ -588,7 +588,7 @@ def build_category_page_en(cat_name: str, tools: list) -> str:
 {header_html()}
 
     <nav class="breadcrumb" aria-label="Breadcrumb">
-        <a href="">Home</a> &gt; <a href="category/">Categories</a> &gt; <span>{escape_html(cat_name)}</span>
+        <a href="/">Home</a> &gt; <a href="/category/">Categories</a> &gt; <span>{escape_html(cat_name)}</span>
     </nav>
 
     <main class="tool-list-container">
@@ -614,7 +614,7 @@ def build_article_list_en(articles: list) -> str:
     cards   = ''
     for a in page1:
         cards += f'''<article class="article-card">
-            <h3><a href="articles/{a['slug']}/">{escape_html(a['title'])}</a></h3>
+            <h3><a href="/articles/{a['slug']}/">{escape_html(a['title'])}</a></h3>
             <div class="article-meta">
                 <span class="date">{a.get('dateFull', a.get('date',''))}</span>
                 <span class="category">{escape_html(a.get('category',''))}</span>
@@ -638,7 +638,7 @@ def build_article_list_en(articles: list) -> str:
 {header_html()}
 
     <nav class="breadcrumb" aria-label="Breadcrumb">
-        <a href="">Home</a> &gt; <span>Articles</span>
+        <a href="/">Home</a> &gt; <span>Articles</span>
     </nav>
 
     <main class="article-list-container">
@@ -661,7 +661,7 @@ def build_category_index_en(tools_by_cat: dict) -> str:
     for cat_name, tools in tools_by_cat.items():
         cat_slug  = get_category_slug_en(cat_name)
         sample_emoji = tools[0]['emoji'] if tools else '🤖'
-        cat_cards += f'''<a href="category/{cat_slug}/" class="tool-card" style="text-decoration:none;">
+        cat_cards += f'''<a href="/category/{cat_slug}/" class="tool-card" style="text-decoration:none;">
             <div class="tool-icon" style="background:#667eea;">{sample_emoji}</div>
             <div class="tool-info">
                 <h3>{escape_html(cat_name)}</h3>
@@ -685,7 +685,7 @@ def build_category_index_en(tools_by_cat: dict) -> str:
 {header_html()}
 
     <nav class="breadcrumb" aria-label="Breadcrumb">
-        <a href="">Home</a> &gt; <span>All Categories</span>
+        <a href="/">Home</a> &gt; <span>All Categories</span>
     </nav>
 
     <main class="tool-list-container">
@@ -719,7 +719,7 @@ def build_index_en(tools: list, articles: list) -> str:
         if t.get('badge'):
             bc = {'hot':'#ff4444','new':'#00aa00','pick':'#667eea'}.get(t['badge'].get('type'),'#667eea')
             badge_html = f'<span class="badge" style="background:{bc};color:#fff;padding:2px 6px;border-radius:3px;font-size:11px;margin-left:6px;">{t["badge"]["text"]}</span>'
-        tool_cards += f'''<a href="tools/{t['slug']}/" class="tool-card">
+        tool_cards += f'''<a href="/tools/{t['slug']}/" class="tool-card">
             <div class="tool-icon" style="background:{t['color']};">{t['emoji']}</div>
             <div class="tool-info">
                 <h3>{escape_html(t['name'])}{badge_html}</h3>
@@ -735,7 +735,7 @@ def build_index_en(tools: list, articles: list) -> str:
     article_cards = ''
     for a in articles[:5]:
         article_cards += f'''<article class="article-card">
-            <h3><a href="articles/{a['slug']}/">{escape_html(a['title'])}</a></h3>
+            <h3><a href="/articles/{a['slug']}/">{escape_html(a['title'])}</a></h3>
             <div class="article-meta">
                 <span class="date">{a.get('dateFull', a.get('date',''))}</span>
                 <span class="category">{escape_html(a.get('category',''))}</span>
@@ -782,8 +782,8 @@ def build_index_en(tools: list, articles: list) -> str:
                 {total_tools}+ AI tools reviewed and ranked. Updated daily. Last updated: {today}.
             </p>
             <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
-                <a href="category/" class="action-btn action-btn-primary">Browse All Categories</a>
-                <a href="articles/" class="action-btn">Read Guides</a>
+                <a href="/category/" class="action-btn action-btn-primary">Browse All Categories</a>
+                <a href="/articles/" class="action-btn">Read Guides</a>
             </div>
         </section>
 
@@ -793,7 +793,7 @@ def build_index_en(tools: list, articles: list) -> str:
                 {tool_cards}
             </div>
             <div style="text-align:center;margin-top:24px;">
-                <a href="category/" class="action-btn">View All {total_tools}+ Tools →</a>
+                <a href="/category/" class="action-btn">View All {total_tools}+ Tools →</a>
             </div>
         </section>
 
@@ -803,7 +803,7 @@ def build_index_en(tools: list, articles: list) -> str:
                 {article_cards}
             </div>
             <div style="text-align:center;margin-top:24px;">
-                <a href="articles/" class="action-btn">All Articles →</a>
+                <a href="/articles/" class="action-btn">All Articles →</a>
             </div>
         </section>
     </main>
