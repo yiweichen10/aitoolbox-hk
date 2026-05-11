@@ -392,9 +392,43 @@ body {
   font-weight: 700;
   font-size: 15px;
   cursor: pointer;
-  transition: var(--transition);
-  box-shadow: var(--shadow-md);
+  transition: all 0.2s ease;
 }
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin: 40px 0;
+}
+.page-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  height: 40px;
+  padding: 0 12px;
+  background: var(--surface-bg);
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius-sm);
+  color: var(--text-main);
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
+}
+.page-link:hover {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+  transform: translateY(-2px);
+}
+.page-link.active {
+  background: var(--bg-gradient);
+  color: #fff;
+  border-color: transparent;
+}
+
 .newsletter button:hover {
   transform: translateY(-3px);
   box-shadow: var(--shadow-lg);

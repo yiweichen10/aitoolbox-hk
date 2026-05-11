@@ -611,12 +611,9 @@ def build_category_page_en(cat_name: str, tools: list) -> str:
 
 # ─── Article list page ────────────────────────────────────────────────────────
 
-def build_article_list_en(articles: list) -> str:
-    ITEMS_PER_PAGE = 10
-    total   = len(articles)
-    page1   = articles[:ITEMS_PER_PAGE]
+def build_article_list_en(articles: list, current_page: int = 1, total_pages: int = 1) -> str:
     cards   = ''
-    for a in page1:
+    for a in articles:
         cards += f'''<article class="article-card">
             <h3><a href="/articles/{a['slug']}/">{escape_html(a['title'])}</a></h3>
             <div class="article-meta">
@@ -625,6 +622,25 @@ def build_article_list_en(articles: list) -> str:
             </div>
             <p class="summary">{escape_html(a.get('description','')[:150])}</p>
         </article>\n'''
+
+    # Pagination controls
+    pagination_html = ''
+    if total_pages > 1:
+        links = []
+        if current_page > 1:
+            prev_url = '/articles/' if current_page == 2 else f'/articles/page/{current_page-1}/'
+            links.append(f'<a href="{prev_url}" class="page-link">&laquo; Prev</a>')
+        
+        for p in range(1, total_pages + 1):
+            url = '/articles/' if p == 1 else f'/articles/page/{p}/'
+            active = ' active' if p == current_page else ''
+            links.append(f'<a href="{url}" class="page-link{active}">{p}</a>')
+            
+        if current_page < total_pages:
+            next_url = f'/articles/page/{current_page+1}/'
+            links.append(f'<a href="{next_url}" class="page-link">Next &raquo;</a>')
+            
+        pagination_html = f'<div class="pagination">{"".join(links)}</div>'
 
     hreflang = hreflang_tags('/articles/', '/articles/')
     return f'''<!DOCTYPE html>
@@ -647,9 +663,8 @@ def build_article_list_en(articles: list) -> str:
 
     <main class="article-list-container">
         <h1 style="margin-bottom:24px;">AI Tool Articles & Guides</h1>
-        <div class="article-list">
-            {cards}
-        </div>
+        <div class="article-list">{cards}</div>
+        {pagination_html}
     </main>
 
 {footer_html()}
@@ -909,6 +924,9 @@ def build_all_en(target: str = 'all'):
     with open(articles_en_path, encoding='utf-8') as f:
         articles  = json.load(f)
 
+    # Sort articles by date descending (newest first)
+    articles.sort(key=lambda x: x.get('date', ''), reverse=True)
+
     published_tools = [t for t in all_tools if t.get('published', False)]
     print(f'[EN] {len(published_tools)} published tools, {len(articles)} articles')
 
@@ -960,13 +978,26 @@ def build_all_en(target: str = 'all'):
                 f.write(html)
             print(f'[OK] en/articles/{slug}/index.html')
 
-        # Article list
-        dir_path = os.path.join(OUT_DIR, 'articles')
-        os.makedirs(dir_path, exist_ok=True)
-        html = build_article_list_en(articles)
-        with open(os.path.join(dir_path, 'index.html'), 'w', encoding='utf-8') as f:
-            f.write(html)
-        print(f'[OK] en/articles/index.html')
+        # Article list with pagination
+        ITEMS_PER_PAGE = 10
+        total_articles = len(articles)
+        total_pages = (total_articles + ITEMS_PER_PAGE - 1) // ITEMS_PER_PAGE
+
+        for p in range(1, total_pages + 1):
+            start = (p - 1) * ITEMS_PER_PAGE
+            end = start + ITEMS_PER_PAGE
+            page_articles = articles[start:end]
+            
+            if p == 1:
+                dir_path = os.path.join(OUT_DIR, 'articles')
+            else:
+                dir_path = os.path.join(OUT_DIR, 'articles', 'page', str(p))
+            
+            os.makedirs(dir_path, exist_ok=True)
+            html = build_article_list_en(page_articles, p, total_pages)
+            with open(os.path.join(dir_path, 'index.html'), 'w', encoding='utf-8') as f:
+                f.write(html)
+            print(f'[OK] en/articles/{"index.html" if p==1 else f"page/{p}/index.html"}')
 
     # ── English homepage ──────────────────────────────────────────────────────
     if target in ('all', 'index'):
