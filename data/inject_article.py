@@ -1,52 +1,31 @@
-import json, sys, re
-sys.stdout.reconfigure(encoding='utf-8')
+import json
+import os
 
-# 读草稿
-with open('data/article_draft.md', encoding='utf-8') as f:
-    content = f.read().strip()
+article_path = r'C:\Users\27040\WorkBuddy\20260321092139\seo-site-en/data/article_draft_b2b.md'
+json_path = r'C:\Users\27040\WorkBuddy\20260321092139\seo-site-en/data/articles_en.json'
 
-# 验证质量
-words = len(content.split())
-h2s = re.findall(r'^## .+', content, re.MULTILINE)
-h3s = re.findall(r'^### .+', content, re.MULTILINE)
-table_rows = re.findall(r'^\|.+\|', content, re.MULTILINE)
-banned = ['leverage','utilize','seamlessly','game-changing','empower','streamline',
-          'delve into','dive into','transformative','comprehensive','revolutionize',
-          'cutting-edge','as an AI','in conclusion']
-hits = [w for w in banned if w.lower() in content.lower()]
+with open(article_path, 'r', encoding='utf-8') as f:
+    content = f.read()
 
-print(f'字数: {words}')
-print(f'H2数: {len(h2s)}')
-print(f'H3数(FAQ): {len(h3s)}')
-print(f'表格行数: {len(table_rows)}')
-print(f'禁用词: {hits if hits else "无"}')
+new_article = {
+    "title": "Best AI Tools for B2B Marketing: The 2026 High-Performance Stack",
+    "slug": "best-ai-tools-b2b-marketing-2026",
+    "date": "2026-05-12",
+    "dateFull": "May 12, 2026",
+    "category": "AI Tools",
+    "description": "Explore the best AI tools for B2B marketing in 2026. Learn how to use an AI B2B lead generation and sales automation to close bigger deals faster.",
+    "keywords": "AI tools for B2B marketing, AI B2B lead generation, best AI for B2B content, AI B2B sales automation, B2B marketing AI generator, AI for B2B customer acquisition",
+    "lang": "en",
+    "type": "E",
+    "content": content
+}
 
-ok = words >= 2000 and len(table_rows) >= 5 and len(h3s) >= 2 and not hits
-print(f'\n质检结果: {"GOOD ✅" if ok else "CHECK ⚠️"}')
+with open(json_path, 'r', encoding='utf-8') as f:
+    articles = json.load(f)
 
-if ok:
-    new_article = {
-        "slug": "how-to-use-ai-to-make-money-online-2026",
-        "title": "How to Use AI to Make Money Online in 2026: 9 Proven Methods",
-        "description": "Nine tested ways to make money online with AI in 2026, from freelance writing to selling AI art. Includes real income ranges, tools needed, and how to start.",
-        "keywords": "how to use AI to make money online, make money with AI, AI side hustle 2026",
-        "category": "AI Guide",
-        "date": "2026-04-19",
-        "dateFull": "April 19, 2026",
-        "content": content
-    }
+articles.append(new_article)
 
-    with open('data/articles_en.json', encoding='utf-8') as f:
-        arts = json.load(f)
+with open(json_path, 'w', encoding='utf-8') as f:
+    json.dump(articles, f, indent=2, ensure_ascii=False)
 
-    # 检查是否已存在
-    existing = [a for a in arts if a['slug'] == new_article['slug']]
-    if existing:
-        print(f'\n已存在该slug，跳过写入')
-    else:
-        arts.append(new_article)
-        with open('data/articles_en.json', 'w', encoding='utf-8') as f:
-            json.dump(arts, f, ensure_ascii=False, indent=2)
-        print(f'\n已写入 articles_en.json，总篇数: {len(arts)}')
-else:
-    print('\n质检未通过，未写入')
+print("Article appended successfully.")
