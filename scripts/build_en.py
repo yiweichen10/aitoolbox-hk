@@ -620,7 +620,7 @@ def build_article_list_en(articles: list, current_page: int = 1, total_pages: in
                 <span class="date">{a.get('dateFull', a.get('date',''))}</span>
                 <span class="category">{escape_html(a.get('category',''))}</span>
             </div>
-            <p class="summary">{escape_html(a.get('description','')[:150])}</p>
+            <p class="summary">{escape_html(a.get('description',''))}</p>
         </article>\n'''
 
     # Pagination controls
@@ -759,7 +759,7 @@ def build_index_en(tools: list, articles: list) -> str:
                 <span class="date">{a.get('dateFull', a.get('date',''))}</span>
                 <span class="category">{escape_html(a.get('category',''))}</span>
             </div>
-            <p class="summary">{escape_html(a.get('description','')[:120])}</p>
+            <p class="summary">{escape_html(a.get('description',''))}</p>
         </article>\n'''
 
     total_tools = len(tools)
