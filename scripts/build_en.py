@@ -109,7 +109,7 @@ def markdown_to_html(md: str) -> str:
                 table += f'<td>{c}</td>'
             table += '</tr>'
         table += '</tbody></table>'
-        return table
+        return '\n' + table + '\n'
     html = re.sub(r'\n(\|.+\|)\n(\|[-:| ]+\|)\n((?:\|.+\|\n?)+)', table_replace, html)
     # Headings
     html = re.sub(r'^### (.+)$', r'<h3>\1</h3>', html, flags=re.MULTILINE)
