@@ -11,6 +11,9 @@ __pycache__/
 *.py[cod]
 *.pyo
 
+# Temp data scripts — never commit
+data/_*.py
+
 # OS
 .DS_Store
 Thumbs.db
