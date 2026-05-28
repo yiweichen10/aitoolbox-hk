@@ -5305,5 +5305,72 @@
     ],
     "content": "## What is Windsurf?\n\nWindsurf is an AI code editor built by Codeium (acquired by Cognition in 2025). It runs on a VS Code foundation and layers in deep AI integration — most notably the Cascade agent, which can plan and execute multi-step coding changes on its own.\n\nUnlike basic autocomplete tools, Cascade reads your entire project, figures out what needs to change, and does it across multiple files. You watch and approve.\n\n## Key Features\n\n- **Cascade Agent**: The headliner. Tell it \"add user authentication\" and it plans the steps, creates the files, installs packages, and runs tests — all in one flow.\n- **Multi-Model Support**: Switch between GPT-4, Claude, Gemini, and Cognition's own SWE-1.6 model depending on the task.\n- **Inline Completion**: Tab-to-accept suggestions that actually understand your project context.\n- **Terminal Integration**: AI can execute shell commands directly, install dependencies, and run builds.\n- **VS Code Compatible**: All your existing extensions work out of the box.\n\n## Pricing (as of May 2026)\n\n| Plan | Price | What you get |\n|------|-------|-------------|\n| Free | $0 | Basic completions, limited Cascade runs, standard models |\n| Light | $10/mo | Unlimited usage, standard models |\n| Pro | $15/mo | Everything in Light + premium models (Claude, GPT-4o), faster responses |\n| Max | $30/mo | Pro + longest context, priority queue |\n| Teams | Custom | Central billing, admin controls, shared settings |\n\n## How to Make Money with Windsurf\n\n1. **Freelance Faster**: Cascade cuts boilerplate time in half. More projects per month = more revenue.\n2. **Code-For-Others Services**: Offer \"AI-assisted development\" on Fiverr/Upwork. Clients love the speed.\n3. **Build SaaS Products**: Use the free tier to prototype MVPs, then ship paying products.\n4. **Teach Others**: Create tutorials comparing Windsurf vs Cursor. The niche is underserved.\n5. **Internal Tools for SMBs**: Small businesses pay $500-$2,000 for custom tools you can build in a weekend.\n\n## Tips for Getting Started\n\n1. **Start with Cascade**: Open a project, press Cmd+I, and describe what you want done. Watch it work.\n2. **Use the Free Tier First**: Do not upgrade until you hit the limits. Most people won't.\n3. **Try SWE-1.6 for Complex Tasks**: It handles multi-file changes better than GPT-4 in many cases.\n4. **Keep Your Extensions**: If it worked in VS Code, it works in Windsurf. No migration needed.\n5. **Learn the Keyboard Shortcuts**: Cmd+I (inline edit), Cmd+Shift+I (agent), Tab (accept). That is 90% of it.\n\n## Bottom Line\n\nWindsurf is the budget-conscious developer's AI editor. It does 90% of what Cursor does at 75% of the price (or free). The Cascade agent is genuinely useful for real work, not just demos. If you write code for a living and have not tried an AI editor yet, start here.\n",
     "created_date": "2026-05-27"
+  },
+  {
+    "name": "Replicate",
+    "slug": "replicate",
+    "emoji": "☁️",
+    "color": "#242424",
+    "description": "Cloud platform that turns open-source AI models into APIs you can call in minutes. Over 1,000 models covering image generation, text, video, and audio — all billed per second of GPU time. No servers to manage, no upfront commitment.",
+    "category": "AI Development",
+    "tags": [
+      {
+        "text": "API"
+      },
+      {
+        "text": "Open Source"
+      },
+      {
+        "text": "Pay-per-use"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "28K",
+    "badge": {
+      "type": "recommend",
+      "text": "PICK"
+    },
+    "url": "https://replicate.com",
+    "price": "Pay-per-second GPU pricing",
+    "platform": "Web / API / CLI",
+    "published": true,
+    "pros": [
+      "Over 1,000 open-source models ready to deploy — Stable Diffusion, Llama, Flux, video models, and more",
+      "Pay-per-second billing means you only pay for what you actually run; no monthly subscription trap",
+      "One-click API deployment: pick a model, get an endpoint in minutes, not days",
+      "Python and JavaScript SDKs are clean and well-documented",
+      "Fine-tuning support lets you train models on your own data without touching infrastructure"
+    ],
+    "cons": [
+      "Hot models hit concurrency limits during peak hours — your predictions queue up",
+      "GPU pricing adds up fast for long-running tasks like video generation or batch processing",
+      "Documentation is English-only and sometimes sparse for niche models",
+      "Some models require manual parameter tuning; not everything works out of the box",
+      "No persistent endpoints on the free tier — cold starts can add latency"
+    ],
+    "features": [
+      "Model marketplace: browse and deploy 1,000+ open-source AI models",
+      "RESTful API: every model gets a clean HTTP endpoint",
+      "Fine-tuning: upload your own dataset and customize a model",
+      "Batch predictions: run thousands of inputs in parallel",
+      "CLI tool: deploy and manage models from the terminal",
+      "Webhooks: get notified when async jobs finish"
+    ],
+    "faq": [
+      {
+        "question": "How much does Replicate actually cost to run?",
+        "answer": "It depends on the model and GPU type. Light models on T4 GPUs run around $0.000225/second ($0.80/hour). Heavy image or video models on A100 GPUs can hit $0.00115/second ($4.14/hour). A single Stable Diffusion generation costs roughly half a cent. Start small, watch the billing dashboard, and you will quickly learn where the money goes."
+      },
+      {
+        "question": "Can I build a SaaS product on top of Replicate?",
+        "answer": "Yes — that is one of the most common use cases. You wrap a Replicate model in your own web app, charge users a monthly fee or per-generation fee, and pocket the margin. Example: a headshot generator that costs you $0.005 per image on Replicate but you charge users $4.99 per session. The math works."
+      },
+      {
+        "question": "Replicate vs Hugging Face Inference — which is better?",
+        "answer": "Replicate is simpler for deployment: pick a model, get an API, done. Hugging Face gives you more control and a bigger community but the Inference API can feel clunkier. For shipping a product fast, Replicate wins. For research and experimentation, Hugging Face has more depth. Many teams use both."
+      }
+    ],
+    "content": "## What is Replicate?\n\nReplicate is a cloud platform that lets you run open-source AI models through a simple API. No GPU shopping, no CUDA driver headaches, no DevOps. You find a model, deploy it, and call it like any other web service.\n\nAs of mid-2026, the platform hosts over 1,000 models: Stable Diffusion variants, Flux, Llama, Mistral, video generators, audio tools, upscalers, and plenty of niche experiments from the research community. If someone open-sourced it and it gained traction, it is probably on Replicate.\n\nThe billing model is straightforward: you pay per second of GPU compute. No monthly fees, no commitments. Run a model for two seconds, pay for two seconds.\n\n## Key Features\n\n- **Model Marketplace**: Browse over 1,000 models by category. Image generation, text, video, audio, and more. Each model page shows example outputs, pricing, and usage stats.\n- **One-Click API**: Deploy any model and get a RESTful endpoint. The Python and JavaScript SDKs handle authentication and retries for you.\n- **Fine-Tuning**: Upload your own dataset and fine-tune supported models. Useful for branded image styles, custom text outputs, or domain-specific tasks.\n- **Batch Processing**: Queue up thousands of predictions and run them in parallel. Good for bulk image generation, transcription jobs, or data enrichment.\n- **Webhooks**: Long-running tasks (video generation, fine-tuning) notify you when they finish instead of making you poll.\n\n## Pricing (as of May 2026)\n\n| GPU Type | Price | Best For |\n|----------|-------|----------|\n| T4 | ~$0.000225/sec ($0.80/hr) | Light models, text, small images |\n| A40 | ~$0.000575/sec ($2.07/hr) | Medium models, batch jobs |\n| A100 (40GB) | ~$0.000895/sec ($3.22/hr) | Large image models, fine-tuning |\n| A100 (80GB) | ~$0.00115/sec ($4.14/hr) | Video generation, heavy fine-tuning |\n\nNo subscriptions. No minimums. You get $5 in free credits when you sign up.\n\n## How to Make Money with Replicate\n\n1. **Wrap a Model in a SaaS Product**: Pick a popular model (headshots, background removal, logo generation), build a simple web interface, and charge users per generation or via subscription. Your cost is fractions of a cent per request; your price can be dollars.\n\n2. **Offer AI Services on Freelance Platforms**: Clients on Fiverr and Upwork pay $50-$500 for batch image generation, video creation, or custom model fine-tuning. You do the work through Replicate and deliver the results.\n\n3. **Fine-Tune and Sell Access**: Train a model on a specific niche (real estate photos, product mockups, pet portraits) and offer it as a specialized service. The fine-tuning costs are low enough that a handful of paying customers cover it.\n\n4. **Build Internal Tools for Businesses**: Small businesses need AI capabilities but cannot hire ML engineers. Build them a custom tool powered by Replicate models and charge $200-$2,000/month for access.\n\n5. **Content Generation Pipelines**: Set up automated workflows that generate blog images, social media posts, or product descriptions. Sell the output or the service.\n\n## Tips for Getting Started\n\n1. **Use Your Free Credits First**: The $5 sign-up credit is enough to run hundreds of image generations or thousands of text completions. Experiment before you commit.\n2. **Start with the Official Examples**: Every model page has runnable example code. Copy it, tweak the prompt, run it. That is 80% of the learning curve.\n3. **Watch Your Billing Dashboard**: GPU seconds add up faster than you think, especially with video models. Set a spending alert.\n4. **Compare Models Before Committing**: There are often 5-10 versions of the same base model on the platform. Run the same prompt through a few of them and compare quality, speed, and cost.\n5. **Use Webhooks for Long Jobs**: Video generation can take minutes. Do not sit there polling. Set up a webhook and move on.\n\n## Bottom Line\n\nReplicate is the fastest path from \"I found this cool open-source model\" to \"I am running it in production.\" The pay-per-second pricing is fair, the SDK is clean, and the model selection covers most use cases. If you want to build AI-powered products without becoming a DevOps engineer, this is where you start.\n",
+    "created_date": "2026-05-28"
   }
 ]
