@@ -5372,5 +5372,73 @@
     ],
     "content": "## What is Replicate?\n\nReplicate is a cloud platform that lets you run open-source AI models through a simple API. No GPU shopping, no CUDA driver headaches, no DevOps. You find a model, deploy it, and call it like any other web service.\n\nAs of mid-2026, the platform hosts over 1,000 models: Stable Diffusion variants, Flux, Llama, Mistral, video generators, audio tools, upscalers, and plenty of niche experiments from the research community. If someone open-sourced it and it gained traction, it is probably on Replicate.\n\nThe billing model is straightforward: you pay per second of GPU compute. No monthly fees, no commitments. Run a model for two seconds, pay for two seconds.\n\n## Key Features\n\n- **Model Marketplace**: Browse over 1,000 models by category. Image generation, text, video, audio, and more. Each model page shows example outputs, pricing, and usage stats.\n- **One-Click API**: Deploy any model and get a RESTful endpoint. The Python and JavaScript SDKs handle authentication and retries for you.\n- **Fine-Tuning**: Upload your own dataset and fine-tune supported models. Useful for branded image styles, custom text outputs, or domain-specific tasks.\n- **Batch Processing**: Queue up thousands of predictions and run them in parallel. Good for bulk image generation, transcription jobs, or data enrichment.\n- **Webhooks**: Long-running tasks (video generation, fine-tuning) notify you when they finish instead of making you poll.\n\n## Pricing (as of May 2026)\n\n| GPU Type | Price | Best For |\n|----------|-------|----------|\n| T4 | ~$0.000225/sec ($0.80/hr) | Light models, text, small images |\n| A40 | ~$0.000575/sec ($2.07/hr) | Medium models, batch jobs |\n| A100 (40GB) | ~$0.000895/sec ($3.22/hr) | Large image models, fine-tuning |\n| A100 (80GB) | ~$0.00115/sec ($4.14/hr) | Video generation, heavy fine-tuning |\n\nNo subscriptions. No minimums. You get $5 in free credits when you sign up.\n\n## How to Make Money with Replicate\n\n1. **Wrap a Model in a SaaS Product**: Pick a popular model (headshots, background removal, logo generation), build a simple web interface, and charge users per generation or via subscription. Your cost is fractions of a cent per request; your price can be dollars.\n\n2. **Offer AI Services on Freelance Platforms**: Clients on Fiverr and Upwork pay $50-$500 for batch image generation, video creation, or custom model fine-tuning. You do the work through Replicate and deliver the results.\n\n3. **Fine-Tune and Sell Access**: Train a model on a specific niche (real estate photos, product mockups, pet portraits) and offer it as a specialized service. The fine-tuning costs are low enough that a handful of paying customers cover it.\n\n4. **Build Internal Tools for Businesses**: Small businesses need AI capabilities but cannot hire ML engineers. Build them a custom tool powered by Replicate models and charge $200-$2,000/month for access.\n\n5. **Content Generation Pipelines**: Set up automated workflows that generate blog images, social media posts, or product descriptions. Sell the output or the service.\n\n## Tips for Getting Started\n\n1. **Use Your Free Credits First**: The $5 sign-up credit is enough to run hundreds of image generations or thousands of text completions. Experiment before you commit.\n2. **Start with the Official Examples**: Every model page has runnable example code. Copy it, tweak the prompt, run it. That is 80% of the learning curve.\n3. **Watch Your Billing Dashboard**: GPU seconds add up faster than you think, especially with video models. Set a spending alert.\n4. **Compare Models Before Committing**: There are often 5-10 versions of the same base model on the platform. Run the same prompt through a few of them and compare quality, speed, and cost.\n5. **Use Webhooks for Long Jobs**: Video generation can take minutes. Do not sit there polling. Set up a webhook and move on.\n\n## Bottom Line\n\nReplicate is the fastest path from \"I found this cool open-source model\" to \"I am running it in production.\" The pay-per-second pricing is fair, the SDK is clean, and the model selection covers most use cases. If you want to build AI-powered products without becoming a DevOps engineer, this is where you start.\n",
     "created_date": "2026-05-28"
+  },
+  {
+    "name": "Copy.ai",
+    "slug": "copy.ai",
+    "emoji": "✍️",
+    "color": "#0B5EFF",
+    "description": "AI writing tool built for marketing teams and freelancers. Generate ad copy, emails, blog posts, and social content at scale. Used by 200K+ businesses to cut writing time and grow pipeline faster. The workflow builder and brand voice profiles make it practical for agencies and solo operators alike.",
+    "category": "AI Writing",
+    "tags": [
+      {
+        "text": "AI Writing"
+      },
+      {
+        "text": "Marketing"
+      },
+      {
+        "text": "Free tier",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "120K",
+    "badge": {
+      "type": "recommend",
+      "text": "PICK"
+    },
+    "url": "https://www.copy.ai",
+    "price": "Free + Pro $10/mo",
+    "platform": "Web / API",
+    "published": true,
+    "pros": [
+      "100+ marketing-specific templates that actually save time — no generic blog post generators here",
+      "Workflow automation: chain inputs, AI actions, and outputs into repeatable content pipelines",
+      "Brand voice profiles keep tone consistent across emails, ads, and social posts",
+      "Custom variables and dynamic fields make batch content production practical for agencies",
+      "Free plan is genuinely useful — 2,000 words/month gives you room to test before buying"
+    ],
+    "cons": [
+      "Long-form content quality falls short — stick to short-form (ads, emails, social) which it handles well",
+      "Output still needs human editing. Do not copy-paste directly; the AI voice is detectable",
+      "Limited multilingual depth — non-English output can feel robotic compared to dedicated tools",
+      "No native image generation; you still need Canva or Midjourney for visuals",
+      "The AI gets repetitive on similar prompts. You have to mix up your instructions"
+    ],
+    "features": [
+      "AI-powered marketing copy for ads, emails, landing pages, and social media",
+      "100+ built-in templates organized by channel and campaign type",
+      "Workflow builder: chain AI actions into repeatable content pipelines",
+      "Brand voice customization with saved profiles per client or project",
+      "Dynamic variables for personalized bulk content generation",
+      "Chrome extension to generate copy directly in any web app"
+    ],
+    "faq": [
+      {
+        "question": "Is Copy.ai worth paying for if I am a solo freelancer?",
+        "answer": "Yes, if you write client content regularly — blog posts, ad copy, email sequences. The $10/month plan pays for itself within the first week if you charge by the piece. The brand voice feature alone saves the time you would spend re-adjusting tone for each client."
+      },
+      {
+        "question": "Copy.ai vs Jasper vs ChatGPT — which one should I pick?",
+        "answer": "Copy.ai is best for ad copy, email marketing, and short-form content at scale. Jasper excels at long-form blog content. ChatGPT is the Swiss Army knife but needs more manual work. If your bread and butter is ads and emails, start with Copy.ai."
+      },
+      {
+        "question": "Does Copy.ai work for SEO content?",
+        "answer": "It can help with outlines and meta descriptions, but do not count on it for full-length SEO blog posts. The output is too generic and lacks the depth Google looks for. Pair it with a dedicated SEO writing tool or manual editing for ranking content."
+      }
+    ],
+    "content": "## What is Copy.ai?\n\nCopy.ai is an AI writing tool built for one thing: marketing copy that actually converts. Unlike general-purpose AI chatbots, Copy.ai comes with workflow templates, brand voice profiles, and content pipelines designed for real business use.\n\nThe platform focuses on short-form content — ad creative, email sequences, landing page copy, social media posts — where AI actually performs well. It won not write the next great American novel, but it will write 20 versions of a Facebook ad in under a minute.\n\nAs of mid-2026, Copy.ai has over 200,000 business users. Most of them are marketers, agency owners, and freelancers who need content in bulk without hiring more writers.\n\n## Key Features\n\n- **Template Library**: 100+ channel-specific templates — Google Ads, Facebook, LinkedIn, email marketing, landing pages, and more. Each template is pre-configured with the right structure for that format.\n- **Workflow Builder**: Automate content production. Set up a pipeline: input a product URL → AI generates 5 ad variants → inserts them into a spreadsheet. Runs on repeat.\n- **Brand Voice**: Save voice profiles per client. Switch between professional B2B and casual startup with one click instead of rewriting prompts.\n- **Dynamic Variables**: Insert placeholders like {{company_name}} or {{price}} into templates. Great for agencies running the same campaign for multiple clients.\n- **Chrome Extension**: Highlight any text field on the web and generate AI copy right there. Handy for LinkedIn, Gmail, and CRMs.\n\n## Pricing (as of May 2026)\n\n| Plan | Price | What you get |\n|------|-------|-------------|\n| Free | $0 | 2,000 words/month, basic templates |\n| Pro | $10/mo | Unlimited words, all templates, brand voices, workflows |\n| Growth | $25/mo | Everything in Pro + higher word limits, priority support |\n| Enterprise | Custom | SSO, custom templates, dedicated account manager |\n\n## How to Make Money with Copy.ai\n\n1. **Agency Content Services**: Charge clients $500-$2,000/month for AI-assisted content packages. Use workflows to generate ad copy, email sequences, and social posts in batches. Your margin is mostly labor-free after setup.\n2. **Freelance Copywriting Speed Boost**: Most freelance writers charge per piece. With Copy.ai, you write email sequences in 1 hour instead of 4. Take more clients, deliver faster, charge the same rates.\n3. **SaaS Email Marketing**: Build nurture sequences for your own product or clients. Drip campaigns convert at 2-5% — each new customer from an email you wrote in 10 minutes is pure profit.\n4. **Resell as a Service**: Package Copy.ai outputs for small businesses that cannot afford full-time copywriters. Flat $200/month for weekly social content + monthly email newsletter. They pay you, you use Copy.ai to deliver.\n5. **Facebook Ad Testing Lab**: Write 20 ad variants, run split tests with $5/day budgets, scale the winners. Freelance ad buyers charge $500-$1,500/month for this exact service.",
+    "created_date": "2026-05-29"
   }
 ]
