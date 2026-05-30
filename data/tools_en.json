@@ -5440,5 +5440,74 @@
     ],
     "content": "## What is Copy.ai?\n\nCopy.ai is an AI writing tool built for one thing: marketing copy that actually converts. Unlike general-purpose AI chatbots, Copy.ai comes with workflow templates, brand voice profiles, and content pipelines designed for real business use.\n\nThe platform focuses on short-form content — ad creative, email sequences, landing page copy, social media posts — where AI actually performs well. It won not write the next great American novel, but it will write 20 versions of a Facebook ad in under a minute.\n\nAs of mid-2026, Copy.ai has over 200,000 business users. Most of them are marketers, agency owners, and freelancers who need content in bulk without hiring more writers.\n\n## Key Features\n\n- **Template Library**: 100+ channel-specific templates — Google Ads, Facebook, LinkedIn, email marketing, landing pages, and more. Each template is pre-configured with the right structure for that format.\n- **Workflow Builder**: Automate content production. Set up a pipeline: input a product URL → AI generates 5 ad variants → inserts them into a spreadsheet. Runs on repeat.\n- **Brand Voice**: Save voice profiles per client. Switch between professional B2B and casual startup with one click instead of rewriting prompts.\n- **Dynamic Variables**: Insert placeholders like {{company_name}} or {{price}} into templates. Great for agencies running the same campaign for multiple clients.\n- **Chrome Extension**: Highlight any text field on the web and generate AI copy right there. Handy for LinkedIn, Gmail, and CRMs.\n\n## Pricing (as of May 2026)\n\n| Plan | Price | What you get |\n|------|-------|-------------|\n| Free | $0 | 2,000 words/month, basic templates |\n| Pro | $10/mo | Unlimited words, all templates, brand voices, workflows |\n| Growth | $25/mo | Everything in Pro + higher word limits, priority support |\n| Enterprise | Custom | SSO, custom templates, dedicated account manager |\n\n## How to Make Money with Copy.ai\n\n1. **Agency Content Services**: Charge clients $500-$2,000/month for AI-assisted content packages. Use workflows to generate ad copy, email sequences, and social posts in batches. Your margin is mostly labor-free after setup.\n2. **Freelance Copywriting Speed Boost**: Most freelance writers charge per piece. With Copy.ai, you write email sequences in 1 hour instead of 4. Take more clients, deliver faster, charge the same rates.\n3. **SaaS Email Marketing**: Build nurture sequences for your own product or clients. Drip campaigns convert at 2-5% — each new customer from an email you wrote in 10 minutes is pure profit.\n4. **Resell as a Service**: Package Copy.ai outputs for small businesses that cannot afford full-time copywriters. Flat $200/month for weekly social content + monthly email newsletter. They pay you, you use Copy.ai to deliver.\n5. **Facebook Ad Testing Lab**: Write 20 ad variants, run split tests with $5/day budgets, scale the winners. Freelance ad buyers charge $500-$1,500/month for this exact service.",
     "created_date": "2026-05-29"
+  },
+  {
+    "name": "Pictory",
+    "slug": "pictory",
+    "emoji": "🎬",
+    "color": "#8B5CF6",
+    "description": "Turn blog posts and scripts into professional videos without touching a timeline. Pictory extracts key points from your text, matches them with stock footage, adds AI voiceover and captions automatically. The 2026 update brought AI avatars for talking-head videos. Practical for content repurposing, social media clips, and faceless YouTube channels.",
+    "category": "AI Video",
+    "tags": [
+      {
+        "text": "AI Video"
+      },
+      {
+        "text": "Text to Video"
+      },
+      {
+        "text": "Free trial",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "500K",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://pictory.ai",
+    "price": "Free trial (14 days) + Starter $25/mo (annual)",
+    "platform": "Web",
+    "published": true,
+    "pros": [
+      "Drops a 2000-word blog post into a 5-minute video in about 15 minutes — real time saver for content repurposing",
+      "AI voiceover supports 70+ languages. The English voices sound natural, not like a robot reading a manual",
+      "Caption auto-generation is accurate enough for social media. You will still want to proofread names and technical terms",
+      "AI avatar feature lets you create talking-head videos without showing your face. Good for tutorials and faceless channels",
+      "No video editing skill required. If you can copy-paste text, you can make a video here"
+    ],
+    "cons": [
+      "Free trial puts watermarks on everything. You cannot use output commercially without paying",
+      "Video style is template-driven. If you want something that does not look like every other AI video, you will fight the templates",
+      "Rendering speed depends on your internet. Slow connections mean long waits",
+      "Avatar movements are stiff compared to real footage. Fine for explainers, not for branding videos",
+      "Monthly pricing ($29) is steep for what it does. Annual is the only sane option at $25/month"
+    ],
+    "features": [
+      "Text-to-video: paste articles/scripts and auto-generate matching video",
+      "AI voiceover with 70+ languages",
+      "Auto-caption generation with multi-language support",
+      "AI avatar for talking-head video creation",
+      "Stock media library (images, video clips, music tracks)",
+      "Drag-and-drop video editor for fine-tuning",
+      "Video trimming and clip extraction from longer recordings"
+    ],
+    "faq": [
+      {
+        "question": "Can I use Pictory to run a faceless YouTube channel?",
+        "answer": "Yes, and this is actually where Pictory shines. Write your script or grab an existing blog post, paste it in, pick a template, and Pictory produces a full video with stock footage, voiceover, and captions. The AI avatar can even act as your presenter. Many faceless channel operators run this as a side business — pick a niche (history facts, book summaries, tech explainers), batch-produce 5 videos a week, and monetize through ads and affiliate links. Just keep in mind the template-driven look: viewers who watch a lot of AI content will notice the pattern."
+      },
+      {
+        "question": "Pictory vs InVideo vs CapCut — which one should I use?",
+        "answer": "Pictory is best if your workflow starts from text (blog posts, scripts). InVideo gives you more creative control and better templates for brand content. CapCut is free and great for quick social clips but limited in text-to-video features. If you repurpose written content regularly, Pictory saves the most time. If you need polished brand videos from scratch, InVideo is the better bet."
+      },
+      {
+        "question": "Does Pictory's free plan let me test before buying?",
+        "answer": "Barely. The 14-day trial gives you 3 videos (up to 10 minutes each), but every video has a Pictory watermark. Good enough to test the workflow, not good enough to publish. Budget the $25/month annual plan from the start if you are serious about using it for client work or your own channels."
+      }
+    ],
+    "content": "## What is Pictory?\n\nPictory is an AI video tool that turns written content into videos. You paste a blog post, a script, or even a URL, and it spits out a video with stock footage, voiceover, captions, and background music. The whole thing takes about 10-15 minutes for a 5-minute video.\n\nThe 2026 version added AI avatars (digital presenters that speak your text) and better language support — 70+ languages for voiceovers. The core idea has not changed: if you write stuff and need video versions of it, Pictory is probably the fastest way to get there.\n\n## Key Features\n\n**Text-to-Video Conversion**\n\nThis is why people buy Pictory. You paste your article or script, the AI scans it, pulls out key points, and matches them with footage from the stock library. You do not choose shots frame by frame. It is not perfect — sometimes the footage is loosely related to the topic — but for speed, nothing touches it.\n\n**AI Voiceover**\n\nEnglish voices are good. Not \"sounds like a human\" good (you can still tell), but good enough for YouTube, social media, and internal training. The 70+ language support is real and useful if you need multi-language content.\n\n**Auto Captions**\n\nSpeech-to-text captions come out accurate for standard English. Accents, technical jargon, and proper names slip up occasionally. Budget 5 minutes per video to fix captions manually.\n\n**AI Avatars**\n\nNew in 2026. Pick a digital presenter, type your script, and they speak it on screen. Movements are still noticeably artificial — the avatar blinks on a timer, not naturally. Good enough for tutorial videos where the content matters more than the presenter. Not good enough for a brand video where image matters.\n\n**Stock Library**\n\nIntegrated library of stock footage, images, and music. Covers basic needs. Do not expect premium Getty-level clips. For niche topics, you will probably end up uploading your own footage.\n\n## Pricing (2026)\n\n| Plan | Price | Key Limits |\n|------|-------|-----------|\n| Free Trial | $0 for 14 days | 3 videos, watermarks on everything |\n| Starter (Monthly) | $29/mo | Unlimited videos, no watermark, basic features |\n| Starter (Annual) | $25/mo ($300/yr) | Same as monthly but cheaper |\n| Professional | $49/mo | Higher quality exports, team collaboration |\n| Enterprise | Custom | SSO, custom templates, priority rendering |\n\nAnnual is the only pricing that makes sense. The monthly $29 is too high for what you get.\n\n## How to Make Money with Pictory\n\n**1. Content repurposing service ($200-$500/client/month)**\n\nMany businesses have blogs but zero video presence. Offer a service: take their top 4 blog posts each month and turn them into videos for YouTube and social media. You spend maybe 2 hours per video with Pictory. At $300/client/month for 4 videos, you can serve 10 clients with about 20 hours of work per week.\n\n**2. Faceless YouTube channels**\n\nPick a niche that does not need a real person on camera — history facts, book summaries, tech news, finance tips. Write short scripts (or use AI to write them), run them through Pictory, publish 3-4 videos a week. Monetize through AdSense and affiliate links. This is a volume game: 100+ videos before you see meaningful traction.\n\n**3. Freelance social media clips on Fiverr/Upwork**\n\nSmall businesses need short video clips for Instagram Reels, TikTok, and LinkedIn. Pictory can turn a 500-word product description into a 60-second promo video in minutes. Charge $50-$100 per clip. You can produce 2-3 in an afternoon.\n\n**4. Online course video production**\n\nIf you sell courses, Pictory can turn your written lesson scripts into video lectures with AI avatar presenters. Students prefer video over text, and you avoid the hassle of recording yourself on camera.\n\n## Who is Pictory For?\n\n**Good fit:**\n- Bloggers and website owners who want video versions of their content\n- Faceless YouTube channel operators (volume producers)\n- Freelancers offering video repurposing as a service\n- Small marketing teams that need quick social media clips\n\n**Bad fit:**\n- Brands that need polished, original-looking videos\n- Professional video editors (Pictory will feel limiting)\n- One-off users who just need a single video (the learning curve is not worth it for one project)\n\n## Final Take\n\nPictory does one thing well: turning text into watchable video fast. It is not going to win awards for originality or production value. But if you need volume — if you have a blog archive to repurpose, a faceless channel to feed, or clients who want video versions of their content — Pictory saves you hours per video.\n\nThe AI avatar is still a gimmick. The stock footage can feel generic. And the monthly pricing is overpriced. But as a text-to-video pipeline tool, it gets the job done faster than anything else at this price point.",
+    "created_date": "2026-05-30"
   }
 ]
