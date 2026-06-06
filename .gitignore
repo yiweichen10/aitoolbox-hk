@@ -13,6 +13,8 @@ __pycache__/
 
 # Temp data scripts — never commit
 data/_*.py
+# Backup files — never commit
+*.bak
 
 # OS
 .DS_Store
