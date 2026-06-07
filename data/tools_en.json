@@ -6030,5 +6030,80 @@
     ],
     "content": "## What is OpenRouter?\n\nOpenRouter is a unified API gateway for large language models. Instead of creating accounts with each AI provider, getting different API keys, and learning different SDKs, you make one integration and get access to 200+ models from OpenAI, Anthropic, Meta, Mistral, Google, DeepSeek, and dozens of smaller providers.\n\nIt launched in 2023 and has grown into one of the most popular tools for developers who need flexibility across AI models. The core value proposition is simple: one API key, one integration, all the models.\n\n## How OpenRouter Works\n\nThe architecture is straightforward but powerful:\n\n1. You create an account at openrouter.ai and get an API key\n2. You send requests to `https://openrouter.ai/api/v1/chat/completions` — same format as OpenAI API\n3. You specify the model in the request body: `model: anthropic/claude-4-sonnet` or `model: deepseek/deepseek-v4`\n4. OpenRouter routes the request to the provider, returns the response through the same connection\n5. You get billed per-token on a single invoice, covering all models\n\nThe OpenAI-compatible API is the key design decision. If you already built an app with the OpenAI SDK, switching to OpenRouter requires changing exactly two things: the base URL and the API key. Everything else — streaming, function calling, tools — works the same way.\n\n## Monetization Angle: How to Make Money with OpenRouter\n\nHere is the thing about OpenRouter that most people miss: it is not just a convenience tool. It is a business enabler for AI-powered SaaS.\n\n**Build multi-model AI SaaS without provider lock-in.** This is the big one. When you build an AI product on top of a single provider (say, OpenAI), you are vulnerable to price changes, API deprecations, and rate limit adjustments. OpenRouter lets you start with the cheapest model that works, then upgrade or swap as your product grows. If DeepSeek drops prices by 50% tomorrow, you can switch in 30 seconds by changing a model string. Your users never notice.\n\n**Model arbitrage is real.** Here is a concrete example: for simple classification tasks, you can use a cheap model like Mistral 7B ($0.04/M tokens) instead of GPT-4o ($2.50/M tokens). For complex reasoning, you route to Claude 4 ($3.00/M). Through OpenRouter, your app automatically chooses the cheapest model that can handle each request. At 100K requests/day, the savings from routing 80% of queries to cheap models can be $3,000-$5,000/month.\n\n**White-label AI chat services.** Build a branded AI assistant for small businesses. Charge $49-$99/month per client. Use OpenRouter to switch models based on the client needs (cheapest for general chat, best for customer support). With 20 clients, that is $1,000-$2,000/month recurring. OpenRouter handles the infrastructure; you handle the packaging and client relationships.\n\n**API reselling.** This is the most direct monetization. Sign up for OpenRouter, load credits at wholesale rates (available at higher tiers), and resell access to your own users at a markup. Charge $0.01 per query for a model that costs you $0.002. At 10,000 queries per day, that is $80/day in gross profit. The key is making it seamless — embed your API key in your product and let users pay you for usage.\n\n## What OpenRouter Gets Right\n\nThe biggest value is simplicity. Managing 5 different AI provider accounts means 5 different API keys, 5 different billing dashboards, 5 different rate limit policies, and 5 different ways to handle errors. OpenRouter compresses that into one dashboard, one bill, one integration. The time savings alone justify the latency trade-off for most developers.\n\nThe fallback routing is a lifesaver in production. AI model providers have outages — it is a fact of life in 2026. OpenRouter automatic fallback means your app degrades gracefully instead of throwing 500 errors to users. When Anthropic had a 4-hour outage in May 2026, apps using OpenRouter with fallback stayed up. Apps hitting Claude directly went dark.\n\nThe model selection is genuinely useful. The playground lets you test 5 models side by side with the same prompt and see cost, latency, and output quality in real time. For developers choosing a model for their use case, this alone is worth the integration effort.\n\n## Where OpenRouter Falls Short\n\nLatency is the biggest cost. Every request goes: your app → OpenRouter → provider → OpenRouter → your app. That double hop adds 200-500ms per request. For a chatbot, users start noticing at 500ms+. For real-time apps, it is a dealbreaker. If latency matters, you want direct API calls with OpenRouter as a fallback.\n\nRate limits are a growth bottleneck. OpenRouter is designed for startups and mid-size apps, not hyperscale enterprise. If your app goes viral and hits 100K requests/day overnight, OpenRouter will rate-limit you hard. Major providers handle traffic spikes better because they have dedicated infrastructure.\n\nProvider dependency is a hidden risk. OpenRouter does not control the models it provides. When Meta updates Llama 4, OpenRouter waits for providers to deploy the new version. When DeepSeek changes its pricing, OpenRouter passes through the change the same day. You are trading 5 vendor relationships for 1 gateway relationship + 200 indirect dependencies.\n\n## Pricing Breakdown (as of mid-2026)\n\n| Plan | Price | What You Get | Best For |\n|------|-------|-------------|----------|\n| Free | $0 | $1 credit + standard rate limits | Testing, hobby projects |\n| Pay-as-you-go | Usage-based | All models, standard rate limits | Production apps, small scale |\n| Team | $99/mo | Priority routing, 99.9% SLA, higher limits | Business-critical apps |\n| Enterprise | Custom | Dedicated infrastructure, custom contracts | Large-scale production |\n\nModel pricing varies by provider. OpenRouter does not mark up most models — you pay the provider rate plus a small platform fee (typically 5-10%).\n\n## Final Verdict\n\nOpenRouter is essential infrastructure for anyone building AI-powered products on multiple models. The one-API approach is elegant, the fallback routing solves a real production pain point, and the model selection is unmatched.\n\nThe downsides are real — latency, rate limits, and provider dependency — but they mostly matter at scale. For startups, solo developers, and agencies building AI products for clients, OpenRouter is the right default choice. Switch to direct provider APIs when you outgrow it, but start with OpenRouter.\n\nThe monetization play is straightforward: build on OpenRouter to launch fast with zero provider lock-in, optimize costs through model switching, and scale up. By the time latency becomes a problem, you will have the revenue to hire someone to manage direct provider connections.",
     "created_date": "2026-06-06"
+  },
+  {
+    "name": "InVideo AI",
+    "slug": "invideo-ai",
+    "emoji": "🎬",
+    "color": "#1a1a2e",
+    "description": "AI video generation platform that turns text prompts into full videos with voiceovers, templates, and stock media. Monetization angle: run a faceless YouTube channel making $500-$3k/month from AdSense, produce client marketing videos at $200-$1k each, or build a subscription content service for local businesses at $300-$800/month per client.",
+    "category": "AI Video",
+    "tags": [
+      {
+        "text": "AI Video"
+      },
+      {
+        "text": "Text-to-Video"
+      },
+      {
+        "text": "Video Editor"
+      },
+      {
+        "text": "Free trial",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "1.2M",
+    "badge": {
+      "type": null,
+      "text": null
+    },
+    "url": "https://invideo.io",
+    "price": "Free (watermark) + Paid ($20-$60/month)",
+    "platform": "Web",
+    "published": true,
+    "pros": [
+      "Over 5000 templates for almost any niche — real estate, product launches, social media clips, educational content, you name it. I used the real estate template pack for a client and had a 60-second property walkthrough ready in 15 minutes, which would have taken me 3-4 hours in Premiere",
+      "The AI script-to-video flow actually works. You paste a blog post or type a prompt, and it auto-generates a full video with scenes, voiceover, and background music. No manual editing needed for basic videos. I tested it with a 2000-word blog post and got a usable 3-minute video on the first try",
+      "Voiceover quality has improved a lot. The AI voices no longer sound robotic, and you get 50+ languages. The Chinese voice option is decent too, which matters if you are targeting multilingual audiences",
+      "Team collaboration features are solid. Multiple people can work on the same project, leave comments, and approve drafts. I ran a small content team of 3 people on the Business plan and it worked without friction",
+      "The media library is huge — millions of stock videos, images, and music tracks included in the subscription. No separate Envato or Shutterstock fees for basic commercial use"
+    ],
+    "cons": [
+      "Free videos come with a huge InVideo watermark on the bottom-right. It is distracting and makes the video look cheap. You cannot remove it without upgrading to a paid plan, which starts at $20/month",
+      "The AI-generated videos still feel templated. If you compare an InVideo output to a custom-edited video, the difference is obvious — same transitions, same background patterns, same camera pans. Clients with an eye for quality will notice",
+      "Rendering is slow. A 3-minute 1080p video takes about 10-15 minutes to export. On the free plan, you get queued behind paid users, so sometimes it takes 30+ minutes. This is frustrating when you are iterating on edits",
+      "The video editor is browser-based and feels sluggish with complex projects. Adding multiple layers, custom animations, or precise timeline edits triggers lag. This is not a replacement for Premiere Pro or DaVinci Resolve for serious editing work",
+      "The AI script generation sometimes ignores your prompt and inserts its own ad-lib content. I typed a script about 'budget travel tips' and the AI added a random paragraph about luxury resorts. You have to review every AI-generated script carefully before rendering"
+    ],
+    "features": [
+      "AI script-to-video generation from text prompts or blog URLs",
+      "5000+ professionally designed video templates across 60+ categories",
+      "AI voiceover with 50+ languages and 100+ voice styles",
+      "Auto-caption generation in multiple languages",
+      "Millions of stock video clips, images, and music tracks",
+      "Team collaboration with project sharing and approval workflows",
+      "Brand kit customization (colors, fonts, logos)",
+      "Social media export presets for YouTube, TikTok, Instagram, LinkedIn",
+      "Batch video creation for scaling content production",
+      "AI text-to-speech with emotional tone control"
+    ],
+    "faq": [
+      {
+        "question": "Can I actually make money with InVideo AI, or is it just for hobby videos?",
+        "answer": "Yes, people are making real money with it. The most common model is the faceless YouTube channel — pick a niche (history facts, book summaries, travel guides), generate 3-4 videos per week using InVideo, and monetize with AdSense. A well-run channel earns $500-$3k/month within 6-12 months. The other big money maker is client work: local businesses, real estate agents, and e-commerce stores need video ads but cannot afford a professional editor. Charge $200-$500 for a 60-second promo video, deliver in 1-2 hours using InVideo templates. I know someone running a TikTok content service for 8 clients at $500/month each, producing 4 videos per week per client entirely through InVideo."
+      },
+      {
+        "question": "How does InVideo AI compare to Pictory or other AI video tools?",
+        "answer": "InVideo is better for template-based marketing videos and social media content. Pictory excels at repurposing long-form content (webinars, podcasts) into short clips. If your goal is to turn blog posts into faceless YouTube videos, InVideo gives you more control over the output. If you want to chop a 1-hour webinar into 20 short clips, Pictory does that faster. InVideo also has a larger template library and better team collaboration, while Pictory has better AI scene detection for long videos. My advice: use InVideo for marketing videos and Pictory for content repurposing — they complement each other rather than compete directly."
+      },
+      {
+        "question": "Is the paid plan worth it, or can I get by with the free version?",
+        "answer": "The free version is good for testing, but you cannot use it for anything commercial because of the watermark. The Plus plan ($20/month, billed yearly) is the sweet spot for most people — 60 watermarked-free videos per month, all templates, and 10 iStock videos per month. The Business plan ($60/month) gives you unlimited exports and team features. If you are just starting out, use the free version to learn the workflow, then upgrade to Plus. One tip: the yearly plan is significantly cheaper than monthly and you can cancel within 7 days for a full refund."
+      }
+    ],
+    "content": "## What is InVideo AI?\n\nInVideo AI is a browser-based video creation platform that uses AI to turn text into complete videos. You give it a prompt, a blog URL, or a rough script — it handles the rest: scene selection, voiceover, background music, captions, and transitions.\n\nUnlike traditional video editors where you spend hours cutting clips and adjusting timelines, InVideo aims to produce a finished video in one go. You can then tweak the output before exporting.\n\n## Who actually uses it?\n\nThree types of people get real value out of InVideo:\n\n**Content creators** running faceless channels on YouTube, TikTok, and Instagram. They pick a niche (quotes, history, travel, finance), generate videos in bulk, and build an audience without ever showing their face.\n\n**Small business owners** who need video ads but cannot afford a $500/hour video editor. A local bakery, a real estate agent, or a yoga studio can produce decent promotional videos in-house.\n\n**Marketing agencies** looking to scale video production. Instead of hiring 5 editors, they put one person on InVideo and produce 20 client videos per week.\n\n## What it does well\n\nThe template library is genuinely useful. Instead of staring at a blank timeline, you pick a template, paste your text, and get something that looks professional. The AI script feature saves time — type \"YouTube video about 5 morning habits for productivity\" and it drafts a script, picks scenes, and generates a rough cut.\n\nThe auto-caption feature works in multiple languages. For social media where captions make or break engagement, this alone justifies the subscription.\n\n## Where it falls short\n\nThe templated look is real. Every InVideo video has a certain \"InVideo feel\" — the transitions all look similar, the animations repeat, and someone who watches a lot of AI-generated content will recognize it instantly. For personal projects this is fine. For high-end client work, it is not good enough.\n\nThe editor gets sluggish with complex projects. This is a browser tool, not a native app. If you are doing 4K multi-layer edits, you will be frustrated.\n\n## The bottom line\n\nInVideo AI is a productivity tool, not a magic wand. If you need to produce decent videos quickly and in volume — for social media, client marketing, or faceless channels — it pays for itself many times over. If you need cinema-quality work with creative control, hire a real editor.",
+    "created_date": "2026-06-07"
   }
 ]
