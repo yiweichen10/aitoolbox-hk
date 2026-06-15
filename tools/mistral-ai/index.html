@@ -67,7 +67,15 @@
 }</script>
     <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can I actually run Mistral 7B on my laptop, or is that marketing BS?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on what you mean by 'run.' A laptop with 8GB RAM and no dedicated GPU will run Mistral 7B at about 2-3 tokens/second using CPU-only inference with llama.cpp. That is usable for chat but painful for any real work. A laptop with a 6GB+ GPU (RTX 3060 laptop or better) will run it at 15-25 tokens/second, which is genuinely usable. A desktop with an RTX 4090 runs it at 50+ tokens/second. So yes, it runs on a laptop, but 'usable' depends on your hardware. For free, zero-config cloud access, use Le Chat instead."}}, {"@type": "Question", "name": "How does Mistral's pricing actually compare to OpenAI when you factor everything in?", "acceptedAnswer": {"@type": "Answer", "text": "On paper, Mistral Large 3 is about 60% cheaper than GPT-4 per token. In practice, the savings are real but not that dramatic because Mistral tends to produce longer responses for the same prompt, partially offsetting the per-token discount. I measured a 40-45% net savings on my actual workloads, not the theoretical maximum. The bigger savings come from the open-source models: if you self-host Mistral 7B or Mixtral, your marginal cost is electricity + hardware depreciation, which works out to roughly $0.50-$2 per million tokens depending on your GPU and power costs. That is 10-40x cheaper than any API. The trade-off is you handle your own infrastructure, scaling, and uptime."}}, {"@type": "Question", "name": "Is Mistral AI good enough for building a real business on, or is it a toy?", "acceptedAnswer": {"@type": "Answer", "text": "For specific use cases, it is more than good enough. I have seen people build real products on Mistral: a GDPR-compliant customer support chatbot for a German e-commerce company ($5k build, $500/month hosting), an internal knowledge base search tool deployed on-premises for a French law firm ($3k flat fee), and a code review bot that runs entirely on a $20/month VPS. The common thread is that these businesses either needed data sovereignty (EU), tight cost control, or the ability to run offline. Mistral is not a toy, but it is also not a drop-in replacement for GPT-4 in every scenario. Pick the use case that plays to its strengths: cost efficiency, local deployment, and European data compliance."}}]}</script>
     <meta name="yandex-verification" content="5ae78527ec9bcb4b" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FKEXWVFYV0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-FKEXWVFYV0');
+</script>
 </head>
 <body>
     <header class="header">

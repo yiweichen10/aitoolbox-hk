@@ -67,7 +67,15 @@
 }</script>
     <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much does Replicate actually cost to run?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on the model and GPU type. Light models on T4 GPUs run around $0.000225/second ($0.80/hour). Heavy image or video models on A100 GPUs can hit $0.00115/second ($4.14/hour). A single Stable Diffusion generation costs roughly half a cent. Start small, watch the billing dashboard, and you will quickly learn where the money goes."}}, {"@type": "Question", "name": "Can I build a SaaS product on top of Replicate?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — that is one of the most common use cases. You wrap a Replicate model in your own web app, charge users a monthly fee or per-generation fee, and pocket the margin. Example: a headshot generator that costs you $0.005 per image on Replicate but you charge users $4.99 per session. The math works."}}, {"@type": "Question", "name": "Replicate vs Hugging Face Inference — which is better?", "acceptedAnswer": {"@type": "Answer", "text": "Replicate is simpler for deployment: pick a model, get an API, done. Hugging Face gives you more control and a bigger community but the Inference API can feel clunkier. For shipping a product fast, Replicate wins. For research and experimentation, Hugging Face has more depth. Many teams use both."}}]}</script>
     <meta name="yandex-verification" content="5ae78527ec9bcb4b" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FKEXWVFYV0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-FKEXWVFYV0');
+</script>
 </head>
 <body>
     <header class="header">

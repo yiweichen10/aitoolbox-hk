@@ -67,7 +67,15 @@
 }</script>
     <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can I use Groq as a direct replacement for OpenAI API in my existing app?", "acceptedAnswer": {"@type": "Answer", "text": "Mostly yes. Groq offers an OpenAI-compatible endpoint, so you just change the base URL and API key. It works with the chat completions endpoint, streaming, tool calling, and structured outputs. The catch: Groq runs open-weight models, not GPT-4, so output quality and behavior will differ. Test thoroughly before swapping in production."}}, {"@type": "Question", "name": "Is the free tier enough to run a real business on?", "acceptedAnswer": {"@type": "Answer", "text": "For early-stage MVPs and prototyping, yes — the free tier gives you a decent daily token allowance. But for any kind of production traffic or high-concurrency use, you will need to switch to a paid plan pretty quickly. The free tier also has rate limits that will hit you during peak usage."}}, {"@type": "Question", "name": "Which models does Groq support?", "acceptedAnswer": {"@type": "Answer", "text": "Groq runs open-weight models: Meta Llama 3/3.1/4 series, Mistral Mixtral 8x7B, Google Gemma, and a handful of others. Check their model catalog page for the current list — they add new ones regularly."}}]}</script>
     <meta name="yandex-verification" content="5ae78527ec9bcb4b" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FKEXWVFYV0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-FKEXWVFYV0');
+</script>
 </head>
 <body>
     <header class="header">

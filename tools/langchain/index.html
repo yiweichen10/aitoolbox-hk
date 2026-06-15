@@ -67,7 +67,15 @@
 }</script>
     <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can I actually make money building on LangChain?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, and it is one of the most common paths right now. Freelance AI developers charge $3,000-$10,000 per project building custom RAG chatbots for businesses. Agencies run recurring retainers ($1,000-$3,000/month) maintaining and improving these systems. The sweet spot: pick a niche (legal document review, customer support for e-commerce, internal knowledge bases for local businesses) and build the same solution 3-5 times. Each repeat gets faster and the code gets cleaner."}}, {"@type": "Question", "name": "LangChain vs building directly with the OpenAI SDK — when does it actually save time?", "acceptedAnswer": {"@type": "Answer", "text": "LangChain pays off once your project has 3+ moving parts: multiple models, a retrieval step, conversation memory, and a tool-using agent. For a single chat endpoint hitting one model, the OpenAI SDK is simpler. But the moment you add document search (RAG), LangChain's document loaders and retrievers save you from writing that plumbing yourself. The rule: start simple, reach for LangChain when you feel the pain of stitching things together manually."}}, {"@type": "Question", "name": "Is LangChain production-ready or is it still too early?", "acceptedAnswer": {"@type": "Answer", "text": "It is production-ready for moderate scale. Companies run real workloads on it — customer support bots, document analyzers, internal analytics. But 'production-ready' means you need to add your own caching, rate limiting, error handling, and monitoring layer. LangChain gives you the building blocks, not the operations playbook. LangSmith fills some of that gap (tracing, evaluation) but costs $25/month on the starter plan."}}]}</script>
     <meta name="yandex-verification" content="5ae78527ec9bcb4b" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FKEXWVFYV0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-FKEXWVFYV0');
+</script>
 </head>
 <body>
     <header class="header">

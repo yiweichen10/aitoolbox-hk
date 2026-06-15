@@ -46,7 +46,15 @@ GLOBAL_NAV_EN = '''    <nav class="global-nav" aria-label="Global navigation">
     </nav>'''
 
 # ─── Google Analytics (reuse existing tag if available; no Baidu) ─────────────
-GA_BLOCK = ''  # Add GA4 tag here when ready
+GA_BLOCK = '''<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FKEXWVFYV0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FKEXWVFYV0');
+</script>'''
 
 # ─── English category slug map ────────────────────────────────────────────────
 CATEGORY_SLUG_MAP_EN = {

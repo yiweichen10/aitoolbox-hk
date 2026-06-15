@@ -67,7 +67,15 @@
 }</script>
     <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How does OpenRouter pricing compare to using ChatGPT Plus or Claude Pro directly?", "acceptedAnswer": {"@type": "Answer", "text": "OpenRouter is pay-as-you-go per token, not a flat subscription. For light usage (a few thousand queries per month), ChatGPT Plus ($20/month) or Claude Pro ($20/month) are cheaper. But if you need multiple models, varied usage patterns, or custom model routing, OpenRouter wins on flexibility. A typical developer spends $5-$30/month on OpenRouter and gets access to all models instead of being locked into one. The real cost savings come from model arbitrage — use expensive models for hard tasks and cheap models for simple ones, all through the same API."}}, {"@type": "Question", "name": "Can I use OpenRouter in production without worrying about rate limits?", "acceptedAnswer": {"@type": "Answer", "text": "For small-scale production (under 10K requests/day), the free tier handles it fine. For larger volumes, you need to apply for higher rate limits — expect $500+/month usage before they approve substantial increases. The Team plan ($99/month) includes priority routing and a 99.9% SLA. If your app needs to serve millions of requests, you are better off calling provider APIs directly and using OpenRouter as a fallback or multi-model supplement, not as your sole gateway."}}, {"@type": "Question", "name": "Does OpenRouter support streaming responses?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, OpenRouter supports server-sent events (SSE) streaming just like the native OpenAI API. The streaming latency is higher than direct API calls (adds ~300ms on average) but for most chatbot and text generation use cases, the difference is barely noticeable. If you are doing real-time voice or time-sensitive streaming, the overhead might be an issue and you should test first."}}]}</script>
     <meta name="yandex-verification" content="5ae78527ec9bcb4b" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FKEXWVFYV0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-FKEXWVFYV0');
+</script>
 </head>
 <body>
     <header class="header">
