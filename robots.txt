@@ -1,5 +1,52 @@
+# AI Engine Crawlers - Explicitly Allowed (AEO/GEO Optimization 2026-06-23)
+# These crawlers are critical for AI engines to reference your content
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+# Default - all crawlers
 User-agent: *
 Allow: /
-Sitemap: https://www.aitoolbox.hk/sitemap.xml
 
-# AI Tool Lab - English Sitemap
+Sitemap: https://www.aitoolbox.hk/sitemap.xml

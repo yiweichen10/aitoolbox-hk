@@ -36,6 +36,70 @@ document.addEventListener("DOMContentLoaded",function(){var b=document.getElemen
 VERIFICATION_BLOCK = '''    <meta name="yandex-verification" content="5ae78527ec9bcb4b" />
 '''
 
+# ─── AEO+GEO+EEAT Schema Blocks (2026-06-23) ────────────────────────────────
+SCHEMA_HOMEPAGE_BLOCK = '''    <!-- Schema: WebSite + SearchAction (AEO+GEO 2026-06-23) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "AI Tool Lab",
+        "alternateName": "AIToolbox",
+        "description": "Independent AI tool reviews and comparisons. 110+ AI tools tested and ranked, updated daily.",
+        "url": "https://www.aitoolbox.hk",
+        "inLanguage": "en",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://www.aitoolbox.hk/?q={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+    <!-- Schema: Organization (EEAT 2026-06-23) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "AI Tool Lab",
+        "alternateName": "AIToolbox",
+        "url": "https://www.aitoolbox.hk",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.aitoolbox.hk/images/logo.png",
+            "width": 200,
+            "height": 60
+        },
+        "foundingDate": "2026-03-21",
+        "founder": {
+            "@type": "Organization",
+            "name": "AI Tool Lab Editorial Team",
+            "description": "Independent editorial team focused on AI tool testing and comparison",
+            "knowsAbout": ["AI tool review", "AI model comparison", "AEO", "GEO", "AI coding tools", "AI chat models"]
+        },
+        "description": "AI Tool Lab is an independent AI tool review site featuring 110+ tested tools, monthly in-depth comparisons, all data sourced and verifiable.",
+        "knowsAbout": ["AI tools", "AI models", "AI coding", "AI image generation", "AI video", "AI office", "AI chat", "AEO", "GEO"],
+        "slogan": "Data-driven AI tool decisions",
+        "publishingPrinciples": "https://www.aitoolbox.hk/about.html",
+        "actionableFeedbackPolicy": "All review data comes from public sources or author testing, every article cites sources, all verifiable.",
+        "sameAs": [
+            "https://github.com/yiweichen10/ai-toolbox"
+        ]
+    }
+    </script>
+    <!-- Schema: BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aitoolbox.hk/" }
+        ]
+    }
+    </script>
+'''
+
 # ─── Global nav (English) ─────────────────────────────────────────────────────
 GLOBAL_NAV_EN = '''    <nav class="global-nav" aria-label="Global navigation">
         <div class="global-nav-inner">
@@ -492,11 +556,23 @@ def build_article_page_en(article: dict, all_articles: list, all_tools: list = N
         "description": article.get('description',''),
         "datePublished": article_date,
         "dateModified":  article.get('dateModified', article_date),
-        "author": {"@type":"Organization","name":SITE_NAME},
+        "inLanguage": "en",
+        "author": {
+            "@type": "Organization",
+            "name": "AI Tool Lab Editorial Team",
+            "url": f"{SITE_DOMAIN}/author/",
+            "description": "Independent editorial team focused on AI tool testing and comparison, 5+ years paid AI tool usage experience",
+            "knowsAbout": ["AI tool review", "AI model comparison", "AEO", "GEO", "AI coding tools", "AI chat models"]
+        },
         "publisher": {
             "@type": "Organization",
             "name": SITE_NAME,
-            "logo": {"@type":"ImageObject","url":SITE_LOGO}
+            "url": SITE_DOMAIN,
+            "logo": {"@type":"ImageObject","url":SITE_LOGO},
+            "foundingDate": "2026-03-21",
+            "slogan": "Data-driven AI tool decisions",
+            "publishingPrinciples": f"{SITE_DOMAIN}/about.html",
+            "sameAs": ["https://github.com/yiweichen10/ai-toolbox"]
         },
         "mainEntityOfPage": {"@type":"WebPage","@id":f"{SITE_DOMAIN}/articles/{slug}/"}
     }
@@ -506,6 +582,53 @@ def build_article_page_en(article: dict, all_articles: list, all_tools: list = N
     content_html = markdown_to_html(article.get('content',''))
     hreflang     = hreflang_tags(f'/articles/{slug}/', f'/articles/{slug}/')
     og_image     = ensure_en_og_image(slug, article, is_article=True)
+
+    # TL;DR box (answer-first format for GEO - AI engines extract first 200 words)
+    tldr_text = article.get('description','').strip()
+    if tldr_text:
+        tldr_html = f'''<div class="tldr-box" style="background:linear-gradient(135deg,#fff8e6,#ffefb8);border-left:4px solid #f5a623;padding:16px 20px;margin-bottom:24px;border-radius:0 8px 8px 0;font-size:14.5px;line-height:1.7;">
+                <strong style="color:#c77d00;font-size:15px;">⚡ TL;DR</strong><br>
+                <span style="color:#555;">{escape_html(tldr_text)}</span>
+            </div>'''
+    else:
+        tldr_html = ''
+
+    # HowTo Schema (for tutorial/guide type articles)
+    howto_schema_html = ''
+    howto_keywords = ['guide', 'tutorial', 'how to', 'step by step', 'getting started', 'walkthrough', 'complete guide', 'setup', 'install', 'configure']
+    is_howto = any(kw in title.lower() for kw in howto_keywords)
+    if is_howto:
+        content_raw = article.get('content','')
+        # Strategy 1: Markdown h2 headings
+        h2_steps = re.findall(r'^## (.+)$', content_raw, re.MULTILINE)
+        # Strategy 2: HTML h2
+        if not h2_steps:
+            h2_steps = re.findall(r'<h2[^>]*>(.*?)</h2>', content_raw, re.IGNORECASE)
+            h2_steps = [re.sub(r'<[^>]+>', '', h).strip() for h in h2_steps]
+        # Filter for step-like headings
+        step_keywords = ['step', 'how', 'install', 'setup', 'configure', 'create', 'deploy', 'use', 'set up', 'getting started', 'walkthrough', 'build', 'run', 'start', 'first', 'next', 'final']
+        filtered_steps = [h for h in h2_steps if any(sk in h.lower() for sk in step_keywords)]
+        if len(filtered_steps) < 2:
+            skip_keywords = ['FAQ', 'Conclusion', 'Summary', 'Why', 'Common', 'Compare', 'vs', 'Pitfall', 'Intro', 'Background', 'Overview', 'Best Practices', 'Tips']
+            filtered_steps = [h for h in h2_steps if not any(sk in h for sk in skip_keywords)]
+        if len(filtered_steps) >= 2:
+            howto_steps = []
+            for i, step_title in enumerate(filtered_steps[:8], 1):
+                howto_steps.append({
+                    "@type": "HowToStep",
+                    "position": i,
+                    "name": step_title,
+                    "text": f"Follow the guide to complete: {step_title}"
+                })
+            howto_schema = {
+                "@context": "https://schema.org",
+                "@type": "HowTo",
+                "name": title,
+                "description": article.get('description',''),
+                "totalTime": "PT30M",
+                "step": howto_steps
+            }
+            howto_schema_html = f'\n    <script type="application/ld+json">{json.dumps(howto_schema, ensure_ascii=False)}</script>'
 
     return f'''<!DOCTYPE html>
 <html lang="en">
@@ -528,7 +651,7 @@ def build_article_page_en(article: dict, all_articles: list, all_tools: list = N
     {'<meta name="twitter:image" content="' + og_image + '">' if og_image else ''}
     <link rel="stylesheet" href="/css/style.css">
     <script type="application/ld+json">{breadcrumb_json}</script>
-    <script type="application/ld+json">{structured_json}</script>
+    <script type="application/ld+json">{structured_json}</script>{howto_schema_html}
 {VERIFICATION_BLOCK}{GA_BLOCK}
 </head>
 <body>
@@ -544,6 +667,7 @@ def build_article_page_en(article: dict, all_articles: list, all_tools: list = N
             <div style="color:#999;font-size:14px;margin-bottom:24px;">
                 {date_str} · {escape_html(cat)}
             </div>
+            {tldr_html}
             {content_html}
         </article>
 
@@ -804,7 +928,7 @@ def build_index_en(tools: list, articles: list) -> str:
     <meta name="twitter:description" content="Find the best AI tools for writing, coding, image generation, and productivity. Updated daily.">
     <meta name="twitter:image" content="{SITE_DOMAIN}/images/logo.png">
     <link rel="stylesheet" href="/css/style.css">
-{VERIFICATION_BLOCK}{GA_BLOCK}
+{SCHEMA_HOMEPAGE_BLOCK}{VERIFICATION_BLOCK}{GA_BLOCK}
 </head>
 <body>
 {header_html()}
