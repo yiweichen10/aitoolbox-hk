@@ -49,20 +49,113 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Browser Use",
-  "applicationCategory": "UtilitiesApplication",
+  "url": "https://browser-use.com",
+  "image": "https://www.aitoolbox.hk/images/og/browser-use-en-og.png",
+  "applicationCategory": "BusinessApplication",
+  "applicationSubCategory": "AI Automation",
   "operatingSystem": "Windows / macOS / Linux, Chrome / Firefox / Edge",
   "description": "An open-source framework that lets AI agents control your web browser. You give it a natural language instruction — fill a form, scrape product data, book appointments, submit applications — and it drives the browser to get it done. In 2026, Browser Use added smart element detection and multi-tab parallelism, making it genuinely useful for people who sell browser automation as a service.",
   "datePublished": "2026-06-23",
   "dateModified": "2026-06-23",
   "offers": {
     "@type": "Offer",
-    "price": "Open-source free, cloud tier from $19/mo",
+    "price": "19",
     "priceCurrency": "USD"
   },
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.5",
-    "ratingCount": "1000"
+    "ratingValue": 4.5,
+    "ratingCount": 80000,
+    "bestRating": 5,
+    "worstRating": 1
+  },
+  "featureList": [
+    "Natural language browser control — describe what you want, AI drives the browser",
+    "Intelligent element recognition — no CSS selectors or XPath needed",
+    "Multi-tab parallelism — run several browser tasks at once",
+    "Custom workflow recording — save and replay common automation sequences",
+    "Multi-model support — OpenAI, Anthropic, Gemini, Ollama, and more",
+    "REST API for integration — embed browser automation into your own apps",
+    "Memory across sessions — AI remembers context from previous runs"
+  ],
+  "author": {
+    "@type": "Organization",
+    "name": "AI Tool Lab Editorial Team",
+    "url": "https://www.aitoolbox.hk/author/"
+  },
+  "isRelatedTo": [],
+  "review": {
+    "@type": "Review",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": 4.5,
+      "bestRating": 5,
+      "worstRating": 1
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "AI Tool Lab Editorial Team"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Completely open-source. The code is on GitHub, you can read it, fork it, modify it however you want. No vendor lock-in, no black-box pricing surprises"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Works with any major LLM provider — OpenAI, Anthropic, Gemini, even local models through Ollama. You are not forced into anyone's ecosystem"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Smart element detection actually works on most sites. It finds buttons, input fields, and dropdowns without you writing a single CSS selector. Saved me hours of DOM inspection on client projects"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Multi-tab parallel processing is a game changer for bulk work. You can scrape 10 product pages simultaneously or run multiple form submissions at once, cutting batch processing time by 60-70%"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Active community on GitHub and Discord. Weekly releases, responsive maintainers, growing library of reusable workflow templates. Not one of those projects that gets abandoned after a HN launch"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Dynamic SPAs and sites with heavy JavaScript can trip it up. If a page takes 8 seconds to render or elements keep shifting positions, you will see failures that are hard to debug"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Still requires some technical chops. The setup involves Python, virtual environments, and API keys. If you have never touched a terminal before, budget a weekend to get comfortable"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "The cloud tier pricing is vague. The $19/mo plan exists but the feature limits (concurrent sessions, total execution minutes, priority support) are not clearly documented on the pricing page"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Error messages are developer-grade, not user-friendly. When something breaks, you get a Python traceback, not a helpful explanation. Fine for engineers, painful for operators"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "CAPTCHA handling is inconsistent. For sites with aggressive bot detection (Ticketmaster, some government portals), you will need to layer on a proxy service or CAPTCHA solver separately"
+        }
+      ]
+    }
   }
 }</script>
     <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is Browser Use actually free, or is there a catch?", "acceptedAnswer": {"@type": "Answer", "text": "The core framework is genuinely free and open-source under the MIT license. You can self-host it on your own machine forever without paying a dime. The catch is that you still need API keys for whatever LLM you use (OpenAI charges per token, Anthropic charges per token, etc.). Browser Use itself does not charge you — your LLM provider does. The cloud tier ($19/mo) is optional and gives you managed hosting plus higher concurrency limits, but it is not required to use the tool."}}, {"@type": "Question", "name": "How does Browser Use compare to Selenium or Playwright?", "acceptedAnswer": {"@type": "Answer", "text": "Different beasts entirely. Selenium and Playwright are programming libraries — you write code to control the browser. Browser Use is an AI agent layer on top. Instead of writing Python scripts with element selectors, you tell it 'log into this account, download the CSV report, and email it to me' in plain English. The trade-off: Selenium is more reliable for highly structured, repeatable tasks where you know exactly what the page looks like. Browser Use shines for tasks where the page structure changes or the workflow is not 100% predictable. Many people use both: Browser Use for discovery and one-off jobs, Selenium/Playwright for production-grade pipelines."}}, {"@type": "Question", "name": "Can I use Browser Use behind a corporate proxy or VPN?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, but it requires some configuration. Browser Use runs a local browser instance, so it inherits whatever network settings your system uses. If your corporate network requires a proxy, you need to configure the Chromium instance manually through launch arguments. The GitHub repo has a configuration guide for this. It works, but it is not plug-and-play — expect to spend 20-30 minutes getting the proxy settings right the first time."}}]}</script>

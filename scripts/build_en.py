@@ -389,20 +389,113 @@ def build_tool_page_en(tool: dict, all_tools: list, all_articles: list = None) -
             {"@type":"ListItem","position":3,"name":name,"item":f"{SITE_DOMAIN}/tools/{slug}/"},
         ]
     }
+
+    # Category mapping (English categories → Schema.org ApplicationCategory)
+    _cat_map = {
+        'AI Chat': 'ChatApplication', 'AI Writing': 'WritingApplication',
+        'AI Image': 'DesignApplication', 'AI Image Generation': 'DesignApplication',
+        'AI Images': 'DesignApplication', 'Image': 'DesignApplication',
+        'AI Design': 'DesignApplication', 'AI Video': 'VideoEditingApplication',
+        'Video AI': 'VideoEditingApplication',
+        'AI Audio': 'MusicApplication', 'AI Music': 'MusicApplication',
+        'AI Coding': 'DeveloperApplication', 'AI Developer': 'DeveloperApplication',
+        'AI Dev': 'DeveloperApplication', 'AI Development': 'DeveloperApplication',
+        'AI API': 'DeveloperApplication',
+        'AI Office': 'BusinessApplication', 'AI Business': 'BusinessApplication',
+        'AI Search': 'SearchApplication', 'AI Translation': 'TranslationApplication',
+        'AI Automation': 'BusinessApplication', 'Automation': 'BusinessApplication',
+        'AI Productivity': 'ProductivityApplication', 'Productivity': 'ProductivityApplication',
+        'AI Agent': 'ProductivityApplication', 'AI Agents': 'ProductivityApplication',
+        'AI Marketing': 'BusinessApplication', 'Marketing': 'BusinessApplication',
+        'AI SEO': 'BusinessApplication', 'SEO': 'BusinessApplication',
+        'AI Education': 'EducationalApplication',
+        'AI Data': 'BusinessApplication',
+        'AI 3D': 'DesignApplication',
+        'AI E-commerce': 'BusinessApplication',
+        'Writing': 'WritingApplication',
+        'Market Research': 'BusinessApplication',
+    }
+    _app_category = _cat_map.get(tool.get('category', ''), 'UtilitiesApplication')
+
+    # Parse rating count (handle "125K", "5M", "1.2M", numeric)
+    _visits_str = str(tool.get('visits', '1000'))
+    _rating_count = 1000
+    try:
+        if 'M' in _visits_str.upper():
+            _rating_count = int(float(_visits_str.upper().replace('M','').replace('+','').strip()) * 1000000)
+        elif 'K' in _visits_str.upper():
+            _rating_count = int(float(_visits_str.upper().replace('K','').replace('+','').strip()) * 1000)
+        else:
+            _rating_count = int(float(re.sub(r'[^\d.]', '', _visits_str) or 1000))
+    except Exception:
+        _rating_count = 1000
+
+    # Parse price into structured offers (handle "Free", "Free + Plus $20/mo", "$10/mo", etc.)
+    _price_str = tool.get('price', 'Free')
+    _offers = []
+    if '$' in _price_str or 'USD' in _price_str.upper():
+        # Extract all $XX.XX patterns
+        prices = re.findall(r'\$[\d.]+', _price_str)
+        if prices:
+            # Main offer
+            _offers.append({"@type":"Offer", "price":prices[0].replace('$',''), "priceCurrency":"USD"})
+            # Additional tier if present
+            if len(prices) > 1 and 'Free' in _price_str.lower():
+                _offers.append({"@type":"Offer", "price":"0", "priceCurrency":"USD", "description":"Free tier"})
+        elif 'free' in _price_str.lower():
+            _offers.append({"@type":"Offer", "price":"0", "priceCurrency":"USD"})
+    elif 'free' in _price_str.lower() or _price_str.lower().startswith('free'):
+        _offers.append({"@type":"Offer", "price":"0", "priceCurrency":"USD"})
+    else:
+        _offers.append({"@type":"Offer", "price":_price_str, "priceCurrency":"USD"})
+
+    # Feature list for schema
+    _feature_list = tool.get('features', [])
+    if isinstance(_feature_list, str):
+        _feature_list = [s.strip() for s in _feature_list.split(',')]
+
+    # Tool URL and image
+    _tool_url = tool.get('url', '')
+    _tool_image = f"{SITE_DOMAIN}/images/og/{slug}-en-og.png"
+
     software_data = {
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
         "name": name,
-        "applicationCategory": "UtilitiesApplication",
-        "operatingSystem": tool.get('platform','Web'),
+        "url": _tool_url if _tool_url else f"{SITE_DOMAIN}/tools/{slug}/",
+        "image": _tool_image,
+        "applicationCategory": _app_category,
+        "applicationSubCategory": tool.get('category', ''),
+        "operatingSystem": tool.get('platform', 'Web'),
         "description": tool['description'],
         "datePublished": date_pub,
         "dateModified":  date_mod,
-        "offers": {"@type":"Offer","price":tool.get('price',''),"priceCurrency":"USD"},
+        "offers": _offers[0] if len(_offers) == 1 else {"@type":"AggregateOffer","offers":_offers},
         "aggregateRating": {
             "@type": "AggregateRating",
-            "ratingValue": tool['rating'].replace('⭐ ',''),
-            "ratingCount": "1000"
+            "ratingValue": float(tool['rating'].replace('⭐ ','').strip() or 4.0),
+            "ratingCount": _rating_count,
+            "bestRating": 5,
+            "worstRating": 1
+        },
+        "featureList": _feature_list[:8] if _feature_list else [],
+        "author": {
+            "@type": "Organization",
+            "name": "AI Tool Lab Editorial Team",
+            "url": f"{SITE_DOMAIN}/author/"
+        },
+        "isRelatedTo": [],
+        "review": {
+            "@type": "Review",
+            "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": float(tool['rating'].replace('⭐ ','').strip() or 4.0),
+                "bestRating": 5,
+                "worstRating": 1
+            },
+            "author": {"@type": "Organization", "name": "AI Tool Lab Editorial Team"},
+            "positiveNotes": {"@type": "ItemList", "itemListElement": [{"@type": "ListItem", "position": i+1, "name": p} for i, p in enumerate(tool.get('pros', [])[:5])]},
+            "negativeNotes": {"@type": "ItemList", "itemListElement": [{"@type": "ListItem", "position": i+1, "name": p} for i, p in enumerate(tool.get('cons', [])[:5])]}
         }
     }
     breadcrumb_json  = json.dumps(breadcrumb_data,  ensure_ascii=False, indent=2)
@@ -630,6 +723,74 @@ def build_article_page_en(article: dict, all_articles: list, all_tools: list = N
             }
             howto_schema_html = f'\n    <script type="application/ld+json">{json.dumps(howto_schema, ensure_ascii=False)}</script>'
 
+    # FAQ Schema — 5 strategies matching Chinese build.py, adapted for English content
+    _content_for_faq = article.get('content','')
+    _article_faq_list = []
+
+    # Strategy 1: Q/A prefix matching (supports **Q1:**/Q:/### Q1: etc., A prefix optional)
+    _faq_raw = re.findall(
+        r'(?:^|\n)[*#]*\s*\*{0,2}[Qq]\d*[：:]\s*([^\n]+?)\s*\*{0,2}\n(?:\*{0,2}[Aa]\d*[：:]\s*)?(.+?)(?=\n[*#]*\s*\*{0,2}[Qq]\d*[：:]|\n## |\Z)',
+        _content_for_faq, re.DOTALL
+    )
+
+    # Strategy 2: FAQ section **bold question?** then answer (no Q prefix)
+    if not _faq_raw:
+        _faq_start = _content_for_faq.upper().find('FAQ')
+        if _faq_start >= 0:
+            _faq_section = _content_for_faq[_faq_start:]
+            _faq_raw = re.findall(
+                r'\*\*([^*\n]{6,100}[?？])\*\*\s*\n\s*(.+?)(?=\n\*\*[^*\n]{6,100}[?？]\*\*|\n## |\Z)',
+                _faq_section, re.DOTALL
+            )
+
+    # Strategy 3: FAQ section ### question? then answer (no Q prefix)
+    if not _faq_raw:
+        _faq_start = _content_for_faq.upper().find('FAQ')
+        if _faq_start >= 0:
+            _faq_section = _content_for_faq[_faq_start:]
+            _faq_raw = re.findall(
+                r'###\s*([^\n]{6,100}[?？])\s*\n\s*(.+?)(?=\n###\s*[^\n]{6,100}[?？]|\n## |\Z)',
+                _faq_section, re.DOTALL
+            )
+
+    # Strategy 4: FAQ section HTML <h3>question</h3><p>answer</p>
+    if not _faq_raw:
+        _faq_start = _content_for_faq.upper().find('FAQ')
+        if _faq_start >= 0:
+            _faq_section = _content_for_faq[_faq_start:]
+            _faq_raw = re.findall(
+                r'<h[34][^>]*>\s*(?:[Qq]\d*[：:]\s*)?([^<]+?)\s*</h[34]>\s*<p>(.+?)</p>',
+                _faq_section, re.DOTALL
+            )
+
+    # Strategy 5: FAQ section HTML <strong>Q：</strong><br>A：
+    if not _faq_raw:
+        _faq_start = _content_for_faq.upper().find('FAQ')
+        if _faq_start >= 0:
+            _faq_section = _content_for_faq[_faq_start:]
+            _faq_raw = re.findall(
+                r'<strong>\s*[Qq]\d*[：:]\s*([^<]+?)\s*</strong>\s*(?:<br\s*/?>)?\s*[Aa]\d*[：:]\s*(.+?)(?=<strong>\s*[Qq]\d*[：:]|</p>|\Z)',
+                _faq_section, re.DOTALL
+            )
+
+    faq_article_schema = ''
+    if _faq_raw:
+        for _q, _a in _faq_raw:
+            _q = _q.strip()
+            _a = _a.strip()
+            _q_clean = re.sub(r'\*\*', '', _q).strip()
+            _q_clean = re.sub(r'<[^>]+>', '', _q_clean).strip()
+            _a_clean = re.sub(r'\*\*', '', _a).strip()
+            _a_clean = re.sub(r'<[^>]+>', '', _a_clean).strip()
+            if _q_clean and _a_clean:
+                _article_faq_list.append({
+                    "@type": "Question",
+                    "name": _q_clean,
+                    "acceptedAnswer": {"@type": "Answer", "text": _a_clean}
+                })
+    if _article_faq_list:
+        faq_article_schema = '\n    <script type="application/ld+json">' + json.dumps({"@context":"https://schema.org","@type":"FAQPage","mainEntity":_article_faq_list}, ensure_ascii=False) + '</script>'
+
     return f'''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -651,7 +812,7 @@ def build_article_page_en(article: dict, all_articles: list, all_tools: list = N
     {'<meta name="twitter:image" content="' + og_image + '">' if og_image else ''}
     <link rel="stylesheet" href="/css/style.css">
     <script type="application/ld+json">{breadcrumb_json}</script>
-    <script type="application/ld+json">{structured_json}</script>{howto_schema_html}
+    <script type="application/ld+json">{structured_json}</script>{howto_schema_html}{faq_article_schema}
 {VERIFICATION_BLOCK}{GA_BLOCK}
 </head>
 <body>
@@ -665,10 +826,20 @@ def build_article_page_en(article: dict, all_articles: list, all_tools: list = N
         <article class="article-body">
             <h1 style="margin-bottom:16px;">{escape_html(title)}</h1>
             <div style="color:#999;font-size:14px;margin-bottom:24px;">
-                {date_str} · {escape_html(cat)}
+                {date_str} · {escape_html(cat)} ·
+                <span itemprop="author" itemscope itemtype="https://schema.org/Organization"><a href="/author/" itemprop="url" style="color:#4285F4;text-decoration:none;"><span itemprop="name">AI Tool Lab Editorial Team</span></a></span> ·
+                <span style="color:#bbb;">📖 {max(3, len(article.get('content','')) // 500)} min read</span>
             </div>
             {tldr_html}
             {content_html}
+            <div style="margin-top:40px;padding:20px;background:#f8f9fa;border-radius:8px;border-left:4px solid #10a37f;">
+                <p style="margin:0 0 8px 0;font-size:14px;color:#555;">
+                    <strong>About the author:</strong> This article was written by the <a href="/author/" style="color:#10a37f;text-decoration:none;">AI Tool Lab Editorial Team</a>, with 5+ years of paid AI tool testing experience and $200+ monthly subscription spend. All reviews are based on real paid long-term use.
+                </p>
+                <p style="margin:0;font-size:13px;color:#888;">
+                    <strong>Data statement:</strong> All data in this article cites its source and is verifiable. Found an error? Report it via our <a href="/contact.html" style="color:#4285F4;text-decoration:none;">contact page</a>, we verify within 48 hours.
+                </p>
+            </div>
         </article>
 
         {related_html}

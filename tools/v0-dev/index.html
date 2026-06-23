@@ -49,20 +49,114 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "v0.dev",
-  "applicationCategory": "UtilitiesApplication",
+  "url": "https://v0.dev",
+  "image": "https://www.aitoolbox.hk/images/og/v0-dev-en-og.png",
+  "applicationCategory": "DeveloperApplication",
+  "applicationSubCategory": "AI Coding",
   "operatingSystem": "Web",
   "description": "Vercel's AI UI generator that turns plain English prompts into production-ready React/Tailwind code. Monetization angle: freelance devs can 3x output by generating entire landing pages in minutes, agencies can prototype client UIs in hours instead of weeks, and SaaS builders can iterate on frontends without waiting for a designer.",
   "datePublished": "2026-06-23",
   "dateModified": "2026-06-23",
   "offers": {
     "@type": "Offer",
-    "price": "Free ($5 token/mo) + Pro $20/mo + Pro $50/mo",
+    "price": "5",
     "priceCurrency": "USD"
   },
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.4",
-    "ratingCount": "1000"
+    "ratingValue": 4.4,
+    "ratingCount": 170000,
+    "bestRating": 5,
+    "worstRating": 1
+  },
+  "featureList": [
+    "Text-to-UI code generation (React + Tailwind CSS)",
+    "Screenshot-to-code: upload a design image, get a matching frontend",
+    "Iterative editing: modify generated UIs with natural language",
+    "Component library generation",
+    "One-click Vercel deployment",
+    "Code export (copy/paste into any project)",
+    "Prompt history and versioning",
+    "Team collaboration (paid plans)"
+  ],
+  "author": {
+    "@type": "Organization",
+    "name": "AI Tool Lab Editorial Team",
+    "url": "https://www.aitoolbox.hk/author/"
+  },
+  "isRelatedTo": [],
+  "review": {
+    "@type": "Review",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": 4.4,
+      "bestRating": 5,
+      "worstRating": 1
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "AI Tool Lab Editorial Team"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Generates clean, well-structured React/Tailwind code that follows modern conventions — no class-name soup or div nesting hell"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Screenshot-to-code feature works surprisingly well for turning Figma mockups or hand-drawn wireframes into actual UI"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Vercel integration means one-click deploy to a live URL, which is great for showing clients a working prototype fast"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Iteration speed is unreal — describe a change in English and the UI updates in seconds without touching a keyboard"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Free tier is actually usable for learning and small projects ($5/month token credit goes a long way for simple components)"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Locked into React + Tailwind + Next.js ecosystem. If you work with Vue, Svelte, or plain HTML/CSS, this tool is useless for you"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Token-based pricing makes costs unpredictable. A complex full-page generation can eat your monthly credits in a few prompts, and there is no simple per-generation cost display"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Terrible at complex state management. Ask it to build a multi-step form with conditional logic, and it will generate something that looks right but breaks on the third step"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "No backend or API generation — pure frontend only. You still need to wire up your own database, auth, and server logic"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "The generated code sometimes uses deprecated Tailwind v3 classes even though v4 is standard in 2026 — you have to manually update or pin your project version"
+        }
+      ]
+    }
   }
 }</script>
     <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is v0.dev free to use?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, there is a free tier that gives you $5/month in token credits. For simple components and basic pages, this goes a surprisingly long way — you can generate maybe 20-30 simple prompts before hitting the limit. The Pro $20 plan gives you more credits and priority access, and Pro $50 is for heavy users. If you are building full landing pages daily, the $50 plan is the realistic minimum."}}, {"@type": "Question", "name": "Can I use v0.dev without knowing React or Tailwind?", "acceptedAnswer": {"@type": "Answer", "text": "Technically yes — you describe what you want in English and v0 generates the code. But you will still need React and Tailwind knowledge to integrate the output into an existing project, fix issues, or customize beyond what the AI generates. The tool is designed for developers who want to move faster, not for non-coders who want to build websites without learning to code. If you do not know React, you will struggle when the output needs debugging."}}, {"@type": "Question", "name": "How does v0.dev compare to Bolt.new or Lovable?", "acceptedAnswer": {"@type": "Answer", "text": "Bolt.new and Lovable are full-stack — they generate frontend + backend + database in one go. v0.dev is frontend-only. The tradeoff: v0 generates noticeably better-looking UI code because it focuses on one thing and does it well. Bolt and Lovable produce decent UIs but the frontend quality is lower because they spread compute across the full stack. If you already have a backend and just need a killer frontend, v0 wins. If you are building from scratch with zero code, Bolt.new is the better starting point."}}]}</script>

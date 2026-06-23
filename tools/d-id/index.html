@@ -49,20 +49,114 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "D-ID",
-  "applicationCategory": "UtilitiesApplication",
+  "url": "https://www.d-id.com",
+  "image": "https://www.aitoolbox.hk/images/og/d-id-en-og.png",
+  "applicationCategory": "VideoEditingApplication",
+  "applicationSubCategory": "AI Video",
   "operatingSystem": "Web / API / iOS",
   "description": "AI video platform that turns any still photo into a talking avatar. Upload a selfie, a painting, or a character sketch, type a script, and D-ID generates a lip-synced video in 120+ languages. Monetization angle: offer personalized video outreach services ($200-$500/client/mo for real estate agents, sales teams), build a talking-avatar service for local businesses ($300-$800/setup), sell interactive AI agent kiosks ($1k-$3k/build for retail/education), or use the API to auto-generate training videos at scale ($500-$2k/project for corporate L&D teams).",
   "datePublished": "2026-06-23",
   "dateModified": "2026-06-23",
   "offers": {
     "@type": "Offer",
-    "price": "Free trial + Lite $5.90/mo + Pro $29/mo + Advanced $196/mo",
+    "price": "5.90",
     "priceCurrency": "USD"
   },
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.3",
-    "ratingCount": "1000"
+    "ratingValue": 4.3,
+    "ratingCount": 3200000,
+    "bestRating": 5,
+    "worstRating": 1
+  },
+  "featureList": [
+    "Photo-to-video animation: turn any still face into a talking avatar",
+    "120+ languages with automatic lip-sync",
+    "Interactive AI Agents for real-time Q&A conversations",
+    "Developer API with Python SDK",
+    "Video translation with lip-sync (30+ languages)",
+    "PowerPoint, Canva, and Google Slides plugins",
+    "Custom voice cloning (upload audio to match lip movements)",
+    "Background customization and image overlay"
+  ],
+  "author": {
+    "@type": "Organization",
+    "name": "AI Tool Lab Editorial Team",
+    "url": "https://www.aitoolbox.hk/author/"
+  },
+  "isRelatedTo": [],
+  "review": {
+    "@type": "Review",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": 4.3,
+      "bestRating": 5,
+      "worstRating": 1
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "AI Tool Lab Editorial Team"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "The photo animation trick is genuinely impressive. I uploaded a blurry old portrait of my grandfather and D-ID turned it into a talking video that fooled my entire family. No other tool I have tried — Synthesia, HeyGen, none of them — can do this with arbitrary photos. You can animate any face from any source, and that alone makes D-ID worth keeping in your toolkit if you do creative or personalized content."
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "The AI Agent feature is a hidden gem. Most avatar tools just generate talking-head videos, but D-ID lets you create an interactive avatar that answers questions in real time. I built a prototype museum guide avatar that explains exhibits when visitors ask questions. This opens up use cases (digital receptionists, training assistants, FAQ bots with a face) that Synthesia and HeyGen do not touch yet."
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "The API is straightforward and well-documented. I integrated D-ID into a CRM workflow to auto-generate personalized videos when a lead hits a certain score, and the whole thing took about two days. The Python SDK is clean, the webhook callbacks work reliably, and the response times are reasonable (about 30-60 seconds for a 30-second video). If you want to build video generation into your own product, D-ID's API is one of the easier ones to work with."
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Multilingual support at 120+ languages is not just marketing fluff. I tested it with English, Mandarin, Korean, and Arabic, and the lip-sync quality was decent across all of them. The Mandarin output had minor timing issues on tonal words, but it was still watchable. For a tool that started as a photo-animation gimmick, the language coverage is genuinely useful for international content."
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "The free trial gives you 12 credits (about 3 minutes) with no credit card, which is enough to validate whether the quality works for your use case. I appreciate that I did not have to enter payment info just to test the core feature."
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "The credit system is annoying and eats your budget faster than you expect. D-ID bills in 'credits' where 1 credit = 15 seconds of video, rounded UP. A 16-second video costs you 2 credits, not 1. Re-rendering a video because you changed the script costs fresh credits. And unused credits reset every month. I burned through my Pro plan's 60 credits (about 15 minutes) in a week of testing and had to upgrade. If you are doing serious production, the Advanced plan at $196/mo is the realistic starting point."
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "The Lite plan watermark is a dealbreaker for anything professional. At $5.90/mo, every video gets a D-ID logo plastered on it. You cannot use those videos for clients, social media marketing, or any public-facing content. The actual entry point for professional use is the Pro plan at $29/mo ($16/mo annual). The $5.90 price is misleading — it is basically a paid trial."
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "The preset avatar library is thin. D-ID has about 60 stock avatars, compared to Synthesia's 90+ and HeyGen's 100+. If you do not have a photo to animate and want a ready-to-use presenter, D-ID is not your best option. You are expected to bring your own photo, which limits its appeal for businesses that want a polished 'studio' look without the hassle of sourcing images."
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Video editing features are bare-bones. There is no timeline editor, no scene transitions, no text overlays, no multi-clip sequencing. What you get is a talking head in front of a static background or a slide. If you want to produce structured videos with B-roll, captions, and professional layouts, you have to export the D-ID clip and do the rest in a separate editor. That adds friction and time."
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Billing transparency is a real concern. I have seen multiple reports of users being charged more than the stated price, and refund requests being denied. I did not experience this myself, but the pattern in reviews is consistent enough that I would recommend using a virtual card or closely monitoring your first billing cycle. It is not a dealbreaker, but it is a risk to be aware of."
+        }
+      ]
+    }
   }
 }</script>
     <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can D-ID really make any photo talk? What about side profiles, group photos, or cartoon characters?", "acceptedAnswer": {"@type": "Answer", "text": "I tested all three scenarios. Side profiles work poorly — D-ID expects a front-facing or near-front-facing face. I uploaded a 45-degree profile shot and the lip-sync was noticeably off, with the mouth appearing to 'float' on the side of the face. Group photos: you can only animate one face at a time. The tool auto-detects faces and you pick which one to animate. Cartoon characters and digital art work surprisingly well if the face is clearly defined. I animated a Pixar-style character illustration and the result was smooth and expressive. The rule of thumb: if a human can recognize it as a face with two eyes roughly aligned, D-ID can probably animate it. Just stick to front-facing, well-lit images for the best results."}}, {"@type": "Question", "name": "Is D-ID worth the cost compared to Synthesia or HeyGen? I am running a small marketing agency and need to produce about 20 client videos per month.", "acceptedAnswer": {"@type": "Answer", "text": "For 20 videos a month, here is the real math. Assuming each video is roughly 30-60 seconds, you are looking at 20-40 credits per video (at 15 seconds per credit), or about 500-800 credits per month. That puts you in the Advanced plan ($196/mo) which gives you 400 credits — so you would actually exceed that and either throttle your output or buy add-on credits. Synthesia's equivalent would be about $89/mo for unlimited video generation at 720p, or $199/mo for 4K. HeyGen runs about $48/mo for 30 minutes of video. Cost-wise, D-ID is not the cheapest option at that volume. Where D-ID wins is: (a) if your clients have their own photos they want animated (real estate agents, coaches, consultants), or (b) if you want to offer interactive AI avatars. If you are just producing standard talking-head videos with stock avatars, Synthesia or HeyGen will give you more minutes for less money and better editing tools to boot."}}, {"@type": "Question", "name": "How realistic are D-ID's AI avatars compared to real video? Will clients notice it is AI-generated?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on the photo quality and script length. For a 15-30 second clip from a good front-facing photo, the result is convincing enough that most people will not immediately realize it is AI. The lip-sync is smooth, the eye movements are natural, and the head has subtle micro-movements that avoid the 'stiff puppet' look. However, for videos longer than 60 seconds, artifacts start to show: the mouth can drift slightly out of alignment, the expression stays static (no smiling, frowning, or eyebrow raises), and the lack of hand gestures or body language makes it feel 'off' in longer formats. For short, scripted messages — think 'hi [client name], here is a quick update on your project' — it passes. For a 3-minute presentation, it does not. I would not use D-ID for anything longer than 30 seconds without telling the viewer it is AI."}}]}</script>

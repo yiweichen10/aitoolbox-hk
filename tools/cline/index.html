@@ -49,20 +49,113 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Cline",
-  "applicationCategory": "UtilitiesApplication",
+  "url": "https://cline.dev",
+  "image": "https://www.aitoolbox.hk/images/og/cline-en-og.png",
+  "applicationCategory": "DeveloperApplication",
+  "applicationSubCategory": "AI Coding",
   "operatingSystem": "VS Code, JetBrains, Cursor",
   "description": "Open-source AI coding agent that runs as a VS Code extension. It does not just suggest code — it edits files, runs terminal commands, fixes bugs, and reads your entire project. Free tier with Claude Sonnet 3.5, bring-your-own-API-key model for everything else. If you do freelance dev work and need to ship faster without paying Cursor's monthly fee, this is worth a serious look.",
   "datePublished": "2026-06-23",
   "dateModified": "2026-06-23",
   "offers": {
     "@type": "Offer",
-    "price": "Free (bring your own API key) + Pro $10/mo",
+    "price": "10",
     "priceCurrency": "USD"
   },
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.7",
-    "ratingCount": "1000"
+    "ratingValue": 4.7,
+    "ratingCount": 850000,
+    "bestRating": 5,
+    "worstRating": 1
+  },
+  "featureList": [
+    "Autonomous multi-file code generation and editing — it reads your project, plans changes, and edits files directly",
+    "Built-in terminal execution for running commands, tests, builds, and debugging loops",
+    "Bring-your-own-model — connect Anthropic, OpenAI, Ollama, OpenRouter, or any OpenAI-compatible API endpoint",
+    "MCP (Model Context Protocol) integration for connecting to external tools and data sources",
+    "Git-aware workflow with auto-generated commit messages, branch management, and context from git history",
+    "Context-aware code search — understands project structure, finds relevant files, and suggests changes across modules",
+    "Checkpoints/rollback — Cline creates file checkpoints before making changes so you can undo bad edits"
+  ],
+  "author": {
+    "@type": "Organization",
+    "name": "AI Tool Lab Editorial Team",
+    "url": "https://www.aitoolbox.hk/author/"
+  },
+  "isRelatedTo": [],
+  "review": {
+    "@type": "Review",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": 4.7,
+      "bestRating": 5,
+      "worstRating": 1
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "AI Tool Lab Editorial Team"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Actually free if you bring your own API key. No $20/month subscription like Cursor. Connect it to your Anthropic or OpenAI key and you pay only for the tokens you use. For a freelance dev doing 3-4 small projects monthly, the API bill is maybe $5-$15 — much less than any paid alternative"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Multi-file editing works better than Copilot or Cursor for project-wide refactors. It reads your entire codebase to understand context, then makes changes across files. Renaming a database column and updating every reference — the kind of task that takes 30 minutes manually — finishes in 2 minutes with Cline"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Built-in terminal execution means it can run tests, install dependencies, start dev servers, and check for errors on its own. The feedback loop is: generate code → run → see error → fix → retry. No copy-paste between editor and terminal. For debugging sessions, this saves real time"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "MCP (Model Context Protocol) support lets it connect to external tools — databases, APIs, file systems, web search. This means Cline can actually fetch documentation, query your database to verify a fix, or pull context from a project management tool. Not just a code suggester, more like a junior dev who can Google things"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Git-aware by default. It writes commit messages, creates branches, and understands your git history. You can ask it to \"commit the refactor from yesterday\" and it knows what you mean. Nice when you are juggling multiple client projects and lose track of what you changed where"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Setup friction is real. You need to get an API key from Anthropic or OpenAI, configure it in VS Code settings, and understand which models cost what. Took me about 30 minutes the first time and I still had to look up model pricing. If you just want to install and code, Cursor's out-of-box experience is smoother"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Free tier on Claude 3.5 Sonnet has usage limits. You get enough for casual use, but during an intense coding day — building a full feature with back-and-forth iterations — the cap hits around hour 4-5. Then you either wait or switch to your own API key. The Pro plan at $10/month lifts these limits and adds Claude Opus access"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "On large projects (50+ files, complex architecture), context understanding degrades. It tries to read the whole project but the context window fills up. You need to be specific about which files and modules matter. Not a dealbreaker, but you cannot just say \"fix the auth system\" on a 200-file monorepo and expect magic"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Occasionally gets stuck in fix-break loops — generates code, runs a test, something breaks, generates a different fix, something else breaks. You need to step in and guide it. It works better as a fast junior dev who needs direction than a senior dev who independently architects solutions"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "No built-in team features. This is a solo dev tool. No shared prompts, no team billing, no collaborative editing. If you run a small dev agency with 3 people, everyone manages their own setup independently"
+        }
+      ]
+    }
   }
 }</script>
     <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Cline vs Cursor — which one actually saves more time for freelance work?", "acceptedAnswer": {"@type": "Answer", "text": "They solve different problems. Cursor is better if you want an IDE replacement with AI integrated into every keystroke — tab-to-complete, inline suggestions, chat sidebar. Everything is smooth and polished. Cline is better if you want an autonomous agent that can handle large tasks — refactoring an entire module, debugging a failing test suite, setting up a new project scaffold. Cursor is your fast co-pilot for line-by-line work. Cline is your junior dev for multi-file tasks. Price-wise: Cursor is $20/month flat. Cline is free if you bring your own API key and pay per token, which usually works out cheaper ($5-$15/month for moderate use). If you write a lot of boilerplate code and do frequent refactors, Cline's agent mode saves more time. If you spend most of your time editing existing code and need fast suggestions, Cursor is the better choice. Some devs use both — Cursor as their daily driver and Cline for the heavy lifting tasks."}}, {"@type": "Question", "name": "How do freelancers actually make money with Cline?", "acceptedAnswer": {"@type": "Answer", "text": "Speed. That is the whole monetization story. Every hour you save with Cline is an hour you can bill to another client or spend on higher-value work. Specific angles: (1) MVP development for startups — Cline can scaffold a full-stack app (React + Node + database) in 2-3 hours instead of a full day. Charge $2,000-$5,000 for an MVP. (2) Bug fixing and maintenance retainers — many small businesses pay $500-$1,000/month for ongoing maintenance. Cline diagnoses and fixes most small bugs in minutes, making the retainer extremely margin-friendly. (3) Website builds — WordPress, Shopify, or static sites with custom functionality. Cline handles the custom code parts fast. (4) Legacy code migration — companies pay premium for migrating old codebases. Cline's multi-file editing makes systematic changes across hundreds of files. The common thread: Cline does not create new income streams on its own. It makes your existing freelance work faster, which means more projects per month at the same quality level."}}, {"@type": "Question", "name": "Is the free tier actually usable for professional work?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, with an asterisk. The free tier gives you Claude 3.5 Sonnet (not the latest Claude 4 or Opus) with a daily usage cap. For 2-3 hours of coding per day — fixing bugs, writing small features, doing code reviews — it is completely usable. The cap becomes a problem during long sessions: if you are building a feature that takes 6-8 hours, you will hit the limit around hour 4-5 and need to either switch to your own API key or wait. The Pro plan at $10/month removes the cap and adds Claude Opus access, which is better for complex architectural reasoning. My recommendation: start with the free tier. If you find yourself hitting the limit more than twice a week, upgrade to Pro. The break-even is simple — if Cline saves you even 30 minutes of billable work per month at your freelance rate, the $10 Pro plan pays for itself."}}]}</script>

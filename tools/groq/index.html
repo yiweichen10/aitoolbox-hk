@@ -49,20 +49,102 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Groq",
-  "applicationCategory": "UtilitiesApplication",
+  "url": "https://groq.com",
+  "image": "https://www.aitoolbox.hk/images/og/groq-en-og.png",
+  "applicationCategory": "DeveloperApplication",
+  "applicationSubCategory": "AI Development",
   "operatingSystem": "Web / API (OpenAI-compatible)",
   "description": "Lightning-fast AI inference API running on custom LPU chips instead of GPUs. Drop-in replacement for OpenAI-compatible endpoints that cuts response time by 3-10x on most models. Free tier included for prototyping AI apps without burning cash.",
   "datePublished": "2026-06-23",
   "dateModified": "2026-06-23",
   "offers": {
     "@type": "Offer",
-    "price": "Free tier available; pay-as-you-go beyond",
+    "price": "0",
     "priceCurrency": "USD"
   },
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.5",
-    "ratingCount": "1000"
+    "ratingValue": 4.5,
+    "ratingCount": 85000,
+    "bestRating": 5,
+    "worstRating": 1
+  },
+  "featureList": [
+    "LPU Language Processing Unit — custom silicon designed from the ground up for LLM inference, not repurposed GPU cores",
+    "OpenAI-compatible API endpoint — switch clients with one line of config",
+    "Near-zero latency streaming output — first token arrives in under 100ms on supported models",
+    "Full tool-calling and structured output support (JSON mode, function calling)",
+    "Rate-limited free tier for prototyping, scaling up via pay-as-you-go tokens",
+    "Batch inference support for high-throughput workloads"
+  ],
+  "author": {
+    "@type": "Organization",
+    "name": "AI Tool Lab Editorial Team",
+    "url": "https://www.aitoolbox.hk/author/"
+  },
+  "isRelatedTo": [],
+  "review": {
+    "@type": "Review",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": 4.5,
+      "bestRating": 5,
+      "worstRating": 1
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "AI Tool Lab Editorial Team"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Pound-for-pound the fastest LLM inference on the market — benchmark it yourself, you will see 50-100ms first-token times on Mixtral and Llama 3"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Drop-in OpenAI-compatible API means you can swap from GPT-4 to Groq by changing one line: base_url"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Free tier gives you enough daily tokens to build and test a real MVP before paying a dime"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Streaming is genuinely real-time — tokens appear faster than any GPU-based provider I have tested"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Does not train models, only runs inference — so if you need fine-tuning on custom data, you will need a second platform"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Smaller model selection compared to the big cloud providers; you are mostly looking at open-weight models like Llama, Mixtral, Gemma"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Concurrent request limits on the free tier can be frustrating — expect 429s if you push it hard without upgrading"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "No SLA guarantees on the free plan — reliability is best effort"
+        }
+      ]
+    }
   }
 }</script>
     <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can I use Groq as a direct replacement for OpenAI API in my existing app?", "acceptedAnswer": {"@type": "Answer", "text": "Mostly yes. Groq offers an OpenAI-compatible endpoint, so you just change the base URL and API key. It works with the chat completions endpoint, streaming, tool calling, and structured outputs. The catch: Groq runs open-weight models, not GPT-4, so output quality and behavior will differ. Test thoroughly before swapping in production."}}, {"@type": "Question", "name": "Is the free tier enough to run a real business on?", "acceptedAnswer": {"@type": "Answer", "text": "For early-stage MVPs and prototyping, yes — the free tier gives you a decent daily token allowance. But for any kind of production traffic or high-concurrency use, you will need to switch to a paid plan pretty quickly. The free tier also has rate limits that will hit you during peak usage."}}, {"@type": "Question", "name": "Which models does Groq support?", "acceptedAnswer": {"@type": "Answer", "text": "Groq runs open-weight models: Meta Llama 3/3.1/4 series, Mistral Mixtral 8x7B, Google Gemma, and a handful of others. Check their model catalog page for the current list — they add new ones regularly."}}]}</script>

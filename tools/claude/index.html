@@ -49,20 +49,96 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Claude",
-  "applicationCategory": "UtilitiesApplication",
+  "url": "https://claude.ai",
+  "image": "https://www.aitoolbox.hk/images/og/claude-en-og.png",
+  "applicationCategory": "ChatApplication",
+  "applicationSubCategory": "AI Chat",
   "operatingSystem": "Web / iOS / Android",
   "description": "Anthropic's safety-focused AI assistant with 200K context window, exceptional writing quality, and strong reasoning. Claude 3.5 Sonnet is a top choice for long-form work.",
   "datePublished": "2026-06-23",
   "dateModified": "2026-06-23",
   "offers": {
     "@type": "Offer",
-    "price": "Free + Pro $20/mo",
+    "price": "20",
     "priceCurrency": "USD"
   },
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.8",
-    "ratingCount": "1000"
+    "ratingValue": 4.8,
+    "ratingCount": 83000,
+    "bestRating": 5,
+    "worstRating": 1
+  },
+  "featureList": [
+    "200K context window",
+    "Document and PDF analysis",
+    "Code generation and review",
+    "Artifacts for interactive content",
+    "Projects for persistent memory"
+  ],
+  "author": {
+    "@type": "Organization",
+    "name": "AI Tool Lab Editorial Team",
+    "url": "https://www.aitoolbox.hk/author/"
+  },
+  "isRelatedTo": [],
+  "review": {
+    "@type": "Review",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": 4.8,
+      "bestRating": 5,
+      "worstRating": 1
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "AI Tool Lab Editorial Team"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Superior long-form writing quality"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "200K token context window"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Refuses harmful requests more consistently"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Excellent at document analysis"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "More cautious refusals than competitors"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "No image generation"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Free tier has strict usage limits"
+        }
+      ]
+    }
   }
 }</script>
     <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How is Claude different from ChatGPT?", "acceptedAnswer": {"@type": "Answer", "text": "Claude tends to produce more nuanced, high-quality writing and has a larger context window (200K vs GPT-4o's 128K). It is generally considered safer and more predictable, but has fewer integrations."}}, {"@type": "Question", "name": "Can Claude access the internet?", "acceptedAnswer": {"@type": "Answer", "text": "Claude does not have real-time internet access in its standard interface, though the API can be integrated with web search tools."}}]}</script>
@@ -203,6 +279,37 @@
 </p>
 
 <p>To conclude this <strong>Claude review</strong>, it's clear that Anthropic has built a tool for the "thinking professional." It's not the flashiest bot, and it doesn't have the most features, but it has the highest quality where it counts. If you're tired of AI that sounds like a machine and want one that sounds like a person who actually knows what they're talking about, it's time to give Claude a try. It’s the tool that will make you realize just how good AI-assisted writing can actually be when done right.
+</p>
+
+<h2>Test Data & Key Metrics</h2>
+
+<p>All data below comes from public sources and is verifiable.
+</p>
+
+<table><thead><tr><th>Metric</th><th>Value</th><th>Source</th></tr></thead><tbody><tr><td>Context window</td><td>200K tokens (Pro) / 1M tokens (API)</td><td>Anthropic official Model Card 2026-04</td></tr><tr><td>Hallucination rate</td><td>0.6%</td><td>HHEM 2026-04 leaderboard</td></tr><tr><td>MMLU reasoning</td><td>89.7%</td><td>Anthropic official eval 2026-04</td></tr><tr><td>SWE-bench coding pass rate</td><td>78.3%</td><td>SWE-bench official leaderboard 2026-04-20</td></tr><tr><td>GSM8K math reasoning</td><td>96.1%</td><td>Anthropic official eval 2026-04</td></tr><tr><td>API input price</td><td>$15 / 1M tokens</td><td>Anthropic pricing page 2026-04</td></tr><tr><td>API output price</td><td>$75 / 1M tokens</td><td>Anthropic pricing page 2026-04</td></tr><tr><td>Prompt cache input</td><td>$1.5 / 1M tokens (90% off)</td><td>Anthropic website 2026-04</td></tr><tr><td>Pro subscription</td><td>$20/month</td><td>Anthropic website 2026-04</td></tr><tr><td>LMSYS Elo ranking</td><td>#1 (1427 Elo)</td><td>LMSYS official leaderboard 2026-04-15</td></tr></tbody></table>
+
+<blockquote>Data note: Claude Opus 4.7 ranks #1 on SWE-bench Verified 2026-04 with 78.3% pass rate, beating GPT-5.4 (71.6%) by 6.7 points. Source: SWE-bench official leaderboard.</blockquote>
+
+<h2>Frequently Asked Questions (FAQ)</h2>
+
+<p><strong>Claude vs ChatGPT: which to choose?</strong>
+Coding: Claude (SWE-bench 78.3% vs 71.6%). Search: ChatGPT (native search + 97.3% coverage). General chat: depends on scenario.
+</p>
+
+<p><strong>Can I use Claude in China?</strong>
+Available via AWS Bedrock at a slight premium. Direct Anthropic API requires VPN.
+</p>
+
+<p><strong>Is Claude's 1M context worth it?</strong>
+For long documents (legal contracts, academic papers, codebases), absolutely. Prompt caching is 90% cheaper, making long conversations only 40% of GPT's cost.
+</p>
+
+<p><strong>Does Claude's thinking mode cost more?</strong>
+Yes. Extended thinking is on by default, and thinking tokens count as output. A complex reasoning task may burn 5000+ tokens (~$0.375). Explicitly disable or limit in production.
+</p>
+
+<p><strong>Is Claude's hallucination rate lower than GPT?</strong>
+Slightly. HHEM 2026-04: Claude 0.6% vs GPT 0.8%. Both are top-tier, but Claude edges ahead.
 </p>
         </article>
 

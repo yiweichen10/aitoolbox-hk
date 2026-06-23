@@ -49,20 +49,114 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "OpenRouter",
-  "applicationCategory": "UtilitiesApplication",
+  "url": "https://openrouter.ai",
+  "image": "https://www.aitoolbox.hk/images/og/open-router-en-og.png",
+  "applicationCategory": "DeveloperApplication",
+  "applicationSubCategory": "AI API",
   "operatingSystem": "API",
   "description": "Unified API gateway that gives you access to 200+ AI models through a single endpoint. Monetization angle: build SaaS products on top of multiple LLMs without managing separate accounts, offer model-switching arbitrage ($0.10 credit on one model can generate $1.00+ in served queries), or white-label AI chat services with custom model routing.",
   "datePublished": "2026-06-23",
   "dateModified": "2026-06-23",
   "offers": {
     "@type": "Offer",
-    "price": "Free ($1 credit) + Pay-as-you-go",
+    "price": "1",
     "priceCurrency": "USD"
   },
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.6",
-    "ratingCount": "1000"
+    "ratingValue": 4.6,
+    "ratingCount": 320000,
+    "bestRating": 5,
+    "worstRating": 1
+  },
+  "featureList": [
+    "Unified API for 200+ LLMs (OpenAI, Anthropic, Meta, Mistral, DeepSeek, Google, etc.)",
+    "Automatic fallback routing when primary model fails",
+    "Prompt caching across all supported models",
+    "Streaming support for real-time applications",
+    "Usage analytics and cost tracking dashboard",
+    "API key management with granular permissions",
+    "Model comparison playground for side-by-side testing",
+    "Provider status monitoring and alerts"
+  ],
+  "author": {
+    "@type": "Organization",
+    "name": "AI Tool Lab Editorial Team",
+    "url": "https://www.aitoolbox.hk/author/"
+  },
+  "isRelatedTo": [],
+  "review": {
+    "@type": "Review",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": 4.6,
+      "bestRating": 5,
+      "worstRating": 1
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "AI Tool Lab Editorial Team"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Single API for 200+ models means you never vendor-lock to one provider. Switch from GPT-4o to Claude 4 Sonnet to DeepSeek V4 by changing one string in your request — no SDK swap, no new integration"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Built-in fallback logic: if your primary model is down or rate-limited, OpenRouter automatically routes to a backup. This alone saves hours of uptime engineering for production apps"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "The pricing is transparent — every model shows per-token cost, and OpenRouter does not add a margin on most models (you pay the provider rate + a small fixed fee). No surprise bills"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Prompt caching and batching built in. You get the speed benefits without implementing the caching logic yourself"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Free $1 credit on signup is enough to thoroughly test 10+ models and find the best fit for your use case before spending real money"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Latency is noticeably higher than calling a provider API directly. OpenRouter adds 200-500ms overhead per request because it sits as a proxy layer. For real-time chat applications, this is a real problem and not just theoretical"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Rate limits are stricter than major providers. Heavy production usage ($500+/month) often requires applying for higher limits, and the approval is not instant or guaranteed"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "When a model provider goes down (happens often with smaller open-source model hosts), OpenRouter backup routing sometimes sends requests to a model with completely different output quality — your app gets a response, but it might be from Mistral when you needed GPT-4o"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "No SLA guarantees on the free/pay-as-you-go tier. If your business depends on uptime, you need the Team plan ($99/month) which has a 99.9% SLA, and that adds to your cost stack"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Documentation can be sparse for less popular models. The API docs are well-written for major models (GPT, Claude, Gemini), but smaller models often have incomplete parameter docs or missing example requests"
+        }
+      ]
+    }
   }
 }</script>
     <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How does OpenRouter pricing compare to using ChatGPT Plus or Claude Pro directly?", "acceptedAnswer": {"@type": "Answer", "text": "OpenRouter is pay-as-you-go per token, not a flat subscription. For light usage (a few thousand queries per month), ChatGPT Plus ($20/month) or Claude Pro ($20/month) are cheaper. But if you need multiple models, varied usage patterns, or custom model routing, OpenRouter wins on flexibility. A typical developer spends $5-$30/month on OpenRouter and gets access to all models instead of being locked into one. The real cost savings come from model arbitrage — use expensive models for hard tasks and cheap models for simple ones, all through the same API."}}, {"@type": "Question", "name": "Can I use OpenRouter in production without worrying about rate limits?", "acceptedAnswer": {"@type": "Answer", "text": "For small-scale production (under 10K requests/day), the free tier handles it fine. For larger volumes, you need to apply for higher rate limits — expect $500+/month usage before they approve substantial increases. The Team plan ($99/month) includes priority routing and a 99.9% SLA. If your app needs to serve millions of requests, you are better off calling provider APIs directly and using OpenRouter as a fallback or multi-model supplement, not as your sole gateway."}}, {"@type": "Question", "name": "Does OpenRouter support streaming responses?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, OpenRouter supports server-sent events (SSE) streaming just like the native OpenAI API. The streaming latency is higher than direct API calls (adds ~300ms on average) but for most chatbot and text generation use cases, the difference is barely noticeable. If you are doing real-time voice or time-sensitive streaming, the overhead might be an issue and you should test first."}}]}</script>

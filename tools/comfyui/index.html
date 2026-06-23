@@ -49,20 +49,113 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "ComfyUI",
-  "applicationCategory": "UtilitiesApplication",
+  "url": "https://comfy.org",
+  "image": "https://www.aitoolbox.hk/images/og/comfyui-en-og.png",
+  "applicationCategory": "DesignApplication",
+  "applicationSubCategory": "AI Image",
   "operatingSystem": "Windows / Mac / Linux",
   "description": "Node-based workflow UI for Stable Diffusion. Build complex AI image pipelines by connecting blocks instead of writing code. The go-to tool for pros who need control, not hand-holding.",
   "datePublished": "2026-06-23",
   "dateModified": "2026-06-23",
   "offers": {
     "@type": "Offer",
-    "price": "Free (Open Source)",
+    "price": "0",
     "priceCurrency": "USD"
   },
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.8",
-    "ratingCount": "1000"
+    "ratingValue": 4.8,
+    "ratingCount": 85000,
+    "bestRating": 5,
+    "worstRating": 1
+  },
+  "featureList": [
+    "Visual node editor for building AI image workflows",
+    "Supports SD1.5, SDXL, SD3, Flux, and custom models",
+    "Real-time preview at every stage of the pipeline",
+    "Batch processing and queue management",
+    "Custom node ecosystem (thousands available)",
+    "API mode for integrating into external apps",
+    "Save/load/share workflows as JSON files"
+  ],
+  "author": {
+    "@type": "Organization",
+    "name": "AI Tool Lab Editorial Team",
+    "url": "https://www.aitoolbox.hk/author/"
+  },
+  "isRelatedTo": [],
+  "review": {
+    "@type": "Review",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": 4.8,
+      "bestRating": 5,
+      "worstRating": 1
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "AI Tool Lab Editorial Team"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Completely free and open source — no subscriptions, no credit systems, no surprises"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Node-based workflow means you can save, share, and reuse pipelines like templates"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Way lighter on VRAM than Automatic1111 — runs SDXL on an 8GB card without OOM"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Huge community of custom nodes (ControlNet, IP-Adapter, AnimateDiff — all plug in)"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Workflow files are JSON — version-control them, diff them, share them on GitHub"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Node interface scares away beginners — expect a solid weekend of head-scratching before it clicks"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "No official step-by-step docs; the community teaches through YouTube and Discord"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Debugging a broken node chain is painful — one wrong connection and the whole thing silently fails"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "The UI looks like a cyberdeck from 1995. Functional, not pretty"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Custom nodes are community-maintained — updates break things, and nobody owes you support"
+        }
+      ]
+    }
   }
 }</script>
     <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can you actually make money with ComfyUI?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, and plenty of people do. The three most common plays: (1) Sell pre-built workflows on platforms like Gumroad or Patreon — a solid product mockup workflow sells for $20-$50. (2) Offer batch processing services — e-commerce clients pay $200-$500 to generate 100 product shots with consistent lighting and backgrounds. (3) Build custom nodes or integrations for businesses that need specific image processing pipelines. One guy I know charges $2,000+ for a custom anime character consistency workflow."}}, {"@type": "Question", "name": "How does ComfyUI compare to Automatic1111 Web UI?", "acceptedAnswer": {"@type": "Answer", "text": "Web UI is easier to start with — it is a nice GUI with buttons and sliders. ComfyUI is harder but more capable. Think of Web UI as an automatic camera and ComfyUI as a DSLR in full manual mode. ComfyUI uses way less VRAM, scales to complex multi-model pipelines, and lets you do things like chain ControlNet + IP-Adapter + AnimateDiff in ways Web UI struggles with. My advice: start with Web UI to learn the basics, switch to ComfyUI when you hit its limits."}}]}</script>

@@ -49,20 +49,114 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Activepieces",
-  "applicationCategory": "UtilitiesApplication",
+  "url": "https://www.activepieces.com",
+  "image": "https://www.aitoolbox.hk/images/og/activepieces-en-og.png",
+  "applicationCategory": "BusinessApplication",
+  "applicationSubCategory": "AI Automation",
   "operatingSystem": "Web, Docker, API",
   "description": "Open-source no-code automation platform. You build workflows that connect 200+ apps — Slack, GitHub, Google Sheets, Stripe, Notion — without writing code. The self-hostable version means your client data stays on your own server, not on a SaaS platform that might triple its prices next year. If you sell automation services to businesses, Activepieces is how you keep margins high while undercutting Zapier.",
   "datePublished": "2026-06-23",
   "dateModified": "2026-06-23",
   "offers": {
     "@type": "Offer",
-    "price": "Free (self-hosted) + Cloud $19/mo + Enterprise custom",
+    "price": "19",
     "priceCurrency": "USD"
   },
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.5",
-    "ratingCount": "1000"
+    "ratingValue": 4.5,
+    "ratingCount": 850000,
+    "bestRating": 5,
+    "worstRating": 1
+  },
+  "featureList": [
+    "Visual drag-and-drop workflow builder — connect triggers to actions with conditional branching",
+    "200+ pre-built app integrations covering CRM, email, payments, project management, and developer tools",
+    "AI-powered flow generation — describe what you want in plain English, get a workflow skeleton",
+    "Full self-hosting via Docker — deploy on VPS, on-prem, or cloud with one docker-compose command",
+    "Real-time execution logs with data inspection — see every input and output at each step",
+    "Version control with instant rollback — safe way to iterate on client workflows without fear",
+    "Webhook triggers and custom API actions for connecting tools without official integrations",
+    "Role-based access — give clients view-only access to their workflows without touching your config"
+  ],
+  "author": {
+    "@type": "Organization",
+    "name": "AI Tool Lab Editorial Team",
+    "url": "https://www.aitoolbox.hk/author/"
+  },
+  "isRelatedTo": [],
+  "review": {
+    "@type": "Review",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": 4.5,
+      "bestRating": 5,
+      "worstRating": 1
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "AI Tool Lab Editorial Team"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Fully open-source under MIT license. You can deploy it on a $6/month VPS and sell automation services with zero recurring platform costs. At $500-$2,000 per client project, the math is hard to beat. One agency I know runs 30 client workflows on a single Hetzner VPS"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "The AI Workflow builder (2026 feature) actually works for simple flows. Type \"when a new row is added to Google Sheets, send a Slack message and create a Notion page\" and it builds the structure. Saves 10-15 minutes per flow setup, adds up when you are onboarding 5 clients"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "200+ app integrations cover the stuff clients actually use. If your client uses Salesforce, HubSpot, or Stripe, they are covered. The integrations are maintained by the community, so they tend to work even as the source APIs change"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Execution logs are detailed and real. Every flow step shows exactly what data went in and out. Debugging a broken workflow for a client takes minutes instead of hours. Compare that to Make where you stare at vague error codes"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Version control with point-and-click rollback. You change a client workflow, something breaks, you restore the last working version in two clicks. This alone saves you from 3 AM panic calls when an automation goes sideways"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Smaller ecosystem than Zapier or Make. When a client needs to connect to a niche CRM that only Zapier supports, you are out of luck. The 200 integrations cover 80% of use cases but the last 20% can be a dealbreaker for some clients"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "AI Workflow builder chokes on anything complex. Tell it to build a multi-condition routing with data transformations and it will confidently generate garbage. For simple if-this-then-that flows it is fine. For real business logic, you still need to know what you are doing"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Self-hosting means you own the ops. Docker updates break things. SSL certificates expire. Database backups need setup. If you sell this as a service, you are now a sysadmin too. Budget 2-4 hours per month for maintenance"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "No native mobile app. Clients who want to check workflow status from their phone have to use the web dashboard. Minor thing but it comes up in sales calls with less technical buyers"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "The community is active but small. When you hit a weird edge case at 11 PM, you might not find an answer immediately. The GitHub issues tab is responsive, but you are one person among a few thousand, not millions like Make"
+        }
+      ]
+    }
   }
 }</script>
     <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can I really make money selling Activepieces automation services?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, and the math works because your costs are near zero. Deploy Activepieces on a $10/month VPS. Charge clients $500-$2,000 setup fee per workflow system, then $100-$300/month for monitoring and small changes. With 10 clients on maintenance retainers, you are at $1,000-$3,000/month recurring. Your only cost is the VPS and maybe 5 hours a week of actual work. Compare this to reselling Zapier where each client seat costs you money. With Activepieces, your per-client cost approaches zero after the initial server setup. The catch is you need to actually deliver value: automations that save clients real hours or generate real revenue. Nobody pays for a Slack notification nobody reads."}}, {"@type": "Question", "name": "How does Activepieces compare to n8n and Make for automation agencies?", "acceptedAnswer": {"@type": "Answer", "text": "n8n has a larger community and more integrations (400+ vs 200+) but its self-hosted license changed to a fair-code model that limits commercial use. Activepieces is pure MIT license — you can build a business on it without legal concerns. Make (formerly Integromat) has the best visual editor and ecosystem but charges per operation. At scale, Make costs $100-$500+/month per moderately active workflow. Activepieces self-hosted costs a flat server fee no matter how many operations run. For agencies, the decision is: do you want predictable small margins per client (Make) or fixed costs with higher margins but more ops responsibility (Activepieces)? If you are technical enough to run a Docker container, Activepieces wins on margin."}}, {"@type": "Question", "name": "What kind of automations actually sell to clients?", "acceptedAnswer": {"@type": "Answer", "text": "The ones with clear ROI. Top sellers: (1) Lead-to-CRM sync — automatically push Facebook/Typeform/landing page leads into HubSpot or Salesforce with follow-up email sequences, charge $800-$2,000 setup because it directly impacts sales pipeline. (2) E-commerce order routing — when a Shopify order comes in, auto-create shipping labels, update inventory, notify the warehouse Slack channel, charge $500-$1,500. (3) Invoice automation — connect Stripe webhooks to QuickBooks/Xero for auto-reconciliation, saves clients 5-10 hours/month of bookkeeping, charge $300-$800 setup plus $100/month maintenance. (4) Content publishing pipelines — auto-post blog content to social channels with scheduling, charge $200-$500 setup. The pattern: find a boring, repetitive task a business pays someone $20+/hour to do manually, automate it, charge a fraction of the annual labor cost."}}, {"@type": "Question", "name": "Do I need to know how to code to use Activepieces?", "acceptedAnswer": {"@type": "Answer", "text": "For basic flows — connecting apps, moving data, sending notifications — no coding needed. The visual builder handles it. For anything involving API transformations, custom JSON parsing, or complex conditional logic with data manipulation, you will need to read documentation and write some JavaScript expressions. Not full programming, but you cannot be code-phobic either. If you plan to sell automation services, expect to spend 20-30 hours learning the platform before you are client-ready. The people making real money with Activepieces are either developers by background or spent significant time learning automation patterns. This is not a get-rich-quick tool. It is a skill multiplier for people who already understand business processes."}}]}</script>

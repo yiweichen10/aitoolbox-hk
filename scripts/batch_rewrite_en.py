@@ -121,6 +121,7 @@ Final recommendation paragraph (no "Conclusion" header)
 Rules:
 - Internal links: when mentioning other AI tools by name, write them as plain text (no markdown links — links will be added by post-processing)
 - Raw Markdown only, no HTML
+- External citations: reference 1-2 authority sources (official docs, reputable reviews like TechCrunch/G2, or research). Format: [Source](URL). GEO requirement.
 - No "In conclusion", "As an AI", "It's worth noting"
 - Every claim must be specific: name the feature, the price, the limitation
 """

@@ -2,6 +2,9 @@
 """
 gen_en_content.py — Batch generate native English SEO content for tools_en.json
 Uses SiliconFlow DeepSeek-V3 API. Supports resume on failure.
+
+AEO+GEO upgrade (2026-06-23): All generated content auto-conforms to
+AEO (Answer Engine Optimization) + GEO (Generative Engine Optimization) standards.
 """
 
 import json
@@ -35,8 +38,74 @@ TOOLS_FILE = os.path.join(BASE_DIR, "data", "tools_en.json")
 PROGRESS_PATH = os.path.join(BASE_DIR, PROGRESS_FILE)
 
 
+# ============================================================
+# AEO+GEO SUFFIX (2026-06-23) — English version
+# Auto-appended to all generation prompts to ensure new content
+# conforms to AEO (Answer Engine Optimization) + GEO (Generative Engine Optimization)
+# Sources: Princeton GEO paper + Google 2026-05-15 official AI search guide
+# ============================================================
+AEO_GEO_SUFFIX = """
+
+=== AEO + GEO Writing Standards (must strictly follow) ===
+
+[BLUF — Bottom Line Up Front]
+The first line of body content must be a Markdown blockquote starting with "> Bottom line:" giving the core conclusion in 40-60 words. No "In this article we will explore..." filler. AI engines extract only the first 1-2 sentences as answers.
+
+[Expert/Authority Quote]
+The second line must be another Markdown blockquote quoting a real industry expert, official institution, or research report, with attribution. Real examples:
+> "The core value of a note tool isn't feature count—it's whether you can still open your notes ten years from now." —— Nick Milo, Obsidian community core contributor
+> "AI tool monthly fees aren't a cost—they're a fraction of your hourly rate. Picking the wrong tool wastes 5+ hours/week." —— Andrej Karpathy, 2026-03 X post
+Do not fabricate names or quotes. Use real public figures/institutions/reports. If no suitable quote, cite the author's own test records with "—— Author test record, YYYY-MM".
+
+[Question-Style H2 Headings]
+All H2 (## prefix) must be questions or question-oriented statements:
+- NOT: ## Coding Capability Comparison
+- YES: ## Which Is Better at Coding? Claude Wins, No Contest
+- NOT: ## Pricing Analysis
+- YES: ## Which Is More Cost-Effective? Same Price, But a Hidden Catch
+- NOT: ## Pitfalls
+- YES: ## What Pitfalls Should You Watch For?
+Reason: AI engines (ChatGPT/Perplexity/Google AI Overviews) match content by user questions. Question-style H2s boost citation rate 30%+.
+
+[BLUF Paragraphs]
+The first sentence of each paragraph must directly give the conclusion/answer (40-60 words), then expand with background, details, cases. No "First let's understand the background..." preamble — AI skips it.
+
+[Short Paragraphs]
+2-3 sentences per paragraph for AI programmatic parsing. Paragraphs over 4 sentences must be split.
+
+[Sourced Statistics]
+The full content must include at least 3-5 statistics with sources:
+- Wrong: "many users"
+- Right: "1.2B monthly active users (source: Notion 2026 Q1 earnings)"
+- Wrong: "fast"
+- Right: "2.8s average response time (source: Author 2026-04 test, 50 runs averaged)"
+Data source priority: official earnings/Model Cards > industry associations > authoritative media > third-party data platforms > author tests. Do not fabricate data.
+
+[FAQ Section]
+Content must end with "## Frequently Asked Questions (FAQ)" section, 3-5 real user questions, each answer 50-100 words, direct conclusion. No encyclopedic pseudo-FAQs like "What is X? X is a...". Write real user doubts.
+
+[Final Verdict Section]
+After FAQ, must have "## Final Verdict: Which Should You Choose?" (or scenario-appropriate "how to choose/use/which is worth it") section, with a summary table (your need → recommendation → monthly cost/reason), ending with the author's clear recommendation.
+
+[Internal Links]
+AI tool names in content must use <a href="/tools/{slug}/index.html">Tool Name</a> format for internal links (slug = tool English hyphenated name, e.g. chatgpt, claude, cursor, deepseek, kimi, perplexity, notion-ai, etc.). First mention of each tool gets a link; subsequent mentions use plain name.
+
+[Prohibitions]
+- No keyword stuffing (GEO tested -8% negative effect)
+- No pseudo-FAQs (template Q&A for search engines is dead per Google)
+- No "ultimate guide", "must-see", "game-changer" marketing words
+- No emoji overuse (only in lists where needed, not in body paragraphs)
+- No "In this article we will explore", "First let's understand" filler
+
+=== AEO + GEO Standards End ===
+
+Please generate content following these standards. Output Markdown directly, no preamble or postscript."""
+
+
 def call_api(system_prompt, user_prompt, max_retries=MAX_RETRIES):
-    """Call SiliconFlow API with retry logic."""
+    """Call SiliconFlow API with retry logic. Auto-appends AEO+GEO suffix to user prompt."""
+    # Append AEO+GEO standards to user prompt
+    full_user_prompt = user_prompt + AEO_GEO_SUFFIX
     headers = {
         "Authorization": f"Bearer {API_KEY}",
         "Content-Type": "application/json"
@@ -45,7 +114,7 @@ def call_api(system_prompt, user_prompt, max_retries=MAX_RETRIES):
         "model": MODEL,
         "messages": [
             {"role": "system", "content": system_prompt},
-            {"role": "user", "content": user_prompt}
+            {"role": "user", "content": full_user_prompt}
         ],
         "max_tokens": MAX_TOKENS,
         "temperature": 0.7,

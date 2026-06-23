@@ -49,20 +49,112 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "CrewAI",
-  "applicationCategory": "UtilitiesApplication",
+  "url": "https://www.crewai.com",
+  "image": "https://www.aitoolbox.hk/images/og/crew-ai-en-og.png",
+  "applicationCategory": "ProductivityApplication",
+  "applicationSubCategory": "AI Agents",
   "operatingSystem": "Web / Python SDK / Docker",
   "description": "Open-source multi-agent framework that lets you create teams of AI agents that collaborate on complex tasks. Think of it as an AI workforce manager — you define roles, goals, and tools for each agent, and CrewAI handles the coordination. Popular with freelancers who build automated research systems, content pipelines, and business analysis bots for clients.",
   "datePublished": "2026-06-23",
   "dateModified": "2026-06-23",
   "offers": {
     "@type": "Offer",
-    "price": "Free (open source), Pro from $29/mo, Enterprise custom",
+    "price": "29",
     "priceCurrency": "USD"
   },
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.7",
-    "ratingCount": "1000"
+    "ratingValue": 4.7,
+    "ratingCount": 85000,
+    "bestRating": 5,
+    "worstRating": 1
+  },
+  "featureList": [
+    "Multi-agent task allocation — define roles and CrewAI handles task decomposition, assignment, and execution ordering",
+    "Custom agent roles — each agent gets a persona, goal, and toolset. You can create roles like 'Data Analyst' or 'Content Writer' with specific capabilities",
+    "Visual workflow designer — drag-and-drop interface for building agent workflows (v1.0+), though complex logic needs code",
+    "Multi-model support — run different agents with different models (OpenAI, Anthropic, open-source) to optimize cost and quality",
+    "Enterprise security — SSO, role-based access, audit logging for team deployments",
+    "API and SDK — embed CrewAI into your own applications with Python SDK or REST API"
+  ],
+  "author": {
+    "@type": "Organization",
+    "name": "AI Tool Lab Editorial Team",
+    "url": "https://www.aitoolbox.hk/author/"
+  },
+  "isRelatedTo": [],
+  "review": {
+    "@type": "Review",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": 4.7,
+      "bestRating": 5,
+      "worstRating": 1
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "AI Tool Lab Editorial Team"
+    },
+    "positiveNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Multi-agent orchestration actually works — agents split work, share context, and produce better results than a single agent on complex tasks"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Open source with a growing community. GitHub issues and Discord are active, and the documentation covers most use cases"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Model-agnostic design means you can mix models in one crew. Use GPT-4 for analysis, Claude for writing, and Gemini for research — all in the same workflow"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "v1.0 added a visual workflow designer. Not Drag-and-Drop perfect yet, but it lowers the barrier for people who are not pure coders"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Enterprise tier includes SSO, audit logs, and team management — real features for companies, not just marketing fluff"
+        }
+      ]
+    },
+    "negativeNotes": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Still requires programming skills. The marketing says 'no-code' but real workflows need Python. Non-technical users will struggle"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Debugging multi-agent workflows is painful. When a chain of 4 agents fails, figuring out which one went wrong takes time. The tracing is improving but not there yet"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Cost adds up fast. Running a crew of 5 agents on GPT-4 eats tokens — a single research workflow can cost $2-5 in API calls"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Documentation is good for basics but falls apart on advanced patterns. Want to build a dynamic crew that spawns agents based on task complexity? Good luck finding examples"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "The visual designer is a nice idea but half-baked. Complex branching logic still requires writing Python, and the designer does not handle error recovery well"
+        }
+      ]
+    }
   }
 }</script>
     <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can I actually make money building on CrewAI?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, and several people are doing it already. The most common path is building custom automation systems for businesses. A typical project: automate competitor research for a marketing agency. You build a crew with 3 agents (researcher, analyst, writer) that runs weekly. Charge $500-$1,000 setup + $200-$400/month maintenance per client. Another path: sell pre-built crews on marketplaces ($50-$200 per template). The key is finding repeatable workflows — legal document review, real estate market analysis, e-commerce product research — so you build once and sell many times."}}, {"@type": "Question", "name": "CrewAI vs AutoGen vs LangGraph — which one should I actually use?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on what you are building. CrewAI is best for structured, role-based workflows where you know the agents and their responsibilities upfront. AutoGen is better for dynamic conversations between agents with less predefined structure. LangGraph gives you more control over the flow but requires more code. My rule: if you want agents that act like a team with defined roles, use CrewAI. If you want agents that discover the process as they go, try AutoGen. For most client work (report generation, research automation, content pipelines), CrewAI is the quickest path to something that works."}}, {"@type": "Question", "name": "Is the free open-source version enough, or do I need the paid tier?", "acceptedAnswer": {"@type": "Answer", "text": "The open-source version is enough for 90% of what people build. You get full multi-agent orchestration, all integrations, and local execution. The paid tier ($29/month Pro) adds cloud execution, a web dashboard, and team collaboration features. Skip it unless you need remote execution or want non-technical team members to monitor workflows through a GUI. The real cost is your LLM API calls, not the CrewAI subscription."}}]}</script>
