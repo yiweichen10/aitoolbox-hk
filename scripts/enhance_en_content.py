@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 enhance_en_content.py — Enhance tool content from ~370 words to 800+ words
-Uses SiliconFlow DeepSeek-V3 API. Supports resume on failure.
+Uses SiliconFlow DeepSeek-V4-Pro API. Supports resume on failure.
 """
 
 import json
@@ -21,7 +21,7 @@ load_dotenv(dotenv_path)
 
 API_KEY = os.getenv("SILICONFLOW_API_KEY", "")
 BASE_URL = os.getenv("SILICONFLOW_BASE_URL", "https://api.siliconflow.cn/v1/chat/completions")
-MODEL = "Pro/deepseek-ai/DeepSeek-V3.2"
+MODEL = "deepseek-ai/DeepSeek-V4-Pro"
 MAX_TOKENS = 5000
 DELAY_MIN = 5
 DELAY_MAX = 10

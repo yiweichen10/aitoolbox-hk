@@ -22,11 +22,11 @@ load_dotenv(dotenv_path)
 # AI API 配置
 API_URL = os.getenv("SILICONFLOW_BASE_URL", "https://api.siliconflow.cn/v1/chat/completions")
 API_KEY = os.getenv("SILICONFLOW_API_KEY", "")
-MODEL = "Pro/deepseek-ai/DeepSeek-V3.2"
+MODEL = "deepseek-ai/DeepSeek-V4-Pro"
 
 
 def call_ai(prompt, max_tokens=4000):
-    """调用DeepSeek-V3 API"""
+    """调用DeepSeek-V4-Pro API"""
     import urllib.request
     payload = json.dumps({
         "model": MODEL,

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 gen_en_content.py — Batch generate native English SEO content for tools_en.json
-Uses SiliconFlow DeepSeek-V3 API. Supports resume on failure.
+Uses SiliconFlow DeepSeek-V4-Pro API. Supports resume on failure.
 
 AEO+GEO upgrade (2026-06-23): All generated content auto-conforms to
 AEO (Answer Engine Optimization) + GEO (Generative Engine Optimization) standards.
@@ -25,7 +25,7 @@ load_dotenv(dotenv_path)
 
 API_KEY = os.getenv("SILICONFLOW_API_KEY", "")
 BASE_URL = os.getenv("SILICONFLOW_BASE_URL", "https://api.siliconflow.cn/v1/chat/completions")
-MODEL = "Pro/deepseek-ai/DeepSeek-V3.2"
+MODEL = "deepseek-ai/DeepSeek-V4-Pro"
 MAX_TOKENS = 4096
 REQUEST_DELAY_MIN = 3  # min seconds between API calls
 REQUEST_DELAY_MAX = 7  # max seconds between API calls
