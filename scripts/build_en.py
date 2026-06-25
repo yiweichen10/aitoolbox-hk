@@ -1363,6 +1363,19 @@ def main():
         help='Build target (default: all)'
     )
     args = parser.parse_args()
+
+    # Validate internal links before building (2026-06-25: prevent 404 links)
+    if args.target in ('all', 'articles'):
+        try:
+            from validate_internal_links import validate
+            print("\n[VALIDATE] Checking internal links...")
+            if not validate():
+                print("[VALIDATE] ERROR: Broken internal links detected. Fix before building!")
+                import sys
+                sys.exit(1)
+        except ImportError:
+            pass  # validation script not available, skip silently
+
     build_all_en(args.target)
 
     # Automatically generate OG images after full build
