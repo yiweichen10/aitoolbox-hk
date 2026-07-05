@@ -1379,7 +1379,7 @@ def generate_sitemap_en(tools: list, articles: list, cat_slugs: list) -> str:
 
 def push_to_indexnow_en(urls: list) -> bool:
     import urllib.request
-    INDEXNOW_KEY = "6b95d3c7e8f24a1b9d0e5f2c8a7b4e3d"  # reuse same key as main site
+    INDEXNOW_KEY = "00859eedcd7c1f5e6a38204096fe2a57"  # 2026-07-05 regenerated, old key expired
     key_location = f"{SITE_DOMAIN}/{INDEXNOW_KEY}.txt"
     payload = json.dumps({
         "host": "www.aitoolbox.hk",
