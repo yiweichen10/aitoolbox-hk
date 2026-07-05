@@ -16,7 +16,7 @@ def validate(json_path=None):
     broken = []
     
     for i, art in enumerate(articles, 1):
-        links = re.findall(r'/articles/([a-z0-9-]+)/', art['content'])
+        links = re.findall(r'/articles/([a-z0-9-]+)/', art.get('body', art.get('content', '')))
         for link in links:
             if link not in all_slugs:
                 broken.append((i, art['slug'], link))
@@ -33,8 +33,10 @@ def validate(json_path=None):
                     break
         return False
     
-    total = sum(len(re.findall(r'/articles/([a-z0-9-]+)/', a['content'])) for a in articles)
-    articles_with = sum(1 for a in articles if '/articles/' in a['content'])
+    def get_body(a):
+        return a.get('body', a.get('content', ''))
+    total = sum(len(re.findall(r'/articles/([a-z0-9-]+)/', get_body(a))) for a in articles)
+    articles_with = sum(1 for a in articles if '/articles/' in get_body(a))
     print(f'OK: {len(articles)} articles, {total} internal links, {articles_with} articles with links — all valid')
     return True
 
