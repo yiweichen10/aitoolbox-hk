@@ -557,6 +557,7 @@ def build_tool_page_en(tool: dict, all_tools: list, all_articles: list = None) -
     return f'''<!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{escape_html(name)} Review 2026: Features, Pricing & Alternatives - {SITE_NAME}</title>
@@ -845,6 +846,7 @@ def build_article_page_en(article: dict, all_articles: list, all_tools: list = N
     return f'''<!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{escape_html(title)} - {SITE_NAME}</title>
@@ -983,6 +985,7 @@ def build_category_page_en(cat_name: str, tools: list) -> str:
     return f'''<!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Best {escape_html(cat_name)} Tools 2026 ({len(tools)} Reviewed) - {SITE_NAME}</title>
@@ -1052,6 +1055,7 @@ def build_article_list_en(articles: list, current_page: int = 1, total_pages: in
     return f'''<!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Tool Articles & Guides 2026 - {SITE_NAME}</title>
@@ -1098,6 +1102,7 @@ def build_category_index_en(tools_by_cat: dict) -> str:
     return f'''<!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All AI Tool Categories 2026 - {SITE_NAME}</title>
@@ -1287,6 +1292,7 @@ def build_index_en(tools: list, articles: list) -> str:
     return f'''<!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Best AI Tools 2026: {total_tools}+ Tools Reviewed & Ranked - {SITE_NAME}</title>
