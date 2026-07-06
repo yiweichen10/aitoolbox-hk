@@ -724,7 +724,7 @@ def build_article_page_en(article: dict, all_articles: list, all_tools: list = N
     breadcrumb_json = json.dumps(breadcrumb_data,  ensure_ascii=False, indent=2)
     structured_json = json.dumps(article_schema,   ensure_ascii=False, indent=2)
 
-    content_html = markdown_to_html(article.get('content',''))
+    content_html = markdown_to_html(article.get('content') or article.get('body',''))
     hreflang     = hreflang_tags(f'/articles/{slug}/', f'/articles/{slug}/')
     og_image     = ensure_en_og_image(slug, article, is_article=True)
 
