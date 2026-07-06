@@ -1452,6 +1452,19 @@ def build_all_en(target: str = 'all'):
     with open(articles_en_path, encoding='utf-8') as f:
         articles  = json.load(f)
 
+    # ── Validate article field names (2026-07-06: prevent content/body mismatch) ──
+    for i, a in enumerate(articles):
+        if 'body' in a and 'content' not in a:
+            print(f"\n{'='*60}")
+            print(f"[BUILD ERROR] Article #{i+1} \"{a.get('title','')[:60]}...\"")
+            print(f"  Has field 'body' but build_en.py expects 'content'.")
+            print(f"  This will produce an EMPTY page with no article text.")
+            print(f"  Fix: rename 'body' -> 'content' in articles_en.json")
+            print(f"  Or use: python scripts/append_article.py (which uses correct field name)")
+            print(f"{'='*60}\n")
+            import sys
+            sys.exit(1)
+
     # Sort articles by date descending (newest first)
     articles.sort(key=lambda x: x.get('date', ''), reverse=True)
 
