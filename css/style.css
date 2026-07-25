@@ -260,7 +260,8 @@ body {
   position: -webkit-sticky;
   position: sticky;
   top: 64px;
-  z-index: 199;
+  z-index: 200;
+  isolation: isolate;
 }
 .search-bar-inner { max-width: 660px; margin: 0 auto; }
 
