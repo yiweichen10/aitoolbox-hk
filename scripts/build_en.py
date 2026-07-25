@@ -1329,14 +1329,23 @@ def build_index_en(tools: list, articles: list) -> str:
     </div>
 
     <main>
-        <section class="hero" style="text-align:center;padding:40px 20px 20px;">
-            <h2 style="font-size:28px;margin-bottom:12px;">Find the Best AI Tools for Your Work</h2>
-            <p style="color:#666;font-size:16px;max-width:600px;margin:0 auto 24px;">
-                {total_tools}+ AI tools reviewed and ranked. Updated daily. Last updated: {today}.
+        <section class="hero">
+            <h2>Find the Best AI Tools for Your Work</h2>
+            <p>
+                {total_tools}+ AI tools reviewed and ranked by real humans who actually use them. Updated daily.
             </p>
-            <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+            <div class="quick-pills">
+                <a href="/tools/chatgpt/">🟢 ChatGPT</a>
+                <a href="/tools/claude/">🟠 Claude</a>
+                <a href="/tools/gemini/">🔵 Gemini</a>
+                <a href="/tools/midjourney/">🎨 Midjourney</a>
+                <a href="/tools/github-copilot/">💻 Copilot</a>
+                <a href="/tools/perplexity/">🔍 Perplexity</a>
+                <a href="/category/" style="background:rgba(255,255,255,0.3);">All Tools →</a>
+            </div>
+            <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:28px;">
                 <a href="/category/" class="action-btn action-btn-primary">Browse All Categories</a>
-                <a href="/articles/" class="action-btn">Read Guides</a>
+                <a href="/articles/" class="action-btn">Read In-Depth Guides</a>
             </div>
         </section>
 
