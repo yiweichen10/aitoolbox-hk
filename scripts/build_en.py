@@ -32,6 +32,25 @@ BACK_TO_TOP_BLOCK = '''<button id="backToTop" aria-label="Back to top">
 document.addEventListener("DOMContentLoaded",function(){var b=document.getElementById("backToTop");if(!b)return;var s=function(){if(window.scrollY>400){b.classList.add("visible")}else{b.classList.remove("visible")}};window.addEventListener("scroll",s,{passive:true});s();b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"})});});
 </script>'''
 
+DARK_MODE_BLOCK = '''<button id="darkModeToggle" class="dark-toggle-fab" aria-label="Toggle dark mode" title="Dark mode">🌙</button>
+<script>
+(function(){
+    var btn = document.getElementById('darkModeToggle');
+    if (!btn) return;
+    var dark = localStorage.getItem('darkMode') === 'true';
+    function apply(d) {
+        document.documentElement.setAttribute('data-theme', d ? 'dark' : '');
+        btn.textContent = d ? '☀️' : '🌙';
+        localStorage.setItem('darkMode', d);
+    }
+    apply(dark);
+    btn.addEventListener('click', function(){
+        dark = !dark;
+        apply(dark);
+    });
+})();
+</script>'''
+
 # ─── Verification tags (Google/Yandex/etc.) ──────────────────────────────────
 VERIFICATION_BLOCK = '''    <meta name="yandex-verification" content="5ae78527ec9bcb4b" />
 '''
@@ -630,7 +649,7 @@ def build_tool_page_en(tool: dict, all_tools: list, all_articles: list = None) -
     </main>
 
 {footer_html()}
-    ''' + BACK_TO_TOP_BLOCK + '''
+    ''' + BACK_TO_TOP_BLOCK + DARK_MODE_BLOCK + '''
 </body>
 </html>'''
 
@@ -901,7 +920,7 @@ def build_article_page_en(article: dict, all_articles: list, all_tools: list = N
     </main>
 
 {footer_html()}
-    ''' + BACK_TO_TOP_BLOCK + '''
+    ''' + BACK_TO_TOP_BLOCK + DARK_MODE_BLOCK + '''
 </body>
 </html>'''
 
@@ -1013,7 +1032,7 @@ def build_category_page_en(cat_name: str, tools: list) -> str:
     </main>
 
 {footer_html()}
-    ''' + BACK_TO_TOP_BLOCK + '''
+    ''' + BACK_TO_TOP_BLOCK + DARK_MODE_BLOCK + '''
 </body>
 </html>'''
 
@@ -1078,7 +1097,7 @@ def build_article_list_en(articles: list, current_page: int = 1, total_pages: in
     </main>
 
 {footer_html()}
-    ''' + BACK_TO_TOP_BLOCK + '''
+    ''' + BACK_TO_TOP_BLOCK + DARK_MODE_BLOCK + '''
 </body>
 </html>'''
 
@@ -1126,7 +1145,7 @@ def build_category_index_en(tools_by_cat: dict) -> str:
     </main>
 
 {footer_html()}
-    ''' + BACK_TO_TOP_BLOCK + '''
+    ''' + BACK_TO_TOP_BLOCK + DARK_MODE_BLOCK + '''
 </body>
 </html>'''
 
@@ -1431,7 +1450,7 @@ def build_index_en(tools: list, articles: list) -> str:
     </main>
 
 {footer_html()}
-    ''' + BACK_TO_TOP_BLOCK + '''
+    ''' + BACK_TO_TOP_BLOCK + DARK_MODE_BLOCK + '''
 
     <script>
     function performSearch() {

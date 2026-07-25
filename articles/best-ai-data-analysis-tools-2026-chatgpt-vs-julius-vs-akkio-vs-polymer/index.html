@@ -355,6 +355,23 @@
 </button>
 <script>
 document.addEventListener("DOMContentLoaded",function(){var b=document.getElementById("backToTop");if(!b)return;var s=function(){if(window.scrollY>400){b.classList.add("visible")}else{b.classList.remove("visible")}};window.addEventListener("scroll",s,{passive:true});s();b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"})});});
+</script><button id="darkModeToggle" class="dark-toggle-fab" aria-label="Toggle dark mode" title="Dark mode">🌙</button>
+<script>
+(function(){
+    var btn = document.getElementById('darkModeToggle');
+    if (!btn) return;
+    var dark = localStorage.getItem('darkMode') === 'true';
+    function apply(d) {
+        document.documentElement.setAttribute('data-theme', d ? 'dark' : '');
+        btn.textContent = d ? '☀️' : '🌙';
+        localStorage.setItem('darkMode', d);
+    }
+    apply(dark);
+    btn.addEventListener('click', function(){
+        dark = !dark;
+        apply(dark);
+    });
+})();
 </script>
 </body>
 </html>

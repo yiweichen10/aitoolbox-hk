@@ -127,6 +127,104 @@
   --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* 暗色模式 */
+[data-theme="dark"] {
+  --text-main: #e2e8f0;
+  --text-muted: #94a3b8;
+  --text-light: #f8fafc;
+  --body-bg: #0f172a;
+  --surface-bg: #1e293b;
+  --glass-bg: rgba(30, 41, 59, 0.4);
+  --glass-border: rgba(59, 130, 246, 0.2);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.5);
+  --shadow-hover: 0 20px 40px rgba(0, 166, 79, 0.25);
+}
+[data-theme="dark"] .header {
+  background: rgba(15, 23, 42, 0.92);
+  border-bottom-color: #1e293b;
+  backdrop-filter: blur(12px);
+}
+[data-theme="dark"] .header h1 span {
+  -webkit-text-fill-color: #94a3b8;
+}
+[data-theme="dark"] .search-bar-below-nav {
+  background: var(--surface-bg);
+  border-bottom-color: #1e293b;
+}
+[data-theme="dark"] .search-box {
+  background: #1e293b;
+  border-color: #334155;
+}
+[data-theme="dark"] .search-box input::placeholder {
+  color: #64748b;
+}
+[data-theme="dark"] footer {
+  border-top-color: #1e293b;
+}
+[data-theme="dark"] .tool-card {
+  border-color: rgba(148, 163, 184, 0.08);
+}
+[data-theme="dark"] .tool-meta-row {
+  border-top-color: #1e293b;
+}
+[data-theme="dark"] .tool-card:hover .tag {
+  background: rgba(0, 166, 79, 0.15);
+}
+[data-theme="dark"] .article-card {
+  background: var(--surface-bg);
+}
+[data-theme="dark"] .sidebar-widget {
+  border-color: #1e293b;
+}
+[data-theme="dark"] .sidebar-widget h4 {
+  border-bottom-color: #1e293b;
+}
+[data-theme="dark"] .sidebar-widget li {
+  border-bottom-color: #1e293b;
+}
+[data-theme="dark"] .quick-stats {
+  background: var(--surface-bg);
+}
+
+/* 暗色模式切换按钮 */
+.dark-toggle-fab {
+  position: fixed;
+  right: 24px;
+  bottom: 90px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--surface-bg);
+  color: var(--text-main);
+  border: 1px solid #e2e8f0;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-md);
+  z-index: 99;
+  transition: var(--transition);
+}
+.dark-toggle-fab:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+[data-theme="dark"] .dark-toggle-fab {
+  background: #334155;
+  border-color: #475569;
+}
+@media (max-width: 768px) {
+  .dark-toggle-fab {
+    right: 14px;
+    bottom: 72px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
 /* 全局重置 */
 *, *::before, *::after {
   margin: 0;
