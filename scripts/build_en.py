@@ -645,7 +645,7 @@ def build_article_page_en(article: dict, all_articles: list, all_tools: list = N
     date_str = article.get('date','')
 
     # Parse date to ISO for schema
-    article_date = article.get('date', datetime.now().strftime('%Y-%m-%d'))
+    article_date = article.get('dateFull', article.get('date', datetime.now().strftime('%Y-%m-%d')))
 
     # Related tools
     related_tools_html = ''
