@@ -16,6 +16,27 @@
   align-items: center;
 }
 
+/* 标题 Logo 渐变文字 */
+.header h1 {
+  font-size: 22px;
+  font-weight: 800;
+  background: var(--bg-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  letter-spacing: -0.5px;
+}
+.header h1 span {
+  font-size: 13px;
+  opacity: 0.8;
+  font-weight: 500;
+  -webkit-text-fill-color: var(--text-muted);
+  display: inline-block;
+  margin-left: 10px;
+}
+
 /* 全局导航栏 — 嵌入在 header 底部 */
 .global-nav {
   background: transparent;
@@ -133,35 +154,22 @@ body {
   border-radius: var(--radius-pill);
 }
 
-/* 搜索框：简洁现代风 */
-
-/* 为了搭配白底 Header，标题文字重新采用暗色调，但带一点渐变 */
-.header h1 { 
-  font-size: 22px; 
-  font-weight: 800;
-  background: var(--bg-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  letter-spacing: -0.5px;
-}
-.header h1 span { 
-  font-size: 13px; 
-  opacity: 0.8; 
-  font-weight: 500; 
-  margin-top: 4px; 
-  -webkit-text-fill-color: var(--text-muted); /* 重置子元素的颜色覆盖为主流灰色 */
-  display: inline-block;
-  margin-left: 10px;
-}
-
 /* 搜索框：轻度玻璃拟态 */
+.search-bar-below-nav {
+  background: var(--surface-bg);
+  border-bottom: 1px solid #f1f5f9;
+  padding: 14px 32px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 64px;
+  z-index: 199;
+}
+.search-bar-inner { max-width: 660px; margin: 0 auto; }
+
 .search-box {
   display: flex;
   background: var(--body-bg);
-  border: 1px solid #e2e8f0;
+  border: 1.5px solid #e2e8f0;
   border-radius: var(--radius-pill);
   overflow: hidden;
   transition: var(--transition);
@@ -169,16 +177,17 @@ body {
 .search-box:focus-within {
   background: var(--surface-bg);
   border-color: var(--primary-color);
-  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+  box-shadow: 0 0 0 3px rgba(0, 166, 79, 0.12);
 }
 .search-box input {
+  flex: 1;
   border: none;
   background: transparent;
-  padding: 12px 24px;
+  padding: 13px 22px;
   color: var(--text-main);
   font-size: 15px;
-  width: 280px;
   outline: none;
+  min-width: 0;
 }
 .search-box input::placeholder {
   color: #94a3b8;
@@ -187,14 +196,20 @@ body {
   border: none;
   background: transparent;
   color: var(--text-muted);
-  padding: 12px 20px;
+  padding: 13px 20px;
   cursor: pointer;
   font-size: 18px;
   transition: var(--transition);
+  flex-shrink: 0;
 }
 .search-box button:hover {
   color: var(--primary-color);
   transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .search-bar-below-nav { padding: 10px 16px; top: 56px; }
+  .search-box input { padding: 11px 16px; font-size: 14px; }
 }
 
 /* 英雄区 (Hero) */

@@ -1318,6 +1318,16 @@ def build_index_en(tools: list, articles: list) -> str:
 <body>
 {header_html()}
 
+    <div class="search-bar-below-nav">
+        <div class="search-bar-inner">
+            <div class="search-box">
+                <input type="text" placeholder="Search AI tools..." id="searchInput" aria-label="Search AI tools">
+                <button aria-label="Search" onclick="performSearch()">&#x1F50D;</button>
+            </div>
+        </div>
+        <div id="searchResults" style="display:none;text-align:center;font-size:14px;color:var(--text-muted);margin-top:8px;"></div>
+    </div>
+
     <main>
         <section class="hero" style="text-align:center;padding:40px 20px 20px;">
             <h2 style="font-size:28px;margin-bottom:12px;">Find the Best AI Tools for Your Work</h2>
@@ -1357,6 +1367,75 @@ def build_index_en(tools: list, articles: list) -> str:
 
 {footer_html()}
     ''' + BACK_TO_TOP_BLOCK + '''
+
+    <script>
+    function performSearch() {
+        var q = (document.getElementById('searchInput').value || '').trim().toLowerCase();
+        var resultsEl = document.getElementById('searchResults');
+        var cards = document.querySelectorAll('.tool-card');
+        var totalHits = 0;
+
+        if (!q) {
+            cards.forEach(function(c) { c.style.display = ''; });
+            document.querySelectorAll('section').forEach(function(s) { s.style.display = ''; });
+            document.querySelectorAll('h2').forEach(function(h) { h.style.display = ''; });
+            if (resultsEl) resultsEl.style.display = 'none';
+            return;
+        }
+
+        var toolSection = null;
+        cards.forEach(function(card) {
+            var name = (card.querySelector('h3') || {}).textContent || '';
+            var desc = (card.querySelector('p') || {}).textContent || '';
+            var tags = (card.querySelector('.tool-meta-row') || {}).textContent || '';
+            var match = name.toLowerCase().indexOf(q) !== -1 ||
+                        desc.toLowerCase().indexOf(q) !== -1 ||
+                        tags.toLowerCase().indexOf(q) !== -1;
+            card.style.display = match ? '' : 'none';
+            if (match) {
+                totalHits++;
+                if (!toolSection) toolSection = card.closest('section');
+            }
+        });
+
+        document.querySelectorAll('section').forEach(function(section) {
+            if (!section.querySelector('.tool-grid')) return;
+            var hasVisible = false;
+            section.querySelectorAll('.tool-card').forEach(function(c) {
+                if (c.style.display !== 'none') hasVisible = true;
+            });
+            section.style.display = hasVisible ? '' : 'none';
+            var h2 = section.querySelector('h2');
+            if (h2) h2.style.display = hasVisible ? '' : 'none';
+        });
+
+        if (resultsEl) {
+            if (totalHits > 0) {
+                resultsEl.innerHTML = 'Found <strong>' + totalHits + '</strong> tool' + (totalHits !== 1 ? 's' : '') + ' matching "' + q + '"';
+                resultsEl.style.display = 'block';
+            } else {
+                resultsEl.innerHTML = 'No tools found matching "' + q + '". Try a different search term.';
+                resultsEl.style.display = 'block';
+            }
+        }
+
+        if (totalHits > 0 && toolSection) {
+            setTimeout(function() {
+                var stickyHeight = 0;
+                ['.header', '.search-bar-below-nav'].forEach(function(sel) {
+                    var el = document.querySelector(sel);
+                    if (el) stickyHeight += el.getBoundingClientRect().height;
+                });
+                var top = toolSection.getBoundingClientRect().top + window.pageYOffset - stickyHeight - 16;
+                window.scrollTo({top: top, behavior: 'smooth'});
+            }, 100);
+        }
+    }
+
+    document.getElementById('searchInput').addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') performSearch();
+    });
+    </script>
 </body>
 </html>'''
 
