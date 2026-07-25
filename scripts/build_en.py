@@ -366,7 +366,7 @@ def build_tool_page_en(tool: dict, all_tools: list, all_articles: list = None) -
     # Badge
     badge_html = ''
     if tool.get('badge'):
-        bc = {'hot':'#ff4444','new':'#00aa00','pick':'#667eea'}.get(tool['badge'].get('type'),'#667eea')
+        bc = {'hot':'#ff4444','new':'#00aa00','pick':'#00A64F'}.get(tool['badge'].get('type'),'#00A64F')
         badge_html = f' <span class="badge" style="background:{bc};color:#fff;padding:2px 8px;border-radius:4px;font-size:12px;">{tool["badge"]["text"]}</span>'
 
     # Platform
@@ -880,17 +880,17 @@ def build_article_page_en(article: dict, all_articles: list, all_tools: list = N
             <h1 style="margin-bottom:16px;">{escape_html(title)}</h1>
             <div style="color:#999;font-size:14px;margin-bottom:24px;">
                 {date_str} · {escape_html(cat)} ·
-                <span itemprop="author" itemscope itemtype="https://schema.org/Organization"><a href="/author/" itemprop="url" style="color:#4285F4;text-decoration:none;"><span itemprop="name">AI Tool Lab Editorial Team</span></a></span> ·
+                <span itemprop="author" itemscope itemtype="https://schema.org/Organization"><a href="/author/" itemprop="url" style="color:#00A64F;text-decoration:none;"><span itemprop="name">AI Tool Lab Editorial Team</span></a></span> ·
                 <span style="color:#bbb;">📖 {max(3, len(article.get('content','')) // 500)} min read</span>
             </div>
             {tldr_html}
             {content_html}
-            <div style="margin-top:40px;padding:20px;background:#f8f9fa;border-radius:8px;border-left:4px solid #10a37f;">
+            <div style="margin-top:40px;padding:20px;background:#f8f9fa;border-radius:8px;border-left:4px solid #00A64F;">
                 <p style="margin:0 0 8px 0;font-size:14px;color:#555;">
-                    <strong>About the author:</strong> This article was written by the <a href="/author/" style="color:#10a37f;text-decoration:none;">AI Tool Lab Editorial Team</a>, with 5+ years of paid AI tool testing experience and $200+ monthly subscription spend. All reviews are based on real paid long-term use.
+                    <strong>About the author:</strong> This article was written by the <a href="/author/" style="color:#00A64F;text-decoration:none;">AI Tool Lab Editorial Team</a>, with 5+ years of paid AI tool testing experience and $200+ monthly subscription spend. All reviews are based on real paid long-term use.
                 </p>
                 <p style="margin:0;font-size:13px;color:#888;">
-                    <strong>Data statement:</strong> All data in this article cites its source and is verifiable. Found an error? Report it via our <a href="/contact.html" style="color:#4285F4;text-decoration:none;">contact page</a>, we verify within 48 hours.
+                    <strong>Data statement:</strong> All data in this article cites its source and is verifiable. Found an error? Report it via our <a href="/contact.html" style="color:#00A64F;text-decoration:none;">contact page</a>, we verify within 48 hours.
                 </p>
             </div>
         </article>
@@ -914,7 +914,7 @@ def build_category_page_en(cat_name: str, tools: list) -> str:
     for t in tools:
         badge_html = ''
         if t.get('badge'):
-            bc = {'hot':'#ff4444','new':'#00aa00','pick':'#667eea'}.get(t['badge'].get('type'),'#667eea')
+            bc = {'hot':'#ff4444','new':'#00aa00','pick':'#00A64F'}.get(t['badge'].get('type'),'#00A64F')
             badge_html = f'<span class="badge" style="background:{bc};color:#fff;padding:2px 6px;border-radius:3px;font-size:11px;">{t["badge"]["text"]}</span>'
         tool_cards += f'''<a href="/tools/{t['slug']}/" class="tool-card">
             <div class="tool-icon" style="background:{t['color']};">{t['emoji']}</div>
@@ -1091,7 +1091,7 @@ def build_category_index_en(tools_by_cat: dict) -> str:
         cat_slug  = get_category_slug_en(cat_name)
         sample_emoji = tools[0]['emoji'] if tools else '🤖'
         cat_cards += f'''<a href="/category/{cat_slug}/" class="tool-card" style="text-decoration:none;">
-            <div class="tool-icon" style="background:#667eea;">{sample_emoji}</div>
+            <div class="tool-icon" style="background:#00A64F;">{sample_emoji}</div>
             <div class="tool-info">
                 <h3>{escape_html(cat_name)}</h3>
                 <p>{len(tools)} tools reviewed</p>
@@ -1147,7 +1147,7 @@ def build_index_en(tools: list, articles: list) -> str:
     for t in top_tools:
         badge_html = ''
         if t.get('badge'):
-            bc = {'hot':'#ff4444','new':'#00aa00','pick':'#667eea'}.get(t['badge'].get('type'),'#667eea')
+            bc = {'hot':'#ff4444','new':'#00aa00','pick':'#00A64F'}.get(t['badge'].get('type'),'#00A64F')
             badge_html = f'<span class="badge" style="background:{bc};color:#fff;padding:2px 6px;border-radius:3px;font-size:11px;margin-left:6px;">{t["badge"]["text"]}</span>'
         tool_cards += f'''<a href="/tools/{t['slug']}/" class="tool-card">
             <div class="tool-icon" style="background:{t['color']};">{t['emoji']}</div>

@@ -52,14 +52,14 @@
   border: 1px solid transparent;
 }
 .gn-item:hover {
-  background: linear-gradient(135deg, rgba(79,70,229,0.06) 0%, rgba(124,58,237,0.06) 100%);
+  background: linear-gradient(135deg, rgba(0,166,79,0.06) 0%, rgba(5,150,105,0.06) 100%);
   color: var(--primary-color);
-  border-color: rgba(79,70,229,0.1);
+  border-color: rgba(0,166,79,0.1);
 }
 .gn-item:first-child { /* 工具排行高亮 */
   color: var(--primary-color);
   font-weight: 600;
-  background: linear-gradient(135deg, rgba(79,70,229,0.08) 0%, rgba(124,58,237,0.08) 100%);
+  background: linear-gradient(135deg, rgba(0,166,79,0.08) 0%, rgba(5,150,105,0.08) 100%);
 }
 @media (max-width: 768px) {
   .header-inner { padding: 10px 16px; }
@@ -68,10 +68,13 @@
 }
 
 :root {
-  /* 基础主色调: 电光蓝与极光紫 */
-  --primary-color: #4f46e5;
-  --secondary-color: #7c3aed;
-  --bg-gradient: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  /* 基础主色调: 渐变绿色系 (与中文站 aitoollab.cn 一致) */
+  --primary-color: #00A64F;
+  --primary-dark: #00853A;
+  --secondary-color: #059669;
+  --accent-color: #10B981;
+  --bg-gradient: linear-gradient(135deg, #00853A 0%, #059669 100%);
+  --text-gradient: linear-gradient(135deg, #00853A 0%, #059669 100%);
   
   /* 文本颜色 */
   --text-main: #1e293b;
@@ -79,7 +82,7 @@
   --text-light: #f8fafc;
   
   /* 背景与表面层 */
-  --body-bg: #f3f4f6;
+  --body-bg: #f1f5f9;
   --surface-bg: #ffffff;
   
   /* 毛玻璃拟态 (Glassmorphism) */
@@ -88,19 +91,19 @@
   --glass-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 
   /* 阴影效果层级 */
-  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-  --shadow-lg: 0 10px 25px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
-  --shadow-hover: 0 20px 30px -5px rgba(0, 0, 0, 0.12), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.09);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.12);
+  --shadow-hover: 0 20px 40px rgba(0, 166, 79, 0.18);
   
   /* 圆角大小 */
   --radius-sm: 8px;
-  --radius-md: 12px;
+  --radius-md: 14px;
   --radius-lg: 20px;
   --radius-pill: 9999px;
 
   /* 过渡动画时长 */
-  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* 全局重置 */
@@ -1118,7 +1121,7 @@ body {
 }
 
 .article-card h3 a:hover {
-  color: var(--primary, #667eea);
+  color: var(--primary-color, #00A64F);
 }
 
 .article-meta {
@@ -1153,7 +1156,7 @@ body {
   display: inline-flex;
   align-items: center;
   padding: 10px 20px;
-  background: var(--primary, #667eea);
+  background: var(--primary-color, #00A64F);
   color: #fff;
   border-radius: 8px;
   font-size: 14px;
@@ -1957,7 +1960,7 @@ body {
   font-size: 14px;
   font-weight: 800;
   border-radius: 50%;
-  box-shadow: 0 4px 12px rgba(79,70,229,0.3);
+  box-shadow: 0 4px 12px rgba(0,166,79,0.3);
 }
 
 /* Battle Dimension Table */
