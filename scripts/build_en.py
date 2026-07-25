@@ -1163,6 +1163,42 @@ def build_index_en(tools: list, articles: list) -> str:
 
     # Recent articles (top 5)
     article_cards = ''
+
+    # Sidebar: Top Rated (by star rating)
+    def parse_rating(rating_str):
+        try:
+            import re
+            match = re.search(r'[\d.]+', str(rating_str))
+            return float(match.group()) if match else 0
+        except:
+            return 0
+
+    top_rated = sorted(tools, key=lambda t: parse_rating(t.get('rating','')), reverse=True)[:8]
+    top_rated_html = '<ol style="list-style:none;padding:0;margin:0;">'
+    for i, t in enumerate(top_rated):
+        top_rated_html += f'''<li style="display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid #f1f5f9;font-size:13px;">
+            <span style="font-weight:800;color:var(--primary-color);min-width:20px;">{i+1}.</span>
+            <span style="font-size:18px;">{t['emoji']}</span>
+            <div style="flex:1;min-width:0;">
+                <a href="/tools/{t['slug']}/" style="color:var(--text-main);text-decoration:none;font-weight:600;display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">{escape_html(t['name'])}</a>
+                <span style="color:var(--text-muted);font-size:11px;">{t.get('rating','')}</span>
+            </div>
+        </li>'''
+    top_rated_html += '</ol>'
+
+    # Sidebar: Most Popular (by visits)
+    most_popular = sorted(tools, key=lambda t: parse_visits(t.get('visits','0')), reverse=True)[:8]
+    most_popular_html = '<ol style="list-style:none;padding:0;margin:0;">'
+    for i, t in enumerate(most_popular):
+        most_popular_html += f'''<li style="display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid #f1f5f9;font-size:13px;">
+            <span style="font-weight:800;color:var(--primary-color);min-width:20px;">{i+1}.</span>
+            <span style="font-size:18px;">{t['emoji']}</span>
+            <div style="flex:1;min-width:0;">
+                <a href="/tools/{t['slug']}/" style="color:var(--text-main);text-decoration:none;font-weight:600;display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">{escape_html(t['name'])}</a>
+                <span style="color:var(--text-muted);font-size:11px;">{t.get('visits','')} visits</span>
+            </div>
+        </li>'''
+    most_popular_html += '</ol>'
     for a in articles[:5]:
         article_cards += f'''<article class="article-card">
             <h3><a href="/articles/{a['slug']}/">{escape_html(a['title'])}</a></h3>
@@ -1353,25 +1389,45 @@ def build_index_en(tools: list, articles: list) -> str:
 
         {trust_html}
 
-        <section style="max-width:1200px;margin:0 auto;padding:0 16px;">
-            <h2 style="margin-bottom:20px;">🔥 Top AI Tools</h2>
-            <div class="tool-grid">
-                {tool_cards}
-            </div>
-            <div style="text-align:center;margin-top:24px;">
-                <a href="/category/" class="action-btn">View All {total_tools}+ Tools →</a>
-            </div>
-        </section>
+        <div class="main-layout">
+            <div class="main-content">
+                <section>
+                    <h2 style="margin-bottom:20px;">🔥 Top AI Tools</h2>
+                    <div class="tool-grid">
+                        {tool_cards}
+                    </div>
+                    <div style="text-align:center;margin-top:24px;">
+                        <a href="/category/" class="action-btn">View All {total_tools}+ Tools →</a>
+                    </div>
+                </section>
 
-        <section style="max-width:1200px;margin:40px auto 0;padding:0 16px;">
-            <h2 style="margin-bottom:20px;">📖 Latest Articles</h2>
-            <div class="article-list">
-                {article_cards}
+                <section style="margin-top:40px;">
+                    <h2 style="margin-bottom:20px;">📖 Latest Articles</h2>
+                    <div class="article-list">
+                        {article_cards}
+                    </div>
+                    <div style="text-align:center;margin-top:24px;">
+                        <a href="/articles/" class="action-btn">All Articles →</a>
+                    </div>
+                </section>
             </div>
-            <div style="text-align:center;margin-top:24px;">
-                <a href="/articles/" class="action-btn">All Articles →</a>
-            </div>
-        </section>
+
+            <aside class="home-sidebar">
+                <div class="sidebar-widget">
+                    <h4>🏆 Top Rated</h4>
+                    {top_rated_html}
+                </div>
+                <div class="sidebar-widget">
+                    <h4>📈 Most Popular</h4>
+                    {most_popular_html}
+                </div>
+                <div class="sidebar-widget" style="background:linear-gradient(135deg,#dcfce7,#f0fdf4);border:1px solid #bbf7d0;border-radius:12px;padding:20px;">
+                    <h4 style="margin-top:0;">📬 Stay Updated</h4>
+                    <p style="font-size:13px;color:#555;margin-bottom:12px;">New AI tools reviewed daily. {total_tools}+ tools and counting.</p>
+                    <a href="/articles/" style="display:block;text-align:center;padding:10px;background:var(--primary-color);color:#fff;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;">Read Latest Reviews →</a>
+                </div>
+            </aside>
+        </div>
     </main>
 
 {footer_html()}

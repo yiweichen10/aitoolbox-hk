@@ -656,10 +656,41 @@ body {
 }
 
 /* 侧边栏 (Sidebar) 优化 */
-.sidebar {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+.main-layout {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 32px;
+  align-items: start;
+}
+.main-content { min-width: 0; }
+.home-sidebar { position: sticky; top: 80px; }
+.sidebar-widget {
+  background: var(--surface-bg);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(0,0,0,0.04);
+}
+.sidebar-widget h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-main);
+  margin: 0 0 14px 0;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #f1f5f9;
+}
+.sidebar-widget ol a:hover {
+  color: var(--primary-color) !important;
+}
+
+@media (max-width: 900px) {
+  .main-layout { grid-template-columns: 1fr; }
+  .home-sidebar { position: static; }
+}
 }
 .sidebar-card {
   background: var(--surface-bg);
