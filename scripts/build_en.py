@@ -312,7 +312,7 @@ def build_tool_page_en(tool: dict, all_tools: list, all_articles: list = None) -
             for a in matched[:3]:
                 cards += f'''<a href="/articles/{a['slug']}/" class="related-card">
                     <div style="font-weight:600;margin-bottom:4px;">📖 {escape_html(a['title'][:40])}</div>
-                    <div style="font-size:13px;color:#666;">{a.get('dateFull', a.get('date',''))}</div>
+                    <div style="font-size:13px;color:#666;">{a.get('date','')}</div>
                 </a>\n'''
             related_articles_html = f'''<div class="related-tools">
                 <h3>📚 Related Articles</h3>
@@ -642,7 +642,7 @@ def build_article_page_en(article: dict, all_articles: list, all_tools: list = N
     title    = article['title']
     cat      = article.get('category', 'AI Tools')
     cat_slug = get_category_slug_en(cat)
-    date_str = article.get('dateFull', article.get('date',''))
+    date_str = article.get('date','')
 
     # Parse date to ISO for schema
     article_date = article.get('date', datetime.now().strftime('%Y-%m-%d'))
@@ -677,7 +677,7 @@ def build_article_page_en(article: dict, all_articles: list, all_tools: list = N
         for a in same_cat[:3]:
             cards += f'''<a href="/articles/{a['slug']}/" class="related-card">
                 <div style="font-weight:600;margin-bottom:4px;">{escape_html(a['title'])}</div>
-                <div style="font-size:13px;color:#666;">{a.get('dateFull', a.get('date',''))}</div>
+                <div style="font-size:13px;color:#666;">{a.get('date','')}</div>
             </a>\n'''
         related_html = f'''<div class="related-tools">
             <h3>📖 Related Articles</h3>
@@ -1026,7 +1026,7 @@ def build_article_list_en(articles: list, current_page: int = 1, total_pages: in
         cards += f'''<article class="article-card">
             <h3><a href="/articles/{a['slug']}/">{escape_html(a['title'])}</a></h3>
             <div class="article-meta">
-                <span class="date">{a.get('dateFull', a.get('date',''))}</span>
+                <span class="date">{a.get('date','')}</span>
                 <span class="category">{escape_html(a.get('category',''))}</span>
             </div>
             <p class="summary">{escape_html(a.get('description',''))}</p>
@@ -1167,7 +1167,7 @@ def build_index_en(tools: list, articles: list) -> str:
         article_cards += f'''<article class="article-card">
             <h3><a href="/articles/{a['slug']}/">{escape_html(a['title'])}</a></h3>
             <div class="article-meta">
-                <span class="date">{a.get('dateFull', a.get('date',''))}</span>
+                <span class="date">{a.get('date','')}</span>
                 <span class="category">{escape_html(a.get('category',''))}</span>
             </div>
             <p class="summary">{escape_html(a.get('description',''))}</p>
