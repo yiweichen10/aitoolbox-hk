@@ -1421,8 +1421,6 @@ def build_index_en(tools: list, articles: list) -> str:
 
         {trust_html}
 
-        {featured_html}
-
         <div class="social-proof">
             <span>Trusted by readers from</span>
             <span class="sp-brand">Google</span>
