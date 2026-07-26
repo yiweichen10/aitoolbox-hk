@@ -20,7 +20,7 @@ SITE_NAME    = "AI Tool Lab"
 SITE_DOMAIN  = "https://www.aitoolbox.hk"
 SITE_DOMAIN_CN = "https://www.aitoollab.cn"
 SITE_LOGO    = f"{SITE_DOMAIN}/images/logo.png"
-CSS_VERSION  = f"v={datetime.now().strftime('%Y%m%d%H%M')}"  # cache busting
+CSS_VERSION  = f"v={datetime.now().strftime('%Y%m%d%H%M%S')}"  # cache busting (with seconds)
 
 # ─── Back-to-top button (no Chinese) ──────────────────────────────────────────
 BACK_TO_TOP_BLOCK = '''<button id="backToTop" aria-label="Back to top">

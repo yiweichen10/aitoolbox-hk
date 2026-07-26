@@ -280,6 +280,11 @@ body {
 }
 
 img { max-width: 100%; height: auto; }
+@media (max-width: 768px) {
+  .tool-card { word-break: break-word; overflow-wrap: anywhere; }
+  .tool-info p { overflow-wrap: anywhere; word-break: break-word; }
+  .hero { max-width: 100vw; overflow-x: clip; }
+}
 
 /* 隐藏滚动条增强现代感 (可选) */
 ::-webkit-scrollbar {
@@ -819,6 +824,16 @@ img { max-width: 100%; height: auto; }
   border-top: 1px solid #f1f5f9;
   font-size: 13px;
   color: var(--text-muted);
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.tool-meta-row span {
+  min-width: 0;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+@media (max-width: 768px) {
+  .tool-meta-row { font-size: 12px; }
 }
 
 /* 标签系统 */
