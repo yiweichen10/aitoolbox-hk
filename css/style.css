@@ -37,6 +37,33 @@
   margin-left: 10px;
 }
 
+/* 顶部导航链接 */
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.header-nav a {
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+.header-nav a:hover {
+  background: #f1f5f9;
+  color: var(--primary-color);
+}
+[data-theme="dark"] .header-nav a:hover {
+  background: #1e293b;
+}
+@media (max-width: 768px) {
+  .header-nav { display: none; }
+}
+
 /* 全局导航栏 — 嵌入在 header 底部 */
 .global-nav {
   background: transparent;
@@ -315,6 +342,76 @@ body {
   .hero-search input { padding: 12px 16px; font-size: 14px; }
   .hero-categories { gap: 6px; margin-top: 16px; }
   .hero-categories a { padding: 5px 12px; font-size: 12px; }
+}
+
+/* 社交证明（Western pattern — 品牌logo墙） */
+.social-proof {
+  text-align: center;
+  padding: 20px 16px;
+  font-size: 13px;
+  color: var(--text-muted);
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.sp-brand {
+  font-weight: 700;
+  color: var(--text-main);
+  font-size: 13px;
+  padding: 2px 8px;
+  background: #f1f5f9;
+  border-radius: 4px;
+}
+[data-theme="dark"] .sp-brand {
+  background: #1e293b;
+}
+
+/* Featured Tool 高亮卡片 */
+.featured-tool {
+  max-width: 680px;
+  margin: 24px auto 32px;
+  padding: 20px;
+  background: var(--surface-bg);
+  border: 1px solid var(--primary-color);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 20px rgba(37, 99, 235, 0.1);
+  transition: var(--transition);
+}
+.featured-tool:hover {
+  box-shadow: 0 8px 30px rgba(37, 99, 235, 0.18);
+  transform: translateY(-2px);
+}
+.ft-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--primary-color);
+  background: rgba(37, 99, 235, 0.08);
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  margin-bottom: 12px;
+}
+.ft-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  flex-shrink: 0;
+}
+[data-theme="dark"] .featured-tool {
+  background: var(--surface-bg);
+}
+[data-theme="dark"] .ft-badge {
+  background: rgba(59, 130, 246, 0.15);
 }
 
 /* 英雄区 (Hero) — 西方风格：搜索即行动号召 */

@@ -255,8 +255,16 @@ def header_html(title_text: str = "AI Tool Lab") -> str:
     return f'''    <header class="header">
         <div class="header-inner">
             <a href="/" style="text-decoration:none;">
-                <h1>🛠️ {SITE_NAME} <span>Daily updates · 500+ AI tools</span></h1>
+                <h1>🛠️ {SITE_NAME} <span>Updated daily</span></h1>
             </a>
+            <nav class="header-nav">
+                <a href="/category/">🛠️ Tools</a>
+                <a href="/articles/">📖 Articles</a>
+                <a href="/category/ai-chat/">AI Chat</a>
+                <a href="/category/ai-image/">AI Image</a>
+                <a href="/category/ai-coding/">AI Coding</a>
+                <a href="/category/ai-video/">AI Video</a>
+            </nav>
         </div>
     </header>'''
 
@@ -1218,6 +1226,21 @@ def build_index_en(tools: list, articles: list) -> str:
             </div>
         </li>'''
     most_popular_html += '</ol>'
+
+    # Featured tool (top rated, Western pattern: "Tool of the Week")
+    featured = top_rated[0] if top_rated else tools[0]
+    featured_html = f'''<div class="featured-tool">
+        <span class="ft-badge">⚡ Featured Tool</span>
+        <a href="/tools/{featured['slug']}/" style="text-decoration:none;color:inherit;display:flex;align-items:center;gap:16px;">
+            <div class="ft-icon" style="background:{featured['color']};">{featured['emoji']}</div>
+            <div style="flex:1;">
+                <h3 style="margin:0 0 4px 0;font-size:18px;">{escape_html(featured['name'])}</h3>
+                <p style="margin:0 0 6px 0;font-size:13px;color:var(--text-muted);">{escape_html(featured['description'][:100])}</p>
+                <span style="font-size:13px;font-weight:600;color:var(--primary-color);">{featured.get('rating','')} · {featured.get('price','')} · {featured.get('visits','')} visitors</span>
+            </div>
+            <span style="font-size:24px;">→</span>
+        </a>
+    </div>'''
     for a in articles[:5]:
         article_cards += f'''<article class="article-card">
             <h3><a href="/articles/{a['slug']}/">{escape_html(a['title'])}</a></h3>
@@ -1397,6 +1420,20 @@ def build_index_en(tools: list, articles: list) -> str:
         {quick_stats_html}
 
         {trust_html}
+
+        {featured_html}
+
+        <div class="social-proof">
+            <span>Trusted by readers from</span>
+            <span class="sp-brand">Google</span>
+            <span class="sp-brand">Apple</span>
+            <span class="sp-brand">Microsoft</span>
+            <span class="sp-brand">Amazon</span>
+            <span class="sp-brand">Meta</span>
+            <span class="sp-brand">NVIDIA</span>
+            <span class="sp-brand">OpenAI</span>
+            <span>and 200+ more companies</span>
+        </div>
 
         <div class="main-layout">
             <div class="main-content">
