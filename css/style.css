@@ -2316,3 +2316,144 @@ body {
   .score { font-size: 28px; }
   .vs-badge { width: 38px; height: 38px; font-size: 12px; }
 }
+
+/* ===========================================
+   综合移动端适配（< 768px）
+   =========================================== */
+@media (max-width: 768px) {
+  /* Header: 收紧间距 */
+  .header-inner {
+    padding: 10px 16px;
+  }
+  .header h1 {
+    font-size: 17px;
+    gap: 4px;
+  }
+  .header h1 span {
+    font-size: 11px;
+    margin-left: 4px;
+  }
+  .header h1 br { display: none; }
+
+  /* Hero: 大幅压缩 */
+  .hero {
+    padding: 56px 16px 40px;
+  }
+  .hero h2 {
+    font-size: 26px;
+    line-height: 1.25;
+    margin-bottom: 12px;
+  }
+  .hero p {
+    font-size: 14px;
+    line-height: 1.55;
+    margin-bottom: 0;
+  }
+  .hero-categories {
+    gap: 6px;
+    margin-top: 16px;
+  }
+  .hero-categories a {
+    padding: 5px 12px;
+    font-size: 12px;
+  }
+  .hero-search {
+    margin: 18px 8px 0;
+  }
+  .hero-search input {
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+
+  /* 缩短 hero ::before/::after 装饰 */
+  .hero::before { width: 250px; height: 250px; }
+  .hero::after { width: 200px; height: 200px; }
+
+  /* Quick Stats: 2x2 网格 */
+  .quick-stats {
+    padding: 12px;
+    gap: 8px;
+    margin: 0 auto 24px;
+  }
+  .qs-item {
+    padding: 12px 8px;
+  }
+  .qs-num { font-size: 22px; }
+  .qs-label { font-size: 10px; letter-spacing: 0; }
+
+  /* Trust section: 单列 */
+  .trust-section {
+    padding: 0 16px;
+    margin-bottom: 28px;
+  }
+  .trust-section h3 { font-size: 18px; }
+  .trust-card { padding: 16px; }
+  .trust-card h4 { font-size: 14px; }
+  .trust-card p { font-size: 12px; }
+
+  /* Social proof */
+  .social-proof {
+    padding: 16px 12px;
+    font-size: 12px;
+    gap: 5px;
+  }
+  .sp-brand { font-size: 12px; padding: 2px 6px; }
+
+  /* Main layout */
+  .main-layout {
+    grid-template-columns: 1fr;
+    padding: 0 16px;
+    gap: 20px;
+  }
+  .home-sidebar { position: static; }
+
+  /* 工具卡片：小屏适配 */
+  .tool-card { padding: 16px; }
+  .tool-icon { width: 44px; height: 44px; font-size: 22px; }
+  .tool-info h3 { font-size: 15px; }
+  .tool-info p { font-size: 12px; -webkit-line-clamp: 2; }
+
+  /* 侧边栏 widget */
+  .sidebar-widget { padding: 16px; }
+  .sidebar-widget h4 { font-size: 14px; }
+  .sidebar-widget li { font-size: 12px; padding: 6px 0; }
+
+  /* Dark mode FAB */
+  .dark-toggle-fab {
+    right: 14px;
+    bottom: 72px;
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  /* 文章列表 */
+  .article-card { padding: 14px; }
+  .article-card h3 { font-size: 15px; }
+  .article-meta { font-size: 11px; flex-wrap: wrap; gap: 6px; }
+
+  /* Footer */
+  .footer {
+    padding: 24px 16px;
+    font-size: 12px;
+    text-align: center;
+  }
+
+  /* 通用标题缩放 */
+  h2 { font-size: 22px !important; }
+  .qs-item, .trust-card, .article-card,
+  .sidebar-widget, .tool-card { border-radius: 10px; }
+}
+
+@media (max-width: 480px) {
+  .hero h2 { font-size: 22px; }
+  .hero p { font-size: 13px; }
+  .hero-categories a { font-size: 11px; padding: 4px 10px; }
+  .qs-num { font-size: 18px; }
+  .quick-stats { padding: 10px 8px; }
+  .trust-card p, .tool-info p { font-size: 11px; }
+  .sp-brand { font-size: 11px; }
+  .article-card h3 { font-size: 14px; }
+  .sidebar-widget li { font-size: 11px; }
+}
+
