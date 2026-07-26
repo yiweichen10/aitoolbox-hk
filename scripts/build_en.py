@@ -22,6 +22,36 @@ SITE_DOMAIN_CN = "https://www.aitoollab.cn"
 SITE_LOGO    = f"{SITE_DOMAIN}/images/logo.png"
 CSS_VERSION  = f"v={datetime.now().strftime('%Y%m%d%H%M%S')}"  # cache busting (with seconds)
 
+# ─── Affiliate links ──────────────────────────────────────────────────────────
+# Load affiliate_links.json from the Chinese site's data directory (shared file)
+_AFFILIATE_LINKS = {}
+_aff_path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), 'seo-site', 'data', 'affiliate_links.json')
+if not os.path.exists(_aff_path):
+    _aff_path = os.path.join(BASE_DIR, 'data', 'affiliate_links.json')
+if os.path.exists(_aff_path):
+    try:
+        with open(_aff_path, 'r', encoding='utf-8') as _f:
+            _raw = json.load(_f)
+            for _k, _v in _raw.items():
+                if isinstance(_v, dict) and _v.get('url'):
+                    _AFFILIATE_LINKS[_k] = _v['url']
+                elif isinstance(_v, str) and _v:
+                    _AFFILIATE_LINKS[_k] = _v
+    except Exception:
+        pass
+
+def get_affiliate_url(slug, site='en'):
+    """Get affiliate URL for a tool, or None."""
+    key = f"{site}:{slug}"
+    return _AFFILIATE_LINKS.get(key)
+
+def get_tool_link(tool, slug, site='en'):
+    """Get final tool link (affiliate preferred). Returns (url, is_affiliate)."""
+    aff = get_affiliate_url(slug, site)
+    if aff:
+        return aff, True
+    return tool.get('url', ''), False
+
 # ─── Back-to-top button (no Chinese) ──────────────────────────────────────────
 BACK_TO_TOP_BLOCK = '''<button id="backToTop" aria-label="Back to top">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
@@ -632,7 +662,7 @@ def build_tool_page_en(tool: dict, all_tools: list, all_articles: list = None) -
                 <div class="tool-meta-item">🏷️ <strong>Category</strong>: {escape_html(cat)}</div>
             </div>
             <div class="action-bar">
-                <a href="{tool['url']}" target="_blank" rel="noopener" class="action-btn action-btn-primary">Visit {escape_html(name)} →</a>
+                <a href="{get_tool_link(tool, slug, 'en')[0]}" target="_blank" rel="{'nofollow noopener sponsored' if get_tool_link(tool, slug, 'en')[1] else 'noopener'}" class="action-btn action-btn-primary">Visit {escape_html(name)} →</a>
             </div>
         </div>
 
