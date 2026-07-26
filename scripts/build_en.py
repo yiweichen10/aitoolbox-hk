@@ -1593,26 +1593,8 @@ def push_to_indexnow_en(urls: list) -> bool:
 # ─── Nav injection (English only — only scans /en/ dir) ──────────────────────
 
 def inject_global_nav_en():
-    """Inject English global nav into all HTML files under / only."""
-    injected = 0
-    for root, dirs, files in os.walk(OUT_DIR):
-        for fname in files:
-            if not fname.endswith('.html'):
-                continue
-            fpath = os.path.join(root, fname)
-            try:
-                with open(fpath, 'r', encoding='utf-8') as f:
-                    content = f.read()
-                if '</header>' in content and 'class="global-nav"' not in content:
-                    content = content.replace('</header>', GLOBAL_NAV_EN + '\n    </header>', 1)
-                    with open(fpath, 'w', encoding='utf-8') as f:
-                        f.write(content)
-                    injected += 1
-            except Exception:
-                pass
-    if injected:
-        print(f'[Post] Injected EN nav into {injected} HTML files under /')
-    return injected
+    """Disabled since the new header-nav is built directly in header_html()."""
+    return 0
 
 
 # ─── Main build ───────────────────────────────────────────────────────────────
