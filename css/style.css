@@ -61,7 +61,21 @@
   background: #1e293b;
 }
 @media (max-width: 768px) {
-  .header-nav { display: none; }
+  .header-nav {
+    display: flex;
+    gap: 2px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .header-nav::-webkit-scrollbar { display: none; }
+  .header-nav a {
+    padding: 4px 10px;
+    font-size: 12px;
+    border-radius: 6px;
+    flex-shrink: 0;
+  }
 }
 
 /* 全局导航栏 — 嵌入在 header 底部 */
@@ -1444,8 +1458,8 @@ body {
 /* ========== Back-to-top ========== */
 #backToTop {
   position: fixed;
-  right: 28px;
-  bottom: 36px;
+  right: 24px;
+  bottom: 30px;
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -1475,6 +1489,18 @@ body {
 #backToTop svg {
   width: 20px;
   height: 20px;
+}
+@media (max-width: 768px) {
+  #backToTop {
+    right: 14px;
+    bottom: 24px;
+    width: 40px;
+    height: 40px;
+  }
+  #backToTop svg {
+    width: 18px;
+    height: 18px;
+  }
 }
 
 /* ========================================
