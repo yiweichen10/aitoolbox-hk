@@ -877,7 +877,6 @@ body {
   .main-layout { grid-template-columns: 1fr; }
   .home-sidebar { position: static; }
 }
-}
 .sidebar-card {
   background: var(--surface-bg);
   border-radius: var(--radius-lg);
