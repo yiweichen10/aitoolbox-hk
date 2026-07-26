@@ -117,34 +117,24 @@
     </nav>
     </header>
 
-    <div class="search-bar-below-nav">
-        <div class="search-bar-inner">
-            <div class="search-box">
-                <input type="text" placeholder="Search AI tools..." id="searchInput" aria-label="Search AI tools">
-                <button aria-label="Search" onclick="performSearch()">&#x1F50D;</button>
-            </div>
-        </div>
-        <div id="searchResults" style="display:none;text-align:center;font-size:14px;color:var(--text-muted);margin-top:8px;"></div>
-    </div>
-
     <main>
         <section class="hero">
             <h2>Find the Best AI Tools for Your Work</h2>
-            <p>
-                143+ AI tools reviewed and ranked by real humans who actually use them. Updated daily.
-            </p>
-            <div class="quick-pills">
-                <a href="/tools/chatgpt/">🟢 ChatGPT</a>
-                <a href="/tools/claude/">🟠 Claude</a>
-                <a href="/tools/gemini/">🔵 Gemini</a>
-                <a href="/tools/midjourney/">🎨 Midjourney</a>
-                <a href="/tools/github-copilot/">💻 Copilot</a>
-                <a href="/tools/perplexity/">🔍 Perplexity</a>
-                <a href="/category/" style="background:rgba(255,255,255,0.3);">All Tools →</a>
+            <p>143+ AI tools reviewed and ranked by real humans who actually use them. Updated daily.</p>
+            <div class="hero-search">
+                <input type="text" placeholder="Search 143+ AI tools..." id="searchInput" aria-label="Search AI tools" onkeypress="if(event.key==='Enter')performSearch()">
+                <button onclick="performSearch()">🔍</button>
             </div>
-            <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:28px;">
-                <a href="/category/" class="action-btn action-btn-primary">Browse All Categories</a>
-                <a href="/articles/" class="action-btn">Read In-Depth Guides</a>
+            <div id="searchResults" style="display:none;text-align:center;font-size:14px;color:rgba(255,255,255,0.85);margin-top:12px;"></div>
+            <div class="hero-categories">
+                <a href="/category/ai-chat/">AI Chat</a>
+                <a href="/category/ai-image/">AI Image</a>
+                <a href="/category/ai-writing/">AI Writing</a>
+                <a href="/category/ai-coding/">AI Coding</a>
+                <a href="/category/ai-video/">AI Video</a>
+                <a href="/category/ai-design/">AI Design</a>
+                <a href="/category/ai-productivity/">Productivity</a>
+                <a href="/category/">All Categories →</a>
             </div>
         </section>
 
@@ -201,7 +191,7 @@
                         <a href="/tools/semrush-ai/" class="tool-card">
             <div class="tool-icon" style="background:#FF642D;">🎯</div>
             <div class="tool-info">
-                <h3>Semrush AI<span class="badge" style="background:#00A64F;color:#fff;padding:2px 6px;border-radius:3px;font-size:11px;margin-left:6px;">Top Pick</span></h3>
+                <h3>Semrush AI<span class="badge" style="background:#2563eb;color:#fff;padding:2px 6px;border-radius:3px;font-size:11px;margin-left:6px;">Top Pick</span></h3>
                 <p>The industry-standard SEO platform that added serious AI capabilities </p>
                 <div class="tool-meta-row">
                     <span>⭐ 4.7</span>
@@ -223,7 +213,7 @@
 <a href="/tools/flux/" class="tool-card">
             <div class="tool-icon" style="background:#337b26;">🎨</div>
             <div class="tool-info">
-                <h3>Flux<span class="badge" style="background:#00A64F;color:#fff;padding:2px 6px;border-radius:3px;font-size:11px;margin-left:6px;">None</span></h3>
+                <h3>Flux<span class="badge" style="background:#2563eb;color:#fff;padding:2px 6px;border-radius:3px;font-size:11px;margin-left:6px;">None</span></h3>
                 <p>Open-weight image generation model by Black Forest Labs (the team behi</p>
                 <div class="tool-meta-row">
                     <span>⭐ 4.7</span>
@@ -256,7 +246,7 @@
 <a href="/tools/frase/" class="tool-card">
             <div class="tool-icon" style="background:#6C47FF;">📝</div>
             <div class="tool-info">
-                <h3>Frase<span class="badge" style="background:#00A64F;color:#fff;padding:2px 6px;border-radius:3px;font-size:11px;margin-left:6px;">Recommended</span></h3>
+                <h3>Frase<span class="badge" style="background:#2563eb;color:#fff;padding:2px 6px;border-radius:3px;font-size:11px;margin-left:6px;">Recommended</span></h3>
                 <p>Frase is an AI-powered SEO content optimization platform that helps yo</p>
                 <div class="tool-meta-row">
                     <span>⭐ 4.5</span>
@@ -267,7 +257,7 @@
 <a href="/tools/spline-ai/" class="tool-card">
             <div class="tool-icon" style="background:#FF5A1F;">🎨</div>
             <div class="tool-info">
-                <h3>Spline AI<span class="badge" style="background:#00A64F;color:#fff;padding:2px 6px;border-radius:3px;font-size:11px;margin-left:6px;">PICK</span></h3>
+                <h3>Spline AI<span class="badge" style="background:#2563eb;color:#fff;padding:2px 6px;border-radius:3px;font-size:11px;margin-left:6px;">PICK</span></h3>
                 <p>Spline AI lets you create 3D models, scenes, and interactive prototype</p>
                 <div class="tool-meta-row">
                     <span>⭐ 4.5</span>
@@ -278,7 +268,7 @@
 <a href="/tools/cartesia/" class="tool-card">
             <div class="tool-icon" style="background:#6366F1;">🎙️</div>
             <div class="tool-info">
-                <h3>Cartesia<span class="badge" style="background:#00A64F;color:#fff;padding:2px 6px;border-radius:3px;font-size:11px;margin-left:6px;">PICK</span></h3>
+                <h3>Cartesia<span class="badge" style="background:#2563eb;color:#fff;padding:2px 6px;border-radius:3px;font-size:11px;margin-left:6px;">PICK</span></h3>
                 <p>Cartesia does real-time text-to-speech with sub-100ms latency — the ki</p>
                 <div class="tool-meta-row">
                     <span>⭐ 4.5</span>
@@ -289,7 +279,7 @@
 <a href="/tools/relume/" class="tool-card">
             <div class="tool-icon" style="background:#6B4EFF;">🎨</div>
             <div class="tool-info">
-                <h3>Relume<span class="badge" style="background:#00A64F;color:#fff;padding:2px 6px;border-radius:3px;font-size:11px;margin-left:6px;">PICK</span></h3>
+                <h3>Relume<span class="badge" style="background:#2563eb;color:#fff;padding:2px 6px;border-radius:3px;font-size:11px;margin-left:6px;">PICK</span></h3>
                 <p>Relume turns your sitemap into a full wireframe and Figma-ready compon</p>
                 <div class="tool-meta-row">
                     <span>⭐ 4.6</span>
@@ -311,7 +301,7 @@
 <a href="/tools/warp/" class="tool-card">
             <div class="tool-icon" style="background:#1A1B26;">⌨️</div>
             <div class="tool-info">
-                <h3>Warp<span class="badge" style="background:#00A64F;color:#fff;padding:2px 6px;border-radius:3px;font-size:11px;margin-left:6px;">NEW</span></h3>
+                <h3>Warp<span class="badge" style="background:#2563eb;color:#fff;padding:2px 6px;border-radius:3px;font-size:11px;margin-left:6px;">NEW</span></h3>
                 <p>Warp is an AI-powered terminal built in Rust that turns your command l</p>
                 <div class="tool-meta-row">
                     <span>⭐ 4.7</span>
@@ -322,7 +312,7 @@
 <a href="/tools/milvus/" class="tool-card">
             <div class="tool-icon" style="background:#6B5CE7;">🗄️</div>
             <div class="tool-info">
-                <h3>Milvus<span class="badge" style="background:#00A64F;color:#fff;padding:2px 6px;border-radius:3px;font-size:11px;margin-left:6px;">NEW</span></h3>
+                <h3>Milvus<span class="badge" style="background:#2563eb;color:#fff;padding:2px 6px;border-radius:3px;font-size:11px;margin-left:6px;">NEW</span></h3>
                 <p>Milvus is the open-source vector database that handles billions of emb</p>
                 <div class="tool-meta-row">
                     <span>⭐ 4.7</span>
@@ -509,7 +499,7 @@
             </div>
         </li></ol>
                 </div>
-                <div class="sidebar-widget" style="background:linear-gradient(135deg,#dcfce7,#f0fdf4);border:1px solid #bbf7d0;border-radius:12px;padding:20px;">
+                <div class="sidebar-widget" style="background:linear-gradient(135deg,#dbeafe,#eff6ff);border:1px solid #bfdbfe;border-radius:12px;padding:20px;">
                     <h4 style="margin-top:0;">📬 Stay Updated</h4>
                     <p style="font-size:13px;color:#555;margin-bottom:12px;">New AI tools reviewed daily. 143+ tools and counting.</p>
                     <a href="/articles/" style="display:block;text-align:center;padding:10px;background:var(--primary-color);color:#fff;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;">Read Latest Reviews →</a>
@@ -601,20 +591,14 @@ document.addEventListener("DOMContentLoaded",function(){var b=document.getElemen
 
         if (totalHits > 0 && toolSection) {
             setTimeout(function() {
-                var stickyHeight = 0;
-                ['.header', '.search-bar-below-nav'].forEach(function(sel) {
-                    var el = document.querySelector(sel);
-                    if (el) stickyHeight += el.getBoundingClientRect().height;
-                });
+                var headerEl = document.querySelector('.header');
+                var stickyHeight = headerEl ? headerEl.getBoundingClientRect().height : 0;
                 var top = toolSection.getBoundingClientRect().top + window.pageYOffset - stickyHeight - 16;
                 window.scrollTo({top: top, behavior: 'smooth'});
             }, 100);
         }
     }
 
-    document.getElementById('searchInput').addEventListener('keypress', function(e) {
-        if (e.key === 'Enter') performSearch();
-    });
     </script>
 </body>
 </html>

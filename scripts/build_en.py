@@ -385,7 +385,7 @@ def build_tool_page_en(tool: dict, all_tools: list, all_articles: list = None) -
     # Badge
     badge_html = ''
     if tool.get('badge'):
-        bc = {'hot':'#ff4444','new':'#00aa00','pick':'#00A64F'}.get(tool['badge'].get('type'),'#00A64F')
+        bc = {'hot':'#ff4444','new':'#00aa00','pick':'#2563eb'}.get(tool['badge'].get('type'),'#2563eb')
         badge_html = f' <span class="badge" style="background:{bc};color:#fff;padding:2px 8px;border-radius:4px;font-size:12px;">{tool["badge"]["text"]}</span>'
 
     # Platform
@@ -899,17 +899,17 @@ def build_article_page_en(article: dict, all_articles: list, all_tools: list = N
             <h1 style="margin-bottom:16px;">{escape_html(title)}</h1>
             <div style="color:#999;font-size:14px;margin-bottom:24px;">
                 {date_str} · {escape_html(cat)} ·
-                <span itemprop="author" itemscope itemtype="https://schema.org/Organization"><a href="/author/" itemprop="url" style="color:#00A64F;text-decoration:none;"><span itemprop="name">AI Tool Lab Editorial Team</span></a></span> ·
+                <span itemprop="author" itemscope itemtype="https://schema.org/Organization"><a href="/author/" itemprop="url" style="color:#2563eb;text-decoration:none;"><span itemprop="name">AI Tool Lab Editorial Team</span></a></span> ·
                 <span style="color:#bbb;">📖 {max(3, len(article.get('content','')) // 500)} min read</span>
             </div>
             {tldr_html}
             {content_html}
-            <div style="margin-top:40px;padding:20px;background:#f8f9fa;border-radius:8px;border-left:4px solid #00A64F;">
+            <div style="margin-top:40px;padding:20px;background:#f8f9fa;border-radius:8px;border-left:4px solid #2563eb;">
                 <p style="margin:0 0 8px 0;font-size:14px;color:#555;">
-                    <strong>About the author:</strong> This article was written by the <a href="/author/" style="color:#00A64F;text-decoration:none;">AI Tool Lab Editorial Team</a>, with 5+ years of paid AI tool testing experience and $200+ monthly subscription spend. All reviews are based on real paid long-term use.
+                    <strong>About the author:</strong> This article was written by the <a href="/author/" style="color:#2563eb;text-decoration:none;">AI Tool Lab Editorial Team</a>, with 5+ years of paid AI tool testing experience and $200+ monthly subscription spend. All reviews are based on real paid long-term use.
                 </p>
                 <p style="margin:0;font-size:13px;color:#888;">
-                    <strong>Data statement:</strong> All data in this article cites its source and is verifiable. Found an error? Report it via our <a href="/contact.html" style="color:#00A64F;text-decoration:none;">contact page</a>, we verify within 48 hours.
+                    <strong>Data statement:</strong> All data in this article cites its source and is verifiable. Found an error? Report it via our <a href="/contact.html" style="color:#2563eb;text-decoration:none;">contact page</a>, we verify within 48 hours.
                 </p>
             </div>
         </article>
@@ -933,7 +933,7 @@ def build_category_page_en(cat_name: str, tools: list) -> str:
     for t in tools:
         badge_html = ''
         if t.get('badge'):
-            bc = {'hot':'#ff4444','new':'#00aa00','pick':'#00A64F'}.get(t['badge'].get('type'),'#00A64F')
+            bc = {'hot':'#ff4444','new':'#00aa00','pick':'#2563eb'}.get(t['badge'].get('type'),'#2563eb')
             badge_html = f'<span class="badge" style="background:{bc};color:#fff;padding:2px 6px;border-radius:3px;font-size:11px;">{t["badge"]["text"]}</span>'
         tool_cards += f'''<a href="/tools/{t['slug']}/" class="tool-card">
             <div class="tool-icon" style="background:{t['color']};">{t['emoji']}</div>
@@ -1110,7 +1110,7 @@ def build_category_index_en(tools_by_cat: dict) -> str:
         cat_slug  = get_category_slug_en(cat_name)
         sample_emoji = tools[0]['emoji'] if tools else '🤖'
         cat_cards += f'''<a href="/category/{cat_slug}/" class="tool-card" style="text-decoration:none;">
-            <div class="tool-icon" style="background:#00A64F;">{sample_emoji}</div>
+            <div class="tool-icon" style="background:#2563eb;">{sample_emoji}</div>
             <div class="tool-info">
                 <h3>{escape_html(cat_name)}</h3>
                 <p>{len(tools)} tools reviewed</p>
@@ -1166,7 +1166,7 @@ def build_index_en(tools: list, articles: list) -> str:
     for t in top_tools:
         badge_html = ''
         if t.get('badge'):
-            bc = {'hot':'#ff4444','new':'#00aa00','pick':'#00A64F'}.get(t['badge'].get('type'),'#00A64F')
+            bc = {'hot':'#ff4444','new':'#00aa00','pick':'#2563eb'}.get(t['badge'].get('type'),'#2563eb')
             badge_html = f'<span class="badge" style="background:{bc};color:#fff;padding:2px 6px;border-radius:3px;font-size:11px;margin-left:6px;">{t["badge"]["text"]}</span>'
         tool_cards += f'''<a href="/tools/{t['slug']}/" class="tool-card">
             <div class="tool-icon" style="background:{t['color']};">{t['emoji']}</div>
@@ -1373,34 +1373,24 @@ def build_index_en(tools: list, articles: list) -> str:
 <body>
 {header_html()}
 
-    <div class="search-bar-below-nav">
-        <div class="search-bar-inner">
-            <div class="search-box">
-                <input type="text" placeholder="Search AI tools..." id="searchInput" aria-label="Search AI tools">
-                <button aria-label="Search" onclick="performSearch()">&#x1F50D;</button>
-            </div>
-        </div>
-        <div id="searchResults" style="display:none;text-align:center;font-size:14px;color:var(--text-muted);margin-top:8px;"></div>
-    </div>
-
     <main>
         <section class="hero">
             <h2>Find the Best AI Tools for Your Work</h2>
-            <p>
-                {total_tools}+ AI tools reviewed and ranked by real humans who actually use them. Updated daily.
-            </p>
-            <div class="quick-pills">
-                <a href="/tools/chatgpt/">🟢 ChatGPT</a>
-                <a href="/tools/claude/">🟠 Claude</a>
-                <a href="/tools/gemini/">🔵 Gemini</a>
-                <a href="/tools/midjourney/">🎨 Midjourney</a>
-                <a href="/tools/github-copilot/">💻 Copilot</a>
-                <a href="/tools/perplexity/">🔍 Perplexity</a>
-                <a href="/category/" style="background:rgba(255,255,255,0.3);">All Tools →</a>
+            <p>{total_tools}+ AI tools reviewed and ranked by real humans who actually use them. Updated daily.</p>
+            <div class="hero-search">
+                <input type="text" placeholder="Search {total_tools}+ AI tools..." id="searchInput" aria-label="Search AI tools" onkeypress="if(event.key==='Enter')performSearch()">
+                <button onclick="performSearch()">🔍</button>
             </div>
-            <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:28px;">
-                <a href="/category/" class="action-btn action-btn-primary">Browse All Categories</a>
-                <a href="/articles/" class="action-btn">Read In-Depth Guides</a>
+            <div id="searchResults" style="display:none;text-align:center;font-size:14px;color:rgba(255,255,255,0.85);margin-top:12px;"></div>
+            <div class="hero-categories">
+                <a href="/category/ai-chat/">AI Chat</a>
+                <a href="/category/ai-image/">AI Image</a>
+                <a href="/category/ai-writing/">AI Writing</a>
+                <a href="/category/ai-coding/">AI Coding</a>
+                <a href="/category/ai-video/">AI Video</a>
+                <a href="/category/ai-design/">AI Design</a>
+                <a href="/category/ai-productivity/">Productivity</a>
+                <a href="/category/">All Categories →</a>
             </div>
         </section>
 
@@ -1440,7 +1430,7 @@ def build_index_en(tools: list, articles: list) -> str:
                     <h4>📈 Most Popular</h4>
                     {most_popular_html}
                 </div>
-                <div class="sidebar-widget" style="background:linear-gradient(135deg,#dcfce7,#f0fdf4);border:1px solid #bbf7d0;border-radius:12px;padding:20px;">
+                <div class="sidebar-widget" style="background:linear-gradient(135deg,#dbeafe,#eff6ff);border:1px solid #bfdbfe;border-radius:12px;padding:20px;">
                     <h4 style="margin-top:0;">📬 Stay Updated</h4>
                     <p style="font-size:13px;color:#555;margin-bottom:12px;">New AI tools reviewed daily. {total_tools}+ tools and counting.</p>
                     <a href="/articles/" style="display:block;text-align:center;padding:10px;background:var(--primary-color);color:#fff;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;">Read Latest Reviews →</a>
@@ -1505,20 +1495,14 @@ def build_index_en(tools: list, articles: list) -> str:
 
         if (totalHits > 0 && toolSection) {
             setTimeout(function() {
-                var stickyHeight = 0;
-                ['.header', '.search-bar-below-nav'].forEach(function(sel) {
-                    var el = document.querySelector(sel);
-                    if (el) stickyHeight += el.getBoundingClientRect().height;
-                });
+                var headerEl = document.querySelector('.header');
+                var stickyHeight = headerEl ? headerEl.getBoundingClientRect().height : 0;
                 var top = toolSection.getBoundingClientRect().top + window.pageYOffset - stickyHeight - 16;
                 window.scrollTo({top: top, behavior: 'smooth'});
             }, 100);
         }
     }
 
-    document.getElementById('searchInput').addEventListener('keypress', function(e) {
-        if (e.key === 'Enter') performSearch();
-    });
     </script>
 </body>
 </html>'''
