@@ -20,6 +20,7 @@ SITE_NAME    = "AI Tool Lab"
 SITE_DOMAIN  = "https://www.aitoolbox.hk"
 SITE_DOMAIN_CN = "https://www.aitoollab.cn"
 SITE_LOGO    = f"{SITE_DOMAIN}/images/logo.png"
+CSS_VERSION  = f"v={datetime.now().strftime('%Y%m%d%H%M')}"  # cache busting
 
 # ─── Back-to-top button (no Chinese) ──────────────────────────────────────────
 BACK_TO_TOP_BLOCK = '''<button id="backToTop" aria-label="Back to top">
@@ -601,7 +602,7 @@ def build_tool_page_en(tool: dict, all_tools: list, all_articles: list = None) -
     <meta name="twitter:title" content="{escape_html(name)} Review 2026 - {SITE_NAME}">
     <meta name="twitter:description" content="{escape_html(tool['description'][:120])}">
     {'<meta name="twitter:image" content="' + og_image + '">' if og_image else ''}
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style.css?' + CSS_VERSION + '">
     <script type="application/ld+json">{breadcrumb_json}</script>
     <script type="application/ld+json">{structured_json}</script>
     {faq_page_schema}
@@ -890,7 +891,7 @@ def build_article_page_en(article: dict, all_articles: list, all_tools: list = N
     <meta name="twitter:title" content="{escape_html(title)} - {SITE_NAME}">
     <meta name="twitter:description" content="{escape_html(article.get('description',''))}">
     {'<meta name="twitter:image" content="' + og_image + '">' if og_image else ''}
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style.css?' + CSS_VERSION + '">
     <script type="application/ld+json">{breadcrumb_json}</script>
     <script type="application/ld+json">{structured_json}</script>{howto_schema_html}{faq_article_schema}
 {VERIFICATION_BLOCK}{GA_BLOCK}
@@ -1019,7 +1020,7 @@ def build_category_page_en(cat_name: str, tools: list) -> str:
     <meta name="description" content="Best {escape_html(cat_name)} AI tools in 2026. We reviewed {len(tools)} tools and ranked them by features, pricing, and real-world performance.">
     <meta name="keywords" content="{escape_html(cat_name)},best {escape_html(cat_name)} tools,AI tools 2026">
     <link rel="canonical" href="{SITE_DOMAIN}/category/{cat_slug}/">
-{hreflang}    <link rel="stylesheet" href="/css/style.css">
+{hreflang}    <link rel="stylesheet" href="/css/style.css?' + CSS_VERSION + '">
     <script type="application/ld+json">{breadcrumb_json}</script>
     <script type="application/ld+json">{collection_json}</script>{cat_faq_json}
 {VERIFICATION_BLOCK}{GA_BLOCK}
@@ -1088,7 +1089,7 @@ def build_article_list_en(articles: list, current_page: int = 1, total_pages: in
     <title>AI Tool Articles & Guides 2026 - {SITE_NAME}</title>
     <meta name="description" content="In-depth AI tool reviews, comparisons, and guides. Updated daily with practical advice for using AI to save time and make money.">
     <link rel="canonical" href="{SITE_DOMAIN}/articles/">
-{hreflang}    <link rel="stylesheet" href="/css/style.css">
+{hreflang}    <link rel="stylesheet" href="/css/style.css?' + CSS_VERSION + '">
 {VERIFICATION_BLOCK}{GA_BLOCK}
 </head>
 <body>
@@ -1135,7 +1136,7 @@ def build_category_index_en(tools_by_cat: dict) -> str:
     <title>All AI Tool Categories 2026 - {SITE_NAME}</title>
     <meta name="description" content="Browse all AI tool categories. Find the best AI tools for writing, coding, image generation, video, and more.">
     <link rel="canonical" href="{SITE_DOMAIN}/category/">
-{hreflang}    <link rel="stylesheet" href="/css/style.css">
+{hreflang}    <link rel="stylesheet" href="/css/style.css?' + CSS_VERSION + '">
 {VERIFICATION_BLOCK}{GA_BLOCK}
 </head>
 <body>
@@ -1390,7 +1391,7 @@ def build_index_en(tools: list, articles: list) -> str:
     <meta name="twitter:title" content="Best AI Tools 2026: {total_tools}+ Reviewed - {SITE_NAME}">
     <meta name="twitter:description" content="Find the best AI tools for writing, coding, image generation, and productivity. Updated daily.">
     <meta name="twitter:image" content="{SITE_DOMAIN}/images/logo.png">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style.css?' + CSS_VERSION + '">
 {schema_homepage_block}{VERIFICATION_BLOCK}{GA_BLOCK}
 </head>
 <body>
