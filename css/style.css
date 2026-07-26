@@ -255,7 +255,14 @@
   }
 }
 
-/* 全局重置 */
+/* 全局重置 — 防止横向溢出 */
+html {
+  width: 100%;
+  overflow-x: clip;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -263,12 +270,15 @@
 }
 
 body {
+  width: 100%;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', 'PingFang SC', 'Microsoft YaHei', sans-serif;
   background-color: var(--body-bg);
   color: var(--text-main);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
+
+img { max-width: 100%; height: auto; }
 
 /* 隐藏滚动条增强现代感 (可选) */
 ::-webkit-scrollbar {
