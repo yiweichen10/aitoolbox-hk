@@ -14,8 +14,20 @@
       var pref = voices.filter(function (v) { return v.lang && v.lang.toLowerCase().indexOf(base) === 0; });
       if (pref.length) return pref[0];
     }
-    var en = voices.filter(function (v) { return v.lang && v.lang.toLowerCase().indexOf('en') === 0; });
-    return en.length ? en[0] : voices[0];
+    // 关键修复（2026-08-03）：不再 fallback 到任意语言语音。
+    // 用错误语言的语音（如中文语音）朗读英文文本时，多数引擎直接静音或乱读，
+    // 表现为"点了朗读没声音"。语言不匹配时应返回 null，由上层提示用户。
+    return null;
+  }
+
+  // getVoices() 在部分浏览器中是异步填充的（初始为空），
+  // 点击朗读前最多等待 2 秒让语音列表就绪，避免误判"无语音"。
+  function waitVoices(cb, tries) {
+    tries = tries || 0;
+    try {
+      if (window.speechSynthesis.getVoices().length || tries >= 8) { cb(); return; }
+    } catch (e) { cb(); return; }
+    setTimeout(function () { waitVoices(cb, tries + 1); }, 250);
   }
 
   function getBlocks(container) {
@@ -120,11 +132,23 @@
     function start() {
       blocks = getBlocks(container);
       if (!blocks.length) return;
-      started = true;
-      window.speechSynthesis.cancel();
-      playBtn.textContent = L.pause;
-      stopBtn.style.display = '';
-      speakFrom(0);
+      waitVoices(function () {
+        if (!pickVoice(langPrefix)) {
+          // 系统缺少页面语言的语音包：明确提示，而不是静音"朗读"一遍
+          var msg = isZh
+            ? '未检测到 ' + langPrefix + ' 语音。请在系统「设置 → 时间和语言 → 语言和区域」添加对应语言及语音包，然后刷新页面重试。'
+            : 'No ' + (langPrefix || 'English') + ' voice is installed on this device. Add the ' + (langPrefix || 'English') + ' language pack in your system settings (Settings → Time & Language → Language & Region), then refresh and try again.';
+          playBtn.textContent = isZh ? '🔇 无语音' : '🔇 No voice';
+          playBtn.title = msg;
+          try { window.alert(msg); } catch (e) {}
+          return;
+        }
+        started = true;
+        window.speechSynthesis.cancel();
+        playBtn.textContent = L.pause;
+        stopBtn.style.display = '';
+        speakFrom(0);
+      });
     }
 
     function pause() {
