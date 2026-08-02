@@ -2516,8 +2516,8 @@ img { max-width: 100%; height: auto; }
 }
 
 
-/* ===== Voice read-aloud (TTS)（胶囊塞进第一个H2标题后，不占额外空间） ===== */
-.tts-bar{display:inline-flex;gap:6px;margin-left:10px;vertical-align:middle;font-weight:normal;}
+/* ===== Voice read-aloud (TTS)（胶囊塞进第一个P段落开头，与朗读起点对齐） ===== */
+.tts-bar{display:inline-flex;gap:6px;margin:0 8px;vertical-align:middle;font-weight:normal;}
 .tts-btn{display:inline-flex;align-items:center;gap:4px;padding:4px 12px;border:1px solid #4f46e5;background:#4f46e5;color:#fff;font-size:13px;font-weight:600;border-radius:14px;cursor:pointer;transition:all .15s;font-family:inherit;vertical-align:middle;line-height:1.4;}
 .tts-btn:hover{background:#4338ca;border-color:#4338ca;}
 .tts-btn.tts-stop{background:#fff;color:#dc2626;border-color:#f0c2b8;}

@@ -55,13 +55,15 @@
     stop.style.display = 'none';
     bar.appendChild(play);
     bar.appendChild(stop);
-    // 优先塞进第一个 H3 末尾（文章页 H2 是章节大标题太靠上，H3 才是正文小节起点）；
-    // 没有 H3 时回退到第一个 H2（兼容工具页），H2 也没有才回退容器顶部（占独立行）
-    var target = container.querySelector('h3') || container.querySelector('h2');
-    if (target) {
-      target.appendChild(bar);
+    // 优先塞进第一个 P 段落开头（与朗读起点对齐，行内不占独立行）；
+    // 没有 P 时回退 H3 → H2（兼容无段落工具页），都没有才回退容器顶部独立成行
+    var firstP = container.querySelector('p');
+    if (firstP) {
+      firstP.insertBefore(bar, firstP.firstChild);
     } else {
-      container.insertBefore(bar, container.firstChild);
+      var fb = container.querySelector('h3') || container.querySelector('h2');
+      if (fb) fb.appendChild(bar);
+      else container.insertBefore(bar, container.firstChild);
     }
     return { bar: bar, play: play, stop: stop };
   }
