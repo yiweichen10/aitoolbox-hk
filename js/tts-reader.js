@@ -55,10 +55,11 @@
     stop.style.display = 'none';
     bar.appendChild(play);
     bar.appendChild(stop);
-    // 优先塞进第一个 H2 标题末尾（不占额外空间）；没有 H2 时回退到容器顶部
-    var firstH2 = container.querySelector('h2');
-    if (firstH2) {
-      firstH2.appendChild(bar);
+    // 优先塞进第一个 H3 末尾（文章页 H2 是章节大标题太靠上，H3 才是正文小节起点）；
+    // 没有 H3 时回退到第一个 H2（兼容工具页），H2 也没有才回退容器顶部（占独立行）
+    var target = container.querySelector('h3') || container.querySelector('h2');
+    if (target) {
+      target.appendChild(bar);
     } else {
       container.insertBefore(bar, container.firstChild);
     }
