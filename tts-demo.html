@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TTS 朗读功能测试页 — aitoolbox.hk / aitoollab.cn</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: #0f172a; color: #e2e8f0; line-height: 1.7;
+    padding: 40px 20px 80px;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; }
+  h1 { font-size: 28px; margin-bottom: 8px; color: #fff; }
+  .sub { color: #94a3b8; margin-bottom: 32px; font-size: 15px; }
+  .controls {
+    background: #1e293b; border: 1px solid #334155; border-radius: 12px;
+    padding: 20px 24px; margin-bottom: 32px;
+  }
+  .ctrl-row { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; }
+  .ctrl-row label { font-size: 14px; color: #cbd5e1; white-space: nowrap; }
+  select, input[type=range] {
+    background: #0f172a; color: #e2e8f0; border: 1px solid #475569;
+    border-radius: 8px; padding: 8px 12px; font-size: 14px; min-width: 260px;
+  }
+  select:focus { outline: 2px solid #38bdf8; }
+  .voice-refresh {
+    background: #334155; color: #e2e8f0; border: none; border-radius: 8px;
+    padding: 8px 14px; cursor: pointer; font-size: 13px;
+  }
+  .voice-refresh:hover { background: #475569; }
+  .rate { display: flex; align-items: center; gap: 10px; }
+  .rate span { font-size: 13px; color: #38bdf8; min-width: 40px; }
+  .card {
+    background: #1e293b; border: 1px solid #334155; border-radius: 12px;
+    padding: 24px 28px; margin-bottom: 24px;
+  }
+  .card-head { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .lang-tag {
+    font-size: 12px; font-weight: 600; padding: 3px 10px; border-radius: 999px;
+  }
+  .lang-en { background: #1d4ed8; color: #dbeafe; }
+  .lang-zh { background: #b91c1c; color: #fee2e2; }
+  .card-title { font-size: 18px; font-weight: 600; color: #fff; }
+  .btn-group { display: flex; gap: 10px; margin-left: auto; }
+  .btn {
+    border: none; border-radius: 8px; padding: 8px 18px; font-size: 14px;
+    cursor: pointer; font-weight: 500; transition: all .15s;
+  }
+  .btn-play { background: #16a34a; color: #fff; }
+  .btn-play:hover { background: #15803d; }
+  .btn-pause { background: #d97706; color: #fff; display: none; }
+  .btn-pause:hover { background: #b45309; }
+  .btn-stop { background: #334155; color: #e2e8f0; }
+  .btn-stop:hover { background: #475569; }
+  .btn:disabled { opacity: .4; cursor: not-allowed; }
+  .content { color: #cbd5e1; font-size: 15px; }
+  .content p { margin-bottom: 12px; }
+  .content .active { background: rgba(56, 189, 248, .15); border-radius: 4px; color: #fff; }
+  .status {
+    font-size: 13px; color: #64748b; margin-top: 10px; min-height: 20px;
+  }
+  .note {
+    background: #0f172a; border: 1px dashed #475569; border-radius: 8px;
+    padding: 12px 16px; font-size: 13px; color: #94a3b8; margin-bottom: 24px;
+  }
+  .note b { color: #38bdf8; }
+  .footer { font-size: 13px; color: #64748b; text-align: center; margin-top: 40px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>🔊 朗读功能测试页</h1>
+  <p class="sub">Web Speech API 方案 · 零成本零后端 · 纯浏览器内置语音</p>
+
+  <div class="note">
+    💡 <b>测试指引</b>：先选语音（默认自动选合适语音），再点卡片上的 ▶ 播放。语速可调 0.5x–2x。
+    中文语音在 Chrome/Edge（Windows）显示为 "Microsoft Huihui / Xiaoxiao / Yunxi"，英文为 "Microsoft Aria / Google US English"。
+    若列表空白，点"刷新语音"。
+  </div>
+
+  <div class="controls">
+    <div class="ctrl-row" style="margin-bottom:14px">
+      <label for="voice">🎤 语音：</label>
+      <select id="voice"></select>
+      <button class="voice-refresh" id="refresh">刷新语音</button>
+    </div>
+    <div class="ctrl-row">
+      <label>⏱ 语速：</label>
+      <div class="rate">
+        <input type="range" id="rate" min="0.5" max="2" step="0.1" value="1">
+        <span id="rateVal">1.0x</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 英文示例：模拟英文站文章正文 -->
+  <div class="card">
+    <div class="card-head">
+      <span class="lang-tag lang-en">EN</span>
+      <span class="card-title">英文示例 · 模拟 aitoolbox.hk 文章正文</span>
+      <div class="btn-group">
+        <button class="btn btn-play" onclick="speak('en')">▶ 播放</button>
+        <button class="btn btn-pause" id="pause-en" onclick="togglePause('en')">⏸ 暂停</button>
+        <button class="btn btn-stop" onclick="stopSpeak()">⏹ 停止</button>
+      </div>
+    </div>
+    <div class="content" id="content-en">
+      <p>Fathom is an AI meeting assistant that joins your Zoom, Google Meet, and Teams calls as a bot, records everything, and hands you a transcript plus an AI summary within about thirty seconds.</p>
+      <p>The money angle that matters: a sales rep closing ten calls a week can drop five to ten minutes of manual CRM logging per call, because Fathom writes the notes into Salesforce or HubSpot itself.</p>
+      <p>And the free plan records unlimited meetings, so a freelancer can run it for months before paying a cent.</p>
+    </div>
+    <div class="status" id="status-en"></div>
+  </div>
+
+  <!-- 中文示例：模拟中文站文章正文 -->
+  <div class="card">
+    <div class="card-head">
+      <span class="lang-tag lang-zh">中</span>
+      <span class="card-title">中文示例 · 模拟 aitoollab.cn 文章正文</span>
+      <div class="btn-group">
+        <button class="btn btn-play" onclick="speak('zh')">▶ 播放</button>
+        <button class="btn btn-pause" id="pause-zh" onclick="togglePause('zh')">⏸ 暂停</button>
+        <button class="btn btn-stop" onclick="stopSpeak()">⏹ 停止</button>
+      </div>
+    </div>
+    <div class="content" id="content-zh">
+      <p>豆包是字节跳动推出的 AI 对话助手，支持文本问答、语音通话、图像生成和文档分析。</p>
+      <p>对自媒体创作者来说，用豆包批量整理选题、生成初稿、改写标题，能省下大量重复劳动时间。</p>
+      <p>它的免费额度对个人用户非常友好，重度使用也可以考虑付费会员解锁更强的模型能力。</p>
+    </div>
+    <div class="status" id="status-zh"></div>
+  </div>
+
+  <p class="footer">TTS Demo · Web Speech API · 测试用页面，验证通过后可集成到全站模板</p>
+</div>
+
+<script>
+let voices = [];
+let currentLang = null;
+let currentChunk = 0;
+let chunks = {};
+
+function loadVoices() {
+  voices = speechSynthesis.getVoices();
+  const sel = document.getElementById('voice');
+  const prev = sel.value;
+  sel.innerHTML = '';
+  voices.forEach(v => {
+    const opt = document.createElement('option');
+    opt.value = v.name;
+    opt.textContent = `${v.name} (${v.lang})`;
+    sel.appendChild(opt);
+  });
+  // 优先选中文语音（当前页面是中文，示例含中英文）
+  const zhVoice = voices.find(v => v.lang && v.lang.startsWith('zh') && /huihui|xiaoxiao|yunxi|yaoyao|普通话|mandarin/i.test(v.name))
+               || voices.find(v => v.lang && v.lang.startsWith('zh'));
+  const enVoice = voices.find(v => v.lang && v.lang.startsWith('en') && /aria|jenny|google us english|samantha/i.test(v.name))
+               || voices.find(v => v.lang && v.lang.startsWith('en'));
+  if (zhVoice && (prev === '' || !voices.some(v => v.name === prev))) sel.value = zhVoice.name;
+  else if (voices.some(v => v.name === prev)) sel.value = prev;
+  window._zhVoice = zhVoice ? zhVoice.name : '';
+  window._enVoice = enVoice ? enVoice.name : '';
+}
+
+speechSynthesis.onvoiceschanged = loadVoices;
+loadVoices();
+document.getElementById('refresh').onclick = loadVoices;
+
+document.getElementById('rate').oninput = function() {
+  document.getElementById('rateVal').textContent = this.value + 'x';
+};
+
+function pickVoice(lang) {
+  const sel = document.getElementById('voice');
+  if (sel.value) return sel.value;
+  // 没有手动选，按语言自动
+  return lang === 'zh' ? (window._zhVoice || '') : (window._enVoice || '');
+}
+
+function speak(lang) {
+  stopSpeak();
+  const el = document.getElementById('content-' + lang);
+  const status = document.getElementById('status-' + lang);
+  const paras = Array.from(el.querySelectorAll('p')).map(p => p.textContent.trim());
+  chunks[lang] = paras;
+  currentLang = lang;
+  currentChunk = 0;
+  const u = new SpeechSynthesisUtterance(paras[0]);
+  u.lang = lang === 'zh' ? 'zh-CN' : 'en-US';
+  const v = pickVoice(lang);
+  if (v) u.voice = voices.find(x => x.name === v) || null;
+  u.rate = parseFloat(document.getElementById('rate').value);
+  u.onboundary = (e) => highlight(lang, e.name === 'word');
+  u.onend = next;
+  u.onerror = () => { status.textContent = '⚠️ 播放出错（该浏览器可能不支持此语音）'; };
+  status.textContent = '▶ 播放中…';
+  document.getElementById('pause-' + lang).style.display = 'inline-block';
+  speechSynthesis.speak(u);
+}
+
+function next() {
+  if (!currentLang) return;
+  const lang = currentLang;
+  currentChunk++;
+  const status = document.getElementById('status-' + lang);
+  if (currentChunk >= chunks[lang].length) {
+    status.textContent = '✅ 播放完成';
+    document.getElementById('pause-' + lang).style.display = 'none';
+    clearHighlight(lang);
+    currentLang = null;
+    return;
+  }
+  const u = new SpeechSynthesisUtterance(chunks[lang][currentChunk]);
+  u.lang = lang === 'zh' ? 'zh-CN' : 'en-US';
+  const v = pickVoice(lang);
+  if (v) u.voice = voices.find(x => x.name === v) || null;
+  u.rate = parseFloat(document.getElementById('rate').value);
+  u.onboundary = () => highlight(lang, true);
+  u.onend = next;
+  u.onerror = () => { status.textContent = '⚠️ 播放出错'; };
+  speechSynthesis.speak(u);
+}
+
+function togglePause(lang) {
+  const btn = document.getElementById('pause-' + lang);
+  if (speechSynthesis.speaking && !speechSynthesis.paused) {
+    speechSynthesis.pause();
+    btn.textContent = '▶ 继续';
+    document.getElementById('status-' + lang).textContent = '⏸ 已暂停';
+  } else if (speechSynthesis.paused) {
+    speechSynthesis.resume();
+    btn.textContent = '⏸ 暂停';
+    document.getElementById('status-' + lang).textContent = '▶ 播放中…';
+  }
+}
+
+function stopSpeak() {
+  speechSynthesis.cancel();
+  if (currentLang) {
+    document.getElementById('pause-' + currentLang).style.display = 'none';
+    clearHighlight(currentLang);
+  }
+  currentLang = null;
+}
+
+function highlight(lang) {
+  const el = document.getElementById('content-' + lang);
+  const ps = el.querySelectorAll('p');
+  ps.forEach((p, i) => {
+    if (i === currentChunk) p.classList.add('active');
+    else p.classList.remove('active');
+  });
+}
+
+function clearHighlight(lang) {
+  document.getElementById('content-' + lang).querySelectorAll('p').forEach(p => p.classList.remove('active'));
+}
+</script>
+</body>
+</html>
