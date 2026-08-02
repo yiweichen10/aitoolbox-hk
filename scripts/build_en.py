@@ -61,7 +61,8 @@ BACK_TO_TOP_BLOCK = '''<button id="backToTop" aria-label="Back to top">
 </button>
 <script>
 document.addEventListener("DOMContentLoaded",function(){var b=document.getElementById("backToTop");if(!b)return;var s=function(){if(window.scrollY>400){b.classList.add("visible")}else{b.classList.remove("visible")}};window.addEventListener("scroll",s,{passive:true});s();b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"})});});
-</script>'''
+</script>
+<script src="/js/tts-reader.js" defer></script>'''
 
 DARK_MODE_BLOCK = '''<button id="darkModeToggle" class="dark-toggle-fab" aria-label="Toggle dark mode" title="Dark mode">🌙</button>
 <script>
@@ -672,7 +673,7 @@ def build_tool_page_en(tool: dict, all_tools: list, all_articles: list = None) -
 
         {features_html}
 
-        <article class="article-body">
+        <article class="article-body" data-tts>
             {content_html}
         </article>
 
@@ -934,7 +935,7 @@ def build_article_page_en(article: dict, all_articles: list, all_tools: list = N
     </nav>
 
     <main class="article-container">
-        <article class="article-body">
+        <article class="article-body" data-tts>
             <h1 style="margin-bottom:16px;">{escape_html(title)}</h1>
             <div style="color:#999;font-size:14px;margin-bottom:24px;">
                 {date_str} · {escape_html(cat)} ·
