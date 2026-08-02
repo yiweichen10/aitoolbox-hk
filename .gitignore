@@ -16,6 +16,9 @@ data/_*.py
 # Backup files — never commit
 *.bak
 
+# Content exports — generated, never commit
+exports/
+
 # OS
 .DS_Store
 Thumbs.db
