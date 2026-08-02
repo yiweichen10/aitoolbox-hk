@@ -25,7 +25,16 @@
     for (var i = 0; i < nodes.length; i++) {
       var n = nodes[i];
       if (n.closest && n.closest('.tts-bar')) continue;
-      var text = (n.textContent || '').replace(/\s+/g, ' ').trim();
+      var text;
+      if (n.querySelector && n.querySelector('.tts-bar')) {
+        // 标题里嵌了朗读按钮——克隆后移除按钮再取纯文本，避免读出"朗读全文"
+        var clone = n.cloneNode(true);
+        var barInClone = clone.querySelector('.tts-bar');
+        if (barInClone) barInClone.remove();
+        text = (clone.textContent || '').replace(/\s+/g, ' ').trim();
+      } else {
+        text = (n.textContent || '').replace(/\s+/g, ' ').trim();
+      }
       if (text.length < 2) continue;
       list.push({ el: n, text: text });
     }
@@ -33,7 +42,7 @@
   }
 
   function createBar(container, L) {
-    var bar = document.createElement('div');
+    var bar = document.createElement('span');
     bar.className = 'tts-bar';
     var play = document.createElement('button');
     play.type = 'button';
@@ -46,7 +55,13 @@
     stop.style.display = 'none';
     bar.appendChild(play);
     bar.appendChild(stop);
-    container.insertBefore(bar, container.firstChild);
+    // 优先塞进第一个 H2 标题末尾（不占额外空间）；没有 H2 时回退到容器顶部
+    var firstH2 = container.querySelector('h2');
+    if (firstH2) {
+      firstH2.appendChild(bar);
+    } else {
+      container.insertBefore(bar, container.firstChild);
+    }
     return { bar: bar, play: play, stop: stop };
   }
 
@@ -57,8 +72,8 @@
     var langPrefix = document.documentElement.lang || 'en';
     var isZh = /^zh/i.test(langPrefix);
     var L = isZh
-      ? { play: '🔊 朗读全文', pause: '⏸ 暂停', resume: '▶ 继续', stop: '⏹ 停止' }
-      : { play: '🔊 Read aloud', pause: '⏸ Pause', resume: '▶ Resume', stop: '⏹ Stop' };
+      ? { play: '🔊 朗读', pause: '⏸ 暂停', resume: '▶ 继续', stop: '⏹ 停止' }
+      : { play: '🔊 Read', pause: '⏸ Pause', resume: '▶ Resume', stop: '⏹ Stop' };
 
     var ctrl = createBar(container, L);
     var playBtn = ctrl.play, stopBtn = ctrl.stop;
