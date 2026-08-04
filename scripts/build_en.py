@@ -192,6 +192,7 @@ CATEGORY_SLUG_MAP_EN = {
     "AI Translation": "ai-translation",
     "AI Automation":  "ai-automation",
     "AI Productivity":"ai-productivity",
+    "AI Research":    "ai-research",
     "AI Income":      "ai-income",
     "AI Tools":       "ai-tools",
 }

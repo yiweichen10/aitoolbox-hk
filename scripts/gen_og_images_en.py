@@ -45,6 +45,7 @@ CAT_COLOR = {
     "ai writing":    (99, 102, 241),
     "ai office":     (20, 184, 166),
     "ai search":     (236, 72, 153),
+    "ai research":   (139, 92, 246),
     "ai tools":      (59, 130, 246),
 }
 
