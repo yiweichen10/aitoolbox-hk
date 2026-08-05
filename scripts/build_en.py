@@ -847,9 +847,9 @@ def build_article_page_en(article: dict, all_articles: list, all_tools: list = N
 
     # Strategy 2: FAQ section **bold question?** then answer (no Q prefix)
     if not _faq_raw:
-        _faq_start = _content_for_faq.upper().find('FAQ')
-        if _faq_start >= 0:
-            _faq_section = _content_for_faq[_faq_start:]
+        _mfaq = re.search(r'(?im)^##\s*(frequently\s+asked\s+questions|faq\b)', _content_for_faq)
+        if _mfaq:
+            _faq_section = _content_for_faq[_mfaq.end():]
             _faq_raw = re.findall(
                 r'\*\*([^*\n]{6,100}[?？])\*\*\s*\n\s*(.+?)(?=\n\*\*[^*\n]{6,100}[?？]\*\*|\n## |\Z)',
                 _faq_section, re.DOTALL
@@ -857,9 +857,9 @@ def build_article_page_en(article: dict, all_articles: list, all_tools: list = N
 
     # Strategy 3: FAQ section ### question? then answer (no Q prefix)
     if not _faq_raw:
-        _faq_start = _content_for_faq.upper().find('FAQ')
-        if _faq_start >= 0:
-            _faq_section = _content_for_faq[_faq_start:]
+        _mfaq = re.search(r'(?im)^##\s*(frequently\s+asked\s+questions|faq\b)', _content_for_faq)
+        if _mfaq:
+            _faq_section = _content_for_faq[_mfaq.end():]
             _faq_raw = re.findall(
                 r'###\s*([^\n]{6,100}[?？])\s*\n\s*(.+?)(?=\n###\s*[^\n]{6,100}[?？]|\n## |\Z)',
                 _faq_section, re.DOTALL
@@ -867,9 +867,9 @@ def build_article_page_en(article: dict, all_articles: list, all_tools: list = N
 
     # Strategy 4: FAQ section HTML <h3>question</h3><p>answer</p>
     if not _faq_raw:
-        _faq_start = _content_for_faq.upper().find('FAQ')
-        if _faq_start >= 0:
-            _faq_section = _content_for_faq[_faq_start:]
+        _mfaq = re.search(r'(?im)^##\s*(frequently\s+asked\s+questions|faq\b)', _content_for_faq)
+        if _mfaq:
+            _faq_section = _content_for_faq[_mfaq.end():]
             _faq_raw = re.findall(
                 r'<h[34][^>]*>\s*(?:[Qq]\d*[：:]\s*)?([^<]+?)\s*</h[34]>\s*<p>(.+?)</p>',
                 _faq_section, re.DOTALL
@@ -877,9 +877,9 @@ def build_article_page_en(article: dict, all_articles: list, all_tools: list = N
 
     # Strategy 5: FAQ section HTML <strong>Q：</strong><br>A：
     if not _faq_raw:
-        _faq_start = _content_for_faq.upper().find('FAQ')
-        if _faq_start >= 0:
-            _faq_section = _content_for_faq[_faq_start:]
+        _mfaq = re.search(r'(?im)^##\s*(frequently\s+asked\s+questions|faq\b)', _content_for_faq)
+        if _mfaq:
+            _faq_section = _content_for_faq[_mfaq.end():]
             _faq_raw = re.findall(
                 r'<strong>\s*[Qq]\d*[：:]\s*([^<]+?)\s*</strong>\s*(?:<br\s*/?>)?\s*[Aa]\d*[：:]\s*(.+?)(?=<strong>\s*[Qq]\d*[：:]|</p>|\Z)',
                 _faq_section, re.DOTALL
