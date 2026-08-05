@@ -6,6 +6,7 @@ Then run this, and manually review/edit the content fields.
 """
 import json
 import os
+import re
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(BASE_DIR, 'data')
@@ -75,6 +76,22 @@ for tool in all_tools_zh:
     # Remove Chinese-specific mentions
     price = price.replace('（微软）', '').replace('基础', 'From')
 
+    # ── Price field governance (2026-08-05): price MUST be a short card label (<=80 chars) ──
+    # If the source price is too long, split it: entry-level short label -> price,
+    # full description -> pricing_details. This is structural splitting, NOT truncation
+    # (truncation is banned — it hides data and does not fix the root cause).
+    pricing_details_raw = None
+    if price and len(price) > 80:
+        pricing_details_raw = price
+        # Extract the entry-level short label: first clause at a sentence/clause boundary
+        _parts = re.split(r'[；;。.\n]', price)
+        _short = _parts[0].strip().replace('免费', 'Free').replace('（微软）', '')
+        if not _short:
+            _short = price[:60]
+        price = _short[:80]
+        print(f"[PRICE SPLIT] {tool.get('name','')}: long price split -> "
+              f"short='{price}' (review English label; full text in pricing_details)")
+
     # Platform
     platform = tool.get('platform', 'Web')
     platform = platform.replace('本地部署', 'Desktop').replace('科学上网', '')
@@ -115,6 +132,10 @@ for tool in all_tools_zh:
         ],
         "content": f"[AUTO-GENERATE] Review of {tool['name']}"
     }
+
+    # Attach split pricing details if the source price was too long
+    if pricing_details_raw:
+        en_tool['pricing_details'] = pricing_details_raw
 
     if badge and badge.get('text'):
         en_tool['badge'] = badge

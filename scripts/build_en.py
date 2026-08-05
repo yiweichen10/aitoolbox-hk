@@ -1668,6 +1668,20 @@ def build_all_en(target: str = 'all'):
     published_tools = [t for t in all_tools if t.get('published', False)]
     print(f'[EN] {len(published_tools)} published tools, {len(articles)} articles')
 
+    # ── Validate price field length (2026-08-05 price-overflow fix) ──
+    # 治本保障：price 字段必须是卡片/徽章用的短标签 (<=80 字符)。
+    # 长价格说明应放在 pricing_details 字段。任何超长 price 进入构建都会被标记，
+    # 提醒回去拆分字段（而非在 CSS 截断隐藏——截断是治标，已禁用）。
+    for _t in all_tools:
+        _p = _t.get('price', '')
+        if _p and len(_p) > 80:
+            print(f"\n[PRICE WARNING] {_t.get('name','')} (slug={_t.get('slug','')}): "
+                  f"price field is {len(_p)} chars (>80).")
+            print(f"  price MUST be a short card label, e.g. 'Free + Pro from $19/mo'.")
+            print(f"  Move the full pricing text into the 'pricing_details' field instead.")
+            print(f"  Current: {_p[:80]}...")
+            print(f"{'='*60}")
+
     # Group by category
     tools_by_cat: dict = {}
     for t in published_tools:
