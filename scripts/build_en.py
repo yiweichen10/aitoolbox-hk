@@ -1593,6 +1593,14 @@ def generate_sitemap_en(tools: list, articles: list, cat_slugs: list) -> str:
         pub = a.get('date', today)
         urls.append(f'    <url><loc>{SITE_DOMAIN}/articles/{a["slug"]}/</loc><lastmod>{pub}</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>')
 
+    # 静态信任页(E-E-A-T 硬指标: About / Author) — 确保被 Google 发现
+    static_trust_pages = [
+        (f'{SITE_DOMAIN}/about.html', '0.7', 'monthly'),
+        (f'{SITE_DOMAIN}/author/', '0.7', 'monthly'),
+    ]
+    for loc, prio, freq in static_trust_pages:
+        urls.append(f'    <url><loc>{loc}</loc><lastmod>{today}</lastmod><changefreq>{freq}</changefreq><priority>{prio}</priority></url>')
+
     return '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + '\n'.join(urls) + '\n</urlset>'
 
 
