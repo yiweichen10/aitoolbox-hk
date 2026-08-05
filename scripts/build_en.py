@@ -847,7 +847,7 @@ def build_article_page_en(article: dict, all_articles: list, all_tools: list = N
 
     # Strategy 2: FAQ section **bold question?** then answer (no Q prefix)
     if not _faq_raw:
-        _mfaq = re.search(r'(?im)^##\s*(frequently\s+asked\s+questions|faq\b)', _content_for_faq)
+        _mfaq = re.search(r'(?im)^##\s+[^\n]*(frequently\s+asked\s+questions|\bfaq\b)', _content_for_faq)
         if _mfaq:
             _faq_section = _content_for_faq[_mfaq.end():]
             _faq_raw = re.findall(
@@ -857,7 +857,7 @@ def build_article_page_en(article: dict, all_articles: list, all_tools: list = N
 
     # Strategy 3: FAQ section ### question? then answer (no Q prefix)
     if not _faq_raw:
-        _mfaq = re.search(r'(?im)^##\s*(frequently\s+asked\s+questions|faq\b)', _content_for_faq)
+        _mfaq = re.search(r'(?im)^##\s+[^\n]*(frequently\s+asked\s+questions|\bfaq\b)', _content_for_faq)
         if _mfaq:
             _faq_section = _content_for_faq[_mfaq.end():]
             _faq_raw = re.findall(
@@ -867,7 +867,7 @@ def build_article_page_en(article: dict, all_articles: list, all_tools: list = N
 
     # Strategy 4: FAQ section HTML <h3>question</h3><p>answer</p>
     if not _faq_raw:
-        _mfaq = re.search(r'(?im)^##\s*(frequently\s+asked\s+questions|faq\b)', _content_for_faq)
+        _mfaq = re.search(r'(?im)^##\s+[^\n]*(frequently\s+asked\s+questions|\bfaq\b)', _content_for_faq)
         if _mfaq:
             _faq_section = _content_for_faq[_mfaq.end():]
             _faq_raw = re.findall(
@@ -877,7 +877,7 @@ def build_article_page_en(article: dict, all_articles: list, all_tools: list = N
 
     # Strategy 5: FAQ section HTML <strong>Q：</strong><br>A：
     if not _faq_raw:
-        _mfaq = re.search(r'(?im)^##\s*(frequently\s+asked\s+questions|faq\b)', _content_for_faq)
+        _mfaq = re.search(r'(?im)^##\s+[^\n]*(frequently\s+asked\s+questions|\bfaq\b)', _content_for_faq)
         if _mfaq:
             _faq_section = _content_for_faq[_mfaq.end():]
             _faq_raw = re.findall(
