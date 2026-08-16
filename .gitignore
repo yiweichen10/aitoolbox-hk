@@ -19,6 +19,9 @@ data/_*.py
 # Content exports — generated, never commit
 exports/
 
+# WorkBuddy local state — never commit
+.workbuddy/
+
 # OS
 .DS_Store
 Thumbs.db
