@@ -212,6 +212,23 @@ def escape_html(text: str) -> str:
                 .replace('>', '&gt;')
                 .replace('"', '&quot;'))
 
+def plain_text_for_schema(text: str) -> str:
+    """Strip Markdown/HTML so JSON-LD schema text stays clean prose.
+
+    JSON-LD `text` fields must be plain text. FAQ answers may contain Markdown
+    links (internal linking) and bold markers, which render fine in HTML but
+    would leak raw syntax like "[ChatGPT](/tools/chatgpt/)" into structured data.
+    """
+    if not text:
+        return ''
+    out = str(text)
+    out = re.sub(r'!\[([^\]]*)\]\([^)]*\)', r'\1', out)   # images -> alt text
+    out = re.sub(r'\[([^\]]+)\]\([^)]*\)', r'\1', out)    # links  -> link text
+    out = re.sub(r'`([^`]*)`', r'\1', out)                # inline code
+    out = out.replace('**', '').replace('__', '')          # bold markers
+    out = re.sub(r'<[^>]+>', '', out)                      # stray HTML tags
+    return re.sub(r'\s+', ' ', out).strip()
+
 def markdown_to_html(md: str) -> str:
     """Convert Markdown to HTML — same logic as build.py but standalone."""
     if not md:
@@ -414,7 +431,7 @@ def build_tool_page_en(tool: dict, all_tools: list, all_articles: list = None) -
                         <div class="faq-answer">{markdown_to_html(a)}</div>
                     </details>
                 </div>\n'''
-                faq_schema.append({'@type':'Question','name':q,'acceptedAnswer':{'@type':'Answer','text':a}})
+                faq_schema.append({'@type':'Question','name':plain_text_for_schema(q),'acceptedAnswer':{'@type':'Answer','text':plain_text_for_schema(a)}})
         if faq_html:
             faq_html = f'<div class="faq-section"><h3>❓ FAQ</h3>{faq_html}</div>'
 
