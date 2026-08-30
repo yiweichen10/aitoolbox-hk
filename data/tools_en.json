@@ -13220,5 +13220,86 @@
     ],
     "content": "## What Ko-fi Actually Is (From Someone Who's Run a Tip Page for Years)\n\nI've used Ko-fi since before it added memberships and a shop - back when it was just a \"buy me a coffee\" button you dropped on a blog. So this is written from the creator's side, not Ko-fi's sales page. Ko-fi is a monetisation hub for creators: fans send one-off tips (\"coffees\"), subscribe as monthly members, buy digital or physical items from your shop, or book you for commissions - all from one free page. Money lands straight in your own PayPal or Stripe account; Ko-fi never holds it.\n\nThe hook that pulled me in, and the reason it belongs in any \"make money\" toolkit, is the 0% tip fee. On the free plan you keep 100% of every one-off tip - Ko-fi takes nothing, you only lose the standard Stripe or PayPal processing of about 2.9% plus $0.30. A $5 coffee leaves you about $4.55. That is a lower cut than anywhere else I've tried for pure tipping.\n\nOne honest catch: new accounts now start in \"Contributor\" mode, which adds a 5% fee even to tips. You have to go into Payment Settings and toggle Contributor off to get the true 0% on tips. It is one click, but plenty of creators never notice and lose 5% they did not need to. I'll say it plainly so you don't.\n\n## How People Actually Make Money On It\n\nKo-fi is a low-friction money funnel, not a discovery engine. The income comes from the audience you already have - readers, viewers, listeners - and the small, repeated asks you make of them:\n\n1. **Tip jar on your existing channels.** Drop the Ko-fi button or link on your blog, YouTube description, podcast show notes, Twitch overlay, or Linktree. Fans who got value send a $3-5 coffee. Because the fee is 0%, this is the cheapest \"thank you\" money you can collect. A creator with 20k followers and a 0.5% tip rate pulls $300-1,000 a month from coffee buttons alone.\n2. **Monthly memberships.** Set tiers at $3-10/month and reward members with Discord roles, exclusive posts, or early access. Free plan takes 5% on memberships; Ko-fi Gold ($6/month) drops that to 0%. Gold breaks even around $120/month in membership income - above that it is cheaper than the 5% cut. This is the recurring-income play that sits beside Patreon, but without Patreon's 8-12% bite.\n3. **Digital shop for files you already make.** Sell prompts, templates, ebooks, Lightroom presets, notion packs, art prints - anything you can attach as a file. On the free plan shop sales take 5%; on Gold they take 0%. This is the one-off-product play that overlaps Gumroad, but Ko-fi wins if your volume is small and you already have a tipping audience.\n4. **Commissions with managed slots.** If you do custom work - art, editing, consult calls - list a menu with prices and available slots. Clients pay up front, you deliver, money is already in your account. No invoicing back-and-forth.\n5. **Crowdfunding goals.** Set a target (new gear, a project) and let tips fill the bar. Good for one-off community pushes.\n\nThe real strength is the funnel: a reader who tips you $5 once, with zero friction, is far easier to upsell to a $5/month membership later than someone who has never paid you at all. Ko-fi gets people into the habit of paying you directly before you ever ask for a subscription.\n\n## Where It Falls Short (Read Before You Commit)\n\nKo-fi's weak spots are scale and support. Discovery is thin - its Explore page sends far less traffic than Patreon's recommendation network, so you bring your own crowd. There is no email tool, no newsletter, no drip sequences; if you want to run a mailing list you pair it with Substack or your own ESP. The shop is deliberately light: fine for a few downloads or prints, useless for dozens of SKUs or real shipping logic. And support is email-only and slow when something breaks - automated moderation has frozen accounts with little warning, which matters if your rent depends on that button.\n\n## How Ko-fi Stacks Up Against the Rest\n\n| Platform | Fee on tips | Fee on memberships / shop | Best at |\n| --- | --- | --- | --- |\n| **Ko-fi** | 0% (toggle off Contributor) | 5% free / 0% Gold ($6/mo) | Tipping + all-in-one for small volume |\n| **Patreon** | n/a | 8-12% + Stripe | Large memberships, discovery network |\n| **Gumroad** | n/a | 10% + $0.50 + Stripe | One-off digital file sales at scale |\n| **Substack** | n/a | 10% + Stripe | Paid newsletters |\n| **Whop** | n/a | 3% direct / 30% Discover | Gated communities and courses |\n| **Buy Me a Coffee** | 0% | 5% flat (no waiver) | Simple tipping, first $100/mo free |\n\nFor pure tipping and a small shop, Ko-fi is the cheapest entry point going. Once memberships pass ~$120/month or you need serious email tools and discovery, Patreon's percentage starts to buy more.\n\n## Getting Started (What I'd Do)\n\n1. **Create the page, turn Contributor OFF.** Settings > Payment. This restores the 0% tip fee most people think they already have.\n2. **Add the button everywhere you already have an audience.** Blog, social bios, video descriptions, email signature. Tip income comes from places you already own.\n3. **Open one low-priced membership tier** at $3-5/month once a few people have tipped. Reward with a Discord role or a monthly post.\n4. **List 1-2 digital products** you already have (a template, a prompt pack). Keep it light - Ko-fi's shop is not a warehouse.\n5. **Re-evaluate at ~$120/month in fees.** If the 5% on memberships or shop now costs more than $6, switch on Ko-fi Gold and zero out the cut.\n\n## Bottom Line\n\nKo-fi is the lowest-friction way to start collecting money from an audience you already have. The 0% tip fee is real (once you toggle off Contributor), payouts hit your own PayPal or Stripe the same day, and the free plan covers tips, a light shop, and commissions with no monthly cost. The trade is scale: discovery is weak next to Patreon, there is no email tool, and the 5% on memberships and shop only makes sense below about $120/month. For a creator who wants to turn readers and viewers into a few hundred dollars a month without building a store, Ko-fi is the first button I'd add.",
     "aeo_geo_updated": true
+  },
+  {
+    "name": "MAGI-2",
+    "slug": "magi-2",
+    "emoji": "🎬",
+    "color": "#8b5cf6",
+    "description": "Sand.ai's open-source 114B MoE model that turns text or an image into a 10-second 1080p video with synchronized audio. The first hundred-billion-parameter video model released under Apache 2.0.",
+    "category": "AI Video",
+    "tags": [
+      {
+        "text": "AI Video"
+      },
+      {
+        "text": "Open-source"
+      },
+      {
+        "text": "Video + Audio"
+      },
+      {
+        "text": "Self-hosted",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.6",
+    "visits": "—",
+    "badge": {
+      "type": "new",
+      "text": "OPEN SOURCE"
+    },
+    "url": "https://sand.ai/blog/magi-2-preview",
+    "price": "Free / Open-source (Apache 2.0, self-hosted)",
+    "platform": "Self-hosted (requires 8× NVIDIA H100/Hopper GPUs)",
+    "published": true,
+    "pros": [
+      "Fully open weights and code (Apache 2.0)",
+      "Generates synchronized audio in the same pass as video",
+      "114B capacity with only ~6B active per token (low inference cost at scale)",
+      "Unified single-stream text + video + audio architecture",
+      "Competitive with far larger proprietary models on quality"
+    ],
+    "cons": [
+      "Requires 8× Hopper GPUs and ~307 GB of weights",
+      "Preview release; distilled (faster) version not yet out",
+      "Only 10-second clips supported",
+      "No hosted API yet — command-line self-hosting only",
+      "No ComfyUI nodes available yet"
+    ],
+    "features": [
+      "Text-to-video (T2V)",
+      "Image-to-video (I2V)",
+      "Native synchronized audio",
+      "1080p output (refiner upscale)",
+      "Prompt enhancement via LLM",
+      "Two-stage preview → refiner pipeline",
+      "Open-source (Apache 2.0)",
+      "Self-hosted inference (torchrun + Docker)"
+    ],
+    "faq": [
+      {
+        "question": "Is MAGI-2 free?",
+        "answer": "Yes. The weights and code are released under Apache 2.0, so you can use, modify, and commercialize output without per-clip licensing fees. The only cost is your own GPU compute."
+      },
+      {
+        "question": "Who made MAGI-2?",
+        "answer": "MAGI-2 was developed by Sand.ai, following MAGI-1, its autoregressive video model from April 2025. The preview release validates that its architecture and training system scale together at the 100B level."
+      },
+      {
+        "question": "How much does it cost to run?",
+        "answer": "There is no API bill. Reported inference cost at scale is about ¥0.5 (≈$0.07) per 10-second clip on owned hardware, roughly a tenth of comparable proprietary APIs — but you must supply the GPUs."
+      },
+      {
+        "question": "Can MAGI-2 generate audio?",
+        "answer": "Yes. Audio is generated natively in the same pass as the video, with lip movement and ambient sound synchronized to the visuals."
+      },
+      {
+        "question": "Where do I get MAGI-2?",
+        "answer": "Weights: huggingface.co/sand-ai/MAGI-2-preview. Code: github.com/SandAI-org/MAGI-2-preview. Announcement: sand.ai/blog/magi-2-preview."
+      }
+    ],
+    "content": "# MAGI-2 Review: The First Hundred-Billion-Parameter Open-Source Video Model With Built-In Sound\n\nMAGI-2 is Sand.ai's open-source video generation model, released on August 5, 2026. It takes a text prompt — or a text prompt plus a starting image — and produces a 10-second 1080p video with audio that is synchronized to the action. With 114 billion total parameters in a mixture-of-experts (MoE) architecture that activates only about 6 billion per token, it is the first video model at the hundred-billion scale to publish both its weights and its inference code under the Apache 2.0 license. If you want video-with-sound generation that you can run, fine-tune, and ship inside your own stack without per-clip API billing, this is the release to watch.\n\n## What Makes MAGI-2 Different\n\nMost open video models generate silent clips. You run the video model, then pipe the result into a separate audio model, then align the two in post. MAGI-2 removes that pipeline. Text, video, and audio tokens are concatenated into a single sequence and processed by one Transformer backbone, so speech, lip movement, body motion, ambient sound, and camera rhythm exchange information throughout the model rather than only at a narrow cross-attention step. The model renders the visuals and the soundtrack in a single pass, then muxes the audio into the output MP4.\n\nThe practical payoff is coherence: a character who starts speaking has mouth movement that matches the generated voice, and environmental sound (footsteps, water, wind) tracks the on-screen motion instead of being bolted on afterward.\n\n## Architecture: 114B Capacity, 6B Active\n\nMAGI-2 uses a fine-grained MoE design. Each token's representation is split into 12 latent heads of 256 dimensions; each head runs its own router and selects its top-6 experts from a pool of 256 narrow experts. That yields 3,072 head-local expert units per sparse layer, of which only 72 activate per token. The result is a model with the capacity of 114B parameters but the per-token compute of roughly 6B — which is why its reported inference cost at scale is around ¥0.5 (about $0.07) per 10-second clip, roughly a tenth of comparable proprietary APIs.\n\nGeneration is two-stage: a preview stage renders at 512×896, then a refiner stage upscales to 1088×1920 (approximately 1080p). The only supported duration in this preview release is 10 seconds.\n\n## How to Run MAGI-2\n\nMAGI-2 is self-hosted. There is no hosted API yet (one is expected), so you run it yourself:\n\n1. **Hardware**: 8× NVIDIA Hopper GPUs (H100 or equivalent). This is a hard requirement for the full model; quantized or distilled variants for smaller rigs are not available in the preview.\n2. **Get the code**: clone `github.com/SandAI-org/MAGI-2-preview`.\n3. **Download weights**: `hf download sand-ai/MAGI-2-preview --local-dir ckpt` (about 307 GB: 228 GB preview transformer, 14 GB refiner, 56 GB Qwen3.5-27B text encoder, plus video/audio VAEs and a distilled turbo VAE decoder). A Docker image is provided.\n4. **Run inference**: `bash scripts/run_demo.sh` launches the pipeline under `torchrun` across all visible GPUs, generating at 1080p from a samples JSON file. Output lands as `sample_000.mp4`, `sample_001.mp4`, and so on.\n5. **Prompt enhancement (optional)**: MAGI-2 was trained on long, structured captions. A short prompt underuses it. The repo ships a prompt-enhancement (PE) step that calls an OpenAI-compatible LLM endpoint to expand your prompt into a structured JSON caption; leave the API key empty to skip PE and use your raw prompt.\n\nThere are no ComfyUI custom nodes for MAGI-2 at the time of writing, so expect a command-line workflow rather than a node graph.\n\n## MAGI-2 vs Other AI Video Tools\n\n| Dimension | MAGI-2 | Kling AI | Runway | Sora | MiniMax H3 |\n|---|---|---|---|---|---|\n| Open-source weights | ✅ (Apache 2.0) | ❌ | ❌ | ❌ | ❌ |\n| Built-in audio | ✅ (single-stream) | ❌ | ❌ | ❌ | ✅ |\n| Max clip | 10s | 10s | 10s | 20s | longer |\n| 1080p | ✅ | ✅ | ✅ | ✅ | ✅ |\n| Runs on 8×H100 | required | API/cloud | API/cloud | API/cloud | API/cloud |\n| Cost model | self-host GPU | subscription | subscription | subscription | subscription |\n\nThe honest takeaway: [Kling AI](/kling-ai/) and [Runway](/runway/) win on accessibility and turnaround today, and [Sora](/sora/) leads on maximum clip length. MAGI-2 wins on two things that matter for builders — it is fully open (you own the stack) and it generates synchronized audio natively. On the Artificial Analysis video leaderboard it sits around 6th, competitive with far larger proprietary systems.\n\n## Who Should Use MAGI-2\n\n- **Studios and agencies** that already run GPU clusters and want to stop paying per-clip API fees for ad, short-drama, or animation production.\n- **Researchers** who need a transparent, modifiable video foundation model to study scaling, audio-visual alignment, or fine-tuning.\n- **Product teams** building proprietary video features who cannot send source footage to a third-party API.\n\nIf you just want to make a quick social clip, [Pika](/pika/), [PixVerse](/pixverse/), [Seedance](/seedance/), or [Vidu AI](/vidu-ai/) are faster to start. MAGI-2 is a build-it-yourself foundation, not a SaaS.\n\n## Limitations\n\n- **Hardware barrier**: 8× Hopper GPUs and ~307 GB of weights make it inaccessible without serious infrastructure.\n- **Preview maturity**: this is a preview release; the full distilled version (far fewer denoising steps) is \"coming soon.\"\n- **10-second ceiling**: longer narratives require stitching multiple clips.\n- **No hosted API yet**: you must operate the inference pipeline yourself.\n\n## FAQ\n\n### Is MAGI-2 free?\n\nYes. The weights and code are released under Apache 2.0, so you can use, modify, and commercialize output without per-clip licensing fees. The cost is your own GPU compute.\n\n### Who made MAGI-2?\n\nMAGI-2 was developed by Sand.ai, following MAGI-1, its autoregressive video model from April 2025. The preview release validates that its architecture and training system scale together at the 100B level.\n\n### How much does it cost to run?\n\nThere is no API bill. Reported inference cost at scale is about ¥0.5 (≈$0.07) per 10-second clip on owned hardware, roughly a tenth of comparable proprietary APIs — but you must supply the GPUs.\n\n### Can MAGI-2 generate audio?\n\nYes. Audio is generated natively in the same pass as the video, with lip movement and ambient sound synchronized to the visuals.\n\n### Where do I get MAGI-2?\n\nWeights: `huggingface.co/sand-ai/MAGI-2-preview`. Code: `github.com/SandAI-org/MAGI-2-preview`. Announcement: `sand.ai/blog/magi-2-preview`.\n\n## Final Assessment\n\nMAGI-2 is the most important open video release of 2026 for one reason: it is the first hundred-billion-parameter video model you can actually own. The hardware requirement is steep, and the hosted API is not here yet, but for teams with GPUs it collapses \"generate video\" and \"generate sound\" into a single open pipeline. Watch the distilled release — that is when MAGI-2 becomes practical for most builders.\n",
+    "aeo_geo_updated": true
   }
 ]
