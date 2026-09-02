@@ -13455,5 +13455,75 @@
     ],
     "content": "## What Stan Store Actually Is (From Someone Who Sells From a Bio Link)\n\nI have sold digital products from a Stan Store for over a year, before that from a Gumroad tab and a Linktree that sent people everywhere but the checkout. So this is written from the seller's chair, not Stan's marketing page. Stan does one job: it takes the single link you get in your Instagram, TikTok, or YouTube bio and turns it into a real store. Visitors see product tiles, tap one, and pay right there on their phone. No website, no separate course platform, no scheduling tool to wire up.\n\nThe reason it caught on with creators is the fee model. Most link-in-bio tools are free or cheap but then take a cut of sales, or they don't sell at all. Stan flips it: you pay a flat monthly fee and it takes nothing from your sales. For someone already posting to a warm audience every day, that is the cheapest on-ramp to selling your own stuff.\n\n## How People Make Money on It\n\nStan is not a traffic source. It is the page you send people who already trust you. The four ways I have seen creators turn it into income:\n\n1. **Digital downloads for a social-native audience.** PDF guides, Lightroom presets, Canva templates, prompt packs, Notion dashboards. Upload once, set a price, and delivery is automatic. A TikTok creator with 50k followers selling a $17 preset pack at 100 sales a month clears about $1,650 with almost no work after the first upload.\n\n2. **Coaching and consultation bookings.** The built-in calendar takes payment at booking, so you stop paying for Calendly. A fitness or business coach bundles a $37 PDF with a $200 one-on-one call and fills the week from Reels alone.\n\n3. **Mini-courses hosted on the page.** Even the $29 plan hosts video modules. A $197 course promoted through Instagram Reels at a 2% conversion on 10k followers is 200 sales a month - roughly $39k gross, and Stan takes none of it beyond Stripe.\n\n4. **Memberships and recurring packs on Pro.** The $99 plan adds subscriptions, so you can drop a fresh pack of prompts or templates each month at near-zero marginal cost. This is the same play Patreon users run, but the checkout lives in your bio instead of a separate site.\n\n## What I Like and What I Don't\n\nThe good: setup is genuinely fast. I went from sign-up to a live, purchase-ready store in under half an hour. The one-tap mobile checkout converts better than a multi-page site because the buyer never leaves the app. And the 0% cut is real - on a $97 product sold 20 times a month I keep about $1,882; Gumroad's free plan would skim roughly $194 of that.\n\nThe rough edges are just as real. There is no free plan, so you pay $29 before your first sale - fine if you already earn, rough if you are starting cold. Email automation (sequences, tagging, behavioral flows) is locked behind the $99 Pro tier, so the $29 plan is really a capture-and-broadcast tool; if you want funnels you pay double or add Kit and pay for that too. Every store looks near-identical - limited templates, no custom domain on any plan, so there is no SEO and no brand control over the URL. And Stan gives you no discovery; all traffic is on you. The people who quit and call it a scam usually never had an audience to send in the first place.\n\n## Stan Store vs the Other Tools Covered Here\n\nThis site already covers the rest of the creator-income stack, and they are not competitors so much as different jobs:\n\n- **Gumroad** - cheapest for one-off file sales (free to start, 10% on the free plan) but sends buyers to a separate checkout site.\n- **Patreon** - best for a simple fan club with some discovery; takes a flat ~10% plus processing.\n- **Substack** - the paid-newsletter path; 10% of paid plus Stripe.\n- **Whop** - product storefront, up to 30% on its marketplace.\n- **Ko-fi** - free tipping hub, 0% on tips.\n- **Skool** - paid community plus course, 0% on Pro at a flat $99.\n\nStan's lane is the social storefront: when your buyers live in Stories and Reels, it is the fastest way from follower to customer. Use Gumroad for file delivery off-platform, Patreon for the fan club, Skool for the community, and Stan for the bio-link sale.\n\n## How to Start (If You Already Have an Audience)\n\n1. Sign up at stan.store and start the 14-day trial - no card needed to build.\n2. Connect Stripe (or PayPal) so you can take payments; this is the only per-sale cost, about 2.9% plus $0.30.\n3. Upload one paid product you can deliver automatically - a PDF, a preset pack, or a short video course.\n4. Turn on Instagram AutoDMs with a keyword so buyers and lead-magnet grabbers get pulled into a DM.\n5. Put the Stan link in your bio and mention it in every post for a week; watch which product tiles get taps and double down on that one.\n\nIf you have under ~2,000 engaged followers, hold off - pay for the audience first, then the store. If you already post to a warm crowd daily, Stan is the quickest $29 you will spend to start keeping 100% of your sales.",
     "aeo_geo_updated": true
+  },
+  {
+    "name": "Hedra",
+    "slug": "hedra",
+    "emoji": "🗣️",
+    "color": "#6E56CF",
+    "description": "Hedra turns one portrait or character image plus an audio clip into a talking video. Its Character-1 model drives lip sync, eye movement, and head motion that match the audio. People use it to build faceless YouTube channels, produce UGC ad creatives for brands, and deliver spokesperson videos for clients without a camera or a studio.",
+    "category": "AI Video",
+    "tags": [
+      {
+        "text": "AI Video"
+      },
+      {
+        "text": "AI Income"
+      },
+      {
+        "text": "Free tier",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.5",
+    "visits": "25K",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://www.hedra.ai",
+    "price": "Free + from $15/mo",
+    "platform": "Web / API",
+    "published": true,
+    "pros": [
+      "Lip sync and facial movement beat most talking-head rivals",
+      "Handles illustrated and cartoon characters other tools mangle",
+      "Two-input workflow: one image plus one audio clip",
+      "Free plan lets you test before paying"
+    ],
+    "cons": [
+      "Each clip is short; longer videos need stitching",
+      "One character per render, no built-in multi-person scenes",
+      "Free tier is watermarked and generation-capped",
+      "Output quality depends heavily on your source image"
+    ],
+    "features": [
+      "Image + audio to talking video (Character-1)",
+      "Built-in text-to-speech in many languages",
+      "Voice cloning on paid plans",
+      "Transparent, blurred, or AI-filled backgrounds",
+      "Public API for developers",
+      "Creative agent that plans full video projects"
+    ],
+    "faq": [
+      {
+        "question": "Can I use my own voice in Hedra?",
+        "answer": "Yes. Upload a recorded audio file, or clone a voice on paid plans. You are not locked to the built-in text-to-speech engine."
+      },
+      {
+        "question": "Is the free plan usable for commercial projects?",
+        "answer": "No. The free tier adds a watermark and caps monthly generations. Paid plans starting around $15/month include commercial rights."
+      },
+      {
+        "question": "Does Hedra work with illustrated or cartoon characters?",
+        "answer": "Better than most. It generalizes to stylized art, mascots, and AI-generated portraits, which makes it useful for animated brand spokes-characters."
+      },
+      {
+        "question": "What format does the export come in?",
+        "answer": "Usually 1080p MP4. The background can be transparent, blurred, or AI-filled, which helps when you drop the character into another edit."
+      }
+    ],
+    "content": "## What Hedra actually does\n\nHedra turns a single portrait or character image plus an audio clip into a talking video. You upload a face, drop in a voice file (or type a script and let its text-to-speech read it), and the Character-1 model animates the mouth, eyes, and head movement to match the audio. I have used it for client explainer videos and for building a faceless YouTube channel, and the lip sync is noticeably better than what I got out of D-ID a year ago.\n\nThe honest part: it is not a full video editor. It makes talking-head clips. If you want B-roll, transitions, and a finished timeline, you still need CapCut or DaVinci. Hedra handles the talking character; the rest is on you.\n\n## How people make money with Hedra\n\nThis is the part most reviews skip. A talking avatar is only worth something if it saves you paid work or opens a revenue stream. A few that actually pay:\n\n- **Faceless channels.** YouTube and TikTok pay through ads and brand deals once you hold an audience. A consistent avatar lets you post daily without a camera, a studio, or showing your face. The risk is real: shorts saturation is high, and watch time still decides revenue.\n- **UGC ad creatives.** Small brands burn through ad variants. You can sell 10 to 20 talking-avatar ad scripts a week at $50 to $200 each, using the client own spokesperson image with their voice clone. Margin is high because generation is cheap.\n- **Agency video work.** Local gyms, dentists, and coaches need simple spokes-character videos. Hedra plus ElevenLabs [voice cloning](/tools/elevenlabs/) gets you there without hiring a videographer.\n- **Course and product demos.** If you sell an info product, a reusable character that narrates updates saves you re-recording screen captures every time pricing changes.\n\nNone of these are passive. The tool removes production cost; it does not bring customers.\n\n## Where it falls short\n\n- **Length caps.** Each clip is short (under a minute on lower tiers). Long videos mean stitching multiple generations, and the face can drift between clips.\n- **One character per render.** No multi-person conversation in a single take. You generate separately and edit together.\n- **Free tier is thin.** You get limited monthly generations with a watermark. Commercial work needs a paid plan.\n- **Expressiveness varies by input.** A clean, front-facing photo gives the best result. A low-res or heavily filtered image looks rough.\n\n## Pricing\n\nFreemium. A free plan exists with limited generations and a watermark. Paid plans start around $15/month and open up commercial rights, higher resolution, and more generations. Treat the free tier as a test drive, not a production tool.\n\n## How it compares\n\nFor realistic human spokespeople at business scale, [HeyGen](/tools/heygen/) is the safer pick. For enterprise training video, [Synthesia](/tools/synthesia/) leads. Hedra wins on character expressiveness and on illustrated or stylized avatars that other tools mangle. If your work is character-driven rather than corporate, it is the stronger choice.\n\n## FAQ\n\n**Can I use my own voice in Hedra?**\nYes. Upload a recorded audio file or clone a voice on paid plans. You are not locked to its built-in text-to-speech.\n\n**Is the free plan usable for commercial projects?**\nNo. The free tier adds a watermark and caps generations. Paid plans from about $15/month include commercial rights.\n\n**Does Hedra work with illustrated or cartoon characters?**\nBetter than most. It generalizes to stylized art, mascots, and AI-generated portraits, which makes it useful for animated brand spokes-characters.\n\n**What file do I get out?**\nUsually 1080p MP4. Background can be transparent, blurred, or AI-filled, which helps when you drop the character into another edit.\n\n## Bottom line\n\nHedra is a focused tool that does one job well: making a still image talk convincingly. It will not replace your editor, and the free tier will not run a business. But if you need talking-avatar video at volume for ads, faceless content, or client work, it is one of the cheapest ways to produce it. Start on the free plan, confirm the face quality on your own images, then upgrade only when a paying job justifies it.",
+    "aeo_geo_updated": "2026-09-02"
   }
 ]
