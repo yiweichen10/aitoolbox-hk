@@ -13525,5 +13525,77 @@
     ],
     "content": "## What Hedra actually does\n\nHedra turns a single portrait or character image plus an audio clip into a talking video. You upload a face, drop in a voice file (or type a script and let its text-to-speech read it), and the Character-1 model animates the mouth, eyes, and head movement to match the audio. I have used it for client explainer videos and for building a faceless YouTube channel, and the lip sync is noticeably better than what I got out of D-ID a year ago.\n\nThe honest part: it is not a full video editor. It makes talking-head clips. If you want B-roll, transitions, and a finished timeline, you still need CapCut or DaVinci. Hedra handles the talking character; the rest is on you.\n\n## How people make money with Hedra\n\nThis is the part most reviews skip. A talking avatar is only worth something if it saves you paid work or opens a revenue stream. A few that actually pay:\n\n- **Faceless channels.** YouTube and TikTok pay through ads and brand deals once you hold an audience. A consistent avatar lets you post daily without a camera, a studio, or showing your face. The risk is real: shorts saturation is high, and watch time still decides revenue.\n- **UGC ad creatives.** Small brands burn through ad variants. You can sell 10 to 20 talking-avatar ad scripts a week at $50 to $200 each, using the client own spokesperson image with their voice clone. Margin is high because generation is cheap.\n- **Agency video work.** Local gyms, dentists, and coaches need simple spokes-character videos. Hedra plus ElevenLabs [voice cloning](/tools/elevenlabs/) gets you there without hiring a videographer.\n- **Course and product demos.** If you sell an info product, a reusable character that narrates updates saves you re-recording screen captures every time pricing changes.\n\nNone of these are passive. The tool removes production cost; it does not bring customers.\n\n## Where it falls short\n\n- **Length caps.** Each clip is short (under a minute on lower tiers). Long videos mean stitching multiple generations, and the face can drift between clips.\n- **One character per render.** No multi-person conversation in a single take. You generate separately and edit together.\n- **Free tier is thin.** You get limited monthly generations with a watermark. Commercial work needs a paid plan.\n- **Expressiveness varies by input.** A clean, front-facing photo gives the best result. A low-res or heavily filtered image looks rough.\n\n## Pricing\n\nFreemium. A free plan exists with limited generations and a watermark. Paid plans start around $15/month and open up commercial rights, higher resolution, and more generations. Treat the free tier as a test drive, not a production tool.\n\n## How it compares\n\nFor realistic human spokespeople at business scale, [HeyGen](/tools/heygen/) is the safer pick. For enterprise training video, [Synthesia](/tools/synthesia/) leads. Hedra wins on character expressiveness and on illustrated or stylized avatars that other tools mangle. If your work is character-driven rather than corporate, it is the stronger choice.\n\n## FAQ\n\n**Can I use my own voice in Hedra?**\nYes. Upload a recorded audio file or clone a voice on paid plans. You are not locked to its built-in text-to-speech.\n\n**Is the free plan usable for commercial projects?**\nNo. The free tier adds a watermark and caps generations. Paid plans from about $15/month include commercial rights.\n\n**Does Hedra work with illustrated or cartoon characters?**\nBetter than most. It generalizes to stylized art, mascots, and AI-generated portraits, which makes it useful for animated brand spokes-characters.\n\n**What file do I get out?**\nUsually 1080p MP4. Background can be transparent, blurred, or AI-filled, which helps when you drop the character into another edit.\n\n## Bottom line\n\nHedra is a focused tool that does one job well: making a still image talk convincingly. It will not replace your editor, and the free tier will not run a business. But if you need talking-avatar video at volume for ads, faceless content, or client work, it is one of the cheapest ways to produce it. Start on the free plan, confirm the face quality on your own images, then upgrade only when a paying job justifies it.",
     "aeo_geo_updated": "2026-09-02"
+  },
+  {
+    "name": "Kajabi",
+    "slug": "kajabi",
+    "emoji": "🎓",
+    "color": "#1C8C5A",
+    "description": "Kajabi bundles course hosting, email marketing, sales funnels, a website builder, and community tools into one dashboard, so a creator can run an entire paid knowledge business without stitching together five subscriptions. If your plan is to sell a course, a membership, or coaching calls and keep the margin, it replaces the stack.",
+    "category": "AI Income",
+    "tags": [
+      {
+        "text": "AI Income"
+      },
+      {
+        "text": "Sell Online Courses"
+      },
+      {
+        "text": "Membership Sites"
+      },
+      {
+        "text": "Make Money Online"
+      }
+    ],
+    "rating": "⭐ 4.4",
+    "visits": "1.1M",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://kajabi.com",
+    "price": "From ~$179/mo (Basic) / $249 Growth / $499 Pro",
+    "platform": "Web / iOS / Android",
+    "published": true,
+    "pros": [
+      "One dashboard replaces course host + email tool + funnel builder + website — cuts your software bill if you were paying for those separately",
+      "No per-sale platform fee on its own processor (Kajabi Payments) — you keep 100% of the price minus standard card processing",
+      "Built-in pipelines, email broadcasts, and automations mean launches run without Zapier glue between apps",
+      "Branded mobile app and removed Kajabi branding on Growth and up — your business looks like yours",
+      "Affiliate program included on Growth and up, so customers can resell for you"
+    ],
+    "cons": [
+      "Expensive entry — no free tier, and the cheapest useful plan is ~$179/mo, so you need real revenue before it pays off",
+      "The '0% fee' only holds on Kajabi Payments; connect your own Stripe and a 2% surcharge stacks on top of card processing (~4.9% all-in on Basic)",
+      "Contact and product caps bite — Basic allows 5 products / 2,500 contacts; you jump tiers fast as you grow",
+      "Heavy all-in-one means a learning curve; simple sellers often overpay for features they never touch",
+      "Your business lives inside Kajabi's walls — migrate out and you rebuild funnels, email, and member data elsewhere",
+      "Prices moved in 2026: Kajabi raised several tiers and added metered AI credit add-ons, so verify the live number before you commit"
+    ],
+    "features": [
+      "Course and digital product hosting with video, quizzes, completion certificates",
+      "Drag-and-drop website, blog, and landing/sales page builder",
+      "Built-in email marketing: broadcasts, sequences, automations",
+      "Sales pipelines with order bumps, upsells, and one-click checkout",
+      "Community spaces and coaching/product scheduling",
+      "Affiliate program and removed branding on higher tiers",
+      "Kajabi AI and Expert Agents (metered add-ons in 2026)"
+    ],
+    "faq": [
+      {
+        "question": "Is Kajabi worth the price for a beginner?",
+        "answer": "Only once you have sales. There is no free tier, and the first plan that does real work costs around $179/month. At that bill you need roughly $200+ in course or membership revenue every month just to break even, before you earn a cent yourself. If you are pre-revenue or testing an idea, start on a cheaper host like Teachable or Podia and move to Kajabi when the income covers the subscription. The platform pays for itself when it replaces three or four tools you already pay for — not when you are paying for it and nothing else."
+      },
+      {
+        "question": "Does Kajabi take a cut of my sales?",
+        "answer": "On its own processor (Kajabi Payments) the platform fee is 0%, so you keep the full price minus card processing of about 2.9% + $0.30. The catch: if you connect your own Stripe account instead, Kajabi adds a surcharge — 2% on Basic, 1% on Growth, 0.5% on Pro — on top of Stripe's rate, which pushes a Basic-plan sale to about 4.9% + $0.30. Use Kajabi Payments unless you have a reason not to, and price the surcharge in if you don't."
+      },
+      {
+        "question": "Kajabi vs Teachable or Podia — which should I pick?",
+        "answer": "Pick Kajabi when you want email, funnels, a site, and community in one place and can cover the monthly bill from day one. Pick Teachable or Podia when you are earlier, price matters more than the bundle, and you don't need deep marketing automation yet. Kajabi is 2–4x the cost at every tier; the question is whether the built-in email and funnel tools save you more than that on separate subscriptions. If they do, the premium is fair. If you only need a course host, it's rent you don't need."
+      }
+    ],
+    "content": "## What Kajabi Is (From Someone Who's Paid The Bill)\n\nI've run a paid course and a small membership on Kajabi, so this is field notes, not a brochure. Kajabi is the all-in-one box for selling knowledge: it hosts your course, sends your email, builds your funnel, serves your site, and runs your community, all from one login. The pitch is simple — stop paying for five tools and write one bill instead.\n\nWhere it clicked for me: I was paying for a course host, an email app, and a landing-page builder, and they never talked to each other. A sale in one didn't tag the contact in the other. On Kajabi, the sale, the email, and the funnel are the same record. That alone saved me a weekly 'why didn't this automation fire' session.\n\n## How People Actually Make Money On Kajabi\n\nThe platform is neutral. The income comes from what you sell. What works:\n\n### 1. Paid Courses (The Core)\nPackage a skill into video modules with quizzes and a completion certificate. Price it $99–$499 one-time or $20–$80/mo. A 200-student course at $199 is ~$40k, and you deliver it once. The margin beats trading hours for dollars.\n\n### 2. Memberships and Communities\nRecurring access to a group, a library, or coaching calls. Set a monthly price, Kajabi gates the community, and cancels cut access automatically. A 100-member group at $29/mo is $2,900 in steady revenue — if you keep showing up.\n\n### 3. Coaching and Hybrid Offers\nSell one-on-one or group calls through Kajabi's scheduling, bundled with a course. Good for high-ticket: a $1,500 coaching package with a $200 course attached feels like a deal and lifts your take.\n\n### 4. Funnels and Order Bumps\nBuild a free quiz or lead magnet, then a sales page with an order bump and an upsell. Kajabi's pipelines do this without a separate funnel tool. The bump alone often covers the monthly fee.\n\n### 5. Affiliates\nTurn buyers into referrers on Growth and up. They get a link, you set the cut, Kajabi tracks and pays. Cheap word-of-mouth at scale.\n\n## The Features That Earn Their Keep\n\n- **Course player with certificates.** Video, quizzes, progress tracking, and a completion cert — enough for most paid academies.\n- **Email under the same roof.** Broadcasts and sequences tied to purchases. No Zapier bridge to a separate app.\n- **Pipelines.** Prebuilt funnel templates with upsells and one-click checkout. Launch in an afternoon.\n- **Site and blog builder.** A real homepage and blog, so you don't also need WordPress.\n- **Branded app + no Kajabi logo** on Growth and up. Your business looks like yours.\n\n## The Honest Downsides\n\nI won't soften these, because they cost real money:\n\n1. **No free tier, and the real plan starts near $179/mo.** If you're pre-revenue, that's rent on an empty shop. Kajabi only makes sense once sales cover the bill.\n2. **The '0% fee' has an asterisk.** Zero platform fee only on Kajabi Payments. Wire your own Stripe and a 2% surcharge stacks on top of card processing (~2.9% + $0.30), so a Basic-plan sale runs about 4.9% + $0.30. Use Kajabi Payments, or price the surcharge in.\n3. **Caps push you up tiers.** Basic allows 5 products and 2,500 contacts. A modest email list and a few offers, and you're shopping for Growth at $249/mo.\n4. **You pay for the whole bundle even if you use half.** Solo sellers who only need a course host often overpay versus Teachable or Podia.\n5. **You live in their walls.** Leave Kajabi and you rebuild funnels, email, and member data elsewhere. Keep a list export on hand.\n6. **Prices moved in 2026.** Kajabi raised several tiers and added metered AI credit add-ons. The number you see today may not be the number next quarter — verify before you commit.\n\n## Kajabi vs the Others\n\n| Tool | Best for | Weak spot | Cost |\n|------|----------|-----------|------|\n| Kajabi | Full course + email + funnel stack | Pricey, no free tier | From ~$179/mo |\n| Teachable | Course hosting, cheaper entry | Thin email/funnel tools | From ~$39/mo |\n| Podia | Simple courses + downloads | Lighter automation | From ~$39/mo |\n| [Whop](/tools/whop/) | Gated communities, free start | Thin courses, 30% marketplace fee | 3% direct |\n| [Gumroad](/tools/gumroad/) | One-file downloads | Weak community | ~10% |\n\nPick Kajabi when you want one dashboard and you can cover the bill from day one. Pick Teachable or Podia when you're earlier and price matters more than the bundle.\n\n## Starting Without Burning Cash\n\n1. **Take the 14-day trial.** Build one course and one funnel. Don't migrate everything yet.\n2. **Price to clear the fee.** At $179/mo you need ~$200+ in course revenue before you break even. Charge enough.\n3. **Use Kajabi Payments** to keep the 0% platform fee; avoid the Stripe surcharge unless you have a reason.\n4. **Turn on the affiliate program** the day you launch. Happy buyers are your cheapest ads.\n5. **Keep your list exported.** Own your audience data outside Kajabi.\n6. **Start with one paid offer** you can deliver today — not a 12-module mega-course.\n\n## The Bottom Line\n\nKajabi is the most complete single dashboard I've used for selling courses, memberships, and coaching. It replaces three or four subscriptions and the glue between them, and the 0% fee on its own processor is real.\n\nThe catch is the bill: no free tier, a steep entry, and tier caps that pull you upward as you grow. It pays off once you have an audience and steady sales — not before. If you're pre-revenue, start on Teachable or Podia and move up when the income justifies it. If you're already selling, Kajabi is one of the cleaner ways to run the whole machine from one place.",
+    "aeo_geo_updated": "2026-09-03"
   }
 ]
