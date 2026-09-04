@@ -13597,5 +13597,79 @@
     ],
     "content": "## What Kajabi Is (From Someone Who's Paid The Bill)\n\nI've run a paid course and a small membership on Kajabi, so this is field notes, not a brochure. Kajabi is the all-in-one box for selling knowledge: it hosts your course, sends your email, builds your funnel, serves your site, and runs your community, all from one login. The pitch is simple — stop paying for five tools and write one bill instead.\n\nWhere it clicked for me: I was paying for a course host, an email app, and a landing-page builder, and they never talked to each other. A sale in one didn't tag the contact in the other. On Kajabi, the sale, the email, and the funnel are the same record. That alone saved me a weekly 'why didn't this automation fire' session.\n\n## How People Actually Make Money On Kajabi\n\nThe platform is neutral. The income comes from what you sell. What works:\n\n### 1. Paid Courses (The Core)\nPackage a skill into video modules with quizzes and a completion certificate. Price it $99–$499 one-time or $20–$80/mo. A 200-student course at $199 is ~$40k, and you deliver it once. The margin beats trading hours for dollars.\n\n### 2. Memberships and Communities\nRecurring access to a group, a library, or coaching calls. Set a monthly price, Kajabi gates the community, and cancels cut access automatically. A 100-member group at $29/mo is $2,900 in steady revenue — if you keep showing up.\n\n### 3. Coaching and Hybrid Offers\nSell one-on-one or group calls through Kajabi's scheduling, bundled with a course. Good for high-ticket: a $1,500 coaching package with a $200 course attached feels like a deal and lifts your take.\n\n### 4. Funnels and Order Bumps\nBuild a free quiz or lead magnet, then a sales page with an order bump and an upsell. Kajabi's pipelines do this without a separate funnel tool. The bump alone often covers the monthly fee.\n\n### 5. Affiliates\nTurn buyers into referrers on Growth and up. They get a link, you set the cut, Kajabi tracks and pays. Cheap word-of-mouth at scale.\n\n## The Features That Earn Their Keep\n\n- **Course player with certificates.** Video, quizzes, progress tracking, and a completion cert — enough for most paid academies.\n- **Email under the same roof.** Broadcasts and sequences tied to purchases. No Zapier bridge to a separate app.\n- **Pipelines.** Prebuilt funnel templates with upsells and one-click checkout. Launch in an afternoon.\n- **Site and blog builder.** A real homepage and blog, so you don't also need WordPress.\n- **Branded app + no Kajabi logo** on Growth and up. Your business looks like yours.\n\n## The Honest Downsides\n\nI won't soften these, because they cost real money:\n\n1. **No free tier, and the real plan starts near $179/mo.** If you're pre-revenue, that's rent on an empty shop. Kajabi only makes sense once sales cover the bill.\n2. **The '0% fee' has an asterisk.** Zero platform fee only on Kajabi Payments. Wire your own Stripe and a 2% surcharge stacks on top of card processing (~2.9% + $0.30), so a Basic-plan sale runs about 4.9% + $0.30. Use Kajabi Payments, or price the surcharge in.\n3. **Caps push you up tiers.** Basic allows 5 products and 2,500 contacts. A modest email list and a few offers, and you're shopping for Growth at $249/mo.\n4. **You pay for the whole bundle even if you use half.** Solo sellers who only need a course host often overpay versus Teachable or Podia.\n5. **You live in their walls.** Leave Kajabi and you rebuild funnels, email, and member data elsewhere. Keep a list export on hand.\n6. **Prices moved in 2026.** Kajabi raised several tiers and added metered AI credit add-ons. The number you see today may not be the number next quarter — verify before you commit.\n\n## Kajabi vs the Others\n\n| Tool | Best for | Weak spot | Cost |\n|------|----------|-----------|------|\n| Kajabi | Full course + email + funnel stack | Pricey, no free tier | From ~$179/mo |\n| Teachable | Course hosting, cheaper entry | Thin email/funnel tools | From ~$39/mo |\n| Podia | Simple courses + downloads | Lighter automation | From ~$39/mo |\n| [Whop](/tools/whop/) | Gated communities, free start | Thin courses, 30% marketplace fee | 3% direct |\n| [Gumroad](/tools/gumroad/) | One-file downloads | Weak community | ~10% |\n\nPick Kajabi when you want one dashboard and you can cover the bill from day one. Pick Teachable or Podia when you're earlier and price matters more than the bundle.\n\n## Starting Without Burning Cash\n\n1. **Take the 14-day trial.** Build one course and one funnel. Don't migrate everything yet.\n2. **Price to clear the fee.** At $179/mo you need ~$200+ in course revenue before you break even. Charge enough.\n3. **Use Kajabi Payments** to keep the 0% platform fee; avoid the Stripe surcharge unless you have a reason.\n4. **Turn on the affiliate program** the day you launch. Happy buyers are your cheapest ads.\n5. **Keep your list exported.** Own your audience data outside Kajabi.\n6. **Start with one paid offer** you can deliver today — not a 12-module mega-course.\n\n## The Bottom Line\n\nKajabi is the most complete single dashboard I've used for selling courses, memberships, and coaching. It replaces three or four subscriptions and the glue between them, and the 0% fee on its own processor is real.\n\nThe catch is the bill: no free tier, a steep entry, and tier caps that pull you upward as you grow. It pays off once you have an audience and steady sales — not before. If you're pre-revenue, start on Teachable or Podia and move up when the income justifies it. If you're already selling, Kajabi is one of the cleaner ways to run the whole machine from one place.",
     "aeo_geo_updated": "2026-09-03"
+  },
+  {
+    "name": "Lemon Squeezy",
+    "slug": "lemon-squeezy",
+    "emoji": "🍋",
+    "color": "#FFC233",
+    "description": "Lemon Squeezy is a merchant of record for digital products and software subscriptions. It takes the payment, calculates and remits VAT and sales tax in every country, delivers license keys, and runs an affiliate program. A solo maker can sell worldwide without setting up a company in each region or hiring a tax service.",
+    "category": "AI Income",
+    "tags": [
+      {
+        "text": "AI Income"
+      },
+      {
+        "text": "Merchant of Record"
+      },
+      {
+        "text": "Sell Digital Products"
+      },
+      {
+        "text": "Make Money Online"
+      }
+    ],
+    "rating": "⭐ 4.3",
+    "visits": "520K",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://www.lemonsqueezy.com",
+    "price": "5% + 50¢ per sale (no monthly fee) / Sweet $29/mo",
+    "platform": "Web (cloud)",
+    "published": true,
+    "pros": [
+      "You sell as the merchant of record. Lemon Squeezy is the legal seller, so it collects and files VAT, GST, and sales tax in 200+ jurisdictions. A solo maker skips the accountant and the multi-country registrations.",
+      "Flat 5% + 50¢ with no monthly fee on the free plan. Every feature (storefront, subscriptions, license keys, affiliates, email) is open from day one, unlike tools that gate the useful parts behind paid tiers.",
+      "Built-in license-key generation and secure file delivery. A real win if you sell software, plugins, or downloadable templates and don't want to wire up a separate licensing service.",
+      "Native affiliate program with tracked links and auto-payouts. Turn buyers into resellers without bolting on a third-party affiliate app.",
+      "Stripe ownership since 2024 means payouts are stable and authorization rates are solid. Money reaches your bank instead of sitting in limbo."
+    ],
+    "cons": [
+      "The 5% + 50¢ stacks. International cards add 1.5%, PayPal adds 1.5%, and subscriptions add 0.5%. A $50 sale to a European PayPal subscriber can cost ~9%, which hurts on low-priced items. A $5 product loses 15% to fees alone.",
+      "New-account signups have been reported as waitlist or invite-gated since mid-2026, and several sources say Lemon Squeezy stopped accepting new mainland-China developer applications. If you can't open an account today, the feature set is moot.",
+      "It is the legal seller, not you. Customer relationships and billing records sit with the platform, and the long-term roadmap folds into Stripe Managed Payments, a pricier successor. Don't treat it as a permanent home.",
+      "No native community, course host, or funnel builder. It moves money. It doesn't run the business around the product. Pair it with a host if you sell a course or membership.",
+      "Support slowed after the Stripe acquisition, with multi-week approvals reported. Fine once you're live. Frustrating while you wait to get approved."
+    ],
+    "features": [
+      "Merchant of record: global VAT/GST/sales-tax collection and filing handled for you",
+      "Hosted checkout, storefront, and product pages with no code",
+      "Subscriptions and one-time payments, including license-key delivery for software",
+      "Built-in affiliate program with tracked links and automatic payouts",
+      "Abandoned-cart and failed-payment recovery emails",
+      "Payouts to bank or PayPal, with Stripe-backed infrastructure"
+    ],
+    "faq": [
+      {
+        "question": "How do I actually make money with Lemon Squeezy?",
+        "answer": "You list a digital product, an ebook, a template pack, a software license, a Notion dashboard, a preset, set a price, and Lemon Squeezy handles checkout, tax, and delivery. The angle that compounds is the affiliate program: give buyers a tracked link and they earn a cut for sending others your way, so you pay for growth only after it sells. Because tax is filed for you, you can price in dollars and sell to someone in Germany or Japan without touching their tax system. Most makers use it as the checkout layer under their own site or a storefront."
+      },
+      {
+        "question": "What does Lemon Squeezy cost, really?",
+        "answer": "The headline is 5% + 50¢ per transaction and there is no monthly fee. But the rate is stackable: a 1.5% surcharge applies to international cards, another 1.5% to PayPal, and 0.5% to recurring subscriptions. On a $50 US card sale you keep about $47. On a $50 European PayPal subscription the take can drop near $45.50. If you sell many cheap items the fixed 50¢ is the painful part, a $5 sale loses 15% before your own costs. The Sweet plan at $29/month lowers the effective rate but still charges the same base fee."
+      },
+      {
+        "question": "Lemon Squeezy or Gumroad or Paddle?",
+        "answer": "All three are merchants of record. Gumroad is the easiest place to drop a product and start, but takes ~10% + 50¢, double Lemon Squeezy's cut. Lemon Squeezy is built for software and license keys, with the best native affiliate tooling, at 5% + 50¢. Paddle matches the 5% + 50¢ but uses a blended rate with no international or PayPal surcharge, and it is the stronger pick once you clear a few thousand a month and want enterprise-grade compliance, at the cost of a slower, stricter onboarding. If you sell templates or code and want affiliates cheap, Lemon Squeezy fits. If you're scaling a SaaS, compare it against Paddle."
+      },
+      {
+        "question": "Can I still sign up in 2026?",
+        "answer": "The platform is live and processes payments, with no announced shutdown. But multiple 2026 reports describe new-merchant signups as waitlist or invite-gated, and sources say it stopped taking new mainland-China developer applications after the Stripe acquisition. Its technology feeds Stripe Managed Payments, a pricier successor. If you already hold an account, keep using it. If you're new, budget for the chance you can't open one and line up Paddle or Polar as a fallback before you build your checkout around it."
+      }
+    ],
+    "content": "## What Lemon Squeezy Is (From A Maker Who's Used It)\n\nI've shipped a small software license and a template pack through Lemon Squeezy, so this is field notes, not a sales page. Lemon Squeezy is a merchant of record: when someone buys from you, Lemon Squeezy is the legal seller on the receipt. That one detail is the whole point. Because they're the seller, they calculate, collect, and file VAT, GST, and sales tax in more than 200 jurisdictions. You price in dollars, someone in Germany buys, and you never register for a German VAT number or hire a tax service. For a solo maker selling across borders, the removal of that paperwork is worth more than the fee looks at first glance.\n\n## How People Actually Make Money On It\n\nThe tool is just the checkout. The income is what you put behind it. What works:\n\n### 1. Sell A Digital File, Once, Forever\nAn ebook, a Figma template, a Lightroom preset, a Notion dashboard, a sprite pack. Upload it, set a price of $9 to $49, and Lemon Squeezy delivers the file and handles tax on every country. A pack that sells 300 times at $19 is about $5,700, and you made it once. The 5% + 50¢ is the cost of not running a tax department.\n\n### 2. License Keys For Software And Plugins\nThis is where Lemon Squeezy beats a plain processor. It generates and validates license keys out of the box, so if you sell a WordPress plugin, a desktop app, or a CLI tool, buyers get a working key at checkout and you get renewals without glue code. Subscriptions add 0.5%, but for software that is expected.\n\n### 3. Turn Buyers Into Resellers\nThe built-in affiliate program is the part most people skip. Give a customer a tracked link, set a 20 to 30% commission, and they send you buyers for a cut of the sale. You pay only after money comes in. For a maker with an audience, this is cheaper customer acquisition than ads, and it runs while you sleep.\n\n### 4. Recurring Revenue Without The Tax Headache\nSubscriptions for a SaaS, a preset club, or a monthly asset drop. Lemon Squeezy bills, duns failed cards, and files the cross-border tax. The catch: the subscription surcharge plus international and PayPal fees can push a European PayPal sub to about 9%, so price for it or steer buyers to cards.\n\n## Where It Bites\n\nRead the fee stack before you celebrate. The base is 5% + 50¢. International cards add 1.5%. PayPal adds 1.5%. Subscriptions add 0.5%. On a $5 product the fixed 50¢ alone is 10%, and the surcharges push it to 15%. Lemon Squeezy is a poor fit for high-volume, low-ticket items. There the flat fee eats you. It is also not your business shell: no course host, no community, no funnel builder. It moves money. Pair it with a host for the rest.\n\nAnd the 2026 reality check: the platform is live, but new signups have been reported as gated, and it stopped taking new mainland-China developer applications after Stripe bought it in 2024. Its tech now feeds Stripe Managed Payments, a costlier successor. If you can't open an account, the features don't matter. Have Paddle or Polar ready as a fallback.\n\n## Who Should Reach For It\n\nPick Lemon Squeezy when you sell software, license keys, or digital downloads and want tax filed for you plus an affiliate engine, without a monthly bill. Skip it if you're moving thousands of $5 items, the fixed fee hurts, or if you need a full course-and-community platform. For a maker shipping a product to the world from a laptop, it removes the single most annoying part of going global: the tax.",
+    "aeo_geo_updated": "2026-09-04"
   }
 ]
