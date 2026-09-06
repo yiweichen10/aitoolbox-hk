@@ -1693,19 +1693,28 @@ def build_all_en(target: str = 'all'):
     published_tools = [t for t in all_tools if t.get('published', False)]
     print(f'[EN] {len(published_tools)} published tools, {len(articles)} articles')
 
-    # ── Validate price field length (2026-08-05 price-overflow fix) ──
+    # ── Validate price field length (2026-08-05 fix; 2026-09-07 升级为阻断闸门) ──
     # 治本保障：price 字段必须是卡片/徽章用的短标签 (<=80 字符)。
-    # 长价格说明应放在 pricing_details 字段。任何超长 price 进入构建都会被标记，
-    # 提醒回去拆分字段（而非在 CSS 截断隐藏——截断是治标，已禁用）。
+    # 长价格说明应放在 pricing_details 字段。
+    # 09-06 复发教训：只 print 不阻断 → 警告无人看，生产线 26 天攒 20 条污染。
+    # 现改为收集汇总 + 非 0 退出码，构建直接失败，倒逼写入端修数据。
+    _price_violations = []
     for _t in all_tools:
         _p = _t.get('price', '')
         if _p and len(_p) > 80:
-            print(f"\n[PRICE WARNING] {_t.get('name','')} (slug={_t.get('slug','')}): "
-                  f"price field is {len(_p)} chars (>80).")
-            print(f"  price MUST be a short card label, e.g. 'Free + Pro from $19/mo'.")
-            print(f"  Move the full pricing text into the 'pricing_details' field instead.")
-            print(f"  Current: {_p[:80]}...")
-            print(f"{'='*60}")
+            _price_violations.append((_t.get('slug', '?'), len(_p)))
+    if _price_violations:
+        print(f"\n{'='*60}")
+        print(f"[BUILD FAIL] {len(_price_violations)} tools have price field > 80 chars:")
+        for _slug, _len in sorted(_price_violations, key=lambda x: -x[1]):
+            print(f"  - {_slug} ({_len} chars)")
+        print("  price MUST be a short card label, e.g. 'Free + Pro from $19/mo'.")
+        print("  Move full pricing text into 'pricing_details'.")
+        print("  Fix: add slug->short label to scripts/fix_price_labels.py SHORT_MAP and rerun,")
+        print("  or write via scripts/upsert_tool_en.py (validates on entry).")
+        print(f"{'='*60}")
+        import sys
+        sys.exit(1)
 
     # Group by category
     tools_by_cat: dict = {}
