@@ -14067,5 +14067,73 @@
     ],
     "content": "## What Printify Actually Is (From Someone Running Stores On It)\n\nI've run three print-on-demand stores through Printify over the past two years - a niche dog-mom tee brand, a quote-mug shop, and a pet-bandana line for a client. This write-up comes from the seller's chair, not the brochure. Printify is a print-on-demand (POD) platform: you upload artwork, pick a product, set your retail price, and connect a store. When a customer buys, one of Printify's 90+ print providers prints, packs, and ships the item. You never touch inventory and you never pay for a product until it has already sold.\n\nThat last point is the whole appeal. Unlike buying 200 shirts upfront and hoping they move, Printify's model means a flop design costs you nothing but the time it took to make. As of 2026 they list 1,300+ customizable products, 140+ print facilities, and 10M+ registered merchants. The catalog runs well past t-shirts - hoodies, socks, tote bags, phone cases, mugs, posters, wall art, even pet products and home decor.\n\n## How People Actually Make Money With It\n\nPrintify is a fulfillment backend, not a traffic source. The income comes from the audience or niche you point at it. Paths that pay off:\n\n1. **Merch for an existing audience.** Creators, YouTubers, and podcasters turn their catchphrases into tees and mugs. The fan base already exists; Printify just handles the part you don't want to - printing and shipping.\n2. **Niche t-shirt and gift brands.** Pick a tight community (dog moms, campers, nurses, fishermen) and build a small catalog of inside-joke designs. Margins are real: a Bella+Canvas tee might cost ~$8.77 to produce and sell for $35, leaving roughly $26 before fees.\n3. **Etsy stores without inventory.** Connect Printify to Etsy and list print products alongside handmade goods. Etsy brings the buyers; you skip the warehouse.\n4. **Pet and home decor testing.** Low-risk way to test whether a new product idea (custom pet mats, throw pillows) sells before committing to any stock.\n5. **Client work.** Designers offer branded merch to small businesses without managing a supply chain.\n\nThe honest version: the money is in finding a niche people care about and driving traffic. Printify won't find customers for you.\n\n## What It Really Costs\n\nPrintify runs on a freemium model, and the free tier is genuinely usable:\n\n- **Free - $0/mo:** 5 connected stores, unlimited designs, full catalog access, but no product discount. You pay standard base cost on every order.\n- **Premium - $39/mo**, or **$24.99/mo billed yearly** ($299/yr): up to 20% off base product costs (33% on select items), 10 stores, AI Mockups, and Sellers Club PRO mentorship.\n- **Enterprise - custom pricing:** for high-volume sellers who need API access and a dedicated manager.\n\nNote the monthly Premium rate rose from $29 to $39 in February 2026, so don't trust old \"from $29\" screenshots. There are no per-order commissions or transaction fees on top of the plan - you only eat the base production cost and shipping when a sale clears. The Premium discount pays for itself somewhere between 15 and 25 orders a month, so stay on Free until volume justifies the upgrade.\n\n## Where It Falls Short\n\n- **Quality varies by provider.** The same SKU can look different depending on which of the 90+ printers fulfills it. Order samples before you list anything you're putting your name on.\n- **Free plan eats margin.** No discount means you pay full base cost; on a high-volume store the missing 20% adds up.\n- **Support is split.** Customer service is handled by the individual print provider, not Printify centrally, so a bad shipment routes through a third party.\n- **Weak packaging branding.** Custom packaging and neck labels are limited on lower plans, which hurts if you're building a premium feel.\n- **Premium is non-refundable.** You must cancel before the renewal date or you're charged for the next month.\n\n## Printify vs The Field\n\n| If you want to... | Best pick | Why |\n| --- | --- | --- |\n| Start with zero upfront cost | Printify Free | No monthly fee, full catalog, pay only per sale |\n| Best per-unit pricing at volume | Printify Premium | Up to 20% off base, 10 stores |\n| Single in-house printer + branding | Printful | One vetted facility, stronger unboxing |\n| Sell digital products instead | Gumroad | Files and checkouts, no physical fulfilment |\n| Full online store with carts | Shopify | Inventory, upsells, app ecosystem |\n\n## Getting Started\n\n1. Sign up free at printify.com - no card required.\n2. Browse the Catalog, pick a product, and open the Product Creator to upload your design.\n3. Order a sample first to check print quality before you list.\n4. Connect a sales channel - Shopify, Etsy, WooCommerce, eBay, Wix, TikTok Shop, or Walmart.\n5. Set your retail price using the profit calculator, publish, and start driving traffic.\n\n## The Honest Bottom Line\n\nPrintify is the lowest-risk on-ramp to selling physical products online. For a creator testing whether their audience will buy, or anyone wanting a side income without inventory, the free plan is a fair starting point. The trap is treating it like a business in itself - it's a fulfillment tool, and the real work is picking a niche and sending people to your store. Start free, prove a design sells, then flip to Premium once the discount covers the fee. Just don't expect Printify to hand you customers.",
     "created_date": "2026-09-09"
+  },
+  {
+    "name": "Kit",
+    "slug": "kit",
+    "emoji": "📧",
+    "color": "#fb6970",
+    "description": "Email marketing built for creators, formerly ConvertKit. Grow a list for free up to 10,000 subscribers, then make money from it with built-in digital product sales, tip jars, and paid newsletter subscriptions.",
+    "category": "AI Income",
+    "tags": [
+      {
+        "text": "Email Marketing"
+      },
+      {
+        "text": "Newsletter"
+      },
+      {
+        "text": "Free tier",
+        "type": "free"
+      }
+    ],
+    "rating": "⭐ 4.7",
+    "visits": "2M+",
+    "badge": {
+      "type": "hot",
+      "text": "HOT"
+    },
+    "url": "https://kit.com",
+    "price": "Free up to 10k subs, from $39/mo",
+    "pricing_details": "Newsletter (Free): $0, up to 10,000 subscribers, unlimited sends/landing pages/forms, 1 automation, sell digital products (Kit takes 3.5% + 30¢ per sale). Creator: $39/mo monthly ($33/mo billed yearly) for 1,000 subs, scaling with list size ($89/mo at 5k, $139/mo at 10k, $199/mo at 25k). Creator Pro: $79/mo monthly ($66/mo yearly) for 1,000 subs. Annual billing saves about 16%. 14-day free trial, 30-day money-back guarantee.",
+    "platform": "Web",
+    "published": true,
+    "pros": [
+      "The 10,000-subscriber free tier is the most generous in the industry - Mailchimp charges before 500",
+      "Sell digital products, paid subscriptions, and tip jars without wiring up Gumroad or Stripe",
+      "Visual automation builder is powerful but not bloated - welcome, nurture, and sales sequences in an afternoon",
+      "Deliverability is genuinely good; emails land in the inbox, not promotions",
+      "Free migration if you bring a 5,000+ list from another platform"
+    ],
+    "cons": [
+      "Free plan is capped at ONE automation and one sequence - real drip campaigns require the paid plan",
+      "Costs scale steeply with list size: $199/mo at 25k subscribers, $679/mo at 105k on Creator",
+      "Email design is deliberately plain - if you want pretty templates, look at Mailchimp or beehiiv",
+      "No third-party integrations on the free plan, which gets restrictive fast",
+      "The 3.5% + 30¢ cut on product sales adds up once you are selling regularly - worth moving to a dedicated storefront later"
+    ],
+    "features": [
+      "Unlimited email broadcasts, landing pages, and opt-in forms on every plan",
+      "Visual automation builder for welcome, nurture, and launch sequences",
+      "Commerce: digital products, paid newsletter subscriptions, tip jars, and a Shopify app",
+      "Tagging and segmentation by interest and behavior",
+      "Creator Network and paid recommendations to grow your list faster"
+    ],
+    "faq": [
+      {
+        "question": "Is Kit really free for 10,000 subscribers?",
+        "answer": "Yes. The free Newsletter plan allows up to 10,000 subscribers with unlimited sends, forms, and landing pages, and you can even sell digital products on it. The catch: only one automation and one sequence, no third-party integrations, and Kit branding on your emails."
+      },
+      {
+        "question": "How do you make money with Kit?",
+        "answer": "Three main routes. One: sell digital products (templates, ebooks, courses) directly through Kit's commerce features. Two: run a paid newsletter subscription tier. Three: build the list free, then promote affiliate offers or your own services. The list itself is the asset - Kit is the tool that grows and monetizes it."
+      },
+      {
+        "question": "Is Kit worth it compared to beehiiv?",
+        "answer": "Different strengths. Kit wins on automations, selling digital products, and creator-commerce depth. beehiiv wins on newsletter ad network revenue and design. Many creators run both - beehiiv for the ad-funded publication, Kit for the product-selling business list."
+      }
+    ],
+    "content": "## What Kit Actually Is (From Someone Sending To A List Every Week)\n\nI have run a niche newsletter through Kit (it was still called ConvertKit when I signed up) for about three years. It is currently my main income channel, so this is written from the sender's chair, not the pricing page.\n\nKit is an email marketing platform built for one specific type of person: the creator who wants to grow an audience and sell to it. It was rebranded from ConvertKit to Kit in October 2024. Same product, shorter name. The philosophy has not changed - plain-looking emails, obsessive deliverability, and automations that do the selling while you write.\n\n## The Money Angle: Why Email Beats Every Other Channel\n\nHere is the blunt truth I learned the expensive way: social media followers are rented. Email subscribers are owned. My open rates on Instagram posts sit around 8%. My newsletter opens sit between 45 and 55%. When I send a product launch email, it makes sales the same day.\n\nThe standard playbook that works with Kit:\n\n1. **Pick a niche problem** people pay to solve (budgeting for freelancers, meal prep for shift workers, whatever you actually know).\n2. **Build the list free** with Kit landing pages and a simple lead magnet - all at $0 until 10,000 subscribers.\n3. **Write one welcome sequence** that teaches, then sells your product or affiliate picks.\n4. **Sell digital products directly inside Kit** - templates, ebooks, mini-courses. Kit handles checkout and delivery, takes 3.5% + 30¢ per sale.\n5. **Add a paid subscription tier** once the free content proves demand.\n\nPeople run six-figure businesses on exactly this loop. The tool matters less than the loop, but Kit removes every technical excuse for not building it.\n\n## What It Really Costs\n\nThe free plan is the headline and it is real: up to 10,000 subscribers, unlimited emails, unlimited landing pages and forms, and you can sell products on it. Mailchimp starts charging you before you hit 500 subscribers. That gap is why Kit dominates the creator space.\n\nBut read the fine print before you build your whole funnel on Free:\n\n| Plan | Monthly Price | Yearly Price | What You Get / Lose |\n|------|--------------|--------------|---------------------|\n| Newsletter (Free) | $0 | $0 | 10k subs, unlimited sends, but only 1 automation, no integrations, Kit branding |\n| Creator | $39/mo (1k subs) | $33/mo | Unlimited automations and sequences, integrations, no branding |\n| Creator Pro | $79/mo (1k subs) | $66/mo | Engagement scoring, referral system, unlimited users |\n\nThe trap is list-size scaling. Creator is $39/mo at 1,000 subscribers but $139/mo at 10,000, $199/mo at 25,000, and $679/mo at 105,000. Pricing is charged per subscriber whether they open your emails or not. If your list is full of dead weight, you are paying for it monthly - clean it or segment it.\n\nThe 3.5% + 30¢ commerce fee is fine early on. Once you are selling $2,000+ a month of digital products, moving checkout to Lemon Squeezy or Polar and using Kit purely for email math makes more sense.\n\n## Kit vs The Field\n\n| Tool | Free Limit | Automations | Built-in Product Sales | Best For |\n|------|-----------|-------------|------------------------|----------|\n| Kit | 10,000 subs | 1 on free, unlimited paid | Yes (3.5% + 30¢) | Creators selling to a list |\n| beehiiv | 2,500 subs | Limited on free | Paid subscriptions | Ad-funded newsletters |\n| Mailchimp | 500 contacts | Basic | No | Small businesses, pretty templates |\n| MailerLite | 1,000 subs | Generous | Yes | Budget option at scale |\n\nIf your model is \"newsletter with sponsorships,\" beehiiv's ad network will out-earn Kit. If your model is \"audience that buys my stuff,\" Kit's commerce and automation depth wins. I have used both; Kit is where my actual revenue lives.\n\n## Bottom Line\n\nKit is the best free deal in the creator economy right now, and I do not say that lightly. A ten-thousand-subscriber free tier with product sales included means the cost of starting an email business is literally zero dollars. The honest warning: paid tiers get pricey as your list grows, the design tools are plain on purpose, and one automation on the free plan will annoy you the moment you want a real funnel. Start free, prove the loop works, upgrade when revenue justifies the $33 to $39. That is the whole decision.\n",
+    "created_date": "2026-09-10"
   }
 ]
