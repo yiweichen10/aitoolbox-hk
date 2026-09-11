@@ -1,0 +1,130 @@
+TITLE: Best AI Workflow Automation Tools 2026: Zapier vs Make vs n8n vs Power Automate
+SLUG: best-ai-workflow-automation-tools-2026-zapier-vs-make-vs-n8n-vs-power-automate
+CATEGORY: AI Productivity
+DATE: 2026-09-11
+DESCRIPTION: Zapier vs Make vs n8n vs Power Automate compared on real pricing math, metering models, and ROI — including the 20-step workflow test that shows a 5-10x cost gap between platforms.
+KEYWORDS: workflow automation tools|zapier vs make|n8n vs make|zapier pricing|make.com pricing|n8n pricing|power automate pricing|zapier alternative|self-hosted n8n|free zapier alternative
+---
+Forrester's Total Economic Impact study put Power Automate's three-year ROI at 248% — but that figure only holds if you picked the right platform for your stack in the first place. Run the same 20-step automation on the wrong meter and your monthly bill can swing by a factor of five to ten. I've watched a five-client marketing agency pay Zapier roughly $300 a month for workflows that cost $60 on Make and under $25 on a $10 VPS running n8n. Same work. Same reliability. The only variable was which of the four major workflow automation tools was counting the steps.
+
+This guide is the version I wish existed when I migrated my own stack off Zapier in 2024. No vendor math, no "it depends" cop-outs. Just how each platform meters usage, what it actually costs at realistic volumes, and where each one breaks.
+
+## What workflow automation tools actually bill you for
+
+This is the single most misunderstood part of the category, and it explains almost every pricing complaint you'll read on forums. The three cloud-first platforms meter your usage in completely different units:
+
+- **Zapier** charges per **task** — every action step that runs consumes one task. Triggers are free, and built-in utilities like Formatter, Filters, and Paths don't count. A 5-step Zap that runs 1,000 times burns roughly 4,000 tasks.
+- **Make** charges per **credit** — each module action in a scenario run counts as one credit, including reads, searches, and data transforms. Make moved fully to credit-based language in 2026.
+- **n8n** charges per **execution** — one complete workflow run, whether it has 3 steps or 300. This is the metering model everyone else's customers wish they had.
+- **Power Automate** charges per **user or per bot** — a flat license for humans, a flat license for unattended RPA bots. Usage within license limits is mostly unmetered for standard flows.
+
+The consequence: step count is the hidden variable. Light 2-3 step automations make all four platforms look comparable. Complex, multi-step, looping AI workflows make the gap explode, because Zapier and Make bill every step while n8n bills the run once.
+
+## Zapier: the biggest app catalog, the biggest bill
+
+Zapier pricing starts at $19.99 per month (billed annually) for the Professional plan with 750 tasks. Monthly billing runs $29.99. The free plan gives you 100 tasks and 2-step Zaps only — fine for a test drive, useless for production. Team plan is $69/month annually with 2,000 tasks, 25 seats, shared workspaces, and SAML SSO. Enterprise is quote-based.
+
+What you're paying for is reach. Zapier connects to more than 9,000 apps by its own count — roughly triple the catalog of Make and an order of magnitude beyond what any self-hosted tool maintains. If your stack includes obscure SaaS products, Zapier probably has the connector and Make doesn't. The editor is also the least intimidating in the category, which matters if the person maintaining automations is an ops manager, not a developer.
+
+The trap is overage billing. Exceed your task tier and Zapier keeps running your Zaps, then bills the overflow at a premium per-task rate. A looping AI agent step — summarize this thread, then score it, then draft a reply — can multiply a single Zap's task consumption fivefold. Users on the Zapier forums regularly post bills that doubled after adding one AI step without realizing each internal iteration counted.
+
+Zapier is the right call when: you need niche app connectors, your workflows are short (2-4 steps), volume is low, and nobody on the team can run a server. If any of those flip, start looking for a Zapier alternative, because you're renting convenience at the category's highest meter rate.
+
+## Make: visual power at a fair meter
+
+Make (formerly Integromat) is the middle path. Make.com pricing as of September 2026: free plan with 1,000 credits per month, Core at $12/month for 10,000 credits, Pro at $21/month, and Teams at $38/month — all at the 10,000-credit base tier, with annual billing shaving roughly 15% off. Catalog: 3,000+ apps.
+
+The visual scenario builder is genuinely better than Zapier's linear editor for anything with branching, iteration, or data aggregation. Routers, error handlers, and iterators are first-class citizens. Where Zapier's Paths feel bolted on, Make's branching is the native idiom.
+
+Per dollar of throughput, Make wins the hosted category easily. Ten thousand credits for $12 versus Zapier's $19.99 for 750 tasks is roughly a 13x difference in raw units. The catch is that Make counts every module — a "get row, search records, update CRM, send email" scenario consumes 4+ credits per run, not one. Make's own free plan is the most honest in the category, though: no time limit, all apps available, and scenarios simply pause when credits run out instead of silently billing you.
+
+One operational warning: on the free plan, all scenarios stop dead at the monthly limit — no throttling, no grace. If a paused lead-routing flow costs you a deal, that's the price of a free tier.
+
+Make is the right call when: workflows are mid-complexity (5-20 steps), volume is moderate, and you want visual debugging without server duties. For a deeper look, the [Make automation platform](/tools/make/) page covers the builder in detail.
+
+## n8n: pay per run, or pay for a server and stop paying
+
+n8n is the contrarian pick and the one I run. Its metering is the cleanest: one execution equals one full workflow run, period. n8n pricing for cloud is €20/month (Starter, 2,500 executions), €50/month (Pro, 10,000 executions), and €667/month (Business, 40,000 executions), billed annually, with unlimited users and unlimited active workflows on every plan. The catalog of native nodes is smaller than Make's, but universal HTTP, GraphQL, and JavaScript/Python code steps close most gaps.
+
+The headline feature is [self-hosted n8n](/tools/n8n/): the Community Edition is free with no execution caps, and it runs on a $6-20/month VPS. The engine has crossed 200,000 GitHub stars, which tells you how much pent-up demand exists for automation that doesn't meter every breath. Workflow JSON exports cleanly from cloud to self-hosted, so the standard path is: start on cloud, migrate when volume justifies it.
+
+The cost difference isn't marginal. A 20-step AI workflow running 1,000 times a month consumes 1,000 n8n executions (inside the €20 Starter plan), about 20,000 Make credits (above base tier), and roughly 19,000 Zapier tasks (a ~$150-250 tier). n8n vs make is closer than n8n vs Zapier, but at high complexity and volume, self-hosted n8n is 20-50x cheaper than the equivalent Zapier bill.
+
+The honest downside: self-hosting makes you the ops team. Updates, backups, SSL, monitoring — budget an hour a month if you're comfortable with Docker, or pay someone once to set it up properly. If nobody on your team can spell Docker, n8n Cloud removes that burden while keeping the per-run meter, and it's still the cheapest managed option at complexity.
+
+## Power Automate: free if you live in Microsoft's world
+
+Power Automate pricing is a different animal because half of it is already in your Microsoft 365 license. Cloud flows using standard connectors (Outlook, SharePoint, Teams, Excel) cost $0 if your org has M365. What you pay for is escape velocity from that bubble:
+
+- **Premium**: $15/user/month (annual) — premium connectors (Salesforce, SAP, SQL), Dataverse storage, and attended desktop RPA. In 2026 Microsoft folded the old separate RPA tier into Premium.
+- **Process**: $150/bot/month for unattended RPA — bots running overnight batch jobs with no human present.
+- **Hosted Process**: $215/bot/month — same, but Microsoft runs the VM.
+- **Process Mining**: a $5,000/tenant/month add-on. Yes, five figures a year for process discovery.
+
+With 1,400+ connectors and Copilot-assisted flow building, Power Automate is the pragmatic choice for organizations already standardized on Microsoft. The Forrester 248% ROI figure comes from exactly this scenario: M365 shop, no incremental licensing for basic flows, automation replacing manual data entry.
+
+The failure mode is treating it like a general-purpose SaaS connector. Premium connectors are per-user licensed, Dataverse storage overages run about $40/GB, and unattended work costs $150 per bot — a four-bot parallel invoice processor is $600/month before anyone's Premium seat. Companies that try to replicate a Zapier-style multi-SaaS stack inside Power Automate usually end up paying Microsoft enterprise prices for the privilege.
+
+## The 20-step test: real ROI math
+
+Here's the calculation that decides this whole comparison. Take a realistic AI-era workflow — a lead comes in, gets enriched, scored by an LLM, written to a CRM, notified in Slack, and logged — modeled at 20 steps and 1,000 runs per month. This is where workflow automation tools stop being interchangeable and start being 5-10x apart in cost:
+
+| Platform | Units consumed / month | Plan required | Approx. monthly cost | Effective cost per run |
+|---|---|---|---|---|
+| n8n (self-hosted) | 1,000 executions (uncapped) | Community Edition + VPS | $10-20 | $0.01-0.02 |
+| n8n Cloud | 1,000 executions | Starter €20 | ~$22 | ~$0.022 |
+| Make | ~20,000 credits | Above 10k base tier | $30-60 | $0.03-0.06 |
+| Zapier | ~19,000 tasks | ~20k-task Professional tier | $150-250 | $0.15-0.25 |
+| Power Automate | 1 Premium user | Premium $15 (cloud flows) | $15 + connector caveats | ~$0.015* |
+
+*Power Automate's cost per run looks unbeatable until a premium connector or a bot enters the picture — then licensing jumps in steps of $15/user or $150/bot rather than scaling with usage.
+
+The second table flips the lens to platform fit rather than cost:
+
+| Platform | Metering unit | Best workflow complexity | App catalog | Self-host option |
+|---|---|---|---|---|
+| Zapier | Task (per step) | Low (2-4 steps) | 9,000+ | None |
+| Make | Credit (per module) | Medium (5-20 steps) | 3,000+ | None |
+| n8n | Execution (per run) | High (20-300 steps) | Hundreds of nodes + code steps | Yes, free |
+| Power Automate | User / bot license | Enterprise RPA + M365 flows | 1,400+ connectors | No (Azure-hosted bots) |
+
+Run your own numbers before committing: count your average workflow steps, multiply by expected monthly runs, and price that unit count on each platform's calculator. The step count is the variable that most people forget and most marketing pages hope you forget.
+
+## Which one should you actually pick
+
+After migrating my own stack and helping two clients migrate theirs, my decision rule is blunt:
+
+1. **You live in Outlook, Teams, and SharePoint, and your flows touch only Microsoft apps** — stay on Power Automate's included tier. It's free and good enough. Add Premium seats ($15) only when a Salesforce or SAP connector forces it.
+2. **Short automations, obscure SaaS apps, zero technical staff** — Zapier. The 9,000-app catalog and dead-simple editor justify the meter at low volume. Revisit the decision the moment a workflow exceeds five steps or 2,000 tasks a month.
+3. **Mid-complexity visual workflows, price-sensitive, no servers wanted** — Make. Core at $12 is the best throughput-per-dollar in hosted automation, and the scenario builder handles branching that Zapier fumbles.
+4. **Complex, high-volume, AI-heavy workflows — or you just refuse to rent a meter** — n8n. Start on cloud at €20, self-host when volume makes the math obvious. This is where I sit, and the [automation workflows I run for content and lead pipelines](/articles/best-ai-lead-enrichment-tools-2026-apollo-vs-lusha-vs-zoominfo-vs-clay/) all execute through it.
+
+One adjacency worth noting: whichever platform you pick, its value compounds when connected to specialist tools. My cold outreach stack, for instance, runs [dedicated cold email tools](/articles/best-ai-cold-email-tools-2026-instantly-vs-smartlead-vs-lemlist-vs-woodpecker/) triggered through n8n rather than sending through the automation platform itself — the specialist tools deliver the emails, the automation layer orchestrates the sequence. The same pattern applies to CRM syncing, reporting, and AI scoring steps: keep the platform as the conductor, not the orchestra.
+
+## Frequently Asked Questions
+
+### What's the best free Zapier alternative in 2026?
+
+For a free hosted option, Make's 1,000 credits/month beats Zapier's 100 tasks — roughly 10x the throughput, with all 3,000+ apps available. For unlimited free usage, self-hosted n8n's Community Edition has no execution caps at all; you only pay for the $6-20/month server it runs on. The trade is that n8n requires Docker comfort while Make requires nothing.
+
+### Zapier vs Make: which is actually cheaper?
+
+Make, at every volume that matters. At the entry tier, $12 for 10,000 credits versus $19.99 for 750 tasks is a 13x throughput gap. The gap narrows on very short workflows (2-step Zaps consume few Zapier tasks) but widens sharply as steps increase, because Make's per-module meter still undercuts Zapier's per-task meter by 3-5x at equal step counts. Zapier's remaining justification is its larger app catalog, not its price.
+
+### Is n8n really free to self-host?
+
+Yes, with one nuance. The Community Edition carries a fair-code license — free to run for internal business use, no execution limits, no user limits. You cannot resell it as a hosted service under that license (n8n's Embedded/Enterprise editions cover that). Costs are your VPS ($6-20/month typical) and roughly an hour a month of maintenance for updates and backups.
+
+### Does Power Automate cost extra on top of Microsoft 365?
+
+For flows that only touch standard connectors (the Microsoft app ecosystem), no — it's included in most M365 business plans. It starts costing money when you use premium connectors ($15/user/month), unattended RPA ($150/bot/month), or the Process Mining add-on ($5,000/tenant/month). Many organizations run for years on the included tier without ever hitting the paywall.
+
+### n8n vs Make: which should technical teams pick?
+
+n8n, if anyone on the team can run Docker or write a JavaScript step. Its per-run metering, code nodes, version-controllable workflow JSON, and self-host path make it the stronger platform as complexity grows. Make wins only when the team wants purely visual building with zero infrastructure — its branching and iteration UI is the best in the hosted category, and n8n's node catalog is smaller.
+
+## Bottom line
+
+Choosing between workflow automation tools in 2026 comes down to one question: what does your platform bill per unit of work, and how many units does your complexity actually produce? Zapier prices convenience and wins on catalog breadth. Make prices throughput and wins the hosted value crown. n8n prices workflow runs — or nothing, if you run the free Community Edition — and wins every complexity-heavy ROI calculation by 5-50x. Power Automate wins by not charging at all, as long as your automations never leave Microsoft's garden.
+
+Price your real workload, not the marketing page. Count your steps, multiply by your volume, and the right answer is almost always unambiguous.
