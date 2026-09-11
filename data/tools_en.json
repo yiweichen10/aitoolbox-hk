@@ -14135,5 +14135,73 @@
     ],
     "content": "## What Kit Actually Is (From Someone Sending To A List Every Week)\n\nI have run a niche newsletter through Kit (it was still called ConvertKit when I signed up) for about three years. It is currently my main income channel, so this is written from the sender's chair, not the pricing page.\n\nKit is an email marketing platform built for one specific type of person: the creator who wants to grow an audience and sell to it. It was rebranded from ConvertKit to Kit in October 2024. Same product, shorter name. The philosophy has not changed - plain-looking emails, obsessive deliverability, and automations that do the selling while you write.\n\n## The Money Angle: Why Email Beats Every Other Channel\n\nHere is the blunt truth I learned the expensive way: social media followers are rented. Email subscribers are owned. My open rates on Instagram posts sit around 8%. My newsletter opens sit between 45 and 55%. When I send a product launch email, it makes sales the same day.\n\nThe standard playbook that works with Kit:\n\n1. **Pick a niche problem** people pay to solve (budgeting for freelancers, meal prep for shift workers, whatever you actually know).\n2. **Build the list free** with Kit landing pages and a simple lead magnet - all at $0 until 10,000 subscribers.\n3. **Write one welcome sequence** that teaches, then sells your product or affiliate picks.\n4. **Sell digital products directly inside Kit** - templates, ebooks, mini-courses. Kit handles checkout and delivery, takes 3.5% + 30¢ per sale.\n5. **Add a paid subscription tier** once the free content proves demand.\n\nPeople run six-figure businesses on exactly this loop. The tool matters less than the loop, but Kit removes every technical excuse for not building it.\n\n## What It Really Costs\n\nThe free plan is the headline and it is real: up to 10,000 subscribers, unlimited emails, unlimited landing pages and forms, and you can sell products on it. Mailchimp starts charging you before you hit 500 subscribers. That gap is why Kit dominates the creator space.\n\nBut read the fine print before you build your whole funnel on Free:\n\n| Plan | Monthly Price | Yearly Price | What You Get / Lose |\n|------|--------------|--------------|---------------------|\n| Newsletter (Free) | $0 | $0 | 10k subs, unlimited sends, but only 1 automation, no integrations, Kit branding |\n| Creator | $39/mo (1k subs) | $33/mo | Unlimited automations and sequences, integrations, no branding |\n| Creator Pro | $79/mo (1k subs) | $66/mo | Engagement scoring, referral system, unlimited users |\n\nThe trap is list-size scaling. Creator is $39/mo at 1,000 subscribers but $139/mo at 10,000, $199/mo at 25,000, and $679/mo at 105,000. Pricing is charged per subscriber whether they open your emails or not. If your list is full of dead weight, you are paying for it monthly - clean it or segment it.\n\nThe 3.5% + 30¢ commerce fee is fine early on. Once you are selling $2,000+ a month of digital products, moving checkout to Lemon Squeezy or Polar and using Kit purely for email math makes more sense.\n\n## Kit vs The Field\n\n| Tool | Free Limit | Automations | Built-in Product Sales | Best For |\n|------|-----------|-------------|------------------------|----------|\n| Kit | 10,000 subs | 1 on free, unlimited paid | Yes (3.5% + 30¢) | Creators selling to a list |\n| beehiiv | 2,500 subs | Limited on free | Paid subscriptions | Ad-funded newsletters |\n| Mailchimp | 500 contacts | Basic | No | Small businesses, pretty templates |\n| MailerLite | 1,000 subs | Generous | Yes | Budget option at scale |\n\nIf your model is \"newsletter with sponsorships,\" beehiiv's ad network will out-earn Kit. If your model is \"audience that buys my stuff,\" Kit's commerce and automation depth wins. I have used both; Kit is where my actual revenue lives.\n\n## Bottom Line\n\nKit is the best free deal in the creator economy right now, and I do not say that lightly. A ten-thousand-subscriber free tier with product sales included means the cost of starting an email business is literally zero dollars. The honest warning: paid tiers get pricey as your list grows, the design tools are plain on purpose, and one automation on the free plan will annoy you the moment you want a real funnel. Start free, prove the loop works, upgrade when revenue justifies the $33 to $39. That is the whole decision.\n",
     "created_date": "2026-09-10"
+  },
+  {
+    "name": "Beacons.ai",
+    "slug": "beacons-ai",
+    "url": "https://beacons.ai",
+    "category": "AI Income",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "color": "#4353ff",
+    "emoji": "🔗",
+    "platform": "Web / iOS / Android",
+    "price": "Free + plans from $10/mo",
+    "pricing_details": "Free $0: unlimited links, 5 bio pages, basic media kit, store with 9% transaction fee, 50 emails/mo, Beacons branding. Creator $10/mo ($100/yr): custom domain (first year free), branding removed, AI brand outreach, 500 emails/mo, still 9% fee. Creator Plus $30/mo ($300/yr): 0% transaction fee, unlimited emails, memberships, courses, order bumps. Creator Max $90/mo ($900/yr): Google Workspace, NFC card, white-glove support. Stripe processing fees apply on all plans.",
+    "rating": "⭐ 4.5",
+    "visits": "1M+",
+    "published": true,
+    "created_date": "2026-09-11",
+    "tags": [
+      {
+        "text": "Link-in-Bio"
+      },
+      {
+        "text": "Creator Store"
+      },
+      {
+        "text": "Free tier",
+        "type": "free"
+      }
+    ],
+    "features": [
+      "Link-in-bio page with unlimited links and 5 page variants on the free plan",
+      "Built-in digital product store with checkout, delivery, and tip jars",
+      "Auto-generated media kit that pulls live social stats for brand pitches",
+      "AI brand outreach that drafts pitch messages to sponsors (Creator plan)",
+      "Memberships, courses, invoicing, and appointment booking on paid tiers"
+    ],
+    "pros": [
+      "Genuinely usable free plan - store, media kit, and tip jar all work at $0",
+      "Replaces 4-5 separate subscriptions (bio link, email, media kit, scheduler, store)",
+      "Zero-fee invoicing makes it useful even for freelancers who never sell products",
+      "Custom domain included free for the first year on the $10 Creator plan",
+      "Fast setup - a sellable page live in under an hour, no code"
+    ],
+    "cons": [
+      "9% transaction fee on Free and Creator plans is steep once sales pass a few hundred dollars a month",
+      "Email limits are tiny on lower tiers (50/mo free, 500/mo on Creator)",
+      "Beacons branding stays on your page until you pay $10/mo",
+      "The AI brand outreach produces generic pitches that still need a human rewrite",
+      "No marketplace or discovery traffic - it converts your audience, it does not build one"
+    ],
+    "description": "Link-in-bio page and creator storefront in one: sell digital products, run a media kit, collect tips, and pitch brands from a single free page. The cheapest way to turn a social following into income.",
+    "content": "## What Beacons Actually Is (From Someone Running One)\n\nI set up a Beacons page for my side project in early 2025, and it has quietly become the single page I send everyone to - the link in my TikTok bio, my YouTube about section, my email signature. Beacons is a link-in-bio page and creator storefront rolled into one: unlimited link buttons, a digital product store, a media kit, email collection, tip jars, and invoicing, all on one free page. Think Linktree, except Linktree stops at links while Beacons actually processes the payments.\n\nThe pitch is consolidation. Instead of paying separately for a link-in-bio tool, an email tool, a media kit builder, a storefront, and an appointment scheduler, Beacons bundles all of it. The free plan is genuinely usable, not a crippled demo: unlimited links, a working store, a tip jar, and email capture. The catch - and there is always a catch - is a 9% transaction fee on every sale while you are on Free or the $10 Creator plan.\n\n## How People Actually Make Money With It\n\nBeacons is not a traffic source either - it is the conversion layer that sits between your social audience and your income. The monetization paths that work:\n\n1. **Selling digital products off a short-form audience.** The classic 2026 playbook: post faceless TikTok or Reels content in a niche (budgeting templates, Notion setups, workout plans), put the Beacons link in bio, and sell a $9-29 product. Beacons handles checkout, file delivery, and even order bumps on paid plans. This is the same playbook people run on Stan Store or Whop - Beacons is the cheapest way in.\n2. **Brand deals through the media kit.** The built-in media kit pulls your social stats and packages them into a pitchable page. If you have even 5k engaged followers, this alone is worth the page - brands ask for a media kit in the first email, every time.\n3. **AI brand outreach (Creator plan and up).** Beacons generates pitch messages to brands based on your niche and stats. It will not replace a good cold email you write yourself, but it cuts the blank-page problem and most people send zero pitches because writing them feels hard.\n4. **Tips, memberships, and appointments.** Tip jars monetize audiences that will not buy products. Paid plans add memberships (recurring revenue) and scheduling, which coaches and freelancers use to book paid calls straight from the bio link.\n5. **Client invoicing.** Freelancers use Beacons' zero-fee invoicing to bill clients - a small thing, but it turns the page from a cost into a business tool.\n\n## What It Really Costs\n\n| Plan | Price | The real story |\n|------|-------|----------------|\n| Free | $0 | Unlimited links, 5 pages, basic media kit, working store - but 9% off every sale and \"Powered by Beacons\" branding |\n| Creator | $10/mo ($100/yr) | Custom domain (first year free), branding removed, AI brand outreach, 500 emails/mo - the 9% fee is still there |\n| Creator Plus | $30/mo ($300/yr) | 0% transaction fee, unlimited emails, memberships, courses, order bumps - this is the serious-seller tier |\n| Creator Max | $90/mo ($900/yr) | Google Workspace, NFC card, white-glove support - for teams and agencies, most creators never need it |\n\nThe math that decides everything: the 9% fee versus the $30 Creator Plus plan. Break-even lands around $280-330/month in sales depending on billing cycle. Below that, stay on Free or Creator and eat the fee. Above it, Creator Plus pays for itself and then some. Stripe's processing fees apply on every plan - that is not Beacons' cut, that is the payment network's.\n\n## Beacons vs The Field\n\n- **vs Stan Store ($29/mo flat, no transaction fee):** Stan Store wins on fee simplicity for established digital sellers. Beacons wins for anyone starting from zero - a $0 entry point versus $29 before your first sale.\n- **vs Linktree:** Linktree is cleaner as a pure link list and slightly cheaper at entry ($5/mo), but its commerce features are thin. If your bio link is just links, Linktree is fine. If your bio link is supposed to earn money, Beacons does more.\n- **vs Whop:** Whop is stronger for community products and has a marketplace with discovery traffic. Beacons is stronger as a personal brand hub where everything - links, store, media kit - lives in one place.\n- **vs Carrd ($19/yr):** Carrd is the cheapest custom page you can buy, but there is no store, no payments, no media kit. Different job entirely.\n\n## Bottom Line\n\nBeacons is the best free starting point in the creator monetization stack, and that is not faint praise - the free plan's store and media kit actually work. Two honest warnings: first, the 9% fee on lower plans is real money once sales move, so know your break-even and upgrade to Creator Plus when you cross roughly $300/month. Second, Beacons gives you the page, not the audience - if your social content does not bring clicks, no link-in-bio tool will fix that. Start free, validate that a product sells at all, then let the fee math tell you when to pay.\n",
+    "faq": [
+      {
+        "question": "Is Beacons.ai actually free?",
+        "answer": "Yes - the free plan is permanent, not a trial. You get unlimited links, 5 bio pages, a basic media kit, a working store, and 50 email sends per month. The trade-offs are 9% transaction fees on every sale and visible 'Powered by Beacons' branding."
+      },
+      {
+        "question": "How do you make money with Beacons?",
+        "answer": "Beacons is the conversion layer, not the traffic source. The standard playbook: build a niche audience on TikTok, Reels, or YouTube, put your Beacons link in bio, and sell digital products ($9-29 templates, plans, guides) or land brand deals using the built-in media kit. Beacons handles checkout and delivery; your content brings the buyers."
+      },
+      {
+        "question": "When should I upgrade from the free plan?",
+        "answer": "Two triggers. First, branding: if brands or sponsors see your page, $10/mo for a custom domain and no Beacons logo is worth it immediately. Second, the fee math: Creator Plus at $30/mo drops the 9% transaction fee to 0%, which pays for itself around $300/month in sales. Below that, stay free and keep the money."
+      }
+    ]
   }
 ]
