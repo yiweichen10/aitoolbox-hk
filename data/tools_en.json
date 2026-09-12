@@ -14203,5 +14203,73 @@
         "answer": "Two triggers. First, branding: if brands or sponsors see your page, $10/mo for a custom domain and no Beacons logo is worth it immediately. Second, the fee math: Creator Plus at $30/mo drops the 9% transaction fee to 0%, which pays for itself around $300/month in sales. Below that, stay free and keep the money."
       }
     ]
+  },
+  {
+    "name": "Etsy",
+    "slug": "etsy",
+    "url": "https://www.etsy.com/sell",
+    "category": "AI Income",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "color": "#f1641e",
+    "emoji": "🛍️",
+    "platform": "Web / iOS / Android",
+    "price": "$0.20 to list + ~10% per sale",
+    "pricing_details": "One-time $15 shop setup fee (up to $29 in some regions). $0.20 per listing, active 4 months. 6.5% transaction fee on item price plus shipping. Payment processing ~3% + $0.25 per order (US; varies by country). Offsite Ads fee 15% (drops to 12% past $10k/year revenue) charged only when a buyer clicks an offsite ad and buys within 30 days - mandatory once you pass $10k/year. Share & Save refunds 4% of the transaction fee when you drive your own traffic. Optional: Etsy Plus $10/mo, Pattern standalone site $15/mo. Realistic all-in cost for most sellers lands between 20-25% of revenue.",
+    "rating": "⭐ 4.3",
+    "visits": "400M+",
+    "published": true,
+    "created_date": "2026-09-12",
+    "tags": [
+      {
+        "text": "Marketplace"
+      },
+      {
+        "text": "Digital Products"
+      },
+      {
+        "text": "Built-in buyers",
+        "type": "free"
+      }
+    ],
+    "features": [
+      "Marketplace with 80M+ active buyers who arrive ready to spend - no audience building required to make a first sale",
+      "Digital product listings deliver files automatically after purchase, so one upload sells forever",
+      "Built-in search engine with real buyer demand you can research and rank for",
+      "Global payments, taxes, and checkout handled by Etsy - you never touch a payment processor",
+      "Connects directly to Printful and Printify for print-on-demand without holding inventory"
+    ],
+    "pros": [
+      "Built-in traffic is the real product - roughly 80 million active buyers searching for things to buy, which no standalone store tool offers",
+      "Digital products have zero marginal cost: design once, deliver automatically, sell the same file a thousand times",
+      "Entry cost is trivial - $0.20 per listing means you can test 20 product ideas for $4",
+      "Search demand is visible: you can check what people actually search for before you design anything",
+      "Payments, fraud, refunds, and EU tax paperwork are all handled for you"
+    ],
+    "cons": [
+      "The fee stack is heavier than the headline 10% - with Offsite Ads and processing, effective cost is often 20-25% of revenue",
+      "Suspensions are real and appeals are slow: new shops selling AI-generated printables get flagged, and generic spam listings get buried or removed",
+      "You rent the audience - Etsy restricts how you can contact buyers, so building an email list off-platform is essential and extra work",
+      "Offsite Ads becomes mandatory past $10k/year at 12-15%, whether you want paid promotion or not",
+      "Competition in popular digital categories (planners, wall art) is brutal - most new shops stall under 10 sales without niche research"
+    ],
+    "description": "The marketplace where you can sell digital products - templates, printables, wall art - to 80M+ existing buyers without building an audience first. The money angle: list a $9 planner template once and Etsy's search traffic sells it while you sleep. Fees take 10-25% per sale, but you skip months of audience building.",
+    "content": "## What Etsy Actually Is (From a Seller's Side)\n\nI've run a small Etsy shop selling digital planner templates since 2024, and the first thing to understand is that Etsy is not a tool you control - it's a marketplace you rent space in. That's also the entire reason it works. Gumroad, Payhip, and Beacons all require you to bring your own buyers. Etsy has north of 80 million active buyers who show up with credit cards already out and search the site like it's Google for things to buy. Your job is to rank in that search, not to build a following on TikTok first.\n\nThe shop itself is simple: a $15 one-time setup fee, ID verification, and you're listing within an hour. Everything after that is product photos, titles, and tags. For digital products - planners, wall art, invitation templates, Notion spreadsheets, clipart bundles - the buyer pays, the file downloads automatically, and you never touch shipping or inventory. One upload can sell indefinitely.\n\n## How People Actually Make Money With It\n\nThe realistic paths, ranked by how often I've seen them work:\n\n1. **Digital printables** ($3-15 per sale). The AI-assisted version is real but misunderstood: people use image generators to draft designs, then the successful ones manually refine, re-draw at print resolution, mock up real product photos, and niche down hard (\"wedding seating chart for rustic barn weddings\", not \"wall art\"). Etsy now requires sellers to disclose AI use, and the shops churning out unedited generic generations get buried or suspended. The money is in the editing and the niche research, not the generation.\n2. **Template businesses** ($9-49). Notion templates, Canva template packs, Excel dashboards, resume templates. Higher perceived value, buyers return for updates, and bundles push the average order up.\n3. **Print-on-demand** connected to Printful or Printify. Etsy handles the storefront, the POD partner handles production and shipping. Lower margins (~30-40% before Etsy fees) but zero inventory risk.\n4. **Digital + physical hybrids.** A printable wedding suite sold alongside printed versions at 4-5x the price.\n5. **List-building exit ramp.** Savvy sellers use Etsy sales as validation, then funnel repeat customers toward their own site (via packaging inserts, since Etsy restricts email marketing).\n\nThe honest numbers: most new shops make almost nothing. The ones that work typically have 50+ listings, iterate on photos and titles monthly, and treat the shop like a store, not a lottery ticket. But the cost of finding out is $0.20 a listing - the cheapest product-market-fit test that exists.\n\n## What It Really Costs\n\n| Fee | Amount | When |\n|---|---|---|\n| Shop setup | $15 one-time (up to $29 in some regions) | Opening the shop |\n| Listing | $0.20 per listing | Every listing, renews every 4 months |\n| Transaction fee | 6.5% | Every sale, including shipping |\n| Payment processing | ~3% + $0.25 (US) | Every order |\n| Offsite Ads | 15% (12% past $10k/yr) | Only on ad-attributed sales; mandatory past $10k/yr |\n| Share & Save | **-4% refund** | If you drive your own traffic |\n\nOn a $10 digital sale the base cut is roughly $1.75 (17%). If that buyer came from an Offsite Ad, it's $3.25 (32%). Across a real shop, effective fees usually land between 20-25%. Price accordingly: a $9 listing should be $12.\n\n## Etsy vs The Field\n\n| | Etsy | Gumroad / Payhip | Shopify |\n|---|---|---|---|\n| Built-in buyers | 80M+ active | None | None |\n| Monthly cost | $0 (pay per sale) | $0 (fee per sale) | $29+/mo |\n| Fee per sale | 10% base, 20-25% effective | ~10% flat (Payhip 5% on free plan) | ~3% payment only |\n| Audience risk | You rent it | You own it | You own it |\n| Time to first sale | Days, via search | Weeks, via your own traffic | Weeks |\n\nGumroad and Payhip keep more of your margin but assume you already have an audience. Shopify gives full control and the lowest fees but zero discovery. Etsy is the only one where a stranger with no followers can make a sale this week - that's what the 20-25% buys.\n\n## Bottom Line\n\nEtsy is the fastest legitimate way to find out whether strangers will pay for what you can make. The buyers are already there, the entry cost is a few dollars, and digital products compound: every listing you add is another hook in the search index working for you 24/7. The price of that shortcut is permanent - you're renting the audience, living by rules that can suspend you, and handing over a fifth of your revenue. The play that works: validate on Etsy, capture customers into your own email list from day one, and once a product proves itself, sell it from your own site where the margin is yours. Etsy gets you from zero to proof; it shouldn't be the end state.",
+    "faq": [
+      {
+        "question": "Can you actually make money selling AI-generated digital products on Etsy?",
+        "answer": "Yes, but the raw generation is the least valuable part. Etsy requires disclosure of AI use, and shops flooding the market with unedited generic art get buried or suspended - the platform has visibly cracked down since 2024. Sellers who make real money use AI to draft, then hand-refine at print resolution, write genuine product descriptions, mock up realistic previews, and pick narrow niches with proven search demand (check with a tool like eRank before designing anything). Treat AI as the first 30% of the work, not the whole business."
+      },
+      {
+        "question": "How much of each sale does Etsy actually take?",
+        "answer": "The base is about 10%: 6.5% transaction fee plus ~3% + $0.25 processing (US) plus $0.20 listing fees amortized over sales. In practice most sellers pay 20-25% effective, because Offsite Ads (15%, or 12% past $10k/year) applies to ad-attributed sales and is mandatory once you pass $10k. Example: on a $10 digital sale expect to keep $8.25 base, or $6.75 if the buyer came through an Offsite Ad. The Share & Save program refunds 4% of the transaction fee if you bring your own traffic."
+      },
+      {
+        "question": "Is Etsy worth it compared to just building my own store?",
+        "answer": "Different jobs. If you have no audience, Etsy wins on speed: its search traffic can produce a first sale within days, which your own store cannot do at any price. If you already have followers, Gumroad or Payhip keeps more margin and you own the customer relationship. The practical sequence most successful sellers follow: launch on Etsy to validate the product and learn what buyers search for, then expand to your own store once something sells consistently - paying 25% forever on a proven product is a choice, not a requirement."
+      }
+    ]
   }
 ]
