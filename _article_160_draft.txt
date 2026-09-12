@@ -1,0 +1,111 @@
+TITLE: Best AI Localization Tools in 2026: Lokalise vs Phrase vs Crowdin vs Smartling — The Hosted-Words Math Nobody Shows You
+SLUG: best-ai-localization-tools-2026-lokalise-vs-phrase-vs-crowdin-vs-smartling
+CATEGORY: AI Translation
+DATE: 2026-09-13
+DESCRIPTION: Lokalise vs Phrase vs Crowdin vs Smartling compared on real 2026 pricing, hosted-words math, AI features, and the hidden costs each vendor buries in the fine print.
+KEYWORDS: AI localization tools|lokalise vs phrase|crowdin pricing|lokalise pricing|smartling pricing|phrase pricing|best translation management system|crowdin vs smartling|continuous localization
+---
+Translate a 500-word screen into 10 languages and most platforms will bill you for 5,000 words, not 500. Crowdin's own pricing FAQ defines hosted words as source words multiplied by target languages — a billing mechanic that quietly turns a small app into an enterprise invoice. Across the four platforms that own this market, the same localization job carries an entry price anywhere from $27/month (Phrase Freelancer) to a median $60,000/year (Smartling, per Vendr's analysis of 129 real contracts) — a spread of more than 20x for broadly comparable outcomes. Of the AI localization tools on the market, these four control the majority of serious buying decisions in 2026, and they price the identical job in four incompatible ways: per seat, per hosted word, per managed word, and per translated word on top of a platform fee. This guide breaks down Lokalise, Phrase, Crowdin, and Smartling on the only three things that matter — what you actually pay, where the AI genuinely helps, and which gotchas show up on month two.
+
+## How the four leading AI localization tools price the same job
+
+Start with the numbers, because every other decision follows from them. All prices below were verified against official pricing pages and two independent pricing trackers (Vendr and The Front Desk Review) in September 2026.
+
+| Platform | Entry price | Free plan | AI/MT allowance | Word model |
+|---|---|---|---|---|
+| Crowdin | Pro from $50/mo (billed annually, $600/yr) | Yes — 60K hosted words, 1 private project | Crowdin AI included on every plan; bring your own LLM keys or use 40+ MT engines | Hosted words = source words × target languages |
+| Phrase | Freelancer $27/mo (annual billing only, 1 TMS seat) | No — 14-day trial | 12M MT units/yr on Team plan; custom AI on Business+ | Managed words capped per tier |
+| Lokalise | Explorer $144/mo (annual billing) | No — 14-day trial | Unlimited Standard AI/MT words; Pro AI words bundled from 40K/yr (Growth) | Unlimited hosted words; seat allowances by tier |
+| Smartling | Custom — Vendr median $60K/yr | Core tier free (180-day TM retention) | Multi-LLM routing with hallucination detection; MT from $0.0075/word | Platform fee + per-word charges ($0.0075 MT → $0.20 human) |
+
+Read that table twice, because the pricing units are the product. **Crowdin pricing** is the only one a developer can calculate on a napkin: pick your word budget, multiply by languages, done. A solo project with 10,000 source words in 6 languages lands at 60,000 hosted words — the exact Pro tier at $50/month, unlimited translator seats included.
+
+**Lokalise pricing** flipped its model in 2026. The company restructured its plans (older tiers like Essential at $120 and Pro at $390 still circulate on third-party trackers — check lokalise.com/pricing for the current names), and the new ladder runs Explorer $144 → Growth $375 → Advanced from $999 per month on annual billing. The trade: Lokalise hosts unlimited words instead of metering them, but its stronger AI translation allowance is bundled by tier — 40,000 Pro AI words per year on Growth, 150,000 on Advanced, 400,000 on Enterprise. If your team translates heavily with AI, you're buying a word allowance dressed up as a seat plan.
+
+**Phrase pricing** hides its own trap: the $27 Freelancer plan is real but nearly unusable for teams — one TMS seat, no Strings seats. The first genuinely useful tier is Software UI/UX at $525/month (15 Strings seats, 1M managed words), which is a 19x jump from entry price. Phrase targets LSPs and enterprises with the Professional ($525, unlimited TMS seats) and Team ($1,245, 12M machine-translation units/year) plans, both billed annually only. There's no free plan and no monthly billing option anywhere on the ladder.
+
+**Smartling pricing** is where things get opaque. The company publishes no list prices; the homepage markets "70% average cost savings" and "99% automation" but you need a demo to see a number. Vendr's contract dataset — 129 purchases — puts the median at $60,000/year with a range from $8,850 to $214,620. A free Core tier launched in 2026 makes evaluation cheaper, but it holds your translation memory for only 180 days before purging it. Every word translated carries a per-word charge on top of the platform fee: roughly $0.0075/word for machine translation, around $0.06/word for AI-assisted output, and $0.12–$0.20/word for human translation.
+
+## What the AI Actually Does — Beyond the Logo on the Sales Deck
+
+Every vendor now claims AI. Four implementations, four different levels of substance:
+
+**Crowdin** ships Agentic AI with Model Context Protocol (MCP), which is the most developer-credible AI story of the four. You can plug in your own LLM keys — OpenAI, Anthropic, Google — and let the platform route pre-translation through your chosen models, with automatic context harvesting from screenshots, glossaries, and style guides feeding the prompt. The pre-translation pipeline is: translation memory first, then MT engines (DeepL, Google), then AI models for the strings that remain. For engineering-led teams this matters because the AI inherits your context instead of guessing from a bare string.
+
+**Smartling** builds its AI around quality control rather than raw generation: multi-LLM routing picks the best engine per task, hallucination detection flags suspect output, and quality estimation decides what goes to human review. Official case studies claim ClassPass reclaimed 1,000+ hours of execution time and crypto exchange Gemini saved $180,000. Those are marketing numbers, but the mechanism — AI does the bulk, humans touch the risky 10-20% — is how enterprise localization budgets actually get cut.
+
+**Lokalise** ties AI to its word allowances. Standard AI/MT translation is unlimited on every plan; the Pro AI tier (context-aware translation with custom AI profiles backed by RAG, style guides, and scoring) is metered. The custom AI profiles feature — where you encode brand voice and terminology into a retrieval setup — is genuinely useful for marketing content, but the 40K-150K word annual bundles run out fast if your product ships copy weekly.
+
+**Phrase** leans on its Language AI stack and Orchestrator, a workflow automation engine for multi-step translation pipelines, plus a Language Quality Assessment framework with multidimensional quality metrics. Its translation memory is the strongest of the four per multiple comparison sources, which compounds: the more you translate, the more the TM reuses, and reuse is free.
+
+One practical note: whichever platform you pick, the raw MT quality underneath still matters. Our [DeepL review](/tools/deepl/) covers the engine most of these platforms integrate for pre-translation, and our [head-to-head of AI translation tools](/articles/best-ai-translation-tools-2026-deepl-vs-google-translate-vs-gemini-vs-claude/) shows where machine output is safe to ship unreviewed and where it isn't.
+
+## Lokalise vs Phrase: The Closest Matchup for Product Teams
+
+Lokalise vs Phrase is the comparison most software teams agonize over, because both are mature, both integrate with GitHub/GitLab/Bitbucket, Figma, and Jira, and both have SOC 2 / ISO 27001 credentials. The differences are structural:
+
+- **Billing philosophy.** Lokalise charges by plan tier with unlimited hosted words; Phrase charges managed-word caps with per-user seats on its Strings plans. A product that grows its word count (new features) penalizes Phrase; a product that grows its team penalizes Lokalise, where extra Advanced seats run $100/seat/year on top of a $999/month plan.
+- **Entry point.** Phrase's $27 Freelancer plan is the cheapest real entry in the market, but it's built for solo translators, not teams. Lokalise starts at $144 with no cheap door in between. Neither offers a true free plan.
+- **Developer experience.** Lokalise's CLI, OTA updates, and mobile SDKs are the reason companies like Notion and Mastercard picked it; over-the-air translation pushes mean UI strings update without an app release. Phrase counters with the deeper TMS pedigree (it absorbed Memsource) and stronger workflow automation.
+- **The jump problem.** Phrase's gap between $27 and $525 is the worst on-ramp in the category. Lokalise's Explorer → Growth jump ($144 → $375) is smoother but still 2.6x.
+
+If your team is 3-10 engineers shipping a product in 5-15 languages, Lokalise is the more predictable bill. If you run a localization function with agency linguists and heavy TM reuse, Phrase's memory economics usually win at scale.
+
+## Crowdin vs Smartling: Pick by Team Size, Not the Feature List
+
+Crowdin vs Smartling is really a question about who does the work. Crowdin assumes your team and community translate; it charges for hosting and coordination, and its unlimited-translator-seats policy on every paid plan means adding linguists costs nothing. Smartling assumes Smartling does the work — its translation services are bundled into the engagement, with certified project managers and a satisfaction guarantee (unhappy with output, they redo it free).
+
+For developers, Crowdin's continuous localization story is the practical differentiator: Git integration detects new strings, the pipeline pre-translates, reviewers approve, and an auto-generated pull request ships translations back through CI/CD. Set up once, it runs in the background on every commit — which is how the platform claims an 85% reduction in manual localization work. Whether that specific number survives contact with your codebase is doubtful; the workflow pattern itself is real and it's the main reason Crowdin dominates open-source projects.
+
+Smartling, meanwhile, is built for the enterprise marketing stack: 50+ pre-built connectors into WordPress, Contentful, Salesforce, Marketo, Zendesk, and Adobe Experience Manager. If your localization volume is 100K+ words a year across marketing sites, help centers, and campaigns — and you'd rather buy outcomes than manage vendors — Smartling's all-in economics can genuinely beat running Crowdin plus an agency. The catch is contract rigidity: volume commitments mean if you commit to 1M words and translate 600K, you pay for 1M.
+
+## The Gotchas That Show Up on Month Two
+
+Every one of these platforms has a billing mechanic that isn't on the hero section of the pricing page. This is the table to screenshot before you sign anything:
+
+| Platform | The trap | What it costs you | Verdict |
+|---|---|---|---|
+| Crowdin | Hosted words multiply by target language | 10th language = 10x word usage; Team plan caps at 100K words | Cheapest to start, most expensive to sprawl |
+| Phrase | Annual-only billing + $27→$525 jump | Cash upfront; no monthly option on any tier | Budget shock if you misjudge the tier |
+| Lokalise | Pro AI words are annual bundles | Overage or tier-upgrade when 40K-150K runs out mid-year | Fine for steady output, painful for bursts |
+| Smartling | Volume commitments + 180-day TM purge on free tier | Pay for unused words; re-translate everything if you don't upgrade | Only negotiable if you negotiate |
+
+Two of these deserve emphasis. First, the hosted-words multiplier is not a Crowdin scam — every legacy TMS prices this way or worse — but it means language-count planning is a budget decision, not an afterthought. Ten languages isn't twice five; it's twice five, and 20 languages is a different plan tier. Second, Smartling's translation-memory purge on the Core tier is a data cliff: TM reuse is where 60-80% of cost savings in localization come from, so losing it means re-paying full price for work already done. If you evaluate Smartling, export your TM before the 180-day window closes.
+
+## Which One Fits Your Team — A Straight ROI Breakdown
+
+Price the same fictional job on all four AI localization tools — 50,000 source words, 10 languages — and the spread tells the story:
+
+- **Solo developer or open-source project:** Crowdin's free plan (60K hosted words, unlimited translators, Crowdin AI included) is untouchable. Apply for the open-source license and limits disappear entirely.
+- **Seed-stage product team (2-8 people, 3-10 languages):** Crowdin Pro at $50/month, or Phrase Freelancer at $27 if you're translating solo with a freelancer network. Skip Lokalise until you're past $10K MRR — its floor is high.
+- **Scale-up (10-50 people, product + marketing content):** Lokalise Growth at $375/month with its unlimited hosted words and 40K AI words, or Phrase Team at $1,245 if TM reuse is high and you're coordinating agencies.
+- **Enterprise (marketing-heavy, 100K+ words/yr, multiple brands):** Smartling, but only after negotiation. Vendr data shows buyers average 14% savings off quotes, with volume commitments and prepayment the main levers. Get the per-word rates and the TM retention terms in writing.
+- **Translation agency / LSP:** Phrase Professional ($525, unlimited TMS seats) is purpose-built for you; none of the others make sense.
+
+The honest ROI math: on a 50,000-source-word product in 10 languages (500,000 hosted words), Crowdin Team runs $1,800/year before translator costs, Lokalise Growth runs $4,500/year before AI overages, and Smartling's median contract is $60,000/year including services. What you're buying at the high end is execution, not software — Smartling's project managers and quality guarantees replace work you'd otherwise pay an agency for. If you have someone in-house to run the pipeline, the low-end tools do the same job for a fraction of the cost.
+
+## Frequently Asked Questions
+
+### What is the best translation management system for small teams?
+
+For most small software teams in 2026, Crowdin is the best translation management system on price-to-capability: a free tier that actually works, Pro at $50/month with unlimited translator seats, and AI included on every plan. Phrase's $27 Freelancer plan wins only if one person manages everything. Lokalise is stronger than both on developer tooling but starts at $144/month, which is hard to justify under 10 employees.
+
+### How much does Lokalise cost in 2026?
+
+Lokalise pricing after the 2026 restructure: Explorer at $144/month, Growth at $375/month, and Advanced from $999/month, all on annual billing, with Enterprise custom. Explorer includes unlimited hosted words and unlimited Standard AI/MT words; stronger Pro AI translation is bundled at 40K-400K words per year depending on tier. Older third-party listings showing $120-$825 reflect the previous plan names — always check the official pricing page.
+
+### Is there a cheaper alternative to Smartling?
+
+Yes, several. Crowdin Team at $150/month handles the same continuous-localization workflow for software content. Lokalise Growth at $375/month covers product teams that want managed AI translation allowances. Smartling's real competition is its own bundled services — if you don't need Smartling to supply translators and project managers, you're paying enterprise prices for software you can get for $2-5K a year. The free Core tier is worth trying first, but export your translation memory before the 180-day retention window closes.
+
+### What are hosted words and why do they multiply?
+
+Hosted words = source words × number of target languages, and it's the standard capacity metric for legacy TMS pricing. Upload 500 words into a project with 10 target languages and you consume 5,000 hosted words. Crowdin's Free (60K) and Pro (60K) plans both hit their ceiling quickly in this model, so count languages before words when forecasting. Lokalise abandoned this model in 2026 with unlimited hosted words — one reason its flat plans look expensive but scale more gently.
+
+### Can AI replace human translators for localization?
+
+Not fully, and the platforms themselves don't pretend otherwise. AI pre-translation now handles the bulk of first drafts — Smartling claims 99% workflow automation and Crowdin's pipeline sends AI output to human review by design. But UI strings with placeholders, legal copy, and culturally loaded marketing text still need human review; Smartling's own quality-estimation system exists precisely to route the risky 10-20% to people. The realistic 2026 model is AI for 80% of volume, humans for the parts where a mistranslation costs money.
+
+## Bottom Line
+
+The right pick among today's AI localization tools comes down to a single question: who's doing the work? If your team is — Crowdin, with a free tier to start and $50/month to go private. If AI and bundled services should — Smartling, at a median $60K/year, negotiated hard. If you're a product team that wants the best developer experience and predictable flat billing — Lokalise Growth at $375/month. If you run agencies and live on translation memory reuse — Phrase, starting from $27 but realistically $525+/month. The worst decision is picking on feature checklists: all four translate strings into all your languages. Price the same job on each platform — your real word count times your real language count — and the vendor that survives that math is your answer.
