@@ -14339,5 +14339,73 @@
         "answer": "Realistically one to four weeks. New sellers get just 4 active gigs and start with zero search visibility against sellers holding hundreds of reviews, so the first sale usually comes from either a very specific niche gig (broad categories are owned by veterans), aggressive intro pricing for your first five to ten orders, or Buyer Requests. The reviews from those early cheap orders are the actual asset - they're what move you onto page one and let you raise prices."
       }
     ]
+  },
+  {
+    "name": "PromptBase",
+    "slug": "promptbase",
+    "url": "https://promptbase.com/sell",
+    "category": "AI Income",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "color": "#6d5ef2",
+    "emoji": "🧠",
+    "platform": "Web",
+    "price": "Free to list · keep 80%",
+    "pricing_details": "Free to create a seller account with up to 5 free listings (paid options for more). Marketplace sales carry a 20% commission - you keep 80%. Sales driven through your own referral link carry 0% commission, so you keep the full price. Custom prompt jobs commissioned directly from you carry a 10% commission. No subscription, no listing fees, no minimum payout: earnings pay out weekly via PayPal or Stripe. Buyer-side prompt prices range from $1.99 to $19.99, with most listings between $3 and $8.",
+    "rating": "⭐ 4.2",
+    "visits": "1M+/mo",
+    "published": true,
+    "created_date": "2026-09-14",
+    "tags": [
+      {
+        "text": "Marketplace"
+      },
+      {
+        "text": "Sell Prompts"
+      },
+      {
+        "text": "0% own-link",
+        "type": "free"
+      }
+    ],
+    "features": [
+      "Marketplace with built-in buyer traffic for tested prompts - people arrive searching for a specific Midjourney style or a cold-email structure, ready to pay $3-8",
+      "0% commission on sales you drive yourself through your own referral link - the 20% cut only applies to buyers the marketplace found for you",
+      "Every listing is human-reviewed before going live (1-3 days), which filters the spam that drowns free prompt sites",
+      "No-code App Builder packages prompts into embeddable interactive apps, so a prompt can become a small product instead of a text file",
+      "Custom job board lets buyers hire you directly for bespoke prompts at a 10% commission - half the marketplace rate"
+    ],
+    "pros": [
+      "The fee split is unusually honest: 20% only on marketplace-driven sales, 0% on your own link - most marketplaces charge the full cut on every sale including the ones you brought yourself",
+      "Zero upfront cost: free account, 5 free listings, no minimum payout, weekly payments through PayPal or Stripe",
+      "Human review before publishing is a real trust signal - buyers know a listed prompt was tested, which supports prices a free prompt dump could never charge",
+      "Built-in demand research: browsing what sells (and at what price) across ChatGPT, Claude, Midjourney and image models is a free education in what people will pay for",
+      "Custom jobs at 10% commission are a genuine step up - a bespoke prompt for a business can price at $50-200 where a generic listing sits at $5"
+    ],
+    "cons": [
+      "The product is trivially copyable - a prompt is text with no watermark or license key, and buyers can share it the second they receive it",
+      "Shelf life is short: models get revised two or three times a year, and a prompt tuned to one version drifts until it quietly stops working",
+      "Volume math is brutal at $5 a sale - 80% of $5 is $4, so 100 sales earns $400; most listings never get close to that without a niche and visible example outputs",
+      "What sells is the preview, not the prompt - if your example outputs look generic, the listing dies regardless of how good the prompt is",
+      "Five free listings cap your storefront until you pay, and support response times are slow for a platform this size"
+    ],
+    "description": "The marketplace where prompt engineers sell tested prompts for ChatGPT, Claude, Midjourney and more - free to list, 80% revenue share on marketplace sales and 0% when buyers come through your own link.",
+    "content": "## What PromptBase Actually Is (From a Seller's Side)\n\nPromptBase launched in 2022 and is now the largest dedicated marketplace for buying and selling AI prompts - tested prompts for ChatGPT, Claude, Midjourney, DALL-E, Stable Diffusion and friends, with listings priced from $1.99 to $19.99 and most sitting between $3 and $8. The pitch is simple: buyers pay a few dollars to skip trial and error; sellers get paid for prompts they already built.\n\nThe detail that matters: every submission goes through human review before it goes live, usually 1-3 days. Reviewers test whether the prompt actually does what the listing claims. That gate is the whole reason a prompt here can charge $6 when the same text would drown on a free prompt-sharing site.\n\n## 💰 The Money Angle\n\nFive ways this turns into income, in the order I would pursue them:\n\n1. **List tested prompts in a narrow niche.** Not \"10 ChatGPT prompts for writing\" - that market is saturated. Think \"cold email prompts for solar installers\" or \"Midjourney prompts for product photography on white backgrounds\". Marketplace traffic finds you; PromptBase takes 20%.\n2. **Route your own audience through your referral link.** This is the killer feature almost nobody uses properly: sales from your own link carry **0% commission**. Post on X, Reddit or a newsletter with your link and you keep the full price.\n3. **Custom prompt jobs.** Buyers commission you directly at a 10% commission rate. This is where real money lives - a business needing a bespoke prompt for a repeatable workflow will pay $50-200, not $5.\n4. **Package prompts as apps.** The built-in App Builder turns a prompt into an embeddable interactive mini-app - a demo that also markets your listings.\n5. **Use it as demand research, then sell bigger elsewhere.** Watch what sells, then bundle refined packs at $15-29 on Gumroad or Payhip where you keep more margin and own the buyer relationship.\n\nThe honest math: 80% of a $5 sale is $4. A storefront of 10 listings in a good niche might make $50-150/month. The sellers who treat PromptBase as a storefront for a prompt *system* - packs, updates, custom work - do meaningfully better than those who upload three prompts and wait.\n\n## 💵 What It Really Costs\n\n| Item | Cost |\n|------|------|\n| Seller account | Free |\n| Listings | 5 free (paid options for more) |\n| Marketplace sale | 20% commission (you keep 80%) |\n| Sale via your own link | 0% commission (you keep 100%) |\n| Custom job | 10% commission |\n| Payouts | Weekly via PayPal or Stripe, no minimum |\n\nNo subscription, no listing fees, no minimum payout threshold. The fee structure rewards sellers who bring their own audience - which is exactly how it should work.\n\n## ⚔️ PromptBase vs The Field\n\n| | PromptBase | Gumroad / Payhip | Free prompt sites |\n|---|---|---|---|\n| Built-in buyer traffic | Yes - people search prompts here to buy | None - you bring every visitor | Traffic, but nobody pays |\n| Trust signal | Human review before listing | Your reputation | None - quality is a lottery |\n| Commission | 20% marketplace / 0% own link | ~10% payment processing, 0% platform | - |\n| Customer relationship | Platform holds buyers | You own the email list | - |\n| Copy protection | None (text is text) | None | - |\n\nPractical read: PromptBase for discovery and first sales, Gumroad or Payhip for margin and the list. The two are complements, not competitors.\n\n## 🎯 Bottom Line\n\nIf you already build prompts you actually use, listing the best of them costs nothing and reviewed status gives them a price floor free sites cannot match. Just go in with clear eyes: the product is copyable text with a shelf life tied to model versions, previews sell better than prompts, and \"passive income\" claims from three listings are fantasy. Bring your own link everywhere. ",
+    "faq": [
+      {
+        "question": "How much can you realistically earn selling prompts on PromptBase?",
+        "answer": "Set expectations low, then beat them with volume and custom work. At a typical $3-8 price point, 80% revenue share means $2.40-6.40 per marketplace sale. A focused storefront of 10-20 listings in a narrow niche, promoted occasionally, plausibly makes $50-300/month; top sellers with strong preview images and regular new listings report four figures, and custom jobs (10% commission) are where individual jobs pay $50-200. Three generic listings uploaded once will earn close to nothing - the sellers making real money treat listings like a product line, with good example outputs and a clear niche."
+      },
+      {
+        "question": "Can buyers just copy and share my prompts after purchase?",
+        "answer": "Yes, trivially - a prompt is text with no watermark or license key, and there is no realistic technical protection. The practical defense is packaging: a listing that is a curated system (ordered variations, negative prompts, parameter notes, use-case guidance) is far more work to redistribute usefully than a few clever lines, and the human-review badge plus your review history is part of what buyers pay for. Price and structure accordingly instead of relying on protection that does not exist."
+      },
+      {
+        "question": "What happens to my listings when the AI model they were built for gets updated?",
+        "answer": "They degrade - models are revised two or three times a year, and a prompt tuned to a specific version drifts. You have three defensible options: push an updated version to past buyers where the platform allows it, sell a version-two pack as a separate listing, or state the exact model version on the listing and make no update promises. What is not defensible is implying lifetime updates and not shipping them - buyers review, and the marketplace's credibility rests on listings doing what they claim."
+      }
+    ]
   }
 ]
