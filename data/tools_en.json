@@ -14407,5 +14407,70 @@
         "answer": "They degrade - models are revised two or three times a year, and a prompt tuned to a specific version drifts. You have three defensible options: push an updated version to past buyers where the platform allows it, sell a version-two pack as a separate listing, or state the exact model version on the listing and make no update promises. What is not defensible is implying lifetime updates and not shipping them - buyers review, and the marketplace's credibility rests on listings doing what they claim."
       }
     ]
+  },
+  {
+    "name": "Wirestock",
+    "slug": "wirestock",
+    "url": "https://wirestock.io/creators/sell-your-content",
+    "category": "AI Income",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "color": "#3b82f6",
+    "emoji": "📸",
+    "platform": "Web",
+    "price": "Free to join · commission-based",
+    "pricing_details": "Signing up and uploading is free; Wirestock earns by taking a cut of licensing income instead of charging subscription fees. The historical model took 15% of marketplace royalties, and that cut still applies to content distributed before the January 2026 pivot, which keeps earning on Adobe Stock, Shutterstock, Getty, iStock, Alamy, Dreamstime and Freepik. For the new channels - AI training-data licensing and paid creative projects - the revenue split is not published; approved content earns a commission each time it is licensed as part of a collection, and project work pays per assignment. Payouts go out monthly, and the referral program pays 10% of a referred creator's royalties, capped at $25 per referral.",
+    "rating": "⭐ 4.0",
+    "visits": "300K/mo",
+    "published": true,
+    "created_date": "2026-09-15",
+    "tags": [
+      {
+        "text": "Stock Media"
+      },
+      {
+        "text": "AI Training Data"
+      },
+      {
+        "text": "Free to join",
+        "type": "free"
+      }
+    ],
+    "features": [
+      "Upload photos, illustrations, video or AI art once and keep earning every time the content gets licensed into a buyer collection - no per-download admin work",
+      "Paid creative projects: apply to freelance jobs in photography, illustration, graphic design and 2D game art, matched to your portfolio",
+      "Accepts AI-generated content with clear rules - declare the model used, tag it properly, and skip anything with real-person likenesses or copyrighted characters",
+      "700K+ creators and $10M+ in total creator payouts, with earnings from every channel consolidated into one monthly payment"
+    ],
+    "pros": [
+      "One of the few places a hobbyist can realistically license content to AI companies - the dataset side is real business, not a landing page, with 50M+ assets in the catalog and 1M+ pieces sourced monthly",
+      "Genuinely friendly to AI art: clear submission rules instead of a blanket ban, and the review team tells you exactly what fails (eyes, fingers, IP characters, near-duplicate batches)",
+      "Zero upfront cost and one consolidated monthly payout - no juggling six contributor dashboards and six minimum-payout thresholds",
+      "The referral program (10% of a referral's royalties, up to $25 each) is a small but real bonus if you run an audience"
+    ],
+    "cons": [
+      "The headline feature died in January 2026: new uploads no longer go to Adobe Stock, Shutterstock or any third-party marketplace, so old reviews describing one-click distribution are out of date",
+      "The revenue split for training-data licensing is not published anywhere - you approve content, it earns 'a commission', and you find out the rate from your dashboard, which makes income math impossible before you commit",
+      "Veteran contributors on microstock forums treat the pivot with open skepticism ('a Fiverr for photographers'), and no third-party income reports for the new model exist yet",
+      "AI art quality bar is high and spam-sensitive: simple landmarks, portraits and scenery from the same prompt get rejected, so the 'upload 500 images and forget' strategy does not work"
+    ],
+    "description": "Wirestock was the one-upload-to-every-stock-site shortcut; since January 2026 it no longer sends new work to Adobe Stock or Shutterstock, and instead pays creators through AI training-data licensing and paid creative projects. If you have a pile of photos, illustrations or AI art, this review covers what the pivot actually means, what still earns, and whether the new model is worth your upload time.",
+    "content": "## What Wirestock Actually Is (After the 2026 Pivot)\n\nIf you read an older review, stop and reset: the Wirestock those reviews describe no longer exists. From 2019 through late 2025, Wirestock was an aggregator - you uploaded photos, vectors, video or AI art once, their system wrote the keywords, and they pushed everything to Adobe Stock, Shutterstock, Getty, iStock, Alamy, Dreamstime and Freepik under one umbrella account, taking 15% of your royalties for the privilege. That product worked, raised a $2.3M seed round in 2022, and landed a Getty distribution deal the same year.\n\nOn January 14, 2026, the team emailed every contributor: starting January 20, new submissions would no longer go to any third-party marketplace. The company is now a sourcing platform for AI training data and paid creative projects. Content already distributed to marketplaces stays live and keeps earning (still at the 15% cut), and payouts are unaffected. The current numbers on their own site: 700K+ registered creators, 50M+ pieces of content, $10M+ paid out to creators, roughly a million assets sourced every month.\n\nSo what you get today is three earning channels:\n\n- **Dataset licensing.** Approved uploads sit in collections that AI labs license for model training. You earn a commission each time your content is licensed. The split is not published.\n- **Paid creative projects.** Apply to freelance jobs - photography, illustration, graphic design, 2D game art - and get matched based on your portfolio. This pays per project, like any freelance gig.\n- **Legacy marketplace royalties.** Only for content uploaded before January 20, 2026. If you have old work on the platform, it keeps producing.\n\n## The Money Angle\n\nThe honest framing: Wirestock is now a bet that \"selling to AI companies\" beats \"selling to ad agencies.\" Here is how a working creator should think about each channel.\n\n**Training-data licensing** is the interesting one. The demand is real - AI labs need cleared, diverse, high-quality images and video, and Wirestock's catalog of 50M+ vetted assets is the product. The economics for you depend entirely on an unpublished commission rate, so treat your first months as an experiment: upload a few hundred of your strongest pieces, watch the dashboard, and compute your own effective rate per image. If your library earns $0.01 per image per month, a 5,000-image library is $50/month of true passive income; if it earns $0.10, the same library pays your rent. Nobody can tell you which number you'll get - which is exactly why you should test before you bulk-upload.\n\n**Paid projects** are the reliable floor. These are client jobs with defined scopes - think product photography sets, illustration batches, game art packs. Rates are negotiated per project, and this is where skilled people make actual money today. If you have real photography or design skills, start here; the passive licensing income follows as a side effect of building your approved portfolio.\n\n**The referral program** pays 10% of a referred creator's royalties, capped at $25 per person. Modest, but if you publish content about AI tools or photography, a Wirestock link in your bio costs nothing.\n\nFor AI artists specifically: Wirestock still accepts AI-generated work with rules - declare the model used (Midjourney, Nano Banana, Stable Diffusion, whatever), tag it as AI, fix the eyes and fingers, and don't dump 50 near-identical renders from one prompt. Note that Getty and iStock themselves still refuse AI art entirely, so the aggregator route that once got your AI images into premium agencies is gone; your AI work now competes only inside Wirestock's own licensing channels.\n\n## What It Really Costs\n\n| Item | Cost |\n|---|---|\n| Account and uploads | Free |\n| Commission on legacy marketplace royalties (pre-Jan 2026 content) | 15% |\n| Commission on training-data licensing | Not published |\n| Paid creative projects | Negotiated per project (platform takes a cut) |\n| Referral payout | 10% of referral royalties, max $25 per referral |\n| Payment schedule | Monthly, consolidated across channels |\n\nThere is no subscription to contribute. The old Premium tiers (roughly $6.49-$12.99/month for faster review and more marketplace submissions) made sense only when marketplace distribution existed; with that gone, the paid-tier pitch has largely disappeared from the site along with its pricing page.\n\n## vs The Field\n\n| | Wirestock | Adobe Stock (direct) | Shutterstock (direct) |\n|---|---|---|---|\n| New marketplace distribution (2026) | No - removed Jan 20, 2026 | Yes, native | Yes, native |\n| Royalty rate | Unpublished (licensing) | 33% | 15-40% tiered |\n| AI art accepted | Yes, with disclosure rules | Yes, mandatory AI tag | Yes, AI label required |\n| Review speed | Varies; historically weeks on free tier | Days | Days |\n| Admin burden | One dashboard, one payout | Separate account, $25 min payout | Separate account, $35 min payout |\n\nThe practical takeaway: if your goal is stock marketplace income in 2026, submit to Adobe Stock and Shutterstock directly and keep 100% of a published royalty rate. Wirestock is only worth it for the thing those agencies don't offer - licensing into AI training datasets and getting matched with paid creative projects. Different product, different math.\n\n## Bottom Line\n\nWirestock in 2026 is a relocated bet. The convenience tool that most reviews describe is dead, and pretending otherwise would waste your upload quota. What remains is a legitimate but unproven channel for selling your existing photo, video and AI-art library to AI companies, plus a real freelance project board. Sign up free, upload a few hundred of your best pieces (not your whole hard drive), give the dashboard two months, and let the numbers decide whether your archive graduates from shelfware to income. If the licensing split turns out to be insulting, you've lost nothing but review time - and if it isn't, you own passive income on work you already made.",
+    "faq": [
+      {
+        "question": "Can I still sell AI-generated art on Wirestock?",
+        "answer": "Yes - and honestly, the AI rules are clearer than on most stock sites. You must declare which model generated the image, tag it as AI in the metadata, and pass the quality bar (clean eyes and fingers, correct anatomy, no artifacts). You cannot upload anything depicting real identifiable people without a model release, or copyrighted characters and brands. What changed in January 2026 is where it sells: your AI art now earns through Wirestock's own licensing channels and dataset collections instead of appearing on Adobe Stock or Getty, who take new distribution from no one through Wirestock anymore."
+      },
+      {
+        "question": "How much money can I realistically make with Wirestock now?",
+        "answer": "Nobody can give you a trustworthy number, including Wirestock, because the licensing commission rate is not published. What we know: $10M+ has been paid out across 700K+ creators, which averages out to modest per-creator earnings, and the forum consensus is that the old marketplace royalties were the main income for most contributors. The realistic plan is to test with a few hundred images over two months, read your own dashboard, and scale only if your per-image rate justifies bulk uploading. Paid creative projects are the one channel with predictable, negotiable pay today."
+      },
+      {
+        "question": "Is my old content still earning on Adobe Stock and Shutterstock through Wirestock?",
+        "answer": "Yes. The January 2026 announcement explicitly kept all previously distributed content live and earning, with payouts unaffected - the 15% commission still applies to that legacy income. Only new submissions stopped going to third-party marketplaces. One catch worth knowing: your files live under Wirestock's umbrella accounts, so moving them to your own contributor profiles later means withdrawing and re-uploading, which resets your sales history on those agencies."
+      }
+    ]
   }
 ]
