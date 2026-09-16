@@ -14472,5 +14472,73 @@
         "answer": "Yes. The January 2026 announcement explicitly kept all previously distributed content live and earning, with payouts unaffected - the 15% commission still applies to that legacy income. Only new submissions stopped going to third-party marketplaces. One catch worth knowing: your files live under Wirestock's umbrella accounts, so moving them to your own contributor profiles later means withdrawing and re-uploading, which resets your sales history on those agencies."
       }
     ]
+  },
+  {
+    "name": "Amazon KDP",
+    "slug": "amazon-kdp",
+    "url": "https://kdp.amazon.com/",
+    "category": "AI Income",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "color": "#ff9900",
+    "emoji": "📚",
+    "platform": "Web",
+    "price": "Free to publish · up to 70% royalty",
+    "pricing_details": "Free to publish - no listing fees, no monthly plan; Amazon only earns when you sell. Ebooks: 70% royalty when priced $2.99-$9.99 (minus a $0.15/MB delivery fee), 35% royalty outside that window with no fee. Paperbacks: 60% of list price minus printing cost - a 300-page black-and-white 6x9 prints for roughly $3.60-4.50 in the US. Kindle Unlimited: books in KDP Select (90-day Amazon exclusivity) earn per page read, historically about $0.004-0.005 per page, so a full read of a 300-page novel pays roughly $1.35-1.50. Royalties arrive about 60 days after the end of the sale month.",
+    "rating": "⭐ 4.3",
+    "visits": "N/A (Amazon)",
+    "published": true,
+    "created_date": "2026-09-16",
+    "tags": [
+      {
+        "text": "Marketplace"
+      },
+      {
+        "text": "Self-Publishing"
+      },
+      {
+        "text": "Print-on-Demand",
+        "type": "free"
+      }
+    ],
+    "features": [
+      "Free ebook and print-on-demand publishing with zero upfront fees - Amazon only earns when a copy sells",
+      "Up to 70% ebook royalty in the $2.99-$9.99 window, paid in most major marketplaces",
+      "Kindle Unlimited page-read earnings through KDP Select - readers binge series and you get paid per page, not per sale",
+      "Paperback and hardcover printed on demand with no inventory - Amazon handles printing, shipping, and returns",
+      "Access to Amazon's search demand: buyers arrive already looking for books in your niche, no audience required"
+    ],
+    "pros": [
+      "Truly zero cost to start - no subscription, no listing fee, no minimum payout threshold",
+      "The marketplace brings the buyers; a well-keyworded title in a real niche can sell for years with no ad spend",
+      "You keep your copyright and can unpublish or re-price at any time - it is a non-exclusive publishing deal",
+      "Print-on-demand paperbacks need no inventory, no upfront print run, and no shipping logistics on your side",
+      "KENP earnings from KU bingers can out-earn direct sales for long series fiction - one committed reader can pay more than three buyers"
+    ],
+    "cons": [
+      "You are a tenant on Amazon's platform - rankings, visibility, and even account standing are controlled by an algorithm you cannot appeal quickly",
+      "Royalties arrive about 60 days after the sale month, which makes cash-flow planning miserable at the start",
+      "The 70% window has a delivery fee per MB that quietly guts royalties on image-heavy books - uncompressed picture books can earn more at 35%",
+      "Low-content journals and AI-generated books have flooded several niches; most new listings in those lanes sell close to nothing",
+      "Visibility usually means running Amazon Ads - a separate skill where unprofitable beginners subsidize Amazon's ad revenue"
+    ],
+    "description": "Amazon's free self-publishing platform - publish ebooks and print-on-demand paperbacks with up to 70% royalties, Kindle Unlimited page-read income, and Amazon's book-buying traffic already in the door",
+    "content": "## What KDP Actually Is (From a Publisher's Side)\n\nAmazon KDP (Kindle Direct Publishing) is Amazon's self-publishing platform, running since 2007. You upload an ebook, a paperback, or a hardcover manuscript, set your price, and Amazon handles checkout, printing, shipping, and customer service. You keep the rights, and there is no upfront cost anywhere in the pipeline.\n\nThe part people miss: this is a marketplace with demand already inside it. Amazon is where people go to buy books - hundreds of millions of them. You do not bring an audience; you position a title where buyers are already searching. That is the same structural advantage Etsy has over Gumroad, applied to books.\n\n## The Money Angle\n\nFive realistic ways this pays, roughly in order of how I would attack it today:\n\n1. **Fiction series enrolled in KDP Select.** Kindle Unlimited readers binge series, and page-read earnings stack fast when completion rates are high. A five-book series fully read pays more in KENP than five separate $2.99 sales. Genre fiction (romance, thriller, LitRPG) is where this works.\n2. **Niche non-fiction workbooks and guides.** Narrow how-to topics with steady search demand - a $6.99-$9.99 ebook at 70% nets $4.50-$6.50 per sale. Pricing longer or pricier non-fiction is where the 70% window actually binds.\n3. **Paperback workbooks as a price anchor.** Print costs are low for text-heavy books, and a $14.99-$19.99 paperback can clear $4-6 per copy. Digital-plus-print bundles sell better than either alone.\n4. **Low-content books (journals, planners, log books).** Zero writing, covers and interiors you can assemble in a day. Be honest with yourself here: this niche is saturated and most listings sell nothing. It only works at volume with genuine keyword research.\n5. **AI-assisted production, disclosed.** AI-drafted drafts, AI-generated covers and interiors are allowed - but Amazon requires you to disclose AI-generated content at upload, and limits AI-generated titles to three per day. Assist, do not auto-generate; the market punishes lazy AI books and so does Amazon's review system.\n\n## What It Really Costs\n\n| Item | What you pay / earn |\n|---|---|\n| Publishing an ebook or print book | $0 - no fees, no subscription |\n| Ebook royalty, $2.99-$9.99 | 70% minus $0.15/MB delivery fee |\n| Ebook royalty outside that window | 35%, no delivery fee |\n| Paperback royalty | 60% of list minus print cost (~$3.60-4.50 for a 300-page B&W 6x9) |\n| Kindle Unlimited page reads | ~$0.004-0.005 per page (KENP), KDP Select only |\n| KDP Select | Free, but 90-day ebook exclusivity to Amazon |\n| Payout timing | About 60 days after the sale month |\n\nThe delivery fee is the trap for illustrated work: a 10 MB picture book at $4.99 loses $1.50 of its $3.49 royalty to the fee. Compress images before upload or the 35% tier can actually pay better.\n\n## KDP vs The Field\n\n| Platform | Upfront cost | Your cut | Traffic |\n|---|---|---|---|\n| Amazon KDP | $0 | 35-70% (ebook) | Amazon's own book buyers |\n| Gumroad | $0, ~10% flat | ~90% | None - you bring buyers |\n| Etsy (digital) | $0.20/listing + ~10-13% fees | ~85% | Marketplace, but not book buyers |\n| Payhip | $0, 5% | 95% | None - you bring buyers |\n\nKDP takes the biggest cut and pays the slowest - and it is still usually the right first stop for books, because no other platform hands you this many buyers who arrived with a credit card already thinking about books.\n\n## The Honest Problems\n\n- **You are a tenant.** Amazon owns the customer, the reviews, and the ranking algorithm. Your account can be suspended over metadata it flags, and appeals take weeks.\n- **The 60-day payout lag is real.** Money earned in January lands at the end of March. Plan cash flow around it.\n- **Visibility usually costs money.** Most successful publishers run Amazon Ads, and learning to run them profitably is a second skill with its own tuition.\n- **Low-content and AI-generated floods have wrecked several niches.** If your plan is \"generate 50 journals with AI,\" you are entering a lottery that thousands of people already lost.\n\n## Bottom Line\n\nKDP is the highest-authority passive-ish asset on this list: publish well-made books in a niche with real search demand, and titles keep earning for years with no hosting, no subscription, and no audience-building requirement. The honest version: it is slow to start, saturated in the lazy lanes, and it pays on Amazon's schedule. If you can write (or competently direct AI to assist on) something people actually search for, nothing else here compounds the same way.",
+    "faq": [
+      {
+        "question": "How much can you realistically earn with Amazon KDP?",
+        "answer": "The spread is enormous and mostly determined by niche choice and catalog depth. A single well-researched niche non-fiction title with decent keywords can make $30-150/month for years; a 10-20 title catalog in a genre that KU readers binge can reach four figures monthly. Most new publishers earn under $100/month because they upload one or two books and stop. The 70% window math matters too: $9.99 nets about $6.84 per sale after delivery fees, so 50 sales is roughly $340. Anyone promising fast KDP money is usually selling a course."
+      },
+      {
+        "question": "Can you publish AI-generated books on Amazon KDP?",
+        "answer": "Yes, with rules. Since late 2023 Amazon requires you to disclose AI-generated content (text, images, or translations) when you publish, and limits AI-generated titles to three per day. AI-assisted work - where you wrote it and AI helped edit or brainstorm - does not need disclosure. Undisclosed AI content that gets flagged risks account action. Practically, Amazon's quality filters and reader reviews punish lazy auto-generated books hard, so AI works best as an assistant on structure, drafts, and covers, with a human doing the judgment."
+      },
+      {
+        "question": "Do I keep my copyright, and should I enroll in KDP Select?",
+        "answer": "You keep full copyright - KDP is a publishing agreement, not a rights grab, and you can unpublish whenever you want. KDP Select is the real decision: it pays per-page Kindle Unlimited earnings and gives you promo tools, but requires 90-day ebook exclusivity, meaning you cannot sell that ebook on Apple Books, Kobo, or your own site during the term. Genre fiction usually benefits from Select; non-fiction with an existing audience elsewhere often earns more going wide."
+      }
+    ]
   }
 ]
