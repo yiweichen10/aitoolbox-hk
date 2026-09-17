@@ -14540,5 +14540,73 @@
         "answer": "You keep full copyright - KDP is a publishing agreement, not a rights grab, and you can unpublish whenever you want. KDP Select is the real decision: it pays per-page Kindle Unlimited earnings and gives you promo tools, but requires 90-day ebook exclusivity, meaning you cannot sell that ebook on Apple Books, Kobo, or your own site during the term. Genre fiction usually benefits from Select; non-fiction with an existing audience elsewhere often earns more going wide."
       }
     ]
+  },
+  {
+    "name": "Udemy",
+    "slug": "udemy",
+    "url": "https://www.udemy.com/teaching/",
+    "category": "AI Income",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "color": "#a435f0",
+    "emoji": "🎓",
+    "platform": "Web / iOS / Android",
+    "price": "Free to teach · 37–97% revenue share",
+    "pricing_details": "Publishing and hosting are free with unlimited courses. Revenue share depends on who brings the buyer: 97% on sales through your instructor coupon or referral link, 37% on marketplace sales Udemy drives (ads, browse, organic), about 25% on mobile-app sales after the 30% Apple/Google fee, and a pooled 15% share of subscription revenue if you opt into the Subscriptions/Udemy Business program. Udemy's Deals Program can sell your course as low as $9.99 regardless of list price. Payouts are monthly via PayPal, Payoneer, or bank transfer with a $10 minimum, and refunded courses come out of your balance.",
+    "rating": "⭐ 4.5",
+    "visits": "70M+",
+    "published": true,
+    "created_date": "2026-09-17",
+    "tags": [
+      {
+        "text": "Online Courses"
+      },
+      {
+        "text": "Marketplace"
+      },
+      {
+        "text": "Built-in demand",
+        "type": "free"
+      }
+    ],
+    "features": [
+      "70M+ students search the marketplace directly, so a well-titled course keeps selling from search without you running ads or writing a newsletter",
+      "Publish as many free and paid courses as you want at zero cost - hosting, checkout, refunds, and student support are all handled for you",
+      "Instructor coupon links pay 97% revenue share, so every student you bring from YouTube, email, or social media is worth 2.6x a marketplace sale",
+      "Marketplace Insights shows search demand, competition, and median monthly revenue per topic before you spend 40 hours recording anything",
+      "Connect 1:1 lets you sell paid coaching sessions on top of course sales at an 80% share, and quizzes, assignments, and coding exercises come built in"
+    ],
+    "pros": [
+      "The cheapest real audience test in online teaching: you can validate a course topic against real search volume for free instead of building an audience for a year first",
+      "Zero upfront cost and zero hosting bills - unlike Kajabi or Teachable you never pay a platform fee, Udemy only takes a cut when a sale actually happens",
+      "The 97% instructor-coupon rate is one of the best splits in the creator economy; a $19.99 self-referred sale nets you about $19.40 versus $7.40 at the 37% marketplace rate",
+      "Marketplace Insights gives real median-revenue data per topic, which is more honesty about demand than most course platforms offer before you record a single lesson",
+      "Courses sell for years - a Python or Excel course published in 2023 still collects marketplace sales today with no maintenance beyond an occasional content refresh"
+    ],
+    "cons": [
+      "The 37% marketplace split is brutal once you do the math: most Udemy sales happen at $9.99-$14.99 during constant sitewide sales, so a marketplace sale nets you $3.70-$5.55 and you need volume in the hundreds per month to matter",
+      "Udemy controls promotional pricing - even if you list at $199.99, the Deals Program can sell your course at $9.99, and opting out of deals costs you algorithmic visibility",
+      "You never get student email addresses - you can only message students through Udemy's own system, so you cannot build your own list off the back of 10,000 enrollments",
+      "Subscription terms have been cut three times between 2024 and 2026 (the instructor pool is now 15%) and Udemy changed them without instructor consent - platform risk is real and precedent exists",
+      "Refunds (30 days, no questions asked) come out of your earnings, and refund rates of 5-15% are normal, so budget for roughly one in ten sales evaporating after the fact"
+    ],
+    "description": "The world's biggest online course marketplace: publish free, teach 70M+ students, and earn 97% on students you bring yourself - 37% on the ones Udemy sends you.",
+    "content": "## What Udemy Actually Is (From an Instructor's Side)\n\nI've taught on Udemy since 2022, and the thing to understand before anything else is that **Udemy is two businesses wearing one shirt**. If a student finds your course through Udemy's ads, its search bar, or its endless $9.99 sitewide sales, you keep 37% of what they paid. If the student arrives through *your* coupon link or referral link - from your YouTube channel, your email list, a Reddit post - you keep 97%.\n\nSame course. Same student. A $19.99 sale pays you $7.40 one way and $19.40 the other.\n\nThat single fact drives every decision you'll make on this platform. Udemy's 70M+ registered students and its search traffic are genuinely valuable - nothing else in the course world hands you an audience of people already searching \"learn Excel\" or \"Python for beginners\" with wallets out. But the marketplace traffic comes at the 37% rate, and Udemy's Deals Program can price your $199.99 course at $9.99 whenever a sale runs, with or without asking you (you opt in once, per course, and opting out tanks your visibility).\n\n## The Money Angle: How Instructors Actually Get Paid\n\n**The realistic playbook, from someone who's watched it work and fail:**\n\n1. **Validate before you record.** Udemy's Marketplace Insights tool (free for instructors) shows search demand and median monthly revenue per topic. Spend a day here before spending 40 hours in front of a microphone.\n2. **Record a course in a search-driven niche.** Tech, business, data, and software skills sell best - the buyers are professionals and the demand is evergreen. K-12 tutoring and live coaching don't fit; Udemy is pre-recorded only.\n3. **List high, sell low.** Set your price at $49.99-$199.99 for perceived value. It will mostly sell at $9.99-$19.99 anyway. The list price is marketing, not income.\n4. **Build your own traffic lane early.** Every student you bring via coupon link pays 97%. The top earners on Udemy are almost all people with a YouTube channel or newsletter feeding the platform - the 37% organic sales are the floor, not the plan.\n5. **Stack a course catalog.** One course is a trickle. Five courses covering related skills (Python basics → data analysis → machine learning) cross-sell to each other inside the marketplace, and the back catalog earns for years with minimal upkeep.\n\n**The honest ceiling:** the median Udemy instructor earns somewhere around $1K-$10K a year - real money, but not rent money. The instructors clearing six figures all have external audiences. Udemy is best treated as a monetization layer and a credibility signal, not a complete business.\n\n## What It Really Costs\n\n| Item | Cost | What it means for you |\n|---|---|---|\n| Publishing / hosting | $0 | Unlimited free and paid courses, no monthly fee |\n| Marketplace sale | You keep 37% | Udemy brings the buyer (ads, search, sales events) |\n| Your coupon / referral link | You keep 97% | You bring the buyer - 2.6x the marketplace rate |\n| Mobile app sale | You keep ~25% | Apple/Google take 30% off the top first |\n| Subscription program (opt-in) | 15% instructor pool | Pooled revenue, cut 3x since 2024 |\n| Connect 1:1 coaching | You keep 80% | Sell sessions at 20% platform cut |\n| Refunds | Deducted from you | 30-day policy, 5-15% refund rates are typical |\n| Payout | Monthly, $10 min | PayPal, Payoneer, or bank transfer |\n\n**The $9.99 problem, made concrete:** 100 marketplace sales a month at $12.99 average nets you about $480. The same 100 sales through your own links nets about $1,240. Everything about succeeding on Udemy is arranging for more of the second column.\n\n## Udemy vs The Field\n\n| | Udemy | Kajabi / Teachable | Skillshare |\n|---|---|---|---|\n| Monthly cost | $0 | $29-$149+ | $0 for instructors |\n| Who brings students | Both (37%/97% split) | You, entirely | Nobody - royalty pool |\n| Your cut | 37-97% | ~97-100% | $0.05-0.15 per watch-hour |\n| Pricing control | Weak (Deals to $9.99) | Full | None |\n| Student emails | Never | Yes | No |\n| Best for | New instructors, search niches | Instructors with an audience | Creative casuals |\n\nThe pattern I'd tell a friend: **start on Udemy if you have no audience and want real demand data for free**; graduate to Kajabi or Teachable once your email list can carry sales at 100% margin; skip Skillshare unless you're doing creative content and treat it as bonus income, since its watch-time royalties pay pennies per student.\n\n## Bottom Line\n\nUdemy is the lowest-risk on-ramp in online course selling: zero cost, real search traffic, honest demand data before you record, and a 97% rate that rewards anyone willing to build their own audience. The costs are the 37% marketplace split, constant $9.99 discounting you don't control, no access to student emails, and terms that have already been cut three times without consent. Use it to learn what sells - then keep feeding it self-referred traffic, and move the rest of your funnel to a platform you own.",
+    "faq": [
+      {
+        "question": "How much money can a new Udemy instructor realistically make?",
+        "answer": "Plan around $0-$3K in your first year unless you bring an external audience. A single new course with no marketing typically nets $3.70-$5.55 per marketplace sale at the 37% split, since most sales happen at $9.99-$14.99 - so 50 sales a month is roughly $200-$270, not thousands. The median instructor earns $1K-$10K a year total. Instructors who cross $100K all share one trait: a YouTube channel or email list feeding sales through 97% coupon links, which more than doubles per-sale income."
+      },
+      {
+        "question": "Why does Udemy sell my $199.99 course at $9.99, and can I stop it?",
+        "answer": "Udemy runs near-constant sitewide promotions and its Deals Program (which you opt into) lets it price courses as low as $9.99 to maximize volume - a higher list price mostly signals value rather than becoming the real transaction price. You can opt out of the Deals Program, but expect a visibility hit, since discounted courses get algorithmic promotion that full-price ones don't. The standard workaround: accept marketplace sales as volume at 37%, and push your own traffic through coupon links at 97% where you set the discount yourself."
+      },
+      {
+        "question": "Does Udemy give me my students' email addresses?",
+        "answer": "No - and this is the structural limitation most instructors discover too late. You can see enrollment numbers and message students through Udemy's own announcement system, but you cannot export a student list or contact anyone off-platform. Ten thousand enrollments build Udemy's asset, not yours. If list-building matters to your business model, use a free lead-magnet course on Udemy for discovery and drive students to your own site or newsletter in the course content itself (within Udemy's rules on external links)."
+      }
+    ]
   }
 ]
