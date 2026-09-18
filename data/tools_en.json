@@ -14608,5 +14608,73 @@
         "answer": "No - and this is the structural limitation most instructors discover too late. You can see enrollment numbers and message students through Udemy's own announcement system, but you cannot export a student list or contact anyone off-platform. Ten thousand enrollments build Udemy's asset, not yours. If list-building matters to your business model, use a free lead-magnet course on Udemy for discovery and drive students to your own site or newsletter in the course content itself (within Udemy's rules on external links)."
       }
     ]
+  },
+  {
+    "name": "Upwork",
+    "slug": "upwork",
+    "url": "https://www.upwork.com/",
+    "category": "AI Income",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "color": "#14a800",
+    "emoji": "💻",
+    "platform": "Web / iOS / Android",
+    "price": "Free to join · ~10% per contract",
+    "pricing_details": "Free to create a profile and browse jobs. Upwork takes a Freelancer Service Fee on earnings: since 2025 it is set per contract at proposal time and ranges 0-15% (most contracts land near 10%), then locks for the life of that contract. No loyalty discount for long-term clients. Connects cost $0.15 each and one proposal uses 4-16+ Connects; free accounts get about 10 free Connects a month, and Freelancer Plus ($14.99/mo) adds a monthly allowance plus bid-range visibility. A one-time contract initiation fee (about $4.99) applies to each new contract. Withdrawals are free via US bank (ACH), a couple of dollars via PayPal/Payoneer, and $30 by international wire. Bring-your-own-client options are cheaper: Direct Contracts carry a reduced fee and Any Hire contracts carry no Freelancer Service Fee.",
+    "rating": "⭐ 4.2",
+    "visits": "20M+",
+    "published": true,
+    "created_date": "2026-09-18",
+    "tags": [
+      {
+        "text": "Freelance Marketplace"
+      },
+      {
+        "text": "Bidding System"
+      },
+      {
+        "text": "Long-term Contracts",
+        "type": "free"
+      }
+    ],
+    "features": [
+      "Clients post jobs and you apply with proposals, so contracts come in months-long shapes - retainers and part-time roles, not one-off $15 gigs",
+      "Escrow on fixed-price milestones and payment protection on tracked hourly work mean you never invoice or chase a late payment yourself",
+      "Client history is visible before you spend a single Connect: hire rate, total spent, ratings, and payment-verified status are on every job post",
+      "Hourly time tracking with work-in-progress screenshots covers you if a client disputes a week of logged time",
+      "Direct Contracts let you bring a client you found elsewhere onto Upwork's escrow at a reduced fee - useful when a referral wants invoicing handled"
+    ],
+    "pros": [
+      "The rate ceiling is real: AI/ML and automation work routinely bills $60-150+/hr, and one multi-month contract can outearn a quarter of Fiverr orders",
+      "On the same dollar you keep about 90% versus Fiverr's 80% - on $3,000 a month that difference is $300, or $3,600 a year",
+      "Escrow and payment protection make it the safest place to work with strangers - milestones fund before you start, and disputes are arbitrated, not DIY",
+      "Client vetting data (payment verified, hire rate, total spent) lets you skip dead-end jobs instead of learning they were a waste after you sent the proposal",
+      "The proposal model rewards research over volume, which favors specialists - a sharp pitch for one well-fit job beats fifty copy-pasted ones, and that is a learnable skill"
+    ],
+    "cons": [
+      "The flat-10% era is over: the fee is now variable (0-15%) and shown only at proposal time, so the same job can price your cut at 15% and there is no negotiation",
+      "Connects are an application tax - about 10 free per month, $0.15 each after that, with proposal boosts running 50-100+ Connects in competitive niches; blind bidding burns $30-100 a month for nothing",
+      "Long-term loyalty got worse, not better: the old system dropped veterans to a 5% fee after $10,000 with a client, the current one never drops below the contracted rate",
+      "New profiles start near-invisible - no reviews, no Job Success Score, and your first three to five contracts usually mean undercutting your rate and weeks of silence",
+      "Generic categories are flooded: the same feed holds $5/hr data-entry spam next to serious engineering jobs, and your real cost (fee + Connects + payout conversion) runs 12-15% of billings, not the advertised 10%"
+    ],
+    "description": "The largest bidding-style freelance marketplace and the best-paying venue for AI-adjacent skills: automation builds, chatbot setup, and AI content ops bill $60-150/hr, with escrow-protected contracts that run for months instead of one-off gigs.",
+    "content": "Upwork is where freelance money actually gets serious. Fiverr sells productized gigs; Upwork runs a labor market - clients post jobs, you bid with proposals, and the contracts that come out of it tend to run months, not afternoons. If your goal is a side income that compounds into something close to a salary, this is the platform built for it.\n\n## What Upwork Actually Is (From a Freelancer's Side)\n\nTwo work shapes exist here: hourly contracts with a desktop time tracker, and fixed-price jobs split into funded milestones. Both run through Upwork's escrow, so you never send an invoice, and both come with protection if the client vanishes or disputes the work - provided you used the platform's tracker and messaging instead of drifting off-site.\n\nTwo numbers shape your experience. The first is your Job Success Score, a rolling grade from completed contracts and client feedback that controls how high you rank in search. The second is your own discipline: the feed shows hundreds of new jobs daily, most of them noise, and every application costs Connects. The freelancers who make money here treat proposals like tailored sales letters, not lottery tickets.\n\n## The Money Angle: Where AI Actually Fits\n\nAI work on Upwork is less about selling AI and more about selling outcomes AI makes you fast enough to deliver:\n\n- **Automation builds** - wiring Make, Zapier, or n8n into a client's sales and support stack. Builds commonly land $1,500-8,000, and maintenance retainers follow.\n- **Chatbot and agent setup** - customer-service bots trained on the client's docs. Small builds start near $500; deeper integrations go five figures.\n- **AI content operations** - running, editing, and fact-checking AI drafts at editorial quality. Editors who can both operate the tools and catch their errors bill $30-80/hr.\n- **Data work** - cleanup, enrichment, and annotation pipelines that AI half-finishes and a human must own.\n- **Integration development** - the top tier. Connecting models into real products bills $60-150+/hr for experienced freelancers.\n\nOne warning from the field: \"prompt engineer\" as a job title is fading. Clients stopped paying for prompts and started paying for working systems. Position yourself at the outcome, not the tool.\n\n## What It Really Costs\n\n| Cost | What you actually pay |\n|---|---|\n| Freelancer Service Fee | 0-15% of earnings, set per contract at proposal time - most land near 10% |\n| Connects | $0.15 each; one proposal uses 4-16+, boosts up to 50-100+ in hot niches |\n| Contract initiation | about $4.99 one-time per new contract |\n| Freelancer Plus (optional) | $14.99/mo for a Connects allowance and bid-range visibility |\n| Withdrawal | free via US ACH; a couple of dollars via PayPal/Payoneer; $30 wire |\n\nThe headline \"10%\" undersells it. Add Connects, initiation fees, and payout currency conversion, and a typical month on Upwork costs 12-15% of billings. And do the fee math correctly: to keep $1,000 you bill $1,111 (divide by 0.9), not $1,100.\n\n## Upwork vs The Field\n\n| Platform | You pay | How work arrives | Best for |\n|---|---|---|---|\n| Upwork | ~10% (variable) + Connects | You bid on posted jobs | Multi-month contracts, retainers, $2k-50k projects |\n| Fiverr | 20% flat, no tiers | Buyers order your gig | Productized small jobs that sell while you sleep |\n| Direct clients / own site | 0% platform fee | You find them yourself | The endgame, once referrals carry you |\n\nThe honest read: Upwork wins on money and contract quality, loses on effort per win. A Fiverr gig can sell while you sleep; an Upwork win takes a researched proposal. The platforms pay for different things.\n\n## Bottom Line\n\nUpwork is the best-paying marketplace for people with genuine AI-adjacent skills, and the most expensive classroom for people \"trying freelancing\" with no niche - Connects will quietly eat $30-100 a month while you figure it out. Pick one narrow offer, send five researched proposals a day instead of fifty generic ones, and let the first two cheap contracts buy the reviews that pull real rates within reach. The fee stings less every month you keep a client, and once a strong relationship forms, Direct Contracts gives you Upwork's escrow at a reduced cut. Just never forget the number that matters: your real cost of doing business here is 12-15%, so price like it.\n",
+    "faq": [
+      {
+        "question": "How much does Upwork actually take per project?",
+        "answer": "The service fee is no longer a flat 10% - since 2025 it is set per contract when you send the proposal, ranging from 0% to 15%, with most contracts near 10%. It locks for the life of that contract. But the fee on your dashboard is not the full cost: add Connects (about $0.15 each, 4-16+ per proposal), the roughly $4.99 contract initiation fee, and payout conversion, and your real cost runs about 12-15% of billings."
+      },
+      {
+        "question": "Why do I see different fee percentages on different jobs?",
+        "answer": "That is the current system, not a bug. Upwork prices the Freelancer Service Fee per contract based on the type of work, and you see the exact percentage before you apply - so read it before spending Connects. Special cases are cheaper: contracts you bring to Upwork yourself through Direct Contracts carry a reduced fee, and Any Hire contracts have no Freelancer Service Fee at all."
+      },
+      {
+        "question": "Can a beginner make money with AI skills on Upwork?",
+        "answer": "Yes, but budget for a slow start. With zero reviews you will either undercut your rate or wait weeks, and the ~10 free monthly Connects run out in about two applications. The beginners who break through pick one narrow offer (say, 'n8n automation for e-commerce brands'), apply to five well-researched jobs a day, and treat the first two contracts as the price of getting reviews. Generic 'I do AI stuff' profiles usually burn $30-100 in Connects and quit."
+      }
+    ]
   }
 ]
