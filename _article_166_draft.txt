@@ -1,0 +1,135 @@
+TITLE: Best AI Document Extraction Tools 2026: Rossum vs Docsumo vs Nanonets vs Klippa — the Per-Page Price Fell to a Penny, the Contract Still Says $18,000
+SLUG: best-ai-document-extraction-tools-2026-rossum-vs-docsumo-vs-nanonets-vs-klippa
+CATEGORY: AI Document Processing
+DATE: 2026-09-19
+DESCRIPTION: The IDP market goes from $10.57B in 2025 to $14.16B in 2026 on its way to $91B by 2034, and 67% of enterprises say they will buy this year. Where the money actually goes: Rossum from $18,000 a year, Docsumo from $134 a month, Nanonets metering at $0.30 a block, Klippa quote-only, Azure at one cent an invoice — plus the exception math that decides which one pays for itself.
+KEYWORDS: AI document extraction tools|rossum vs docsumo|rossum pricing|docsumo pricing|nanonets pricing|klippa pricing|rossum alternatives|intelligent document processing software|AI invoice processing|document extraction API|document extraction cost
+---
+
+Fortune Business Insights tracks intelligent document processing from $10.57 billion in 2025 to $14.16 billion in 2026 and $91 billion by 2034, a 26.2% compound annual rate. Sixty-seven percent of enterprise buyers say they will spend on document AI this year, and finance and accounting should absorb 45.57% of that market.
+
+Now the uncomfortable part. Reading a page has become nearly free. Azure AI Document Intelligence charges $10 per 1,000 pages for its prebuilt invoice model — one cent per invoice. Rossum's published entry price is $18,000 a year on a one-year minimum, no monthly option. Both prices are real. The gap between them is roughly 200 to 1 at realistic volumes, and it is not a quality gap.
+
+That gap is the whole decision. Anyone shopping for AI document extraction tools in 2026 is not choosing an OCR engine. They are choosing how much of the accounts-payable workflow to buy instead of build: the review screen, the exception queue, the approval routing, the ERP write-back.
+
+## What AI document extraction tools actually bill you for in 2026
+
+Every product here quotes a different unit, and the unit is the product. The hyperscalers bill per page of model output. Docsumo bills per page inside a subscription bucket. Nanonets bills per block run, where a block is one step in a workflow. Rossum bills an annual platform contract with a per-document component. Klippa bills nothing public at all.
+
+Two vendors can both advertise "per document" and land 75x apart, and both are technically honest, because one is pricing a model call and the other is pricing a business process. Compare sticker prices without converting to a common unit and you will buy the wrong thing.
+
+## The 2026 price map, vendor by vendor
+
+### Rossum: $18,000 a year, now inside Coupa
+
+Rossum pricing starts at $1,500 a month on an annual contract, $18,000 for the year, with a 14-day trial and no month-to-month option. At 1,000 invoices a month that lands near $1.50 per document, before ERP connectors that buyers report as separately priced.
+
+That money does not buy better reading. Rossum's own published claim is "more than 90% accuracy" — lower than several cheaper products advertise. You are buying the transactional layer: a purpose-built transactional large language model trained on tens of millions of documents, master-data validation in real time, duplicate and fraud flagging, and prebuilt SAP, Coupa, Workday, and Oracle connectors.
+
+Then on May 12, 2026, at Coupa Inspire in Las Vegas, Coupa announced it had acquired Rossum outright. Terms were not disclosed. The two had partnered since 2024, with Rossum's extraction already embedded in Coupa's AP module, and Coupa's stated plan is to push the technology across its entire source-to-pay stack rather than keep it standalone.
+
+Read that twice if you are about to sign a one-year minimum: you are committing to a vendor whose roadmap is now a line item inside somebody else's platform strategy. Coupa's Navi agent fleet plus Rossum's extraction is a coherent product, but the standalone tool you evaluated is no longer the one whose roadmap you were shown.
+
+### Docsumo: the $134 starting line and the page that will not hold still
+
+Docsumo pricing on the vendor's own pages shows Starter at $134 a month for 12,000 pages a year — about $0.13 a page — and Growth quoted variously at $399, $449, and $499 a month depending on which version of the page your browser gets served. That is not a rounding error. It is an A/B test running in production, and buyers are on the wrong side of it.
+
+Independent price trackers that re-fetched Docsumo's page as recently as June and September 2026 log the paid tiers as quote-only, with no published rate at all. Third-party summaries quoting $799 and $2,499 a month are not confirmed on any official page. Treat every Docsumo number you read, including the $134, as a starting point for negotiation rather than a listed price.
+
+The terms matter more than the headline. One-time implementation fees are charged on top of subscription, scaled to document complexity. Monthly plans do not roll unused page credits over; annual plans land all credits upfront. The 14-day trial includes 1,000 pages and 10 user seats — enough to run your worst documents through it before you talk to anyone. SOC 2 Type 1 and GDPR are confirmed on the site, but HIPAA appears on some Docsumo pages and is missing from others, so get a business associate agreement in writing before you sign. And if the output has to land in the system your [accounting software](/articles/best-ai-accounting-software-2026-quickbooks-vs-xero-vs-zoho-books-vs-freshbooks/) already owns, confirm the connector is included rather than an add-on.
+
+### Nanonets: pay per block, and the blocks add up
+
+Nanonets pricing moved to consumption, and this is the most transparent pricing in the category — which cuts both ways. Starter begins with $50 in free credits, no card, and credits that never expire. After that it is $100 a month for 100 credits, spent on block runs at three published rates: simple operations such as formatting and routing at $0.02 per run, standard AI such as classification and validation at $0.10, and complex AI such as extraction and generative steps at $0.30.
+
+Nanonets' own worked example: a typical invoice workflow runs 4 to 6 blocks, so under $2 per invoice end to end. No platform fee, no seat licences, three users on Starter and up to 40 on Growth, with volume discounts up to 40%.
+
+The trap is mechanical. Every step bills, and every retry bills again. A document that fails validation, gets re-extracted, then reclassified has cost six or seven runs. Consumption pricing rewards clean documents and punishes the messy ones that justify buying the product. If a fifth of your intake is phone photos, model the rework loop, not the happy path. Generative AI blocks also require Growth, so the "under $2 per invoice" figure and the tier a finance team needs are not on the same plan.
+
+### Klippa DocHorizon: no price, and a new name on the door
+
+Klippa pricing cannot be compared, because none of it is published. The DocHorizon product page is quote-only, volume-based custom pricing. What is public: a €25 one-time free API credit, a credit top-up model described as pay-as-you-go, and a volume form running from 0-10,000 documents a year past 500,000.
+
+The harder finding: as of September 2026, that page renders under Doxis AI.dp branding, following Klippa's absorption into the SER Group. Published compliance is GDPR, ISO 27001, and ISAE 3000 Type I, EU-hosted in the Netherlands. HIPAA and SOC 2 appear on Klippa's pricing-request page and nowhere else, which is a claim worth testing rather than reading.
+
+Klippa's public numbers are 250 million documents processed, up to 99% extraction accuracy, 50+ integrations, Peppol e-invoicing support, and native connectors for SAP, Microsoft Dynamics 365, and NetSuite. For a European finance team that has to satisfy Peppol and keep documents inside the EU, that combination is hard to replace. For everyone else it is a quote, a sales cycle, and a rebrand still in progress.
+
+### Azure AI Document Intelligence: the one-cent control group
+
+Azure pricing is the reason this article exists. On the US price list: Read OCR at $1.50 per 1,000 pages, dropping to $0.60 above a million. Prebuilt models — invoice, receipt, ID, W-2, 1098, contract, layout — at $10 per 1,000 pages, which is one cent per invoice. Custom extraction at $30 per 1,000. Query fields and high-resolution add-ons at $6 to $10 per 1,000. Five hundred pages a month free. Volvo Group is cited saving over 10,000 manual hours a year and cutting invoice processing time by 80% on this stack.
+
+What the one cent excludes: ingestion, a review queue, confidence thresholds, approvals, or anything that writes to your ERP. Azure hands you fields and stops. At 1,000 invoices a month, a finance team of five to fifteen people would pay roughly $10 for the extraction and still owe somebody the job of building everything around it.
+
+That is the whole pricing spread in one sentence. The cheap end sells a model call. The expensive end sells a process. They are not substitutes, and no amount of rate shopping makes them comparable.
+
+| Tool | Entry price | Billing unit | Effective cost per invoice at 1,000/mo | Free tier |
+|---|---|---|---|---|
+| Rossum | $18,000/yr, one-year minimum | Annual platform + per document | ~$1.50, ERP add-ons extra | 14-day trial |
+| Docsumo | $134/mo for 12,000 pages/yr | Page bucket, subscription | ~$0.13 | 14 days, 1,000 pages |
+| Nanonets | $0, then $100/mo for 100 credits | Block run, $0.02 to $0.30 | Under $2, rework billed again | $50 in credits |
+| Klippa DocHorizon | Quote only | Custom volume contract | Not published | €25 API credit |
+| Azure Document Intelligence | Free 500 pages/mo | Per 1,000 pages | ~$0.01 plus your build time | 500 pages/mo |
+
+## The number no vendor publishes: exception rate times review time
+
+Every product above advertises 95% to 99% accuracy. At that point accuracy has stopped being a purchasing criterion and become a marketing one, because all of them quote the same band and none of them measured it on your suppliers' documents.
+
+The number that decides whether this pays for itself is different: exception rate, multiplied by minutes per exception, multiplied by your loaded hourly cost. A tool hitting 99% on 1,000 invoices a month leaves ten documents for a human. A tool at 95% leaves fifty. At four minutes per exception and a $45 loaded hourly rate, that is $30 versus $150 a month — a gap that swallows the entire per-page spread you spent three weeks negotiating.
+
+Published document extraction cost benchmarks put manual processing at $5 to $25 per document depending on type, against $0.50 to $2.00 automated, a 75% to 92% reduction. Manual keying carries a 1% to 4% error rate, and automated extraction cuts error rates by up to 90%. Those are the numbers to take to a CFO. The per-page rate is not one of them.
+
+| Document type | Manual cost | Automated cost | Reduction |
+|---|---|---|---|
+| Simple invoice | $5-8 | $0.50-1.00 | 80-90% |
+| Complex contract review | $15-25 | $1.00-2.00 | 90-92% |
+| Medical records | $8-15 | $0.75-1.50 | 85-90% |
+| Insurance claims | $10-20 | $0.75-1.50 | 88-92% |
+
+Test it on your exceptions, not their demo. Push 200 of your worst real documents — the faxed ones, the photographed ones, the 40-page statements with three attachments — through each vendor's trial. Clean-document accuracy tells you nothing about your bill. Your exception rate on garbage is the only number that predicts it.
+
+## Rossum alternatives, ranked by what they actually replace
+
+If you are evaluating Rossum alternatives because of the $18,000 floor or the Coupa acquisition, the question is not which product is better. It is which slice of Rossum you need.
+
+- **Replace the extraction only:** Azure Document Intelligence at a cent per invoice, or Nanonets at $0.30 a complex block. You build the rest, which is fine if you have engineers.
+- **Replace extraction plus a review queue, without an implementation project:** Nanonets sits here. The visual workflow builder, human review, and approval routing are the product, and the metering is public.
+- **Replace extraction plus ERP write-back for a mid-market AP team:** Docsumo aims here, at roughly a tenth of Rossum's floor, with the caveat that its published pricing is unstable and implementation fees are extra.
+- **Replace extraction plus EU residency and Peppol compliance:** Klippa DocHorizon, at a price you will extract from a sales representative rather than a web page.
+- **Replace extraction plus SAP, Coupa, and Workday integration depth at enterprise volume:** this is where Rossum still earns its contract, and increasingly it means buying Coupa.
+
+What none of them replace is the person who decides what happens when the invoice total does not match the line items. Budget for that role either way. If your real problem is just reading pages into a spreadsheet, the [best AI PDF tools](/articles/best-ai-pdf-tools-2026-adobe-acrobat-vs-pdf-ai-vs-chatpdf-vs-smallpdf/) cost a fraction of an IDP contract, and an [expense management platform](/articles/best-ai-expense-management-software-2026-ramp-vs-brex-vs-navan-vs-bill/) may already own the workflow you were about to rebuild.
+
+## How to run a 30-day bake-off without wasting a quarter
+
+Vendors here all demo well. The way to choose among AI document extraction tools is to price your own exceptions rather than their average.
+
+1. Pull 200 real documents, weighted toward your worst 10%. Not samples the vendor supplied.
+2. Convert every quote to cost per exception-free document: monthly fee divided by volume, plus rework runs, plus your review minutes at a loaded rate.
+3. Ask for the exception rate in writing, on your document mix. A vendor who will not state a number has given you an answer.
+4. Test the integration path, not just the extraction. Does the data land in your ERP, or in a CSV somebody still has to touch?
+5. Check ownership. Two of these four vendors changed owners or brands inside twelve months. Ask what happens to your contract and your trained model if it happens again.
+6. Read the rollover and exit terms. Nanonets credits never expire. Docsumo monthly credits do not roll. Rossum has no monthly exit at all.
+
+## Frequently Asked Questions
+
+### Is Rossum worth $18,000 a year?
+
+Only if you are buying the workflow and the integration depth, not the extraction. At 1,000 invoices a month that is roughly $1.50 a document, against $0.13 with Docsumo and one cent with Azure. The contract justifies itself when you are replacing an AP team's manual keying inside SAP or Coupa, at enterprise volume, with audit requirements a CSV export cannot satisfy. Below about 2,000 documents a month the arithmetic rarely works — before you factor in a one-year minimum you cannot exit early.
+
+### Rossum vs Docsumo: which is cheaper at 2,000 invoices a month?
+
+Docsumo, by a wide margin, and that is not the whole answer. Docsumo's published Starter tier is $134 a month for 12,000 pages a year, which 2,000 monthly invoices would blow through, so you would be quoting Growth — and Growth is either $399, $449, $499, or quote-only depending on which version of the page loads. Get a written number tied to your volume. Rossum stays inside its annual floor at that volume, so its effective per-document cost rises as volume falls, which is the opposite of how software pricing normally works.
+
+### Do I need a document extraction API or a finished platform?
+
+Count the steps after extraction. An API gives you fields and nothing else; a platform gives you a review queue, validation rules, approvals, and a connector. Three to five engineers and an existing integration layer means the API is cheaper and better. A five-person finance team with no engineering support means a platform is the only thing that ships this quarter. The roughly 200-to-1 price spread in this category maps onto that split almost exactly — not onto accuracy, which is why reading accuracy comparisons will not help you decide.
+
+### Can AI invoice processing replace an AP clerk?
+
+It replaces the keying, not the judgement. Automated extraction cuts manual error rates by up to 90%, and cost benchmarks show 75% to 92% reductions per document. What it does not do is decide whether to pay early for a discount, chase a supplier over a disputed line item, or handle the vendor whose invoice format changes every quarter. Plan for headcount to move from data entry into exception handling rather than to disappear. If you are shopping for intelligent document processing software at that scale, the honest answer may be that you do not need the category yet.
+
+## Bottom line: the reading is free, the exceptions are not
+
+The extraction layer of AI document extraction tools is now a commodity priced at roughly one cent per invoice, and the hyperscalers priced it there for everyone, including every independent vendor building on top of them. Anyone charging $18,000 a year is not charging for OCR. They are charging for the review queue, the validation rules, the ERP write-back, and the audit trail around the exceptions — worth paying for when you have the volume, systems, and regulatory exposure to need them.
+
+Pick the billing unit before you pick the vendor, because in this category the unit is the product. Then run 200 of your worst documents through the top two candidates and let your own exception rate make the call. The per-page price is the least interesting number on every quote you will receive.
