@@ -14676,5 +14676,75 @@
         "answer": "Yes, but budget for a slow start. With zero reviews you will either undercut your rate or wait weeks, and the ~10 free monthly Connects run out in about two applications. The beginners who break through pick one narrow offer (say, 'n8n automation for e-commerce brands'), apply to five well-researched jobs a day, and treat the first two contracts as the price of getting reviews. Generic 'I do AI stuff' profiles usually burn $30-100 in Connects and quit."
       }
     ]
+  },
+  {
+    "name": "Redbubble",
+    "slug": "redbubble",
+    "url": "https://www.redbubble.com/explore",
+    "category": "AI Income",
+    "description": "Free print-on-demand marketplace with built-in buyer traffic: upload a design once, sell it on 60+ products, and let Redbubble handle printing and shipping. The zero-audience way to test AI art for money - just know new sellers keep only half their margin until they reach a better tier.",
+    "price": "Free to sell · 50% fee to start",
+    "pricing_details": "Free to open a shop, no subscription. Account tiers assign a platform fee on monthly earnings: Standard (most new sellers) 50%, Premium (Redbubble-assigned) 20%, Pro (top sellers) 0%, capped at $150 per pay period. Excess markup fee: Standard and Premium sellers keep only 50% of the earnings from markup above 20% (no excess fee at or below 20%, and none for Pro). Payouts monthly (typically by ~15th, shipped orders only), $10 minimum threshold since July 1, 2026 (lowered from $20). Source: help.redbubble.com account fees articles, updated March 2026, cross-checked September 2026.",
+    "pros": [
+      "Genuinely free entry: no shop fee, no listing fee, no inventory, and Redbubble handles print, shipping, and refunds - the lowest-friction way to test whether your designs sell",
+      "Built-in marketplace traffic means your first sale doesn't depend on having an audience, an email list, or an ad budget",
+      "One upload covers 60+ products (stickers, apparel, wall art, cases), and stickers alone have a large, repeat-buying audience",
+      "Payout threshold dropped to $10 in July 2026 and monthly payments are reliable, so small earnings are actually withdrawable"
+    ],
+    "cons": [
+      "New sellers start on the Standard tier, where Redbubble keeps 50% of your earnings - and you cannot choose your tier or see the exact path to Premium",
+      "Raising your markup above 20% triggers another 50% fee on the excess, so the obvious 'just price higher' escape doesn't work",
+      "Zero customer data and no email access: repeat buyers belong to the marketplace, not to you",
+      "AI-art flood means near-identical designs compete in the same searches, and a raw generation has no copyright protection to stop copycats"
+    ],
+    "features": [
+      "Upload once, publish across 60+ product types with automatic mockups and per-product pricing control",
+      "Marketplace search and browse traffic plus tag-driven discovery - no external marketing needed for a first sale",
+      "Managed fulfillment network: printing, packing, shipping, and buyer customer service are all Redbubble's problem",
+      "Fan Art program allows officially licensed designs for registered fandoms - a legal lane most POD platforms don't offer",
+      "Sales history, tier status, and fee breakdowns are visible in the artist dashboard before each payout"
+    ],
+    "faq": [
+      {
+        "question": "Can you actually make money selling AI-generated art on Redbubble?",
+        "answer": "Yes, but think pocket money before quit-your-job money. A typical sticker sale nets you $1.50-2 after the Standard-tier 50% fee, so meaningful income requires hundreds of monthly sales or higher-margin products like framed prints. The sellers who do well treat AI output as a starting asset: they edit designs, target specific niches with verified buyer demand, and write precise tags. Raw generations with generic titles mostly earn nothing."
+      },
+      {
+        "question": "Why does Redbubble take 50% of my earnings, and can I get to a lower fee?",
+        "answer": "Redbubble sorts accounts into tiers: Standard (50% platform fee), Premium (20%), and Pro (0%). New sellers land on Standard, and Redbubble moves accounts up based on sales volume and engagement metrics it doesn't publish - you can't pay for a better tier. The practical levers you control are selling consistently, keeping markup at or below 20% to dodge the excess markup fee, and diversifying to platforms with flatter fees once a design proves itself."
+      },
+      {
+        "question": "Redbubble or Etsy for selling AI designs - which one?",
+        "answer": "They solve different problems. Redbubble is faster and free: upload and done, with marketplace traffic, but you keep half your margin at best and own nothing about the customer relationship. Etsy costs money upfront and takes more setup, but per-sale profit is meaningfully higher, you build a shop with reviews and repeat buyers, and AI use must be disclosed. A common sequence: test designs free on Redbubble first, then move proven winners to Etsy."
+      }
+    ],
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "emoji": "🎨",
+    "color": "#e4132c",
+    "platform": "Web",
+    "rating": "⭐ 3.8",
+    "tags": [
+      {
+        "text": "Marketplace"
+      },
+      {
+        "text": "Print on Demand"
+      },
+      {
+        "text": "AI art",
+        "type": "free"
+      },
+      {
+        "text": "Built-in buyers",
+        "type": "free"
+      }
+    ],
+    "visits": "30M+ monthly visits (3rd-party est.)",
+    "created_date": "2026-09-19",
+    "published": true,
+    "content": "## What Redbubble Actually Is (From an Uploader's Side)\n\nRedbubble is a print-on-demand marketplace: you upload a design once, it goes on 60+ products (stickers, t-shirts, posters, mugs, phone cases), and Redbubble handles printing, shipping, and customer service. You never touch inventory. The buyer traffic is the real product here - millions of people browse Redbubble directly looking for stickers and wall art, which means your first sale doesn't require you to have an audience, a store, or an ad budget.\n\nI've uploaded AI-assisted sticker designs there since 2024, so this review is about what the money actually looks like, not the brochure version.\n\n## The Money Angle: Where AI Art Fits In\n\nThe pitch is simple: generate or design artwork, upload it, set your margin, and collect. In practice, the designs that sell are the ones aimed at existing search demand - niche hobbies, professions, humor formats, specific aesthetics - not whatever the model spits out because the prompt was fun. Treat the AI image as a raw asset. The winning sellers add typography, fix composition, and design for the product (a sticker needs bold shapes and a clean edge; a wall print needs resolution and restraint).\n\nA realistic path for a beginner:\n\n1. Pick a narrow niche with buyer language you can verify (check what's already selling, then make a sharper version - never copy).\n2. Generate and edit 20-50 designs in that niche. Edit every output; raw generations are commodity goods.\n3. Upload to Redbubble with honest titles and specific tags - search drives nearly everything here.\n4. Leave the markup at the default and let volume tell you which designs deserve more effort.\n5. Whatever sells, double down on that style and also list it on a second channel (more on why below).\n\n## What It Really Costs\n\nFree to open a shop. But the fee structure (in effect since September 2025, confirmed via Redbubble's help center, 2026) is the part most hype posts get wrong:\n\n| Tier | Platform fee on monthly earnings | Excess markup fee |\n|---|---|---|\n| Standard (most new sellers) | **50% of your earnings** | 50% on the portion of markup above 20% |\n| Premium (assigned by Redbubble) | 20% | 50% above 20% markup |\n| Pro (top sellers, invite-level) | 0% | 0% |\n\nThree things to understand:\n\n- **You don't pick your tier.** Redbubble assigns Premium and Pro based on undisclosed sales and engagement metrics. Most sellers start on Standard, where half your margin goes back to the platform. There's a fee cap ($150/month), which only matters once you're earning enough for it to be good news.\n- **The math is humbling.** A sticker might carry a $3-4 margin before fees. On Standard, that's roughly $1.50-2 in your pocket per sale. To make $500/month, you need volume in the hundreds of sales - which means the niche and tagging work matters far more than design count.\n- **Marking up more doesn't help much.** Set your markup above 20% and Redbubble takes 50% of the extra. Keep markup at or below 20% and the excess fee never touches you.\n\nPayouts run monthly (usually processed by around the 15th, and only for orders that have shipped). The payout threshold dropped from $20 to $10 as of July 1, 2026, so you can cash out sooner than older guides say.\n\n## A Note on AI Art\n\nThere's a lot of conflicting info online about Redbubble's \"AI policy.\" What I can verify: Redbubble's public Community and Content Guidelines (checked September 2026) contain no dedicated AI disclosure rule, and some third-party blog claims about mandatory badges or upload caps don't appear in the documents they cite. What definitely applies is copyright and trademark law - Redbubble removes infringing work regardless of how it was made, so generated art that resembles a franchise character or a living artist's signature style will get pulled. Also worth knowing: a raw AI output likely carries no copyright, meaning you can't stop someone else from uploading something near-identical. Meaningful human editing is both a differentiation strategy and your only real protection.\n\n## Redbubble vs The Field\n\n| | Redbubble | Etsy | Printify + own store |\n|---|---|---|---|\n| Upfront cost | Free | $15 setup + $0.20/listing | Store fee + Printify subscription optional |\n| Built-in buyer traffic | Yes, large | Yes, larger | None - you bring every visitor |\n| Fee on your margin | 50% / 20% / 0% by tier | ~6.5% + payment + ads | ~0% platform (pay print cost) |\n| Customer relationship | Marketplace owns it | You own the shop identity | Fully yours |\n| Effort to first sale | Lowest | Medium | Highest |\n\nThe pattern: Redbubble trades profitability for zero friction. Etsy costs more to run but pays meaningfully better per sale and builds a shop you own. Printify on your own store keeps the most money but requires you to already have traffic.\n\n## Bottom Line\n\nRedbubble is the lowest-risk way to find out whether your designs sell at all: free entry, no inventory, built-in buyers. It is a testing channel and a slow-burn passive layer, not a business you can build a house on - the Standard-tier 50% fee, the tiers you can't choose, and zero access to customer data see to that. If a design consistently sells there, list it on Etsy and your own store too. That's the whole playbook.\n"
   }
 ]
