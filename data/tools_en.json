@@ -14943,5 +14943,70 @@
         "answer": "Two gates, then a wait. You need at least $25 in royalties and 45 days must have passed since your first sale - both conditions at once. Submit a payout request and Adobe sends funds to PayPal, Payoneer or Skrill within 7-10 business days. Two traps to avoid: file the tax form during setup, because without it Adobe withholds up to 30% automatically, and remember the 45-day clock starts at your first sale, not your first upload - if review takes a month, add that to your timeline."
       }
     ]
+  },
+  {
+    "name": "YouTube",
+    "slug": "youtube",
+    "url": "https://www.youtube.com/creators/",
+    "category": "AI Income",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "color": "#FF0000",
+    "emoji": "📺",
+    "platform": "Web + App",
+    "price": "Free · 55% long-form, 45% Shorts",
+    "pricing_details": "The platform and the Partner Program are both free to join - YouTube never charges creators a fee. Revenue shares: 55% of long-form ad revenue to the creator, 45% of your allocation from the Shorts creator pool (after music licensing is deducted from the pool), 55% of Premium revenue, and 70% of fan funding (Super Chat, Super Stickers, Super Thanks) and channel memberships. Sponsorship money sold directly is 100% yours. Payouts run through AdSense with a $100 minimum threshold, paid monthly around the 21st. Two entry tiers: 500 subscribers + 3,000 watch hours or 3M Shorts views (90 days) opens fan funding only; 1,000 subscribers + 4,000 watch hours or 10M Shorts views opens ad revenue sharing. Non-US creators should file a W-8BEN in AdSense or face up to 30% withholding on US-viewer earnings.",
+    "rating": "⭐ 4.6",
+    "visits": "50B+/mo",
+    "published": true,
+    "created_date": "2026-09-23",
+    "tags": [
+      {
+        "text": "Video Platform"
+      },
+      {
+        "text": "Ad Revenue"
+      },
+      {
+        "text": "Free to join",
+        "type": "free"
+      }
+    ],
+    "features": [
+      "Two-tier Partner Program: fan-funding tools open at 500 subscribers, full ad revenue sharing at 1,000 subs with 4,000 watch hours or 10M Shorts views",
+      "Three stacked revenue engines - 55% of long-form ads, 70% of fan funding and memberships, plus Premium watch-time payouts on top",
+      "Built-in AI disclosure tools and, as of 2026, explicit allowance for AI-assisted content that shows real human creative input",
+      "The Shorts 'Related Video' link turns a viral Short into a funnel for your long-form library, where RPMs run 50-100x higher"
+    ],
+    "pros": [
+      "The largest and most transparent monetization pool in the creator economy - over $100B paid out across four years, and the 55% long-form split has held since 2007 while every rival pays less and explains less",
+      "Income stacks: the same channel earns from ads, Premium, memberships, Super Chat, Shopping tags, affiliate links, and sponsorships you sell yourself at 100% - YouTube takes nothing from that last one",
+      "Tier 1 is a real on-ramp now: 500 subs gets memberships and Super Thanks flowing before you ever hit the ad-revenue bar, and the $10 Super Chat that pays you $7 beats the $5.50 the same viewer would generate in ad revenue",
+      "Long-form RPM in finance, tech, and business niches runs $5-$15+ per thousand views - no other platform pays remotely that rate for a faceless tutorial channel built with AI tools"
+    ],
+    "cons": [
+      "Shorts money is brutal and the marketing hides it: creators report $0.01-$0.10 per thousand views, and one documented case earned $106 from 4 million Shorts views versus $45,639 from 3.9 million long-form views",
+      "July 2025 inauthentic-content policy is aimed straight at AI channels: templated slideshows, mass-produced AI voiceover with stock footage, and dozens of near-identical uploads per week now get demonetized wholesale - 'AI-assisted with real human input' survives, 'AI-generated on autopilot' does not",
+      "The 4,000-hour gate excludes Shorts watch time entirely, and Shorts views must be re-earned every 90 days - a Shorts-only channel that stalls for one quarter loses its path to ad revenue",
+      "Getting paid takes patience: roughly a month for the YPP application review, then a $100 AdSense threshold before the first payout, and rejections for vague 'reused content' reasons come with no meaningful appeal detail"
+    ],
+    "description": "YouTube's Partner Program is the biggest creator monetization pool on the internet: 55% of long-form ad revenue, 70% of fan funding, and Premium payouts stacked on top. For AI-tool users it is the natural endpoint - every script, voice, and editing tool on this site feeds a channel, and long-form RPMs of $5-$15 in finance and tech beat every other platform per view. The catch is the 2025 inauthentic-content policy: the money is real, but the AI-slop lane is closed. This page breaks down the tiers, the honest Shorts math, and what 'human creative input' actually means before you upload.",
+    "content": "## What YouTube Actually Is\n\nYouTube is the world's largest video platform, and its Partner Program (YPP) is the oldest, largest creator-monetization system anywhere - running since 2007, with Alphabet reporting YouTube ad revenue alone at over $11 billion per quarter in 2026. Creator payouts across the previous four years passed $100 billion.\n\nThe structure that matters to you is the two-tier entry:\n\n| Tier | Requirements | What it opens |\n|---|---|---|\n| Tier 1 - Fan funding | 500 subs + 3 uploads in 90 days, plus 3,000 watch hours (12 mo) OR 3M Shorts views (90 days) | Super Thanks, Super Chat, memberships, Shopping - **no ad revenue** |\n| Tier 2 - Full YPP | 1,000 subs, plus 4,000 watch hours (12 mo) OR 10M Shorts views (90 days) | Everything above + ad revenue + Premium payouts |\n\nBoth tiers need a linked AdSense account, two-step verification, no active Community Guidelines strikes, and residence in an eligible country. Note the detail that kills most Shorts-first plans: Shorts watch time does **not** count toward the 4,000-hour figure. Only long-form and live-stream hours do.\n\n## The Money Angle: Where the Income Actually Comes From\n\nThis is where most \"make money with AI on YouTube\" advice falls apart, so here is the actual plumbing:\n\n- **Long-form ads: 55% to you.** An auction runs against your specific video, and advertisers bid based on your niche. Finance and tech audiences clear $5-$15+ RPM. This is the only stream where your topic choice multiplies the payout.\n- **Shorts ads: 45% of a shared pool.** All Shorts ad revenue is pooled, music licensing is subtracted, then creators split what remains by their share of engaged views. One music track sends 50% of that Short's revenue to rights holders; two tracks send 66%. The deduction happens at pool level, but the dilution hits everyone.\n- **Fan funding and memberships: 70% to you.** Super Chat, Super Stickers, Super Thanks, and channel memberships all pay 70/30 in your favor - a better rate than ads.\n- **Premium: 55%**, allocated by how much Premium subscribers watch your content. Often overlooked; adds 10-20% for larger channels.\n- **Sponsorships: 100% yours.** YouTube takes nothing from deals you sell directly.\n\nFor an AI-tool user, the realistic play is the Shorts-to-long-form pipeline: AI script tools, AI voice, and AI editing get you volume on Shorts cheaply, Shorts act as discovery, and the \"Related Video\" link funnels viewers into long-form videos where the RPM actually pays. Creators who post both formats grow roughly 3x faster than single-format channels.\n\n## What You Actually Get Paid (The Honest Table)\n\n| Stream | Your share | Real-world rate |\n|---|---|---|\n| Long-form ads | 55% | $2-$25 RPM typical; finance/tech $5-$15+ |\n| Shorts ads | 45% of pool | $0.01-$0.10 per 1,000 views |\n| Fan funding (all types) | 70% | Direct payments, no pooling |\n| Premium | 55% | Watch-time based |\n| Your own sponsors | 100% | Whatever you negotiate |\n\nThe Shorts row deserves a real example, not a fantasy: one documented creator earned **$106 from 4 million Shorts views** and $45,639 from 3.9 million long-form views in the same period. Industry data suggests only around 8% of Shorts creators call ad revenue their primary income. Shorts buy reach; long-form buys rent.\n\nPayment logistics: AdSense, $100 minimum threshold, monthly payout around the 21st. First application review takes about a month.\n\n## YouTube vs The Field\n\n| | YouTube | TikTok Creativity Program | Facebook Reels |\n|---|---|---|---|\n| Long-form ad share | **55%** | n/a (short video focus) | n/a |\n| Short-form rate | 45% of pool, ~$0.01-$0.10/1k | RPM-based, roughly $0.40-$1.00/1k qualified views | Bonus-based, opaque |\n| Fan funding | **70%** | Limited (LIVE gifts) | Stars, ~1 cent each |\n| Payout transparency | Full Studio reporting, CPM + RPM shown | Partial | Low |\n| Minimum to earn | 500 subs (fan funding tier) | 10k followers | Invite-only bonuses |\n| AI-content stance | Allowed with disclosure + human input; AI slop policy since July 2025 | Under active restriction | Similar policy drift |\n\nTikTok's creativity program pays more per short view but caps your format and audience age. YouTube is the only platform where one channel stacks five revenue engines and reports exactly what each paid.\n\n## Bottom Line\n\nYouTube remains the highest-ceiling monetization platform for anyone using AI tools to produce content - nothing else pays $5-$15 RPM on long-form in serious niches, and nothing else lets sponsorship income flow to you at 100%. But the window that mattered most to low-effort operators closed in July 2025: the inauthentic-content policy demonetizes templated, mass-produced AI video. The channels that keep earning use AI for speed and disclosure for safety, then put a real human point of view on top. If your plan is a faceless slideshow farm, pick a different platform and accept smaller money. If your plan is a real channel accelerated by AI, YouTube is still the best payday on the internet.\n\n**Money angle summary:** pick a high-RPM niche (finance, tech, business) → use AI tools for scripting, voice, and edits → post Shorts as discovery with a Related Video link → convert to long-form for the 55% split → stack memberships, Super Thanks, and affiliate links on top → file your W-8BEN so the tax man does not take 30% by default.",
+    "faq": [
+      {
+        "q": "How much does YouTube actually pay per 1,000 views?",
+        "a": "It depends entirely on format and niche. Long-form in finance or tech runs $5-$15+ RPM; entertainment long-form can be under $2. Shorts pay $0.01-$0.10 per thousand views because the revenue is pooled after music licensing and split 45%. A useful anchor: one documented creator made $106 from 4 million Shorts views versus $45,639 from 3.9 million long-form views."
+      },
+      {
+        "q": "Can AI-generated videos get monetized in 2026?",
+        "a": "Yes, with conditions. YouTube requires disclosure of realistic synthetic content (voice clones, deepfakes, AI depictions of real events), and since July 2025 the inauthentic-content policy demonetizes mass-produced, templated videos with no real human creative input. AI-assisted channels with original scripts, commentary, or editing pass review. Pure AI-slop pipelines - stock footage plus synthetic voiceover at scale - are the exact target of the policy and lose monetization."
+      },
+      {
+        "q": "Should I build a Shorts channel or a long-form channel?",
+        "a": "Both, with long-form as the destination. Shorts views grow subscribers roughly 3x faster and qualify you for YPP via the 10M-views path, but Shorts watch time never counts toward the 4,000-hour requirement and Shorts RPM is near zero. Use the Related Video link to push Shorts viewers into long-form videos, where the 55% ad split and high-RPM niches generate the actual income. A Shorts-only channel is a reach business, not a revenue business."
+      }
+    ]
   }
 ]
