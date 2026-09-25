@@ -15074,5 +15074,65 @@
         "a": "Yes, but the templated version is dead. Google's 2025-2026 updates plus AI Overviews cutting click-through rates have gutted sites that mass-produce thin AI product reviews. What still works is AI-assisted speed on top of genuine experience: use models for keyword research, outlines, and first drafts, then add your own photos, measurements, and complaints from actually handling the product. YouTube works the same way - AI helps you produce, but viewers and Google both punish content that only a machine touched."
       }
     ]
+  },
+  {
+    "name": "Outlier",
+    "slug": "outlier",
+    "url": "https://outlier.ai",
+    "category": "AI Income",
+    "price": "Free to join · $15-50/hr",
+    "pricing_details": "Free to join - Outlier never charges contributors (WhatsApp/Telegram 'recruiters' asking for money or deposits are impersonators). Pay is per-project and disclosed before you accept each task: generalist work runs $15-25/hr, coding $25-50/hr, specialist domains (law, medicine, finance, advanced math) $30-60/hr, with rare peak-demand niches advertised higher (the $100-200/hr figures in ads are edge cases, not typical). Payments are issued weekly on Tuesdays for work completed Tuesday through Monday midnight UTC, with a $10 minimum, via PayPal, ACH (US), or Airtm for weak-PayPal regions; PayPal adds a 3-5% currency spread on non-USD payouts. Onboarding assessments (2-5 hours per domain) and per-project training (1-3 hours) are unpaid. No minimum hours, no income floor. Contractors handle their own taxes - nothing is withheld.",
+    "description": "Outlier (by Scale AI) pays you to train AI models - ranking responses, debugging code, and grading reasoning in your field of expertise. No audience, no product, no clients: the only tool in this category that turns existing knowledge into weekly cash, $15-50+/hr.",
+    "content": "Outlier is the odd one out in this category. Everything else here asks you to build something first - a shop, an audience, a catalog, a client list. Outlier just buys your judgment. You sit down, grade AI model outputs in a field you already know, and money lands the following Tuesday. For anyone with real expertise and zero patience for audience-building, it is the fastest cash path on this entire site.\n\nThe catch, and it is a serious one: the work does not belong to you. Tasks arrive on the AI lab's schedule, not yours, and the queue can sit empty for weeks with no explanation. People who earn steadily here treat Outlier as one leg of a multi-platform setup, not a job.\n\n## What Outlier Actually Is\n\nOutlier is the contributor platform of Scale AI, one of the best-funded data companies in the industry. AI labs pay Scale for human feedback; Scale distributes the work to roughly 100,000+ contractors who qualify through domain assessments. There is no interview and no client - you pass a timed test in your domain, get placed in a pool, and complete tasks when a project is live.\n\nThe tasks are variations on a few core jobs: ranking two model responses against a rubric and writing why, rewriting a model's answer into the response it should have given, checking code for bugs, verifying a math proof to the exact step it breaks, or reviewing another contributor's work. Every task demands written justification - the reasoning is the product.\n\n## The Money Angle: What Your Knowledge Is Worth\n\nPay is set per project and shown before you accept each task. Real-world bands from contributor reports in 2026:\n\n- **General writing and evaluation** - $15-25/hr. The bulk of available work. Decent English and attention to detail are enough.\n- **Coding** - $25-50/hr. Python, JavaScript, code review, debugging, writing problems models must solve.\n- **Specialist domains** (law, medicine, finance, advanced math) - $30-60/hr, with rare niche demand pushing higher. This is where a credential pays, several times the generalist rate.\n\nFor AI-tool-savvy people, the edge is speed with quality: you already know what good model output looks like, so rubric judgments come faster. Track your effective hourly rate including dead time - if a task type runs below your baseline, drop it.\n\n## What It Really Costs\n\n| Item | The Real Number |\n|---|---|\n| Onboarding assessments | Unpaid, 2-5 hours per domain |\n| Per-project training modules | Unpaid, 1-3 hours each |\n| Task queue empty weeks | Regular - some contributors report 2-3 weeks of zero tasks between projects |\n| Minimum payout | $10 |\n| Payment schedule | Weekly, Tuesdays, for work completed Tuesday-Monday (UTC) |\n| Payout methods | PayPal, ACH (US), Airtm; PayPal FX spread 3-5% if not USD |\n| Effective overhead | Contributors estimate 10-15% of hours go to unpaid admin, guideline re-reads, and task hunting |\n| Employment status | Independent contractor - nothing withheld, you owe the tax |\n\nThe math that matters: an advertised $25/hr becomes roughly $20-22 after unpaid onboarding and admin time, and 25-30% less again after self-employment tax. Still real money. Just not the headline number.\n\n## Outlier vs The Field\n\n| | Outlier | DataAnnotation.tech | Mercor |\n|---|---|---|---|\n| Typical pay | $15-30/hr generalist | $20-40/hr | $40-75/hr |\n| Entry bar | Low - open signup plus domain quizzes | Moderate - one writing assessment | Selective - AI interview, most signups rejected |\n| Work consistency | Swings hardest - project waves | Steadier when active | Long-term contracts, but fewer of them |\n| Payout | Weekly Tuesday, $10 min | Weekly, $20 min | Weekly via Stripe |\n| Best for | Fast entry, wide domain and language catalog | Generalist writers wanting steady flow | Credentialed specialists chasing top rates |\n\nThe serious players run two or three of these at once. When Outlier's queue dies, another platform is usually busy.\n\n## Bottom Line\n\nOutlier is legitimate and it pays - every Tuesday, without fail. What it does not promise is work. Sign up if you have a skill worth grading against and want cash this month instead of building an asset this year. Do not sign up if your budget needs a number every week. And never pay anyone to \"get you in\" - the only real Outlier is outlier.ai, and it never charges to join.",
+    "pros": [
+      "Converts knowledge you already have into cash this week - no audience, product, storefront, or client-hunting, which none of the other tools in this category can match",
+      "Rates are disclosed before you accept each task, payouts land every Tuesday with a $10 minimum via PayPal, ACH, or Airtm, and non-payment complaints are rare",
+      "Specialist bands are genuinely premium: coding and domain expertise (law, medicine, finance, math) pay 2-4x the generalist rate for the same hours"
+    ],
+    "cons": [
+      "Task supply is feast or famine: projects launch and end on the AI lab's contract cycle, weeks of zero tasks are normal, and nobody owes you an explanation or an hour",
+      "Onboarding is unpaid and can be wasted - people regularly burn 3-8 hours on assessments and training only to find the project full or the queue empty",
+      "Deactivations and quality reviews happen with little transparency, support is slow, and pay cuts can arrive without warning - the Indeed contributor rating sits at 2.4/5 across 770+ reviews"
+    ],
+    "faq": [
+      {
+        "question": "How much does Outlier actually pay per hour?",
+        "answer": "Generalist evaluation and writing tasks run about $15-25/hr in practice. Coding projects land $25-50/hr, and specialist domains like law, medicine, finance, and advanced math reach $30-60/hr. The $100+/hr figures in ads are rare niche peaks. Your effective rate runs 10-15% lower than the headline once you count unpaid onboarding, guideline re-reads, and time spent hunting for open tasks."
+      },
+      {
+        "question": "My task queue is empty for days - did I get banned?",
+        "answer": "Probably not. Outlier's work comes in project waves driven by AI lab contracts, so queues go quiet between projects even for top-rated contributors. No task access for about two weeks after an assessment usually means you did not pass it, but ordinary gaps of a few days to a few weeks are just how the supply works. This is exactly why experienced contributors keep a second platform (DataAnnotation, Mercor, micro1) running."
+      },
+      {
+        "question": "Can I turn Outlier into a full-time income?",
+        "answer": "Not reliably. There are no guaranteed hours and no income floor, and the single most common contributor complaint is inconsistent volume. Treat it as supplemental income - $300-800 a month is a realistic side-income band for active generalists, more for in-demand specialists - and stack it with other platforms or freelance work rather than planning your rent around it."
+      }
+    ],
+    "features": [
+      "Tasks are real expert labor, not clicks: rank two model answers against a rubric, rewrite a response into what it should have been, debug code, or verify a math proof step by step - and justify every call in writing",
+      "Rates are shown before you accept each task and payouts land every Tuesday ($10 minimum) via PayPal, ACH, or Airtm - no invoicing, no client hunting, no audience building",
+      "Specialist tracks carry a real premium: coding runs $25-50/hr and law, medicine, finance, and advanced math bands reach $30-60+, several times the generalist rate"
+    ],
+    "tags": [
+      {
+        "text": "AI Training Work"
+      },
+      {
+        "text": "Weekly Payouts"
+      },
+      {
+        "text": "No Audience Needed",
+        "type": "free"
+      }
+    ],
+    "emoji": "🧠",
+    "color": "#7c3aed",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "platform": "Web",
+    "rating": "⭐ 4.0",
+    "published": true
   }
 ]
