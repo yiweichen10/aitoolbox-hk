@@ -1,0 +1,142 @@
+TITLE: Best AI Data Quality Tools 2026: Monte Carlo vs Soda vs Bigeye vs Great Expectations
+SLUG: best-ai-data-quality-tools-2026-monte-carlo-vs-soda-vs-bigeye-vs-great-expectations
+CATEGORY: AI Data Quality
+DATE: 2026-09-29
+DESCRIPTION: Gartner expects 60% of AI projects to be abandoned by the end of 2026 for lack of AI-ready data. Here is what Monte Carlo, Soda, Bigeye and Great Expectations actually charge to catch it — published prices, credit math, and the two vendors that changed hands this year.
+KEYWORDS: AI data quality tools|monte carlo vs soda|monte carlo pricing|soda pricing|bigeye pricing|great expectations pricing|data observability cost|open source data quality tools|great expectations alternatives|data quality monitoring tools|best data observability platform for mid-market
+---
+Gartner's number is the only one worth opening with. **60% of AI projects that lack AI-ready data will be abandoned by the end of 2026**, and 63% of data leaders say they either don't have an AI-ready data management practice or aren't sure they do.
+
+The uncomfortable part about most AI data quality tools: they bill you by the size of your data estate, not the size of your problem. The worse your situation, the more the fix costs, and the more tempting it becomes to monitor less than you should.
+
+So the question below is not which one wins a feature grid. It is which meter you are signing up for.
+
+## How AI data quality tools price the size of your mess
+
+Four vendors own the shortlist: Monte Carlo, Soda, Bigeye, and Great Expectations. They are not competing on the same axis, which is why most comparisons are useless.
+
+- **Monte Carlo** sells insurance against not knowing. Automatic monitoring, charged in credits banded by scale.
+- **Soda** sells a contract between the team producing data and the team consuming it, at a published per-dataset price.
+- **Bigeye** sells lineage-aware root cause, and now governed access for AI agents, at a per-table list price you can actually read.
+- **Great Expectations** sells assertions — tests you write. The free version is now the only version.
+
+Pick by the failure you keep having. Reports break and nobody can trace why? Lineage. A column quietly changes meaning and nobody notices for six weeks? Assertions. An agent writes to a system off a stale table? Governance, and only one of these four currently sells against it.
+
+## Monte Carlo pricing: transparent meter, invisible rate
+
+Monte Carlo publishes its consumption rates, then declines to say what a credit costs. That is a specific kind of opacity worth understanding.
+
+Table monitoring runs per warehouse, per day, banded: the first 1,000 tables cost 1.75 credits each, 1,001–2,000 cost 1.09, 2,001–3,000 cost 0.68, 3,001–4,000 cost 0.43, and past 10,000 it drops to 0.010. Metric monitors bill per metric — a field-and-segment pair — starting at 1 credit a day for the first five. Query performance monitors are a flat 20 credits each per day, which makes them the most expensive thing you can switch on.
+
+Run it on a 500-table warehouse with table monitors everywhere: 875 credits a day, about 26,000 a month, roughly 319,000 a year. A 2,500-table warehouse lands at 3,180 credits a day. Five times the tables, under four times the credits.
+
+The price per credit is not published. Vendr's contract data puts the median Monte Carlo deal at **$55,000 a year** across 69 purchases, with buyers negotiating 18% off on average, and records $60,000 to $120,000 for deployments monitoring 100 to 300 tables.
+
+Bring your table count, decide which tables deserve metric monitors, convert to credits yourself, and make the vendor quote a cost per credit against that number. That is your only lever.
+
+Price one more thing: in March 2026 Monte Carlo cut about 30% of staff, with CEO Barr Moses framing it as AI letting "smaller, more focused groups to work faster." The company is well funded at a reported $1.6B valuation and still ships — it has moved into agent observability alongside data, and claims 400+ enterprise customers plus a 375% ROI figure from Forrester. Account coverage after a one-third reduction is fair to ask about in the room.
+
+## Soda pricing: the only published per-dataset ladder
+
+Soda tells you the price before you talk to anyone. Free covers up to three production datasets, pipeline testing, metrics observability, and alerting integrations, with unlimited users. **Team is $750 a month**, includes 20 datasets, then charges **$8 per additional dataset per month**. Enterprise is a quote.
+
+At 300 datasets that is $750 plus 280 datasets at $8 — $2,990 a month, about $35,880 a year. The cheapest published path to real coverage here, and the reason is structural: Soda meters datasets, not tables, and one dataset can cover many underlying tables.
+
+Soda 4.0 leans on checkable claims rather than soft ones. The company says its metrics algorithms beat Facebook Prophet with 70% fewer false positives and scale to a billion rows in 64 seconds, with research published in NeurIPS, JAIR, and ACML. Record-level anomaly detection, AI-generated data contracts, and root-cause analytics that park failed records in your warehouse rather than the vendor's.
+
+One caution: Soda's own Databricks landing page renders a different ladder than the main pricing page. Price from soda.io/pricing and get the dataset definition in writing, because "fair use policies apply to the definition of a dataset" is doing a lot of work in that footnote.
+
+## Bigeye pricing: a list price you can finally compute against
+
+Bigeye publishes per-table pricing on Microsoft's marketplace, which almost nobody in this category does. The Starter Package is 100 active monitored tables with two lineage connectors and the browser extension for **$45,000 a year** on a one-year term. The Enterprise Starter Package is 300 tables for **$75,000 a year**.
+
+That is $450 per monitored table per year at the entry tier, $250 at 300 tables. The rate falls 44% as you scale, which is normal volume pricing — but note what it does to a budget. At 100 tables Bigeye is $37.50 per table per month; at 300 it is $20.83. If your warehouse grows, your per-table rate improves while your total bill almost triples.
+
+The bigger 2026 change is where Bigeye is pointing. It has repositioned from data observability to an enterprise AI trust platform, and ships two things that matter if you run agents: an MCP server in beta that gives Claude Code, Snowflake Cortex Code, and GitHub Copilot CLI direct access to quality issues, lineage, and catalog search under your existing permissions, and AI Guardian, which enforces what those agents may touch. The MCP spec's July 28, 2026 update moved transport from HTTP-plus-SSE to Streamable HTTP and allowed stateless request handling — the change that made this practical on enterprise networks.
+
+Bigeye reports over 100 million lineage relationships and 15 trillion-plus rows observed, with USAA, Zoom, Hertz, and Cisco named as customers.
+
+## Great Expectations pricing: $0, and that is the whole story
+
+If you searched for great expectations pricing expecting a tier table, the answer changed this year. In May 2026, Great Expectations was acquired. FICO bought GX Cloud and is folding it into the FICO Platform. **GX Cloud stopped being publicly available on June 1, 2026.** The support forum now tells users plainly that the cloud product was acquired and shut down.
+
+GX Core, the Apache-2.0 framework, survives: Fivetran now maintains the open source project and community. It sits past 11,000 GitHub stars with an April 2026 release, so it is not abandoned. It is simply no longer a product with a price.
+
+That makes it the answer to two different questions. For anyone who wants free validation logic in their own repository, running in their own CI, it is still the default, and the honest cost is engineering time: Data Context, Data Source, Data Asset, Batch Definition, Suite, Validation Definition, Checkpoint.
+
+For anyone who wanted the managed layer, great expectations alternatives are no longer a preference — they are a requirement. GX catches what you wrote a test for. It does not catch what you did not think to test, because it is assertion-based by design.
+
+## Published price versus 300 tables
+
+| Vendor | What you are billed on | Published entry price | List price at ~300 monitored tables |
+|---|---|---|---|
+| Monte Carlo | Credits, banded by monitor type and scale | None. Contract median $55,000/yr (Vendr, 69 deals) | Not computable without a credit rate; Vendr shows $60K–$120K at 100–300 tables |
+| Soda | Datasets (Soda Processing Units) | Free to 3 datasets; Team $750/mo incl. 20 datasets | ~$2,990/mo, about $35,880/yr |
+| Bigeye | Active monitored tables | $45,000/yr for 100 tables (Microsoft Marketplace, 1-yr) | $75,000/yr — $250 per table per year |
+| Great Expectations | Nothing. GX Cloud retired June 1, 2026. | $0 for GX Core, Apache-2.0 | $0 license plus your own engineering time |
+
+The monte carlo vs soda question resolves on that middle column: one vendor will let you budget in a spreadsheet, the other will not. That is worth more than it sounds, because every other line in your business case depends on a number you can defend.
+
+## The real data observability cost is not the license
+
+License is the smallest line. Here is the rest, and nobody quotes it in the demo.
+
+| Line item | Typical range | Who writes the check | Why it never shows up in the proposal |
+|---|---|---|---|
+| Implementation | $10K–$50K over 4–8 weeks; more where lineage must be modeled by hand | You, or the SI you hire | It is quoted separately, after you have decided |
+| Alert tuning | 4–12 weeks of one engineer's time before signal-to-noise is usable | You | Every ML tool is loud for the first month |
+| Triage labor | Ongoing; scales with monitored surface, not with incidents | You, indefinitely | Nobody sells you the org chart to run it |
+| Renewal math | 3–7% annual escalators are standard; multi-year trades discount for lock-in | You, at the worst moment | It is in the terms, not the deck |
+| Exit cost | Lineage and monitoring config is proprietary in three of these four | You, if you ever leave | Migrations are not a feature |
+
+The review data backs the alert-noise problem rather than contradicting it. Monte Carlo carries a 0% one-star rate across 547 G2 reviews, which for sales-led enterprise software is nearly unheard of, and the recurring complaint is still volume: broad automatic monitoring stays loud until someone tunes thresholds. One layer down, when the downstream consumers of bad data are [business intelligence tools](/articles/best-ai-business-intelligence-tools-2026-tableau-vs-power-bi-vs-looker-vs-hex), a missed schema change costs you a broken board in front of the CFO, not a failed test.
+
+So the second question you ask any of these AI data quality tools should be who owns alert tuning. Budget the labor line first and let it set your monitoring scope.
+
+## Two of the four changed hands in twelve months
+
+Great Expectations lost its commercial product to FICO and its open source project to Fivetran. Metaplane, the per-table option most mid-market teams would otherwise be comparing here, was acquired by Datadog in April 2025 and now runs as "Metaplane by Datadog," with Datadog stating it will fold the capabilities into its platform over time. Metaplane's published Pro rate is $10 per monitored table per month — $12,000 a year at 100 tables, and the clearest published per-table anchor in the category alongside Bigeye.
+
+Two acquisitions in one category inside a year is not a coincidence. Data observability is consolidating into larger platforms, the same way [DevOps observability](/articles/best-ai-devops-observability-tools-2026-datadog-vs-new-relic-vs-dynatrace-vs-splunk) consolidated. The buyer increasingly wants lineage and quality sitting next to the pipeline tool, the catalog, and the agent gateway.
+
+Practically, that puts vendor independence next to features in your evaluation. Ask what happens to your lineage graph at renewal, whether metadata is exportable, and whether the tool speaks OpenLineage.
+
+## What to monitor, and what to let fail loudly
+
+The contrarian move in 2026 is monitoring fewer tables, not more.
+
+Every pricing model here scales with monitored surface, so the correct scope is the set of tables that feed money, regulatory reporting, or an AI system that takes action. For most companies that is 30 to 80 tables, not 3,000. Everything else can break where a human will notice, because a human eventually will — and paying enterprise rates to be alerted about a marketing sandbox is how these programs get cancelled.
+
+Layer the buying, too. Assertions and ML anomaly detection are different products sold as one. Assertions catch rules you can name: this column never null, this total equals that sum. ML catches what you did not think to test — exactly the failure class that reaches executives. Buy only ML and you end up keeping critical business-rule logic in a vendor's custom SQL monitor, the most expensive place in the stack to maintain it. Buy only assertions and distribution drift blindsides you. Ship the same discipline upstream, too: [data labeling tools](/articles/best-ai-data-labeling-tools-2026-labelbox-vs-scale-ai-vs-encord-vs-v7) are where the bad values that break your model at inference time actually enter.
+
+For a mid-market warehouse, the honest starting configuration is Soda's Team tier on your money tables plus free data quality monitoring tools for the rest of the estate, or GX Core in your repository if your engineers prefer Python to a UI. The best data observability platform for mid-market is usually the cheapest one your team will actually maintain, not the strongest demo.
+
+## Bottom line
+
+AI data quality tools are sold as a way to make AI trustworthy. Most are metered as a tax on how untrustworthy your data already is, which makes the buying decision a scope decision: decide what deserves watching, then pick the meter that matches it.
+
+Want a published price and a fast start? Soda at $750 a month is the least ambiguous contract in the category. Need lineage-aware root cause and governed agent access? Bigeye's $45,000 and $75,000 marketplace tiers are at least honest numbers you can budget against. Complex environment and a budget that treats $55,000 as a rounding error? Monte Carlo is the default, and the credits are negotiable if you do the arithmetic first. Engineers but no budget? GX Core is free, Fivetran maintains it, and the real cost is the suite maintenance nobody warns you about.
+
+Whoever you pick, price the exit before you price the license. Two of these four were restructured in the last twelve months.
+
+## Frequently Asked Questions
+
+### Is Monte Carlo or Soda cheaper for a mid-sized warehouse?
+
+Soda is cheaper on published numbers. Team is $750 a month with 20 datasets included and $8 per additional dataset; a 300-dataset deployment lands near $35,880 a year. Monte Carlo publishes no rate, but Vendr's contract data puts the median deal at $55,000 a year. The trade is depth for price: Monte Carlo covers ingestion, streaming, and field-level lineage across a mixed stack with no test authoring, while Soda expects you to own data contracts and their maintenance. Three data engineers and a dbt project? Soda wins. Multi-warehouse estate and no capacity to write contracts? The cheaper tool is the more expensive mistake.
+
+### What does Bigeye pricing actually look like per table?
+
+Bigeye lists it on Microsoft's marketplace: $45,000 a year for 100 active monitored tables, $75,000 a year for 300. That is $450 per table per year at the entry tier and $250 at the larger one, so the per-table rate falls 44% as you scale. Both are one-year terms with two lineage connectors included. There is no free tier and no self-serve signup, so this is sales-led — but it is one of the few in the category where you can compute your own budget before the first call.
+
+### Are there open source data quality tools good enough to replace a paid platform?
+
+For assertions, yes. GX Core is Apache-2.0, past 11,000 stars, still releasing under Fivetran's stewardship, and it validates warehouse, Pandas, and Spark data for free. dbt-expectations and Elementary give you a dbt-native version of the same idea. What open source does not give you is ML anomaly detection with a trained baseline, automated column-level lineage, or an incident workflow. Teams that try to replace a platform outright end up rebuilding lineage tracking badly. The workable split is open source assertions on the tables you understand, one paid tool for the ones you don't.
+
+### What happened to Great Expectations pricing in 2026?
+
+The paid tier stopped existing. FICO acquired GX Cloud and folded it into the FICO Platform, and GX Cloud stopped being publicly available on June 1, 2026. GX Core continues under Fivetran as the new steward of the project and community, so the library is alive and free. If you were budgeting for a managed tier, that line item is gone.
+
+### Do these tools monitor AI agents, or only data pipelines?
+
+That is the 2026 dividing line. Bigeye is furthest along: its MCP server puts quality issues, lineage, and catalog search inside Claude Code, Snowflake Cortex Code, and GitHub Copilot CLI under your existing permissions, and AI Guardian enforces what those agents may access. Monte Carlo has repositioned around agent observability alongside data observability. Soda and Great Expectations are pipeline and warehouse tools without an agent-facing layer. As agent fleets scale, "does the agent know this table is stale before it acts" becomes the failure mode nobody has budgeted for yet.
