@@ -15321,5 +15321,69 @@
     "platform": "Web, iOS, Android",
     "rating": "⭐ 4.5",
     "published": true
+  },
+  {
+    "name": "Twitch",
+    "slug": "twitch",
+    "url": "https://www.twitch.tv/",
+    "category": "AI Income",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "color": "#9146FF",
+    "emoji": "🎗️",
+    "platform": "Web + App",
+    "price": "Free · 50/50 subs, up to 70/30",
+    "pricing_details": "Streaming on Twitch is free; every monetization program is free to join. Subscriptions ($4.99 / $9.99 / $24.99 tiers in the US) split 50/50 by default, so a Tier 1 sub puts about $2.50 in your pocket. The Plus Program raises your share to 60/40 at 100 Plus Points and 70/30 at 300 Plus Points, held for three consecutive months (Tier 1 sub = 1 point, Tier 2 = 2, Tier 3 = 6; gifted and Prime subs pay you but earn zero points). The old $100k cap on the 70/30 rate is gone, and Affiliates can now qualify alongside Partners. Bits pay roughly $0.01 each - Twitch takes its margin when viewers buy Bits, not from your payout (third-party Extension cheers pay ~80%). Prime Gaming subs pay a fixed local-currency rate ($2.25 per US Prime sub since June 2024). Mobile sub purchases lose ~30% to the Apple/Google store cut before the split. Ad revenue is shared, with gross CPMs reported around $3.50. Payouts are monthly on a net-15 schedule with a $50 minimum balance; below that the balance rolls over.",
+    "rating": "⭐ 4.5",
+    "visits": "100M+/mo",
+    "published": true,
+    "created_date": "2026-09-29",
+    "tags": [
+      {
+        "text": "Live Streaming"
+      },
+      {
+        "text": "Subs & Tips"
+      },
+      {
+        "text": "Free to join"
+      }
+    ],
+    "features": [
+      "The lowest monetization bar of any major platform: subscriptions, Bits and emotes activate around 50 followers, 500 streamed minutes, 7 broadcast days and an average of 3 concurrent viewers in a 30-day window",
+      "Plus Program creates a real ladder: 60/40 at 100 Plus Points, 70/30 at 300, with the earnings cap removed and eligibility now open to Affiliates, not just Partners",
+      "Bits pass through at face value (about $0.01 each) - the only major income stream where the platform does not take a percentage of your side",
+      "An ecosystem built for AI-assisted production: OBS overlays, AI moderation, chat bots, text-to-speech alerts and clip exporters feed the TikTok/Shorts funnel directly from your live stream"
+    ],
+    "pros": [
+      "Zero-cost entry with the fastest on-ramp in live streaming - three concurrent viewers is a bar a single friend group can clear, where YouTube demands 1,000 subscribers before ads pay a cent",
+      "Per-viewer spending beats every rival: Twitch viewers buy subs, gift subs, cheer Bits and buy channel-point rewards, so 100 concurrent viewers can out-earn 100,000 passive TikTok followers",
+      "The 70/30 Plus tier is genuinely reachable now - 300 recurring Tier 1 subs held for three months gets you there, and the $100k earnings cap that used to claw it back is permanently gone",
+      "Sponsorships at 100% margin stack on top of platform money: small channels in defined niches report $500-$1,000 per sponsored stream once they pass roughly 1,000 concurrent viewers, and Twitch takes none of it"
+    ],
+    "cons": [
+      "The default 50/50 sub split is the worst among major platforms - Kick pays 95%, YouTube memberships pay 70% - and you stay on 50/50 until you hold 100-300 Plus Points for three straight months",
+      "Gifted subs and Prime subs pay you but earn zero Plus Points, so the crowd-pleasing hype moments that feel like growth do nothing toward your better split",
+      "The 3-average-concurrent-viewer Affiliate gate is the real wall: sources put the typical grind at 3-9 months for streamers with no existing audience, and bots or self-views do not count",
+      "Mobile subs surrender ~30% to Apple and Google before the split even starts, and Twitch has shown it will restructure legacy deals - the February 2026 backend migration moved longtime 70/30 contract holders onto the standard Plus Program, honoring old contracts only for a limited group"
+    ],
+    "description": "Twitch is the largest live-streaming platform, and its monetization stack - subs, Bits, ads, Plus Program - turns a small, loyal live audience into recurring income. For AI-tool users, it is the highest-trust format: a real person on camera or on mic, with AI tools handling moderation, overlays, clip cutting and multi-platform distribution in the background.",
+    "content": "## What Twitch Actually Is\n\nTwitch is the dominant live-streaming platform - roughly 54-60% of live watch hours - and it monetizes through a stack of subscriptions, Bits tips, shared ad revenue and external sponsorships. Unlike YouTube's view-count economics, Twitch pays for *presence*: a few hundred people watching at the same time, every day, is a business. That makes it the closest thing live streaming has to recurring revenue.\n\n## The Money Angle\n\nFour income streams, in the order a new streamer actually meets them:\n\n1. **Subs** - $4.99/$9.99/$24.99 tiers, split 50/50 by default. A channel holding 50 Tier 1 subs grosses about $125/month at the default split, $175 at 70/30.\n2. **Bits** - viewers cheer, you get about a cent per Bit with no further cut. Small but clean money.\n3. **Ads** - shared revenue with gross CPMs reported near $3.50; real money only past a few hundred concurrent viewers.\n4. **Sponsorships** - zero platform cut. This is where defined-niche channels (finance streams, coding streams, sim-racing) pull ahead of pure gaming channels of the same size.\n\nThe AI-tool play: use AI for everything that is not the live part. AI moderation keeps chat clean, AI-generated overlays and alerts make a two-person channel look produced, text-to-speech handles donated-message reads, and auto-clip tools cut stream highlights into the TikTok and Shorts funnel that feeds tomorrow's viewers. The camera and the mic stay human - that is the part Twitch audiences pay for.\n\n## What It Really Costs\n\n| Item | Cost to you |\n|---|---|\n| Streaming, subscriptions, Bits program | Free, always |\n| Default sub split | 50% to Twitch ($2.50 of a $4.99 sub) |\n| Plus 60/40 | 100 Plus Points, 3 consecutive months |\n| Plus 70/30 | 300 Plus Points, 3 consecutive months |\n| Bits | ~$0.01 each, no platform cut of your side |\n| Mobile subs | ~30% lost to app stores before the split |\n| Prime subs | Fixed rate, $2.25 per US sub |\n| Payout | Monthly net-15, $50 minimum balance |\n\nThe hidden cost is the points math: only paid recurring subs earn Plus Points, so a channel riding gifted-sub hype trains stays on 50/50 forever while earning the same money. Budget for the $50 payout floor too - a channel earning $30 a month sees nothing until the balance accumulates.\n\n## vs The Field\n\n| | Twitch | Kick | YouTube (live) |\n|---|---|---|---|\n| Sub split | 50/50, up to 70/30 via Plus | 95/5 flat | 70/30 memberships |\n| Entry bar | 50 followers + 3 avg viewers | 75 followers | 500 subs (fan funding) / 1,000 + 4,000 hrs (ads) |\n| Discovery | Strongest live discovery | Weak | Algorithmic, VOD long tail |\n| Ad revenue | Shared | Minimal | 55% long-form |\n| Real money at | ~100+ concurrent viewers | Low splits attract streamers, not viewers | High RPM but slowest on-ramp |\n\nKick's 95% is real but its audience is a fraction of Twitch's; a bigger percentage of a small pie is still small. YouTube pays better per head on VOD but demands the longest grind before a cent arrives. Twitch's edge is that the audience is present and spending - the highest per-viewer monetization in live streaming.\n\n## The Honest Cons\n\n- **The split is the price of the audience.** 50/50 is the worst headline deal in streaming, and you earn your way out through months of Plus Points discipline.\n- **The February 2026 contract episode.** During a backend migration, streamers holding legacy 70/30 contracts received emails implying those deals would end; Twitch clarified it honors historical contracts for a limited group, but the episode showed how the platform treats grandfathered terms when it standardizes. If your business plan assumes today's terms last forever, you have not been paying attention.\n- **3 concurrent viewers is a real audience.** It sounds trivial until you stream to zero for six weeks. The typical path is an existing TikTok or YouTube funnel pushing viewers into the live schedule.\n- **Live is not passive.** No stream, no income. Every dollar on Twitch requires you, live, on a schedule.\n\n## Bottom Line\n\nTwitch belongs in the AI Income stack as the trust layer: it is the only major platform where a 100-viewer channel reliably out-earns a 100,000-follower passive account, and its entry bar is the lowest anywhere. Treat the 50/50 default as rent for the audience, grind the Plus Points ladder deliberately (push Tier 1 recurring subs, not gift floods), and keep the AI tools behind the camera where they belong.",
+    "faq": [
+      {
+        "q": "How much does a Twitch streamer actually keep from a subscription?",
+        "a": "At the default 50/50 split, about $2.50 of every $4.99 Tier 1 sub, $5.00 of Tier 2, and $12.50 of Tier 3 - before taxes and payment fees. Once you hold 100 Plus Points for three consecutive months the split becomes 60/40 ($3.00), and at 300 Plus Points it reaches 70/30 ($3.49). Note that gifted and Prime subs pay you money but earn zero Plus Points toward the better split."
+      },
+      {
+        "q": "What do I need before Twitch starts paying me?",
+        "a": "The widely documented Affiliate bar is 50 followers, 500 streamed minutes, 7 unique broadcast days and an average of 3 concurrent viewers, all inside one rolling 30-day window. Some 2026 sources report Twitch lowered parts of this in May 2026 (25 followers, 4 days, 240 minutes) while keeping the 3-viewer requirement - check the official Affiliate page for the current numbers. Either way, the 3 average concurrent viewers is the gate that stops most new streamers, and it typically takes 3-9 months without an existing audience."
+      },
+      {
+        "q": "Can I use AI-generated content while streaming on Twitch?",
+        "a": "Yes, and many channels do - but the money follows the human. AI overlays, moderation, TTS donations and auto-clipping are standard production tools. What audiences will not pay for is a fully synthetic streamer pretending to be live in real time, and Twitch's policies on impersonation and deceptive content apply to AI clones of real people. The practical formula on every monetized AI-assisted channel: AI handles production speed, a human handles presence."
+      }
+    ]
   }
 ]
