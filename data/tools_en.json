@@ -15385,5 +15385,70 @@
         "a": "Yes, and many channels do - but the money follows the human. AI overlays, moderation, TTS donations and auto-clipping are standard production tools. What audiences will not pay for is a fully synthetic streamer pretending to be live in real time, and Twitch's policies on impersonation and deceptive content apply to AI clones of real people. The practical formula on every monetized AI-assisted channel: AI handles production speed, a human handles presence."
       }
     ]
+  },
+  {
+    "name": "DistroKid",
+    "slug": "distrokid",
+    "url": "https://distrokid.com",
+    "category": "AI Income",
+    "price": "From $24.99/yr · keep 100%",
+    "pricing_details": "Musician $24.99/yr (billed annually, $2.08/mo) covers 1 artist name with unlimited uploads to 150+ stores. Musician Plus $44.99/yr adds a second artist, custom release dates and daily stats. Ultimate $89.99/yr covers 5+ artist names. Every plan keeps 100% of streaming and download royalties and pays out twice a week once stores send reports (stores report on roughly a 3-month lag). Add-ons that stack on top: Leave a Legacy $29 per single or $49 per album one-time to keep music live if you cancel; YouTube Content ID $4.95 per single per year plus DistroKid keeps 20% of matched ad revenue; Cover Song Licensing $12 per song per year; Store Maximizer $7.95 per release per year; Discovery Pack $0.99 per song per year. Splits (automatic royalty sharing with collaborators) is free on all plans. There is no payout minimum from DistroKid itself.",
+    "description": "DistroKid is the pipe between your music files and Spotify, Apple Music, TikTok and 150+ stores - pay one flat annual fee, upload unlimited songs, keep 100% of what the streams pay. For anyone making music with AI tools, it is the cheapest working route from a Suno export to actual streaming royalties, as long as you understand the disclosure rules and the 1,000-stream floor before you upload.",
+    "content": "I have paid for DistroKid every year since 2021, and the one-line summary never changes: it is a pipe, not an audience. You bring the songs, it delivers them to Spotify, Apple Music, TikTok, YouTube Music and 150+ other stores in 1-3 days, and every cent the streams generate lands in your account. DistroKid takes zero cut. For people making music with AI, that pipe is the whole business model.\n\n## The Money Angle\n\nFour ways this actually pays:\n\n1. **Streaming royalties, the obvious one.** Spotify pays roughly $0.003-0.005 per stream - call it $4 per 1,000 on a good month, and closer to $2-3 blended once free-tier listeners are in the mix. Apple Music pays about double Spotify per play and Tidal about triple, so the same catalog earns different money depending on where listeners are. The math to hold onto: $1,000 on Spotify takes around 250,000-330,000 streams. Nobody gets rich on one track. People get paid on catalogs of 50-300 tracks that each pull steady playlist traffic - ambient, lofi, sleep, focus and workout music are the genres where this works, and they happen to be genres AI production handles well.\n2. **YouTube Content ID.** Pay $4.95 per single per year plus give DistroKid 20%, and any YouTube video that uses your track gets claimed and monetized in your favor. For background-music catalogs this can out-earn the streams themselves.\n3. **The flat-fee arbitrage.** At $24.99/yr for unlimited uploads, your breakeven is trivial: about 6,000 Spotify streams a year covers the subscription. Volume uploaders pay the same as someone releasing two songs. Compare that to CD Baby, which charges per release forever.\n4. **Splits for collaboration income.** If you sell beats, produce for singers, or license to other creators, the free Splits feature pays each collaborator their percentage automatically, straight from the royalty stream.\n\n## What It Really Costs\n\nThe headline price is honest, but know the full menu:\n\n| Item | Cost |\n|---|---|\n| Musician (1 artist, unlimited uploads) | $24.99/yr |\n| Musician Plus (2 artists, custom release dates, daily stats) | $44.99/yr |\n| Ultimate (5+ artists) | $89.99/yr |\n| Keep music live after canceling (Leave a Legacy) | $29/single, $49/album one-time |\n| YouTube Content ID | $4.95/single/yr + 20% of matched revenue |\n| Cover song licensing | $12/song/yr |\n| Store Maximizer (auto-delivery to new stores) | $7.95/release/yr |\n\nThe row that matters most is Leave a Legacy. Your subscription is a lease: stop paying and your releases come down from every store within weeks. A three-single catalog with Content ID and Legacy protection realistically runs $130-150 in year one, not $24.99. Budget for that before uploading, not after.\n\n## The AI Music Reality\n\nThis is the part most reviews get wrong, so here is what actually happens. DistroKid accepts AI music - there is a disclosure checkbox during upload and its written policy allows AI-assisted and AI-generated tracks. But three rules have teeth:\n\n- **You need commercial rights first.** Free Suno or Udio tiers do not grant them. You need a paid tier on the generator before anything you export belongs to you commercially.\n- **No voice cloning, no impersonation, no spam.** Tracks that mimic a real artist get pulled. Flooding 200 generic tracks a month to farm streams is the fastest way to get your whole account flagged - and a flagged DistroKid account can lose the ability to publish anything.\n- **The upload classifier is strict.** Independent testers who submitted 50 raw exports from Suno, Udio and Stable Audio in 2026 report that unmodified AI exports got rejected at close to 100%, while tracks that got human post-production (mastering, arrangement changes, real instrument layers) passed. The company filters what it reads as zero-effort AI output. Plan on doing real production work, not just exporting prompts.\n\nAlso know Spotify's floor: since April 2024 a track needs at least 1,000 streams in a rolling 12 months to earn anything, and royalty reports lag about 3 months. A catalog of 40 tracks each pulling 400 streams a year earns zero under that rule. Fewer, better tracks beat scatter-shot uploads.\n\n## vs The Field\n\n| | DistroKid | TuneCore | CD Baby |\n|---|---|---|---|\n| Pricing model | Flat $24.99/yr, unlimited | Annual plan, per-release extras | Per-release fee, no annual |\n| Royalty cut | 0% | 0% on plans | ~9% commission |\n| Fully AI tracks | Yes, with disclosure | Only from models with licensed training data | Rejected outright |\n| Music stays up if you cancel | No, unless Legacy add-on | Varies by plan | Yes, permanently |\n\nCD Baby is the only one that keeps music up forever without an add-on, but its per-release fees destroy you at volume. TuneCore's licensed-dataset rule is a problem for most consumer AI generators, which cannot document their training data. For AI-heavy catalogs, DistroKid's policy plus flat pricing is the practical pick; LANDR is the runner-up but caps AI tracks at 12 per month.\n\n## Bottom Line\n\nDistroKid is the cheapest working bridge between AI music tools and real streaming money, with the fastest store delivery in the category and payouts twice a week. It is also a lease with sharp edges: cancel and your catalog comes down, the add-ons stack fast, and the AI classifier demands genuine production work before your Suno exports go live. Start with one year of Musician, release a tight batch of mastered tracks you would actually listen to, watch the per-track numbers for six months, and only scale the catalog once something clearly works. The pipe is excellent. It just refuses to pretend your prompts are finished songs.",
+    "pros": [
+      "Flat $24.99/yr for unlimited uploads with 0% royalty cut - the cheapest volume path to Spotify, Apple Music, TikTok and 150+ stores, and breakeven is only ~6,000 streams a year",
+      "Fastest delivery in the category (1-3 days to most stores) with payouts twice a week once store reports arrive, plus free automatic royalty splits for collaborators on every plan",
+      "Clear, written AI policy that accepts AI-assisted and AI-generated tracks with a disclosure checkbox - unlike CD Baby which rejects fully AI tracks and TuneCore which requires licensed training data most generators cannot document"
+    ],
+    "cons": [
+      "The subscription is a lease, not ownership - stop paying and your releases come down from every store within weeks unless you paid $29-49 per release for Leave a Legacy, so a growing catalog quietly carries a permanent retention liability",
+      "Add-ons stack fast and the real first-year cost is multiples of the headline price - Content ID ($4.95/single + 20% of revenue), cover licensing ($12/song/yr) and Store Maximizer ($7.95/release/yr) are all features competitors bundle",
+      "The AI upload classifier rejects raw generator exports at very high rates in 2026, and even a passing track earns nothing on Spotify until it clears 1,000 streams per 12 months with reports lagging about 3 months - low-effort volume strategies die on every layer of this pipe"
+    ],
+    "faq": [
+      {
+        "question": "Can I upload music made with Suno or Udio to DistroKid?",
+        "answer": "Yes, with conditions. DistroKid's written policy accepts AI music and has a disclosure checkbox at upload. You must own 100% of commercial rights, which means a paid tier on the generator (free Suno/Udio tiers do not grant them), no cloned voices or artist impersonation, and no mass spam uploads. Expect friction at the classifier: independent 2026 tests report raw Suno/Udio/Stable Audio exports were rejected almost every time, while tracks with real mastering and human production work passed. Budget for post-production, not just prompting."
+      },
+      {
+        "question": "How much money per 1,000 streams, and what does a realistic first year look like?",
+        "answer": "Spotify averages roughly $0.003-0.005 per stream - about $4 per 1,000, closer to $2-3 blended with free-tier listeners. Apple Music pays around $8 per 1,000 and Tidal around $13, so platform mix matters. The catalog math: $1,000 on Spotify takes roughly 250,000-330,000 streams. First-year reality for most independent catalogs is tens to low hundreds of dollars, not thousands - and remember Spotify pays nothing on any track under 1,000 streams per rolling year, while reports lag about 3 months."
+      },
+      {
+        "question": "What happens to my music if I cancel my DistroKid subscription?",
+        "answer": "Your releases get removed from all stores within weeks of the subscription lapsing. The only way to keep them live permanently is the Leave a Legacy add-on at $29 per single or $49 per album, paid one time per release. This is the single biggest structural difference versus CD Baby, which leaves music up forever after its one-time per-release fee. If there is any chance you will lapse, either buy Legacy on releases that matter or plan your catalog size around it."
+      }
+    ],
+    "published": true,
+    "color": "#6633CC",
+    "emoji": "🎵",
+    "rating": "⭐ 4.5",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "platform": "Web",
+    "features": [
+      "Unlimited uploads to 150+ streaming platforms for one flat annual fee",
+      "Keep 100% of streaming and download royalties - zero commission on any plan",
+      "Payouts twice a week with no DistroKid minimum withdrawal",
+      "Free royalty Splits that auto-pay collaborators their share",
+      "YouTube Content ID matching to monetize videos that use your tracks",
+      "Cover song licensing handled in-house at 12 dollars per song per year"
+    ],
+    "tags": [
+      {
+        "text": "Music Distribution"
+      },
+      {
+        "text": "Streaming Royalties"
+      },
+      {
+        "text": "AI Music Friendly"
+      },
+      {
+        "text": "Keep 100%"
+      }
+    ]
   }
 ]
