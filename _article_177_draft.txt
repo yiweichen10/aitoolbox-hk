@@ -1,0 +1,130 @@
+TITLE: Best LLM Observability Tools 2026 — LangSmith vs Langfuse vs Arize vs Braintrust
+SLUG: best-ai-llm-observability-tools-2026-langsmith-vs-langfuse-vs-arize-vs-braintrust
+CATEGORY: AI LLMOps
+DATE: 2026-10-01
+DESCRIPTION: A buying guide to LLM observability tools in 2026. LangSmith, Langfuse, Arize AX and Braintrust compared on the meter that actually drives the invoice, with real per-unit rates, self-hosting options and the retention fine print.
+KEYWORDS: LLM observability tools|langsmith vs langfuse|langsmith pricing|langfuse pricing|arize pricing|braintrust pricing|llm observability platform|llm evaluation tools|llm tracing tools|langsmith alternatives|llm observability cost
+---
+
+A LangChain survey of more than 1,300 AI professionals found that 89% of teams running agents in production already have observability wired up — and 29.5% run no evaluations at all. Almost everyone bought the tracing; nearly a third never graded what they traced. That gap explains why the four LLM observability tools below compete on price rather than features. The LLM observability platform market hits $2.69B this year and $9.26B by 2030 at a 36.2% compound rate (The Business Research Company, February 2026), and the buyers are still early enough to be persuaded.
+
+LangSmith, Langfuse, Arize and Braintrust all trace, all evaluate, and all monitor. They disagree about one thing, loudly, and it decides your invoice: what counts as a billable unit.
+
+## What an LLM observability tool actually measures
+
+Three jobs get sold under one name, and vendors blur them on purpose.
+
+**Tracing** records what the application did: the user input, each retrieval, each model call with its exact prompt and temperature, each tool execution, the output, tokens, latency, cost. Agent traces nest deeply, and one conversation produces megabytes across dozens of spans. Standard APM shows HTTP 200 while your retrieval step quietly returns the wrong document. That is why llm tracing tools record the whole tree instead of the request.
+
+**Evaluation** answers whether the output was any good. Offline evals score a curated dataset before you ship; online evals score live traffic, usually with an LLM as judge. LangChain's survey puts 52.4% of teams on offline evals, 37.3% on online evals, and 29.5% on nothing. Most llm evaluation tools sold separately are this layer with a dashboard bolted on.
+
+**Production monitoring** closes the loop: cost attribution per model and per user, latency percentiles, drift, and alerts when a quality score drops.
+
+Every vendor here does all three. What costs you money is a fourth dimension nobody puts in the comparison charts — the meter.
+
+## LLM observability tools 2026: four vendors, four meters
+
+- **LangSmith** meters seats first, then traces, then compute and storage units.
+- **Langfuse** meters units, where one unit is a trace plus every observation inside it plus every score.
+- **Arize AX** meters two axes at once: spans and gigabytes ingested.
+- **Braintrust** meters processed data and scores, with unlimited users on every tier.
+
+Same category, four units that move in different directions as your application grows. Pick wrong and the product still works fine. The invoice just outruns the traffic.
+
+### LangSmith: the seat is the cheapest line on the bill
+
+Developer is $0 per seat with one seat and 5,000 base traces a month. Plus is $39 per seat per month with unlimited seats, 10,000 base traces included, one free small serverless deployment, and access to Deployment, Engine and Sandboxes. Enterprise is quoted and adds self-hosted or hybrid deployment plus custom SSO and RBAC.
+
+The seat price is not the bill, and langsmith pricing admits it. Beyond the included traces you pay in two currencies: LCU, LangChain Compute Units, at $1.50 each, and LSU, LangChain Storage Units, at $1.00 each. Overage traces bill at 0.005 LSU — half a cent per extra trace. Deployment runs cost $0.005 each. Production deployment uptime runs $0.0036 per minute, which is $155 a month for one always-on production deployment. Fleet runs are $0.05 after the first 500, tuned evaluators 0.01 LCU per perceived-error run, and sandboxes bill per vCPU-hour by the second.
+
+Retention is the lever to watch. Base traces last 14 days; extended retention runs to 400 days and costs extra. LangSmith's docs note that feedback, annotation queues and automation rules can upgrade traces to extended retention on their own, so a team that switches on annotation for quality review can move its own bill without touching traffic. Startups can apply for up to $10,000 in credits.
+
+### Langfuse: the meter follows your agent's call tree
+
+langfuse pricing is the cleanest in the category and the most dangerous if you skim it. Hobby is free with 50k units a month and 30-day retention. Core is $29 a month with 100k units included and 90-day retention. Pro is $199 a month with the same 100k units but three years of data access, SOC 2 Type II and ISO 27001 reports, and a HIPAA-ready region. Enterprise is $2,499 a month. Extra usage is $8 per 100,000 units, dropping to $6 at volume. There is no per-seat charge from Core upward. SSO and fine-grained RBAC cost $300 a month as a Teams add-on.
+
+Now the part everyone skips. A unit is a trace, or an observation, or a score, and they are added together. Langfuse's own billing documentation walks through a real project: 20,070 traces + 119,500 observations + 561 scores = 140,131 units a month. The traces were 14% of the bill and the observations were 85%. Units created by Langfuse itself count too — LLM-as-a-Judge runs, annotation queues and experiments all generate billable units. You pay for your own quality process.
+
+That matters most for agents. A request that fires three model calls and produces two scores is six units, not one. A deep call tree does not only cost more tokens; it costs more observability, by the same multiplier. The langsmith vs langfuse decision usually lands right here, on whether your unit count is driven by headcount or by call depth.
+
+The escape hatch is the best in the category. Self-hosted Langfuse is free under MIT, unlimited, with no feature gates, and you pay only for your own ClickHouse. ClickHouse acquired Langfuse on January 16, 2026, alongside a $400M Series D at a $15B valuation, and stated that no licensing changes are planned and that self-hosting remains a first-class path. Langfuse v4 shipped in March 2026 with an observations-centric data model the team says improved dashboard loads by at least 10x. The tool now shares a data layer with the database it was already built on.
+
+### Arize: two axes, and RAG pays twice
+
+arize pricing splits into Phoenix, the free self-hosted option, and three managed tiers. AX Free is $0 with 25,000 spans a month, 1 GB of ingestion, 15-day retention, unlimited users, and unlimited evaluations. AX Pro is $50 a month flat with 50,000 spans, 10 GB of ingestion, 30-day retention, unlimited users, and 25 Signal issues. AX Enterprise is quoted with self-hosted deployment, SSO, audit logs and SOC 2 Type II.
+
+The structural oddity is the dual axis. Arize meters span count and raw ingested GB at the same time, so a RAG pipeline that stuffs 40,000 tokens of retrieved context into every prompt gets billed once for the span and again for the bytes. Two customers can send identical span volumes and see very different invoices because of how fat their prompts are. Per-unit overage was published historically at $10 per million spans and $3 per GB; it is not on the current pricing page, so confirm the rate in writing before you sign.
+
+The license detail matters more than people admit. Phoenix is not open source in the OSI sense — it ships under the Elastic License 2.0, which is source-available. You can read it, run it and self-host it, but you cannot offer it as a hosted service. If a lawyer asks whether your observability stack is open source, the answer for Phoenix is no. Online evals, production monitors and the Alyx copilot stay cloud-only, so the free path is real but partial.
+
+### Braintrust: scores are the meter, and eval-first teams feel it
+
+braintrust pricing is the simplest to model and the most generous on seats. Starter is $0 with 1 GB of processed data, 10,000 scores, 14-day retention, $10 of model credits, and unlimited users, projects, datasets and experiments. Pro is $249 a month flat with 5 GB of data, 50,000 scores, 30-day retention, custom charts and environments, RBAC, and S3 export. Enterprise adds on-prem or hosted deployment and a BAA for HIPAA.
+
+Every tier has unlimited users. That is the sharpest contrast with LangSmith: a 10-person team pays $390 a month in seats before a single trace on Plus, while the same 10 people pay $0 in seats on Braintrust. If your traces are read by product managers, QA reviewers and support staff rather than the three engineers who instrumented the SDK, the seat meter is the one that hurts.
+
+The volume needs translating. Braintrust says 1 GB of processed data is roughly one million trace spans at typical payload sizes, which makes Starter about 200x LangSmith's 5,000 free traces. Overages are $4 per GB and $2.50 per 1,000 scores on Starter, dropping to $3 and $1.50 on Pro. Past 30 days, retention costs $0.50 per GB per month up to 180 days. Braintrust raised an $80M Series B at an $800M valuation in February 2026 and reports Notion, Stripe, Vercel, Zapier and Instacart in production. Do not take the span conversion casually: if your spans are fat — multimodal payloads, long contexts, full tool JSON — that ratio collapses and the data overage arrives sooner than the charts suggest.
+
+## The unit is the price, and the free tiers are not comparable
+
+Most comparisons of LLM observability tools put these four side by side with a free-tier column. Those columns are not measuring the same thing, and the gap is not small. LangSmith gives away 5,000 traces. Langfuse gives away 50,000 units, where a unit may be a whole trace or a single observation. Arize gives away 25,000 spans plus 1 GB. Braintrust gives away 1 GB that it says maps to about a million spans. Put those in one column and you have implied a 200x spread produced entirely by unit definitions, not generosity.
+
+So do the only calculation that means anything: count the units your application produces in a month and price them on each meter. Pull 30 days of production traffic and get three numbers — traces, total observations across all spans, and evaluations you intend to run.
+
+| Platform | Primary meter | Entry paid price | Included volume | Free tier |
+|---|---|---|---|---|
+| LangSmith | Seat + trace + LCU/LSU | $39/seat/mo | 10k base traces/mo | 1 seat, 5k traces, 14-day retention |
+| Langfuse Cloud | Units (traces + observations + scores) | $29/mo | 100k units/mo | 50k units/mo, 2 users, 30 days |
+| Arize AX | Spans + ingested GB | $50/mo | 50k spans + 10 GB/mo | 25k spans + 1 GB/mo, 15 days |
+| Braintrust | Processed GB + scores | $249/mo | 5 GB + 50k scores/mo | 1 GB + 10k scores/mo, 14 days |
+| Self-hosted | Your infrastructure | $0 license | Unlimited | Langfuse MIT; Phoenix Elastic 2.0 |
+
+The same exercise on the cost side, because the meters punish different behaviours:
+
+| Meter | What inflates it | Rate to know | Who gets hurt |
+|---|---|---|---|
+| LangSmith seats | Every PM, QA or analyst who opens a trace | $39/seat/mo | Teams where non-engineers read traces |
+| LangSmith retention | Annotation queues auto-upgrading traces | LCU $1.50 / LSU $1.00 | Teams doing human quality review |
+| Langfuse units | Deep call trees and LLM-as-judge runs | $8 per 100k units | Agent builders with 5+ nested calls |
+| Arize dual axis | Fat prompts and retrieved context | reported $10/M spans, $3/GB | RAG with large context windows |
+| Braintrust data | Multimodal or verbose payloads | $3-4/GB, $0.50/GB/mo retention | Teams storing images and audio traces |
+
+Two rules fall out. The vendor that looks cheapest in a demo is often the one your architecture inflates fastest. And nobody's pricing page can answer this for you, because none of them know your observation-to-trace ratio. That ratio is your real unit cost, and it is worth measuring before you sign a 12-month term.
+
+## How to pick without a six-week evaluation
+
+Pick on the meter first, the ecosystem second, features third.
+
+**Choose LangSmith** if you build on [LangGraph](/tools/langgraph/) and want tracing, evals and managed deployment in one stack. The seat model is fine when only engineers read traces.
+
+**Choose Langfuse** if you want the strongest self-hosting story, MIT licensing, and no per-seat cost. It is the strongest of the langsmith alternatives on price at scale, and the default pick for teams with data-residency rules. Model your observation ratio before choosing Cloud over self-hosting — that is where the invoice hides.
+
+**Choose Arize AX** if you already run OpenTelemetry and want framework-neutral trace semantics, or if you need the embedding drift and cohort analysis left over from the ML monitoring era. Budget for the dual axis, and read the Phoenix license before telling your legal team it is open source.
+
+**Choose Braintrust** if evaluation is release control rather than a dashboard. Its GitHub Action blocks merges when scores fall under a threshold, and one-click conversion turns a production failure into a regression case. Pay the $249 without flinching if you run nightly regression suites; skip it if you only need logging.
+
+One check applies to all four: you are also choosing a routing layer. Token-cost tracking tells you what you spent, not what you should have spent. If you have not compared per-token economics across providers, do that first — our [API platform comparison](/articles/best-ai-api-platforms-2026-openai-vs-anthropic-vs-gemini-vs-deepseek) covers current rates, and if your shop already runs enterprise APM, the [Datadog vs New Relic vs Dynatrace vs Splunk breakdown](/articles/best-ai-devops-observability-tools-2026-datadog-vs-new-relic-vs-dynatrace-vs-splunk) is the alternative to bolting on a fifth tool.
+
+## Frequently Asked Questions
+
+### Is LangSmith or Langfuse cheaper for a small team?
+
+For five engineers reading traces and nothing else, LangSmith costs about $195 a month in seats before usage; Langfuse Core costs $29 total with unlimited users. LangSmith wins only if you would pay for its Deployment and Engine anyway, or if a $10,000 startup credit covers year one.
+
+### Do I need an LLM observability platform before I have production traffic?
+
+No. Below roughly 5,000 traces a month, free tiers cover you. The trigger to pay is a production incident you cannot explain from logs — usually a retrieval miss or a bad tool call that still returned HTTP 200.
+
+### Can I self-host an LLM observability platform for free?
+
+Yes, with different strings attached. Langfuse is MIT licensed and self-hostable with no feature gates. Arize Phoenix is free to self-host but licensed under Elastic License 2.0, which is source-available rather than OSI open source, and its online evals and production monitors stay cloud-only.
+
+### What is the real llm observability cost at 10 million traces a month?
+
+It depends on your observation-to-trace ratio, which is why no pricing page answers it. At 10 million traces and one observation each, Langfuse Cloud bills about 20 million units — roughly $1,600 a month on graduated volume. Add five model calls and two scores per trace and the same traffic lands near 80 million units, several times the cost, with zero change in user volume.
+
+## Bottom line
+
+LLM observability tools are priced on a meter, not a feature list, and the four meters here move independently of the thing you think you are buying. Seats scale with headcount, units scale with your call tree, gigabytes scale with your prompt size, scores scale with your quality process. Choose the meter your architecture inflates most slowly.
+
+If you want one default: start on Langfuse Cloud at $29, self-host the day the unit count gets real, and treat that migration as an architecture decision rather than a cost-cutting one. If evaluations gate your releases, pay for Braintrust and stop pretending a tracing tool will do that job. If you are already all-in on LangGraph, take LangSmith and accept the seat and retention meters as the price of one vendor. Whichever you take, export your traces somewhere you control. The traces are the asset. The dashboard is rent.
