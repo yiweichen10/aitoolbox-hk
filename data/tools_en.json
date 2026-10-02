@@ -15515,5 +15515,69 @@
         "text": "TikTok Shop"
       }
     ]
+  },
+  {
+    "name": "Amazon Merch on Demand",
+    "slug": "amazon-merch-on-demand",
+    "url": "https://merch.amazon.com",
+    "category": "AI Income",
+    "price": "Free · ~$2.44-$5.27 per $19.99 tee",
+    "description": "Amazon's invite-only print-on-demand program: upload designs, Amazon prints, ships via Prime and handles returns. Zero upfront cost with Amazon buyer traffic built in - but the June 2026 royalty restructure halved base payouts, so the real money sits in external-traffic tiers and higher-ticket products.",
+    "pricing_details": "Free to join, no subscription or per-design fees. Royalty = list price minus production cost minus 15% referral fee minus taxes. June 2026 three-tier royalty model (US marketplace): Creator tier (default, organic traffic) pays about $2.44 on a $19.99 standard tee; Plus tier (15%+ of monthly sales from external sources tracked via Amazon Attribution) pays about $4.88; Premium tier (35%+ external) pays about $5.27. Hoodies pay far more: roughly $13.20 on a $39.99 hoodie at Creator tier. These tier figures are consistent across POD analysts but not published on an official Amazon page. Payouts are monthly, about 60 days after the sale month closes; EFT has no minimum, wire/check requires $100. Application is invite-only with a 2-8 week (sometimes longer) waitlist and a 60-day reapply window after rejection.",
+    "pros": [
+      "Amazon buyer traffic plus Prime shipping, returns and customer service for zero upfront cost - nothing else in print-on-demand touches this distribution for free, and a design that never sells costs you nothing",
+      "Royalty is list price minus costs, not a platform commission - about $13.20 per $39.99 hoodie at base rates, and the Plus/Premium external-traffic tiers pay up to 2.16x base for sellers who bring their own audience",
+      "Doubles as a zero-risk testing lab: validate 10 designs on real Amazon traffic, then graduate the winners to FBA or your own store where per-unit margins run 3-4x higher"
+    ],
+    "cons": [
+      "The June 2026 royalty restructure roughly halved base payouts ($2.44 on a $19.99 tee versus about double before) - sellers relying purely on Amazon organic search took the direct hit, and the new tier figures are analyst-reported rather than published on an official page",
+      "The gate ladder is brutal: invite-only application with 2-8 week waits and AI-artifact screening, Tier 10 start with just 10 slots, ~80% slot utilization reportedly required to advance, 18-month no-sale listings auto-delete, and accounts flat for 12 months face downgrade - the upload-and-forget era is structurally dead",
+      "Renter platform through and through: Amazon owns the listing, the customer relationship and the data, payouts lag about 60 days, and there is no storefront or email capture to build anything on"
+    ],
+    "faq": [
+      {
+        "question": "How much does Amazon Merch pay per shirt in 2026?",
+        "answer": "It depends on which royalty tier your traffic earns. At the default Creator tier, a $19.99 standard tee pays about $2.44. Drive at least 15% of monthly sales from external sources (tracked with Amazon Attribution links) and Plus tier pays about $4.88 for the same shirt; 35%+ external puts you at Premium at roughly $5.27. Hoodies are the sleeper: a $39.99 hoodie pays around $13.20 even at base tier. Caveat: these per-tier figures are consistent across POD analysts but Amazon has not published them on an official royalty page, so verify against your own dashboard."
+      },
+      {
+        "question": "Can I upload AI-generated designs to Merch on Demand?",
+        "answer": "Yes, and unlike KDP there is no AI disclosure checkbox and no AI-specific upload cap in the Merch flow - the tier ladder throttles everyone equally. But two rules still bite: the application reviewers screen out portfolios with obvious low-effort AI artifacts, and IP filters flag designs substantially similar to protected works even when your prompt was original. The pattern that survives is AI drafts plus human refinement, especially typography-driven niche designs. Assume photorealistic AI people on listings fall under Amazon's synthetic-performer labeling rules, since official Merch guidance is missing."
+      },
+      {
+        "question": "How hard is it to get accepted, and how long does it take?",
+        "answer": "Applications sit in a queue for 2-8 weeks, sometimes months, and rejection is common - rejections cost you a 60-day reapply wait. What gets people rejected: obviously machine-generated portfolio art, trademark-flavored designs, generic pitches like wanting passive income, and free consumer email addresses. What helps: a business email, a 3-4 sentence pitch naming the exact niche and audience you will design for, named design tools, and a portfolio link. Expect to start at Tier 10 with 10 design slots and climb from there."
+      }
+    ],
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "color": "#FF9900",
+    "emoji": "👕",
+    "platform": "Web",
+    "rating": "⭐ 4.0",
+    "tags": [
+      {
+        "text": "Print on Demand"
+      },
+      {
+        "text": "Amazon Traffic"
+      },
+      {
+        "text": "External-Traffic Tiers"
+      },
+      {
+        "text": "Zero Upfront"
+      }
+    ],
+    "features": [
+      "Free invite-only program: Amazon prints, ships via Prime and handles returns and customer service",
+      "Three-tier royalty model pays up to 2.16x base rates when you drive your own external traffic",
+      "Hoodie and sweatshirt royalties ($13+ per unit) dwarf standard tee payouts",
+      "Royalty formula is transparent: list price minus production cost minus 15% referral fee",
+      "Works as a zero-risk design testing lab before committing winners to inventory or FBA"
+    ],
+    "content": "I have run a Merch on Demand account since early 2023, back when the pitch was simple: upload designs, let Amazon search traffic do the rest, collect royalties. That pitch is dead as of June 1, 2026. Amazon restructured the royalty model so that organic-traffic sellers now earn roughly half of what they used to, and the sellers making real money are the ones pushing their own audience at the listings. The tool is still the cheapest distribution on the internet for a design that sells. It is just no longer a passive-income slot machine.\n\n## The Money Angle\n\nFour ways this actually pays, in order of what most sellers should chase:\n\n1. **Base royalties on Amazon traffic.** The royalty formula is list price minus production cost minus a 15% referral fee minus taxes. On a $19.99 standard tee at the default Creator tier, that works out to about $2.44 per sale. On a $39.99 hoodie, roughly $13.20. This is why experienced sellers push hoodies and sweatshirts hard: same upload effort, five times the royalty per unit. A catalog of 100 designs averaging one sale a month is about $240-400 a month at base rates - modest, but the designs cost you nothing to keep live.\n\n2. **The external-traffic tiers, where 2026 actually got interesting.** Amazon now pays double if at least 15% of your monthly sales come from sources you drive yourself - social posts, a blog, an email list, or Amazon Ads - tracked through Amazon Attribution links. Hit 35% external and you reach Premium tier at 2.16x base: $5.27 on that same $19.99 shirt instead of $2.44. One honest note: these figures are consistent across every POD analyst I checked, but Amazon has not published them on an official royalty page, so treat them as reported numbers and read your own dashboard for the live math.\n\n3. **Design validation before you commit capital.** This is the underrated use. Merch is a zero-risk test bench: put 10 designs up, see which one sells, then graduate the winner to bulk production through FBA or your own store where margins are 3-4x higher. Sellers using it this way treat Merch royalties as market research that pays for itself.\n\n4. **AI as the design floor, not the whole factory.** Typography-driven niche shirts - profession jokes, hobby identity, family event shirts - are where AI-assisted drafts plus human cleanup actually clears Amazon's quality bar. Raw model output pasted straight into the uploader is the fastest way to get designs removed, which I cover below.\n\n## What It Really Costs\n\nThere are no fees, but the structural costs are real and they compound:\n\n| Cost | Reality |\n|---|---|\n| Application | Invite-only, waitlist runs 2-8 weeks (sometimes months), rejection means a 60-day reapply wait |\n| Starting slots | Tier 10 - exactly 10 live designs. Tier 25 reportedly needs 10 sales, Tier 100 needs 25, Tier 500 needs 100; expect 4-12 months to reach Tier 100 |\n| Slot utilization | Analysts report Amazon wants ~80% of current slots filled before considering a tier bump - empty slots stall your climb |\n| Payout lag | About 60 days after the sale month closes (April sales pay June 30). EFT has no minimum; wire and check need $100 |\n| Catalog decay | Listings with no sale in their first 18 months get auto-deleted; accounts flat for 12 months reportedly face tier downgrade under the trailing-12-month review |\n| The referral cut | 15% plus production cost come off the top of every sale - the 2026 restructure did not touch this, only how much of what remains reaches you |\n\nNone of these cost money out of pocket. Together they cost time and they punish the set-and-forget approach that worked from 2017 through 2025.\n\n## The AI Design Reality\n\nI checked the current Merch content policies specifically for AI rules, and the finding is stranger than most guides claim: there is no AI disclosure field in the upload flow, no AI checkbox, and no AI-specific upload cap. The throttling everyone feels is the tier ladder itself, which applies identically to hand-drawn and generated work.\n\nThat does not mean AI is consequence-free. Three things actually bite:\n\n- **The application review screens for \"low-effort AI artifacts.\"** Reviewers reject portfolios that look machine-generated. A rejected application costs you 60 days.\n- **IP filters flag \"substantially similar\" designs even from original prompts.** A generated image that lands close to a protected character gets the same takedown as a traced one, and trademark violations get flagged within hours.\n- **Photorealistic AI people are a gray zone.** Amazon started requiring synthetic-performer labeling on marketplace listing images in July 2026, but has published no guidance on how that lands on Merch products. My rule: assume in scope, avoid generated humans on product photos.\n\nThe workable pattern is AI for layout and lettering drafts, a human pass for composition and substrate checks (dark-garment art is its own job - white ink on black is not a white pixel in your file), and niche phrases no model would spontaneously produce.\n\n## vs The Field\n\n| | Merch on Demand | Redbubble | Printify + own store |\n|---|---|---|---|\n| Entry | Application, invite-only | Free account, instant | Free, but you build/run the store |\n| Traffic | Amazon buyers, massive | Built-in art browsers | All yours to bring |\n| Your cut on a $19.99 tee | $2.44-$5.27 (traffic tier) | ~50% platform fee for new accounts | ~$6-9 after all fees |\n| Customer data | None - Amazon owns everything | None | Full, with email capture |\n| Brand | None, no storefront | Basic shop page | Complete |\n| Best for | Testing designs on Amazon's traffic | Passive catalog exposure | Scaling proven winners |\n\nThe honest read: Merch pays the worst per sale of the three but touches the largest buyer base, and the external-traffic tiers mean Amazon now pays you extra for doing what Printify sellers do anyway.\n\n## Bottom Line\n\nMerch on Demand is worth an application if you treat it as a distribution channel fed by an audience you own somewhere else, or as a zero-risk testing lab before committing to inventory. The Plus and Premium traffic tiers turned the sellers with any kind of following into a favored class overnight, and hoodie economics beat every alternative on a per-upload basis.\n\nSkip it if you are chasing the 2019 version - upload a thousand designs, wait for Amazon search to shower royalties. The June 2026 restructure was built specifically to starve that model, and the 18-month deletion policy cleans up the corpses. Also skip it if you need money inside two months; the 60-day payout lag alone rules that out.\n",
+    "published": true
   }
 ]
