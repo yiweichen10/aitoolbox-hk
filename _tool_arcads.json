@@ -1,0 +1,65 @@
+{
+  "name": "Arcads",
+  "slug": "arcads",
+  "url": "https://arcads.ai",
+  "category": "AI Video",
+  "price": "From $77/mo · ~$11 per video",
+  "description": "An AI UGC ad studio: paste a script, pick from 300-1,500 AI actors, and get a talking-head ad clip in minutes. Agencies and dropshippers use it to ship 20-50 ad variations a month at roughly $11 a clip instead of paying human creators $80-200 each - but it fumbles physical product shots and there is no free trial.",
+  "pricing_details": "No public pricing page and no free trial - you must create an account to see plans. Reported 2026 tiers: Starter $110/mo (8,000 credits, up to ~50 videos, 300 actors, no captions or background removal), Creator $220/mo (16,000 credits, ~100 videos, 1,000 actors, captions and background removal included), Pro $550/mo (40,000 credits, 1,500 actors, API access and custom actor cloning). An ongoing 30% monthly discount brings the effective prices to roughly $77 / $154 / $385 per month. Credit costs: talking-actor video 800 credits per minute per actor, Veo 3.1 generation 800, Kling 3.0 176-560, Seedance 2.0 96-1,620, captions 80 per video, actor replacement 800, upscaling 80 per 10 seconds. Each clip's duration is rounded up to a full minute, so a 15-second ad costs the same as a 60-second one (~$11 on discounted Starter). Credits do not roll over on Starter or Creator. Annual billing is only 20% off list, which is worse than the standing 30% monthly discount. There is a 24-hour refund window that applies only if the account has generated zero videos, plus about 100 free image generations per day.",
+  "pros": [
+    "Cost gap is the whole story: about $11 per finished clip versus the $80-200 human UGC creators charge on Fiverr and Upwork, so a 15-variation ad set that would cost $1,500-3,000 in creator fees comes in near $165 in credits",
+    "The actor library is the deepest in the category - up to 1,500 faces filtered by age, gender, skin tone and scene - which is exactly what hook testing needs, and rendering is fast (single clip in 2-5 minutes, a batch of ten in about ten minutes)",
+    "One subscription reaches Sora 2, Veo 3.1, Kling 3.0 and Seedance 2.0 plus 30+ utility tools and 30+ output languages, so a single script can be re-cut for multiple markets without hiring anyone"
+  ],
+  "cons": [
+    "Physical products are a real weak spot: AI actors cannot reliably hold, unbox or demo a real item, and one reviewer logged roughly a 20% failure rate across about 30 campaigns on unboxing presets, with missing product parts baked into the output - this is a tool for a person talking about a product, not handling one",
+    "Quality is uneven and the billing has traps: roughly 30% of actor clips show obvious AI tells, only the top ~20% of a batch passes a scroll test, and every clip is rounded up to a full minute, so short 10-20 second ads are the worst value on the platform",
+    "No built-in editor (you export and cut in CapCut), no free trial to test the format, pricing hidden behind signup, annual billing is a worse deal than monthly, and Trustpilot sits around 3.0-3.3 with complaints about surprise charges and 72-hour cancellation windows"
+  ],
+  "faq": [
+    {
+      "question": "How much does Arcads cost in 2026?",
+      "answer": "Reported plans are Starter at $110/mo (8,000 credits, ~300 actors), Creator at $220/mo (16,000 credits, 1,000 actors) and Pro at $550/mo (40,000 credits, API and actor cloning). An ongoing 30% monthly discount brings those to roughly $77, $154 and $385. Creator is the plan most buyers actually need, because Starter has no captions or background removal and paid social ads effectively require captions. A typical 30-60 second single-actor ad with captions works out to about $11 on discounted Starter. There is no free trial, and annual billing (20% off list) is worse than the standing monthly discount, so stay on monthly."
+    },
+    {
+      "question": "Can Arcads AI actors hold or unbox a physical product?",
+      "answer": "Not reliably. Arcads is built around a person talking to camera, not a person operating an object. In hands-on testing, unboxing and product-handling presets failed around 20% of the time across roughly 30 campaigns, with missing product elements or garbled renders - one test had an actor picking up a smartwatch that had no strap. If your ad needs the product clearly and accurately in frame, shoot it for real or use a creator; if your product is digital or a service, Arcads is a strong fit."
+    },
+    {
+      "question": "Does Arcads have a free trial or a free plan?",
+      "answer": "No. There is no free trial and no free tier - you have to pay before you can generate a single video, which is unusual in this category and the main reason people hesitate. There is a 24-hour refund window, but it only applies if your account has generated zero videos, so it is not a practical way to test output quality. The one free thing is about 100 image generations per day from bundled image models. The cheapest honest way to test the format is one month of discounted Starter at about $77."
+    }
+  ],
+  "badge": {
+    "type": "hot",
+    "text": "HOT"
+  },
+  "color": "#7C3AED",
+  "emoji": "🎬",
+  "platform": "Web",
+  "rating": "⭐ 4.3",
+  "tags": [
+    {
+      "text": "AI UGC Ads"
+    },
+    {
+      "text": "Ad Creative"
+    },
+    {
+      "text": "Monetization",
+      "type": "hot"
+    },
+    {
+      "text": "Talking Head"
+    }
+  ],
+  "features": [
+    "Text-to-UGC-ad workflow: paste a script, pick an AI actor, render a 1080p talking-head clip in 2-5 minutes",
+    "Actor library scaling from 300 faces on Starter to 1,500 on Pro, filterable by age, gender, skin tone and background",
+    "Three talking engines - Arcads 1.0 for long scripts, Audio-Driven for existing voiceovers, OmniHuman 1.5 for short expressive lines",
+    "Bundled access to Sora 2, Veo 3.1, Kling 3.0 and Seedance 2.0 plus 30+ utility tools and 30+ output languages",
+    "Node-based Workflows for batch generation and a REST API plus MCP server on the Pro tier for automation"
+  ],
+  "content": "# Arcads Review 2026: Can AI Actors Really Sell Your Product?\n\nI have paid for Arcads on and off since mid-2025 for a small DTC skincare brand and a couple of client accounts. The pitch is blunt: skip the Fiverr hunt, skip mailing samples to creators, and generate a UGC-style ad with an AI actor reading your script in about five minutes. Half of that pitch holds up. The other half will cost you money if you do not read the fine print.\n\n## What Arcads Actually Does\n\nYou paste a script, pick an actor from a library that runs 300 to 1,500 faces depending on your plan, choose a speech engine, and render a 1080p MP4. There are three talking-head engines - Arcads 1.0 for long scripts, Audio-Driven when you already have a voiceover, and OmniHuman 1.5 for short punchy lines - plus access to image and video models like Sora 2, Veo 3.1, Kling 3.0 and Seedance 2.0 inside the same subscription. A single 15-30 second clip renders in 2-5 minutes; a batch of ten takes about ten minutes. Punctuation steers the performance more than you would expect: an exclamation point reads as excitement, a comma as a pause.\n\n## The Money Angle\n\n1. **Sell UGC ad creative to brands.** Human UGC creators on Fiverr and Upwork charge $80-200 per video, often more once usage rights are added. Arcads brings a finished clip with captions down to roughly $11. That gap is the business: agencies package 10-20 ad variations a month, bill $1,500-4,000, and keep the difference. The deep actor library matters here, because hook testing lives and dies on having many different faces.\n\n2. **Run your own paid social at volume.** Creative fatigue is the real ad-spend killer. Shipping 30 variations of the same script to Meta or TikTok in an afternoon is a genuine edge over a brand waiting two weeks for a creator to deliver.\n\n3. **Localize one script across markets.** The same script re-renders into 30+ languages, which is hard to buy from a single human creator at any sane price.\n\n4. **Faceless content channels.** Talking-head clips feed YouTube Shorts and TikTok pages that monetize through views or affiliate links, without you ever appearing on camera.\n\n## What It Really Costs\n\nThere is no public pricing page and no free trial - you sign up before you see numbers. Reported plans are Starter at $110/mo (8,000 credits, ~300 actors), Creator at $220/mo (16,000 credits, 1,000 actors) and Pro at $550/mo (40,000 credits, 1,500 actors, API and actor cloning). A standing 30% monthly discount brings those to roughly $77, $154 and $385. Two traps to know: billing rounds each clip up to a full minute, so a 15-second ad costs the same as a 60-second one; and annual billing is only 20% off list, which is worse than the standing monthly discount. Credits do not roll over on the lower tiers, and Creator is the realistic floor because Starter has no captions.\n\n## Where It Falls Apart\n\nThe honest failure modes. Physical products are the big one: AI actors cannot reliably hold, unbox or demo a real item - one reviewer logged roughly a 20% failure rate across about 30 campaigns on unboxing presets, with missing product parts in the output. Roughly 30% of actor clips carry visible AI tells (robotic pacing, odd blinking), so budget for more takes than you expect. There is no built-in editor, so you export and cut in CapCut. And Trustpilot sits around 3.0-3.3, mostly complaints about surprise charges and 72-hour cancellation windows rather than the core product.\n\n## Who Should Pay\n\nBuy it if you ship talking-head ads 45-60 seconds long, for a digital or service product, at 20+ clips a month, and you want a large ready-made actor library without setup. Skip it for 10-20 second spots (the worst value given minute-rounding), for anything that needs the product physically in frame, or if you just want to test the format - there is no trial to hide behind. For low-volume testing, one month of discounted Starter at about $77 is the cheapest honest way in.",
+  "published": true
+}
