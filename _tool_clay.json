@@ -1,0 +1,66 @@
+{
+  "name": "Clay",
+  "slug": "clay",
+  "url": "https://www.clay.com",
+  "category": "AI Marketing",
+  "price": "Free + Launch $167/mo · Growth $446/mo",
+  "description": "Clay is the data workbench go-to-market teams build lead lists on. You import companies or people, then run a waterfall of enrichment providers plus AI agents to fill in emails, phone numbers, headcount, tech stack, hiring and funding signals - and score or route the rows with formulas. The money angle is straightforward: agencies and freelancers sell Clay-built lead lists and outbound campaigns to clients at a large markup, because a clean list of 500 targeted decision-makers is worth far more than the $167 a month the Launch plan costs. It rewards people who learn it properly; it is not a click-and-go list builder.",
+  "pricing_details": "Clay prices by workspace, not per seat - all plans include unlimited seats and tables, so the plan names are really credit allowances. Free is $0 with 100 data credits and 500 actions a month, a 200-row cap per table, multi-provider waterfall enrichment, Claygent AI and bring-your-own API keys, but no phone-number enrichment. Launch is $167/month on annual billing ($185 month-to-month) with 2,500 data credits and 15,000 actions a month, adds phone-number enrichment, job-change and other signals, and raises the row limit to roughly 50,000. Growth is $446/month annual ($495 monthly) with 6,000 data credits and 40,000 actions, and adds CRM and warehouse sync, unlimited search, arbitrary HTTP API integrations, web-intent signals, unlimited ad audiences and priority support. Enterprise is custom, with unlimited search and audience imports, SSO, RBAC with workbook-level credit budgets, a dedicated strategist and onboarding. The catch is that credits are not one fixed price: a cheap company lookup may cost a fraction of a credit while a premium phone number can cost several, so a 2,000-contact list with email, phone and company enrichment can outrun Launch's 2,500 credits in a single pass. Extra credits are bought as top-ups at roughly a 30% premium over plan rates, and unused credits roll over only up to one month (or 15% of annual credits). Annual billing saves about 10%. Your real bill is list size multiplied by enrichment depth - price your monthly volume in credits before you commit, because the tier sticker is the entry fee and the credits are the bill.",
+  "pros": [
+    "The waterfall is the whole point and it works: for any field you want - a work email, a mobile number, a company's revenue band - Clay tries several providers in order and stops at the first hit, so you stop paying for five enrichment subscriptions and stop stitching CSVs together by hand",
+    "The money math is easy to defend. Launch is $167 a month, and a single lead-list or outbound job billed at $800-$3,000 pays for the subscription several times over - this is one of the few AI tools where a freelancer can name the client who covers the cost",
+    "It scales from a 200-row test to enterprise pipelines on the same workspace, and the signal layer (job changes, new hires, funding, web intent) turns a one-off list into something you can keep selling as a recurring monitoring or enrichment service",
+    "The AI side is useful rather than decorative - Claygent can research a row, summarise a company or draft a personalised opener, and those columns run inside the same table as your data, so enrichment and personalisation live in one place"
+  ],
+  "cons": [
+    "It gets expensive fast and the plan price hides it. Every enrichment is metered, top-ups carry a 30% premium, and there is no spend cap unless you build one - teams regularly discover their real monthly bill is two to four times the tier sticker after one oversized list run",
+    "The learning curve is real and it punishes casual users. Understanding waterfalls, formulas, AI column prompts and credit costs takes a week of study, and people who 'just want a list' bounce off the dense interface instead of getting value from it",
+    "It is a reach tool, not a relationship tool - it helps you contact thousands of strangers, so if your business actually grows from referrals and warm intros you are solving a problem you do not have, and the name collision with the personal CRM (now called Mesh) sends plenty of buyers to the wrong product"
+  ],
+  "faq": [
+    {
+      "question": "How much does Clay actually cost in 2026?",
+      "answer": "Clay is priced per workspace, not per seat, and every plan includes unlimited seats and tables. Free is $0 with 100 data credits and 500 actions a month and a 200-row limit per table. Launch is $167/month on annual billing ($185 month-to-month) with 2,500 data credits and 15,000 actions. Growth is $446/month annual ($495 monthly) with 6,000 credits and 40,000 actions. Enterprise is custom. The sticker price is not the real bill, though - credits are metered and cost different amounts depending on the enrichment, so a 2,000-contact list with email, phone and company data can burn through Launch's 2,500 credits in the first week. Extra credits are top-ups at about a 30% premium, and rollover is capped at one month. Price your actual list volume in credits before signing, not after."
+    },
+    {
+      "question": "Can you actually make money with Clay?",
+      "answer": "Yes, but not by reselling the tool - the honest money is in selling the output. The most reliable path is lead-gen as a service: build a targeted, verified list of decision-makers for a local business, a B2B SaaS or a recruiter, charge $500-$3,000, and spend a fraction of that on Clay credits. The second is outbound done-for-you, where you build the list, write the sequences and run the campaigns on a $1,500-$5,000 monthly retainer. The third is bolting a data product onto work you already do - if you run SEO, ads or web design, enriching a client's CRM and finding the leads their competitors miss is an easy upsell. In all three, the $167 Launch plan is a cost of goods, not a sunk cost, and one job covers it several times over."
+    },
+    {
+      "question": "Do you need to know how to code to use Clay?",
+      "answer": "No, and that is part of why it caught on with non-technical GTM people - the interface is a spreadsheet, not an IDE. You import a list, add columns, pick enrichment providers and write plain-English prompts for the AI columns, and the waterfall does the rest. What you do need is patience and a bit of data literacy: the concepts of credits, actions, waterfalls and formulas are not obvious, and the people who get burned are the ones who never learn what an enrichment costs before running it on 5,000 rows. If you can think in spreadsheets and are willing to spend a week learning the tool, you do not need to code."
+    }
+  ],
+  "badge": {
+    "type": "hot",
+    "text": "HOT"
+  },
+  "color": "#0F766E",
+  "emoji": "🧱",
+  "platform": "Web",
+  "rating": "⭐ 4.7",
+  "tags": [
+    {
+      "text": "GTM Data"
+    },
+    {
+      "text": "Lead Gen"
+    },
+    {
+      "text": "Monetization",
+      "type": "hot"
+    },
+    {
+      "text": "AI Enrichment"
+    }
+  ],
+  "features": [
+    "Waterfall enrichment that tries multiple data providers in order and stops at the first hit - work emails, mobile numbers, firmographics, tech stack and more, without juggling five separate subscriptions",
+    "Claygent AI columns that research a row, summarise a company or draft a personalised opener inside the same table as your data, so enrichment and personalisation happen in one place",
+    "Signal tracking for job changes, new hires, funding rounds and website visits, plus CRM and warehouse sync on Growth - turns a one-off list into a recurring monitoring or enrichment service you can resell",
+    "Spreadsheet-shaped interface with formulas, scoring, filtering and routing, so non-coders can build real pipelines without touching an IDE",
+    "Workspace pricing with unlimited seats and tables on every plan, scaling from a 200-row Free test to enterprise pipelines with SSO and role-based access"
+  ],
+  "content": "# Clay Review 2026: The GTM Data Workbench That Pays for Itself\n\nI have used Clay on and off since early 2025 for outbound builds - a SaaS client's cold email list, a recruiting agency's candidate sourcing, and a solo founder's partner research. It is the most capable tool of its kind, and also one of the easiest to waste money on. Both of those things are true at once.\n\n## What Clay Actually Is\n\nClay is a spreadsheet-shaped data workbench for go-to-market work. You import a list - company domains, LinkedIn profiles, a CSV of names - and then run columns against it. Those columns do three kinds of work: they call enrichment providers (find an email, a phone number, a company's headcount and tech stack), they call AI agents you configure (Claygent) to research or summarise a row, and they run logic to score, filter and route rows.\n\nThe clever part is the waterfall. For any field you want - say a work email - Clay can try five providers in order and stop at the first hit. That is how it beats doing this by hand across five subscriptions. It also runs signals: job changes, new hires, funding rounds, website visits. Plug it into a CRM and it keeps a pipeline enriched on autopilot.\n\nIt is not a CRM, not an email sender, and not a scraper you point at a URL. It is the layer where you assemble and clean the data everything else runs on.\n\n## The Money Angle\n\nClay has no big affiliate or reseller payout, so the honest money here is selling the output, not the tool. Three paths actually work.\n\n**1. Lead-gen as a service.** This is the big one. A local plumber, a B2B SaaS, a recruiter - they all need a targeted list and most have no idea how to build one. You charge $500-$3,000 for a list of 1,000 verified decision-makers with personalisation notes, spend a fraction of that on Clay credits, and keep the difference. The subscription is a cost of goods, not a sunk cost.\n\n**2. Outbound done-for-you.** Build the list, write the sequences, run the campaigns, report on replies. Retainers of $1,500-$5,000 a month are normal for this because it is the one thing most small businesses will happily outsource.\n\n**3. Selling to existing clients.** If you already do SEO, web design or ads, Clay lets you bolt on a data product without a new toolchain. Enrich their CRM, find the leads their competitors are missing, and upsell.\n\nThe math is straightforward: Launch is $167 a month, and one $800 lead-list job pays for it five times over.\n\n## What It Really Costs\n\nClay prices by workspace, not by seat, and the plan names are really credit allowances. Free gives you 100 data credits and 500 actions a month with a 200-row limit per table. Launch is $167/mo on annual billing or $185 month-to-month, with 2,500 credits and 15,000 actions. Growth is $446/mo annual or $495 monthly, with 6,000 credits and 40,000 actions. Enterprise is custom.\n\nThe trap is that a credit is not one fixed price. A cheap company lookup might cost a fraction of a credit; a phone number through a premium provider can cost several. A 2,000-contact list with email, phone and company enrichment can chew through Launch's 2,500 credits before you finish the first pass. Top-ups cost a 30% premium over plan rates, and credits roll over only up to one month.\n\nThe real bill is list size times enrichment depth. Price your actual volume before you commit, not after.\n\n## Where It Falls Apart\n\nIt is genuinely expensive once you scale. Teams routinely find their real spend is two to four times the plan sticker, because every enrichment is metered and there is no cap unless you set one. Budget discipline is on you.\n\nThe learning curve is steep. The interface is powerful but dense, and getting real value means understanding waterfalls, formulas, AI column prompts and credit costs. People who just want a list bounce off it. It rewards a week of study.\n\nAnd it is a reach tool, not a relationship tool. Clay helps you contact thousands of strangers well. If your business grows from referrals and warm intros, it solves a problem you do not have. Also watch the name collision: the personal CRM formerly called Clay is now Mesh, a different product entirely.\n\n## Who Should Pay\n\nPay for Clay if you run outbound at volume, if enrichment quality decides your reply rate, and if someone on the team will actually learn the tool. A freelancer or agency selling lead lists and outbound campaigns will cover the subscription with a single client.\n\nDo not pay if you are a solo consultant living off referrals, if you want a push-button list builder, or if you will not price your credits first. Clay is the best tool in its category and a money pit for the wrong user - sometimes the same person on a different week.",
+  "published": true
+}
