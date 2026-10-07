@@ -37,3 +37,18 @@ Process (all worked first try):
 7. Live: www.aitoolbox.hk/tools/apify/ 404 immediately, 200 after ~90s. Title renders correctly.
 
 Notes for next run: candidate pool still rich in under-served categories — Clay (AI Marketing, GTM enrichment), Instantly.ai/Smartlead (AI cold email), Retell AI/Bland (voice agents, but Vapi already covers), GoHighLevel (agency white-label). The "best-ai-*-2026" comparison articles already reference some of these (e.g. clay, instantly, apify) — adding the matching tool page is a natural fit.
+
+2026-10-06 (2nd run today): Added new English tool **clay** (Clay, category AI Marketing) — GTM data workbench with provider-waterfall enrichment + Claygent AI columns. Monetization angle = sell the output (lead-gen as a service $500-3,000/list; outbound done-for-you retainers; bolt-on data product for existing SEO/ads clients), NOT reselling the tool (no big affiliate program). Not previously in data/tools_en.json (was 215). Category AI Marketing was thin (5 tools). Pricing verified from clay.com/pricing + nynch.com (Aug 2026): Free $0 (100 credits/500 actions, 200-row cap); Launch $167/mo annual / $185 monthly (2,500 credits, 15K actions); Growth $446/mo annual / $495 monthly (6,000 credits, 40K actions); Enterprise custom. Workspace pricing, unlimited seats/tables; top-ups +30%; rollover capped 1 month; annual saves ~10%. Name collision noted: old personal CRM "Clay" is now Mesh.
+
+Process (all worked first try):
+1. Wrote tool JSON to temp `_tool_clay.json` (all fields incl. pricing_details).
+2. `price` = "Free + Launch $167/mo · Growth $446/mo" (38 chars); full cost stack in pricing_details.
+3. `python scripts/upsert_tool_en.py _tool_clay.json` → 1 added, total 216.
+4. `python scripts/check_price_labels.py` → PASS 216, 0 polluted (33 in 50-80 gray zone).
+5. `python scripts/build_en.py` → exit 0; tools/clay/index.html, sitemap 216 tools + 181 articles, OG image images/og/clay-en-og.png, IndexNow 1 URL (200).
+6. `git add -A && commit` (aefc70f95, prev 4763cf7a1) + push origin main (aitoolbox-hk). 455 files changed (normal). Worktree clean.
+7. Live: www.aitoolbox.hk/tools/clay/ 404 immediately, 200 within ~20s this time. Title renders, price label renders correctly.
+
+Bonus: an existing article `best-ai-lead-enrichment-tools-2026-apollo-vs-lusha-vs-zoominfo-vs-clay` already references Clay, so the new tool page has a natural internal-link target.
+
+Notes for next run: still-untapped under-served categories — AI Marketing is now 6 tools; candidates: Instantly.ai / Smartlead (AI cold email, strong agency monetization), GoHighLevel (agency white-label SaaS reseller), Retell AI / Bland (voice agents, Vapi covers the niche), Lemlist, Apollo. Also AI Agents (7) and AI Automation (8) remain thin.
