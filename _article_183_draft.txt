@@ -1,0 +1,123 @@
+TITLE: Best AI Data Integration Tools 2026 — Fivetran vs Airbyte vs Matillion vs AWS Glue
+SLUG: best-ai-data-integration-tools-2026-fivetran-vs-airbyte-vs-matillion-vs-aws-glue
+CATEGORY: AI Data Integration
+DATE: 2026-10-07
+DESCRIPTION: Fivetran, Airbyte, Matillion and AWS Glue move the same rows and bill four different meters. Here is what each pricing model actually charges for, with the list-price math to prove it.
+KEYWORDS: AI data integration tools|fivetran vs airbyte|fivetran pricing|airbyte pricing|matillion pricing|aws glue pricing|monthly active rows|fivetran alternatives|data pipeline cost|etl tools pricing|self-hosted airbyte
+---
+53% of a data team's engineering time goes to keeping existing pipelines alive rather than building new ones. That figure comes from Fivetran's Enterprise Data Infrastructure Benchmark Report 2026, which surveyed 500 data and technology leaders at organizations with more than 5,000 employees. The same report puts pipeline maintenance labor at $2.2M per enterprise per year and unplanned downtime at about 60 hours a month. So when you evaluate AI data integration tools in 2026, you are not buying a way to move rows. You are buying back engineering hours. The four products that show up in every evaluation — Fivetran, Airbyte, Matillion and AWS Glue — sell four different meters. Choose wrong and the tool works exactly as advertised while the bill outruns the value.
+
+## What AI data integration tools bill you for in 2026
+
+None of the four prices your data volume. Fivetran charges for change. Airbyte charges in credits whose row conversion it does not publish for database sources. Matillion charges for clock time. AWS Glue charges for compute seconds plus whichever timeout you forgot to set.
+
+That sounds like a quibble until you run the same workload through each. A meter that looks 40% cheaper in a sales deck can cost 4x more a year later, because each one has a different variable in the exponent: change rate, connector type, pipeline concurrency, worker sizing.
+
+There is a second pressure this year. In dbt Labs' State of Analytics Engineering 2026, 57% of teams reported warehouse and compute costs rising while only 36% reported team budget increases.
+
+### Fivetran: you pay for change, and for how you split it
+
+Fivetran is the product most buyers measure AI data integration tools against, and it is also the one most buyers misread. Fivetran pricing runs on monthly active rows, defined as distinct rows inserted or updated in a billing period. Unchanged rows returned by a re-sync do not count. Initial historical loads do not count either. Deletes do.
+
+Standard's per-connection curve runs $170 per million MAR at the 1M threshold, $58 at 4M, $19.70 at 16M, $6.72 at 64M and $2.29 at 250M, with a $5 base charge on every standard connection between 1 and 1,000,000 MAR. The curve is the part most buyers never read closely, because it restarts at the expensive end for every connection you create.
+
+Now do the thing Fivetran's own calculator will not do for you. Move 100M monthly active rows through one connection and you land in the 64M bucket: $2,651.60 plus 36M at $6.72, or $2,893.52 a month. Split the identical 100M rows across ten connections — one per source, the way most teams actually build it — and each reads 10M MAR in the 4M bucket at $1,010 plus 6M at $58, or $1,358. Ten of those is $13,580 a month for the same data. That is a 4.7x penalty for splitting the load, straight out of the published table.
+
+Activations sit on a separate and far steeper curve: Fivetran's own worked example prices 1.5M activation MAR at $1,017.66 on Standard, against roughly $800 for the same volume as connection MAR. Transformations include 5,000 model runs free, then $0.01 per run down to $0.002 at volume. The Free plan covers 500,000 MAR for connections, 3,500 MAR for activations and 5,000 model runs with no time limit. Annual contracts cut up to 22%, and Enterprise License Agreements buy unlimited consumption at a fixed annual price.
+
+The structural change to price in: Fivetran completed its merger with dbt Labs on June 1, 2026, and took over stewardship of the Great Expectations open source project in May 2026. Ingestion, transformation and data quality are now one vendor. If you were stacking Fivetran for ingestion plus a separate quality layer — the pattern in our [Monte Carlo vs Soda vs Bigeye vs Great Expectations breakdown](/articles/best-ai-data-quality-tools-2026-monte-carlo-vs-soda-vs-bigeye-vs-great-expectations/) — you now have one invoice and one negotiation.
+
+### Airbyte: credits you cannot convert into rows
+
+The Fivetran vs Airbyte decision usually gets framed as managed versus open source. The real difference is the meter.
+
+Self-hosted Core is free: 700 connectors, unlimited volume, no feature gate, AGPL. You pay for compute and for whoever keeps it running.
+
+Airbyte pricing on Cloud is credit-metered. Standard starts at $20 a month with 5 credits included and extra credits at $5 each. Plus is sold as fixed packages with overage at $5 per credit: 40 credits for $189, 100 for $449, 250 for $999, 500 for $1,799, 1,000 for $3,199, 2,000 for $4,999. Pro and Enterprise Flex move to capacity pricing on Data Workers — compute units that run roughly three syncs at a time — so the bill tracks concurrency instead of volume.
+
+Here is the number that decides your budget. Airbyte's own calculator states that 40 credits covers 6,640,000 API rows, about 166,000 rows per credit. Feed the same 40 credits database or file data instead and the calculator says 10 GB. Airbyte does not publish how a credit converts for a Postgres table, and that conversion is the only number that matters when your sources are databases rather than REST APIs. Treat any ETL tools pricing comparison built purely on the API row figure as advertising.
+
+The 2026 addition is Airbyte Agents, a separate product metered per agent operation at $0, $29 a month or $299 a month before custom pricing. It is a different meter on a different invoice, which is how feature creep shows up in your data pipeline cost.
+
+### Matillion: task hours, and no published price
+
+Matillion pricing is the least transparent of the four. The page lists Developer, Teams and Scale, with features documented and zero dollar figures attached — included credits are set on your order form.
+
+The consumption rules are published and unusually specific, and they are where the money is. One credit equals 15 minutes of pipeline execution, so a task hour is 4 credits. Orchestration pipelines bill 1 credit per task hour. Transformation pipelines bill 3. Streaming pipelines bill 1 for essential CDC and 2 for premium CDC — and because a streaming pipeline runs continuously, one premium-CDC pipeline consumes roughly 1,440 credits a month whether or not any data moves. Developer users beyond the five included consume 70 credits per user per month. Legacy Matillion ETL bills worse: 1 credit per vCore-hour of active instance time, meaning you pay for uptime rather than work, and an m5.2xlarge burns 8 credits for every hour it sits awake. Minimum monthly spends sit at 500, 750 and 1,000 credits across the three editions.
+
+The last publicly filed credit rates, in Matillion's UK G-Cloud 14 pricing document, were $2.00 and $2.50 per credit against those minimums. At $2.50, the Advanced floor of 750 credits is $1,875 a month — and a single premium-CDC pipeline consumes 1,440 credits on its own, forcing you up a package before you have ingested anything. Ask for the credit rate, the included allowance and the overage rate in writing, in that order.
+
+Teams that pair Matillion with a visual orchestration layer usually run something like [n8n](/tools/n8n/) for trigger-and-notify work rather than paying transformation rates for glue logic. Worth checking on any quote.
+
+### AWS Glue: compute seconds and a timeout you did not choose
+
+AWS Glue pricing is the most granular and the most forgiving, right up until it is not. The US East rate is $0.44 per DPU-hour, billed per second with a one-minute minimum, and no charge for startup or shutdown. A DPU is 4 vCPU and 16 GB. The default worker, G.1X, is one DPU; G.2X is two; G.4X is four; G.8X is eight.
+
+Three details move the bill more than the rate does. The first is the version: Glue 6.0 prices at $0.308 per DPU-hour, roughly 30% under the standard rate, but jobs default to 5.1 at $0.44 unless you set the version explicitly. The second is the timeout: AWS raised the default job timeout to 480 minutes on Glue 5.0 and later, so a hung 10-DPU job running to that default costs $24.64 on Glue 6.0, against $211.20 for the same hang against the old 2,880-minute default on Glue 4.0. Jobs that hit the timeout are not retried, but every retry of a failed run is another billed run. The third is the worker type: moving a job from G.1X to G.2X for safety doubles the hourly cost, and most jobs that get moved were never memory-bound. Autoscaling on Glue 3.0 and later typically saves 30% to 60% on bursty work.
+
+Adjacent line items add up faster than the jobs. Glue DataBrew charges $1.00 per 30-minute interactive session, first 40 free, and $0.48 per node-hour for jobs at a default of five nodes. The Data Catalog charges $1 per 100,000 objects per month plus $1 per million requests. Zero-ETL application ingestion runs $1.50 per GB.
+
+The strategic argument for Glue is that it is already on your AWS bill, so the cheapest integration layer is often the one inside a contract you have signed. The counterargument is that Glue is a toolkit, not a product — and the engineering time you spend wiring it is the exact currency the 53% figure is denominated in. If your destination is a vector store rather than a warehouse, the loading half of that work has its own cost structure, covered in our [Pinecone vs Weaviate vs Qdrant vs Milvus comparison](/articles/best-ai-vector-database-tools-2026-pinecone-vs-weaviate-vs-qdrant-vs-milvus/).
+
+## The same 100M rows, four different bills
+
+Here is the comparison that matters, using published rates and one scenario: 100 million rows a month landing in a cloud warehouse.
+
+| Setup | Meter reading | Monthly list cost | What the number excludes |
+|---|---|---|---|
+| Fivetran, one connection | 100M monthly active rows | $2,894 | Warehouse compute, activations, transformations past 5,000 runs |
+| Fivetran, ten connections | 10M MAR each | $13,580 | Same data, 4.7x the bill for splitting it |
+| Airbyte Plus, API rows | ~600 credits, estimated | ~$1,799 to $2,900 depending on package | The self-hosted path, unpublished database row conversion |
+| AWS Glue | 10 DPU for 30 min/day = 150 DPU-hours | $66 at $0.44; $46 on Glue 6.0 | Engineering time, which is the point |
+| Matillion, one transformation pipeline | ~33 credits/month | Confidential rate | One premium-CDC stream adds 1,440 credits/month |
+
+| Tool | Unit you pay for | What inflates the bill | Published list anchor |
+|---|---|---|---|
+| Fivetran | Monthly active rows — distinct rows inserted or updated | Splitting volume across many connections; deletes now count | $170 per million MAR at 1M, $6.72 at 64M+, plus $5 base per connection |
+| Airbyte Cloud | Credits with no published row conversion for databases | Connector type; the jump to capacity pricing at Pro | Standard $20 incl. 5 credits; Plus 40 credits $189; overage $5/credit |
+| Matillion | Task hours, at 4 credits each; legacy ETL bills vCore-hours of uptime | Transformation work at 3 credits/task-hour; streaming CDC bills around the clock | None — rate set on your order form |
+| AWS Glue | DPU-hours, billed per second | Wrong worker type, unset version, default 480-minute timeout | $0.44 per DPU-hour; $0.308 on Glue 6.0 |
+
+Read the Glue row in the first table again and the trap is obvious. Glue is roughly 40x cheaper than Fivetran on the license line for the same volume. It is also the option that consumes the most hours, and hours are the one cost item none of these vendors will quote. Fivetran's benchmark puts managed-ELT per-pipeline cost at about $1,600 against $1,900 for legacy hand-built pipelines — a 16% license gap everyone argues about, sitting next to a maintenance gap measured in 13 to 16 hours per incident.
+
+The decision rule: price the license gap against eight hours a month of a senior data engineer's time. Below that, managed wins. Above it, and only if your volume is genuinely high and stable, self-hosting starts to pay.
+
+## How to choose, and when to walk away from all four
+
+Match the meter to your growth curve, not your data volume.
+
+**Choose Fivetran** if your sources are SaaS APIs and your change rate is stable. It is the only one of the four where next quarter's bill is predictable without a spreadsheet, provided you keep connections consolidated. Merging ten small connections into two is a five-figure annual saving and nobody will suggest it to you.
+
+**Choose Airbyte** — self-hosted specifically — if you have an engineer who can own Kubernetes, or if residency rules forbid a third party touching the rows. The free Core tier is the strongest escape hatch here, and it is why Fivetran alternatives exist as a category rather than a wish.
+
+**Choose Matillion** if your bottleneck is transformation logic inside the warehouse. Get the credit rate in writing first, and never leave a legacy ETL instance running idle.
+
+**Choose AWS Glue** if you are deep on AWS, your team writes Spark, and you will actually set timeouts and worker types. Glue punishes defaults and nobody else on this list does.
+
+Walk away from all four when the real problem is upstream: if 41% of your organization cannot say who owns a given dataset, another pipeline adds to that problem instead of fixing it.
+
+## Frequently Asked Questions
+
+### Is self-hosted Airbyte really cheaper than Fivetran?
+
+On the license line, dramatically. Self-hosted Airbyte is free at any volume, and infrastructure for a moderate deployment commonly lands in the low hundreds of dollars a month. The gap closes on the labor line. Airbyte Cloud costs more than self-hosting and less than Fivetran at equivalent volumes, which makes it the sane default for teams without a platform engineer. Run the comparison with your loaded engineering cost, not the list price.
+
+### How many monthly active rows does Fivetran's free plan include?
+
+500,000 MAR for connections, plus 3,500 MAR for activations and 5,000 model runs, with no time limit and no credit card. That is a real evaluation environment rather than a trial. Remember MAR counts inserts, updates and now deletes, so a high-churn table can burn 500,000 rows in a day while a large static table costs nothing in steady state.
+
+### What does Matillion pricing look like when nothing is published?
+
+Three editions with consumption published and rates confidential. Use the last publicly filed rates from Matillion's UK G-Cloud document as your anchor: $2.00 per credit on Basic and $2.50 on Advanced, against minimum monthly spends of 500 and 750 credits. Then ask four questions: credit rate, included credits, overage rate, and whether the rate applies per credit or per task hour.
+
+### Is AWS Glue pricing the cheapest option on this list?
+
+Per unit of compute, yes by a wide margin. Per unit of delivered data, only if your team already writes Spark and has the discipline to pin the version, set timeouts and right-size workers. Every default here costs money when left alone, and the staffing cost of doing it properly never appears on the AWS bill. The cheapest invoice is not the cheapest decision.
+
+## Bottom line
+
+The four leaders in this category are priced on change, credits, clock time and compute seconds. None of them prices your data volume, so the comparison everyone runs — dollars per million rows — measures a variable only one of them charges for.
+
+Fivetran is the most predictable and the most expensive, and its per-connection curve punishes fragmented architectures in a way its calculator never surfaces. Airbyte is the only one with a free exit, and its credit model hides the number you need most. Matillion charges for time and will not tell you the rate. AWS Glue is nearly free on the invoice and expensive in defaults.
+
+The honest test for AI data integration tools is not cost per row. It is how many of your team's 53% maintenance hours the tool removes, weighed against what it charges for the growth you expect. Do that math before the demo, not after the renewal.
