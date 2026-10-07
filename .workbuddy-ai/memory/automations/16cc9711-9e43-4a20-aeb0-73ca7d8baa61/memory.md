@@ -52,3 +52,16 @@ Process (all worked first try):
 Bonus: an existing article `best-ai-lead-enrichment-tools-2026-apollo-vs-lusha-vs-zoominfo-vs-clay` already references Clay, so the new tool page has a natural internal-link target.
 
 Notes for next run: still-untapped under-served categories — AI Marketing is now 6 tools; candidates: Instantly.ai / Smartlead (AI cold email, strong agency monetization), GoHighLevel (agency white-label SaaS reseller), Retell AI / Bland (voice agents, Vapi covers the niche), Lemlist, Apollo. Also AI Agents (7) and AI Automation (8) remain thin.
+
+2026-10-07: Added new English tool **instantly-ai** (Instantly, category AI Marketing) — cold email platform: Outreach sending engine (unlimited accounts + warmup, sequences) + 450M+ B2B lead database/Credits + AI email writer & researcher agent. Chosen as the send-side complement to Clay (list-side), strong agency monetization: run cold email/appointment-setting as a service ($1,500-$5,000/mo retainer vs $47-$194/mo tool cost) + 30% recurring affiliate (PartnerStack). Not previously in data/tools_en.json (was 216). Pricing verified from instantly.ai/pricing + /affiliate: Outreach Growth $47/mo (annual $37.60), Hypergrowth $97/mo, Light Speed $358/mo; Credits (lead DB+AI) from $47/mo; bundles Starter $94 / Scale $194 / Agency $555 (annual saves ~10%); no free plan, trial only.
+
+Process (all worked first try):
+1. Wrote tool JSON to temp `_tool_instantly.json` (all fields incl. pricing_details).
+2. `price` = "From $47/mo · Starter bundle $94/mo" (35 chars); full cost stack in pricing_details.
+3. `python scripts/upsert_tool_en.py _tool_instantly.json` → 1 added, total 217.
+4. `python scripts/check_price_labels.py` → PASS 217, 0 polluted (33 in 50-80 gray zone).
+5. `python scripts/build_en.py` → exit 0; tools/instantly-ai/index.html, sitemap 217 tools + 182 articles, OG image images/og/instantly-ai-en-og.png, IndexNow 1 URL (200).
+6. `git add -A && commit` (f3926fbc0, prev 2e6ae7e7c) + push origin main (aitoolbox-hk). 461 files changed (normal). Worktree clean.
+7. Live: www.aitoolbox.hk/tools/instantly-ai/ → HTTP 200 within ~25s this time; title + price label render correctly.
+
+Notes for next run: AI Marketing now 7 tools (clay + instantly form a natural internal-link pair). Remaining thin categories: AI Agents (7), AI Automation (8), AI Search (7). Candidates: Smartlead (alt cold email), GoHighLevel (agency white-label reseller), Apollo (lead DB), Lemlist, Retell AI/Bland. The "best-ai-*-2026" articles may already reference some of these — check for a natural internal-link target when picking.
