@@ -65,3 +65,16 @@ Process (all worked first try):
 7. Live: www.aitoolbox.hk/tools/instantly-ai/ → HTTP 200 within ~25s this time; title + price label render correctly.
 
 Notes for next run: AI Marketing now 7 tools (clay + instantly form a natural internal-link pair). Remaining thin categories: AI Agents (7), AI Automation (8), AI Search (7). Candidates: Smartlead (alt cold email), GoHighLevel (agency white-label reseller), Apollo (lead DB), Lemlist, Retell AI/Bland. The "best-ai-*-2026" articles may already reference some of these — check for a natural internal-link target when picking.
+
+2026-10-09: Added new English tool **gohighlevel** (GoHighLevel, category AI Marketing) — all-in-one agency platform (CRM, funnels, calendars, email/SMS, reviews, AI agents) whose real story is the reseller model: on Agency Pro you white-label it, spin up a sub-account per client and resell seats at $200-500/mo, plus SaaS mode for recurring software revenue. Not previously in data/tools_en.json (was 217). Pricing verified from skillmammoth.com/blog/gohighlevel-pricing (Oct 2026) + grow-highlevel.com: Starter $97/mo (annual $970, 3 sub-accounts), Unlimited $297/mo ($2,970, unlimited sub-accounts, rebill at cost), Agency Pro $497/mo ($4,970, SaaS mode + rebill with markup), Enterprise custom; 14-day trial; usage wallet — numbers $1.15/mo, SMS $0.00747/segment + carrier fees, outbound calls $0.0166/min, inbound $0.01165/min, email $0.675/1k, AI Employee $50/$97 per sub-account. A real single-business bill lands ~$135-150/mo on Starter.
+
+Process (all worked first try):
+1. Wrote tool JSON to temp `_tool_gohighlevel.json` (all fields incl. pricing_details).
+2. `price` = "From $97/mo · Agency Pro $497/mo" (34 chars); full cost stack + usage rates in pricing_details.
+3. `python scripts/upsert_tool_en.py _tool_gohighlevel.json` → 1 added, total 218.
+4. `python scripts/check_price_labels.py` → PASS 218, 0 polluted (33 in 50-80 gray zone).
+5. `python scripts/build_en.py` → exit 0; tools/gohighlevel/index.html, category/ai-marketing, sitemap 218 tools + 185 articles, OG image images/og/gohighlevel-en-og.png, IndexNow 1 URL (200).
+6. `git add -A && commit` (27667662f, prev efc33d8e3) + push origin main (aitoolbox-hk). 466 files changed (normal). Worktree clean.
+7. Live: www.aitoolbox.hk/tools/gohighlevel/ 404 immediately, 200 after ~75s. Title + price label render correctly.
+
+Notes for next run: AI Marketing now 8 tools. Still-thin categories: AI Agents (7), AI Automation (8), AI Search (7). Candidates: Smartlead (alt cold email), Apollo (lead DB), Lemlist, Retell AI/Bland (Vapi covers voice), GoHighLevel alternatives. The `best-ai-crm-tools-2026` and `best-ai-email-marketing-tools-2026` articles are natural internal-link targets for GoHighLevel. Reminder: ~460+ files change per build (all articles regenerated) — `git add -A` is fine; `_tool_*.json` temp files are committed by convention.
