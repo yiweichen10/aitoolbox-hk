@@ -78,3 +78,16 @@ Process (all worked first try):
 7. Live: www.aitoolbox.hk/tools/gohighlevel/ 404 immediately, 200 after ~75s. Title + price label render correctly.
 
 Notes for next run: AI Marketing now 8 tools. Still-thin categories: AI Agents (7), AI Automation (8), AI Search (7). Candidates: Smartlead (alt cold email), Apollo (lead DB), Lemlist, Retell AI/Bland (Vapi covers voice), GoHighLevel alternatives. The `best-ai-crm-tools-2026` and `best-ai-email-marketing-tools-2026` articles are natural internal-link targets for GoHighLevel. Reminder: ~460+ files change per build (all articles regenerated) — `git add -A` is fine; `_tool_*.json` temp files are committed by convention.
+
+2026-10-10: Added new English tool **apollo** (Apollo.io, category AI Marketing) — B2B contact database (200M+ contacts) with outbound kit bolted on (reveals, sequences, dialer, Chrome extension, CRM sync). Not previously in data/tools_en.json (was 218). Chosen because it is referenced 41x across articles_en.json but had NO tool page → strong internal-link target (esp. `best-ai-lead-enrichment-tools-2026-apollo-vs-lusha-vs-zoominfo-vs-clay` and `best-ai-cold-email-tools-2026-instantly-vs-smartlead-vs-lemlist-vs-woodpecker`). Monetization angle (honest): run outbound/appointment-setting as a service (retainers $1,500-5,000/mo) + 15-20% recurring affiliate — NOT reselling the DB (Apollo ToS bars external/product use of its data without an Enterprise agreement). Pricing verified from allaboutinsights.com + ditlead.com (2026): Free $0 (900 credits/yr, Gmail-only sending), Basic $49/user/mo annual (30k credits/yr), Professional $79 (48k credits, dialer/A-B/AI), Organization $119 (min 3 seats, 72k credits, SSO), Enterprise custom (only tier with API/external use). Credits: verified email ~1, mobile ~8, enrichment/AI vary, export credits burn on CSV/CRM/API push; no rollover; Fair-Use cap 10k/mo non-paying or lesser of ($paid/$0.025) or 1M/yr paying. Annual saves ~24%.
+
+Process (all worked first try):
+1. Wrote tool JSON to temp `_tool_apollo.json` (all fields incl. pricing_details).
+2. `price` = "Free + Basic $49/mo · Pro $79/mo" (32 chars); full cost stack in pricing_details.
+3. `python scripts/upsert_tool_en.py _tool_apollo.json` → 1 added, total 219.
+4. `python scripts/check_price_labels.py` → PASS 219, 0 polluted (33 in 50-80 gray zone).
+5. `python scripts/build_en.py` → exit 0; tools/apollo/index.html, category/ai-marketing, sitemap 219 tools + 186 articles, OG image images/og/apollo-en-og.png, IndexNow 1 URL (200).
+6. `git add -A && commit` (49deaca48, prev 86a000287) + push origin main (aitoolbox-hk). 465 files changed (normal). Worktree clean.
+7. Live: www.aitoolbox.hk/tools/apollo/ 404 on attempt 1, 200 on attempt 2 (~20s). Title + price label render correctly.
+
+Notes for next run: AI Marketing now 9 tools. Still-thin categories: AI Agents (7), AI Automation (8), AI Search (7). Strong untapped internal-link candidates (referenced in articles but no tool page): smartlead (30 refs), lemlist (22), retell (24), bland (21) — Smartlead/Lemlist are the cleanest fits for AI Marketing. Consider AI Search (7) or AI Agents (7) to diversify. Reminder: ~460+ files change per build; `_tool_*.json` temp files are committed by convention.
