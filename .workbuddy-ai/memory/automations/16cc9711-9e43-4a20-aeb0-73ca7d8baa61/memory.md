@@ -91,3 +91,16 @@ Process (all worked first try):
 7. Live: www.aitoolbox.hk/tools/apollo/ 404 on attempt 1, 200 on attempt 2 (~20s). Title + price label render correctly.
 
 Notes for next run: AI Marketing now 9 tools. Still-thin categories: AI Agents (7), AI Automation (8), AI Search (7). Strong untapped internal-link candidates (referenced in articles but no tool page): smartlead (30 refs), lemlist (22), retell (24), bland (21) — Smartlead/Lemlist are the cleanest fits for AI Marketing. Consider AI Search (7) or AI Agents (7) to diversify. Reminder: ~460+ files change per build; `_tool_*.json` temp files are committed by convention.
+
+2026-10-11: Added new English tool **smartlead** (Smartlead, category AI Marketing) — agency-focused cold email platform (unlimited mailboxes on every plan, isolated per-client workspaces, built-in lead DB). Not previously in data/tools_en.json (was 219). Chosen because it is referenced 30x in articles_en.json but had no tool page → natural internal-link target, esp. `best-ai-cold-email-tools-2026-instantly-vs-smartlead-vs-lemlist-vs-woodpecker`; also the send-side sibling to the existing Instantly page. Monetization angle: run outbound/appointment-setting as a service ($1,500-5,000/mo retainer vs $39-174/mo tool), paid setup-and-audit, + up to 35% recurring lifetime affiliate (Rewardful). Pricing verified from emailchaser.com/learn/smartlead-pricing (checked 4 Oct 2026) + smartlead.ai/affiliate-partners: Base $39/mo (2,000 contacts, 6,000 emails), Pro $94/mo (30,000/90,000), Unlimited Smart $174/mo (unlimited contacts, 150,000 emails), Unlimited Prime $379/mo (500,000 emails, 170,000 prospect emails, 3 dedicated servers + 3 client workspaces); lead data $59/mo add-on on Base/Pro (included on Unlimited); client workspaces $29/mo each from Pro up; dedicated servers $39/mo each; verification $0.0017-0.0034/addr; no free plan, trial only, 50% off first month.
+
+Process (all worked first try):
+1. Wrote tool JSON to temp `_tool_smartlead.json` (all fields incl. pricing_details).
+2. `price` = "From $39/mo · Pro $94/mo" (24 chars); full cost stack + agency extras in pricing_details.
+3. `python scripts/upsert_tool_en.py _tool_smartlead.json` → 1 added, total 220.
+4. `python scripts/check_price_labels.py` → PASS 220, 0 polluted (33 in 50-80 gray zone).
+5. `python scripts/build_en.py` → exit 0; tools/smartlead/index.html, sitemap 220 tools + 187 articles, OG image images/og/smartlead-en-og.png, IndexNow 1 URL (200).
+6. `git add -A && commit` (7f0761369, prev bb95c26af) + push origin main (aitoolbox-hk). 465 files changed (normal). Worktree clean.
+7. Live: www.aitoolbox.hk/tools/smartlead/ 404 immediately, 200 after ~20s. Title + price label render correctly.
+
+Notes for next run: AI Marketing now 10 tools (getting crowded). Prioritize thin categories: AI Agents (7), AI Automation (8), AI Search (7). Remaining high-ref internal-link candidates with no tool page: retell (24 refs, AI Agents - Vapi already covers voice), bland (21, AI Agents), lemlist (22, AI Marketing). Consider AI Search or AI Automation for diversification. Reminder: ~465 files change per build; `_tool_*.json` temp files are committed by convention.
