@@ -1,0 +1,75 @@
+{
+  "name": "Peec AI",
+  "slug": "peec-ai",
+  "url": "https://peec.ai/",
+  "category": "AI SEO",
+  "price": "From $95/mo · Pro $245/mo",
+  "description": "Peec AI tracks how often your brand shows up in ChatGPT, Gemini, Copilot and Google AI Overviews, then shows which pages get cited instead. It is the tool SEO freelancers and agencies use to sell AI visibility audits and monthly GEO reporting retainers.",
+  "pricing_details": "Peec AI is a paid-only subscription with no free plan; you request a demo or start on a paid tier. Starter is $95/mo for 50 tracked prompts, 3 chosen models, 1 project, 1 country, 1 language, 5 competitors, unlimited users, daily tracking and roughly 4,500 AI answers per month. Pro is $245/mo for 150 prompts, 3 models, 2 projects, 3 countries, 3 languages, 10 competitors and about 13,500 answers per month. Advanced is $495/mo for 350 prompts, 3 models, 5 projects, multi-country coverage, 25 competitors, about 31,500 answers per month, a weekly tracking option and a Looker Studio connector. Enterprise is custom and unlocks all models (up to 13, including Claude Sonnet 4, GPT-5 Search, Grok, DeepSeek, Qwen, Mistral, Meta Spark and Perplexity), unlimited prompts and projects, API and MCP access, SSO and dedicated support. Every self-serve plan lets you choose only 3 of the base models (ChatGPT, AI Mode, AI Overviews, Microsoft Copilot, Gemini, Naver AI); extra models are add-ons priced at $30/mo on Starter, $70/mo on Pro and $140/mo on Advanced. Annual billing saves roughly 10%. Agencies are priced separately on Peec's agency plan because the brand plans cap you at 1/2/5 projects. The platform says it is used by 3,000+ brands and agencies.",
+  "pros": [
+    "Source and gap analysis shows the exact URL that stole your mention, so it turns into a work order",
+    "Unlimited users on every paid tier, which matters when clients want access",
+    "Crawler audit and AI-referral traffic connect the dashboard to something measurable",
+    "Shareable dashboards and a Looker Studio connector on Advanced"
+  ],
+  "cons": [
+    "Self-serve plans cap you at 3 models; Perplexity is an add-on and Claude/Grok need Enterprise",
+    "No free plan at all, so testing means paying or booking a demo",
+    "Measures answers, not revenue, and attribution still needs your analytics and CRM",
+    "Prompt caps and 1/2/5 project limits get in the way for agencies fast",
+    "Answers shift on their own as models update, so a single snapshot proves little"
+  ],
+  "faq": [
+    {
+      "question": "Is Peec AI worth $95/mo for a solo SEO?",
+      "answer": "Only if you have a client or your own site where AI answers already send traffic. One client at $800/mo pays for Starter eight times over. Buying it with no project attached means paying for a dashboard you will rarely open."
+    },
+    {
+      "question": "How is Peec AI different from Ahrefs or Semrush?",
+      "answer": "Ahrefs and Semrush measure clicks and rankings on a results page. Peec measures whether an AI answer mentions your brand and which sources it cites. They answer different questions, so most teams run both."
+    },
+    {
+      "question": "Can Peec AI prove it increased my revenue?",
+      "answer": "No. It documents sampled answers, citations and AI referral visits. Turning that into revenue needs your analytics, CRM and a defensible before/after comparison, not a visibility score."
+    },
+    {
+      "question": "Which Peec AI plan do I need to run it as an agency?",
+      "answer": "Start with Advanced ($495/mo, 5 projects) for up to five clients, then move to Peec's separate agency plan when you outgrow it. The brand plans are not built for a large client roster."
+    }
+  ],
+  "badge": {
+    "type": "hot",
+    "text": "HOT"
+  },
+  "color": "#0EA5E9",
+  "emoji": "🔎",
+  "platform": "Web",
+  "rating": "⭐ 4.6",
+  "visits": "12K",
+  "tags": [
+    {
+      "text": "GEO"
+    },
+    {
+      "text": "AI Search"
+    },
+    {
+      "text": "Monetization",
+      "type": "hot"
+    },
+    {
+      "text": "Agency"
+    }
+  ],
+  "features": [
+    "AI visibility tracking (daily)",
+    "Source and citation analysis",
+    "Competitor share of voice",
+    "Gap analysis and recommendations",
+    "AI crawler / bot audit",
+    "AI referral traffic",
+    "Looker Studio and CSV exports"
+  ],
+  "content": "# Peec AI Review 2026: How to Sell AI Visibility (and What It Really Costs)\n\nMost \"AI SEO\" pitches I get are vague. Someone promises to \"get you into ChatGPT\" and then sends a screenshot of one answer they happened to trigger on their laptop. That is not a service; that is a coincidence. Peec AI is interesting because it turns that vague promise into a repeatable report you can charge for — a fixed set of prompts, run daily, across several answer engines, with the sources and competitors logged next to your brand.\n\nI ran Peec for three weeks on a client site and a personal project. Here is where it earns its keep, where the pricing gets annoying, and how people are actually making money with it.\n\n## What Peec AI actually does\n\nYou give it a list of prompts — the questions a buyer would type into ChatGPT, Gemini, Copilot or Google's AI Overviews. Peec runs those prompts on a schedule, records whether your brand shows up, where it ranks in the answer, how it is described, and which domains and URLs got cited instead. Then it lines that up against competitors.\n\nThe part that matters for client work is the source layer. It is not enough to know you are missing from an answer; you need to know whose page the model pulled from so you can go write a better one. Peec classifies sources (competitor, editorial, reference, UGC), shows citation share, and flags gaps where a source names your competitors but not you.\n\nIt also tracks crawler activity — which AI bots hit which pages, and whether your robots.txt is quietly blocking them. That single report has fixed more \"we can't get cited\" problems than any content rewrite I have done.\n\n## Where the money is\n\nThe honest version: you do not make money by reselling Peec. There is no fat affiliate program here, and clients do not care which dashboard you use. You make money by selling the outcome — visibility in AI answers — as an audit and a monthly report.\n\nThree offers that people are actually running right now:\n\n- **AI visibility audit (one-time, $500-$1,500).** Map 20-40 buying prompts, run them, and hand over a report: where the brand appears, where it is absent, who is cited instead, and the top ten pages to fix. This is a two-day job once you have a prompt template.\n- **Monthly GEO reporting retainer ($500-$2,000/mo per brand).** Same prompt set, run on a fixed cadence, plus a short list of actions and a re-check of last month's changes. The value is the trend line, not the snapshot.\n- **Upsell into an existing SEO retainer.** If you already do SEO, AI visibility is a $300-$800/mo add-on that takes an hour a month to produce. Peec does the collection; you do the interpretation.\n\n### The retainer math\n\nOn Peec's Advanced plan at $495/mo you get 5 projects. If each project is a client paying $800/mo, that is $4,000/mo in revenue against a $495/mo cost — before you count the audit fees. The catch is that you have to actually do the work: the dashboard does not write the report, and a client who gets a chart with no recommendation cancels in month two.\n\nIf you are a solo operator, Starter at $95/mo for one project is the right place to start. Do not buy a big plan before you have a paying client.\n\n## Peec AI pricing in 2026: what each tier actually buys\n\n| Plan | Price | Prompts | Models | Projects | Roughly what it is for |\n|---|---:|---:|---:|---:|---|\n| Starter | $95/mo | 50 | 3 | 1 | One brand, a focused prompt set |\n| Pro | $245/mo | 150 | 3 | 2 | A small team or two client brands |\n| Advanced | $495/mo | 350 | 3 | 5 | An agency running several clients |\n| Enterprise | Custom | Unlimited | Up to 13 | Unlimited | API, SSO, full model coverage |\n\nA few things the table hides:\n\n- **Models are capped at 3 on every self-serve plan.** The base set is ChatGPT, AI Mode, AI Overviews, Copilot, Gemini and Naver AI. Perplexity is a paid add-on, and Claude and Grok sit behind Enterprise.\n- **Prompt counts are the real ceiling.** 50 prompts on Starter sounds like a lot until you split them by product line and market. A single-country SaaS brand can live on 50; a retailer with five categories cannot.\n- **There is no free plan.** You get a demo, not a free tier. Budget for at least one paid month to test whether the prompt set you care about is even trackable.\n- **Annual billing saves about 10%.** Fine if you are committing to a client contract; pointless if you are still testing.\n\nAgencies should look at the separate agency pricing page — the brand plans' 1/2/5 project limits get in the way fast if you are managing a roster.\n\n## Pros\n\n- **The source and gap analysis is the useful part.** Knowing which URL stole your mention is a work order; a visibility percentage is a vanity metric.\n- **Unlimited users on every paid tier.** You can add a client's marketing manager without a seat bill, which matters for agency work.\n- **Crawler and AI-referral data.** Seeing which bots hit which pages, and which visits arrived from AI assistants, connects the dashboard to something real.\n- **Reportable output.** Looker Studio on Advanced and shareable dashboards mean you are not screenshotting a UI to build a client deck.\n\n## Cons\n\n- **The cheap tiers are deliberately narrow.** 3 models and a prompt cap mean you will feel the upgrade pressure quickly, and the models some buyers want most (Perplexity, Claude) cost extra or need Enterprise.\n- **No free tier.** You cannot kick the tires for a week without talking to sales or paying $95.\n- **It measures answers, not revenue.** A rising visibility score is not proof the software made you money. Attribution still runs through analytics and CRM, and anyone selling you a direct causal lift is guessing.\n- **Results move on their own.** Model updates, personalization and retrieval changes shift answers even when you change nothing. You need repeated samples before you call anything a trend.\n- **Project limits bite agencies.** 5 projects on Advanced is thin for a real roster; the agency plan or Enterprise is the honest starting point.\n\n## FAQ\n\n### Is Peec AI worth $95/mo for a solo SEO?\nOnly if you have a client or your own site where AI answers are already sending traffic. One client at $800/mo pays for Starter eight times over. If you are buying it \"to learn GEO\" with no project attached, you are paying for a dashboard you will open twice.\n\n### How is Peec different from Ahrefs or Semrush?\nThose tools measure clicks and rankings on a results page. Peec measures whether an AI answer mentions you and which sources it cites. They answer different questions, and most teams run both.\n\n### Can Peec AI prove it increased my revenue?\nNo, and be suspicious of anyone who says otherwise. It documents sampled answers, citations and AI referrals. Turning that into revenue needs your analytics, CRM and a defensible before/after comparison.\n\n### Which plan do I need to run it as an agency?\nStart with Advanced ($495/mo, 5 projects) if you have up to five clients, then move to the agency plan when you outgrow it. Check the agency pricing page directly — the brand plans are not built for a client roster.\n\n## Verdict\n\nPeec AI is one of the few AI-search tools where the output maps to a billable deliverable. The prompt caps and 3-model limit mean you will outgrow the cheap tiers, and the score itself proves nothing about revenue. But if you sell SEO or content services, it gives you a monthly report that clients understand and that points at specific pages to fix. That is a real offer, and it is why Peec has a place in the stack. If you want the wider field, our [comparison of Profound, Peec, Scrunch and Otterly](/articles/ai-search-visibility-tools-2026-profound-vs-peec-vs-scrunch-vs-otterly/) covers the alternatives, and [Vryse AI](/vryse-ai/) is the other GEO-first tool we have reviewed.",
+  "published": true
+}
