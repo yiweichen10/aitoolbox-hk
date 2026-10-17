@@ -1,0 +1,103 @@
+TITLE: Best Authentication Platforms in 2026: Auth0 vs Clerk vs Supabase Auth vs WorkOS — Pricing & ROI
+SLUG: authentication-platforms-2026-auth0-vs-clerk-vs-supabase-vs-workos
+DATE: 2026-10-18
+CATEGORY: AI Development
+DESCRIPTION: Compare Auth0, Clerk, Supabase Auth, and WorkOS on free-tier ceilings, per-MAU overages, SSO connection pricing, and the real monthly bill at 100,000 users.
+KEYWORDS: authentication platforms | Auth0 vs Clerk pricing | Supabase Auth free tier limits | WorkOS pricing per connection | cheapest SSO for B2B SaaS | free authentication service for SaaS | Auth0 alternatives for startups | Clerk MRU billing explained
+---
+Before you write a single line of login code, look at the giveaways. Auth0 hands you 25,000 monthly active users for free. Clerk gives you 50,000 retained users. Supabase Auth includes 50,000 MAU on its free plan and 100,000 on its $25 Pro plan. WorkOS covers one million active users at zero cost. That is a 40x spread between the smallest and largest free tier across the four authentication platforms most SaaS teams shortlist in 2026, and it quietly decides which vendor you can live on while your product is still searching for product-market fit.
+
+The second number matters even more, and almost nobody compares it up front: what happens when a customer asks for single sign-on. On Supabase, SAML is bundled with a $25 Pro plan for up to 50 connections. On Clerk, each SSO connection beyond the first costs $75 per month. On WorkOS, your first enterprise connection costs $125 per month. On Auth0, SAML for B2B customers sits behind an Enterprise contract with no published price. Ten enterprise customers asking for SSO produces a monthly bill somewhere between $25 and $1,250 depending purely on which vendor you picked before you knew you would sell to enterprises at all.
+
+I have been through this migration twice. Auth providers sit under every request your app handles, so moving vendors later means re-writing session logic, re-verifying every user, and praying your password hashes survive the export. Below are the four current pricing pages side by side, three realistic cost scenarios, and a verdict for each stage of company.
+
+## The Pricing Table Nobody Publishes Side by Side
+
+Every vendor prices a different unit — MAU, retained users, or SSO connections — which makes naive comparisons useless. Here is the same set of scenarios priced across all four, using numbers pulled from each vendor's official pricing page in October 2026.
+
+| Scenario | Auth0 | Clerk | Supabase Auth | WorkOS |
+| --- | --- | --- | --- | --- |
+| Free tier ceiling | 25,000 MAU | 50,000 MRU | 50,000 MAU | 1,000,000 MAU |
+| Entry paid plan | $35/mo (Essentials) | $20/mo (Pro, annual) | $25/mo (Pro) | $0, usage-based |
+| Bill at 100,000 MAU | $240+ (Professional, MAU slider not public) | $1,020/mo | $25/mo | $0 |
+| 10 enterprise customers needing SSO | Enterprise quote required | $695/mo (Pro + 9 connections) | $25/mo (50 SAML connections included) | $1,250/mo |
+| Log retention on cheap plans | 1 day (Free) | 1 day (Hobby) | 1 hour (Free), 7 days (Pro) | SIEM streaming $125/mo per connection |
+| Best fit | Compliance-heavy B2C at scale | Product-led B2C and B2B startups | Teams already on the Supabase stack | B2B SaaS selling to enterprises |
+
+Three things jump out. WorkOS wins the free tier by an order of magnitude — a million active users before you pay anything — yet becomes the most expensive option the moment enterprise SSO enters the picture. Clerk bills monthly retained users (MRU), not MAU, and that distinction is worth real money. Supabase Auth is so cheap at mid-scale that it looks like a typo until you understand why.
+
+## Why authentication platforms split pricing the way they do
+
+The pricing models look arbitrary until you see what each vendor is really selling. Auth0, owned by Okta since 2021, sells compliance and breadth: HIPAA add-ons, FAPI certification, private cloud, adaptive MFA. Those features cost real money to run, so the free plan caps at 25,000 MAU and charging starts at the first paid dollar. Essentials at $35 per month and Professional at $240 per month — both starting at 500 included MAU — are built for companies that already know they need enterprise features and will pay for them.
+
+Clerk sells developer speed. Prebuilt UI components, session management, and multi-tenant organizations that work in React or Vue in an afternoon. Its free tier is generous at 50,000 monthly retained users, and the overage pricing is transparent: $0.02 per retained user between 50,001 and 100,000, dropping to $0.018 between 100,001 and one million. But read the fine print on the B2B features. The Pro plan includes exactly one SSO connection per application. Each additional one is $75 per month, and directory sync (SCIM) is also $75 per connection per month — a line item Clerk starts billing on January 1, 2027. That pricing only hurts if you sell to companies with IT departments. Plenty of Clerk customers never will.
+
+Supabase Auth is bundled with the Supabase database platform, and the bundling explains everything. Supabase makes money on database compute and egress, so auth is priced as a loss leader: 100,000 MAU included on a $25 Pro plan, then $0.00325 per additional MAU — roughly one-sixth of Clerk's overage rate — and SAML SSO included for up to 50 connections. That makes it the cheapest SSO for B2B SaaS teams at small scale, though SSO-authenticated MAU beyond the allowance costs $0.015 each. The catch is the coupling: Supabase Auth works best when your data lives in Supabase Postgres, and the free tier pauses projects after one week of inactivity with a two-project limit. If your database already lives elsewhere, the value proposition weakens considerably.
+
+WorkOS sells enterprise readiness, full stop. Its user management product (AuthKit) is free up to one million monthly active users — the most generous free tier in the industry — because WorkOS does not intend to make money from your users. It makes money per connection: each enterprise customer you support with SAML SSO or directory sync is one connection, priced at $125 per month for your first 15, $100 for connections 16 through 30, $80 for 31 through 50, and $65 beyond that. Every connection includes unlimited end users — steep per connection, a bargain for a customer with 20,000 employees. Add-ons stack separately: Radar abuse protection (first 1,000 checks free, then $100 per month per 50,000), custom domains at $99, and SIEM log streaming at $125 per connection.
+
+## Auth0: The Enterprise Default With a Startup Escape Hatch
+
+Auth0 remains the vendor compliance officers ask for by name. The Free plan covers 25,000 MAU with one custom domain, five organizations, and one enterprise connection — though 1-day log retention and community support telegraph that it is built for evaluation. Essentials costs $35 per month with 10 organizations and M2M authentication; Professional at $240 per month unlocks enterprise MFA and custom database connections. Beyond that, everything interesting — 99.99% SLA, HIPAA BAA, bot detection, private deployments — requires a sales conversation.
+
+The published prices are only the floor. The pricing page's MAU slider (tiers from 500 to 30,000+ users) hides per-tier prices until checkout — a legacy of the old Auth0 model, which startups loudly criticized for producing four-figure bills at modest user counts. The new structure is better, but you are still quoting a slider instead of reading a rate card.
+
+Two things still justify Auth0 over cheaper rivals. The first is the startup program: one year free for qualifying startups, a genuinely useful runway pre-revenue. The second is coverage — connectors, SDKs, and edge-case documentation for scenarios the newer vendors have not encountered: legacy LDAP, obscure OIDC implementations, regulated-market identity requirements. If your buyer is a bank or a hospital network, the extra cost buys a vendor your customer's security team has already approved. For a self-serve B2C product with no compliance burden, you are paying for machinery you will never switch on.
+
+## Clerk: Developer Speed and the MRU Fine Print
+
+Clerk's pitch lands exactly where startups feel the pain. Drop in the components, get sign-in, organization management, and user profiles that look designed rather than debugged, in an afternoon. The Hobby plan is free forever with 50,000 monthly retained users per application, no credit card, and unlimited apps. Pro is $20 per month on annual billing ($25 monthly), includes the same 50,000 MRU, and publishes its overage rates openly — a refreshing contrast to Auth0's slider.
+
+The MRU definition is where you need to pay attention, so here is Clerk's MRU billing explained in one sentence: Clerk counts a user as retained when they return 24 or more hours after signing up. For products with natural churn or occasional use, MRU runs meaningfully below raw signups and the overage bill shrinks accordingly. For a daily-habit product, MRU and MAU converge and the advantage disappears. The definition is disclosed on the pricing page — model your own traffic before assuming savings.
+
+Where Clerk gets expensive is enterprise B2B, and the math is unforgiving at exactly the moment your business gets good. Suppose ten customers with IT departments want SSO. Pro includes one connection; nine more at $75 each adds $675 per month to a $20 plan. Add directory sync for three of them when billing starts in 2027 and you are past $900 per month. At small connection counts Clerk is cheaper; at five or more, WorkOS's enterprise workflow wins.
+
+## Supabase Auth: Cheapest at Scale, Strongest Inside Its Own Wall
+
+Supabase Auth free tier limits are straightforward: 50,000 MAU, anonymous sign-ins, social OAuth providers, basic MFA, and an OAuth 2.1 server, all free, with audit logs retained one hour. Pro at $25 per month doubles the included MAU to 100,000, extends audit logs to 7 days, adds leaked-password protection and session controls, and — the part that makes competitors flinch — includes SAML 2.0 SSO for up to 50 connections. Overage is $0.00325 per MAU. At 100,000 users, the four vendors' bills in this comparison were $240-plus, $1,020, $25, and $0. Supabase is not the free winner (WorkOS is), but it is the cheapest option that behaves like a real production plan.
+
+The compromises are architectural. Auth is designed around Supabase's Row Level Security model, and while you can run it standalone via its GoTrue-based API, you lose the tight integration that justifies the low price. Phone-based advanced MFA is a paid add-on ($75 per month for the first project). The Team plan — SOC 2 reports, 28-day audit logs, HIPAA eligibility as a paid add-on — starts at $599 per month, a real jump for a two-person startup facing its first security questionnaire.
+
+The honest recommendation: if you are starting a new project today and have no database legacy, build on Supabase. That is also why teams building with Lovable, Bolt.new, or v0.dev get pointed at [Supabase](/tools/supabase) by default — our [no-code app builder comparison](/articles/best-no-code-ai-app-builders-non-programmers-2026) covers how those tools hand off to backends — so auth, database, and row-level permissions arrive as one coherent system. If your Postgres already runs on AWS with years of migrations attached, Supabase Auth becomes an awkward add-on rather than a bargain.
+
+## WorkOS: Buy Connections, Not Users
+
+WorkOS inverted the pricing model that made Auth0 famous for sticker shock. User management is free up to one million MAU; beyond that, each additional million is $2,500 per month, or $0.0025 per MAU — the lowest published per-user rate in this comparison. The margin comes from what enterprises demand: SAML SSO and Directory Sync at $125 per connection for the first 15, with volume discounts down to $65, and every connection includes SCIM and JIT provisioning.
+
+Each $125 connection is a line item you can pass through — plenty of B2B SaaS companies bill SSO as a $200 to $500 per month enterprise-tier feature, so WorkOS SSO is profit-positive from the first deal. Compare that with Auth0, where SAML sits behind an Enterprise contract you cannot price until sales gets involved.
+
+The trade-offs are real. WorkOS is API-first and less opinionated than Clerk's components — AuthKit is a hosted UI you can adopt, but expect to write more code yourself. Bot and fraud protection (Radar) is priced separately, as are SIEM log streaming and extended audit event retention ($125 and $99 per month respectively). And if your product is B2C with zero enterprise customers, you are using a platform whose entire gravity pulls toward B2B features you will never touch. WorkOS is the right answer to a specific question — "an enterprise customer wants SSO next week" — and an odd answer to most other questions.
+
+## Which Vendor Fits Which Company
+
+Run the three scenarios that actually decide which of these authentication platforms you should buy.
+
+Scenario one: consumer app, viral growth, no enterprise buyers. Free tiers carry you further than any paid plan — WorkOS to a million users, Clerk to 50,000 retained, Supabase to 50,000. At 100,000 MAU, Supabase costs $25 and Clerk costs $1,020. If you are not on the Supabase stack, Clerk's MRU model may still beat its headline rate for churn-heavy products. Auth0 is the wrong pick here at any scale.
+
+Scenario two: B2B SaaS, first enterprise customers arriving. This is the WorkOS sweet spot. User management is free, connections are priced per enterprise customer and pass-through billable, and the admin portal handles the IT-department conversation for you. Clerk works if your enterprise customers are small businesses without dedicated IT. Model your connection count honestly: under three connections, Clerk is cheaper; at five-plus, WorkOS wins.
+
+Scenario three: regulated industry or large-scale B2C. Auth0 earns its keep here — HIPAA BAAs, FAPI certification, private deployment, and the largest body of compliance documentation in the category. Yes, you will sit through a sales process. But when a hospital network's security review gates a seven-figure contract, the vendor with FedRAMP heritage and 99.99% SLA commitments unblocks the deal. The startup program (free for a year) makes it palatable pre-revenue; the published $35 and $240 entry prices make it survivable post-revenue.
+
+One more consideration that pricing tables ignore: migration cost. Session tokens, password hashes, MFA enrollments, and social account links all need to move when you switch vendors. Teams searching for Auth0 alternatives for startups usually discover the switching cost only after the first renewal shock. Choose as if the decision is permanent, because reversing it costs more than most refactors you have lived through.
+
+## Frequently Asked Questions
+
+### Is Clerk cheaper than Auth0?
+
+At small scale, usually yes. The Auth0 vs Clerk pricing comparison comes down to the entry point: Clerk's Pro plan is $20 per month (annual billing) with 50,000 included monthly retained users and published overage rates. Auth0's Essentials plan starts at $35 per month with only 500 MAU included, and its MAU-slider pricing is not public. Auth0 becomes cost-competitive only when you need enterprise compliance features Clerk does not offer.
+
+### What is the best free authentication service for SaaS in 2026?
+
+WorkOS has the largest free tier by far: user management free up to 1,000,000 monthly active users, including social auth, MFA, and RBAC. Supabase Auth and Clerk both cover 50,000 users free; Supabase includes SAML SSO for 50 connections on its $25 plan, Clerk includes one SSO connection on Pro. Auth0's free plan covers 25,000 MAU. If free-tier ceiling is the criterion, WorkOS wins by a 20x margin.
+
+### How much does enterprise SSO cost per connection in 2026?
+
+WorkOS pricing per connection is published openly: $125 per month per SSO connection for the first 15, dropping to $100 (16–30), $80 (31–50), and $65 (51–100), with unlimited end users per connection. Clerk charges $75 per month per additional SSO connection beyond the first included on Pro, and the same $75 for directory sync starting January 1, 2027. Supabase includes 50 SAML connections with its $25 Pro plan, charging $0.015 per SSO-authenticated MAU beyond included limits. Auth0 does not publish B2B SSO pricing; it requires an Enterprise quote.
+
+### Can you use Supabase Auth without the Supabase database?
+
+Technically yes — the auth service is exposed via API and supports third-party OIDC providers — but the pricing and integration are designed around the full Supabase stack, including Row Level Security for authorization. If your database runs elsewhere, you keep the generous MAU limits but lose the coupling that makes Supabase Auth cheap and simple. Teams in that situation usually get better results from Clerk (for components) or WorkOS (for enterprise features).
+
+## The Bottom Line
+
+Four authentication platforms, four pricing philosophies, no universal winner. WorkOS gives away a million users and charges per enterprise connection. Supabase bundles auth with its database and prices SSO into a $25 plan. Clerk sells speed with transparent overages and a retained-user definition that quietly discounts churn-heavy products. Auth0 sells compliance, with a free year for startups and a sales call for everything else. Pick the vendor whose billing unit matches how your business grows — users for consumer apps, connections for B2B, compliance for regulated markets — and run your 12-month projection through each rate card before you commit. The auth layer is the one dependency you will pay real money to change later.
