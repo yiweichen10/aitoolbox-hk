@@ -1,0 +1,71 @@
+{
+  "name": "HubSpot",
+  "slug": "hubspot",
+  "url": "https://www.hubspot.com",
+  "category": "AI Marketing",
+  "price": "Free + Starter $20/mo · Pro $890/mo",
+  "description": "HubSpot is the CRM most B2B teams already run. The money is in the partner program and the setup, migration and retainer work you bill around it — not in the free tier.",
+  "pricing_details": "HubSpot bills per hub (2026 figures). Free: $0 (CRM, 1,000 marketing-contact cap, basic email, one site/blog, unlimited free users on free features). Marketing Hub: Starter $20/mo (1,000 contacts), Professional $890/mo (2,000 contacts, one-time $3,000 onboarding), Enterprise $3,600/mo (10,000 contacts, $6,000 onboarding); extra marketing contacts bill in tiers above the included allowance. Sales Hub: Starter $20/mo (2 seats), Professional $500/mo (5 seats, $750 onboarding), Enterprise $1,200/mo (10 seats, $3,000 onboarding); extra seats ~$100–$120 each. Service Hub mirrors Sales Hub seat/onboarding structure. Content Hub: Starter $25/mo, Professional $400/mo, Enterprise $1,200/mo. Operations Hub: Starter $20/mo, Professional $800/mo, Enterprise $2,000/mo. CRM Suite (all hubs): Starter $50/mo, Professional $1,781/mo ($4,500 onboarding), Enterprise $5,000/mo ($12,000 onboarding). Onboarding fees apply only to Professional/Enterprise of Marketing, Sales, Service and the Suite. A working multi-hub stack typically runs $1,500–$5,000/mo before add-ons. Monetization: affiliate program pays ~30% recurring on referred subscriptions; Solutions Partners earn a recurring cut on closed subscriptions plus billable implementation/migration ($3k–$15k) and monthly retainers ($1k–$5k).",
+  "pros": [
+    "The free CRM is genuinely useful and gets a whole team onto one system at zero cost — rare for a platform this deep.",
+    "Everything connects: marketing, sales, service, content and ops share one contact record, so you stop paying for five tools that never talked to each other.",
+    "The partner and affiliate programs pay recurring, so a referral keeps earning — and implementation work is a real, billable business, not a fantasy.",
+    "Reporting and inbound tooling are best in class for the SMB and mid-market, which is why so many teams default to it."
+  ],
+  "cons": [
+    "The bill escalates fast — free to Starter to Professional to a second hub adds up, and a real stack is $1,500–$5,000/mo before you notice.",
+    "The free tier is a hook: every feature that saves real time (advanced automation, deep reporting, Breeze agents) sits behind Professional or Enterprise.",
+    "It is heavy for non-technical owners; the value is in configuration, and configuration is a job most teams underdo.",
+    "Lock-in is real — years of contacts, deals and workflows are painful to move, so price increases are hard to walk away from."
+  ],
+  "faq": [
+    {
+      "question": "How much does HubSpot cost for a small business in 2026?",
+      "answer": "It depends on the hub. The free CRM costs nothing and covers basic contact management and email. A single paid hub starts at $20/mo (Marketing or Sales Starter with limited contacts or seats). Most small teams that want automation and reporting land on Professional tiers — Marketing Pro is $890/mo, Sales Pro is $500/mo — and a real multi-hub stack runs $1,500–$5,000/mo before add-ons. Budget for onboarding fees ($750–$6,000) on Professional and Enterprise."
+    },
+    {
+      "question": "Can you actually make money with HubSpot as a partner or affiliate?",
+      "answer": "Yes, but mostly through services rather than passive links. The affiliate program pays roughly 30% recurring on referred subscriptions. The bigger money is implementation and migration work — businesses pay $3,000–$15,000 to set up a messy portal and $1,000–$5,000/mo to run it. If you can configure HubSpot well, you are selling scarce expertise, and that is where the margin is."
+    },
+    {
+      "question": "HubSpot or GoHighLevel — which should I pick?",
+      "answer": "They serve different buyers. HubSpot is the all-in-one CRM and marketing platform for established SMBs and mid-market teams, strongest on inbound and reporting, weakest on price. GoHighLevel is built for agencies that want to white-label and resell the platform at a markup. If you run an agency and want to sell software, GoHighLevel fits. If you need a CRM your whole company already knows, HubSpot wins."
+    },
+    {
+      "question": "Is HubSpot's AI (Breeze) worth paying for?",
+      "answer": "For teams already on Professional or Enterprise, Breeze is a quiet win — it drafts content, fills missing contact data, and runs narrow support and prospecting agents. It will not replace a marketer. If you are on Starter or free, the AI features are limited, so do not pick HubSpot for Breeze alone; pick it for the CRM and treat Breeze as a bonus."
+    }
+  ],
+  "badge": {
+    "type": "hot",
+    "text": "HOT"
+  },
+  "color": "#FF7A59",
+  "emoji": "🧡",
+  "platform": "Web, iOS, Android",
+  "rating": "⭐ 4.5",
+  "tags": [
+    {
+      "text": "CRM"
+    },
+    {
+      "text": "Inbound Marketing"
+    },
+    {
+      "text": "Monetization",
+      "type": "hot"
+    },
+    {
+      "text": "Breeze AI"
+    }
+  ],
+  "features": [
+    "Free CRM with contact, company, deal and pipeline records that the whole team shares, so customer data stops living in someone's inbox.",
+    "Marketing Hub for email, forms, landing pages, automation and blogging, billed by marketing contacts rather than seats.",
+    "Sales and Service Hubs for pipelines, quotes, ticketing, live chat and a help center, billed by seats.",
+    "Breeze AI for content drafting, contact-data enrichment, forecasting and prebuilt support and prospecting agents.",
+    "Content Hub to build client websites and blogs, and Operations Hub to sync and clean data across your stack."
+  ],
+  "content": "# HubSpot Review 2026: The CRM Everyone Already Runs (And How to Bill for It)\n\nI have migrated three companies onto HubSpot and watched a fourth try to leave. The software is fine. What is interesting for anyone trying to make money in this space is that HubSpot is less a product you resell and more a platform you wrap services around. The businesses making real margin on it are the ones selling the implementation, not the seat.\n\nThis review covers what HubSpot actually is, how the money works, what it costs once you use it, and where it falls apart.\n\n## What HubSpot Actually Is\n\nHubSpot is a CRM at its core, with six add-on hubs bolted around it: Marketing, Sales, Service, Content (the old CMS), Operations, and Commerce. The free CRM is the hook — contact records, deal pipelines, email and a basic website — and every paid hub adds a layer on top.\n\nThe AI piece is called Breeze. It shows up as a Copilot in the sidebar, a content writer for blog posts and emails, a set of prebuilt agents (social, prospecting, customer support), forecasting in sales, and data enrichment that fills in missing company and contact fields. None of it is a reason to switch by itself, but it removes a few hours of busywork a week if you already live in the portal.\n\nThe pricing model is the part that trips people: Marketing Hub bills by marketing contacts, Sales and Service bill by seats, Content and Operations are flat, and the CRM Suite bundles all of them. So \"how much is HubSpot\" has about six correct answers depending on which hub you mean.\n\n## The Money Angle\n\nThere are three ways people earn with HubSpot, and the first two are where the money sits.\n\n**1. Partner and affiliate programs.** HubSpot's affiliate program pays a recurring share — around 30% of the subscription — for every customer you refer, paid for as long as they stay. The Solutions Partner track is the heavier version: you get accredited, list in their partner directory, and earn a recurring cut on the subscriptions you close, plus you are allowed to sell implementation. For most solo operators the affiliate link is the realistic play; the partner tier pays off once you are already placing several accounts a quarter.\n\n**2. Implementation and migration work.** This is the real business. A portal that has grown for three years is a mess of duplicate contacts, broken lifecycle stages and automations nobody remembers writing. Businesses pay $3,000 to $15,000 to have someone set up the data architecture, pipelines and workflows correctly the first time, then $1,000 to $5,000 a month to keep it running. If you can configure HubSpot, you are selling scarce expertise, not software.\n\n**3. Build on top.** Content Hub lets you ship client websites and blogs; Operations Hub lets you wire in other tools and keep data clean. Agencies bundle these into retainers. The catch: HubSpot is not a passive affiliate goldmine. The margin is in the service, and the service is work.\n\n## Pricing in 2026\n\nHubSpot's published pricing as of 2026 splits by hub. Exact figures:\n\n- **Free** — $0: CRM, 1,000 marketing-contact cap, basic email, one website and blog, unlimited free users on free features.\n- **Marketing Hub** — Starter $20/mo (1,000 contacts), Professional $890/mo (2,000 contacts, $3,000 onboarding), Enterprise $3,600/mo (10,000 contacts, $6,000 onboarding). Extra contacts bill in tiers.\n- **Sales Hub** — Starter $20/mo (2 seats), Professional $500/mo (5 seats, $750 onboarding), Enterprise $1,200/mo (10 seats, $3,000 onboarding). Extra seats ~$100–$120 each.\n- **Service Hub** — same seat-and-onboarding structure as Sales Hub.\n- **Content Hub** — Starter $25/mo, Professional $400/mo, Enterprise $1,200/mo.\n- **Operations Hub** — Starter $20/mo, Professional $800/mo, Enterprise $2,000/mo.\n- **CRM Suite** (all hubs) — Starter $50/mo, Professional $1,781/mo ($4,500 onboarding), Enterprise $5,000/mo ($12,000 onboarding).\n\nOnboarding fees only appear on Professional and Enterprise for Marketing, Sales, Service and the Suite. The subscription is the floor, not the bill — every added hub, contact tier and seat stacks on top, and a company actually using marketing plus sales plus service lands somewhere between $1,500 and $5,000 a month before any add-ons.\n\n## Where It Falls Short\n\nThe price climbs faster than the demo suggests. Start on free, need workflows, need reporting, need more contacts, need a second hub — each step is another monthly charge, and a serious stack is four figures a month quickly.\n\nThe free CRM is a trap in the good sense: it gets a team hooked, then every feature that actually saves time (advanced automation, deeper reporting, Breeze agents) sits behind Professional or Enterprise. You will feel the upgrade wall.\n\nIt is heavy for a non-technical owner. The value lives in configuration, and configuration is a job. Plenty of teams buy it, underuse it, and quietly pay for a glorified contact list.\n\nBreeze AI is useful but ordinary. The content writer is fine for first drafts, the agents handle narrow tasks, and the enrichment saves research time — but none of it replaces a marketer or a real data tool. Treat it as a tax you no longer pay in manual work, not as a capability that changes your business.\n\nAnd the lock-in is real. Moving years of contacts, deals and workflows out is painful enough that most companies stay regardless of price. You are building on their rails.\n\n## The Honest Verdict\n\nHubSpot is the safest all-in-one CRM and marketing platform for small and mid-sized businesses, and if you sell services, the partner program plus implementation retainers are a genuine business — not a side hustle fantasy. If you just need a cheap place to keep contacts, the free tier or Starter covers the basics and you will outgrow it on schedule. And if you want a tool you can resell at a markup the way some agency platforms allow, look at [GoHighLevel](/tools/gohighlevel/) instead — HubSpot's model rewards service, not arbitrage.\n\nPair it with a data source like [Clay](/tools/clay/) or [Apollo](/tools/apollo/) to fill the contact records, and if your support team lives in a help desk already, [Intercom](/tools/intercom/) may cover the service side without the suite tax.\n",
+  "published": true
+}
