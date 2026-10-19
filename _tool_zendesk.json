@@ -1,0 +1,71 @@
+{
+  "name": "Zendesk",
+  "slug": "zendesk",
+  "url": "https://www.zendesk.com",
+  "category": "AI Office",
+  "price": "From $19/agent/mo · AI add-on +$50",
+  "description": "Zendesk is the support desk more than 170,000 companies already run. The money is in the setup, the migration, and the managed-support retainers you bill around it — not in the seat price.",
+  "pricing_details": "Zendesk has no free plan. Per-agent monthly prices (billed annually, US) are: Support Team $19, Suite Team $55, Suite Professional $115, Suite Enterprise $169 (a Growth tier sits between Team and Professional). The Advanced AI add-on is $50 per agent per month on top of any Suite plan and unlocks agent-assist, AI answers and the bot builder. Zendesk AI's autonomous agent, which resolves tickets on its own, is billed separately per automated resolution on a volume schedule quoted by sales — budget it as its own line, not an afterthought. A 10-agent team on Suite Professional with Advanced AI pays about $1,650/mo in seats plus $500/mo for AI, roughly $25,800/year before services. The Startups program gives early-stage teams a six-month Suite trial for up to 50 agents; some plans offer a short trial. Monetization: the partner program (implementation and solution partners) plus a referral track pay a recurring cut on placed seats, but the real margin is services — implementation and migration engagements commonly start around $5,000 and climb for complex setups, and managed-support retainers run $1,000–$5,000 per client per month.",
+  "pros": [
+    "The ticketing core is mature: email, chat, voice and social all land in one timeline, so agents stop context-switching between five inboxes.",
+    "Setup and migration work around it pays well — businesses routinely spend $5,000+ to get a messy support operation onto Zendesk, and that is billable expertise.",
+    "The Advanced AI add-on earns its keep on larger teams: agent-assist drafts replies and fills ticket fields, and intelligent triage routes by intent and sentiment.",
+    "A managed-support retainer is a sticky, recurring revenue line — once a client is live they rarely want to run the desk themselves."
+  ],
+  "cons": [
+    "There is no free plan, and every agent — even a light user — is billed at full price, so a 20-seat rollout gets expensive fast.",
+    "The useful AI lives behind the $50/agent Advanced AI add-on or a higher Suite tier, so the headline price is not the real price.",
+    "The out-of-box experience is mediocre; the value only shows after weeks of configuration that most small teams never finish.",
+    "It is overkill for solo operators and teams under five people, who pay for routing and analytics they will not configure."
+  ],
+  "faq": [
+    {
+      "question": "Is Zendesk worth it for a small business?",
+      "answer": "Not on day one. The platform earns its keep once you have real ticket volume and a few agents who need routing, SLAs and shared context. A two-person team paying $55–$115 per seat for features they never configure is burning cash. Start lighter, and move to Zendesk when the inbox stops scaling."
+    },
+    {
+      "question": "How do you actually make money with Zendesk?",
+      "answer": "Mostly through services, not the license. Implementation and migration projects pay $5,000 and up, and managed-support retainers run $1,000–$5,000 per month per client. The partner and referral programs add a smaller recurring cut. You are selling configuration expertise and ongoing desk management — that is where the margin is."
+    },
+    {
+      "question": "Zendesk or Intercom — which should I pick?",
+      "answer": "They serve different buyers. Zendesk is the infrastructure play: deep ticketing, strong routing and a mature ecosystem that fits teams of 15 agents and up. Intercom leans on its Fin AI agent billed per resolution and a slick in-product chat. Pick Zendesk for established multi-channel support; pick Intercom if conversational quality in-app matters most."
+    },
+    {
+      "question": "What does Zendesk AI cost on top of the plan?",
+      "answer": "The Advanced AI add-on is $50 per agent per month on top of your Suite plan. The autonomous AI agent, which resolves tickets on its own, is billed separately per automated resolution on a volume schedule. A 10-agent team commonly adds $500/month just for Advanced AI, before any per-resolution charges. Plan for both before you quote a client."
+    }
+  ],
+  "badge": {
+    "type": "hot",
+    "text": "HOT"
+  },
+  "color": "#03363D",
+  "emoji": "🎧",
+  "platform": "Web, iOS, Android, Windows, Mac",
+  "rating": "⭐ 4.3",
+  "tags": [
+    {
+      "text": "Customer Support"
+    },
+    {
+      "text": "Help Desk"
+    },
+    {
+      "text": "Monetization",
+      "type": "hot"
+    },
+    {
+      "text": "Zendesk AI"
+    }
+  ],
+  "features": [
+    "Ticketing that pulls email, chat, voice and social into one timeline, so agents work from a single workspace instead of five inboxes.",
+    "Omnichannel routing, macros, automations and SLA policies that move tickets to the right person without manual triage.",
+    "Zendesk AI agent-assist that drafts replies, fills ticket fields and suggests a next step in real time.",
+    "Intelligent triage that tags and routes by intent and sentiment, plus a bot builder for autonomous answers.",
+    "Reporting and a help-center layer you can keep clean as a managed service for clients."
+  ],
+  "content": "# Zendesk Review 2026: The Support Desk 170,000 Teams Already Run (And How to Bill Around It)\n\nI have set up Zendesk twice for clients and watched both regret not doing it sooner — and also watched one team drown in configuration they never finished. The product is solid. What makes it interesting for anyone trying to earn in this space is that Zendesk is a platform you wrap services around, not a seat you resell. The people making real margin on it sell the implementation, the migration, and the ongoing managed support — the license is almost the smallest line on the invoice.\n\nThis review covers what Zendesk actually is, where the money is, what it costs once you turn the AI on, and where it falls apart.\n\n## What Zendesk Actually Is\n\nZendesk is a ticketing and customer-service platform at its core. Email, chat, voice, social, and help-center threads all land in one ticket timeline, and agents work them from a single workspace. On top of that sits the Suite: omnichannel routing, macros, automations, SLA policies, and a reporting layer.\n\nThe AI piece, called Zendesk AI, is not one button. It is a set of features spread across tiers: agent-assist that drafts replies and fills ticket fields, intelligent triage that tags and routes by intent and sentiment, a bot builder for autonomous answers, and generative write-ups for voice calls. None of it replaces a support lead. It removes a few hours of typing a week, and it catches routing mistakes a tired agent would miss.\n\nThe part that matters for buyers: Zendesk bills per agent per month, and almost every useful AI feature sits behind the Advanced AI add-on or a higher Suite tier. So \"how much is Zendesk\" has a real answer only after you pick the seat count and the AI you want.\n\n## The Money Angle\n\nThree ways people earn with Zendesk, and the first two are where the margin lives.\n\n**1. Implementation and migration work.** Businesses pay real money to move from a shared inbox or a legacy tool onto Zendesk and to wire up their workflows. Typical engagements run $5,000 and climb fast for complex setups. If you can configure triggers, SLAs, and AI answer flows, you are selling scarce expertise.\n\n**2. Managed-support retainers.** Once a client is live, many small teams do not want to run the desk. You take a monthly fee — commonly $1,000 to $5,000 — to keep the help center clean, tune AI answers, and report on deflection. The client keeps paying Zendesk; you keep the retainer.\n\n**3. Partner and referral programs.** Zendesk runs a partner program (implementation and solution partners) and a referral track. The recurring cut is smaller than the services money, but it compounds if you place a lot of seats. Treat it as a bonus on top of billable work, not the business itself.\n\nThe honest ceiling: this is an agency and consultancy play. It is not a passive affiliate check. If you want a support tool you can resell at a markup, look at [GoHighLevel](/tools/gohighlevel/) instead. If you want to compare the two support leaders side by side, the [Intercom Fin vs Zendesk AI breakdown](/articles/best-ai-customer-service-tools-2026-intercom-fin-vs-zendesk-ai-vs-tidio-vs-ada/) is the piece to read.\n\n## Pricing\n\nZendesk does not have a free plan. Per-agent monthly prices (billed annually, US) run:\n\n| Plan | Price per agent/mo | What you get |\n| --- | --- | --- |\n| Support Team | $19 | Core ticketing, email, automations, basic reporting |\n| Suite Team | $55 | Omnichannel (chat, voice, social), Action Builder, routing |\n| Suite Professional | $115 | Skills-based routing, sandbox, deeper analytics, more AI |\n| Suite Enterprise | $169 | Intelligent triage, auto-assist, generative voice, custom roles |\n| Advanced AI add-on | +$50 | Agent-assist, AI answers, bot builder on top of any Suite |\n\nA mid team of 10 on Suite Professional with Advanced AI pays about $1,650/mo in seats plus $500/mo for AI — roughly $25,800/year before services. Zendesk AI's autonomous agent is billed per automated resolution on a volume schedule quoted by sales; budget for it as a separate line, not an afterthought. The Startups program gives early-stage teams a six-month Suite trial for up to 50 agents, which is the only near-free way in.\n\n## Who Should Skip It\n\nSolo operators and teams under five people should look elsewhere. The out-of-box experience is mediocre, and the value shows up only after you invest weeks in setup. For a small shop, [Intercom](/tools/intercom/) or a lighter tool gets you to good support faster. The broader guide to [AI customer-support tools in 2026](/articles/best-ai-tools-customer-support-2026/) covers the cheaper options.\n\n## FAQ\n\n### Is Zendesk worth it for a small business?\nNot on day one. The platform earns its keep once you have real ticket volume and a few agents who need routing, SLAs, and shared context. A two-person team paying $55–$115 per seat for features they never configure is burning cash. Start lighter, and move to Zendesk when the inbox stops scaling.\n\n### How do you actually make money with Zendesk?\nMostly through services, not the license. Implementation and migration projects pay $5,000 and up, and managed-support retainers run $1,000–$5,000/month per client. The partner and referral programs add a smaller recurring cut. You are selling configuration expertise and ongoing desk management — that is where the margin is.\n\n### Zendesk or Intercom — which should I pick?\nThey serve different buyers. Zendesk is the infrastructure play: deep ticketing, strong routing, and a mature ecosystem that fits teams of 15 agents and up. Intercom leans on its Fin AI agent billed per resolution and a slick in-product chat. Pick Zendesk for established multi-channel support; pick Intercom if conversational quality in-app matters most. The [head-to-head comparison](/articles/best-ai-customer-service-tools-2026-intercom-fin-vs-zendesk-ai-vs-tidio-vs-ada/) lays out the real cost difference.\n\n### What does Zendesk AI cost on top of the plan?\nThe Advanced AI add-on is $50 per agent per month on top of your Suite plan. The autonomous AI agent, which resolves tickets on its own, is billed separately per automated resolution on a volume schedule. A 10-agent team commonly adds $500/month just for Advanced AI, before any per-resolution charges. Plan for both before you quote a client.",
+  "published": true
+}
