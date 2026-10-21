@@ -1,0 +1,81 @@
+{
+  "name": "Lokalise",
+  "slug": "lokalise",
+  "url": "https://lokalise.com/",
+  "category": "AI Translation",
+  "price": "Explorer $144/mo · Growth $375/mo",
+  "description": "Lokalise is the continuous-localization platform product teams pick once they ship to several markets and a spreadsheet stops scaling - connect a repo, push source strings, and ship every language back through the API or over the air. The plan-tier, unlimited-hosted-words model makes client jobs easy to price: a 5,000-word app into 10 languages invoices at $4,000-6,000 while your tool cost stays at $144/month, so the localization-as-a-service margin is the whole game.",
+  "pricing_details": "Lokalise 2026 pricing after the plan restructure (annual billing, verified against the project's own localization comparison article and lokalise.com/pricing, October 2026). Explorer: $144/month - unlimited hosted words, unlimited Standard AI and machine translation, 14-day trial, no credit card. Growth: $375/month - unlimited hosted words, 40K Pro AI words bundled per year, built for product teams. Advanced: from $999/month - unlimited hosted words, 150K+ Pro AI words per year, adds seats and governance controls. Enterprise: custom quote - SSO, SCIM, SLA, data residency. There is no permanent free plan. Older tiers (Essential $120, Pro $390) still show on third-party trackers but are no longer the current ladder. Billing philosophy: Lokalise charges by plan tier with unlimited hosted words, the inverse of Phrase which caps managed words and adds per-user seats, so adding languages never raises the bill but adding Advanced seats does. AI is split: Standard AI and MT are unlimited on every plan; the Pro AI tier (context-aware translation with custom AI profiles backed by RAG, style guides and scoring) is metered annually and you either pay overage or move up a plan when the bundle runs out mid-year. The MCP Server (released September 2026) is on all plans and connects Lokalise to Claude or ChatGPT; AI Scoring results are retrievable via API.",
+  "pros": [
+    "Unlimited hosted words on every paid tier means the bill never multiplies by target languages the way Crowdin and Phrase managed-word plans do",
+    "Standard AI and machine translation are unlimited on every plan, so UI strings get a first pass at no extra cost",
+    "CLI, over-the-air updates and mobile SDKs let UI text change without a new app release - the reason Notion and Mastercard picked it",
+    "Integrations with GitHub, GitLab, Bitbucket, Figma and Jira fit a real release pipeline instead of a one-off export",
+    "Custom AI profiles encode brand voice and terminology, so Pro AI output stays consistent across languages",
+    "MCP Server on all plans connects the platform to Claude or ChatGPT for agent-driven workflows",
+    "SOC 2 and ISO 27001 credentials clear most enterprise security reviews"
+  ],
+  "cons": [
+    "No free plan at all - the floor is $144/month, which is steep for a solo founder or a first small job",
+    "The Explorer-to-Growth jump is 2.6x, so a small team that crosses the AI-word bundle feels it fast",
+    "Pro AI overage is quiet - the dashboard does not wave a flag before you burn through the 40K-word bundle",
+    "Adding teammates raises the bill because Advanced seats are the lever, even though words do not",
+    "AI pre-translation is strong on UI strings and shaky on marketing or legal copy, so a human still touches the high-stakes text",
+    "At $999/month Advanced and up, a small agency reselling seats needs real volume before the margin shows",
+    "The partner program exists but is less public than Crowdin's marketplace, so lead flow from the platform is weaker"
+  ],
+  "faq": [
+    {
+      "question": "Does Lokalise have a free plan?",
+      "answer": "No. Every tier opens with a 14-day trial and no credit card, but there is no permanent free tier. If you need a working free product to start a client job, Crowdin's free plan is the better entry point, and the Crowdin tool page covers what that tier actually includes."
+    },
+    {
+      "question": "How does Lokalise bill - by words or by seats?",
+      "answer": "By plan tier with unlimited hosted words. You pay for the tier, not the word count, so adding languages does not raise the bill. Adding seats on Advanced and above does. That is the inverse of Phrase, which caps managed words and charges per user - pick Lokalise when word count grows, Phrase when you coordinate a large translator seat count."
+    },
+    {
+      "question": "Can I make money with Lokalise if I am not a translator?",
+      "answer": "Yes, and most people who do are not translators. Sell the outcome: a localized product shipped on every release. A 5,000-word app into 10 languages invoices at $4,000-6,000 with a $300-1,500/month retainer on top, while your tool cost stays at $144/month on Explorer and machine translation covers most strings. The partner program stacks reseller revenue on top of your service fee."
+    },
+    {
+      "question": "What is the difference between Standard AI and Pro AI?",
+      "answer": "Standard AI and machine translation are unlimited on every plan and handle the bulk of UI strings. Pro AI adds context-aware translation with custom AI profiles - brand voice, terminology and scoring - and is metered annually: 40K words on Growth scaling to 400K on higher tiers. Choose Pro AI when consistency across languages matters more than raw volume, and watch the bundle on launch months."
+    }
+  ],
+  "badge": {
+    "type": "hot",
+    "text": "HOT"
+  },
+  "color": "#0AA89C",
+  "emoji": "🌐",
+  "platform": "Web",
+  "rating": "⭐ 4.5",
+  "visits": "1.1M",
+  "tags": [
+    {
+      "text": "Localization"
+    },
+    {
+      "text": "AI Translation"
+    },
+    {
+      "text": "Monetization",
+      "type": "hot"
+    },
+    {
+      "text": "SaaS"
+    }
+  ],
+  "features": [
+    "Continuous localization: sync source strings from GitHub, GitLab, Bitbucket, a CMS or direct upload",
+    "Unlimited Standard AI and machine translation on every paid plan",
+    "Pro AI tier: context-aware translation with custom AI profiles backed by RAG, style guides and scoring",
+    "Translation memory that reuses approved segments and cuts the next release's cost",
+    "Glossaries and QA checks for placeholders, tags, punctuation and inconsistent terminology",
+    "CLI, over-the-air updates and mobile SDKs so UI text ships without a new app release",
+    "MCP Server on all plans to connect Lokalise to Claude or ChatGPT",
+    "Delivery via API, CLI, webhooks and integrations with Figma and Jira"
+  ],
+  "content": "# Lokalise Review 2026: What the Plan-Tier Bill Really Costs and How Agencies Resell Localization\n\nLokalise is the continuous-localization platform product teams reach for once they already ship to several markets and a spreadsheet plus a translator stops scaling. You connect a repo (GitHub, GitLab, Bitbucket), push source strings, and Lokalise returns every language through its API, CLI or over-the-air (OTA) updates so UI text can change without a new app release.\n\nI have watched agencies bill clients off Lokalise and talked to teams that switched away from cheaper tools because the bill turned unpredictable. Here is what the platform does in 2026, what the restructured pricing actually costs, and where a solo operator or small agency can turn it into recurring revenue.\n\n## What Lokalise actually does\n\nLokalise sits between your source content and the languages you ship. You sync strings from a repo, a CMS, or upload files, and the platform keeps each target language in its own branch. When a string changes upstream, Lokalise flags it, machine-translates or routes it to a translator, and delivers approved text back through the API, CLI, webhooks, or OTA so mobile and web UIs update without a build.\n\nThe parts that matter day to day: translation memory (every approved sentence is reused and cuts the next bill), glossaries (product terms stay consistent), and QA checks that catch missing placeholders, broken tags, and mixed-up punctuation before anything ships. The CLI and mobile SDKs are the reason companies like Notion and Mastercard picked it - over-the-air pushes mean a typo fix lands in the app without waiting for the next release train.\n\n## The 2026 pricing model\n\nLokalise restructured its plans in 2026. The current ladder (annual billing) runs Explorer at $144/month, Growth at $375/month, Advanced from $999/month, and Enterprise as a custom quote. There is no true free plan; every tier opens with a 14-day trial and no card.\n\nThe billing philosophy is the opposite of Phrase's. Lokalise charges by plan tier with unlimited hosted words, while Phrase caps managed words and adds per-user seats. That matters because a product that adds features (more source words) never pushes your Lokalise bill up - but adding teammates does, since Advanced seats are the lever. For a team of 3-10 engineers in 5-15 languages, that is usually the more predictable bill.\n\nAI is split in two. Standard AI and machine translation are unlimited on every plan. The Pro AI tier - context-aware translation with custom AI profiles backed by RAG, style guides and scoring - is metered: bundled at 40K-400K words per year depending on tier, then you either pay overage or move up a plan. If your output is steady, the bundle is fine; if a launch dumps 150K words in a month, you feel it.\n\n| Plan | Price (annual) | Hosted words | AI | Notes |\n| --- | --- | --- | --- | --- |\n| Explorer | $144/mo | Unlimited | Unlimited Standard AI/MT | 14-day trial, no card |\n| Growth | $375/mo | Unlimited | 40K Pro AI words/yr | For product teams |\n| Advanced | from $999/mo | Unlimited | 150K+ Pro AI words/yr | Adds seats, governance |\n| Enterprise | Custom | Unlimited | Custom | SSO, SCIM, SLA |\n\n## How people make money with Lokalise\n\nThe clean play is localization-as-a-service, and the math is the same one translators have used for years, just cleaner with a platform behind it. Take a client's 5,000-word product and push it to 10 languages. That is 50,000 words of work. You invoice $4,000-6,000 for the first pass and a $300-1,500/month retainer to keep every release localized. Your Lokalise cost on Explorer is $144/month, and machine translation covers most strings, so human post-editing is the only real variable. The margin is the point: you are not selling hours, you are selling an outcome the client cannot produce alone.\n\nThree concrete angles:\n\n1. App and website localization retainers for small software firms that have outgrown Google Sheets but cannot justify a full localization hire.\n2. Bolt a translation-ops line onto an existing web, app, or SEO agency - you already have the client relationship, Lokalise is the engine.\n3. The Lokalise partner program pays agencies to bring on accounts, so a resold seat plus your service fee stacks.\n\n## Where it falls short\n\nLokalise has no free plan, and the floor at $144/month is high for a solo founder. The Explorer-to-Growth jump is 2.6x, so a small team that crosses the AI-word bundle can feel the pinch fast. Pro AI overage is quiet - the dashboard does not wave a flag before you burn through 40K words. And like every TMS, AI pre-translation is strong on UI strings and shaky on marketing or legal copy, so a human still touches the high-stakes text.\n\n## Lokalise vs Crowdin\n\nIf the client is price-sensitive and the job is small, Crowdin wins on the free tier and $50/month Pro. Lokalise wins when the team is bigger, the word count grows, and unlimited hosted words removes the multiplying-by-languages surprise. The full four-way breakdown lives in our [best AI localization tools 2026 comparison](/articles/best-ai-localization-tools-2026-lokalise-vs-phrase-vs-crowdin-vs-smartling/), and the [Crowdin tool page](/tools/crowdin/) covers the other side of the same decision.\n\n## FAQ\n\n### Does Lokalise have a free plan?\nNo. Every tier starts with a 14-day trial and no credit card, but there is no permanent free tier. If you need a working free product, Crowdin's free plan is the better starting point.\n\n### How does Lokalise bill - words or seats?\nBy plan tier with unlimited hosted words. You pay for the tier, not the word count, so adding languages does not raise the bill. Adding seats on Advanced and above does. That is the inverse of Phrase, which caps managed words and charges per user.\n\n### Can I make money with Lokalise if I am not a translator?\nYes, and most people who do are not translators. Sell the outcome: a localized product shipped on every release. A 5,000-word app into 10 languages invoices $4,000-6,000 with a monthly retainer on top, while your tool cost stays at $144/month on Explorer. The partner program adds reseller revenue on top.\n\n### What is the difference between Standard AI and Pro AI?\nStandard AI and machine translation are unlimited on every plan and handle the bulk of UI strings. Pro AI adds context-aware translation with custom AI profiles (brand voice, terminology, scoring) and is metered annually - 40K words on Growth, scaling to 400K on higher tiers. Choose Pro AI when consistency across languages matters more than raw volume.",
+  "published": true
+}
