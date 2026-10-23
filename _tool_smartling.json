@@ -1,0 +1,76 @@
+{
+  "name": "Smartling",
+  "slug": "smartling",
+  "url": "https://www.smartling.com/",
+  "category": "AI Translation",
+  "price": "Free Core tier · quote-based (~$60K/yr median)",
+  "description": "Smartling is the enterprise localization platform that bundles AI translation with managed translation services and certified project managers - no list prices, contracts median $60K/year per Vendr data. For marketing-heavy teams shipping into 10+ languages it replaces both a TMS and an agency. Freelancers earn by running client Smartling instances as localization-ops consultants.",
+  "pricing_details": "Smartling publishes no list prices - everything is quote-based (smartling.com/plans, verified October 2026). Real contract data: Vendr's dataset of 129 Smartling purchases puts the median at $60,000/year, with a range from $8,850 to $214,620, and buyers who negotiate average 14% savings off the first quote. The model is a platform fee plus per-word charges: machine translation from $0.0075/word up to roughly $0.20/word for human translation, with volume commitments (commit to 1M words, translate 600K, pay for 1M). A free Core tier exists with 180-day translation-memory retention - after that the TM is purged. Prepaid volume and multi-year commitments are the main discount levers.",
+  "pros": [
+    "Bundled execution: certified project managers and translation services are part of the deal, with a satisfaction guarantee - unhappy with output, they redo it free",
+    "The AI stack is built around quality control, not just generation: multi-LLM routing picks the best engine per task, hallucination detection flags suspect output, and quality estimation routes only the risky 10-20% to human review",
+    "50+ pre-built enterprise connectors - WordPress, Contentful, Salesforce, Marketo, Zendesk, Adobe Experience Manager - so marketing stacks connect without custom middleware",
+    "Context inheritance: the AI reads your repository context instead of translating bare strings, which measurably cuts review cycles on UI and product copy"
+  ],
+  "cons": [
+    "Quote-only pricing with a median contract of $60K/year - 10 to 40x what Crowdin, Lokalise, or Phrase charge for broadly the same job",
+    "Volume commitments bite in both directions: commit to 1M words and translate 600K, you still pay for 1M",
+    "The free Core tier purges your translation memory after 180 days, and TM reuse is where 60-80% of localization cost savings live - miss the window and you re-pay full price for work already done",
+    "Overkill below roughly 100K words per year; its real competition is its own bundled services, and if you have someone in-house to run the pipeline you are paying enterprise prices for software that costs $2-5K a year elsewhere"
+  ],
+  "faq": [
+    {
+      "question": "How much does Smartling actually cost?",
+      "answer": "There is no published price list - you get a quote after a demo. Vendr's analysis of 129 real contracts puts the median at $60,000/year with a range of $8,850 to $214,620. The bill is a platform fee plus per-word rates (machine translation from $0.0075/word, human translation up to ~$0.20/word) shaped by volume commitments. Buyers who negotiate average 14% off the opening quote, so always counter, and get the per-word rates and TM retention terms in writing."
+    },
+    {
+      "question": "Is there a free plan for Smartling?",
+      "answer": "Yes - a Core tier that is genuinely free, with a catch: your translation memory is only retained for 180 days. Translation memory reuse is where most localization savings come from, so treat the free tier as a trial with a fuse. If you evaluate Smartling, export your TM before the window closes, or be ready to upgrade before you lose it."
+    },
+    {
+      "question": "Can I make money with Smartling if I am not an enterprise?",
+      "answer": "Not by reselling it - Smartling sells the service layer you would otherwise sell. The realistic angles sit client-side: localization-ops retainers ($3,000-8,000/month to run a brand's Smartling instance - connectors, TM hygiene, QA workflows), implementation projects ($2,000-10,000 to wire up Contentful, Salesforce, or AEM), and TM rescue jobs before contract switches. Linguists can also join Smartling's translation partner network for steady flow without selling anything."
+    },
+    {
+      "question": "Smartling vs Crowdin vs Lokalise vs Phrase - which should I pick?",
+      "answer": "Ask who does the work. If your team does it: Crowdin (free tier, $150/month Team plan for continuous software localization). If AI plus managed services should: Smartling, at a median $60K/year, negotiated hard. If you want flat, predictable product-team billing: Lokalise Growth at $375/month. If you coordinate agency linguists and live on translation-memory reuse: Phrase from $27 up to $1,245/month. The full side-by-side is in our localization comparison article."
+    }
+  ],
+  "badge": {
+    "type": "hot",
+    "text": "HOT"
+  },
+  "color": "#0B5FFF",
+  "emoji": "🌍",
+  "platform": "Web",
+  "rating": "⭐ 4.5",
+  "visits": "900K",
+  "tags": [
+    {
+      "text": "Localization"
+    },
+    {
+      "text": "AI Translation"
+    },
+    {
+      "text": "Monetization",
+      "type": "hot"
+    },
+    {
+      "text": "Enterprise"
+    },
+    {
+      "text": "Managed Services"
+    }
+  ],
+  "features": [
+    "Smartling TMS: translation memory, terminology management, QA checks, and workflow automation across large volumes",
+    "Language AI: multi-LLM engine routing, hallucination detection, and quality estimation that routes only risky strings to human review",
+    "Bundled translation services: certified project managers, professional linguists, and a satisfaction guarantee with free redos",
+    "50+ pre-built connectors for WordPress, Contentful, Salesforce, Marketo, Zendesk, Adobe Experience Manager, and more",
+    "Visual context and repository context inheritance so translations are reviewed in place, not on bare strings",
+    "Analytics and cost reporting per language, brand, and workflow, including quality-estimation scoring"
+  ],
+  "content": "# Smartling Review 2026: What a Quote-Based Localization Contract Really Costs, and When the Premium Is Worth It\n\nSmartling is the fourth member of the localization big four we have covered - after Crowdin, Lokalise, and Phrase - and it breaks the pattern in one obvious way: there is no pricing page you can screenshot. You book a demo, sales builds a quote around your word volume and service level, and no two contracts look alike. That makes most Smartling reviews useless, because they repeat marketing claims instead of numbers. This one uses real contract data, because that is the only honest way to price Smartling in 2026.\n\n## What Smartling actually does\n\nOn the surface Smartling is a translation management system like the rest: source content goes in, translations come out through APIs, connectors, or the web editor, and translation memory plus terminology keep everything consistent. Two things set it apart.\n\nFirst, the AI layer is organized around quality control rather than raw generation. Smartling routes each task across multiple LLMs and machine-translation engines, picks the best fit for the content type, runs hallucination detection on the output, and uses quality estimation to decide what still needs a human. The company's own pipeline is designed to send AI output to human review by default - the AI does the bulk, people handle the parts where a mistranslation costs money.\n\nSecond, Smartling sells execution, not just software. Translation services are bundled into the engagement: certified project managers run your workflows, professional linguists handle the human share, and there is a satisfaction guarantee - if you are unhappy with the output, they redo it free. That is why the price looks nothing like a SaaS subscription. You are buying an outcome.\n\nThe connector catalog is the third pillar for the buyers it targets: 50+ pre-built integrations into WordPress, Contentful, Salesforce, Marketo, Zendesk, and Adobe Experience Manager. For a marketing organization running five systems, that is weeks of avoided middleware work.\n\n## The 2026 pricing model: what real contracts show\n\nSmartling publishes no list prices. Its homepage advertises \"70% average cost savings\" and \"99% workflow automation,\" but the number you care about only appears in a contract. The best public data comes from Vendr, whose dataset of 129 actual Smartling purchases puts the median contract at $60,000 per year, with a range from $8,850 to $214,620. Buyers who negotiate average 14% savings off the opening quote - volume commitments and prepayment are the levers that work.\n\nThe billing structure underneath the quote is a platform fee plus per-word charges: machine translation starts around $0.0075 per word, human translation runs up to roughly $0.20 per word, and the committed volume is contractual. Commit to 1M words and translate 600K, you pay for 1M.\n\nThere is a free Core tier, which matters more than it sounds. It gives you the real platform - TMS, AI translation, connectors - with one landmine: translation-memory retention is capped at 180 days. Translation-memory reuse is where 60-80% of localization cost savings come from, so the free tier quietly resets your biggest asset if you do not upgrade in time. Evaluate it, but export your TM before the window closes.\n\n## Smartling vs Crowdin vs Lokalise vs Phrase\n\nPrice the same job on all four - a 50,000-word product localized into 10 languages (500,000 hosted words) - and the spread tells the story. Crowdin Team runs about $1,800 per year before translator costs. Lokalise Growth runs about $4,500 per year before AI overages. Phrase lands between $324 and $14,940 depending on seats and volume, with Team at $1,245/month for agency-scale work. Smartling's median contract is $60,000 per year - including services.\n\nWhat you are buying at the high end is execution, not software. Smartling's project managers and quality guarantees replace an agency relationship; the other three replace spreadsheets and hopeful copy-paste. If you have someone in-house who can run the pipeline, the low-end tools do the same job for a fraction of the cost. If you do not - and plenty of 200-person marketing orgs do not - Smartling's all-in economics can genuinely beat running Crowdin plus a vendor-managed agency.\n\nThe honest split: Crowdin for developer-led teams and open source, Lokalise for product teams that want flat predictable billing, Phrase for TM-heavy programs coordinating agencies, Smartling for marketing-heavy enterprises shipping 100K+ words a year across multiple brands who would rather buy outcomes than manage vendors.\n\n## How to make money with Smartling\n\nBe upfront about this: Smartling is the weakest of the four for solo monetization, because it sells the service layer you would otherwise sell. You will not white-label it, and its affiliate story is minimal. The money sits client-side, around the contract:\n\n1. **Localization-ops retainers.** A brand that signs a $60K/year contract still needs someone to own connector setup, TM hygiene, quality-estimation tuning, and vendor accountability. External localization managers bill $3,000-8,000 per month for exactly this - a fraction of a full-time hire and a fraction of what agency PMs cost.\n2. **Implementation projects.** Wiring Contentful, Salesforce, Marketo, or Adobe Experience Manager into Smartling, building workflows, and training reviewers is a $2,000-10,000 one-off that most marketing teams cannot do themselves.\n3. **TM rescue and migration work.** Contracts end, tools switch, and translation memories need exporting, cleaning, and rebuilding - $1,500-4,000 per project. The 180-day purge on the free tier creates urgent, well-paid versions of this job.\n4. **The linguist route.** Smartling runs a translation partner network; if you translate, joining it gets you steady flow with zero business development. It will not make you rich, but it is the lowest-friction entry.\n\nThe pattern across all four: sell to companies that already spend on localization, not to people deciding whether to localize.\n\n## Who should pick Smartling\n\nPick Smartling if you ship 100K+ words a year across marketing sites, help centers, and campaigns, run multiple brands or locales, and lack in-house localization staff. In that box, the bundled services, quality guarantees, and connector depth justify a contract that would look absurd for a smaller job - and you should still negotiate the 14% everyone else gets, get per-word rates and TM retention in writing, and start on the free Core tier to test the fit.\n\nPick anything else if you are below that line. Crowdin Team at $150/month, Lokalise Growth at $375/month, or Phrase from $27/month handle the same continuous-localization workflow for a fraction of the cost, and Smartling's own bundled services are only worth their premium when there is no one on your side to be the service.\n\n## Frequently Asked Questions\n\n### How much does Smartling actually cost?\n\nThere is no published price list - you get a quote after a demo. Vendr's analysis of 129 real contracts puts the median at $60,000/year, ranging from $8,850 to $214,620. The bill combines a platform fee with per-word rates (machine translation from $0.0075/word, human translation up to ~$0.20/word) and volume commitments. Negotiate: buyers average 14% off the opening quote.\n\n### Is there a free plan for Smartling?\n\nYes. The Core tier is free and includes the real platform, but translation memory is only retained for 180 days. Since TM reuse drives 60-80% of localization savings, export your TM before the window closes or plan to upgrade before you lose it.\n\n### Can I make money with Smartling if I am not an enterprise?\n\nNot by reselling it - Smartling sells the service layer you would otherwise sell. Work client-side instead: localization-ops retainers ($3,000-8,000/month), connector implementation projects ($2,000-10,000), TM rescue jobs, or join the linguist partner network for flow without selling.\n\n### Smartling vs Crowdin vs Lokalise vs Phrase - which should I pick?\n\nPick by who does the work: your team - Crowdin; AI plus managed services - Smartling (negotiated hard); flat product-team billing - Lokalise; agency coordination with heavy TM reuse - Phrase. The full side-by-side is in our localization comparison article.",
+  "published": true
+}
