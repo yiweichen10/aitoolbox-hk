@@ -1,0 +1,83 @@
+{
+  "name": "Brandwatch",
+  "slug": "brandwatch",
+  "emoji": "📡",
+  "color": "#DB2777",
+  "description": "Enterprise consumer intelligence with a 1.4-1.7 trillion-conversation archive and Iris AI anomaly alerts. Quote-only and pricey - but agencies sell the insight reports it produces at 3-5x the seat cost.",
+  "category": "Market Research",
+  "tags": [
+    {
+      "text": "Social Listening"
+    },
+    {
+      "text": "Consumer Intelligence"
+    },
+    {
+      "text": "Iris AI"
+    },
+    {
+      "text": "Enterprise Research"
+    }
+  ],
+  "rating": "⭐ 4.4",
+  "visits": "1.4-1.7 trillion conversations archived across 100M+ sources; G2 4.4/5 on Consumer Intelligence (728 reviews); used by Fortune 500 consumer brands, agencies and comms teams; part of Cision.",
+  "badge": {
+    "type": "recommend",
+    "text": "RECOMMENDED"
+  },
+  "url": "https://www.brandwatch.com",
+  "price": "Quote-only · ~$800-$1,500/mo entry",
+  "platform": "Web platform at brandwatch.com; Vizia dashboards; REST APIs; SAML SSO; ISO 27001:2022 certified. No self-serve signup and no mobile-first app.",
+  "published": true,
+  "related": [
+    "gummysearch",
+    "peec-ai",
+    "ahrefs"
+  ],
+  "created_date": "2026-10-25",
+  "pros": [
+    "The archive is the moat: 1.4-1.7 trillion conversations back to 2008/2010 across 100M+ sources - when a client asks how sentiment shifted over five years, the data actually exists here",
+    "Iris anomaly detection watches your queries and flags spikes and sentiment shifts on its own, so a Friday-night crisis pings you instead of hiding in a dashboard nobody refreshed",
+    "Five products under one roof - Consumer Intelligence, Social Media Management (ex-Falcon), Influence with a 30M+ creator database, Search Intelligence and Media Intelligence - so one contract covers research, publishing and influencer workflows",
+    "Demographic and audience segmentation goes beyond mention counting; segmenting a category by age, region and platform is where mid-market tools genuinely cannot follow",
+    "Enterprise hygiene is real: ISO 27001:2022 across all products, SAML SSO, and Cision/PR Newswire integration for teams that need earned-media context next to social data"
+  ],
+  "cons": [
+    "No public pricing, no free trial, no self-serve - buyer reports put entry at ~$800-$1,500/mo, mid-market $2,000-$5,000/mo, enterprise $60K-$150K+/yr, with $5,000-$20,000 implementation fees on top",
+    "Contracts are annual, usually paid upfront and typically non-cancellable mid-term; Cision restructured debt in 2024-2025, which is worth raising in any multi-year negotiation",
+    "The Boolean query builder has a learning curve measured in weeks - G2 reviewers on both products name the ramp-up as the top complaint, and untrained teams underuse the platform by month three",
+    "TikTok and Meta coverage has real gaps (industry-wide API limits), and roughly 97% of TikTok brand mentions never tag the account - teams often bolt on a video/image-specific tool anyway",
+    "Odd product gaps for the price: you cannot publish one post to several networks at once, TikTok and Threads DMs are unsupported, and Iris processes only ~2,000 characters per operation, which chokes on long-form posts"
+  ],
+  "features": [
+    "Consumer Intelligence - search and analyze the 1.4-1.7T conversation archive with sentiment, emotion and topic classification",
+    "Iris AI - Conversation Insights (theme summaries), Content Insights (post analysis), Ask Iris plain-language queries, and anomaly alerts on spikes and sentiment shifts",
+    "Signals alerts - automated monitoring of brand, competitor and category queries without manual re-querying",
+    "Social Media Management (ex-Falcon) - publishing calendar, approval workflows, unified inbox, social CRM, advertising, benchmarking",
+    "Audience analysis - demographic segmentation of conversation authors by age, gender, region and platform",
+    "Influence - creator discovery across a 30M+ database with campaign management and reporting",
+    "Search Intelligence - brand visibility in traditional search and generative AI answers (ChatGPT-class engines)",
+    "Vizia dashboards and customizable reports for multi-team, multi-market reporting",
+    "Integrations and APIs, Brandwatch Academy training and certification, ISO 27001:2022 and SAML SSO"
+  ],
+  "faq": [
+    {
+      "question": "How much does Brandwatch actually cost in 2026?",
+      "answer": "Brandwatch publishes no prices and sells only through demos, so any figure is an estimate. Third-party trackers and buyer reports put entry configurations around $800-$1,500/mo, mid-market deployments $2,000-$5,000/mo, and enterprise contracts $60,000-$150,000+/yr - annual, usually paid upfront, with one-time implementation fees of $5,000-$20,000 and custom-report add-ons around $500/mo. A five-person team at the entry tier should budget $9,600-$12,000 for year one. Get modules, seats, data volume and cancellation terms in writing before signing; contracts are typically non-cancellable mid-term."
+    },
+    {
+      "question": "Is there a free trial or a free plan?",
+      "answer": "No. There is no trial, no free tier and no self-serve path - the only entry is a sales demo. Training happens through Brandwatch Academy after you buy. If you need to test before committing five figures, run a mid-market tool with a trial first (Brand24 offers 14 days without a card) and treat that as your pilot; move to Brandwatch only when a client or stakeholder is already paying for the research it enables."
+    },
+    {
+      "question": "Can you make money with Brandwatch?",
+      "answer": "Yes - but by selling output, not the tool. There is no meaningful affiliate program and clients can buy their own seats. Working models: consumer-insight and competitive-landscape reports invoiced at $1,000-$3,000 each; monthly listening retainers at $1,500-$5,000/mo where the platform cost is a small fraction of the fee; crisis-monitoring on-call built on Iris anomaly alerts; and fixed-fee launch tracking sprints ($2,000-$5,000 for 4-6 weeks of sentiment and share-of-voice reporting). One retainer covers the seat. If you have no research background, the learning curve and the contract will eat you - start with a cheaper tool."
+    },
+    {
+      "question": "Brandwatch or Brand24 - which one do I need?",
+      "answer": "It is a budget question with a 10-25x spread. Brand24 answers 'what are people saying about us this week' for $249-$699/mo with real-time alerts, AI summaries and LLM-answer monitoring included. Brandwatch earns its price only when archive depth (years of trend, not weeks), demographic segmentation, multi-market coverage and multi-team workflows are the actual deliverable. A pragmatic path: start on Brand24's 14-day trial, land your first paying client, and upgrade to Brandwatch when a specific contract demands the depth. Full comparison in our social listening roundup."
+    }
+  ],
+  "pricing_details": "Quote-only - Brandwatch publishes no price list, offers no free trial, and sells through demos with annual contracts (usually paid upfront, typically non-cancellable mid-term). Third-party estimates (Gartner-sourced contract data, buyer reports and industry trackers, checked Oct 2026): small-team entry ~$800-$1,500/mo; mid-market ~$2,000-$5,000/mo; enterprise ~$60,000-$150,000+/yr depending on modules, seats and data volume; Gartner reviews cluster $20K-$100K+/yr. One-time implementation fees $5,000-$20,000. Custom report add-ons ~$500/mo. Products sold separately by quote: Consumer Intelligence, Social Media Management (ex-Falcon), Influence (30M+ creators), Search Intelligence, Media Intelligence. Year-one reality check for a 5-person entry-tier team: ~$9,600-$12,000 all-in. For context, Brand24 Business ($599/mo, 100,000 mentions/mo) plus a part-time analyst costs less than Brandwatch's entry tier.",
+  "content": "Brandwatch is the platform large brands reach for when social listening stops being \"what are people saying about us this week\" and becomes a research department's data source. It has been ingesting public conversations since 2008, and the archive now holds 1.4-1.7 trillion conversations across 100M+ sources: social, news, blogs, forums and review sites. When a consumer brand wants to know how sentiment around a category shifted over five years, segmented by age and region, this is one of the few tools that actually has the data to answer.\n\nSince Cision acquired it in 2021, Brandwatch has grown into a five-product suite: Consumer Intelligence (the research engine), Social Media Management (the former Falcon.io - publishing, inbox, ads), Influence (a 30M+ creator database), Search Intelligence (how you appear in search and AI answers), and Media Intelligence with expert analysts on tap. Iris, the AI layer, runs across all of them.\n\n**What Iris actually does.** Three modules: Conversation Insights (summarizes thousands of mentions into themes), Content Insights (post-level analysis), and a writing assistant inside the publishing workflow. The piece I consider the real product is anomaly detection: it watches your queries and flags spikes and sentiment shifts on its own, so a Friday-night crisis pings you instead of hiding in a dashboard nobody refreshed. Ask Iris lets you interrogate the archive in plain language instead of crafting Boolean syntax at 2am.\n\nThe honest critique of the AI: it processes up to ~2,000 characters per operation, which chokes on long-form posts, and the summaries are executive-brief quality - good for direction, not something you ship to a client unread.\n\n## Pricing, Plainly\n\nThere is no price list. No trial. No self-serve. You book a demo, sales scopes modules, seats and data volume, and you sign an annual contract, usually paid upfront. Buyer reports and industry trackers put it roughly at:\n\n| Deployment | Reported range (2026) |\n|---|---|\n| Small team entry | ~$800-$1,500/mo |\n| Mid-market | ~$2,000-$5,000/mo |\n| Enterprise | ~$60,000-$150,000+/yr |\n| Implementation | one-time $5,000-$20,000 |\n| Custom report add-on | ~$500/mo |\n\nA five-person team at the entry tier is realistically $9,600-$12,000 in year one. Contracts are typically non-cancellable mid-term, so treat the demo as a negotiation: get modules, seats, data volume and exit terms in writing before signing.\n\nFor context, Brand24 Business ($599/mo for 100,000 mentions) plus a part-time analyst costs less than Brandwatch's entry tier. That is the trade you are making.\n\n## How People Actually Make Money With It\n\nNobody makes money reselling Brandwatch - there is no meaningful affiliate program, and clients can buy their own seats. The money is in selling what it produces:\n\n- **Consumer-insight reports.** A competitive landscape or audience-sentiment report built on Brandwatch data invoices $1,000-$3,000. The archive depth is the pitch: you can show five years of trend, which free and mid-market tools cannot.\n- **Monthly listening retainers.** Agencies run brand and competitor monitoring at $1,500-$5,000/mo per client, deliver a monthly insights deck, and keep the platform cost as a small fraction of the fee. One retainer covers the seat.\n- **Crisis monitoring on-call.** Iris anomaly alerts plus a defined escalation SLA is a clean upsell to comms teams - the tool watches, you interpret and act.\n- **Launch tracking sprints.** Four to six weeks of sentiment and share-of-voice tracking around a product launch, fixed fee $2,000-$5,000.\n\nIf you are solo with no research background, skip this one - the learning curve and the contract will eat you. If you already sell research, PR or comms services, it is a data moat that mid-market tools cannot match.\n\n## What It Gets Wrong\n\n- **TikTok and Meta coverage has real gaps** (API limits that hit the whole industry), and roughly 97% of TikTok videos mentioning a brand never tag the account - text-first monitoring sees only a fraction of that conversation. Teams often pair Brandwatch with a video- or image-specific tool anyway.\n- **Publishing gaps at a premium price.** You cannot push one post to several networks at once, and TikTok/Threads DMs are unsupported in the SMM product.\n- **A weeks-long ramp-up.** The Boolean query builder and dashboard layer take real training. G2 reviewers on both products (4.4/5 and 4.0/5) name the learning curve as the top complaint; teams that skip it underuse the platform and start questioning the invoice by month three.\n- **Contract lock-in.** Annual, upfront, typically non-cancellable. Cision restructured its debt in 2024-2025 - a fair question to raise in any multi-year negotiation.\n\n## Who Should Skip It\n\nIf your actual question is \"what are people saying about us this week,\" a tool like [GummySearch](/tools/gummysearch/) (Reddit-first audience research) or Brand24 answers it for a fraction of the cost. If your question is AI-answer visibility, a dedicated GEO tracker like [Peec AI](/tools/peec-ai/) does that one job better and cheaper than Search Intelligence. If you need keyword and backlink data, [Ahrefs](/tools/ahrefs/) is the tool. Brandwatch earns its price only when archive depth, demographic segmentation and multi-market coverage are the deliverable you bill for - the full comparison lives in our [social listening roundup](/articles/best-ai-social-listening-tools-2026-brand24-vs-mention-vs-youscan-vs-brandwatch/).\n\n## The Bottom Line\n\nBrandwatch is not a tool you try - it is a research contract you commit to. The archive is genuinely unmatched, Iris removes part of the query-writing grind, and for global brands running always-on consumer research, nothing in the mid-market substitutes for it. But go in clear-eyed: quote-only pricing, annual upfront contracts, implementation fees, weeks of ramp-up, and a bill that could otherwise fund an enormous amount of mid-market tooling plus human analyst hours. Demo it, negotiate hard, and only sign if the insight reports it enables are already billable."
+}
