@@ -1,0 +1,78 @@
+{
+  "name": "Litmaps",
+  "slug": "litmaps",
+  "emoji": "🗺️",
+  "color": "#4F46E5",
+  "description": "Litmaps turns a seed paper into a visual citation map and alerts you when new work connects to it. Sell literature-review sprints and research monitoring retainers instead of doing manual searches.",
+  "category": "AI Research",
+  "rating": "⭐ 4.6",
+  "visits": "270M+ papers indexed from Semantic Scholar and OpenAlex data; used by students and researchers at universities worldwide.",
+  "badge": {
+    "type": "recommend",
+    "text": "RECOMMENDED"
+  },
+  "url": "https://www.litmaps.com",
+  "price": "Free + Pro $10/mo · $120/yr annual",
+  "pricing_details": "Verified from litmaps.com/pricing (October 2026). Free: $0 - basic search, up to 20 inputs, 100 articles per map (1-2 maps), monthly summary alerts only. Pro: $10/month monthly, or $120/year (save 20%) - advanced search, unlimited inputs, unlimited articles and maps, weekly or configurable alert frequency. The $10 headline price is the education rate and requires an academic email address; commercial Pro is priced at checkout through the upgrade flow, and extra discounts exist for lower-income countries (see litmaps.com/lmic). Team: quote-only, adds team-wide shared maps and collaboration. No free trial of Pro needed - the free tier is itself the trial. No refunds advertised; subscriptions run month-to-month on the monthly plan.",
+  "pros": [
+    "The map view does something keyword search genuinely cannot - it shows you the papers sitting between your seeds, including ones your query words would never match",
+    "New-paper alerts are the real product: set a map for your niche once and relevant work lands in your inbox weekly without re-running searches",
+    "Honest free tier - 20 inputs and 100 articles per map is enough to judge whether it fits your workflow before paying anything",
+    "$10/mo education pricing is the cheapest paid tier of any tool in this category, and the annual rate works out to $10/mo anyway"
+  ],
+  "cons": [
+    "It is a discovery tool, not a systematic one - citation maps miss papers with sparse citations and cannot prove coverage, so it is useless as the primary search for a PRISMA-style systematic review",
+    "Big or interdisciplinary fields produce hairball maps that take longer to untangle than the search they replaced",
+    "No full-text reading, no PDF markup, no screening or extraction - you still need Zotero/Elicit/Scite for everything after discovery",
+    "The commercial Pro price is hidden behind the checkout flow - only the $10 education rate is published, which makes business budgeting annoying"
+  ],
+  "faq": [
+    {
+      "question": "Is Litmaps actually free?",
+      "answer": "Yes, with real limits: basic search, up to 20 inputs, 100 articles per map, and alerts only as a monthly summary. That is enough to map a narrow niche and decide if it helps. Pro ($10/mo education rate, $120/yr) removes the caps and adds advanced search, weekly alerts and unlimited maps. The published $10 rate requires an academic email; commercial accounts see their price at checkout."
+    },
+    {
+      "question": "Can I use Litmaps for a systematic review?",
+      "answer": "Not as your primary search. Citation mapping is not reproducible coverage - it surfaces papers connected to your seeds, which biases toward well-cited work and misses new or thinly-cited studies. Use it alongside your database searches (PubMed, Scopus, Web of Science) to catch papers your query strings missed, and document it as a supplementary method, not the main one."
+    },
+    {
+      "question": "How is Litmaps different from ResearchRabbit?",
+      "answer": "ResearchRabbit lets you build collections and follow citation chains rabbit-hole style; Litmaps shows one focused map at a time and pushes alerts when new papers connect to it. In practice Litmaps is better for monitoring a defined niche over months; ResearchRabbit is better for exploratory digging. Both are free to try, so run your seeds through both and keep the one whose output you actually read."
+    },
+    {
+      "question": "Does Litmaps have an affiliate or reseller program?",
+      "answer": "Nothing meaningful. There is no fat recurring commission here, so do not build a business on reselling it. The money is in the output: literature-review sprints, research monitoring, and evidence services sold to clients who need the reading done, not the tool."
+    }
+  ],
+  "features": [
+    "Visual citation maps - seed one or more papers and see the connected literature laid out on a timeline",
+    "New-paper alerts - weekly or configurable notifications when newly published work connects to your map",
+    "Advanced Search - free-text and semantic queries against 270M+ papers from Semantic Scholar and OpenAlex",
+    "Unlimited inputs on Pro - drop a whole reading list in and let the map merge it",
+    "Shareable maps - public links for supervisors, co-authors or clients",
+    "Exports - push results to BibTeX/RIS and your existing reference manager"
+  ],
+  "tags": [
+    {
+      "text": "Literature Mapping"
+    },
+    {
+      "text": "Citation Graph"
+    },
+    {
+      "text": "Literature Review"
+    },
+    {
+      "text": "Research Alerts"
+    }
+  ],
+  "related": [
+    "elicit",
+    "scite",
+    "notebooklm"
+  ],
+  "platform": "Web app at app.litmaps.com; no mobile app; maps share via public link; exports to BibTeX/RIS for Zotero, Mendeley and EndNote workflows.",
+  "published": true,
+  "created_date": "2026-10-26",
+  "content": "Litmaps solves a problem every researcher and research-adjacent consultant knows: your keyword search found the obvious papers, but the important ones hiding between them are still invisible. Give it one or more seed papers and it draws a citation map - your seeds in the middle, the work they cite and the work that cites them arranged on a timeline, connected by citation lines. Papers that bridge two of your seeds but match none of your keywords show up immediately. That single behavior is the whole product, and it works.\n\n## Pricing, Plainly\n\n| Plan | Price | What you get |\n| --- | --- | --- |\n| Free | $0 | Basic search, 20 inputs, 100 articles per map, monthly summary alerts |\n| Pro (education) | $10/mo or $120/yr | Advanced search, unlimited inputs/articles/maps, weekly alerts |\n| Pro (commercial) | shown at checkout | Same features, business billing |\n| Team | Quote | Everything in Pro plus team-wide shared maps |\n\nThe published $10 rate is the education price and needs an academic email. There are extra discounts for lower-income countries. The free tier is not a crippled demo - 20 inputs is a real niche map, and that is exactly how you should decide whether to pay.\n\n## The Money Angle: Sell the Review Sprint\n\nThere is no affiliate program worth your time here, so do not think in commissions. Litmaps is cheap, which means the margin lives in the deliverable, not the referral:\n\n- **Literature-review sprints.** Consultants and content agencies charge $500-$2,500 per scoped review - a mapped, annotated reading list for a market report, a whitepaper, or a technical blog series. Your tool stack for that project costs $10/mo. The bottleneck is reading and synthesis, not search, and the map cuts hours off the search half.\n- **Monitoring retainers.** Set maps for a client's niche, let the alerts run, and send a monthly \"what's new in your field\" digest. This is recurring revenue built on a $10 subscription and an hour of filtering per month. I have seen this sold at $200-$500/mo per client to think tanks and B2B content teams.\n- **Academic support services.** Thesis coaching, journal-club prep, and grad-student onboarding all have a \"learn the field fast\" step. A tutor or academic editor who hands a student a Litmaps map instead of a 40-item keyword dump delivers visibly better work for the same fee.\n- **Grant and report support.** Evidence sections for funding applications and policy briefs need current, defensible citations. Mapping the space beats re-searching it every time a draft cycles.\n\nThe honest caveat: Litmaps is discovery, not proof. If a client needs systematic-review-grade coverage, that is a different (and higher-priced) job with different tools - and being able to say so is itself a credibility asset.\n\n## How I Actually Use It Week to Week\n\nPick two or three papers that define the question. Drop them in as seeds. Read the map for ten minutes: the clustering tells you the sub-debates, the isolated nodes tell you where the field is thin, and the bridging papers go on the read-first list. Then leave the map alive - the weekly alert does the surveillance from there. For client work I keep one map per project and share the link; clients click it, see the structure, and stop asking whether I \"did enough research.\"\n\nThe export path matters: everything flows out to BibTeX/RIS and into Zotero, so Litmaps stays a discovery layer on top of the reference manager I already keep. It never tries to replace it, which is why it survives past the novelty phase.\n\n## Where It Falls Short (Honest)\n\nBig interdisciplinary fields produce hairballs. Map a topic like \"machine learning in healthcare\" and you get a tangle that takes longer to interpret than the searches it replaced - the tool rewards narrow seeds and punishes broad ones. Citation graphs also inherit citation bias: heavily-cited older work dominates, thinly-cited new work is invisible until it accumulates links, and nothing here is reproducible coverage. For a PRISMA systematic review it is a supplementary search at best, and you should document it that way. There is also no reading layer - no full-text viewer, no screening table, no extraction - so the workflow still ends in Elicit, Scite or a spreadsheet. And the unpublished commercial price is a small but real annoyance when you are budgeting for a business account.\n\n## Litmaps vs ResearchRabbit vs Elicit\n\nThese three get compared constantly and they do different jobs. [Elicit](/tools/elicit/) is the screening and extraction workhorse - structured tables of papers with its Basic plan covering broad search and paper chat. [Scite](/tools/scite/) checks citation context - it tells you who contradicts a paper, which Litmaps never does. ResearchRabbit is Litmaps' closest rival for discovery: collections and citation-chain digging versus Litmaps' focused maps and alerts. My split after using all of them: Litmaps for monitoring a defined niche over months, ResearchRabbit for exploratory digging, Elicit for screening, Scite for fact-checking what you cite. The full head-to-head is in our [literature review tools comparison](/articles/best-ai-literature-review-tools-2026-elicit-vs-scite-vs-researchrabbit-vs-litmaps/).\n\n## Who Should Pay for It\n\nPay if you monitor a research niche continuously - grad students, academics between projects, analysts, and anyone selling research-backed content. The annual $120 is trivial against the hours it returns. Do not pay if you need one-off keyword search (Google Scholar is free), systematic-review coverage (that is database work), or reading and extraction (that is [Elicit](/tools/elicit/) and [Scite](/tools/scite/) territory). The free tier's 20 inputs are genuinely enough to find out which camp you are in before spending anything."
+}
