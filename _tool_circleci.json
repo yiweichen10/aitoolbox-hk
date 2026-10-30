@@ -1,0 +1,82 @@
+{
+  "name": "CircleCI",
+  "slug": "circleci",
+  "emoji": "⭕",
+  "color": "#343434",
+  "description": "The hosted CI/CD engine built around one idea: run jobs fast and bill them in credits. Strongest parallel test splitting and macOS M4 Pro runners in the category. The money is in selling pipeline migrations, speed audits and build-cost rescues around it.",
+  "category": "AI Development",
+  "rating": "⭐ 4.5",
+  "visits": "A CI/CD pure-play used by thousands of teams from seed-stage startups to Fortune 500: config-as-code in .circleci/config.yml, reusable orbs, Docker layer caching, and the only mainstream cloud CI with M4 Pro macOS runners on the free tier.",
+  "badge": {
+    "type": "recommend",
+    "text": "RECOMMENDED"
+  },
+  "url": "https://circleci.com/",
+  "price": "Free + Performance from $15/mo",
+  "pricing_details": "Verified from circleci.com/pricing (Oct 2026). Free: $0 - 30,000 credits/mo (about 6,000 build minutes on the small Docker class), 5 active users, 30x concurrency (1x on macOS), all OSes incl. one macOS M4 Pro Medium slot, 2GB storage, 1GB network transfer, Smarter Testing up to 1,000 test atoms/mo, flaky-test detection for 5 tests, community support. Performance: from $15/mo - 30,000 credits included, 5 users included ($15/mo per extra user, each adding 25,000 credits), 80x concurrency (15x macOS), X-large resource classes, 5GB network, Smarter Testing 10,000 test atoms, optional 8x5 support SLA. Scale: annual quote - enterprise controls, SSO, config policies, GPU classes (Tesla P4/T4/V100), 200GB storage, 100,000 test atoms, optional 24/7 SLA. Credit economics: 1 credit = $0.0006 at list price - small Docker runs at 10 credits/min (about $0.006/min), and Performance buys extra credits at $15 per 25,000 block. Prepaid bulk credits: 1M credits for $600, volume discounts from 5M credits for $3,000. Extra meters: Docker layer caching 200 credits per job run (about $0.12), IP ranges 450 credits/GB. Credits do not expire but auto-refill billing (25% of your monthly amount, minimum 25,000) can surprise you on the monthly cycle.",
+  "pros": [
+    "Parallel test splitting is the best in the category - Smarter Testing runs only the tests a change affects, auto-reruns failures, and on a 40-test file suite this routinely cuts a 25-minute pipeline to under 5",
+    "The only mainstream hosted CI that puts a macOS M4 Pro slot on the FREE tier (1x concurrency) - iOS and macOS build teams can validate the platform before spending anything",
+    "Credit meter is honest at the resource-class level: a small Docker job is 10 credits/min (about $0.006/min), comparable to GitHub Actions overage, and self-hosted runners are free on every plan",
+    "Orbs (reusable config packages) plus a public registry mean a 30-job pipeline is mostly imports - new services inherit deploy, test and cache config instead of copy-pasting YAML",
+    "Usage-based pricing scales down as well as up - a 2-week lull costs almost nothing, unlike per-seat contracts where you pay for developers regardless of build volume"
+  ],
+  "cons": [
+    "The credit system is opaque past the headline: resource-class multipliers, DLC at 200 credits/job, and IP ranges at 450 credits/GB mean your invoice depends on YAML details most engineers never read",
+    "Auto-refill billing bites on the monthly cycle - when credits run out the account refills to 25% of your monthly amount (minimum 25,000 credits), so a burst week can trigger charges you did not approve line-by-line",
+    "For Linux-only pipelines under ~30,000 minutes/mo, GitHub Actions Team is typically cheaper by about 2x - CircleCI only wins when macOS, Windows or test parallelism enters the picture",
+    "The Free plan hard-caps at 5 active users, and 'active' means anyone who commits code to a building project - a 6-person team is on Performance whether they like it or not",
+    "Self-hosted runner concurrency is throttled by plan (5 on Free, 20 on Performance), which undermines the 'bring your own compute, bill stops mattering' pitch unless you pay up"
+  ],
+  "faq": [
+    {
+      "question": "Is the CircleCI Free plan actually usable, or a trap?",
+      "answer": "Genuinely usable, with a real ceiling. 30,000 credits a month is about 6,000 build minutes on small Docker containers, you get 30 concurrent jobs, all OS types including one macOS slot, and every premium feature - nothing is feature-locked. The walls are: 5 active users maximum, macOS at 1x concurrency, and only 1,000 Smarter Testing test atoms per month. A 3-5 person startup with a standard test suite runs free for months; a 10-person team or a heavy iOS pipeline hits the walls in week one."
+    },
+    {
+      "question": "CircleCI vs GitHub Actions - which is cheaper for a small team?",
+      "answer": "For Linux-only pipelines, GitHub usually wins: Actions on the Team plan includes 3,000 minutes at $4/user/mo with $0.006/min overage, and at moderate volume that lands roughly half of an equivalent CircleCI credit burn. CircleCI gets cheaper when three things stack: macOS or Windows builds (its macOS rate and M4 Pro runners are more sensible than GitHub's $0.062/min macOS meter), large test matrices where parallel splitting cuts wall-clock time and total minutes, and bursty workloads where usage-based billing beats paying seats every month. Run one month of both on the same pipeline and compare actual bills - that beats every calculator."
+    },
+    {
+      "question": "What burns CircleCI credits faster than teams expect?",
+      "answer": "Four things: Docker layer caching adds a flat 200 credits to every job that uses it (about $0.12 - fine, but it doubles the cost of a 12-credit job); oversized resource classes (an X-large Docker job costs about 4x the small class per minute, and idle steps still bill); IP ranges at 450 credits/GB if you route builds through static IPs; and retry loops - a flaky test that reruns a 20-job matrix three times triples that workflow's bill. Watch the Insights page for per-job credit cost before optimizing speed - the slowest job is often not the expensive one."
+    },
+    {
+      "question": "Can we migrate off Jenkins to CircleCI without stopping releases?",
+      "answer": "Yes, and it is the standard consulting engagement for this tool. Port one service at a time: keep Jenkins as the trigger of record, mirror its build steps into a CircleCI pipeline, run both green for two or three sprints, then flip the branch protection. CircleCI's orbs make pipelines two through thirty much cheaper to write than pipeline one - most shops end up with a shared deploy orb and per-service configs of 40 lines. Budget one to three months of parallel running for a mid-size org with a few dozen Jenkins jobs; the macOS/iOS portion usually migrates fastest because Jenkins macOS nodes are the most painful thing to maintain."
+    }
+  ],
+  "features": [
+    "Usage-based credit billing across every plan, with a transparent resource-class price list from small Docker (10 credits/min) up to GPU classes on Scale",
+    "Smarter Testing: intelligent test selection (run only affected tests), dynamic test splitting across parallel containers, auto-rerun of failed tests, and test analytics",
+    "First-class macOS CI on M4 Pro Medium and Large VMs - 1 concurrent slot even on Free, 15 on Performance",
+    "Docker layer caching (200 credits/job), remote Docker builders, and Arm-native runners for multi-arch images",
+    "Orbs: reusable, versioned config packages from a public registry or private namespaces - deploy, test and cache logic shared across hundreds of pipelines",
+    "Self-hosted runners on any plan (concurrency 5/20/unlimited by tier) - bring your own hardware and the per-minute meter stops",
+    "Flaky test detection and Insights dashboards for per-job duration, credit cost and success rates",
+    "Enterprise layer on Scale: SSO/SAML, config policies, audit logs, IP ranges, GPU resource classes, and 8x5 or 24x7 support SLAs"
+  ],
+  "tags": [
+    {
+      "text": "CI/CD"
+    },
+    {
+      "text": "DevOps"
+    },
+    {
+      "text": "Continuous Integration"
+    },
+    {
+      "text": "Developer Tools"
+    }
+  ],
+  "related": [
+    "github-actions",
+    "gitlab",
+    "github-copilot"
+  ],
+  "platform": "Hosted at app.circleci.com (no self-managed control plane); pipelines defined in .circleci/config.yml in your repo; cloud runners for Linux, Windows, Arm, macOS (M4 Pro) and GPU, or self-hosted runners on your own machines; CLI for local pipeline validation and running jobs; REST and GraphQL APIs; Terraform provider and orbs ecosystem.",
+  "published": true,
+  "created_date": "2026-10-30",
+  "content": "CircleCI is the CI/CD tool that sells compute as the product. GitHub and GitLab sell you a platform and meter your builds as a side effect; CircleCI's whole business is running jobs fast and billing each one in credits. That focus shows up in three places: the strongest parallel test splitting in the category, first-class macOS runners on M4 Pro machines, and a pricing meter that actually goes down when your build volume does.\n\nYou wire it up with a `.circleci/config.yml` file in the repo, jobs run on cloud runners (Linux, Windows, Arm, macOS, even GPUs on the top tier) or on self-hosted machines you own, and reusable config packages called orbs keep a 30-service setup from becoming 30 copies of the same YAML. In 2026 the platform's big push is Smarter Testing: intelligent test selection that runs only the tests a change touches, dynamic splitting across parallel containers, and auto-rerun of failed tests. On a large test suite this is not a rounding error - it routinely turns a 25-minute pipeline into a 5-minute one, which compounds across every commit your team makes.\n\n## Pricing: the real math\n\nThe [Free plan](https://circleci.com/pricing/) is more generous than most: 30,000 credits per month (about 6,000 build minutes on the small Docker class), 5 active users, 30 concurrent jobs, every premium feature unlocked, and - quietly the best part - one macOS M4 Pro slot. No other mainstream hosted CI gives macOS builds away on the free tier.\n\nPerformance starts at $15/mo with 30,000 credits included and 80x concurrency. Extra credits cost $15 per 25,000 block on the monthly cycle, or less on prepaid bulk (1M credits for $600, discounts from 5M). Each additional active user is $15/mo and brings 25,000 credits with them. Scale is quote-only and adds SSO, config policies, GPU classes and 24/7 support.\n\nHere is the arithmetic that matters: one credit is $0.0006 at list price, a small Docker job burns 10 credits per minute, so a build minute on the smallest class costs about $0.006 - the same as GitHub Actions overage. The meter gets steeper from there: Docker layer caching adds a flat 200 credits per job run (about $0.12), X-large containers cost roughly 4x the small class per minute, and macOS time is priced for Apple's licensing reality. Teams that get surprised by their bill almost always trace it to one of those three meters, not the headline rate.\n\n## The money angle: sell the pipelines, not the tool\n\nCircleCI has no affiliate program worth mentioning, so do not build a plan around reselling it. The money is in selling the labor that surrounds it:\n\n- **Pipeline migrations.** Jenkins-to-CircleCI moves (or GitHub Actions to CircleCI for macOS-heavy orgs) bill $2,000-8,000 per project. The macOS portion is the easiest sell - most shops hate maintaining Jenkins macOS nodes more than anything else in their stack.\n- **Build-cost rescues.** A CI audit that finds 40% credit waste (oversized resource classes, retry loops, cache misses) pays for itself in months. Bill $1,000-3,000 for the audit, then take a slice of the savings via a short optimization retainer.\n- **DevOps retainers.** $1,500-5,000/mo per client to own the pipeline, on-call and release engineering. The free tier makes the tool cost zero, so your quote is nearly all margin.\n- **Flaky-test remediation.** Smarter Testing plus a week of fixing genuinely flaky tests is a crisp, scoped project - $1,500-4,000 - with measurable before/after numbers.\n\nThe pattern is the same as with the other CI tools: free or cheap tool, expensive expertise. [Our CI/CD comparison](/articles/best-cicd-tools-2026-github-actions-vs-gitlab-vs-circleci-vs-jenkins/) has the full four-way breakdown.\n\n## Where it falls short\n\nThe credit system is honest at the rate-card level and opaque in practice. Resource-class multipliers, DLC charges and IP-range fees mean your invoice depends on YAML details most engineers never read. The auto-refill mechanism - when credits run out on the monthly cycle, the account tops up to 25% of your monthly amount, minimum 25,000 - can trigger charges nobody approved line-by-line; set a hard cap or move to prepaid if budget control matters.\n\nThe free tier's 5-user cap is stricter than it looks. \"Active user\" means anyone who commits code to a project that builds on CircleCI, so a 6-person team is pushed to Performance in week one. Self-hosted runner concurrency is throttled by plan (5 on Free, 20 on Performance), which undercuts the bring-your-own-hardware pitch unless you pay.\n\nAnd the honest ledger for small teams: if your pipelines are Linux-only and under about 30,000 minutes a month, [GitHub Actions](/tools/github-actions/) on Team is typically about half the cost of an equivalent CircleCI setup, and your config lives next to your code with no second vendor. Pick CircleCI for what it is best at - speed, parallelism, macOS - not as a default.\n\n## Who should pick it\n\niOS/macOS-heavy teams, large test matrices, and speed-critical pipelines where every minute of CI delay taxes a big engineering org. Also a strong pick for bursty workloads: usage-based billing means a two-week lull costs almost nothing, where per-seat contracts keep billing regardless. If you are a consultant, it is a fine tool to standardize on - cheap or free for clients to run, and the migration and optimization work around it is where your invoice lives. Teams that want repos, CI and security scanning from one vendor should look at [GitLab](/tools/gitlab/) instead.\n\n## FAQ\n\n### Is the CircleCI Free plan actually usable, or a trap?\n\nGenuinely usable, with a real ceiling. 30,000 credits a month is about 6,000 build minutes on small Docker containers, you get 30 concurrent jobs, all OS types including one macOS slot, and every premium feature - nothing is feature-locked. The walls are 5 active users, macOS at 1x concurrency, and only 1,000 Smarter Testing test atoms per month. A 3-5 person startup with a standard suite runs free for months; a 10-person team hits the user wall in week one.\n\n### What burns credits faster than teams expect?\n\nFour things: Docker layer caching at a flat 200 credits per job, oversized resource classes (idle steps on an X-large container bill at 4x the small rate), IP ranges at 450 credits/GB, and retry loops - a flaky test that reruns a 20-job matrix three times triples that workflow's cost. Check the Insights page for per-job credit cost before optimizing speed; the slowest job is often not the expensive one.\n"
+}
