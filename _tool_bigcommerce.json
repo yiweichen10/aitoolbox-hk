@@ -1,0 +1,82 @@
+{
+  "name": "BigCommerce",
+  "slug": "bigcommerce",
+  "emoji": "🛒",
+  "color": "#121118",
+  "description": "Open SaaS storefront platform built for merchants who outgrow the app-tax model: B2B price lists, customer groups and multi-currency ship natively, and the API layer stays open. The money is in building and migrating stores for clients, not reselling the platform.",
+  "category": "AI E-commerce",
+  "rating": "⭐ 4.2",
+  "visits": "Texas-based commerce platform (NASDAQ: BIGC) used by mid-market brands and B2B sellers in 150+ countries: open SaaS architecture, headless-ready APIs, native B2B editions, and a best-of-breed integration model instead of an all-native app suite.",
+  "badge": {
+    "type": "recommend",
+    "text": "RECOMMENDED"
+  },
+  "url": "https://www.bigcommerce.com/",
+  "price": "From $29/mo · Scale $299/mo",
+  "pricing_details": "Verified from bigcommerce.com/essentials/pricing (Nov 2026). Plans are gated by trailing-12-month GMV. Core: $29/mo annual ($39 month-to-month) - up to $30,000 TTM GMV, and the plan auto-upgrades to Growth once you cross that line. Growth: $79/mo annual ($105 monthly) - for stores scaling toward $100K annual sales. Scale: $299/mo annual ($399 monthly) - monthly GMV cap of $33,333; exceeding it bills a 0.9% overage fee instead of cutting you off. Performance: custom contract, starting around $1,499/mo annual, aimed at $1M+ GMV merchants. Payments: zero platform transaction fees on roughly 20 embedded providers (BigCommerce Payments, Stripe, PayPal, Adyen); using a gateway outside that list triggers an Open Payment Provider Fee of 2.0% on Core, 1.0% on Growth, 0.6% on Scale, waived on Performance. Free trial available, no credit card required.",
+  "pros": [
+    "No app tax: B2B price lists, customer groups, quote requests, purchase orders, multi-currency and multi-storefront ship natively - on Shopify that feature list is three to five paid apps at $30-200/mo each",
+    "Best-of-breed without lock-in: open APIs and headless-ready architecture let you run Google AI search, Bloomreach personalization and Gorgias support chat, and swap any of them later without a replatform",
+    "Zero platform transaction fees on the ~20 embedded payment providers, which at 2.9% margins means the platform never skims your checkout",
+    "Scale's GMV ceiling bills a 0.9% overage instead of forcing an upgrade or shutting checkout - the sanest overage model in the category",
+    "B2B is genuinely first-class, not an afterthought: per-customer pricing, saved carts, quote-to-order workflows and role-based buyer permissions work out of the box"
+  ],
+  "cons": [
+    "Native AI trails Shopify Magic badly: product descriptions, recommendations and email campaigns come from third-party apps, and those apps keep data in silos - no unified customer profile across search, personalization and support",
+    "The Core plan auto-upgrades to Growth at $30K TTM GMV whether you budgeted for it or not - a store doing well in December finds out in the January invoice",
+    "The third-party gateway fee (2.0% on Core) is a quiet regression from the old 'no transaction fees, ever' pitch - merchants with existing processor contracts pay double for loyalty",
+    "App and theme ecosystem is a fraction of Shopify's - niche integrations (loyalty, subscriptions, 3PL connectors) often need custom API work a Shopify merchant would never face",
+    "The gap between Scale ($299/mo) and Performance (~$1,499/mo annual) is a pricing cliff - a fast-growing $5M brand has no comfortable middle step"
+  ],
+  "faq": [
+    {
+      "question": "Is BigCommerce actually cheaper than Shopify?",
+      "answer": "The sticker prices are identical ($29 / $79 / $299), so the real comparison is total cost of ownership. Under roughly $500K GMV, Shopify usually wins: Magic AI is included and the app store fills gaps cheaply. Past $1M GMV, BigCommerce often wins on cost because its native feature set replaces paid apps - a B2B merchant on Shopify routinely stacks $300-800/mo in apps (price lists, quotes, wholesale gating) that BigCommerce ships free on the same tier. Run your own app invoice against BigCommerce's native list before deciding; the answer flips around the point where your app spend passes $150/mo."
+    },
+    {
+      "question": "What happens when my store crosses the plan's GMV limit?",
+      "answer": "On Core, nothing you will enjoy: the plan auto-upgrades to Growth and your bill jumps from $29 to $79/mo annual. On Scale, the monthly GMV cap ($33,333) works differently - overage is billed at 0.9% of the excess rather than cutting off checkout, which is fair but adds up: a month at $50K GMV means about $150 in overage fees. BigCommerce judges by trailing-12-month GMV, so a single viral quarter can trigger an upgrade that sticks for a year. Budget for it or negotiate it into an annual contract."
+    },
+    {
+      "question": "Can I make money with BigCommerce without running my own store?",
+      "answer": "Yes, and services pay better than referrals. The proven lanes: store builds for clients at $2,000-8,000 per launch, B2B catalog setups (price lists, customer groups, quote workflows) at $1,500-5,000, and Shopify-to-BigCommerce migrations for merchants hit by app costs or gateway fees at $3,000-10,000. BigCommerce runs an agency partner program with lead referrals, plus an affiliate program for content publishers - historical payouts have been generous (around 200% of the first payment), but verify current terms on partners.bigcommerce.com before building a content plan around it."
+    },
+    {
+      "question": "BigCommerce or Shopify for a B2B/wholesale store in 2026?",
+      "answer": "BigCommerce, most of the time. Native per-customer pricing, quote management, purchase orders, buyer role permissions and price lists cover maybe 80% of what a wholesale operation needs on day one. Shopify Plus can match it, but through Shopify Plus's B2B module plus apps, which means Plus pricing (from ~$2,000/mo) on top of app spend. The exception: if your B2B arm is small and your DTC operation is the main business, Shopify's AI features and ecosystem depth are the better center of gravity. Choose by which side of the business is growing."
+    }
+  ],
+  "features": [
+    "Open SaaS storefront platform: hosted core with full REST/GraphQL API access, headless and hybrid storefront support, no revenue share taken from your checkout",
+    "Native B2B suite: customer groups, per-customer/company price lists, quote requests (RFQ), purchase orders, saved shared carts, and role-based buyer permissions",
+    "Multi-storefront: run multiple brands, regions or B2B/DTC splits from one catalog and one subscription on Growth and above",
+    "Best-of-breed AI stack: free Google AI-powered search integration, Bloomreach or Nosto personalization, Gorgias chatbots - swap providers without replatforming",
+    "Embedded payments with zero platform fees across ~20 providers including BigCommerce Payments, Stripe, PayPal and Adyen",
+    "Checkout customization (Checkout SDK and open checkout APIs) that most hosted platforms reserve for enterprise tiers",
+    "24/7 chat and email support on all self-serve plans, with dedicated CSM and TAM on Performance",
+    "Marketplace of 1,000+ apps and integrations plus a developer certification path for agencies"
+  ],
+  "tags": [
+    {
+      "text": "Ecommerce Platform"
+    },
+    {
+      "text": "B2B Ecommerce"
+    },
+    {
+      "text": "Online Store Builder"
+    },
+    {
+      "text": "Headless Commerce"
+    }
+  ],
+  "related": [
+    "shopify",
+    "klaviyo",
+    "wix-ai"
+  ],
+  "platform": "Hosted SaaS at bigcommerce.com with store management in the web admin; storefronts on BigCommerce themes, headless builds (Next.js, Laravel, any stack via GraphQL/REST APIs), or connected marketplaces and social channels; apps via the BigCommerce marketplace; CLI and SDKs for developers; staging environments and sandbox stores free for partners.",
+  "published": true,
+  "created_date": "2026-11-01",
+  "content": "BigCommerce is the platform merchants graduate to when the app invoices start outgrowing the subscription. Where Shopify's answer to almost every gap is another paid app, BigCommerce ships the unglamorous machinery natively: B2B price lists, customer groups, quote requests, purchase orders, multi-currency, multi-storefront. That's the whole pitch, and after a decade of watching merchants rebalance these platforms, it's a pitch that holds up - for the right merchant.\n\nThe 2026 positioning is \"open SaaS\": hosted core, open APIs, and a best-of-breed AI stack instead of a native suite. Search runs on Google's AI-powered integration (free), personalization comes from Bloomreach or Nosto, support chat from Gorgias. Compare that with [Shopify](/tools/shopify/), where Magic AI handles descriptions and campaigns natively but locks you into Shopify's gravity. The trade is honest: BigCommerce gives you freedom and lower total cost at scale; Shopify gives you polish and a unified AI layer today.\n\n## Pricing: the real math\n\nThe [current plans](https://www.bigcommerce.com/essentials/pricing/) are Core $29/mo annual ($39 monthly), Growth $79/mo ($105 monthly), Scale $299/mo ($399 monthly), and Performance on a custom contract starting around $1,499/mo annual. The catch that isn't on the pricing card: plans are gated by trailing-12-month GMV. Core caps at $30,000 and auto-upgrades to Growth when you cross it - a good problem, but a surprise line item. Scale caps monthly GMV at $33,333 and bills 0.9% on the excess rather than cutting checkout, which is the most civilized overage policy in the category.\n\nThe other quiet change: BigCommerce no longer waives everything. Embedded payment providers (BigCommerce Payments, Stripe, PayPal, Adyen - about 20 in total) carry zero platform fees. But run a gateway outside that list - say your existing processor contract - and you pay an Open Payment Provider Fee: 2.0% on Core, 1.0% on Growth, 0.6% on Scale. Merchants on legacy \"no fees ever\" marketing feel this one. Read the payment page before migrating, not after.\n\n## Where it actually wins: B2B\n\nAsk agencies which platform they dread less for wholesale clients and the answer is consistently BigCommerce. Per-company price lists, quote-to-order workflows, purchase orders, buyer role permissions and saved shared carts are native on plans that cost $79/mo. On Shopify the same capability stack means Shopify Plus (from roughly $2,000/mo) plus apps. For a merchant whose business is halfway between retail and wholesale, that difference pays for a bookkeeper.\n\n## How people actually make money with it\n\nNobody gets rich reselling BigCommerce subscriptions - the money is in the labor around it. The lanes that work: full store builds at $2,000-8,000 per launch; B2B catalog and pricing setup at $1,500-5,000 per engagement; Shopify-to-BigCommerce migrations for merchants tired of app spend or gateway fees at $3,000-10,000 including data migration and SEO redirect mapping; and ongoing management retainers at $500-1,500/mo per client. An agency with four retainer clients covers its own BigCommerce and tooling costs several times over.\n\nThere's also a partner and affiliate program (agency partners get lead referrals; content publishers have historically earned around 200% of the first payment per referral) - check current terms at partners.bigcommerce.com before building a strategy on it. The dependable income is services; the affiliate check is dessert.\n\n## The honest downsides\n\nNative AI is the sore spot. Product description generation, recommendations and campaign tools arrive through third-party apps, and those apps don't share a customer profile - the shopper who abandoned a cart and then chatted support about sizing gets recommendations from one signal, not both. Shopify Magic's unified layer is genuinely ahead here, and if AI-native operations are your core strategy, that gap matters more than the app savings.\n\nThe ecosystem is the second sore spot. Shopify's app store has a niche integration for nearly everything; BigCommerce's marketplace is a fraction of the size, and edge cases (subscriptions with unusual billing, obscure 3PL connectors, loyalty programs with weird rules) often end up as custom API work. Budget for that when comparing platforms - a $150/mo app difference can evaporate into a $5,000 custom integration.\n\nAnd the plan ladder has a cliff: Scale at $299/mo, Performance at around $1,499/mo annual. A $3-5M brand has no comfortable middle step, which pushes fast growers toward negotiated annual contracts earlier than they'd like.\n\n## Verdict\n\nFor B2B and wholesale sellers, merchants stacking more than $150/mo in Shopify apps, and teams that want the freedom to swap AI providers without a replatform, BigCommerce is the sharper choice in 2026. For a solo founder shipping their first DTC brand who wants AI polish out of the box, [Shopify](/tools/shopify/) is still the default. Pair either with a serious retention stack - [Klaviyo](/tools/klaviyo/) on both platforms - and the platform decision matters less than the data hygiene behind it. For the full four-way comparison with Salesforce and Wix, see our [AI ecommerce tools breakdown](/articles/best-ai-ecommerce-tools-2026-shopify-magic-vs-salesforce-vs-bigcommerce-vs-wix/).\n\n### Does BigCommerce charge transaction fees?\n\nNot on the ~20 embedded payment providers, including BigCommerce Payments, Stripe, PayPal and Adyen. Third-party gateways outside that list trigger a 2.0% fee on Core, 1.0% on Growth, 0.6% on Scale, and nothing on Performance. If you're locked into an existing processor, do the math before choosing a plan tier.\n\n### Is BigCommerce worth it for a small store just starting out?\n\nHonestly, only sometimes. At $0-30K annual GMV, Core at $29/mo is competitive and the native feature floor is higher than Shopify Basic's. But if your plan is AI-heavy DTC with influencer traffic, Shopify's ecosystem and Magic features will save you more time than BigCommerce saves you money. BigCommerce starts pulling ahead when B2B enters the picture, when GMV passes roughly $500K, or when your Shopify app invoice crosses $150/mo. Pick by where you'll be in 18 months, not where you are today."
+}
