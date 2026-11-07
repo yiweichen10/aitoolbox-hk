@@ -18158,5 +18158,70 @@
         "text": "Free Hosting"
       }
     ]
+  },
+  {
+    "name": "Contra",
+    "slug": "contra",
+    "url": "https://contra.com",
+    "category": "AI Income",
+    "price": "Free · 0% commission",
+    "pricing_details": "0% commission on all freelance earnings - Contra never takes a percentage of services, retainers, hourly work, or digital products. Free plan: clients pay a platform fee of $15 per payment under $500 and $29 per payment of $500+; digital product sales carry a capped 5% fee (min $3, max $29); faster payouts cost 2%; crypto (USDC) payouts 2%. Contra Pro: $29/month or $199/year - removes client payment fees and digital product fees, makes faster payouts free, drops crypto to 1%, and adds boosted Discover visibility, unlimited job applications, and priority support. Payment processing is charged by the processor, not Contra (cards 2.9% + 30 cents domestic, ACH 0.8% capped at $5, SEPA 0.5% + 30 cents capped at $6), and processor fees at withdrawal vary by payout country. Funds are always held in USD; non-USD accounts pay a conversion fee. Minimum payout $1. Payout rails: bank (4-7 business days standard), PayPal/Payoneer (~4 days standard, ~30 minutes with faster payout), US debit cards, or instant USDC.",
+    "description": "Contra is the freelance platform that takes 0% of what you earn - no commission on services, no cut of digital products, with contracts and escrow built in. The catch lives on the client's side: a flat $15/$29 payment fee on the free plan that Pro ($29/mo) removes. For AI service sellers it is the cheapest place to bill automation builds, chatbot setups, and content operations - and the natural landing spot for clients you met on Fiverr or Upwork, so a marketplace stops taking 20% of every invoice.",
+    "content": "Contra built its whole business on the number every other freelance platform hides: 0%. Fiverr takes 20% of everything you earn, Upwork's contracts float near 10%, and Contra takes none of it. If you sell AI-powered services - automations, chatbots, content operations, design - that difference is real money. On $50,000 of annual billings, Fiverr's cut is $10,000. Contra's is zero.\n\n## What Contra Actually Is (From a Freelancer's Side)\n\nContra is a freelance platform where your profile, portfolio, contracts, and payments all live in one place. The published scale: 1.5M+ independents, 50K+ client teams, and $250M+ in projects run through it. Clients are vetted, and they browse the Discover feed filtered by the tools you list - Figma, Framer, Midjourney, and the rest of an AI stack all count as searchable skills. A free feature called Portfolio Magic generates a presentable portfolio site from your profile in minutes, which matters when you have work to show but no website.\n\nThe business model is the honest part. Instead of taxing your invoices, Contra charges clients a flat fee per payment - $15 on payments under $500, $29 on payments of $500 or more - plus $199 job-post boosts, and it sells you a Pro subscription. So \"commission-free\" is accurate, but it is not the same as \"fee-free.\" The fee just lands on the other side of the table, and you should understand that before your client does.\n\n## The Money Angle: Sell Big, Keep 100%\n\nThe cost structure rewards large invoices and quietly punishes small ones. That flat $29 client fee is 0.58% of a $5,000 project and 5.8% of a $500 one. So the play is to productize high-value outcomes, not hours:\n\n- **AI automation builds** - wiring Make, Zapier, or n8n into a client's sales and support stack. Builds commonly land $1,500-8,000, and maintenance retainers follow.\n- **Chatbot and agent setup** - bots trained on the client's own docs. Small builds start near $500; deeper integrations go well past it.\n- **AI content operations** - running, editing, and fact-checking AI drafts at editorial quality, $30-80/hr for people who can catch the errors.\n- **Design at AI speed** - brand packages where Midjourney and Figma do the first 70% and you own the last 30% that clients actually pay for.\n- **Digital products** - templates and prompt packs sold from your profile. The free plan fee is capped: 5%, minimum $3, maximum $29 per sale. Zero on Pro.\n\nThe line that closes deals: \"Book me through Contra - contracts and escrow included, and no marketplace skims 20% off your invoice.\" Clients see their own fee line, do the math, and usually agree.\n\n## What It Really Costs\n\n| Cost | Who pays | What it is |\n|---|---|---|\n| Client payment fee | Client | $15 per payment under $500, $29 per payment of $500+ (free plan); $0 on Pro |\n| Digital product fee | You | Capped 5% (min $3, max $29) on the free plan; $0 on Pro |\n| Card processing | Client | 2.9% + 30 cents domestic cards; +1.5% international; ACH 0.8% capped at $5 |\n| Payout processing | You | Payment-processor fees at withdrawal, vary by country and currency |\n| Faster payouts | You | 2% on the free plan; free on Pro |\n| Crypto (USDC) payout | You | 2% on free, 1% on Pro; arrives instantly |\n| Contra Pro | You | $29/month or $199/year |\n\nDo the Pro math before you flinch at it. Pro erases the client payment fees: at $29 a payment over $500, seven of those a year already exceed the $199 annual plan. Add the zeroed digital product fees, free faster payouts, and boosted visibility, and Pro is a rounding error for anyone billing a few thousand a month. Two more details worth knowing: your minimum payout is $1, and funds are always held in USD - non-US freelancers pay a conversion spread at withdrawal, which quietly costs more than any Contra fee.\n\n## Contra vs The Field\n\nThe number that matters is the total cost of one $1,000 transaction - because on every platform, someone always pays:\n\n| Platform | Freelancer pays | Client pays | Real cost on $1,000 |\n|---|---|---|---|\n| Contra (free plan) | 0% | $29 flat | ~2.8% |\n| Upwork | ~10% + Connects | up to ~8% | ~14-18% |\n| Fiverr | 20% flat | 5.5% | ~24% |\n| Direct / own site | 0% | 0% | 0%, but you do all the finding |\n\nContra also ships the boring infrastructure freelancers usually pay for: built-in contracts with escrow, invoicing, and a 14-day review window on disputes. One practical note from experience - once a payment is released or withdrawn, it is yours and not refundable through Contra, which is exactly why you should ask for an upfront milestone on any new client.\n\n## Bottom Line\n\nContra is the cheapest place to bill real money once the client exists, and one of the worst places to go fishing for one. Discovery is thin, the client pool skews design and marketing, and the free plan's client-side fees mean you either talk the fee through upfront or upgrade to Pro at scale. The best shape for most AI freelancers is a two-track setup: hunt on Upwork and Fiverr where demand is thick, publish your best work on Contra, then move every good client onto it. That migration - taking a $2,000 client from 20% off the top to 0% - is the actual money angle, and it compounds every month the client stays.\n",
+    "pros": [
+      "0% commission is real and total - no percentage of services, retainers, or digital products, which on $50k of annual billings is $10,000 that Fiverr would take and Contra does not",
+      "Contracts with escrow, invoicing, and a serviceable AI-generated portfolio page all come free, so the platform can replace a paid proposal-and-invoicing stack on day one",
+      "The cost model rewards bigger invoices instead of taxing growth: the flat $29 client fee on a $5,000 project is 0.58% effective, versus 20% forever on marketplaces"
+    ],
+    "cons": [
+      "The free plan is only free for you - your client eats $15/$29 per payment, which is 5% of a $300 invoice and shows up as a line item they did not budget for, so frequent small billing practically forces Pro at $29/mo",
+      "Discovery is thin: the client pool skews design and marketing, the jobs feed is limited until Pro, and most freelancers report bringing their own traffic through their contra.com link rather than getting found",
+      "Money moves slowly on the free plan - standard bank payouts sit behind several business days of clearance and processor timelines, faster payouts cost 2%, and funds are held in USD so non-US freelancers pay conversion at withdrawal"
+    ],
+    "faq": [
+      {
+        "question": "Is Contra actually free, or is the 0% commission a trick?",
+        "answer": "The 0% is real: Contra never takes a percentage of your earnings. But someone always pays. On the free plan your client is charged $15 per payment under $500 and $29 per payment of $500 or more, you pay a capped 5% (min $3, max $29) on digital product sales, and the payment processor takes its own cut at withdrawal. Contra's revenue comes from those client fees, $199 job-post boosts for clients, and Pro subscriptions. Net effect on a $1,000 order: roughly 2.8% of the transaction, versus around 14-18% on Upwork and about 24% on Fiverr."
+      },
+      {
+        "question": "Can a beginner find work on Contra, or do I need an audience first?",
+        "answer": "Go in with honest expectations. Contra is portfolio-first and its clients are vetted, which raises both the floor and the bar: nobody hires a blank profile, and Discover favors finished work. Freelancers with existing portfolios or a social following do well; total beginners mostly report it as slow. The practical play is two-track: keep bidding on Upwork and Fiverr where demand is thick, publish your best work on Contra, and move every good client onto it. Your first Contra dollar usually comes from a client you found somewhere else."
+      },
+      {
+        "question": "When is Contra Pro worth the $29 a month?",
+        "answer": "Do the payment math rather than guessing. Pro removes the client payment fees: at $29 a payment over $500, seven of those a year already exceed the $199 annual plan, and about fourteen smaller payments hit the same break-even. The extras tip it further - digital product fees drop to zero, faster payouts stop costing 2%, crypto payouts drop to 1%, and you get boosted visibility plus unlimited job applications. If you bill a few thousand a month through Contra, Pro pays for itself. If you run one small project a year, stay on free and warn your client about the fee before they invoice-shock."
+      }
+    ],
+    "published": true,
+    "color": "#111111",
+    "emoji": "🤝",
+    "rating": "⭐ 4.3",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "platform": "Web, iOS, Android",
+    "features": [
+      "0% commission on all freelance earnings - services, retainers, hourly work, and digital products",
+      "Built-in contracts with escrow, invoicing, and a 14-day dispute review window - no external tools needed",
+      "Client-side platform fees instead of seller commission: $15/$29 per payment on the free plan, $0 on Pro",
+      "Portfolio Magic: a free AI-generated portfolio site built from your profile in minutes",
+      "Clients filter talent by tools they use - Figma, Framer, Midjourney, and other AI-stack tools count",
+      "Payouts via bank, PayPal, Payoneer, US debit card, or instant USDC crypto from a $1 minimum"
+    ],
+    "tags": [
+      {
+        "text": "0% Commission"
+      },
+      {
+        "text": "Freelance Services"
+      },
+      {
+        "text": "Sell AI Services"
+      },
+      {
+        "text": "Escrow Included"
+      }
+    ]
   }
 ]
