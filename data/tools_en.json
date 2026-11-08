@@ -18223,5 +18223,70 @@
         "text": "Escrow Included"
       }
     ]
+  },
+  {
+    "name": "Google AdSense",
+    "slug": "google-adsense",
+    "url": "https://adsense.google.com",
+    "category": "AI Income",
+    "price": "Free to join · keep ~68%",
+    "pricing_details": "Free to join with no traffic minimum. Publishers receive 80% of revenue after the advertiser-side platform fee - about 68% effective when ads are bought through Google Ads, less on other ad products (AdSense for Search has historically paid 51%). Since 2024 earnings accrue per impression rather than per click. Payout threshold $100 (EUR 70, GBP 60, CAD 100; $10 lets you pick a payment method), paid monthly between the 21st and 26th of the following month via EFT, SEPA, wire, or check. EEA, UK, and Switzerland traffic requires a Google-certified consent management platform before ads serve. Accounts suspended for invalid traffic can lose accumulated earnings; closed accounts get a single appeal with reported success under 10%, and the terms bar opening a new account afterward.",
+    "description": "Google's publisher ad network: paste one snippet, its auction fills your pages, and you keep about 68% of what advertisers pay on Google Ads demand, accrued per impression. The lowest-effort way to make raw AI-content traffic pay without selling anything - and the lowest-paying tier of the ad ladder, on an account Google can close near-permanently over traffic you never faked.",
+    "content": "AdSense is the first monetization almost every content site tries, and the one most publishers eventually outgrow. You paste one code snippet, Google's auction fills the ad slots, and you keep about 68% of what advertisers spend through Google Ads - accrued per impression, paid monthly, only after your balance passes $100. For AI-built content sites it is still the only realistic way to make raw traffic pay without selling anything, signing clients, or shipping a product. It is also the lowest-paying rung of the ad ladder and the account most likely to be taken away from you over traffic you did not fake. Both halves of that sentence belong in the decision.\n\n## What AdSense Actually Is\n\nAdSense is Google's programmatic network for publishers, running on a couple of million active sites. Advertisers bid in real time for space on your pages; Google matches ads to page content with contextual targeting that no longer needs third-party cookies, which is why it works on brand-new sites with zero audience data. Since 2024 the program pays per impression rather than per click, so the number that matters is RPM - revenue per thousand page views.\n\nThe revenue split changed with it. Publishers now receive 80% of revenue after the advertiser platform's fee, which works out to roughly 68% on Google Ads demand; other ad products pay less - AdSense for Search has historically paid 51%. Auto Ads uses machine learning to place formats, including the high-viewability anchor and vignette units on mobile. One operational detail that surprises new publishers: any traffic from the EEA, UK, or Switzerland requires a Google-certified consent banner before ads serve to those visitors. Skip the CMP and a chunk of your impressions simply earn nothing.\n\n## The Money Angle: Rent Out the Traffic That Never Buys\n\nEvery content site has two kinds of traffic. The first arrives on pages where people buy things - reviews, comparisons, tool recommendations - and affiliate links (Amazon Associates and its kind) out-earn ads there by a mile. The second lands on glossary posts, definitions, templates, and calculators, reads, and leaves without touching a single affiliate link. AdSense exists for exactly that second kind: it converts exit traffic into pennies that add up.\n\nThe math, honestly stated:\n\n- **Typical RPMs run $1-5** on general content, and $3-15 on finance, SaaS, legal, and marketing topics with US-heavy traffic, because advertisers bid more for those readers. A site doing 50,000 monthly pageviews earns $200 a month at a $4 RPM - or $500-750 in a high-bid niche on the same traffic.\n- **Niche choice outweighs traffic volume.** Publishers consistently report that \"make money online\" content - the niche most AI site builders default to - pays badly, because its advertisers are mostly broke. Dull B2B topics pay multiples more per view.\n- **AI is the speed tool, not the strategy.** The version of this play that works is AI drafts at volume plus human editing, first-hand experience, and a named author. The version that dies fills the next section.\n\n## What It Really Costs\n\n| Cost item | What it takes |\n|---|---|\n| Revenue share | You keep 80% after platform fees - about 68% effective on Google Ads demand, less on other ad products |\n| Payout threshold | $100 (EUR 70, GBP 60); at a $2 RPM and 15,000 monthly pageviews, the first payout takes roughly three and a half months to become eligible |\n| Payment timing | Monthly, between the 21st and 26th of the following month - effectively net 30-60 on earnings |\n| Consent infrastructure | A certified CMP banner is required for EEA/UK/Swiss visitors, or their impressions go unserved |\n| Invalid traffic exposure | Self-clicks, helpful relatives, and cheap paid traffic can suspend the account; closed accounts forfeit earnings and get one appeal that succeeds under 10% of the time |\n| Opportunity cost | No header bidding, no account manager; publishers report the same inventory pays 2-4x on premium networks |\n\n## The AI Content Reality\n\nGoogle does not ban AI content - it bans scaled content abuse. Its spam policies name mass-producing thin, unedited pages at scale, and enforcement from the March 2024 policy through the August 2026 spam update keeps tightening the screw on exactly the workflow most beginners attempt: generate fifty near-identical posts a week, publish unchecked, switch ads on.\n\nWhat survives review is boring and specific: AI for the outline and first draft, a human who knows the topic editing every page, facts checked against sources, real screenshots or numbers a generic draft could not contain, and a named author on an about page that exists. That is also, not coincidentally, the content that ranks and pulls the higher RPMs.\n\nThe same severity applies to your account. Never click your own ads, tell family and friends that clicking them helps nothing, audit any paid traffic before it touches ad pages, and keep ad units away from navigation buttons. Google links accounts by name, address, tax details, and payment info - a closed account is close to permanent, and fresh starts on new domains get detected.\n\n## AdSense vs The Field\n\n| Network | Join threshold | Publisher share | Reported RPM (US-heavy) |\n|---|---|---|---|\n| Google AdSense | None | ~68% effective | $1-5 ($3-15 finance/SaaS) |\n| Ezoic | None (1,000+ visits recommended) | ~90% on the free tier | Site-dependent; header bidding beats AdSense alone on most inventories |\n| Mediavine | 50,000 sessions/mo | 75% | $15-30+ reported |\n| Raptive | 100,000 pageviews/mo | 80% | $20-40+ reported |\n\nThe ladder is the whole game. AdSense validates that your site can earn; the premium networks monetize the same traffic several times harder once you qualify. Staying on AdSense past roughly 10,000 monthly sessions leaves most of the money on the table.\n\n## Bottom Line\n\nTurn AdSense on the week your site gets real search traffic, expect small numbers at first, and protect the account like a business license - because that is effectively what it is. Collect it as the baseline layer on informational pages while affiliate links and products do the heavy lifting on commercial ones. Then treat Ezoic, Mediavine, and Raptive as the actual destination: same traffic, several times the revenue. And if the plan was to mass-produce AI articles and switch ads on - that plan now has a name in Google's spam policies, and it is a violation, not a loophole.",
+    "pros": [
+      "Zero barrier to entry - no traffic minimum, free to join, one code snippet and Auto Ads handles placement; the only monetization a brand-new site can switch on in its first month",
+      "Google pays reliably - monthly EFT on a fixed schedule with clean reporting tied into Analytics and Search Console, backed by two decades of on-time payments at scale",
+      "Real baseline revenue from non-buying traffic - informational pages that affiliate links never convert still earn per impression, which funds hosting and tools while the site matures"
+    ],
+    "cons": [
+      "Lowest ceiling in the industry - no header bidding and one main demand source; publishers report the same inventory pays 2-4x on Ezoic and multiples beyond that at Mediavine or Raptive, so staying past ~10k monthly sessions costs real money",
+      "The ban hammer is arbitrary and near-permanent - invalid traffic flags from self-clicks, helpful relatives, or cheap paid traffic suspend accounts on pattern detection alone, closure appeals succeed under 10% of the time, Google links new accounts to old bans by identity, and clawed-back earnings stay gone",
+      "$100 threshold plus monthly cycles means small sites wait months - at a typical $1-4 RPM a 10k-pageview site earns $10-40 a month and waits five or more months for a first payout that then ships weeks after crossing the line"
+    ],
+    "faq": [
+      {
+        "question": "How much does AdSense actually pay per 1,000 page views?",
+        "answer": "Expect $1-5 RPM on general content and $3-15 on finance, SaaS, legal, or marketing topics with US-heavy traffic, since advertisers bid more for those readers. Geography moves the number as much as niche - a US visitor is often worth several times a visitor from low-ad-rate regions. Worked example: 50,000 monthly pageviews at a $4 RPM is $200; the same traffic at $12 is $600. Your own dashboard after a few weeks of real traffic is the only benchmark worth trusting - published averages are noise until your traffic mix is known."
+      },
+      {
+        "question": "Will Google approve a site built with AI content?",
+        "answer": "Usually, if the finished pages are good - AdSense judges the page, not the drafting tool. What gets sites rejected or later demonetized is scaled content abuse: dozens of thin, near-identical, unreviewed posts generated at once. The pattern that passes: AI drafts the outline and first draft, a human who knows the subject edits and fact-checks, the page adds something a generic answer lacks - real experience, original screenshots, actual numbers - and a named author stands behind the site. Bulk-publishing raw model output is the one version of this that keeps failing."
+      },
+      {
+        "question": "Why hasn't AdSense paid me yet?",
+        "answer": "Two gates sit between you and the money. The balance must cross $100 - it rolls over month to month below that - and payment then lands between the 21st and 26th of the following month. At a small-site $2 RPM on 10,000 monthly pageviews you earn about $20 a month, so the first payout arrives around month five. The $10 mark only lets you choose a payment method, not cash out, and unpaid tax information freezes payments that would otherwise run on schedule."
+      }
+    ],
+    "published": true,
+    "color": "#4285F4",
+    "emoji": "📊",
+    "rating": "⭐ 3.8",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "platform": "Web",
+    "features": [
+      "No traffic minimum and free to join - one code snippet on a brand-new site can start earning in its first month",
+      "80% of ad revenue after platform fees - about 68% effective on Google Ads demand, accrued per impression since 2024",
+      "Auto Ads machine-learning placement with anchor and vignette mobile formats plus manual units",
+      "Monthly payments from a $100 threshold by EFT, SEPA, wire, or check, landing between the 21st and 26th",
+      "Contextual targeting that works without third-party cookies, matching ads to page topics",
+      "The on-ramp to the premium ladder: Ezoic takes any size, Mediavine starts at 50k sessions, Raptive at 100k pageviews"
+    ],
+    "tags": [
+      {
+        "text": "Display Ads"
+      },
+      {
+        "text": "Blog Monetization"
+      },
+      {
+        "text": "Passive Income"
+      },
+      {
+        "text": "Content Sites"
+      }
+    ]
   }
 ]
