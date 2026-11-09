@@ -18288,5 +18288,67 @@
         "text": "Content Sites"
       }
     ]
+  },
+  {
+    "name": "ClickBank",
+    "slug": "clickbank",
+    "url": "https://www.clickbank.com",
+    "category": "AI Income",
+    "price": "Free to join · 50–75% per sale",
+    "pricing_details": "Affiliate accounts are free with instant access and no approval wait. Vendor side: one-time $49.95 activation fee on first product approval, no monthly platform fee. ClickBank buys each product from the seller at 92.5% of sale price + $1 (Klarna transactions 9.8% + $1.30; subscription rebills under $40 at 9.9%), and affiliate commissions are computed on that wholesale amount - a $100 product at 60% commission pays $54.90, not $60. Marketplace rates run 50-75%, up to 90% for whitelisted affiliates; the account-level default is 25%. Payouts: $5 processing fee per payment issued, threshold $10 minimum ($100 default, adjustable to $1M), issued daily to weekly (pay periods end Wednesdays); direct deposit free in 50 countries, 190+ countries supported, wire $45, no PayPal payouts. 10% of each pay period is held in reserve and released after about 12 weeks. First payout also requires the Customer Distribution Requirement: 5 sales from unique customers, each over 14 days old, across at least 2 payment methods. Dormant accounts (positive balance, no earnings) are charged $1 per pay period after 90 days, $5 after 180 days, and $50 after 365 days, with no notification. Refunds (standard 60-day window) claw back affiliate commissions plus a $0.50-$1 handling fee; chargebacks can push an account negative.",
+    "description": "The veteran affiliate marketplace for digital products: free to join, 60-day cookies, public conversion stats, and 50-75% commissions that make one sale worth ten Amazon sales. Payout rules punish the inattentive - plan around the five-sale gate.",
+    "content": "## What ClickBank Actually Is\n\nRunning since 1998 out of Boise, Idaho, ClickBank is the oldest large affiliate marketplace for digital products - courses, software, supplements, e-books - and it still pays more per sale than almost any network alive: $7.5B+ sent to affiliates with zero missed payments since 1999. Sign-up is free and instant, no application queue. Browse the marketplace, hit Promote on an offer, and a HopLink lands in your clipboard. The 60-day cookie means a click today can still pay you two months out.\n\nThe reason commissions here hit 50-75% (90% for whitelisted partners) while Amazon pays 3%: the products are digital, cost nothing to duplicate, and the vendor still keeps roughly half of every sale they would never have made without you. One $60 sale at 60% is about $32 - more than fifteen Amazon book commissions combined.\n\n## The Math on a Real Sale (verified against ClickBank's fee pages, 2026)\n\nCommission is not computed on the sticker price. ClickBank buys the product from the vendor at wholesale first:\n\n| Step | Number |\n|---|---|\n| Customer pays | $100 |\n| ClickBank keeps 7.5% + $1 | $8.50 |\n| Wholesale pool | $91.50 |\n| Your commission at 60% | $54.90 |\n| Klarna-funded sale instead | ClickBank keeps 9.8% + $1.30 |\n| Subscription rebills under $40 | fee rises to 9.9% |\n\nSo a \"60% commission\" on a $100 product pays $54.90, not $60. Vendors pay a one-time $49.95 activation fee when their first product is approved and nothing monthly - the whole platform runs on that wholesale haircut. The account-level default commission is 25%, but marketplace listings overwhelmingly offer 50-75%.\n\n## How People Actually Make Money With It\n\n1. **One good sale beats a thousand clicks.** Average payouts on top health and make-money offers run $40-$200 per conversion (reported). A review page that converts one visitor in fifty earns more per thousand visits than most AdSense sites see in a month. AI tools draft the comparisons, the email sequences, the ad variants - the part that still needs a human is picking offers you would actually buy.\n2. **Gravity is the only metric that matters at first.** It counts distinct affiliates who made at least one sale in the past 12 weeks, weighted toward recent activity. Above roughly 100 means the product converts but is saturated; the reported sweet spot is 10-80, where the offer sells and you are not competing with 500 media buyers. The marketplace shows average dollars per conversion and refund trends before you commit to anything.\n3. **Email funnels are where the repeat money lives.** AI-drafted sequences through Kit or beehiiv, one solid offer, and the cookie window barely matters - the link sits in a list you own.\n4. **Know the verticals you are walking into.** Weight loss, supplements, survival, forex education - that is where the payouts are fattest, refund rates run 10-25% on some offers (community-reported), and FTC liability for health claims lands on the promoter, not just the vendor. Repeating a bogus claim in your own words is your lawsuit too.\n\n## What It Really Costs\n\n| Item | Number |\n|---|---|\n| Affiliate account | $0, instant, no approval wait |\n| Vendor activation | $49.95 one-time (on first product approval) |\n| Platform cut | 7.5% + $1 per sale, taken before the commission split |\n| Per-payout fee | $5.00 - that is 5% of a default $100 payment; raise the threshold and it drops toward 1% |\n| Payment threshold | $10 minimum, $100 default, adjustable up to $1M |\n| Schedule | Daily to weekly (pay periods end Wednesdays) |\n| Reserve | 10% of each pay period, released after about 12 weeks |\n| First-payout gate | CDR: 5 sales, unique customers, each 14+ days old, across 2+ payment methods |\n| Payout rails | Direct deposit free in 50 countries, 190+ countries supported, wire $45, no PayPal payouts |\n| Dormant account | $1 per pay period after 90 days with no earnings, $5 after 180, $50 after 365 - and no warning |\n\nThe dormant ladder deserves a stare: quit after earning $80, forget the account, come back a year later and the balance is gone or the account is negative. ClickBank states plainly in its accounting policy that it will not notify you.\n\n## ClickBank vs The Field\n\n| | ClickBank | Amazon Associates | Digistore24 |\n|---|---|---|---|\n| Typical commission | 50-75%, up to 90% | 1-10% by category | 50-75% |\n| Cookie | 60 days | 24 hours | 180 days |\n| Platform fee | 7.5% + $1, everything included | none visible (Amazon fronts costs in the rates) | ~7.9% + $1 |\n| Payout friction | CDR gate + 10% reserve + $5 per payout | ~60-day lag, $10 threshold | 20-30% held for 30 days |\n| Track record | $7.5B+ paid, no missed payments since 1999 | pays reliably, cuts rates unilaterally | $4.6B+ claimed |\n\nWhop holds 20% for 30 days; BuyGoods is invite-only with about 250 offers. For sheer digital-offer depth and instant access, the ClickBank marketplace is still unmatched - that is exactly why the payout plumbing reads like it was designed by a fraud team, because it was.\n\n## Bottom Line\n\nClickBank pays the highest commissions a beginner affiliate can reach with zero approval friction, and the 60-day cookie plus public conversion stats make it the cleanest place to learn the trade. The trade-off is payout mechanics built for distrust: a five-sale entry gate, a $5-per-payment fee that quietly taxes small thresholds, a 10% reserve held for 12 weeks, and a dormant fee ladder that eats forgotten balances. The marketplace's biggest strength - fat commissions on aggressive direct-response offers - is also where refund rates, FTC exposure, and burned audiences live.\n\n**Money angle summary:** pick offers in the 10-80 gravity band, sanity-check the refund trend before promoting, draft content and email sequences with AI but buy every product you recommend, set your payment threshold near $500 so the $5 fee stops mattering, treat every commission as provisional for 60 days, and never let the account sit dormant with money in it.",
+    "pros": [
+      "Free affiliate account with instant approval - grab a HopLink and promote minutes after signup",
+      "Commissions of 50-75% (up to 90% whitelisted) because vendors sell digital products with no cost of goods",
+      "Public marketplace stats - gravity, average dollars per conversion and refund trends visible before you promote"
+    ],
+    "cons": [
+      "Customer Distribution Requirement freezes your entire balance until 5 sales across 2+ payment methods clear",
+      "$5 fee on every payout plus a 10% reserve held 12 weeks - small thresholds leak real money",
+      "Marketplace still overflows with aggressive supplement and get-rich offers - refund rates and FTC exposure ride along with the commissions"
+    ],
+    "faq": [
+      {
+        "question": "Why can't I withdraw money when my dashboard shows a balance?",
+        "answer": "Three separate gates. First, the Customer Distribution Requirement: 5 sales from unique customers, each more than 14 days old, spread across at least 2 payment methods - five Visa sales do not count, and it is the single most common reason new affiliates see a frozen balance. Second, the payment threshold (default $100, adjustable down to $10). Third, the 10% reserve, which sits for about 12 weeks to cover refunds. The CDR is a one-time gate; after you clear it, payouts run normally."
+      },
+      {
+        "question": "What does a ClickBank sale actually pay?",
+        "answer": "Commissions are computed after ClickBank's 7.5% + $1 cut: a $100 product at 60% commission pays $54.90, not $60. Marketplace offers typically run 50-75% (up to 90% for whitelisted affiliates), and average payouts on top health and make-money offers are reported at $40-$200 per conversion - which is why one ClickBank sale can outearn a dozen Amazon sales."
+      },
+      {
+        "question": "Is ClickBank still legit in 2026, or a scam marketplace?",
+        "answer": "The platform is legitimate: merchant of record since 1998, $7.5B+ paid with zero missed payments since 1999, in-house compliance review of every listing, and US sales tax plus EU VAT remitted for you. The offers vary wildly. Aggressive supplement and get-rich funnels still dominate the top-gravity lists. Promote products you would buy yourself, check the refund trend before scaling, and remember the FTC holds affiliates responsible for the claims they repeat, not just the vendor who wrote them."
+      }
+    ],
+    "published": true,
+    "color": "#F7A500",
+    "emoji": "💸",
+    "rating": "⭐ 3.9",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "platform": "Web",
+    "features": [
+      "60-day cookie window - twice most affiliate networks and 60x the Amazon Associates window",
+      "Merchant of record: ClickBank collects and remits US sales tax and EU VAT, issues 1099s, and runs fraud screening",
+      "CPA commission option that is never clawed back once paid - available to affiliates with 100+ sales history"
+    ],
+    "tags": [
+      {
+        "text": "Affiliate Network"
+      },
+      {
+        "text": "Digital Products"
+      },
+      {
+        "text": "High Commission"
+      },
+      {
+        "text": "Make Money Online"
+      }
+    ]
   }
 ]
