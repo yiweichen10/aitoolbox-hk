@@ -18350,5 +18350,67 @@
         "text": "Make Money Online"
       }
     ]
+  },
+  {
+    "name": "Creative Market",
+    "slug": "creative-market",
+    "url": "https://creativemarket.com",
+    "category": "AI Income",
+    "price": "Free to sell · 50% default split",
+    "pricing_details": "No listing fees, no monthly cost, no exclusivity requirement. Default commission: 50% of list price per sale (official wording: rates vary per shop and per product; the 70% still quoted in many reviews describes legacy grandfathered shops). Non-US sellers: 30% withheld on sales to US buyers until a W-8BEN with treaty claim is validated (10% under the US-China treaty). Price-parity clause: your Creative Market price cannot exceed the lowest price the same product sells for elsewhere. Payouts monthly via Tipalti, $20 minimum, requests close 11:59pm CT on the last day of the month, processed after the first five business days of the next month, funds should arrive by about the 10th. Fees: ACH free, PayPal non-US 1% capped at $10, wire $5-7, 2.5% FX on local-currency payouts. Membership discounts are absorbed by the platform; one-time discount codes reduce seller earnings (calculated on the discounted price). Sellers on Trustpilot report small inactivity fees (about $4-5) nibbling at dormant balances.",
+    "description": "Curated marketplace to sell fonts, graphics, templates and mockups to professional designers. Application-gated shop, 50% default split, real buyer traffic with no ad spend - a clean passive-income lane for AI-assisted asset packs that survive human curation.",
+    "content": "## What Creative Market Actually Is\n\nCreative Market has been selling design assets since 2012, survived an Autodesk acquisition in 2014, a founder buyback in 2017, and a Dribbble acquisition in 2020. It has settled into a specific lane: a curated marketplace where professional designers buy fonts, graphics packs, templates, mockups, photos and web themes from independent shop owners. The buyer is not a hobbyist hunting freebies - it is a UI designer who needs a Figma kit today, an agency building a brand, a marketer who wants Instagram templates that do not look like everyone else's.\n\nOpening a shop costs nothing and there are no listing fees. You set your own prices, most products sell between $12 and $60, and after the shop is approved there is no per-product review queue. The catch is the gate: a real human reviews your application, wants to see an online portfolio with roughly 10-20 of your best pieces, and not everyone gets in on the first try. The waitlist is real. Rejected applicants are told to build more work and resubmit - submitting the same portfolio twice does nothing.\n\n## The Money Angle\n\nFive ways the money actually arrives:\n\n1. **Fonts are the highest-earning category.** A well-made display or script font sells for $15-50 and keeps selling for years. Sellers report single products quietly doing 100 units a month and others doing under 5 units a year - the spread is quality and presentation, not luck.\n2. **Graphics packs are where AI workflows pay.** Texture packs, clipart sets, icon bundles and paper collections sell in the $10-30 range. Generating raw material with Midjourney is the easy 80 percent; the 20 percent that decides whether anything sells is the cleanup, the color consistency, the organized files and the mockups.\n3. **Templates for people who are not designers.** Instagram kits, Canva bundles, resumes, presentation decks. Your buyer is a small business owner, so your preview images do the selling.\n4. **Add-ons and brushes.** Procreate brushes, Photoshop actions, Lightroom presets - low support burden, evergreen demand.\n5. **The affiliate route, no shop required.** The partner program pays 15% on a new customer's first purchase (5% returning) within a 30-day cookie. The affiliate landing page has advertised sweeter numbers - 20% on new customers and 30% on membership sign-ups - so read the current page before you build a funnel around it.\n\nThe catalog math matters more than any single product. Shops that earn treat this as inventory: 20-40 listings, 2-4 new products a month, and the weekly Free Goods program applied with your best product - featured shops get pushed to a buyer email list in the millions, and Creative Market says its network reaches 11M+ members with over $100 million paid out to shop owners.\n\n## What It Really Costs\n\n| Item | What it actually is |\n|---|---|\n| Commission | **50% of list price by default.** Official wording: rates vary per shop and per product. The 70% figure in most 2024-2026 reviews describes legacy grandfathered shops. |\n| US tax withholding | Non-US sellers lose another **30% on sales to US buyers** until a W-8BEN with a treaty claim is validated. With the US-China treaty on file that drops to 10%. |\n| Price parity | The terms bar you from pricing higher on Creative Market than the lowest price the same product sells for elsewhere - no marking up to cover the commission. |\n| Payout | Monthly through Tipalti. Request by the last day of the month (or enable auto payment), processed after the first five business days, funds should land by about the 10th. |\n| Minimum | **$20** to request a payout. |\n| Payout fees | ACH free. PayPal non-US 1% (capped at $10). Wire $5-7. Local-currency payouts add a 2.5% FX fee. |\n| Discounts | Membership discounts come out of Creative Market's share. One-time discount codes come out of yours - earnings are calculated on the discounted price. |\n\nReal math on a $29 template: the 50% cut leaves $14.50. A non-US seller without a treaty form loses 30% of that to withholding on US sales - about $10.15 left, before payout fees. This is why minimum price floors exist per category (WordPress themes start at $19 GPL, $29 commercial): thin products die on this commission.\n\n## The AI Reality\n\nCreative Market allows AI-generated products - with one rule that actually gets enforced. Every upload asks whether the product was primarily created with generative AI tools, and honest answers surface a visible AI label on the listing. Buyer-side filters now let customers shop non-AI only or AI only.\n\nThe terms also ban content that is machine or randomly generated, and the shop application is exactly where lazy AI dumps die: a human looks at your portfolio and can tell in seconds whether it is curated work or raw model noise. The practical read: AI is a production speedup, not a product strategy. Sellers doing well use it for raw material and spend their time on cleanup, consistency and presentation. The AI label is not a mark of shame either - a real chunk of buyers specifically filter for AI-generated assets.\n\n## vs The Field\n\n| | Creative Market | Etsy (digital) | Gumroad / Payhip |\n|---|---|---|---|\n| Platform cut | 50% default (varies) | ~6.5% + $0.20 + processing | 10%+$0.50 / ~5%+fees |\n| Buyer traffic | Built-in, high-intent designers | Built-in, massive but price-sensitive | None - you bring it |\n| Approval | Application + waitlist | Instant, $0.20 listing | Instant |\n| Buyer emails | Never | Yes | Yes |\n| AI products | Allowed, labeled, filters exist | Allowed, disclosure required | Allowed, no gate |\n| Typical price | $12-60+ | $2-15 | You decide |\n\nCreative Market trades the worst commission of the three for the best buyers. Etsy is where volume lives, but AI planner spam has flooded the digital aisle and buyers haggle. Gumroad and Payhip pay best and deliver nothing - they only work once you own an audience.\n\n## Bottom Line\n\nIf you can already make things designers want to buy, Creative Market is one of the few marketplaces where the audience converts and nobody asks you to buy ads. If the plan is \"generate 500 clipart packs and get rich,\" the application gate will filter you out before a single sale. Treat it as a curated second channel next to your own store, price for the 50% split, file the W-8BEN treaty claim on day one, and let the catalog compound.",
+    "pros": [
+      "High-intent buyer traffic: professionals hunting fonts, UI kits and templates at $12-60 price points - no ad spend to get in front of them",
+      "Zero listing fees, you set your own prices, and membership discounts come out of Creative Market's share instead of your payout",
+      "AI-assisted products are allowed when disclosed - buyer-side AI filters mean honest AI shops get found by buyers who specifically want them"
+    ],
+    "cons": [
+      "Default commission is 50% of list price, not the 70% still quoted in most 2024-2026 reviews - rates vary per shop and legacy sellers got grandfathered better deals",
+      "Application-gated shop approval with a real waitlist: a human reviews a 10-20 piece portfolio, and rejection means building new work before resubmitting",
+      "You never get buyer emails, payouts lag about six weeks behind sales, and non-US sellers lose another 30% on US sales until a W-8BEN treaty claim clears"
+    ],
+    "faq": [
+      {
+        "question": "How much does Creative Market actually take per sale?",
+        "answer": "By default 50% of your list price - Creative Market's own help docs say shops earn 50% of list price with rates varying per shop and per product. The 70% split you see in older guides and many 2024-2026 reviews belongs to legacy grandfathered shops. Two things people miss: membership discounts are absorbed by the platform so your payout is untouched, but one-time discount codes reduce your earnings because they are calculated on the discounted price."
+      },
+      {
+        "question": "Can I sell AI-generated assets on Creative Market?",
+        "answer": "Yes, and the rules are public. Every upload asks whether the product was primarily created with generative AI tools; answering yes puts a visible AI label on the listing, and buyers can filter for non-AI only or AI only. The terms still ban machine or randomly generated junk, and the shop application is where lazy AI dumps get filtered - a human reviews your portfolio. What works: AI for raw material, heavy human cleanup, consistent style and real presentation. Pure prompt-dump shops do not get approved."
+      },
+      {
+        "question": "When and how do I get paid?",
+        "answer": "Monthly, through Tipalti. Request a payout by 11:59pm Central Time on the last day of the month (or turn on auto payment), processing starts after the first five business days of the next month, and funds should arrive by about the 10th - not guaranteed. Minimum is $20. ACH is free, PayPal costs 1% outside the US (capped at $10), wires run $5-7, and local-currency payouts add a 2.5% FX fee. In practice money lands roughly six weeks after the sale, and sellers on Trustpilot report small inactivity fees eating dormant balances - withdraw rather than hoard loose change."
+      }
+    ],
+    "published": true,
+    "color": "#E85D75",
+    "emoji": "🎨",
+    "rating": "⭐ 3.8",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "platform": "Web",
+    "features": [
+      "Curated buyer base of designers, agencies and marketers - an 11M+ member network where buyers arrive ready to pay $12-60 for assets",
+      "Weekly Free Goods program - featured shops get pushed to a buyer email list in the millions and free downloaders convert into paying customers",
+      "Affiliate program paying 15% on new-customer purchases (5% returning) with a 30-day cookie - an income lane that needs no shop approval"
+    ],
+    "tags": [
+      {
+        "text": "Design Assets"
+      },
+      {
+        "text": "Marketplace"
+      },
+      {
+        "text": "Passive Income"
+      },
+      {
+        "text": "Make Money Online"
+      }
+    ]
   }
 ]
