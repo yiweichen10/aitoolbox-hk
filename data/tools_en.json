@@ -18479,5 +18479,75 @@
         "text": "Make Money Online"
       }
     ]
+  },
+  {
+    "name": "Flippa",
+    "slug": "flippa",
+    "emoji": "💼",
+    "color": "#2563EB",
+    "description": "Open marketplace to sell websites, AI tools, micro-SaaS, apps, newsletters and domains. Largest buyer pool online, no revenue gate, listing packages from $29 - the exit ramp for assets you built and monetized with AI.",
+    "category": "AI Income",
+    "tags": [
+      {
+        "text": "Sell Websites"
+      },
+      {
+        "text": "Exit"
+      },
+      {
+        "text": "Marketplace"
+      },
+      {
+        "text": "Make Money Online"
+      }
+    ],
+    "rating": "⭐ 3.9",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://flippa.com",
+    "price": "List from $29 · 10% success fee",
+    "pricing_details": "All listing packages are non-refundable whether or not the asset sells. Self-serve (asking price under $100K): under-$10K band $29/60 days, $49/3 months, $199/6 months; $10K-$49.9K band $49-$599; $50K-$99.9K band $129-$699. Success fee 10% up to $499.9K, 9% from $500K, 8% from $1M, sliding to 6% at $10M and 5% at $50M+. Asking prices of $100K and above have no self-serve option - Brokered by Flippa runs $399-$1,499 upfront for a 6-month term plus the tiered success fee. NDA/confidentiality add-on $199 on lower tiers, included on top tiers. At close, Flippa's help center says the buyer pays the FlippaPay (from about 1%) or Escrow.com (from about 1.2%) fee. Tiers re-verified November 2026 against Flippa's live pricing page; they change, so confirm before listing.",
+    "platform": "Web",
+    "published": true,
+    "pros": [
+      "Largest buyer pool in the category: 600K+ registered buyers, about 17,000 joining monthly, and no minimum size - a $2K starter site and a $2M SaaS list on the same shelf",
+      "Lowest upfront cost of any exit route: $29 lists a small asset, and Flippa's help center says the buyer pays the FlippaPay or Escrow.com fee at close",
+      "AI tools are an official asset category - vibe-coded apps and AI content sites sell here as products, not novelty items",
+      "Trust tooling improved after the scandal years: mandatory identity verification, Stripe/Shopify/QuickBooks/Google Analytics integrations, automatic due diligence on $50K+ listings, escrow by default",
+      "Free valuation tool and published fee tiers let you price the whole exit before spending a dollar"
+    ],
+    "cons": [
+      "Listing fees are non-refundable - if nothing sells in your package term you have bought advertising, not an exit",
+      "Buyer quality below $50K is noisy: self-reported financials are the norm, tire-kickers outnumber serious bids, and your verified Stripe data is the only thing that cuts through",
+      "F rating with the BBB (unanswered complaints) next to a 4.2/5 Trustpilot - support responsiveness and refund disputes are the recurring one-star themes",
+      "The 10% success fee now runs all the way to $499.9K; older guides quoting 7.5% in the $50-100K band describe a stale tier structure",
+      "Premium buyers ($388/yr) get early access to listings, and sellers report standard listings losing first-week exposure to paying members",
+      "Historic shill-bidding and doctored-earnings scandals still make buyers distrust your numbers until integrations prove them"
+    ],
+    "features": [
+      "Auctions, fixed-price and private-sale formats with built-in escrow, contracts of sale and transfer support",
+      "Verified financial integrations pull revenue straight from Stripe, Shopify, QuickBooks and Google Analytics into your listing",
+      "Free expert-driven valuation tool to price the asset before committing to a package",
+      "Broker-led track from $100K with buyer qualification, negotiation and migration handling ($399-$1,499 upfront)",
+      "NDA/confidentiality add-on ($199 on lower tiers, included on top tiers) for owners who can't go public with a sale",
+      "Lender financing partnerships on larger deals widen the buyer pool beyond cash-only acquirers"
+    ],
+    "faq": [
+      {
+        "question": "How much do I actually take home selling a small site?",
+        "answer": "On a $1,800 sale: $29 entry listing plus a 10% success fee ($180) = $209 in Flippa costs, about 11.6% of the deal. You keep roughly $1,591, and per Flippa's help center the buyer pays the FlippaPay or Escrow.com fee at close. The percentage matters more than the flat fee: a $9,000 site in the same band pays $29 + $900, still about 10.3%. Remember the listing fee is non-refundable - if no buyer closes, the $29 is gone."
+      },
+      {
+        "question": "Can I sell an AI-built website or AI tool on Flippa?",
+        "answer": "Yes - AI tools are an official asset category and vibe-coded apps sell there regularly. What buyers pay for is proof: verified revenue integrations (Stripe, Shopify, QuickBooks, Google Analytics) and traffic data that survives due diligence. An AI-generated site whose rankings collapsed at the last search update sells for near zero; one with stable verified revenue sells like any other asset. Build it with AI, but document the revenue like a business - that is what you are actually selling."
+      },
+      {
+        "question": "Flippa or Empire Flippers - which should I use?",
+        "answer": "Deal size decides. Empire Flippers requires roughly $2,000/month profit and 12 months of history, rejects about 91% of applicants, and charges 15% on the first $700K with no upfront fee - but it delivers a vetted buyer pool and runs the process for you. Flippa takes any asset at any size, costs $29-$1,499 upfront plus 10% (sliding to 5% on very large deals), and you handle buyer screening yourself. Under $100K it is Flippa by default; above that, compare total platform cost against the higher price a curated pool might produce."
+      }
+    ],
+    "content": "## What Flippa Actually Is\n\nFlippa has been around since 2009 - it spun out of SitePoint in Melbourne and is now the largest open marketplace anywhere for buying and selling online businesses. The inventory covers websites, ecommerce stores, SaaS products, mobile apps, newsletters, YouTube channels, domains, social accounts and - relevant to this site - AI tools as an official asset category. Flippa's own pages claim 600,000+ registered buyers, roughly 17,000 new buyers joining each month, and 10,000+ live listings.\n\nThe honest framing: it's eBay, not Sotheby's. Empire Flippers rejects about 91% of applicants; Flippa will list almost anything you can prove you own, from a $500 domain to an eight-figure brokered deal. That openness is exactly why you can exit a $3,000 starter site without meeting any minimum revenue threshold - and also why your inbox will fill with messages from people who clearly never read the listing.\n\nTrust tooling got real after the ugly years (shill bidding and doctored earnings scandals in the 2010s). Today there's mandatory identity verification, verified revenue integrations that pull data straight from Stripe, Shopify, QuickBooks and Google Analytics, automatic due diligence on listings above $50K, and escrow by default. Those tools exist for a reason: below $50K, most listings still run on self-reported numbers, and buyers know it.\n\n## The Money Angle: Selling the Whole Asset\n\nEvery other tool in this category pays you in installments. Flippa pays you all at once, and then you're done.\n\nFour lanes, in the order most people actually use them:\n\n**1. Exit a content site.** A niche site clearing $800/month from display ads and affiliate commissions typically lists in the 30-40x monthly profit range - call it $24,000-$32,000 for our example. That's the logical end point of the build-monetize loop this site keeps describing: Google AdSense or Amazon Associates pay monthly; Flippa is where you cash out the machine itself instead of grinding another year.\n\n**2. Sell a micro-SaaS or AI wrapper app.** \"AI tools\" is an official asset category on Flippa, and vibe-coded products sell there regularly. Buyers in this lane price working products as assets - a clean transfer, real users, a problem someone can name - not on ARR multiples.\n\n**3. Flip.** Buy underpriced assets, improve them (AI makes the improvement phase faster than ever), resell. Flippa's own case studies include a buyer who took Tattooing101.com from a $10,000 purchase to a $100,000 sale. Harder than it sounds, but it's a real business model, not a story.\n\n**4. Sell the small stuff.** Newsletters, domains, social accounts. Lower ceiling, fastest closings, and the $29 entry listing was made for exactly this tier.\n\nThe exit math is the part nobody runs before listing. Run it first, because fees land whether or not a buyer shows up.\n\n## What It Really Costs\n\nCurrent tiers (verified against Flippa's live pricing page in November 2026 - they change, so re-check before you list):\n\n| Item | Cost | Notes |\n|---|---|---|\n| Listing, ask under $10K | $29 (60 days) / $49 (3 mo) / $199 (6 mo) | Non-refundable either way |\n| Listing, ask $10K-$49.9K | $49-$599 | Higher tiers add visibility |\n| Listing, ask $50K-$99.9K | $129-$699 | NDA add-on $199 on lower tiers |\n| Ask $100K+ | Brokered by Flippa, $399-$1,499 upfront | No self-serve option above $100K |\n| Success fee up to $499.9K | 10% | Only on a completed sale |\n| Success fee $500K-$999.9K | 9% | |\n| Success fee $1M+ | 8%, sliding to 5% at $50M+ | |\n| FlippaPay / Escrow.com | From about 1% | Buyer pays it per Flippa's help center |\n\nWorked example, small tier: sell a site for $1,800. Entry listing $29 plus success fee $180 = $209 to the platform, 11.6% of the deal. Bigger tier: a $28,000 content site costs $29 + $2,800 - 10.1%. A $1M sale runs about $81,300 all-in (broker-led $1,299 + 8%), which is still cheaper than the $115,000-plus a traditional broker would quote.\n\nOne fee fact that matters: Flippa's help center says the buyer pays the FlippaPay or Escrow.com fee. On most marketplaces that cost gets negotiated into the price anyway, but at least the invoice doesn't land on you twice.\n\n## The Honest Cons\n\n- **Listing fees are non-refundable.** Sixty days with no serious buyer means you paid for advertising, not an exit. Price realistically the first time - an overpriced listing that sits is the most expensive mistake here.\n- **Buyer quality below $50K is rough.** Tire-kickers, due-diligence tourists, lowball offers, and people who ask for revenue screenshots and vanish. Verified Stripe/Shopify integrations are your best filter - listings with verified financials convert conversations into offers at a completely different rate.\n- **The BBB gives Flippa an F rating** (unanswered complaints), while Trustpilot sits at 4.2/5 across 3,000+ reviews. The one-star cluster is support responsiveness and listing-fee refund disputes. Neither kills the platform, but don't expect white-glove service at the $29 tier.\n- **The success fee is 10% flat up to $499.9K.** Older guides still quote 7.5% for the $50-100K band - that's a stale tier structure. If your deal is six figures, confirm the current rate on the live pricing page before you budget.\n- **Premium buyers ($388/yr) get early access to listings,** and sellers report standard listings losing their crucial first-week exposure to paying members. If a listing goes quiet in week one, that's part of why.\n- **History shapes buyer behavior.** The shill-bidding and fake-earnings episodes from the 2010s are a decade old, but they're why buyers verify everything twice. Bring proof before they ask.\n\n## Flippa vs The Field\n\n| Platform | Upfront cost | Success fee | Gate |\n|---|---|---|---|\n| Flippa | $29-$1,499 | 10% down to 5% | None - any size, any asset |\n| Empire Flippers | $0 | 15% on first $700K, 8% to $5M, 2.5% above | About $2K/mo profit, 12-month history, 91% rejected |\n| Acquire.com | $25-$100/mo | 6-8% on close | SaaS and recurring-revenue only |\n| Direct sale | $0 | $0 | You do every step yourself |\n\nPick by deal size and asset type. Under $100K, Flippa is close to the only door that opens - Empire Flippers won't take the deal and a direct sale means finding the buyer yourself. Between $100K and $1M, run the math both ways: Flippa's upfront-plus-10% versus Empire Flippers' 15% with a curated buyer pool. Above that, both work, and the fee gap is usually smaller than the price gap a better buyer pool can produce.\n\n## Bottom Line\n\nFlippa is the exit ramp for everything else on this site. The AI-assisted content site, the micro-SaaS, the newsletter - at some point the smartest financial move is selling the machine rather than milking it another year, and for sub-$100K digital assets Flippa is where those deals actually happen. Go in knowing three things: the listing fee is spent whether or not you sell, the 10% success fee now runs all the way to half a million, and verified financials are the difference between a listing that sells in two weeks and one that dies quietly. If your numbers are real and provable through integrations, the buyer pool is unmatched. If they're not, no marketplace fixes that."
   }
 ]
