@@ -44,9 +44,32 @@ def main():
     log("STEP 1: Rebuild static site")
     run([sys.executable, os.path.join(SCRIPTS_DIR, 'build_en.py')])
 
+    # Step 2: git commit & push（仅作版本备份，失败不中断后续部署）
+    log("STEP 2: git commit & push (backup to GitHub)")
+    subprocess.run(["git", "add", "-A"], cwd=BASE_DIR)
+    staged = subprocess.run(
+        ["git", "diff", "--cached", "--quiet"], cwd=BASE_DIR
+    ).returncode
+    if staged == 0:
+        log("  no changes to commit, skip")
+    else:
+        msg = "Daily build " + datetime.now().strftime("%Y-%m-%d %H:%M")
+        c = subprocess.run(["git", "commit", "-m", msg], cwd=BASE_DIR,
+                           text=True, encoding="utf-8", errors="replace")
+        if c.returncode != 0:
+            log("  WARN: git commit failed, continue anyway")
+        else:
+            p = subprocess.run(["git", "push", "origin", "main"], cwd=BASE_DIR,
+                               text=True, encoding="utf-8", errors="replace")
+            log("  git push exit " + str(p.returncode) + " (backup only, non-blocking)")
+
+    # Step 3: 部署到 Cloudflare Pages（真正上线这一步）
+    log("STEP 3: Deploy to Cloudflare Pages")
+    run([sys.executable, os.path.join(SCRIPTS_DIR, 'deploy_cf.py'), "--upload"])
+
     log("=" * 55)
-    log("Pipeline complete. Static files updated under /en/")
-    log("Next step: git add . && git commit && git push (manual for now)")
+    log("Pipeline complete: built, pushed, deployed.")
+    log("Live: https://www.aitoolbox.hk/")
     log("=" * 55)
 
 if __name__ == "__main__":

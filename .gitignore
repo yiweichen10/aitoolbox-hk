@@ -28,3 +28,6 @@ Thumbs.db
 
 # ===== 内部工作记忆/自动化日志（与网站无关，禁止入库公开）=====
 .workbuddy-ai/
+
+# Cloudflare Pages 部署产物（本地生成，禁止入库）
+_deploy_cf/
