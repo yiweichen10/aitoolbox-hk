@@ -37,9 +37,10 @@ DIRS = ["articles", "author", "category", "css", "images", "js", "tools"]
 
 
 def prepare() -> tuple[int, int]:
-    if OUT.exists():
-        shutil.rmtree(OUT)
-    OUT.mkdir(parents=True)
+    # 注意：不能 rmtree 整个 _deploy_cf（1000+ 文件会触发沙箱的批量删除保护，
+    # 报 SAFE_DELETE_BULK_CONFIRM_REQUIRED）。改为原地覆盖复制。
+    # 代价：源里已删除的旧文件会在 _deploy_cf 中残留，需要时手动清理一次。
+    OUT.mkdir(parents=True, exist_ok=True)
 
     copied, missing = 0, []
     for name in ROOT_FILES:
@@ -54,7 +55,7 @@ def prepare() -> tuple[int, int]:
     for d in DIRS:
         src = ROOT / d
         if src.is_dir():
-            shutil.copytree(src, OUT / d)
+            shutil.copytree(src, OUT / d, dirs_exist_ok=True)
             files += sum(1 for _ in src.rglob("*") if _.is_file())
         else:
             missing.append(d + "/")
@@ -81,11 +82,21 @@ def upload() -> int:
     token = os.environ.get("CLOUDFLARE_API_TOKEN")
     print("AUTH_MODE      " + ("api_token" if token else "wrangler_oauth（本地已登录态）"))
 
+    # Windows 下 wrangler 是 npm 生成的 .cmd，Python subprocess 不会自动补扩展名，
+    # 必须先用 shutil.which 解析出完整路径，否则报 WinError 2。
+    exe = (shutil.which("wrangler")
+           or shutil.which("wrangler.cmd")
+           or shutil.which("wrangler.exe"))
+    if not exe:
+        print("ERROR: 未找到 wrangler 可执行文件。请先执行：npm i -g wrangler")
+        return 2
+    print("WRANGLER       " + exe)
+
     cmd = [
-        "wrangler", "pages", "deploy", str(OUT),
+        exe, "pages", "deploy", str(OUT),
         "--project-name", PROJECT, "--branch", "main", "--commit-dirty=true",
     ]
-    print("RUN", " ".join(cmd[:5]), "...")
+    print("RUN", " ".join(cmd[:4]), "...")
     return subprocess.call(cmd, cwd=str(ROOT))
 
 

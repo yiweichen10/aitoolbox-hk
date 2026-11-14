@@ -31,3 +31,5 @@ Thumbs.db
 
 # Cloudflare Pages 部署产物（本地生成，禁止入库）
 _deploy_cf/
+_deploy_cf.zip
+.wrangler/
