@@ -21,7 +21,7 @@
     <meta name="twitter:title" content="Milvus Review 2026 - AI Tool Lab">
     <meta name="twitter:description" content="Milvus is the open-source vector database that handles billions of embedding vectors and returns search results in milli">
     <meta name="twitter:image" content="https://www.aitoolbox.hk/images/og/milvus-en-og.png">
-    <link rel="stylesheet" href="/css/style.css?v=20261115094932">
+    <link rel="stylesheet" href="/css/style.css?v=20261115181948">
     <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -235,12 +235,13 @@
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;">
-                <h1>🛠️ AI Tool Lab <span>Updated daily</span></h1>
+            <a href="/" class="brand-link">
+                <div class="site-brand"><span class="brand-mark" aria-hidden="true"></span>AI Tool Lab</div>
+                <span class="header-tagline">Independent reviews</span>
             </a>
             <nav class="header-nav">
-                <a href="/category/">🛠️ Tools</a>
-                <a href="/articles/">📖 Articles</a>
+                <a href="/category/">Tools</a>
+                <a href="/articles/">Articles</a>
                 <a href="/category/ai-chat/">AI Chat</a>
                 <a href="/category/ai-image/">AI Image</a>
                 <a href="/category/ai-coding/">AI Coding</a>
@@ -256,18 +257,18 @@
     <main class="article-container">
         <div class="tool-header">
             <div class="tool-header-top">
-                <div class="tool-icon-lg" style="background:#6B5CE7;">🗄️</div>
+                <img class="tool-logo tool-icon-lg" src="/assets/icons/milvus.svg" alt="Milvus" width="56" height="56" loading="lazy" decoding="async">
                 <div class="tool-header-info">
-                    <h2>Milvus <span class="badge" style="background:#2563eb;color:#fff;padding:2px 8px;border-radius:4px;font-size:12px;">NEW</span></h2>
+                    <div class="tool-title-row"><h1>Milvus</h1><span class="status-chip status-choice">Editor's Choice</span></div>
                     <p class="subtitle">Milvus is the open-source vector database that handles billions of embedding vectors and returns search results in milliseconds. I have been building RAG pipelines and semantic search systems with it since early 2025, and it is the infrastructure piece that lets me charge $5K-$15K per client for enterprise knowledge management deployments. Think of it as the memory layer for AI applications -- when someone asks a chatbot about their company's internal docs, Milvus is what finds the relevant chunks to feed into the LLM.</p>
                     <div class="rating-bar">⭐ 4.7 <span style="font-size:14px;color:#999;">(850K visits)</span></div>
                 </div>
             </div>
             <div class="tool-meta">
-                <div class="tool-meta-item">🌐 <strong>Website</strong>: milvus.io</div>
-                <div class="tool-meta-item">💰 <strong>Price</strong>: Free (open source) + Cloud $0.80/hr</div>
-                <div class="tool-meta-item">📦 <strong>Platform</strong>: Docker, Kubernetes, Python, Go, Java, Node.js, REST API</div>
-                <div class="tool-meta-item">🏷️ <strong>Category</strong>: AI Development</div>
+                <div class="tool-meta-item"><strong>Website</strong>: milvus.io</div>
+                <div class="tool-meta-item"><strong>Price</strong>: Free (open source) + Cloud $0.80/hr</div>
+                <div class="tool-meta-item"><strong>Platform</strong>: Docker, Kubernetes, Python, Go, Java, Node.js, REST API</div>
+                <div class="tool-meta-item"><strong>Category</strong>: AI Development</div>
             </div>
             <div class="action-bar">
                 <a href="https://milvus.io" target="_blank" rel="noopener" class="action-btn action-btn-primary">Visit Milvus →</a>
@@ -275,12 +276,12 @@
         </div>
 
         <div class="tldr-box">
-            <strong>⚡ TL;DR</strong>
+            <strong>TL;DR</strong>
             <p>Milvus is the open-source vector database that handles billions of embedding vectors and returns search results in milliseconds. I have been building RAG pipelines and semantic search systems with it since early 2025, and it is the infrastructure piece that lets me charge $5K-$15K per client for enterprise knowledge management deployments. Think of it as the memory layer for AI applications -- when someone asks a chatbot about their company's internal docs, Milvus is what finds the relevant chunks to feed into the LLM.</p>
         </div>
 
         <div class="key-stats">
-            <h4>📊 Key Statistics</h4>
+            <h4>Key Statistics</h4>
             <div class="ks-grid"><div class="ks-item"><span class="ks-val">4.7</span><span class="ks-label">User Rating</span></div><div class="ks-item"><span class="ks-val">850K</span><span class="ks-label">Monthly Visits</span></div><div class="ks-item"><span class="ks-val">Free (open source) + Cloud $0.80/hr</span><span class="ks-label">Pricing</span></div><div class="ks-item"><span class="ks-val">Docker, Kubernetes, Python, Go, Java, Node.js, REST API</span><span class="ks-label">Platform</span></div></div>
         </div>
 
@@ -411,16 +412,16 @@
 
         <div class="pros-cons">
             <div class="pros">
-                <h4>👍 Pros</h4>
+                <h4>Pros</h4>
                 <ul><li>Handles billions of vectors at millisecond retrieval speed -- benchmarked against anything in the open-source space and it wins on scale</li><li>Plays nicely with every major LLM framework (LangChain, LlamaIndex, Haystack, Dify) without adapter headaches</li><li>Gives you 4+ index algorithms (HNSW, IVF, DiskANN, GPU-accelerated) so you can tune for speed vs recall per workload</li><li>Clustered deployment out of the box -- when one client grows from 100K to 50M documents, you add nodes instead of rewriting</li><li>Hybrid search (vector + keyword + scalar filter) is genuinely useful for production -- not just a checkbox feature</li></ul>
             </div>
             <div class="cons">
-                <h4>👎 Cons</h4>
+                <h4>Cons</h4>
                 <ul><li>The learning curve is real -- you need to understand index types, distance metrics, and shard configurations before your first deployment</li><li>Self-hosted Milvus is resource-hungry: a basic cluster wants 16GB RAM minimum, and tuning etcd + MinIO + Pulsar dependencies is not trivial</li><li>Milvus Cloud pricing gets steep when you scale -- query nodes alone can run $300-$600/mo for moderate workloads</li><li>Graphical admin tools are sparse -- most debugging still happens through Python scripts and CLI commands, which gets old fast</li><li>Docs assume you already know vector search concepts -- the gap between 'getting started' and 'production' documentation is wide</li></ul>
             </div>
         </div>
 
-        <div class="faq-section"><h3>❓ FAQ</h3><div class="faq-item">
+        <div class="faq-section"><h3>FAQ</h3><div class="faq-item">
                     <details>
                         <summary>How do I actually make money with Milvus?</summary>
                         <div class="faq-answer"><p>Three ways that work. (1) Enterprise RAG consulting: companies drowning in documents (legal, medical, finance) will pay $5K-$15K to build them a semantic search system on top of Milvus. (2) Managed hosting: set up and maintain Milvus clusters for SMBs who need vector search but cannot run infrastructure -- charge $500-$2K/mo per client. (3) Migration services: move companies off Pinecone to save them 40-60% on costs, charge $2K-$5K per migration. One client I moved from Pinecone Standard to self-hosted Milvus is saving $1,800/mo -- they paid me $4K for the migration and were happy to do it.
@@ -452,7 +453,7 @@
 
         <div class="author-block">
         <div class="author-block-inner">
-            <div class="author-avatar">🛠️</div>
+            <div class="author-avatar">A</div>
             <div class="author-body">
                 <p class="author-label"><strong>About the reviewer</strong></p>
                 <p class="author-text">This Milvus review was written by the <a href="/author/">AI Tool Lab Editorial Team</a>, based on real paid usage and testing. We spend $200+/month on AI tool subscriptions so you do not have to. Every claim in this review is verifiable — if you find an error, <a href="/contact.html">let us know</a> and we will fix it within 48 hours.</p>
@@ -462,29 +463,29 @@
     </div>
 
         <div class="related-tools" id="relatedSection">
-            <h3>🔗 Related Tools</h3>
+            <h3>Related Tools</h3>
             <div class="related-grid"><a href="/tools/replicate/" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">☁️</div>
+                <img class="tool-logo related-tile" src="/assets/icons/replicate.svg" alt="Replicate" width="40" height="40" loading="lazy" decoding="async">
                 <div style="font-weight:600;">Replicate</div>
                 <div style="font-size:13px;color:#666;">AI Development</div>
             </a>
 <a href="/tools/hugging-face/" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">🤗</div>
+                <img class="tool-logo related-tile" src="/assets/icons/hugging-face.svg" alt="Hugging Face" width="40" height="40" loading="lazy" decoding="async">
                 <div style="font-weight:600;">Hugging Face</div>
                 <div style="font-size:13px;color:#666;">AI Development</div>
             </a>
 <a href="/tools/groq/" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">⚡</div>
+                <img class="tool-logo related-tile" src="/assets/icons/groq.svg" alt="Groq" width="40" height="40" loading="lazy" decoding="async">
                 <div style="font-weight:600;">Groq</div>
                 <div style="font-size:13px;color:#666;">AI Development</div>
             </a>
 <a href="/tools/langchain/" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">⛓️</div>
+                <img class="tool-logo related-tile" src="/assets/icons/langchain.svg" alt="LangChain" width="40" height="40" loading="lazy" decoding="async">
                 <div style="font-weight:600;">LangChain</div>
                 <div style="font-size:13px;color:#666;">AI Development</div>
             </a>
 <a href="/tools/pinecone/" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">🌲</div>
+                <img class="tool-logo related-tile" src="/assets/icons/pinecone.png" alt="Pinecone" width="40" height="40" loading="lazy" decoding="async">
                 <div style="font-weight:600;">Pinecone</div>
                 <div style="font-size:13px;color:#666;">AI Development</div>
             </a>
@@ -492,13 +493,13 @@
         </div>
 
         <div class="related-tools">
-                <h3>📚 Related Articles</h3>
+                <h3>Related Articles</h3>
                 <div class="related-grid"><a href="/articles/best-vector-databases-2026-pinecone-vs-qdrant-vs-weaviate-vs-zilliz-milvus/" class="related-card">
-                    <div style="font-weight:600;margin-bottom:4px;">📖 Best Vector Databases in 2026: Pinecone </div>
+                    <div style="font-weight:600;margin-bottom:4px;">Best Vector Databases in 2026: Pinecone </div>
                     <div style="font-size:13px;color:#666;">2026-10-22</div>
                 </a>
 <a href="/articles/best-ai-vector-database-tools-2026-pinecone-vs-weaviate-vs-qdrant-vs-milvus/" class="related-card">
-                    <div style="font-weight:600;margin-bottom:4px;">📖 Best AI Vector Database Tools in 2026: P</div>
+                    <div style="font-weight:600;margin-bottom:4px;">Best AI Vector Database Tools in 2026: P</div>
                     <div style="font-size:13px;color:#666;">2026-07-15</div>
                 </a>
 </div>
@@ -506,7 +507,9 @@
     </main>
 
     <footer class="footer">
-        <p>&copy; 2026 AI Tool Lab &middot; Best AI Tools, Updated Daily &middot; <a href="https://www.aitoollab.cn/" style="color:#999;">中文版</a></p>
+        <p class="footer-logo">AI Tool Lab</p>
+        <p>Independent AI tool reviews. No sponsored rankings. &middot; <a href="/about.html">Editorial policy</a> &middot; <a href="https://www.aitoollab.cn/">中文版</a></p>
+        <p class="footer-meta">Copyright 2026 AI Tool Lab &middot; Updated daily</p>
     </footer>
     <button id="backToTop" aria-label="Back to top">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
@@ -517,7 +520,7 @@
 <script>
 document.addEventListener("DOMContentLoaded",function(){var b=document.getElementById("backToTop");if(!b)return;var s=function(){if(window.scrollY>400){b.classList.add("visible")}else{b.classList.remove("visible")}};window.addEventListener("scroll",s,{passive:true});s();b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"})});});
 </script>
-<script src="/js/tts-reader.js" defer></script><button id="darkModeToggle" class="dark-toggle-fab" aria-label="Toggle dark mode" title="Dark mode">🌙</button>
+<script src="/js/tts-reader.js" defer></script><button id="darkModeToggle" class="dark-toggle-fab" aria-label="Toggle dark mode" title="Dark mode">◐</button>
 <script>
 (function(){
     var btn = document.getElementById('darkModeToggle');
@@ -525,7 +528,7 @@ document.addEventListener("DOMContentLoaded",function(){var b=document.getElemen
     var dark = localStorage.getItem('darkMode') === 'true';
     function apply(d) {
         document.documentElement.setAttribute('data-theme', d ? 'dark' : '');
-        btn.textContent = d ? '☀️' : '🌙';
+        btn.textContent = d ? '◑' : '◐';
         localStorage.setItem('darkMode', d);
     }
     apply(dark);

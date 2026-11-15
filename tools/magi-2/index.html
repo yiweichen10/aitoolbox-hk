@@ -21,7 +21,7 @@
     <meta name="twitter:title" content="MAGI-2 Review 2026 - AI Tool Lab">
     <meta name="twitter:description" content="Sand.ai's open-source 114B MoE model that turns text or an image into a 10-second 1080p video with synchronized audio. T">
     <meta name="twitter:image" content="https://www.aitoolbox.hk/images/og/magi-2-en-og.png">
-    <link rel="stylesheet" href="/css/style.css?v=20261115094932">
+    <link rel="stylesheet" href="/css/style.css?v=20261115181948">
     <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -235,12 +235,13 @@
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;">
-                <h1>🛠️ AI Tool Lab <span>Updated daily</span></h1>
+            <a href="/" class="brand-link">
+                <div class="site-brand"><span class="brand-mark" aria-hidden="true"></span>AI Tool Lab</div>
+                <span class="header-tagline">Independent reviews</span>
             </a>
             <nav class="header-nav">
-                <a href="/category/">🛠️ Tools</a>
-                <a href="/articles/">📖 Articles</a>
+                <a href="/category/">Tools</a>
+                <a href="/articles/">Articles</a>
                 <a href="/category/ai-chat/">AI Chat</a>
                 <a href="/category/ai-image/">AI Image</a>
                 <a href="/category/ai-coding/">AI Coding</a>
@@ -256,18 +257,18 @@
     <main class="article-container">
         <div class="tool-header">
             <div class="tool-header-top">
-                <div class="tool-icon-lg" style="background:#8b5cf6;">🎬</div>
+                <img class="tool-logo tool-icon-lg" src="/assets/icons/magi-2.png" alt="MAGI-2" width="56" height="56" loading="lazy" decoding="async">
                 <div class="tool-header-info">
-                    <h2>MAGI-2 <span class="badge" style="background:#00aa00;color:#fff;padding:2px 8px;border-radius:4px;font-size:12px;">OPEN SOURCE</span></h2>
+                    <div class="tool-title-row"><h1>MAGI-2</h1><span class="status-chip status-verified">Verified</span></div>
                     <p class="subtitle">Sand.ai's open-source 114B MoE model that turns text or an image into a 10-second 1080p video with synchronized audio. The first hundred-billion-parameter video model released under Apache 2.0.</p>
                     <div class="rating-bar">⭐ 4.6 <span style="font-size:14px;color:#999;">(— visits)</span></div>
                 </div>
             </div>
             <div class="tool-meta">
-                <div class="tool-meta-item">🌐 <strong>Website</strong>: sand.ai/blog/magi-2-preview</div>
-                <div class="tool-meta-item">💰 <strong>Price</strong>: Free / Open-source (Apache 2.0, self-hosted)</div>
-                <div class="tool-meta-item">📦 <strong>Platform</strong>: Self-hosted (requires 8× NVIDIA H100/Hopper GPUs)</div>
-                <div class="tool-meta-item">🏷️ <strong>Category</strong>: AI Video</div>
+                <div class="tool-meta-item"><strong>Website</strong>: sand.ai/blog/magi-2-preview</div>
+                <div class="tool-meta-item"><strong>Price</strong>: Free / Open-source (Apache 2.0, self-hosted)</div>
+                <div class="tool-meta-item"><strong>Platform</strong>: Self-hosted (requires 8× NVIDIA H100/Hopper GPUs)</div>
+                <div class="tool-meta-item"><strong>Category</strong>: AI Video</div>
             </div>
             <div class="action-bar">
                 <a href="https://sand.ai/blog/magi-2-preview" target="_blank" rel="noopener" class="action-btn action-btn-primary">Visit MAGI-2 →</a>
@@ -275,12 +276,12 @@
         </div>
 
         <div class="tldr-box">
-            <strong>⚡ TL;DR</strong>
+            <strong>TL;DR</strong>
             <p>Sand.ai's open-source 114B MoE model that turns text or an image into a 10-second 1080p video with synchronized audio. The first hundred-billion-parameter video model released under Apache 2.0.</p>
         </div>
 
         <div class="key-stats">
-            <h4>📊 Key Statistics</h4>
+            <h4>Key Statistics</h4>
             <div class="ks-grid"><div class="ks-item"><span class="ks-val">4.6</span><span class="ks-label">User Rating</span></div><div class="ks-item"><span class="ks-val">—</span><span class="ks-label">Monthly Visits</span></div><div class="ks-item"><span class="ks-val">Free / Open-source (Apache 2.0, self-hosted)</span><span class="ks-label">Pricing</span></div><div class="ks-item"><span class="ks-val">Self-hosted (requires 8× NVIDIA H100/Hopper GPUs)</span><span class="ks-label">Platform</span></div></div>
         </div>
 
@@ -295,7 +296,7 @@
 </div>
 
         <article class="article-body" data-tts>
-            <h1>MAGI-2 Review: The First Hundred-Billion-Parameter Open-Source Video Model With Built-In Sound</h1>
+            <h2>MAGI-2 Review: The First Hundred-Billion-Parameter Open-Source Video Model With Built-In Sound</h2>
 
 <p>MAGI-2 is Sand.ai's open-source video generation model, released on August 5, 2026. It takes a text prompt — or a text prompt plus a starting image — and produces a 10-second 1080p video with audio that is synchronized to the action. With 114 billion total parameters in a mixture-of-experts (MoE) architecture that activates only about 6 billion per token, it is the first video model at the hundred-billion scale to publish both its weights and its inference code under the Apache 2.0 license. If you want video-with-sound generation that you can run, fine-tune, and ship inside your own stack without per-clip API billing, this is the release to watch.
 </p>
@@ -389,16 +390,16 @@
 
         <div class="pros-cons">
             <div class="pros">
-                <h4>👍 Pros</h4>
+                <h4>Pros</h4>
                 <ul><li>Fully open weights and code (Apache 2.0)</li><li>Generates synchronized audio in the same pass as video</li><li>114B capacity with only ~6B active per token (low inference cost at scale)</li><li>Unified single-stream text + video + audio architecture</li><li>Competitive with far larger proprietary models on quality</li></ul>
             </div>
             <div class="cons">
-                <h4>👎 Cons</h4>
+                <h4>Cons</h4>
                 <ul><li>Requires 8× Hopper GPUs and ~307 GB of weights</li><li>Preview release; distilled (faster) version not yet out</li><li>Only 10-second clips supported</li><li>No hosted API yet — command-line self-hosting only</li><li>No ComfyUI nodes available yet</li></ul>
             </div>
         </div>
 
-        <div class="faq-section"><h3>❓ FAQ</h3><div class="faq-item">
+        <div class="faq-section"><h3>FAQ</h3><div class="faq-item">
                     <details>
                         <summary>Is MAGI-2 free?</summary>
                         <div class="faq-answer"><p>Yes. The weights and code are released under Apache 2.0, so you can use, modify, and commercialize output without per-clip licensing fees. The only cost is your own GPU compute.
@@ -437,7 +438,7 @@
 
         <div class="author-block">
         <div class="author-block-inner">
-            <div class="author-avatar">🛠️</div>
+            <div class="author-avatar">A</div>
             <div class="author-body">
                 <p class="author-label"><strong>About the reviewer</strong></p>
                 <p class="author-text">This MAGI-2 review was written by the <a href="/author/">AI Tool Lab Editorial Team</a>, based on real paid usage and testing. We spend $200+/month on AI tool subscriptions so you do not have to. Every claim in this review is verifiable — if you find an error, <a href="/contact.html">let us know</a> and we will fix it within 48 hours.</p>
@@ -447,29 +448,29 @@
     </div>
 
         <div class="related-tools" id="relatedSection">
-            <h3>🔗 Related Tools</h3>
+            <h3>Related Tools</h3>
             <div class="related-grid"><a href="/tools/runway/" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">📹</div>
+                <img class="tool-logo related-tile" src="/assets/icons/runway.png" alt="Runway" width="40" height="40" loading="lazy" decoding="async">
                 <div style="font-weight:600;">Runway</div>
                 <div style="font-size:13px;color:#666;">AI Video</div>
             </a>
 <a href="/tools/sora/" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">🎬</div>
+                <img class="tool-logo related-tile" src="/assets/icons/sora.svg" alt="Sora" width="40" height="40" loading="lazy" decoding="async">
                 <div style="font-weight:600;">Sora</div>
                 <div style="font-size:13px;color:#666;">AI Video</div>
             </a>
 <a href="/tools/pika/" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">🎬</div>
+                <img class="tool-logo related-tile" src="/assets/icons/pika.svg" alt="Pika" width="40" height="40" loading="lazy" decoding="async">
                 <div style="font-weight:600;">Pika</div>
                 <div style="font-size:13px;color:#666;">AI Video</div>
             </a>
 <a href="/tools/heygen/" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">🎬</div>
+                <img class="tool-logo related-tile" src="/assets/icons/heygen.png" alt="HeyGen" width="40" height="40" loading="lazy" decoding="async">
                 <div style="font-weight:600;">HeyGen</div>
                 <div style="font-size:13px;color:#666;">AI Video</div>
             </a>
 <a href="/tools/veo/" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">🎬</div>
+                <img class="tool-logo related-tile" src="/assets/icons/veo.png" alt="Veo" width="40" height="40" loading="lazy" decoding="async">
                 <div style="font-weight:600;">Veo</div>
                 <div style="font-size:13px;color:#666;">AI Video</div>
             </a>
@@ -477,17 +478,17 @@
         </div>
 
         <div class="related-tools">
-                <h3>📚 Related Articles</h3>
+                <h3>Related Articles</h3>
                 <div class="related-grid"><a href="/articles/best-static-hosting-pricing-2026-netlify-vs-vercel-vs-cloudflare-pages-vs-github-pages/" class="related-card">
-                    <div style="font-weight:600;margin-bottom:4px;">📖 Static Hosting Pricing in 2026: Netlify </div>
+                    <div style="font-weight:600;margin-bottom:4px;">Static Hosting Pricing in 2026: Netlify </div>
                     <div style="font-size:13px;color:#666;">2026-11-15</div>
                 </a>
 <a href="/articles/best-llm-api-pricing-2026-openai-gpt-6-vs-claude-opus-5-5-vs-gemini-4-vs-deepseek-compared/" class="related-card">
-                    <div style="font-weight:600;margin-bottom:4px;">📖 LLM API Pricing Compared in 2026: GPT-6 </div>
+                    <div style="font-weight:600;margin-bottom:4px;">LLM API Pricing Compared in 2026: GPT-6 </div>
                     <div style="font-size:13px;color:#666;">2026-11-14</div>
                 </a>
 <a href="/articles/best-cdn-pricing-2026-bunny-vs-cloudflare-vs-fastly-vs-cloudfront-compared/" class="related-card">
-                    <div style="font-weight:600;margin-bottom:4px;">📖 Best CDN Pricing in 2026: Bunny CDN vs C</div>
+                    <div style="font-weight:600;margin-bottom:4px;">Best CDN Pricing in 2026: Bunny CDN vs C</div>
                     <div style="font-size:13px;color:#666;">2026-11-13</div>
                 </a>
 </div>
@@ -495,7 +496,9 @@
     </main>
 
     <footer class="footer">
-        <p>&copy; 2026 AI Tool Lab &middot; Best AI Tools, Updated Daily &middot; <a href="https://www.aitoollab.cn/" style="color:#999;">中文版</a></p>
+        <p class="footer-logo">AI Tool Lab</p>
+        <p>Independent AI tool reviews. No sponsored rankings. &middot; <a href="/about.html">Editorial policy</a> &middot; <a href="https://www.aitoollab.cn/">中文版</a></p>
+        <p class="footer-meta">Copyright 2026 AI Tool Lab &middot; Updated daily</p>
     </footer>
     <button id="backToTop" aria-label="Back to top">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
@@ -506,7 +509,7 @@
 <script>
 document.addEventListener("DOMContentLoaded",function(){var b=document.getElementById("backToTop");if(!b)return;var s=function(){if(window.scrollY>400){b.classList.add("visible")}else{b.classList.remove("visible")}};window.addEventListener("scroll",s,{passive:true});s();b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"})});});
 </script>
-<script src="/js/tts-reader.js" defer></script><button id="darkModeToggle" class="dark-toggle-fab" aria-label="Toggle dark mode" title="Dark mode">🌙</button>
+<script src="/js/tts-reader.js" defer></script><button id="darkModeToggle" class="dark-toggle-fab" aria-label="Toggle dark mode" title="Dark mode">◐</button>
 <script>
 (function(){
     var btn = document.getElementById('darkModeToggle');
@@ -514,7 +517,7 @@ document.addEventListener("DOMContentLoaded",function(){var b=document.getElemen
     var dark = localStorage.getItem('darkMode') === 'true';
     function apply(d) {
         document.documentElement.setAttribute('data-theme', d ? 'dark' : '');
-        btn.textContent = d ? '☀️' : '🌙';
+        btn.textContent = d ? '◑' : '◐';
         localStorage.setItem('darkMode', d);
     }
     apply(dark);

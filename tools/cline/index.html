@@ -21,7 +21,7 @@
     <meta name="twitter:title" content="Cline Review 2026 - AI Tool Lab">
     <meta name="twitter:description" content="Open-source AI coding agent that runs as a VS Code extension. It does not just suggest code — it edits files, runs termi">
     <meta name="twitter:image" content="https://www.aitoolbox.hk/images/og/cline-en-og.png">
-    <link rel="stylesheet" href="/css/style.css?v=20261115094932">
+    <link rel="stylesheet" href="/css/style.css?v=20261115181948">
     <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -234,12 +234,13 @@
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;">
-                <h1>🛠️ AI Tool Lab <span>Updated daily</span></h1>
+            <a href="/" class="brand-link">
+                <div class="site-brand"><span class="brand-mark" aria-hidden="true"></span>AI Tool Lab</div>
+                <span class="header-tagline">Independent reviews</span>
             </a>
             <nav class="header-nav">
-                <a href="/category/">🛠️ Tools</a>
-                <a href="/articles/">📖 Articles</a>
+                <a href="/category/">Tools</a>
+                <a href="/articles/">Articles</a>
                 <a href="/category/ai-chat/">AI Chat</a>
                 <a href="/category/ai-image/">AI Image</a>
                 <a href="/category/ai-coding/">AI Coding</a>
@@ -255,18 +256,18 @@
     <main class="article-container">
         <div class="tool-header">
             <div class="tool-header-top">
-                <div class="tool-icon-lg" style="background:#4F46E5;">🤖</div>
+                <img class="tool-logo tool-icon-lg" src="/assets/icons/cline.png" alt="Cline" width="56" height="56" loading="lazy" decoding="async">
                 <div class="tool-header-info">
-                    <h2>Cline <span class="badge" style="background:#ff4444;color:#fff;padding:2px 8px;border-radius:4px;font-size:12px;">HOT</span></h2>
+                    <div class="tool-title-row"><h1>Cline</h1><span class="status-chip status-trending">Trending</span></div>
                     <p class="subtitle">Open-source AI coding agent that runs as a VS Code extension. It does not just suggest code — it edits files, runs terminal commands, fixes bugs, and reads your entire project. Free tier with Claude Sonnet 3.5, bring-your-own-API-key model for everything else. If you do freelance dev work and need to ship faster without paying Cursor's monthly fee, this is worth a serious look.</p>
                     <div class="rating-bar">⭐ 4.7 <span style="font-size:14px;color:#999;">(850K visits)</span></div>
                 </div>
             </div>
             <div class="tool-meta">
-                <div class="tool-meta-item">🌐 <strong>Website</strong>: cline.dev</div>
-                <div class="tool-meta-item">💰 <strong>Price</strong>: Free (bring your own API key) + Pro $10/mo</div>
-                <div class="tool-meta-item">📦 <strong>Platform</strong>: VS Code, JetBrains, Cursor</div>
-                <div class="tool-meta-item">🏷️ <strong>Category</strong>: AI Coding</div>
+                <div class="tool-meta-item"><strong>Website</strong>: cline.dev</div>
+                <div class="tool-meta-item"><strong>Price</strong>: Free (bring your own API key) + Pro $10/mo</div>
+                <div class="tool-meta-item"><strong>Platform</strong>: VS Code, JetBrains, Cursor</div>
+                <div class="tool-meta-item"><strong>Category</strong>: AI Coding</div>
             </div>
             <div class="action-bar">
                 <a href="https://cline.dev" target="_blank" rel="noopener" class="action-btn action-btn-primary">Visit Cline →</a>
@@ -274,12 +275,12 @@
         </div>
 
         <div class="tldr-box">
-            <strong>⚡ TL;DR</strong>
+            <strong>TL;DR</strong>
             <p>Open-source AI coding agent that runs as a VS Code extension. It does not just suggest code — it edits files, runs terminal commands, fixes bugs, and reads your entire project. Free tier with Claude Sonnet 3.5, bring-your-own-API-key model for everything else. If you do freelance dev work and need to ship faster without paying Cursor's monthly fee, this is worth a serious look.</p>
         </div>
 
         <div class="key-stats">
-            <h4>📊 Key Statistics</h4>
+            <h4>Key Statistics</h4>
             <div class="ks-grid"><div class="ks-item"><span class="ks-val">4.7</span><span class="ks-label">User Rating</span></div><div class="ks-item"><span class="ks-val">850K</span><span class="ks-label">Monthly Visits</span></div><div class="ks-item"><span class="ks-val">Free (bring your own API key) + Pro $10/mo</span><span class="ks-label">Pricing</span></div><div class="ks-item"><span class="ks-val">VS Code, JetBrains, Cursor</span><span class="ks-label">Platform</span></div></div>
         </div>
 
@@ -430,16 +431,16 @@
 
         <div class="pros-cons">
             <div class="pros">
-                <h4>👍 Pros</h4>
+                <h4>Pros</h4>
                 <ul><li>Actually free if you bring your own API key. No $20/month subscription like Cursor. Connect it to your Anthropic or OpenAI key and you pay only for the tokens you use. For a freelance dev doing 3-4 small projects monthly, the API bill is maybe $5-$15 — much less than any paid alternative</li><li>Multi-file editing works better than Copilot or Cursor for project-wide refactors. It reads your entire codebase to understand context, then makes changes across files. Renaming a database column and updating every reference — the kind of task that takes 30 minutes manually — finishes in 2 minutes with Cline</li><li>Built-in terminal execution means it can run tests, install dependencies, start dev servers, and check for errors on its own. The feedback loop is: generate code → run → see error → fix → retry. No copy-paste between editor and terminal. For debugging sessions, this saves real time</li><li>MCP (Model Context Protocol) support lets it connect to external tools — databases, APIs, file systems, web search. This means Cline can actually fetch documentation, query your database to verify a fix, or pull context from a project management tool. Not just a code suggester, more like a junior dev who can Google things</li><li>Git-aware by default. It writes commit messages, creates branches, and understands your git history. You can ask it to "commit the refactor from yesterday" and it knows what you mean. Nice when you are juggling multiple client projects and lose track of what you changed where</li></ul>
             </div>
             <div class="cons">
-                <h4>👎 Cons</h4>
+                <h4>Cons</h4>
                 <ul><li>Setup friction is real. You need to get an API key from Anthropic or OpenAI, configure it in VS Code settings, and understand which models cost what. Took me about 30 minutes the first time and I still had to look up model pricing. If you just want to install and code, Cursor's out-of-box experience is smoother</li><li>Free tier on Claude 3.5 Sonnet has usage limits. You get enough for casual use, but during an intense coding day — building a full feature with back-and-forth iterations — the cap hits around hour 4-5. Then you either wait or switch to your own API key. The Pro plan at $10/month lifts these limits and adds Claude Opus access</li><li>On large projects (50+ files, complex architecture), context understanding degrades. It tries to read the whole project but the context window fills up. You need to be specific about which files and modules matter. Not a dealbreaker, but you cannot just say "fix the auth system" on a 200-file monorepo and expect magic</li><li>Occasionally gets stuck in fix-break loops — generates code, runs a test, something breaks, generates a different fix, something else breaks. You need to step in and guide it. It works better as a fast junior dev who needs direction than a senior dev who independently architects solutions</li><li>No built-in team features. This is a solo dev tool. No shared prompts, no team billing, no collaborative editing. If you run a small dev agency with 3 people, everyone manages their own setup independently</li></ul>
             </div>
         </div>
 
-        <div class="faq-section"><h3>❓ FAQ</h3><div class="faq-item">
+        <div class="faq-section"><h3>FAQ</h3><div class="faq-item">
                     <details>
                         <summary>Cline vs Cursor — which one actually saves more time for freelance work?</summary>
                         <div class="faq-answer"><p>They solve different problems. Cursor is better if you want an IDE replacement with AI integrated into every keystroke — tab-to-complete, inline suggestions, chat sidebar. Everything is smooth and polished. Cline is better if you want an autonomous agent that can handle large tasks — refactoring an entire module, debugging a failing test suite, setting up a new project scaffold. Cursor is your fast co-pilot for line-by-line work. Cline is your junior dev for multi-file tasks. Price-wise: Cursor is $20/month flat. Cline is free if you bring your own API key and pay per token, which usually works out cheaper ($5-$15/month for moderate use). If you write a lot of boilerplate code and do frequent refactors, Cline's agent mode saves more time. If you spend most of your time editing existing code and need fast suggestions, Cursor is the better choice. Some devs use both — Cursor as their daily driver and Cline for the heavy lifting tasks.
@@ -464,7 +465,7 @@
 
         <div class="author-block">
         <div class="author-block-inner">
-            <div class="author-avatar">🛠️</div>
+            <div class="author-avatar">A</div>
             <div class="author-body">
                 <p class="author-label"><strong>About the reviewer</strong></p>
                 <p class="author-text">This Cline review was written by the <a href="/author/">AI Tool Lab Editorial Team</a>, based on real paid usage and testing. We spend $200+/month on AI tool subscriptions so you do not have to. Every claim in this review is verifiable — if you find an error, <a href="/contact.html">let us know</a> and we will fix it within 48 hours.</p>
@@ -474,29 +475,29 @@
     </div>
 
         <div class="related-tools" id="relatedSection">
-            <h3>🔗 Related Tools</h3>
+            <h3>Related Tools</h3>
             <div class="related-grid"><a href="/tools/github-copilot/" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">💻</div>
+                <img class="tool-logo related-tile" src="/assets/icons/github-copilot.png" alt="GitHub Copilot" width="40" height="40" loading="lazy" decoding="async">
                 <div style="font-weight:600;">GitHub Copilot</div>
                 <div style="font-size:13px;color:#666;">AI Coding</div>
             </a>
 <a href="/tools/cursor/" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">⬛</div>
+                <img class="tool-logo related-tile" src="/assets/icons/cursor.svg" alt="Cursor" width="40" height="40" loading="lazy" decoding="async">
                 <div style="font-weight:600;">Cursor</div>
                 <div style="font-size:13px;color:#666;">AI Coding</div>
             </a>
 <a href="/tools/replit-ai/" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">💻</div>
+                <img class="tool-logo related-tile" src="/assets/icons/replit-ai.svg" alt="Replit AI" width="40" height="40" loading="lazy" decoding="async">
                 <div style="font-weight:600;">Replit AI</div>
                 <div style="font-size:13px;color:#666;">AI Coding</div>
             </a>
 <a href="/tools/lovable/" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">🎨</div>
+                <img class="tool-logo related-tile" src="/assets/icons/lovable.png" alt="Lovable" width="40" height="40" loading="lazy" decoding="async">
                 <div style="font-weight:600;">Lovable</div>
                 <div style="font-size:13px;color:#666;">AI Coding</div>
             </a>
 <a href="/tools/claude-code/" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">💻</div>
+                <img class="tool-logo related-tile" src="/assets/icons/claude-code.svg" alt="Claude Code" width="40" height="40" loading="lazy" decoding="async">
                 <div style="font-weight:600;">Claude Code</div>
                 <div style="font-size:13px;color:#666;">AI Coding</div>
             </a>
@@ -504,17 +505,17 @@
         </div>
 
         <div class="related-tools">
-                <h3>📚 Related Articles</h3>
+                <h3>Related Articles</h3>
                 <div class="related-grid"><a href="/articles/best-ai-fraud-detection-tools-2026-sift-vs-forter-vs-signifyd-vs-riskified/" class="related-card">
-                    <div style="font-weight:600;margin-bottom:4px;">📖 Best AI Fraud Detection Tools 2026: Sift</div>
+                    <div style="font-weight:600;margin-bottom:4px;">Best AI Fraud Detection Tools 2026: Sift</div>
                     <div style="font-size:13px;color:#666;">2026-09-24</div>
                 </a>
 <a href="/articles/best-static-hosting-pricing-2026-netlify-vs-vercel-vs-cloudflare-pages-vs-github-pages/" class="related-card">
-                    <div style="font-weight:600;margin-bottom:4px;">📖 Static Hosting Pricing in 2026: Netlify </div>
+                    <div style="font-weight:600;margin-bottom:4px;">Static Hosting Pricing in 2026: Netlify </div>
                     <div style="font-size:13px;color:#666;">2026-11-15</div>
                 </a>
 <a href="/articles/best-llm-api-pricing-2026-openai-gpt-6-vs-claude-opus-5-5-vs-gemini-4-vs-deepseek-compared/" class="related-card">
-                    <div style="font-weight:600;margin-bottom:4px;">📖 LLM API Pricing Compared in 2026: GPT-6 </div>
+                    <div style="font-weight:600;margin-bottom:4px;">LLM API Pricing Compared in 2026: GPT-6 </div>
                     <div style="font-size:13px;color:#666;">2026-11-14</div>
                 </a>
 </div>
@@ -522,7 +523,9 @@
     </main>
 
     <footer class="footer">
-        <p>&copy; 2026 AI Tool Lab &middot; Best AI Tools, Updated Daily &middot; <a href="https://www.aitoollab.cn/" style="color:#999;">中文版</a></p>
+        <p class="footer-logo">AI Tool Lab</p>
+        <p>Independent AI tool reviews. No sponsored rankings. &middot; <a href="/about.html">Editorial policy</a> &middot; <a href="https://www.aitoollab.cn/">中文版</a></p>
+        <p class="footer-meta">Copyright 2026 AI Tool Lab &middot; Updated daily</p>
     </footer>
     <button id="backToTop" aria-label="Back to top">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
@@ -533,7 +536,7 @@
 <script>
 document.addEventListener("DOMContentLoaded",function(){var b=document.getElementById("backToTop");if(!b)return;var s=function(){if(window.scrollY>400){b.classList.add("visible")}else{b.classList.remove("visible")}};window.addEventListener("scroll",s,{passive:true});s();b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"})});});
 </script>
-<script src="/js/tts-reader.js" defer></script><button id="darkModeToggle" class="dark-toggle-fab" aria-label="Toggle dark mode" title="Dark mode">🌙</button>
+<script src="/js/tts-reader.js" defer></script><button id="darkModeToggle" class="dark-toggle-fab" aria-label="Toggle dark mode" title="Dark mode">◐</button>
 <script>
 (function(){
     var btn = document.getElementById('darkModeToggle');
@@ -541,7 +544,7 @@ document.addEventListener("DOMContentLoaded",function(){var b=document.getElemen
     var dark = localStorage.getItem('darkMode') === 'true';
     function apply(d) {
         document.documentElement.setAttribute('data-theme', d ? 'dark' : '');
-        btn.textContent = d ? '☀️' : '🌙';
+        btn.textContent = d ? '◑' : '◐';
         localStorage.setItem('darkMode', d);
     }
     apply(dark);

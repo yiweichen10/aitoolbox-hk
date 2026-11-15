@@ -52,6 +52,85 @@ def get_tool_link(tool, slug, site='en'):
         return aff, True
     return tool.get('url', ''), False
 
+# ─── Visual System v2 helpers (2026-11-15 redesign) ───────────────────────────
+
+def safe_tile_color(hex_color: str) -> str:
+    """Preserve a tool's brand hue but darken light colours so a white
+    monogram stays readable (WCAG AA). Replaces decorative emoji tiles."""
+    s = (hex_color or '').strip().lstrip('#')
+    if len(s) == 3:
+        s = ''.join(c * 2 for c in s)
+    if len(s) != 6:
+        return '#1C1C1C'
+    try:
+        r, g, b = (int(s[i:i + 2], 16) for i in (0, 2, 4))
+    except ValueError:
+        return '#1C1C1C'
+    lum = 0.2126 * r + 0.7152 * g + 0.0722 * b
+    if lum > 118:
+        k = 118 / lum
+        r, g, b = int(r * k), int(g * k), int(b * k)
+    return f'#{r:02x}{g:02x}{b:02x}'
+
+
+def resolve_tool_icon(slug: str) -> str:
+    """Local cache of real tool logos, mirroring the Chinese site's
+    assets/icons approach. Returns a web path or '' (never a remote URL,
+    so builds stay offline and images cannot break on third-party downtime)."""
+    if not slug:
+        return ''
+    icons_dir = os.path.join(BASE_DIR, 'assets', 'icons')
+    for ext in ('.png', '.svg'):
+        if os.path.exists(os.path.join(icons_dir, slug + ext)):
+            return f'/assets/icons/{slug}{ext}'
+    return ''
+
+
+def tool_tile(tool: dict, css_class: str = 'tool-icon') -> str:
+    """Real tool logo with an accessible monogram fallback.
+
+    The <img> carries alt (entity name for SEO/AI extraction), width/height
+    (no layout shift) and lazy loading. A locally missing logo degrades to
+    a letter tile — never an emoji.
+    """
+    name = str(tool.get('name', '?'))
+    slug = str(tool.get('slug', ''))
+    src = resolve_tool_icon(slug)
+    size = {'tool-icon-lg': 56, 'related-tile': 40, 'sidebar-tile': 28,
+            'ft-icon': 56}.get(css_class, 40)
+    if src:
+        return (f'<img class="tool-logo {css_class}" src="{src}" '
+                f'alt="{escape_html(name)}" width="{size}" height="{size}" '
+                f'loading="lazy" decoding="async">')
+    letter = next((c for c in name if c.isalnum()), '?').upper()
+    return (f'<div class="{css_class}" '
+            f'style="background:{safe_tile_color(tool.get("color", ""))};">'
+            f'{escape_html(letter)}</div>')
+
+
+def status_chip(tool: dict) -> str:
+    """Three semantic badge roles only.
+
+      green  = Verified          (legacy: NEW)
+      blue   = Editor's Choice   (legacy: PICK)
+      orange = Trending          (legacy: HOT)
+
+    Red is reserved for errors/warnings and is never a marketing badge.
+    A literal 'None' badge is dropped instead of rendered.
+    """
+    b = tool.get('badge') or {}
+    text = str(b.get('text') or '').strip()
+    if not text or text.lower() in ('none', 'null', 'n/a'):
+        return ''
+    role = {'new': 'verified', 'pick': 'choice', 'hot': 'trending'}.get(
+        str(b.get('type') or '').lower(), 'verified')
+    label = {
+        'verified': 'Verified',
+        'choice': "Editor's Choice",
+        'trending': 'Trending',
+    }[role]
+    return f'<span class="status-chip status-{role}">{label}</span>'
+
 # ─── Back-to-top button (no Chinese) ──────────────────────────────────────────
 BACK_TO_TOP_BLOCK = '''<button id="backToTop" aria-label="Back to top">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
@@ -64,7 +143,7 @@ document.addEventListener("DOMContentLoaded",function(){var b=document.getElemen
 </script>
 <script src="/js/tts-reader.js" defer></script>'''
 
-DARK_MODE_BLOCK = '''<button id="darkModeToggle" class="dark-toggle-fab" aria-label="Toggle dark mode" title="Dark mode">🌙</button>
+DARK_MODE_BLOCK = '''<button id="darkModeToggle" class="dark-toggle-fab" aria-label="Toggle dark mode" title="Dark mode">◐</button>
 <script>
 (function(){
     var btn = document.getElementById('darkModeToggle');
@@ -72,7 +151,7 @@ DARK_MODE_BLOCK = '''<button id="darkModeToggle" class="dark-toggle-fab" aria-la
     var dark = localStorage.getItem('darkMode') === 'true';
     function apply(d) {
         document.documentElement.setAttribute('data-theme', d ? 'dark' : '');
-        btn.textContent = d ? '☀️' : '🌙';
+        btn.textContent = d ? '◑' : '◐';
         localStorage.setItem('darkMode', d);
     }
     apply(dark);
@@ -154,9 +233,9 @@ SCHEMA_HOMEPAGE_BLOCK = '''    <!-- Schema: WebSite + SearchAction (AEO+GEO 2026
 # ─── Global nav (English) ─────────────────────────────────────────────────────
 GLOBAL_NAV_EN = '''    <nav class="global-nav" aria-label="Global navigation">
         <div class="global-nav-inner">
-            <a href="/category/" class="gn-item">📂 All Categories</a>
-            <a href="/articles/" class="gn-item">📖 Articles</a>
-            <a href="/" class="gn-item">🏠 Home</a>
+            <a href="/category/" class="gn-item">All Categories</a>
+            <a href="/articles/" class="gn-item">Articles</a>
+            <a href="/" class="gn-item">Home</a>
         </div>
     </nav>'''
 
@@ -262,7 +341,7 @@ def markdown_to_html(md: str) -> str:
     # Headings
     html = re.sub(r'^### (.+)$', r'<h3>\1</h3>', html, flags=re.MULTILINE)
     html = re.sub(r'^## (.+)$',  r'<h2>\1</h2>', html, flags=re.MULTILINE)
-    html = re.sub(r'^# (.+)$',   r'<h1>\1</h1>', html, flags=re.MULTILINE)
+    html = re.sub(r'^# (.+)$',   r'<h2>\1</h2>', html, flags=re.MULTILINE)
     # Blockquote
     html = re.sub(r'^> (.+)$', r'<blockquote>\1</blockquote>', html, flags=re.MULTILINE)
     # Bold / inline code
@@ -304,12 +383,13 @@ def markdown_to_html(md: str) -> str:
 def header_html(title_text: str = "AI Tool Lab") -> str:
     return f'''    <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;">
-                <h1>🛠️ {SITE_NAME} <span>Updated daily</span></h1>
+            <a href="/" class="brand-link">
+                <div class="site-brand"><span class="brand-mark" aria-hidden="true"></span>{SITE_NAME}</div>
+                <span class="header-tagline">Independent reviews</span>
             </a>
             <nav class="header-nav">
-                <a href="/category/">🛠️ Tools</a>
-                <a href="/articles/">📖 Articles</a>
+                <a href="/category/">Tools</a>
+                <a href="/articles/">Articles</a>
                 <a href="/category/ai-chat/">AI Chat</a>
                 <a href="/category/ai-image/">AI Image</a>
                 <a href="/category/ai-coding/">AI Coding</a>
@@ -319,9 +399,10 @@ def header_html(title_text: str = "AI Tool Lab") -> str:
     </header>'''
 
 def footer_html() -> str:
-    today = datetime.now().strftime('%Y-%m-%d')
     return f'''    <footer class="footer">
-        <p>&copy; {datetime.now().year} {SITE_NAME} &middot; Best AI Tools, Updated Daily &middot; <a href="{SITE_DOMAIN_CN}/" style="color:#999;">中文版</a></p>
+        <p class="footer-logo">{SITE_NAME}</p>
+        <p>Independent AI tool reviews. No sponsored rankings. &middot; <a href="/about.html">Editorial policy</a> &middot; <a href="{SITE_DOMAIN_CN}/">中文版</a></p>
+        <p class="footer-meta">Copyright {datetime.now().year} {SITE_NAME} &middot; Updated daily</p>
     </footer>'''
 
 def hreflang_tags(zh_path: str, en_path: str) -> str:
@@ -368,12 +449,12 @@ def build_tool_page_en(tool: dict, all_tools: list, all_articles: list = None) -
         cards = ''
         for r in selected:
             cards += f'''<a href="/tools/{r['slug']}/" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">{r['emoji']}</div>
+                {tool_tile(r, 'related-tile')}
                 <div style="font-weight:600;">{r['name']}</div>
                 <div style="font-size:13px;color:#666;">{r.get('category','')}</div>
             </a>\n'''
         related_html = f'''<div class="related-tools" id="relatedSection">
-            <h3>🔗 Related Tools</h3>
+            <h3>Related Tools</h3>
             <div class="related-grid">{cards}</div>
         </div>'''
 
@@ -388,11 +469,11 @@ def build_tool_page_en(tool: dict, all_tools: list, all_articles: list = None) -
             cards = ''
             for a in matched[:3]:
                 cards += f'''<a href="/articles/{a['slug']}/" class="related-card">
-                    <div style="font-weight:600;margin-bottom:4px;">📖 {escape_html(a['title'][:40])}</div>
+                    <div style="font-weight:600;margin-bottom:4px;">{escape_html(a['title'][:40])}</div>
                     <div style="font-size:13px;color:#666;">{a.get('date','')}</div>
                 </a>\n'''
             related_articles_html = f'''<div class="related-tools">
-                <h3>📚 Related Articles</h3>
+                <h3>Related Articles</h3>
                 <div class="related-grid">{cards}</div>
             </div>'''
 
@@ -403,11 +484,11 @@ def build_tool_page_en(tool: dict, all_tools: list, all_articles: list = None) -
         cons_html = ''.join(f'<li>{c}</li>' for c in tool['cons'])
         pros_cons_html = f'''<div class="pros-cons">
             <div class="pros">
-                <h4>👍 Pros</h4>
+                <h4>Pros</h4>
                 <ul>{pros_html}</ul>
             </div>
             <div class="cons">
-                <h4>👎 Cons</h4>
+                <h4>Cons</h4>
                 <ul>{cons_html}</ul>
             </div>
         </div>'''
@@ -433,7 +514,7 @@ def build_tool_page_en(tool: dict, all_tools: list, all_articles: list = None) -
                 </div>\n'''
                 faq_schema.append({'@type':'Question','name':plain_text_for_schema(q),'acceptedAnswer':{'@type':'Answer','text':plain_text_for_schema(a)}})
         if faq_html:
-            faq_html = f'<div class="faq-section"><h3>❓ FAQ</h3>{faq_html}</div>'
+            faq_html = f'<div class="faq-section"><h3>FAQ</h3>{faq_html}</div>'
 
     faq_page_schema = ''
     if faq_schema:
@@ -441,10 +522,7 @@ def build_tool_page_en(tool: dict, all_tools: list, all_articles: list = None) -
         faq_page_schema = f'<script type="application/ld+json">{json.dumps(faq_sd, ensure_ascii=False)}</script>'
 
     # Badge
-    badge_html = ''
-    if tool.get('badge'):
-        bc = {'hot':'#ff4444','new':'#00aa00','pick':'#2563eb'}.get(tool['badge'].get('type'),'#2563eb')
-        badge_html = f' <span class="badge" style="background:{bc};color:#fff;padding:2px 8px;border-radius:4px;font-size:12px;">{tool["badge"]["text"]}</span>'
+    badge_html = status_chip(tool)
 
     # Platform — hero meta line shows a short label only; long prose stays out of the layout
     def _short_stat(value: str, limit: int) -> str:
@@ -462,7 +540,7 @@ def build_tool_page_en(tool: dict, all_tools: list, all_articles: list = None) -
     platform_html = ''
     if platform_short:
         title_attr = f' title="{escape_html(platform_full)}"' if len(platform_full) > 60 else ''
-        platform_html = f'<div class="tool-meta-item"{title_attr}>📦 <strong>Platform</strong>: {escape_html(platform_short)}</div>'
+        platform_html = f'<div class="tool-meta-item"{title_attr}><strong>Platform</strong>: {escape_html(platform_short)}</div>'
 
     # Dates
     today_iso   = datetime.now().strftime('%Y-%m-%d')
@@ -602,7 +680,7 @@ def build_tool_page_en(tool: dict, all_tools: list, all_articles: list = None) -
     desc_short = tool.get('description','')
     if desc_short:
         tldr_html = f'''<div class="tldr-box">
-            <strong>⚡ TL;DR</strong>
+            <strong>TL;DR</strong>
             <p>{escape_html(desc_short)}</p>
         </div>'''
 
@@ -623,7 +701,7 @@ def build_tool_page_en(tool: dict, all_tools: list, all_articles: list = None) -
         stat_items.append(f'<div class="ks-item"><span class="ks-val">{escape_html(platform_short)}</span><span class="ks-label">Platform</span></div>')
     if stat_items:
         key_stats_html = f'''<div class="key-stats">
-            <h4>📊 Key Statistics</h4>
+            <h4>Key Statistics</h4>
             <div class="ks-grid">{"".join(stat_items)}</div>
         </div>'''
 
@@ -631,7 +709,7 @@ def build_tool_page_en(tool: dict, all_tools: list, all_articles: list = None) -
     today_iso_author = datetime.now().strftime('%Y-%m-%d')
     author_block = f'''<div class="author-block">
         <div class="author-block-inner">
-            <div class="author-avatar">🛠️</div>
+            <div class="author-avatar">A</div>
             <div class="author-body">
                 <p class="author-label"><strong>About the reviewer</strong></p>
                 <p class="author-text">This {escape_html(name)} review was written by the <a href="/author/">AI Tool Lab Editorial Team</a>, based on real paid usage and testing. We spend $200+/month on AI tool subscriptions so you do not have to. Every claim in this review is verifiable — if you find an error, <a href="/contact.html">let us know</a> and we will fix it within 48 hours.</p>
@@ -684,18 +762,18 @@ def build_tool_page_en(tool: dict, all_tools: list, all_articles: list = None) -
     <main class="article-container">
         <div class="tool-header">
             <div class="tool-header-top">
-                <div class="tool-icon-lg" style="background:{tool['color']};">{tool['emoji']}</div>
+                {tool_tile(tool, 'tool-icon-lg')}
                 <div class="tool-header-info">
-                    <h2>{escape_html(name)}{badge_html}</h2>
+                    <div class="tool-title-row"><h1>{escape_html(name)}</h1>{badge_html}</div>
                     <p class="subtitle">{escape_html(tool['description'])}</p>
                     <div class="rating-bar">{tool['rating']}{' <span style="font-size:14px;color:#999;">(' + escape_html(visits_val) + ' visits)</span>' if visits_val and len(visits_val) <= 12 else ''}</div>
                 </div>
             </div>
             <div class="tool-meta">
-                <div class="tool-meta-item">🌐 <strong>Website</strong>: {tool['url'].replace('https://','')}</div>
-                <div class="tool-meta-item">💰 <strong>Price</strong>: {tool.get('price','')}</div>
+                <div class="tool-meta-item"><strong>Website</strong>: {tool['url'].replace('https://','')}</div>
+                <div class="tool-meta-item"><strong>Price</strong>: {tool.get('price','')}</div>
                 {platform_html}
-                <div class="tool-meta-item">🏷️ <strong>Category</strong>: {escape_html(cat)}</div>
+                <div class="tool-meta-item"><strong>Category</strong>: {escape_html(cat)}</div>
             </div>
             <div class="action-bar">
                 <a href="{get_tool_link(tool, slug, 'en')[0]}" target="_blank" rel="{'nofollow noopener sponsored' if get_tool_link(tool, slug, 'en')[1] else 'noopener'}" class="action-btn action-btn-primary">Visit {escape_html(name)} →</a>
@@ -752,12 +830,12 @@ def build_article_page_en(article: dict, all_articles: list, all_tools: list = N
             cards = ''
             for t in matched[:5]:
                 cards += f'''<a href="/tools/{t['slug']}/" class="related-card">
-                    <div style="font-size:24px;margin-bottom:8px;">{t['emoji']}</div>
+                    {tool_tile(t, 'related-tile')}
                     <div style="font-weight:600;">{escape_html(t['name'])}</div>
                     <div style="font-size:13px;color:#666;">{escape_html(t.get('category',''))}</div>
                 </a>\n'''
             related_tools_html = f'''<div class="related-tools">
-            <h3>🔧 Related Tools</h3>
+            <h3>Related Tools</h3>
             <div class="related-grid">{cards}</div>
         </div>'''
 
@@ -774,7 +852,7 @@ def build_article_page_en(article: dict, all_articles: list, all_tools: list = N
                 <div style="font-size:13px;color:#666;">{a.get('date','')}</div>
             </a>\n'''
         related_html = f'''<div class="related-tools">
-            <h3>📖 Related Articles</h3>
+            <h3>Related Articles</h3>
             <div class="related-grid">{cards}</div>
         </div>'''
 
@@ -826,7 +904,7 @@ def build_article_page_en(article: dict, all_articles: list, all_tools: list = N
     tldr_text = article.get('description','').strip()
     if tldr_text:
         tldr_html = f'''<div class="tldr-box" style="background:linear-gradient(135deg,#fff8e6,#ffefb8);border-left:4px solid #f5a623;padding:16px 20px;margin-bottom:24px;border-radius:0 8px 8px 0;font-size:14.5px;line-height:1.7;">
-                <strong style="color:#c77d00;font-size:15px;">⚡ TL;DR</strong><br>
+                <strong style="color:var(--brand-blue);font-size:15px;">TL;DR</strong><br>
                 <span style="color:#555;">{escape_html(tldr_text)}</span>
             </div>'''
     else:
@@ -975,7 +1053,7 @@ def build_article_page_en(article: dict, all_articles: list, all_tools: list = N
             <div style="color:#999;font-size:14px;margin-bottom:24px;">
                 {date_str} · {escape_html(cat)} ·
                 <span itemprop="author" itemscope itemtype="https://schema.org/Organization"><a href="/author/" itemprop="url" style="color:#2563eb;text-decoration:none;"><span itemprop="name">AI Tool Lab Editorial Team</span></a></span> ·
-                <span style="color:#bbb;">📖 {max(3, len(article.get('content','')) // 500)} min read</span>
+                <span style="color:#bbb;">{max(3, len(article.get('content','')) // 500)} min read</span>
             </div>
             {tldr_html}
             {content_html}
@@ -1006,15 +1084,12 @@ def build_category_page_en(cat_name: str, tools: list) -> str:
     cat_slug = get_category_slug_en(cat_name)
     tool_cards = ''
     for t in tools:
-        badge_html = ''
-        if t.get('badge'):
-            bc = {'hot':'#ff4444','new':'#00aa00','pick':'#2563eb'}.get(t['badge'].get('type'),'#2563eb')
-            badge_html = f'<span class="badge" style="background:{bc};color:#fff;padding:2px 6px;border-radius:3px;font-size:11px;">{t["badge"]["text"]}</span>'
+        badge_html = status_chip(t)
         tool_cards += f'''<a href="/tools/{t['slug']}/" class="tool-card">
-            <div class="tool-icon" style="background:{t['color']};">{t['emoji']}</div>
+            {tool_tile(t)}
             <div class="tool-info">
-                <h3>{escape_html(t['name'])} {badge_html}</h3>
-                <p>{escape_html(t['description'][:80])}</p>
+                <div class="tool-title-row"><h3>{escape_html(t['name'])}</h3>{badge_html}</div>
+                <p>{escape_html(t['description'])}</p>
                 <div class="tool-meta-row">
                     <span>{t['rating']}</span>
                     <span>{t.get('price','')}</span>
@@ -1183,9 +1258,9 @@ def build_category_index_en(tools_by_cat: dict) -> str:
     cat_cards = ''
     for cat_name, tools in tools_by_cat.items():
         cat_slug  = get_category_slug_en(cat_name)
-        sample_emoji = tools[0]['emoji'] if tools else '🤖'
+        sample_tile = tool_tile({'name': cat_name, 'color': '#1C1C1C'})
         cat_cards += f'''<a href="/category/{cat_slug}/" class="tool-card" style="text-decoration:none;">
-            <div class="tool-icon" style="background:#2563eb;">{sample_emoji}</div>
+            {sample_tile}
             <div class="tool-info">
                 <h3>{escape_html(cat_name)}</h3>
                 <p>{len(tools)} tools reviewed</p>
@@ -1239,15 +1314,12 @@ def build_index_en(tools: list, articles: list) -> str:
     top_tools = sorted(tools, key=lambda t: parse_visits(t.get('visits','0')), reverse=True)[:12]
     tool_cards = ''
     for t in top_tools:
-        badge_html = ''
-        if t.get('badge'):
-            bc = {'hot':'#ff4444','new':'#00aa00','pick':'#2563eb'}.get(t['badge'].get('type'),'#2563eb')
-            badge_html = f'<span class="badge" style="background:{bc};color:#fff;padding:2px 6px;border-radius:3px;font-size:11px;margin-left:6px;">{t["badge"]["text"]}</span>'
+        badge_html = status_chip(t)
         tool_cards += f'''<a href="/tools/{t['slug']}/" class="tool-card">
-            <div class="tool-icon" style="background:{t['color']};">{t['emoji']}</div>
+            {tool_tile(t)}
             <div class="tool-info">
-                <h3>{escape_html(t['name'])}{badge_html}</h3>
-                <p>{escape_html(t['description'][:70])}</p>
+                <div class="tool-title-row"><h3>{escape_html(t['name'])}</h3>{badge_html}</div>
+                <p>{escape_html(t['description'])}</p>
                 <div class="tool-meta-row">
                     <span>{t['rating']}</span>
                     <span>{t.get('price','')}</span>
@@ -1268,11 +1340,35 @@ def build_index_en(tools: list, articles: list) -> str:
             return 0
 
     top_rated = sorted(tools, key=lambda t: parse_rating(t.get('rating','')), reverse=True)[:8]
+
+    # Editor's shortlist lives in the hero; the same ranking is not repeated
+    # as a decorative sidebar list. Adds three tool links instead of removing any.
+    shortlist_rows = ''
+    for i, t in enumerate(top_rated[:3], start=1):
+        slug = t['slug']
+        rating = str(t.get('rating', '')).replace('⭐', '').strip()
+        shortlist_rows += (
+            f'<div class="hs-row">'
+            f'<span class="hs-rank">{i:02d}</span>'
+            f'<a class="hs-name" href="/tools/{slug}/">{escape_html(t["name"])}</a>'
+            f'<span class="hs-score">{escape_html(rating)}</span>'
+            f'</div>\n'
+        )
+    shortlist_html = f'''<aside class="hero-shortlist">
+        <div class="hs-head">
+            <span class="hs-kicker">EDITOR'S SHORTLIST</span>
+            <span class="hs-verified">&#9679; Verified</span>
+        </div>
+        <p class="hs-sub">Tested this week, ranked by score</p>
+        {shortlist_rows}
+        <div class="hs-foot">Last verified {datetime.now().strftime('%d %b %Y')} &middot; <a href="/about.html">See methodology</a></div>
+    </aside>'''
+
     top_rated_html = '<ol style="list-style:none;padding:0;margin:0;">'
     for i, t in enumerate(top_rated):
         top_rated_html += f'''<li style="display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid #f1f5f9;font-size:13px;">
             <span style="font-weight:800;color:var(--primary-color);min-width:20px;">{i+1}.</span>
-            <span style="font-size:18px;">{t['emoji']}</span>
+            {tool_tile(t, 'sidebar-tile')}
             <div style="flex:1;min-width:0;">
                 <a href="/tools/{t['slug']}/" style="color:var(--text-main);text-decoration:none;font-weight:600;display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">{escape_html(t['name'])}</a>
                 <span style="color:var(--text-muted);font-size:11px;">{t.get('rating','')}</span>
@@ -1286,7 +1382,7 @@ def build_index_en(tools: list, articles: list) -> str:
     for i, t in enumerate(most_popular):
         most_popular_html += f'''<li style="display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid #f1f5f9;font-size:13px;">
             <span style="font-weight:800;color:var(--primary-color);min-width:20px;">{i+1}.</span>
-            <span style="font-size:18px;">{t['emoji']}</span>
+            {tool_tile(t, 'sidebar-tile')}
             <div style="flex:1;min-width:0;">
                 <a href="/tools/{t['slug']}/" style="color:var(--text-main);text-decoration:none;font-weight:600;display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">{escape_html(t['name'])}</a>
                 <span style="color:var(--text-muted);font-size:11px;">{t.get('visits','')} visits</span>
@@ -1297,9 +1393,9 @@ def build_index_en(tools: list, articles: list) -> str:
     # Featured tool (top rated, Western pattern: "Tool of the Week")
     featured = top_rated[0] if top_rated else tools[0]
     featured_html = f'''<div class="featured-tool">
-        <span class="ft-badge">⚡ Featured Tool</span>
+        <span class="ft-badge">Featured Tool</span>
         <a href="/tools/{featured['slug']}/" style="text-decoration:none;color:inherit;display:flex;align-items:center;gap:16px;">
-            <div class="ft-icon" style="background:{featured['color']};">{featured['emoji']}</div>
+            {tool_tile(featured, 'ft-icon')}
             <div style="flex:1;">
                 <h3 style="margin:0 0 4px 0;font-size:18px;">{escape_html(featured['name'])}</h3>
                 <p style="margin:0 0 6px 0;font-size:13px;color:var(--text-muted);">{escape_html(featured['description'][:100])}</p>
@@ -1409,27 +1505,29 @@ def build_index_en(tools: list, articles: list) -> str:
 
     # Trust section (GEO — EEAT signals)
     trust_html = '''<div class="trust-section">
-        <h3>🔍 How We Review AI Tools</h3>
+        <p class="trust-kicker">WHY TRUST THIS LIST</p>
+        <h3>We pay, we test, we say no.</h3>
+        <p class="trust-intro">Every ranking comes from long-term paid usage. No tool can buy a position, and we publish what changed with each update.</p>
         <div class="trust-grid">
             <div class="trust-card">
-                <div class="trust-icon">💰</div>
-                <h4>We Pay to Test</h4>
-                <p>We spend $200+/month on AI tool subscriptions. Every review is based on real paid usage, not free trials or marketing demos.</p>
+                <div class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18"/><path d="M16 15h2"/></svg></div>
+                <h4>We pay for every tool</h4>
+                <p>$200+/month in subscriptions. Reviews come from long-term paid usage, never free trials or demo decks.</p>
             </div>
             <div class="trust-card">
-                <div class="trust-icon">🔄</div>
-                <h4>Updated Daily</h4>
-                <p>AI tools change fast. We update reviews daily with new pricing, features, and performance data. Never stale.</p>
+                <div class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11a8 8 0 1 0-2.3 5.7"/><path d="M20 4v7h-7"/></svg></div>
+                <h4>Updated as things change</h4>
+                <p>Pricing, limits and features are re-checked daily. Every card shows when its facts were last verified.</p>
             </div>
             <div class="trust-card">
-                <div class="trust-icon">⚖️</div>
-                <h4>No Sponsored Reviews</h4>
-                <p>We do not take payment for positive reviews. No tool can buy a spot on this site. If it is bad, we say so.</p>
+                <div class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z"/><path d="M9 12l2 2 4-4"/></svg></div>
+                <h4>No sponsored placements</h4>
+                <p>Rankings are not for sale. Affiliate links never affect score, order, or whether a tool is listed at all.</p>
             </div>
             <div class="trust-card">
-                <div class="trust-icon">📊</div>
-                <h4>Data-Driven Rankings</h4>
-                <p>Our rankings combine real usage data, pricing analysis, and hands-on testing. No AI-generated summaries — every word is written by a human who used the tool.</p>
+                <div class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18"/><rect x="5" y="11" width="3" height="9"/><rect x="10.5" y="6" width="3" height="14"/><rect x="16" y="14" width="3" height="6"/></svg></div>
+                <h4>Scores you can audit</h4>
+                <p>Each rating combines direct testing, pricing analysis and documented limits. Written by humans.</p>
             </div>
         </div>
     </div>'''
@@ -1465,22 +1563,29 @@ def build_index_en(tools: list, articles: list) -> str:
 
     <main>
         <section class="hero">
-            <h2>Find the Best AI Tools for Your Work</h2>
-            <p>{total_tools}+ AI tools reviewed and ranked by real humans who actually use them. Updated daily.</p>
-            <div class="hero-search">
-                <input type="text" placeholder="Search {total_tools}+ AI tools..." id="searchInput" aria-label="Search AI tools" onkeypress="if(event.key==='Enter')performSearch()">
-                <button onclick="performSearch()">🔍</button>
-            </div>
-            <div id="searchResults" style="display:none;text-align:center;font-size:14px;color:rgba(255,255,255,0.85);margin-top:12px;"></div>
-            <div class="hero-categories">
-                <a href="/category/ai-chat/">AI Chat</a>
-                <a href="/category/ai-image/">AI Image</a>
-                <a href="/category/ai-writing/">AI Writing</a>
-                <a href="/category/ai-coding/">AI Coding</a>
-                <a href="/category/ai-video/">AI Video</a>
-                <a href="/category/ai-design/">AI Design</a>
-                <a href="/category/ai-productivity/">Productivity</a>
-                <a href="/category/">All Categories →</a>
+            <div class="hero-inner">
+                <div class="hero-copy">
+                    <p class="hero-kicker">INDEPENDENT AI TOOL REVIEWS &middot; UPDATED {datetime.now().strftime('%d %b %Y').upper()}</p>
+                    <h1>Best AI Tools 2026, Ranked by Real Testing</h1>
+                    <p class="hero-sub">{total_tools}+ tools reviewed on paid subscriptions. {total_articles} in-depth comparisons. Zero sponsored rankings. Find the right tool in under a minute.</p>
+                    <div class="hero-search">
+                        <input type="text" placeholder="Search {total_tools}+ tools, categories, or pricing..." id="searchInput" aria-label="Search AI tools" onkeypress="if(event.key==='Enter')performSearch()">
+                        <button type="button" onclick="performSearch()">Search</button>
+                    </div>
+                    <div id="searchResults" style="display:none;font-size:14px;color:var(--text-muted);margin-top:12px;"></div>
+                    <div class="hero-categories">
+                        <a href="/category/ai-chat/">AI Chat</a>
+                        <a href="/category/ai-image/">AI Image</a>
+                        <a href="/category/ai-writing/">AI Writing</a>
+                        <a href="/category/ai-coding/">AI Coding</a>
+                        <a href="/category/ai-video/">AI Video</a>
+                        <a href="/category/ai-design/">AI Design</a>
+                        <a href="/category/ai-productivity/">Productivity</a>
+                        <a href="/category/">All Categories →</a>
+                    </div>
+                    <p class="hero-trustline">&#10003; Paid-account testing &nbsp;&nbsp; &#10003; No sponsored placements &nbsp;&nbsp; &#10003; Published editorial policy</p>
+                </div>
+                {shortlist_html}
             </div>
         </section>
 
@@ -1488,22 +1593,14 @@ def build_index_en(tools: list, articles: list) -> str:
 
         {trust_html}
 
-        <div class="social-proof">
-            <span>Trusted by readers from</span>
-            <span class="sp-brand">Google</span>
-            <span class="sp-brand">Apple</span>
-            <span class="sp-brand">Microsoft</span>
-            <span class="sp-brand">Amazon</span>
-            <span class="sp-brand">Meta</span>
-            <span class="sp-brand">NVIDIA</span>
-            <span class="sp-brand">OpenAI</span>
-            <span>and 200+ more companies</span>
+        <div class="editorial-note">
+            <strong>EDITORIAL NOTE</strong> &middot; Review data comes from public sources or author testing on paid accounts. <a href="/about.html">Read our methodology and correction policy</a> &middot; Last updated {datetime.now().strftime('%d %b %Y')}.
         </div>
 
         <div class="main-layout">
             <div class="main-content">
                 <section>
-                    <h2 style="margin-bottom:20px;">🔥 Top AI Tools</h2>
+                    <h2 style="margin-bottom:20px;">Top AI Tools</h2>
                     <div class="tool-grid">
                         {tool_cards}
                     </div>
@@ -1513,7 +1610,7 @@ def build_index_en(tools: list, articles: list) -> str:
                 </section>
 
                 <section style="margin-top:40px;">
-                    <h2 style="margin-bottom:20px;">📖 Latest Articles</h2>
+                    <h2 style="margin-bottom:20px;">Latest Research</h2>
                     <div class="article-list">
                         {article_cards}
                     </div>
@@ -1525,17 +1622,17 @@ def build_index_en(tools: list, articles: list) -> str:
 
             <aside class="home-sidebar">
                 <div class="sidebar-widget">
-                    <h4>🏆 Top Rated</h4>
+                    <h4>Top rated</h4>
                     {top_rated_html}
                 </div>
                 <div class="sidebar-widget">
-                    <h4>📈 Most Popular</h4>
+                    <h4>Most popular</h4>
                     {most_popular_html}
                 </div>
-                <div class="sidebar-widget" style="background:linear-gradient(135deg,#dbeafe,#eff6ff);border:1px solid #bfdbfe;border-radius:12px;padding:20px;">
-                    <h4 style="margin-top:0;">📬 Stay Updated</h4>
-                    <p style="font-size:13px;color:#555;margin-bottom:12px;">New AI tools reviewed daily. {total_tools}+ tools and counting.</p>
-                    <a href="/articles/" style="display:block;text-align:center;padding:10px;background:var(--primary-color);color:#fff;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;">Read Latest Reviews →</a>
+                <div class="sidebar-widget">
+                    <h4>Stay updated</h4>
+                    <p style="font-size:13px;color:var(--text-muted);margin-bottom:12px;">New AI tools reviewed daily. {total_tools}+ tools and counting.</p>
+                    <a href="/articles/" style="display:block;text-align:center;padding:10px;background:var(--brand-blue);color:#fff;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;">Read latest reviews →</a>
                 </div>
             </aside>
         </div>

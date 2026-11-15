@@ -21,7 +21,7 @@
     <meta name="twitter:title" content="LM Studio Review 2026 - AI Tool Lab">
     <meta name="twitter:description" content="LM Studio is a free desktop app that runs open-weight LLMs - Llama, Qwen, DeepSeek, Gemma, Mistral - entirely on your ow">
     <meta name="twitter:image" content="https://www.aitoolbox.hk/images/og/lm-studio-en-og.png">
-    <link rel="stylesheet" href="/css/style.css?v=20261115094932">
+    <link rel="stylesheet" href="/css/style.css?v=20261115181948">
     <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -234,12 +234,13 @@
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;">
-                <h1>🛠️ AI Tool Lab <span>Updated daily</span></h1>
+            <a href="/" class="brand-link">
+                <div class="site-brand"><span class="brand-mark" aria-hidden="true"></span>AI Tool Lab</div>
+                <span class="header-tagline">Independent reviews</span>
             </a>
             <nav class="header-nav">
-                <a href="/category/">🛠️ Tools</a>
-                <a href="/articles/">📖 Articles</a>
+                <a href="/category/">Tools</a>
+                <a href="/articles/">Articles</a>
                 <a href="/category/ai-chat/">AI Chat</a>
                 <a href="/category/ai-image/">AI Image</a>
                 <a href="/category/ai-coding/">AI Coding</a>
@@ -255,18 +256,18 @@
     <main class="article-container">
         <div class="tool-header">
             <div class="tool-header-top">
-                <div class="tool-icon-lg" style="background:#6D28D9;">🖥</div>
+                <img class="tool-logo tool-icon-lg" src="/assets/icons/lm-studio.png" alt="LM Studio" width="56" height="56" loading="lazy" decoding="async">
                 <div class="tool-header-info">
-                    <h2>LM Studio <span class="badge" style="background:#ff4444;color:#fff;padding:2px 8px;border-radius:4px;font-size:12px;">HOT</span></h2>
+                    <div class="tool-title-row"><h1>LM Studio</h1><span class="status-chip status-trending">Trending</span></div>
                     <p class="subtitle">LM Studio is a free desktop app that runs open-weight LLMs - Llama, Qwen, DeepSeek, Gemma, Mistral - entirely on your own machine through a clean GUI, with a one-click local API server. I set it up for solo lawyers, therapists, and writers who want private AI but cannot touch a terminal; the money is in handing a non-technical client a working desktop app they can actually click, not a server they will never maintain.</p>
                     <div class="rating-bar">⭐ 4.8</div>
                 </div>
             </div>
             <div class="tool-meta">
-                <div class="tool-meta-item">🌐 <strong>Website</strong>: lmstudio.ai</div>
-                <div class="tool-meta-item">💰 <strong>Price</strong>: Free (local) + Enterprise (teams/SSO)</div>
-                <div class="tool-meta-item">📦 <strong>Platform</strong>: macOS (Apple Silicon), Windows, Linux</div>
-                <div class="tool-meta-item">🏷️ <strong>Category</strong>: AI Development</div>
+                <div class="tool-meta-item"><strong>Website</strong>: lmstudio.ai</div>
+                <div class="tool-meta-item"><strong>Price</strong>: Free (local) + Enterprise (teams/SSO)</div>
+                <div class="tool-meta-item"><strong>Platform</strong>: macOS (Apple Silicon), Windows, Linux</div>
+                <div class="tool-meta-item"><strong>Category</strong>: AI Development</div>
             </div>
             <div class="action-bar">
                 <a href="https://lmstudio.ai" target="_blank" rel="noopener" class="action-btn action-btn-primary">Visit LM Studio →</a>
@@ -274,12 +275,12 @@
         </div>
 
         <div class="tldr-box">
-            <strong>⚡ TL;DR</strong>
+            <strong>TL;DR</strong>
             <p>LM Studio is a free desktop app that runs open-weight LLMs - Llama, Qwen, DeepSeek, Gemma, Mistral - entirely on your own machine through a clean GUI, with a one-click local API server. I set it up for solo lawyers, therapists, and writers who want private AI but cannot touch a terminal; the money is in handing a non-technical client a working desktop app they can actually click, not a server they will never maintain.</p>
         </div>
 
         <div class="key-stats">
-            <h4>📊 Key Statistics</h4>
+            <h4>Key Statistics</h4>
             <div class="ks-grid"><div class="ks-item"><span class="ks-val">4.8</span><span class="ks-label">User Rating</span></div><div class="ks-item"><span class="ks-val">5M+ downloads</span><span class="ks-label">Monthly Visits</span></div><div class="ks-item"><span class="ks-val">Free (local) + Enterprise (teams/SSO)</span><span class="ks-label">Pricing</span></div><div class="ks-item"><span class="ks-val">macOS (Apple Silicon), Windows, Linux</span><span class="ks-label">Platform</span></div></div>
         </div>
 
@@ -408,16 +409,16 @@ For 7B-14B models, any modern Mac or PC with 16GB+ RAM runs them fine. For 32B+ 
 
         <div class="pros-cons">
             <div class="pros">
-                <h4>👍 Pros</h4>
+                <h4>Pros</h4>
                 <ul><li>Free for personal and commercial use since July 2025 - no license, no form, your margin on every job is near 100%</li><li>The GUI removes the biggest barrier - search, download, chat with no terminal, Docker, or config files</li><li>One-click local OpenAI-compatible server at localhost:1234 for a free, private dev backend</li><li>Built-in document RAG - drop a .pdf, .docx, or .txt in and it retrieves from long files automatically</li><li>Dual engine: llama.cpp everywhere, native MLX on Apple Silicon (often 200+ tokens/sec on small models)</li><li>Friendly for experimenting - load several models, compare on the same prompt, watch VRAM and tokens/sec live</li></ul>
             </div>
             <div class="cons">
-                <h4>👎 Cons</h4>
+                <h4>Cons</h4>
                 <ul><li>Closed-source desktop app - you cannot audit or modify it, which matters for compliance-minded clients</li><li>Not built for headless or multi-user serving - the GUI is one person, one machine; llmster exists but is newer than Ollama's server</li><li>No built-in cloud fallback - if the client's hardware cannot run the model, there is no LM Studio Cloud to scale into</li><li>Hardware hungry - a 7B-13B model at Q4 wants 16GB+ RAM and 6-9GB VRAM; bigger models need a real GPU</li><li>Apple Silicon only for the fast MLX path; Intel Macs are not supported and Windows/Linux use the slower llama.cpp route</li><li>'Free for work' has a ceiling - the Enterprise tier (SSO, model/MCP gating) costs money for real organizations</li><li>Smaller local models still trail the cloud on hard reasoning - set expectations or you will hear about it</li></ul>
             </div>
         </div>
 
-        <div class="faq-section"><h3>❓ FAQ</h3><div class="faq-item">
+        <div class="faq-section"><h3>FAQ</h3><div class="faq-item">
                     <details>
                         <summary>Is LM Studio really free for commercial use?</summary>
                         <div class="faq-answer"><p>Yes. Since July 8, 2025 the desktop app is free for personal and work use - no license, no registration, no fee. Element Labs sells a separate Enterprise tier with SSO and policy controls for larger teams, but the app most solo users and consultants want is free, which is what makes the margin on setup work so high.
@@ -449,7 +450,7 @@ For 7B-14B models, any modern Mac or PC with 16GB+ RAM runs them fine. For 32B+ 
 
         <div class="author-block">
         <div class="author-block-inner">
-            <div class="author-avatar">🛠️</div>
+            <div class="author-avatar">A</div>
             <div class="author-body">
                 <p class="author-label"><strong>About the reviewer</strong></p>
                 <p class="author-text">This LM Studio review was written by the <a href="/author/">AI Tool Lab Editorial Team</a>, based on real paid usage and testing. We spend $200+/month on AI tool subscriptions so you do not have to. Every claim in this review is verifiable — if you find an error, <a href="/contact.html">let us know</a> and we will fix it within 48 hours.</p>
@@ -459,29 +460,29 @@ For 7B-14B models, any modern Mac or PC with 16GB+ RAM runs them fine. For 32B+ 
     </div>
 
         <div class="related-tools" id="relatedSection">
-            <h3>🔗 Related Tools</h3>
+            <h3>Related Tools</h3>
             <div class="related-grid"><a href="/tools/replicate/" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">☁️</div>
+                <img class="tool-logo related-tile" src="/assets/icons/replicate.svg" alt="Replicate" width="40" height="40" loading="lazy" decoding="async">
                 <div style="font-weight:600;">Replicate</div>
                 <div style="font-size:13px;color:#666;">AI Development</div>
             </a>
 <a href="/tools/hugging-face/" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">🤗</div>
+                <img class="tool-logo related-tile" src="/assets/icons/hugging-face.svg" alt="Hugging Face" width="40" height="40" loading="lazy" decoding="async">
                 <div style="font-weight:600;">Hugging Face</div>
                 <div style="font-size:13px;color:#666;">AI Development</div>
             </a>
 <a href="/tools/groq/" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">⚡</div>
+                <img class="tool-logo related-tile" src="/assets/icons/groq.svg" alt="Groq" width="40" height="40" loading="lazy" decoding="async">
                 <div style="font-weight:600;">Groq</div>
                 <div style="font-size:13px;color:#666;">AI Development</div>
             </a>
 <a href="/tools/langchain/" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">⛓️</div>
+                <img class="tool-logo related-tile" src="/assets/icons/langchain.svg" alt="LangChain" width="40" height="40" loading="lazy" decoding="async">
                 <div style="font-weight:600;">LangChain</div>
                 <div style="font-size:13px;color:#666;">AI Development</div>
             </a>
 <a href="/tools/pinecone/" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">🌲</div>
+                <img class="tool-logo related-tile" src="/assets/icons/pinecone.png" alt="Pinecone" width="40" height="40" loading="lazy" decoding="async">
                 <div style="font-weight:600;">Pinecone</div>
                 <div style="font-size:13px;color:#666;">AI Development</div>
             </a>
@@ -489,17 +490,17 @@ For 7B-14B models, any modern Mac or PC with 16GB+ RAM runs them fine. For 32B+ 
         </div>
 
         <div class="related-tools">
-                <h3>📚 Related Articles</h3>
+                <h3>Related Articles</h3>
                 <div class="related-grid"><a href="/articles/best-static-hosting-pricing-2026-netlify-vs-vercel-vs-cloudflare-pages-vs-github-pages/" class="related-card">
-                    <div style="font-weight:600;margin-bottom:4px;">📖 Static Hosting Pricing in 2026: Netlify </div>
+                    <div style="font-weight:600;margin-bottom:4px;">Static Hosting Pricing in 2026: Netlify </div>
                     <div style="font-size:13px;color:#666;">2026-11-15</div>
                 </a>
 <a href="/articles/best-llm-api-pricing-2026-openai-gpt-6-vs-claude-opus-5-5-vs-gemini-4-vs-deepseek-compared/" class="related-card">
-                    <div style="font-weight:600;margin-bottom:4px;">📖 LLM API Pricing Compared in 2026: GPT-6 </div>
+                    <div style="font-weight:600;margin-bottom:4px;">LLM API Pricing Compared in 2026: GPT-6 </div>
                     <div style="font-size:13px;color:#666;">2026-11-14</div>
                 </a>
 <a href="/articles/best-cdn-pricing-2026-bunny-vs-cloudflare-vs-fastly-vs-cloudfront-compared/" class="related-card">
-                    <div style="font-weight:600;margin-bottom:4px;">📖 Best CDN Pricing in 2026: Bunny CDN vs C</div>
+                    <div style="font-weight:600;margin-bottom:4px;">Best CDN Pricing in 2026: Bunny CDN vs C</div>
                     <div style="font-size:13px;color:#666;">2026-11-13</div>
                 </a>
 </div>
@@ -507,7 +508,9 @@ For 7B-14B models, any modern Mac or PC with 16GB+ RAM runs them fine. For 32B+ 
     </main>
 
     <footer class="footer">
-        <p>&copy; 2026 AI Tool Lab &middot; Best AI Tools, Updated Daily &middot; <a href="https://www.aitoollab.cn/" style="color:#999;">中文版</a></p>
+        <p class="footer-logo">AI Tool Lab</p>
+        <p>Independent AI tool reviews. No sponsored rankings. &middot; <a href="/about.html">Editorial policy</a> &middot; <a href="https://www.aitoollab.cn/">中文版</a></p>
+        <p class="footer-meta">Copyright 2026 AI Tool Lab &middot; Updated daily</p>
     </footer>
     <button id="backToTop" aria-label="Back to top">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
@@ -518,7 +521,7 @@ For 7B-14B models, any modern Mac or PC with 16GB+ RAM runs them fine. For 32B+ 
 <script>
 document.addEventListener("DOMContentLoaded",function(){var b=document.getElementById("backToTop");if(!b)return;var s=function(){if(window.scrollY>400){b.classList.add("visible")}else{b.classList.remove("visible")}};window.addEventListener("scroll",s,{passive:true});s();b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"})});});
 </script>
-<script src="/js/tts-reader.js" defer></script><button id="darkModeToggle" class="dark-toggle-fab" aria-label="Toggle dark mode" title="Dark mode">🌙</button>
+<script src="/js/tts-reader.js" defer></script><button id="darkModeToggle" class="dark-toggle-fab" aria-label="Toggle dark mode" title="Dark mode">◐</button>
 <script>
 (function(){
     var btn = document.getElementById('darkModeToggle');
@@ -526,7 +529,7 @@ document.addEventListener("DOMContentLoaded",function(){var b=document.getElemen
     var dark = localStorage.getItem('darkMode') === 'true';
     function apply(d) {
         document.documentElement.setAttribute('data-theme', d ? 'dark' : '');
-        btn.textContent = d ? '☀️' : '🌙';
+        btn.textContent = d ? '◑' : '◐';
         localStorage.setItem('darkMode', d);
     }
     apply(dark);

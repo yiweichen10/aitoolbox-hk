@@ -21,7 +21,7 @@
     <meta name="twitter:title" content="Aider Review 2026 - AI Tool Lab">
     <meta name="twitter:description" content="Aider is an open-source AI pair programming tool that lives in your terminal. It reads your entire Git repo, understands">
     <meta name="twitter:image" content="https://www.aitoolbox.hk/images/og/aider-en-og.png">
-    <link rel="stylesheet" href="/css/style.css?v=20261115094932">
+    <link rel="stylesheet" href="/css/style.css?v=20261115181948">
     <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -235,12 +235,13 @@
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;">
-                <h1>🛠️ AI Tool Lab <span>Updated daily</span></h1>
+            <a href="/" class="brand-link">
+                <div class="site-brand"><span class="brand-mark" aria-hidden="true"></span>AI Tool Lab</div>
+                <span class="header-tagline">Independent reviews</span>
             </a>
             <nav class="header-nav">
-                <a href="/category/">🛠️ Tools</a>
-                <a href="/articles/">📖 Articles</a>
+                <a href="/category/">Tools</a>
+                <a href="/articles/">Articles</a>
                 <a href="/category/ai-chat/">AI Chat</a>
                 <a href="/category/ai-image/">AI Image</a>
                 <a href="/category/ai-coding/">AI Coding</a>
@@ -256,18 +257,18 @@
     <main class="article-container">
         <div class="tool-header">
             <div class="tool-header-top">
-                <div class="tool-icon-lg" style="background:#10B981;">💻</div>
+                <img class="tool-logo tool-icon-lg" src="/assets/icons/aider.png" alt="Aider" width="56" height="56" loading="lazy" decoding="async">
                 <div class="tool-header-info">
-                    <h2>Aider <span class="badge" style="background:#2563eb;color:#fff;padding:2px 8px;border-radius:4px;font-size:12px;">PICK</span></h2>
+                    <div class="tool-title-row"><h1>Aider</h1><span class="status-chip status-verified">Verified</span></div>
                     <p class="subtitle">Aider is an open-source AI pair programming tool that lives in your terminal. It reads your entire Git repo, understands the codebase, and makes multi-file edits from plain English prompts — no IDE plugin, no cloud dependency. The money angle: freelance devs and small agencies use it to ship client projects 2-3x faster. One person handling 4-5 clients solo is the standard Aider power-user story.</p>
                     <div class="rating-bar">⭐ 4.6 <span style="font-size:14px;color:#999;">(180K visits)</span></div>
                 </div>
             </div>
             <div class="tool-meta">
-                <div class="tool-meta-item">🌐 <strong>Website</strong>: aider.chat</div>
-                <div class="tool-meta-item">💰 <strong>Price</strong>: Free (open source). You bring your own LLM API key.</div>
-                <div class="tool-meta-item">📦 <strong>Platform</strong>: macOS, Linux, Windows (terminal)</div>
-                <div class="tool-meta-item">🏷️ <strong>Category</strong>: AI Coding</div>
+                <div class="tool-meta-item"><strong>Website</strong>: aider.chat</div>
+                <div class="tool-meta-item"><strong>Price</strong>: Free (open source). You bring your own LLM API key.</div>
+                <div class="tool-meta-item"><strong>Platform</strong>: macOS, Linux, Windows (terminal)</div>
+                <div class="tool-meta-item"><strong>Category</strong>: AI Coding</div>
             </div>
             <div class="action-bar">
                 <a href="https://aider.chat" target="_blank" rel="noopener" class="action-btn action-btn-primary">Visit Aider →</a>
@@ -275,12 +276,12 @@
         </div>
 
         <div class="tldr-box">
-            <strong>⚡ TL;DR</strong>
+            <strong>TL;DR</strong>
             <p>Aider is an open-source AI pair programming tool that lives in your terminal. It reads your entire Git repo, understands the codebase, and makes multi-file edits from plain English prompts — no IDE plugin, no cloud dependency. The money angle: freelance devs and small agencies use it to ship client projects 2-3x faster. One person handling 4-5 clients solo is the standard Aider power-user story.</p>
         </div>
 
         <div class="key-stats">
-            <h4>📊 Key Statistics</h4>
+            <h4>Key Statistics</h4>
             <div class="ks-grid"><div class="ks-item"><span class="ks-val">4.6</span><span class="ks-label">User Rating</span></div><div class="ks-item"><span class="ks-val">180K</span><span class="ks-label">Monthly Visits</span></div><div class="ks-item"><span class="ks-val">Free (open source). You bring your own LLM API key.</span><span class="ks-label">Pricing</span></div><div class="ks-item"><span class="ks-val">macOS, Linux, Windows (terminal)</span><span class="ks-label">Platform</span></div></div>
         </div>
 
@@ -408,16 +409,16 @@
 
         <div class="pros-cons">
             <div class="pros">
-                <h4>👍 Pros</h4>
+                <h4>Pros</h4>
                 <ul><li>Actually understands your codebase. Not fuzzy matching — it reads the full repo map and knows which files depend on which. When you say "refactor the payment module to use async," it touches all the right files and none of the wrong ones</li><li>Model-agnostic. Claude 3.5 Sonnet for complex refactors where correctness matters. GPT-4o for speed. Gemini Flash when you want to go fast and cheap. DeepSeek when you are on a budget. No lock-in, no forced upgrade treadmill</li><li>Open source with a real community. GitHub issues get answered. PRs get merged. The documentation is good enough that you rarely get stuck, and when you do, the Discord is full of people who already solved your exact problem</li><li>Multi-file edits that actually work. Ask it to extract a shared utility function used across 8 files — it finds all the call sites, refactors them, and updates the imports. The kind of grunt work that burns 2 hours of a developer's afternoon</li><li>Git integration is native, not bolted on. Every change gets a clean, descriptive commit message automatically. Reverts are one command. No merge conflicts from generated code because it works on the current working state</li></ul>
             </div>
             <div class="cons">
-                <h4>👎 Cons</h4>
+                <h4>Cons</h4>
                 <ul><li>Terminal-only. If you have never used a command line, this tool is not for you. There is no GUI, no VS Code extension, no web interface. The learning curve starts at "comfortable with bash" and goes up from there</li><li>API costs are not zero. Running Aider on GPT-4o for a full day of coding burns $1-3 in API fees. Claude 3.5 Sonnet costs about the same. It is cheap for what you get, but it is not free in practice — budget $20-50/month in API costs for heavy use</li><li>Large monorepos slow it down. On projects under 50K lines, Aider is snappy. Past 100K lines, the repo map generation takes 5-10 seconds per prompt and the context window gets tight. You will need to learn strategies like limiting the file scope</li><li>It gets confused on heavily abstracted codebases. If your project has 6 layers of inheritance and dependency injection frameworks, Aider's analysis gets shallow. It works best with straightforward code where the call chain is visible from the surface</li><li>No built-in copilot-style inline autocomplete. Aider is a chat-based pair programmer — you describe what you want and it does it. If you want tab-to-complete as you type, use Copilot or Cursor alongside it</li></ul>
             </div>
         </div>
 
-        <div class="faq-section"><h3>❓ FAQ</h3><div class="faq-item">
+        <div class="faq-section"><h3>FAQ</h3><div class="faq-item">
                     <details>
                         <summary>Can I actually make more money as a freelance developer using Aider?</summary>
                         <div class="faq-answer"><p>Yes, and the math is straightforward. The average freelance web developer charges $75-150/hour and bills maybe 25 productive hours a week. The other 15-20 hours go to context-switching, debugging, writing boilerplate, and refactoring. Aider cuts the non-billable time by 40-60%. If you reclaim even 8 hours a week and redirect 4 of them to billable client work at $100/hour, that is $1,600/month in extra revenue — for a tool that costs $20-50/month in API fees. The real money is in project-based pricing: quote a client $8,000 for a 4-week project, deliver it in 2 weeks with Aider, and take another $8,000 project in the freed-up 2 weeks. Double throughput without doubling hours. This is not theoretical — I talked to a solo dev on the Aider Discord who went from 3 simultaneous clients to 7 in six months after adopting the tool, and his code quality actually improved because the grunt work was handled by the AI while he focused on architecture and edge cases.
@@ -449,7 +450,7 @@
 
         <div class="author-block">
         <div class="author-block-inner">
-            <div class="author-avatar">🛠️</div>
+            <div class="author-avatar">A</div>
             <div class="author-body">
                 <p class="author-label"><strong>About the reviewer</strong></p>
                 <p class="author-text">This Aider review was written by the <a href="/author/">AI Tool Lab Editorial Team</a>, based on real paid usage and testing. We spend $200+/month on AI tool subscriptions so you do not have to. Every claim in this review is verifiable — if you find an error, <a href="/contact.html">let us know</a> and we will fix it within 48 hours.</p>
@@ -459,29 +460,29 @@
     </div>
 
         <div class="related-tools" id="relatedSection">
-            <h3>🔗 Related Tools</h3>
+            <h3>Related Tools</h3>
             <div class="related-grid"><a href="/tools/github-copilot/" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">💻</div>
+                <img class="tool-logo related-tile" src="/assets/icons/github-copilot.png" alt="GitHub Copilot" width="40" height="40" loading="lazy" decoding="async">
                 <div style="font-weight:600;">GitHub Copilot</div>
                 <div style="font-size:13px;color:#666;">AI Coding</div>
             </a>
 <a href="/tools/cursor/" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">⬛</div>
+                <img class="tool-logo related-tile" src="/assets/icons/cursor.svg" alt="Cursor" width="40" height="40" loading="lazy" decoding="async">
                 <div style="font-weight:600;">Cursor</div>
                 <div style="font-size:13px;color:#666;">AI Coding</div>
             </a>
 <a href="/tools/replit-ai/" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">💻</div>
+                <img class="tool-logo related-tile" src="/assets/icons/replit-ai.svg" alt="Replit AI" width="40" height="40" loading="lazy" decoding="async">
                 <div style="font-weight:600;">Replit AI</div>
                 <div style="font-size:13px;color:#666;">AI Coding</div>
             </a>
 <a href="/tools/lovable/" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">🎨</div>
+                <img class="tool-logo related-tile" src="/assets/icons/lovable.png" alt="Lovable" width="40" height="40" loading="lazy" decoding="async">
                 <div style="font-weight:600;">Lovable</div>
                 <div style="font-size:13px;color:#666;">AI Coding</div>
             </a>
 <a href="/tools/claude-code/" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">💻</div>
+                <img class="tool-logo related-tile" src="/assets/icons/claude-code.svg" alt="Claude Code" width="40" height="40" loading="lazy" decoding="async">
                 <div style="font-weight:600;">Claude Code</div>
                 <div style="font-size:13px;color:#666;">AI Coding</div>
             </a>
@@ -489,17 +490,17 @@
         </div>
 
         <div class="related-tools">
-                <h3>📚 Related Articles</h3>
+                <h3>Related Articles</h3>
                 <div class="related-grid"><a href="/articles/best-static-hosting-pricing-2026-netlify-vs-vercel-vs-cloudflare-pages-vs-github-pages/" class="related-card">
-                    <div style="font-weight:600;margin-bottom:4px;">📖 Static Hosting Pricing in 2026: Netlify </div>
+                    <div style="font-weight:600;margin-bottom:4px;">Static Hosting Pricing in 2026: Netlify </div>
                     <div style="font-size:13px;color:#666;">2026-11-15</div>
                 </a>
 <a href="/articles/best-llm-api-pricing-2026-openai-gpt-6-vs-claude-opus-5-5-vs-gemini-4-vs-deepseek-compared/" class="related-card">
-                    <div style="font-weight:600;margin-bottom:4px;">📖 LLM API Pricing Compared in 2026: GPT-6 </div>
+                    <div style="font-weight:600;margin-bottom:4px;">LLM API Pricing Compared in 2026: GPT-6 </div>
                     <div style="font-size:13px;color:#666;">2026-11-14</div>
                 </a>
 <a href="/articles/best-cdn-pricing-2026-bunny-vs-cloudflare-vs-fastly-vs-cloudfront-compared/" class="related-card">
-                    <div style="font-weight:600;margin-bottom:4px;">📖 Best CDN Pricing in 2026: Bunny CDN vs C</div>
+                    <div style="font-weight:600;margin-bottom:4px;">Best CDN Pricing in 2026: Bunny CDN vs C</div>
                     <div style="font-size:13px;color:#666;">2026-11-13</div>
                 </a>
 </div>
@@ -507,7 +508,9 @@
     </main>
 
     <footer class="footer">
-        <p>&copy; 2026 AI Tool Lab &middot; Best AI Tools, Updated Daily &middot; <a href="https://www.aitoollab.cn/" style="color:#999;">中文版</a></p>
+        <p class="footer-logo">AI Tool Lab</p>
+        <p>Independent AI tool reviews. No sponsored rankings. &middot; <a href="/about.html">Editorial policy</a> &middot; <a href="https://www.aitoollab.cn/">中文版</a></p>
+        <p class="footer-meta">Copyright 2026 AI Tool Lab &middot; Updated daily</p>
     </footer>
     <button id="backToTop" aria-label="Back to top">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
@@ -518,7 +521,7 @@
 <script>
 document.addEventListener("DOMContentLoaded",function(){var b=document.getElementById("backToTop");if(!b)return;var s=function(){if(window.scrollY>400){b.classList.add("visible")}else{b.classList.remove("visible")}};window.addEventListener("scroll",s,{passive:true});s();b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"})});});
 </script>
-<script src="/js/tts-reader.js" defer></script><button id="darkModeToggle" class="dark-toggle-fab" aria-label="Toggle dark mode" title="Dark mode">🌙</button>
+<script src="/js/tts-reader.js" defer></script><button id="darkModeToggle" class="dark-toggle-fab" aria-label="Toggle dark mode" title="Dark mode">◐</button>
 <script>
 (function(){
     var btn = document.getElementById('darkModeToggle');
@@ -526,7 +529,7 @@ document.addEventListener("DOMContentLoaded",function(){var b=document.getElemen
     var dark = localStorage.getItem('darkMode') === 'true';
     function apply(d) {
         document.documentElement.setAttribute('data-theme', d ? 'dark' : '');
-        btn.textContent = d ? '☀️' : '🌙';
+        btn.textContent = d ? '◑' : '◐';
         localStorage.setItem('darkMode', d);
     }
     apply(dark);

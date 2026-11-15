@@ -21,7 +21,7 @@
     <meta name="twitter:title" content="Glean Review 2026 - AI Tool Lab">
     <meta name="twitter:description" content="Enterprise AI search platform that unifies knowledge across Slack, Google Drive, Jira, Salesforce, and 100+ apps into on">
     <meta name="twitter:image" content="https://www.aitoolbox.hk/images/og/glean-en-og.png">
-    <link rel="stylesheet" href="/css/style.css?v=20261115094932">
+    <link rel="stylesheet" href="/css/style.css?v=20261115181948">
     <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -235,12 +235,13 @@
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;">
-                <h1>🛠️ AI Tool Lab <span>Updated daily</span></h1>
+            <a href="/" class="brand-link">
+                <div class="site-brand"><span class="brand-mark" aria-hidden="true"></span>AI Tool Lab</div>
+                <span class="header-tagline">Independent reviews</span>
             </a>
             <nav class="header-nav">
-                <a href="/category/">🛠️ Tools</a>
-                <a href="/articles/">📖 Articles</a>
+                <a href="/category/">Tools</a>
+                <a href="/articles/">Articles</a>
                 <a href="/category/ai-chat/">AI Chat</a>
                 <a href="/category/ai-image/">AI Image</a>
                 <a href="/category/ai-coding/">AI Coding</a>
@@ -256,18 +257,18 @@
     <main class="article-container">
         <div class="tool-header">
             <div class="tool-header-top">
-                <div class="tool-icon-lg" style="background:#4F46E5;">🔍</div>
+                <img class="tool-logo tool-icon-lg" src="/assets/icons/glean.png" alt="Glean" width="56" height="56" loading="lazy" decoding="async">
                 <div class="tool-header-info">
-                    <h2>Glean</h2>
+                    <div class="tool-title-row"><h1>Glean</h1></div>
                     <p class="subtitle">Enterprise AI search platform that unifies knowledge across Slack, Google Drive, Jira, Salesforce, and 100+ apps into one search bar. The real money is not in using it — it is in deploying it for other companies. A single Glean implementation consulting gig runs $5,000-$15,000, and most companies with 50+ employees desperately need someone who knows how to set it up properly.</p>
                     <div class="rating-bar">⭐ 4.5 <span style="font-size:14px;color:#999;">(1.8M visits)</span></div>
                 </div>
             </div>
             <div class="tool-meta">
-                <div class="tool-meta-item">🌐 <strong>Website</strong>: www.glean.com</div>
-                <div class="tool-meta-item">💰 <strong>Price</strong>: Custom enterprise pricing (~$15-$30/seat/mo)</div>
-                <div class="tool-meta-item">📦 <strong>Platform</strong>: Web, Chrome Extension, Slack Bot, API</div>
-                <div class="tool-meta-item">🏷️ <strong>Category</strong>: AI Search</div>
+                <div class="tool-meta-item"><strong>Website</strong>: www.glean.com</div>
+                <div class="tool-meta-item"><strong>Price</strong>: Custom enterprise pricing (~$15-$30/seat/mo)</div>
+                <div class="tool-meta-item"><strong>Platform</strong>: Web, Chrome Extension, Slack Bot, API</div>
+                <div class="tool-meta-item"><strong>Category</strong>: AI Search</div>
             </div>
             <div class="action-bar">
                 <a href="https://www.glean.com" target="_blank" rel="noopener" class="action-btn action-btn-primary">Visit Glean →</a>
@@ -275,12 +276,12 @@
         </div>
 
         <div class="tldr-box">
-            <strong>⚡ TL;DR</strong>
+            <strong>TL;DR</strong>
             <p>Enterprise AI search platform that unifies knowledge across Slack, Google Drive, Jira, Salesforce, and 100+ apps into one search bar. The real money is not in using it — it is in deploying it for other companies. A single Glean implementation consulting gig runs $5,000-$15,000, and most companies with 50+ employees desperately need someone who knows how to set it up properly.</p>
         </div>
 
         <div class="key-stats">
-            <h4>📊 Key Statistics</h4>
+            <h4>Key Statistics</h4>
             <div class="ks-grid"><div class="ks-item"><span class="ks-val">4.5</span><span class="ks-label">User Rating</span></div><div class="ks-item"><span class="ks-val">1.8M</span><span class="ks-label">Monthly Visits</span></div><div class="ks-item"><span class="ks-val">Custom enterprise pricing (~$15-$30/seat/mo)</span><span class="ks-label">Pricing</span></div><div class="ks-item"><span class="ks-val">Web, Chrome Extension, Slack Bot, API</span><span class="ks-label">Platform</span></div></div>
         </div>
 
@@ -410,16 +411,16 @@
 
         <div class="pros-cons">
             <div class="pros">
-                <h4>👍 Pros</h4>
+                <h4>Pros</h4>
                 <ul><li>Searches across 100+ SaaS apps with maintained connectors. Not RSS feeds that break next week — Glean's engineering team actually maintains the integrations. When Google changes the Drive API or Slack deprecates an endpoint, you do not get a panicked call from a client because search randomly stopped working. For an implementation consultant, this means fewer emergency maintenance calls at 9 PM.</li><li>Permission-aware search that respects access controls is the real enterprise unlock. An engineer cannot accidentally find HR's compensation spreadsheet through search. A contractor cannot see internal strategy docs. Every result is filtered through the user's existing permissions on the source system. Without this feature, no legal or compliance team signs off on deployment — and without legal sign-off, the deal does not close.</li><li>The AI Answers feature synthesizes information across multiple sources with citations. Ask 'what is our Q3 marketing budget?' and it pulls numbers from the spreadsheet in Drive, the announcement in Slack, and the project plan in Confluence, then delivers one answer with clickable links to each source. Managers I have deployed this for report saving 3-5 hours a week just on finding information — and when you can quantify that in a client pitch, the ROI case sells itself.</li><li>Knowledge graph visualization shows connections between documents, people, and projects that nobody knew existed. Search for a project name and you see not just the docs but who wrote them, which Slack channels discuss them, and related projects sharing similar documents. For onboarding new hires at client companies, this shrinks the 'who owns what' discovery phase from weeks to hours — and that is a line item you can put in a proposal.</li><li>Implementation for standard SaaS stacks is faster than you would expect from enterprise software. Google Workspace, Slack, Jira, Salesforce, and GitHub all connect in about 2 hours total, mostly waiting for OAuth approvals. The connectors auto-discover content and permissions. The real work is custom apps and legacy systems, which need manual connector work — and that is exactly where you charge consulting fees.</li></ul>
             </div>
             <div class="cons">
-                <h4>👎 Cons</h4>
+                <h4>Cons</h4>
                 <ul><li>Pricing is deliberately opaque — Glean does not publish numbers, you have to sit through a demo and negotiate. From what I have gathered across client deployments, expect $15-$30 per seat per month for the full platform. A 200-person company is looking at $36,000-$72,000 a year. When the CFO sees that line item next to Slack and Google Workspace, you will be justifying ROI in a board meeting. Build the productivity math into your proposal upfront.</li><li>The initial indexing crawl is painfully slow. When you connect a large Google Drive with 500,000+ documents or a Slack workspace with 3 years of message history, the first full index takes 24-72 hours. During this period, search results are incomplete and the AI Answers feature produces unreliable output. You must set expectations with client stakeholders before starting — I learned this the hard way when a VP tried Glean on day one, got garbage results, and nearly killed the project.</li><li>Custom connectors for niche tools can become their own consulting project. Glean has 100+ built-in connectors, but if a client uses an obscure internal wiki from 2018 or a homegrown CRM, someone needs to build and maintain the connector. Glean's API is well-documented, but well-documented does not mean free. Budget $5,000-$15,000 in engineering time per custom connector, and another $1,000-$2,000 a year to maintain it when the source system's API changes. Either you learn to build these or you partner with a developer who can.</li><li>The AI Answers feature occasionally hallucinates when source documents contradict each other — and in any company with 100+ employees, documents contradict each other constantly. The Q3 plan says one number, the Slack announcement says another, and Glean sometimes picks the wrong one or blends them into a Frankenstein answer. It always cites sources, which helps, but non-technical users who trust the AI answer without clicking through to verify will eventually send wrong information to a client or executive. You need to train users that Glean is a starting point, not an oracle.</li><li>Search relevance degrades without ongoing tuning. Out of the box, ranking is decent but not magic. Users complain that 'the Jira ticket I need is on page 3' or 'why is a 2019 doc ranking above the 2026 version?' A client needs someone spending 2-4 hours a month tuning relevance, setting up synonyms, curating featured results, and retiring stale content. Companies that skip this end up with expensive enterprise search that nobody trusts — and that is a retention problem for your consulting retainer.</li></ul>
             </div>
         </div>
 
-        <div class="faq-section"><h3>❓ FAQ</h3><div class="faq-item">
+        <div class="faq-section"><h3>FAQ</h3><div class="faq-item">
                     <details>
                         <summary>How is Glean different from Google Workspace search or Slack built-in search?</summary>
                         <div class="faq-answer"><p>Google Workspace search only searches Google apps. Slack search only searches Slack. Glean searches all of them at once and understands natural language questions, not just keywords. A manager asking 'what did we decide about the pricing change in last month's exec review?' gets an answer pulled from meeting notes in Docs, follow-up threads in Slack, and the updated pricing page in Confluence — all in one result, with citations. The productivity gain is not incremental, it is qualitative: you stop thinking about 'which app has this information?' and just ask the question.
@@ -444,7 +445,7 @@
 
         <div class="author-block">
         <div class="author-block-inner">
-            <div class="author-avatar">🛠️</div>
+            <div class="author-avatar">A</div>
             <div class="author-body">
                 <p class="author-label"><strong>About the reviewer</strong></p>
                 <p class="author-text">This Glean review was written by the <a href="/author/">AI Tool Lab Editorial Team</a>, based on real paid usage and testing. We spend $200+/month on AI tool subscriptions so you do not have to. Every claim in this review is verifiable — if you find an error, <a href="/contact.html">let us know</a> and we will fix it within 48 hours.</p>
@@ -454,29 +455,29 @@
     </div>
 
         <div class="related-tools" id="relatedSection">
-            <h3>🔗 Related Tools</h3>
+            <h3>Related Tools</h3>
             <div class="related-grid"><a href="/tools/perplexity/" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">🔍</div>
+                <img class="tool-logo related-tile" src="/assets/icons/perplexity.svg" alt="Perplexity" width="40" height="40" loading="lazy" decoding="async">
                 <div style="font-weight:600;">Perplexity</div>
                 <div style="font-size:13px;color:#666;">AI Search</div>
             </a>
 <a href="/tools/you.com/" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">🔍</div>
+                <img class="tool-logo related-tile" src="/assets/icons/you.com.png" alt="You.com" width="40" height="40" loading="lazy" decoding="async">
                 <div style="font-weight:600;">You.com</div>
                 <div style="font-size:13px;color:#666;">AI Search</div>
             </a>
 <a href="/tools/consensus/" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">🔍</div>
+                <img class="tool-logo related-tile" src="/assets/icons/consensus.png" alt="Consensus" width="40" height="40" loading="lazy" decoding="async">
                 <div style="font-weight:600;">Consensus</div>
                 <div style="font-size:13px;color:#666;">AI Search</div>
             </a>
 <a href="/tools/perplexity-ai/" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">🌐</div>
+                <img class="tool-logo related-tile" src="/assets/icons/perplexity-ai.svg" alt="Perplexity AI" width="40" height="40" loading="lazy" decoding="async">
                 <div style="font-weight:600;">Perplexity AI</div>
                 <div style="font-size:13px;color:#666;">AI Search</div>
             </a>
 <a href="/tools/exa-ai/" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">🔍</div>
+                <img class="tool-logo related-tile" src="/assets/icons/exa-ai.png" alt="Exa AI" width="40" height="40" loading="lazy" decoding="async">
                 <div style="font-weight:600;">Exa AI</div>
                 <div style="font-size:13px;color:#666;">AI Search</div>
             </a>
@@ -484,17 +485,17 @@
         </div>
 
         <div class="related-tools">
-                <h3>📚 Related Articles</h3>
+                <h3>Related Articles</h3>
                 <div class="related-grid"><a href="/articles/best-ai-enterprise-search-tools-2026-glean-vs-guru-vs-coveo-vs-amazon-q-business/" class="related-card">
-                    <div style="font-weight:600;margin-bottom:4px;">📖 Best AI Enterprise Search Tools 2026: Gl</div>
+                    <div style="font-weight:600;margin-bottom:4px;">Best AI Enterprise Search Tools 2026: Gl</div>
                     <div style="font-size:13px;color:#666;">2026-09-30</div>
                 </a>
 <a href="/articles/best-static-hosting-pricing-2026-netlify-vs-vercel-vs-cloudflare-pages-vs-github-pages/" class="related-card">
-                    <div style="font-weight:600;margin-bottom:4px;">📖 Static Hosting Pricing in 2026: Netlify </div>
+                    <div style="font-weight:600;margin-bottom:4px;">Static Hosting Pricing in 2026: Netlify </div>
                     <div style="font-size:13px;color:#666;">2026-11-15</div>
                 </a>
 <a href="/articles/best-llm-api-pricing-2026-openai-gpt-6-vs-claude-opus-5-5-vs-gemini-4-vs-deepseek-compared/" class="related-card">
-                    <div style="font-weight:600;margin-bottom:4px;">📖 LLM API Pricing Compared in 2026: GPT-6 </div>
+                    <div style="font-weight:600;margin-bottom:4px;">LLM API Pricing Compared in 2026: GPT-6 </div>
                     <div style="font-size:13px;color:#666;">2026-11-14</div>
                 </a>
 </div>
@@ -502,7 +503,9 @@
     </main>
 
     <footer class="footer">
-        <p>&copy; 2026 AI Tool Lab &middot; Best AI Tools, Updated Daily &middot; <a href="https://www.aitoollab.cn/" style="color:#999;">中文版</a></p>
+        <p class="footer-logo">AI Tool Lab</p>
+        <p>Independent AI tool reviews. No sponsored rankings. &middot; <a href="/about.html">Editorial policy</a> &middot; <a href="https://www.aitoollab.cn/">中文版</a></p>
+        <p class="footer-meta">Copyright 2026 AI Tool Lab &middot; Updated daily</p>
     </footer>
     <button id="backToTop" aria-label="Back to top">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
@@ -513,7 +516,7 @@
 <script>
 document.addEventListener("DOMContentLoaded",function(){var b=document.getElementById("backToTop");if(!b)return;var s=function(){if(window.scrollY>400){b.classList.add("visible")}else{b.classList.remove("visible")}};window.addEventListener("scroll",s,{passive:true});s();b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"})});});
 </script>
-<script src="/js/tts-reader.js" defer></script><button id="darkModeToggle" class="dark-toggle-fab" aria-label="Toggle dark mode" title="Dark mode">🌙</button>
+<script src="/js/tts-reader.js" defer></script><button id="darkModeToggle" class="dark-toggle-fab" aria-label="Toggle dark mode" title="Dark mode">◐</button>
 <script>
 (function(){
     var btn = document.getElementById('darkModeToggle');
@@ -521,7 +524,7 @@ document.addEventListener("DOMContentLoaded",function(){var b=document.getElemen
     var dark = localStorage.getItem('darkMode') === 'true';
     function apply(d) {
         document.documentElement.setAttribute('data-theme', d ? 'dark' : '');
-        btn.textContent = d ? '☀️' : '🌙';
+        btn.textContent = d ? '◑' : '◐';
         localStorage.setItem('darkMode', d);
     }
     apply(dark);

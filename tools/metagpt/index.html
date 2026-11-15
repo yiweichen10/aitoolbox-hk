@@ -21,7 +21,7 @@
     <meta name="twitter:title" content="MetaGPT Review 2026 - AI Tool Lab">
     <meta name="twitter:description" content="MetaGPT is an open-source multi-agent framework that simulates a real software team inside your terminal. Give it one re">
     <meta name="twitter:image" content="https://www.aitoolbox.hk/images/og/metagpt-en-og.png">
-    <link rel="stylesheet" href="/css/style.css?v=20261115094932">
+    <link rel="stylesheet" href="/css/style.css?v=20261115181948">
     <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -233,12 +233,13 @@
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/" style="text-decoration:none;">
-                <h1>🛠️ AI Tool Lab <span>Updated daily</span></h1>
+            <a href="/" class="brand-link">
+                <div class="site-brand"><span class="brand-mark" aria-hidden="true"></span>AI Tool Lab</div>
+                <span class="header-tagline">Independent reviews</span>
             </a>
             <nav class="header-nav">
-                <a href="/category/">🛠️ Tools</a>
-                <a href="/articles/">📖 Articles</a>
+                <a href="/category/">Tools</a>
+                <a href="/articles/">Articles</a>
                 <a href="/category/ai-chat/">AI Chat</a>
                 <a href="/category/ai-image/">AI Image</a>
                 <a href="/category/ai-coding/">AI Coding</a>
@@ -254,18 +255,18 @@
     <main class="article-container">
         <div class="tool-header">
             <div class="tool-header-top">
-                <div class="tool-icon-lg" style="background:#7C3AED;">🤖</div>
+                <img class="tool-logo tool-icon-lg" src="/assets/icons/metagpt.svg" alt="MetaGPT" width="56" height="56" loading="lazy" decoding="async">
                 <div class="tool-header-info">
-                    <h2>MetaGPT <span class="badge" style="background:#ff4444;color:#fff;padding:2px 8px;border-radius:4px;font-size:12px;">HOT</span></h2>
+                    <div class="tool-title-row"><h1>MetaGPT</h1><span class="status-chip status-trending">Trending</span></div>
                     <p class="subtitle">MetaGPT is an open-source multi-agent framework that simulates a real software team inside your terminal. Give it one requirement line and it assigns virtual roles — product manager, architect, engineer, QA — that hand off a PRD, a system design, and runnable code in sequence.</p>
                     <div class="rating-bar">⭐ 4.7 <span style="font-size:14px;color:#999;">(850K visits)</span></div>
                 </div>
             </div>
             <div class="tool-meta">
-                <div class="tool-meta-item">🌐 <strong>Website</strong>: github.com/geekan/MetaGPT</div>
-                <div class="tool-meta-item">💰 <strong>Price</strong>: Free (MIT) + LLM API cost</div>
-                <div class="tool-meta-item">📦 <strong>Platform</strong>: Python / CLI / Self-hosted</div>
-                <div class="tool-meta-item">🏷️ <strong>Category</strong>: AI Agents</div>
+                <div class="tool-meta-item"><strong>Website</strong>: github.com/geekan/MetaGPT</div>
+                <div class="tool-meta-item"><strong>Price</strong>: Free (MIT) + LLM API cost</div>
+                <div class="tool-meta-item"><strong>Platform</strong>: Python / CLI / Self-hosted</div>
+                <div class="tool-meta-item"><strong>Category</strong>: AI Agents</div>
             </div>
             <div class="action-bar">
                 <a href="https://github.com/geekan/MetaGPT" target="_blank" rel="noopener" class="action-btn action-btn-primary">Visit MetaGPT →</a>
@@ -273,12 +274,12 @@
         </div>
 
         <div class="tldr-box">
-            <strong>⚡ TL;DR</strong>
+            <strong>TL;DR</strong>
             <p>MetaGPT is an open-source multi-agent framework that simulates a real software team inside your terminal. Give it one requirement line and it assigns virtual roles — product manager, architect, engineer, QA — that hand off a PRD, a system design, and runnable code in sequence.</p>
         </div>
 
         <div class="key-stats">
-            <h4>📊 Key Statistics</h4>
+            <h4>Key Statistics</h4>
             <div class="ks-grid"><div class="ks-item"><span class="ks-val">4.7</span><span class="ks-label">User Rating</span></div><div class="ks-item"><span class="ks-val">850K</span><span class="ks-label">Monthly Visits</span></div><div class="ks-item"><span class="ks-val">Free (MIT) + LLM API cost</span><span class="ks-label">Pricing</span></div><div class="ks-item"><span class="ks-val">Python / CLI / Self-hosted</span><span class="ks-label">Platform</span></div></div>
         </div>
 
@@ -297,7 +298,7 @@
 <p>This <strong>MetaGPT review</strong> comes from someone who has billed client work with it since early 2025. It will not write production software for you. But it produces a coherent starting point — a PRD, a folder structure, and a runnable Python skeleton — faster than I can stub one out by hand. Treat it as a junior team that works at 3 a.m. and never complains, not as a senior engineer you can fire your staff over.
 </p>
 
-<h1>What MetaGPT Actually Does</h1>
+<h2>What MetaGPT Actually Does</h2>
 
 <h2>1. Role-based agent pipeline</h2>
 <p>Each role is a class with one job. ProductManager turns your sentence into a PRD. Architect outputs a design doc with a data flow. Engineer generates the project files. QA writes test stubs. You watch the artifacts pile up in the <code>workspace/</code> folder while the model talks to itself in character.
@@ -319,7 +320,7 @@
 <p>You can add roles or change the pipeline order. I have dropped the "competitive analysis" step on small jobs to save tokens. The flexibility is real, but you need to read the source to use it well.
 </p>
 
-<h1>How I Make Money With It</h1>
+<h2>How I Make Money With It</h2>
 
 <p>MetaGPT itself is free. The money is in what you deliver with it.
 </p>
@@ -347,7 +348,7 @@
 <p>The unit economics are the point: MetaGPT is free, and a scaffold costs about $0.10-$0.50 in tokens on a cheap model, or $1-$3 on a GPT-4-class model. So a $2,000 scaffold carries close to 99% margin. You are not selling generation. You are selling the cleanup and the judgment.
 </p>
 
-<h1>What MetaGPT Is Bad At (Be Honest)</h1>
+<h2>What MetaGPT Is Bad At (Be Honest)</h2>
 
 <ul><li><strong>Token burn is real.</strong> Every role re-prompts the model. A non-trivial project can eat $2-$10 in API calls before you see code. Watch your bill or it surprises you.</li>
 <li><strong>Code quality drops on big projects.</strong> Past a few thousand lines the context fragments and you get broken imports or half-written modules. Keep scopes small and split large ideas into separate runs.</li>
@@ -356,14 +357,14 @@
 <li><strong>Prompt quality makes or breaks it.</strong> "Build an app" gives garbage. Spell out the stack, the routes, and the data model, and you get something usable. You are still doing the thinking.</li>
 <li><strong>It is research-grade.</strong> The hosted spinoffs (MGX, Atoms) exist, but the core repo moves fast and breaks between versions. Pin your version in requirements or an update will silently change behavior.</li>
 </ul>
-<h1>How It Compares</h1>
+<h2>How It Compares</h2>
 
 <table><thead><tr><th>Tool</th><th>Approach</th><th>Best for</th><th>Cost</th></tr></thead><tbody><tr><td><strong>MetaGPT</strong></td><td>Role hierarchy (PM/architect/engineer) + SOP pipeline</td><td>Whole project scaffold from one line</td><td>Free + API tokens</td></tr><tr><td><strong>CrewAI</strong></td><td>Flat crew of role agents, YAML config</td><td>Reusable task teams (research, writing)</td><td>Free OSS</td></tr><tr><td><strong>LangGraph</strong></td><td>Graph state machine</td><td>Production agent workflows with branching</td><td>Free OSS</td></tr><tr><td><strong>AutoGen</strong></td><td>Conversation-based agents</td><td>Agents that negotiate via chat</td><td>Free OSS</td></tr><tr><td><strong>Devin</strong></td><td>Autonomous SWE agent (commercial)</td><td>End-to-end ticket to PR</td><td>Paid, per-seat</td></tr></tbody></table>
 
 <p>MetaGPT wins on "give me a whole project structure fast." It loses on fine control — if you want to tune one agent mid-run, CrewAI or LangGraph are friendlier.
 </p>
 
-<h1>Who Should (and Shouldn't) Use It</h1>
+<h2>Who Should (and Shouldn't) Use It</h2>
 
 <p><strong>Good fit:</strong> freelancers and agencies shipping client MVPs, technical founders prototyping, researchers studying multi-agent systems.
 </p>
@@ -371,7 +372,7 @@
 <p><strong>Skip it if:</strong> you have zero coding background and expect a finished product, you need mission-critical reliability, or your project is huge and monolithic.
 </p>
 
-<h1>Getting Started</h1>
+<h2>Getting Started</h2>
 
 <ul><li><code>pip install metagpt</code>, then set your <code>OPENAI_API_KEY</code> (or an Anthropic or local model) in the config file.</li>
 <li>Start with a tiny, specific prompt — a single endpoint or a small CLI — and read every artifact it writes.</li>
@@ -380,7 +381,7 @@
 <li>Pin the version in your requirements so an update doesn't change behavior under you.</li>
 <li>For client work, always add a human review pass before anything touches production.</li>
 </ul>
-<h1>FAQ</h1>
+<h2>FAQ</h2>
 
 <p><strong>Is MetaGPT free to use?</strong>
 Yes — the core framework is MIT-licensed and free to self-host. Your only cost is the LLM API tokens the agents consume, typically a few cents to a few dollars per project depending on its size and the model you pick.
@@ -401,16 +402,16 @@ Sell MVP scaffolds to non-technical founders at $1,500-$4,000 each, or prototype
 
         <div class="pros-cons">
             <div class="pros">
-                <h4>👍 Pros</h4>
+                <h4>Pros</h4>
                 <ul><li>Spins up a full project scaffold (PRD + design + code) from a single sentence</li><li>MIT-licensed and self-hostable, no vendor lock-in</li><li>Role pipeline mirrors a real team, so output is structured, not freeform</li><li>Active community (66k+ GitHub stars) and academic backing (ICLR 2025 Oral)</li><li>Supports OpenAI, Anthropic, and local model backends</li></ul>
             </div>
             <div class="cons">
-                <h4>👎 Cons</h4>
+                <h4>Cons</h4>
                 <ul><li>Multi-agent prompts burn tokens fast; a real project can cost $2-$10 in API calls</li><li>Code quality drops past a few thousand lines as context fragments</li><li>Every scaffold still needs a human review and debug pass before it ships</li><li>Setup assumes Python 3.9+, an API key, and comfort reading stack traces</li><li>Research-grade repo moves quickly and can break between versions</li></ul>
             </div>
         </div>
 
-        <div class="faq-section"><h3>❓ FAQ</h3><div class="faq-item">
+        <div class="faq-section"><h3>FAQ</h3><div class="faq-item">
                     <details>
                         <summary>Is MetaGPT free to use?</summary>
                         <div class="faq-answer"><p>The core framework is MIT-licensed and free to self-host. Your only cost is the LLM API tokens the agents consume, typically a few cents to a few dollars per project depending on its size and the model you pick.
@@ -442,7 +443,7 @@ Sell MVP scaffolds to non-technical founders at $1,500-$4,000 each, or prototype
 
         <div class="author-block">
         <div class="author-block-inner">
-            <div class="author-avatar">🛠️</div>
+            <div class="author-avatar">A</div>
             <div class="author-body">
                 <p class="author-label"><strong>About the reviewer</strong></p>
                 <p class="author-text">This MetaGPT review was written by the <a href="/author/">AI Tool Lab Editorial Team</a>, based on real paid usage and testing. We spend $200+/month on AI tool subscriptions so you do not have to. Every claim in this review is verifiable — if you find an error, <a href="/contact.html">let us know</a> and we will fix it within 48 hours.</p>
@@ -452,29 +453,29 @@ Sell MVP scaffolds to non-technical founders at $1,500-$4,000 each, or prototype
     </div>
 
         <div class="related-tools" id="relatedSection">
-            <h3>🔗 Related Tools</h3>
+            <h3>Related Tools</h3>
             <div class="related-grid"><a href="/tools/mulerun/" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">🤖</div>
+                <img class="tool-logo related-tile" src="/assets/icons/mulerun.png" alt="MuleRun" width="40" height="40" loading="lazy" decoding="async">
                 <div style="font-weight:600;">MuleRun</div>
                 <div style="font-size:13px;color:#666;">AI Agents</div>
             </a>
 <a href="/tools/ascn-no-code/" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">🛠️</div>
+                <img class="tool-logo related-tile" src="/assets/icons/ascn-no-code.png" alt="ASCN No Code" width="40" height="40" loading="lazy" decoding="async">
                 <div style="font-weight:600;">ASCN No Code</div>
                 <div style="font-size:13px;color:#666;">AI Agents</div>
             </a>
 <a href="/tools/crew-ai/" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">🤖</div>
+                <img class="tool-logo related-tile" src="/assets/icons/crew-ai.svg" alt="CrewAI" width="40" height="40" loading="lazy" decoding="async">
                 <div style="font-weight:600;">CrewAI</div>
                 <div style="font-size:13px;color:#666;">AI Agents</div>
             </a>
 <a href="/tools/voiceflow/" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">🎙</div>
+                <img class="tool-logo related-tile" src="/assets/icons/voiceflow.png" alt="Voiceflow" width="40" height="40" loading="lazy" decoding="async">
                 <div style="font-weight:600;">Voiceflow</div>
                 <div style="font-size:13px;color:#666;">AI Agents</div>
             </a>
 <a href="/tools/manus/" class="related-card">
-                <div style="font-size:24px;margin-bottom:8px;">🤖</div>
+                <img class="tool-logo related-tile" src="/assets/icons/manus.png" alt="Manus" width="40" height="40" loading="lazy" decoding="async">
                 <div style="font-weight:600;">Manus</div>
                 <div style="font-size:13px;color:#666;">AI Agents</div>
             </a>
@@ -482,17 +483,17 @@ Sell MVP scaffolds to non-technical founders at $1,500-$4,000 each, or prototype
         </div>
 
         <div class="related-tools">
-                <h3>📚 Related Articles</h3>
+                <h3>Related Articles</h3>
                 <div class="related-grid"><a href="/articles/best-static-hosting-pricing-2026-netlify-vs-vercel-vs-cloudflare-pages-vs-github-pages/" class="related-card">
-                    <div style="font-weight:600;margin-bottom:4px;">📖 Static Hosting Pricing in 2026: Netlify </div>
+                    <div style="font-weight:600;margin-bottom:4px;">Static Hosting Pricing in 2026: Netlify </div>
                     <div style="font-size:13px;color:#666;">2026-11-15</div>
                 </a>
 <a href="/articles/best-llm-api-pricing-2026-openai-gpt-6-vs-claude-opus-5-5-vs-gemini-4-vs-deepseek-compared/" class="related-card">
-                    <div style="font-weight:600;margin-bottom:4px;">📖 LLM API Pricing Compared in 2026: GPT-6 </div>
+                    <div style="font-weight:600;margin-bottom:4px;">LLM API Pricing Compared in 2026: GPT-6 </div>
                     <div style="font-size:13px;color:#666;">2026-11-14</div>
                 </a>
 <a href="/articles/best-cdn-pricing-2026-bunny-vs-cloudflare-vs-fastly-vs-cloudfront-compared/" class="related-card">
-                    <div style="font-weight:600;margin-bottom:4px;">📖 Best CDN Pricing in 2026: Bunny CDN vs C</div>
+                    <div style="font-weight:600;margin-bottom:4px;">Best CDN Pricing in 2026: Bunny CDN vs C</div>
                     <div style="font-size:13px;color:#666;">2026-11-13</div>
                 </a>
 </div>
@@ -500,7 +501,9 @@ Sell MVP scaffolds to non-technical founders at $1,500-$4,000 each, or prototype
     </main>
 
     <footer class="footer">
-        <p>&copy; 2026 AI Tool Lab &middot; Best AI Tools, Updated Daily &middot; <a href="https://www.aitoollab.cn/" style="color:#999;">中文版</a></p>
+        <p class="footer-logo">AI Tool Lab</p>
+        <p>Independent AI tool reviews. No sponsored rankings. &middot; <a href="/about.html">Editorial policy</a> &middot; <a href="https://www.aitoollab.cn/">中文版</a></p>
+        <p class="footer-meta">Copyright 2026 AI Tool Lab &middot; Updated daily</p>
     </footer>
     <button id="backToTop" aria-label="Back to top">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
@@ -511,7 +514,7 @@ Sell MVP scaffolds to non-technical founders at $1,500-$4,000 each, or prototype
 <script>
 document.addEventListener("DOMContentLoaded",function(){var b=document.getElementById("backToTop");if(!b)return;var s=function(){if(window.scrollY>400){b.classList.add("visible")}else{b.classList.remove("visible")}};window.addEventListener("scroll",s,{passive:true});s();b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"})});});
 </script>
-<script src="/js/tts-reader.js" defer></script><button id="darkModeToggle" class="dark-toggle-fab" aria-label="Toggle dark mode" title="Dark mode">🌙</button>
+<script src="/js/tts-reader.js" defer></script><button id="darkModeToggle" class="dark-toggle-fab" aria-label="Toggle dark mode" title="Dark mode">◐</button>
 <script>
 (function(){
     var btn = document.getElementById('darkModeToggle');
@@ -519,7 +522,7 @@ document.addEventListener("DOMContentLoaded",function(){var b=document.getElemen
     var dark = localStorage.getItem('darkMode') === 'true';
     function apply(d) {
         document.documentElement.setAttribute('data-theme', d ? 'dark' : '');
-        btn.textContent = d ? '☀️' : '🌙';
+        btn.textContent = d ? '◑' : '◐';
         localStorage.setItem('darkMode', d);
     }
     apply(dark);
