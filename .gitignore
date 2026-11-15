@@ -33,3 +33,4 @@ Thumbs.db
 _deploy_cf/
 _deploy_cf.zip
 .wrangler/
+.playwright-cli/
