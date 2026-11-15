@@ -1,0 +1,193 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "🛠️ AI Tool Lab Updated daily" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - heading "🛠️ AI Tool Lab Updated daily" [level=1] [ref=e5]:
+          - text: 🛠️ AI Tool Lab
+          - generic [ref=e6]: Updated daily
+      - navigation [ref=e7]:
+        - link "🛠️ Tools" [ref=e8] [cursor=pointer]:
+          - /url: /category/
+        - link "📖 Articles" [ref=e9] [cursor=pointer]:
+          - /url: /articles/
+        - link "AI Chat" [ref=e10] [cursor=pointer]:
+          - /url: /category/ai-chat/
+        - link "AI Image" [ref=e11] [cursor=pointer]:
+          - /url: /category/ai-image/
+        - link "AI Coding" [ref=e12] [cursor=pointer]:
+          - /url: /category/ai-coding/
+        - link "AI Video" [ref=e13] [cursor=pointer]:
+          - /url: /category/ai-video/
+  - navigation "Breadcrumb" [ref=e14]:
+    - link "Home" [ref=e15] [cursor=pointer]:
+      - /url: /
+    - text: ">"
+    - link "AI E-commerce" [ref=e16] [cursor=pointer]:
+      - /url: /category/ai-e-commerce/
+    - text: "> Helium 10"
+  - main [ref=e17]:
+    - generic [ref=e18]:
+      - generic [ref=e19]:
+        - generic [ref=e20]: 🎈
+        - generic [ref=e21]:
+          - heading "Helium 10 RECOMMENDED" [level=2] [ref=e22]:
+            - text: Helium 10
+            - generic [ref=e23]: RECOMMENDED
+          - paragraph [ref=e24]: "The all-in-one suite for Amazon (and now Walmart and TikTok Shop) sellers: product research, keyword data, listing AI, PPC automation and profit tracking. The money angle is the most direct on this site - the tool exists to find products that sell, and people charge real money for doing exactly that."
+          - generic [ref=e25]: ⭐ 4.5
+      - generic [ref=e26]:
+        - generic [ref=e27]:
+          - text: 🌐
+          - strong [ref=e28]: Website
+          - text: ": www.helium10.com/"
+        - generic [ref=e29]:
+          - text: 💰
+          - strong [ref=e30]: Price
+          - text: ": Free plan · Paid from $29/mo"
+        - generic "Web app plus Chrome Extension (required for Xray and in-browser research). Works on any OS with Chrome or a Chromium browser. No mobile app; dashboards are desktop-first." [ref=e31]:
+          - text: 📦
+          - strong [ref=e32]: Platform
+          - text: ": Web app plus Chrome Extension (required for Xray and in-bro…"
+        - generic [ref=e33]:
+          - text: 🏷️
+          - strong [ref=e34]: Category
+          - text: ": AI E-commerce"
+      - link "Visit Helium 10 →" [ref=e36] [cursor=pointer]:
+        - /url: https://www.helium10.com/
+    - generic [ref=e37]:
+      - strong [ref=e38]: ⚡ TL;DR
+      - paragraph [ref=e39]: "The all-in-one suite for Amazon (and now Walmart and TikTok Shop) sellers: product research, keyword data, listing AI, PPC automation and profit tracking. The money angle is the most direct on this site - the tool exists to find products that sell, and people charge real money for doing exactly that."
+    - generic [ref=e40]:
+      - heading "📊 Key Statistics" [level=4] [ref=e41]
+      - generic [ref=e42]:
+        - generic [ref=e43]:
+          - generic [ref=e44]: "4.5"
+          - generic [ref=e45]: User Rating
+        - generic [ref=e46]:
+          - generic [ref=e47]: Free plan · Paid from $29/mo
+          - generic [ref=e48]: Pricing
+        - generic [ref=e49]:
+          - generic [ref=e50]: Web app plus Chrome Extension (required for Xray and in-bro…
+          - generic [ref=e51]: Platform
+    - generic [ref=e52]:
+      - generic [ref=e53]: "Xray Chrome Extension: instant sales, revenue and review analysis over any Amazon or Walmart search results page"
+      - generic [ref=e54]: "Black Box product discovery: filter the Amazon catalog by demand, competition, price and revenue thresholds"
+      - generic [ref=e55]: "Cerebro reverse ASIN lookup: see every keyword a competing product ranks for, with volumes and positions"
+      - generic [ref=e56]: Magnet keyword mining and keyword tracking for ranking monitoring over time
+      - generic [ref=e57]: "AI Listing Builder: generates and optimizes listing copy integrated with your keyword research"
+      - generic [ref=e58]: "Helium AI agent and MCP access (included up to 1,000 calls on Diamond): keyword, listing and ads intelligence in conversation"
+      - generic [ref=e59]: "Ad automation: rules-based PPC management, bid suggestions, dayparting on Diamond"
+      - generic [ref=e60]: Profit tracker, inventory management with supplier ordering, and Managed Refund Service for FBA fee recovery
+      - generic [ref=e61]: "TikTok Shop toolkit: profitability calculator, bulk listing converter from Amazon, profit sync"
+      - generic [ref=e62]: Market Tracker competitor intelligence and 24 months of historical keyword data on Diamond
+    - article [ref=e63]:
+      - paragraph [ref=e64]:
+        - button "🔊 Read" [ref=e66] [cursor=pointer]
+        - text: Helium 10 has been the default answer to 'what tools do I need to sell on Amazon' for years, and the 2026 version makes the case stronger and the bill bigger at the same time. The suite now covers the whole seller lifecycle - finding a product, writing the listing, running the ads, tracking profit, managing inventory, even clawing back FBA fee errors - and it has pushed into Walmart and TikTok Shop. It also added an AI agent and MCP access on the top tiers, which matters if you wire your selling data into custom dashboards or agents.
+      - paragraph [ref=e67]: The tool that made the name is still the Chrome Extension. Xray sits over any Amazon search results page and pulls estimated monthly sales, revenue, review counts and price history for every listing on the page. Black Box filters the whole catalog by demand and competition thresholds. Cerebro does reverse ASIN lookup - paste in a competitor product and get every keyword it ranks for. These three tools are why people pay, and in 2026 everything else is layered around them.
+      - 'heading "Pricing: the real math" [level=2] [ref=e68]'
+      - paragraph [ref=e69]: "Verified from helium10.com (Nov 2026). The free plan is permanent, not a trial: 5 Black Box uses, 10 Xray runs, Cerebro twice a day, 20 tracked keywords, and there is a separate 7-day free trial of the paid tiers with no card. Starter is $29/mo billed annually ($39 monthly) and is mostly the extension plus training plus limited tool usage - fine for validating an idea, too small to run a business. Platinum is $79/mo annual ($99 monthly): 250 Cerebro and Magnet lookups a month, 500 tracked keywords, 2 seller accounts, 40 SKUs of inventory management, AI-powered ads, and the Managed Refund Service. Diamond is $229/mo annual ($279 monthly): 500 lookups, 2,500 keywords, 5 users, rules-based ad automation with dayparting, TikTok Shop tools, and the influencer database. Enterprise is custom, with third-party sources listing around $1,499/mo as the entry point."
+      - paragraph [ref=e70]: Two costs hide in plain sight. First, monthly billing runs 30-40% above the advertised annual numbers, so budget against $99, not $79. Second, the Managed Refund Service keeps a cut - 15% on Platinum, 10% on Diamond - of everything it recovers. It usually still nets you money, but 'included' is doing some marketing work in that sentence.
+      - heading "How people actually make money with it" [level=2] [ref=e71]
+      - paragraph [ref=e72]: "The obvious path is selling your own product: Xray and Black Box find under-served niches, the profit calculator stress-tests margins against FBA fees, and Cerebro hands you the keyword list before you write a word of copy. But the less obvious path is selling the research itself. Product research reports built on Xray data go for $500-$2,000 in seller communities and freelance platforms. Listing optimization - Cerebro keywords plus the AI Listing Builder - prices at $150-$500 per listing, and PPC management retainers start around $500/mo. A single agency client covers a Diamond subscription with the ad-automation features left over. The TikTok Shop converter is quietly becoming a service line of its own: brands want their Amazon catalogs ported over, and the tool compresses days of work into an afternoon."
+      - heading "Where it disappoints" [level=2] [ref=e73]
+      - paragraph [ref=e74]: "The sales estimates deserve permanent suspicion. Xray extrapolates from best-seller rank and review velocity, and in young niches or seasonal categories the numbers can be off by a multiple. Sellers who treat the estimates as ground truth instead of a prior are the ones who end up with 500 units of a product nobody wants. The usage caps are the other friction: 250 Cerebro lookups a month on Platinum evaporates if you research in batches, and Helium 10 knows the caps are the reason Diamond exists."
+      - paragraph [ref=e75]: The interface has also grown heavy. What used to be a focused research suite is now a platform with an agent, academies, refund workflows, inventory, and multi-marketplace modules. Expect weeks, not hours, to learn it properly - and expect some modules to sit unused no matter which plan you buy.
+      - heading "Against the alternatives" [level=2] [ref=e76]
+      - paragraph [ref=e77]: "Jungle Scout is the name most often weighed against it, and the honest comparison is that Jungle Scout is friendlier for absolute beginners while Helium 10's Cerebro and extension data are deeper for anyone past week two. Smart Scout, AMZScout and Viral Launch undercut on price but none of them cover ads, operations and refunds in one login, which is where the bundle economics actually work out. The newer threat is Amazon's own tooling: Seller Central's Search Terms report and Brand Analytics are free and genuinely useful, and they cover perhaps 60% of what casual researchers need. What they do not cover is competitor revenue estimation, listing-grade keyword intelligence, or anything outside Amazon's walls - which is precisely the slice Helium 10 monetizes."
+      - heading "Who should skip it" [level=2] [ref=e78]
+      - paragraph [ref=e79]: "If your business is not Amazon-centered, look elsewhere: Shopify-first brands get almost nothing here, and Walmart and TikTok Shop coverage, while improving, is visibly secondary. If you sell fewer than a handful of products and research rarely, the free plan plus Jungle Scout's cheaper tiers or straight Seller Central reports may cover you. But if Amazon is where your money lives - or you want a service business built on seller data - Helium 10 remains the least-optional subscription in the space, and the free plan is the honest way to find out before paying for it."
+    - generic [ref=e80]:
+      - generic [ref=e81]:
+        - heading "👍 Pros" [level=4] [ref=e82]
+        - list [ref=e83]:
+          - listitem [ref=e84]: "Xray in the Chrome Extension is the single best product-validation tool in e-commerce: hover over any Amazon search results and get real sales estimates, revenue, and review velocity per listing in seconds. One good product decision pays for a year of Platinum"
+          - listitem [ref=e85]: Cerebro reverse-ASIN lookup shows every keyword a competitor product ranks for, with search volume and ranking position. It is the fastest way to build a keyword list for a new listing, and it is a genuine moat over free alternatives
+          - listitem [ref=e86]: The free plan is not a gimmick - 2 Cerebro lookups a day plus limited Xray runs are enough to validate a handful of product ideas a week before committing any money
+          - listitem [ref=e87]: "In 2026 the platform absorbed more of the actual job: AI listing builder writes copy against your keyword data, ads automation adjusts bids, inventory management handles supplier orders, and the refund service recovers FBA fee errors most sellers never notice"
+          - listitem [ref=e88]: The training library (Amazon FBA, Amazon Ads, TikTok Shop academies) is included even on Starter - better built-in education than most courses that people sell for $1,000+
+      - generic [ref=e89]:
+        - heading "👎 Cons" [level=4] [ref=e90]
+        - list [ref=e91]:
+          - listitem [ref=e92]: "Price creep is real: Starter was long marketed around $39 and the entry point has shuffled across tiers; Diamond at $229/mo annual is a heavy fixed cost for anyone not yet selling consistently. Monthly billing is 30-40% pricier than the advertised numbers"
+          - listitem [ref=e93]: "Usage limits punish power users: 250 Cerebro and Magnet lookups per month on Platinum sounds fine until you research in batches, and running out mid-session is a hard stop. Diamond exists mostly to sell you higher caps"
+          - listitem [ref=e94]: Sales estimates are estimates. Xray and Black Box extrapolate from BSR and review data, and they can be off by a wide margin in new or seasonal niches. People lose real money trusting the numbers without cross-checking suppliers and samples
+          - listitem [ref=e95]: "Feature sprawl: the dashboard now bundles research, ads, operations, refunds, TikTok Shop, and an AI agent. Expect a learning curve measured in weeks, and some modules (refunds, ads automation) have their own fees or percentages stacked on top"
+          - listitem [ref=e96]: Amazon-centric by design. Walmart and TikTok Shop support is real but thinner, so if your business lives outside Amazon the value drops fast - Shopify-first sellers get little here
+    - generic [ref=e97]:
+      - heading "❓ FAQ" [level=3] [ref=e98]
+      - group [ref=e100]:
+        - generic "Is the Helium 10 free plan actually usable, or just a teaser?" [ref=e101]
+      - group [ref=e103]:
+        - generic "Can I make money with Helium 10 without selling my own products?" [ref=e104]
+      - group [ref=e106]:
+        - generic "Platinum or Diamond - which one do most sellers actually need?" [ref=e107]
+    - generic [ref=e109]:
+      - generic [ref=e110]: 🛠️
+      - generic [ref=e111]:
+        - paragraph [ref=e112]:
+          - strong [ref=e113]: About the reviewer
+        - paragraph [ref=e114]:
+          - text: This Helium 10 review was written by the
+          - link "AI Tool Lab Editorial Team" [ref=e115] [cursor=pointer]:
+            - /url: /author/
+          - text: ", based on real paid usage and testing. We spend $200+/month on AI tool subscriptions so you do not have to. Every claim in this review is verifiable — if you find an error,"
+          - link "let us know" [ref=e116] [cursor=pointer]:
+            - /url: /contact.html
+          - text: and we will fix it within 48 hours.
+        - paragraph [ref=e117]:
+          - text: "Last reviewed: 2026-11-15 ·"
+          - link "Review methodology" [ref=e118] [cursor=pointer]:
+            - /url: /about.html
+    - generic [ref=e119]:
+      - heading "🔗 Related Tools" [level=3] [ref=e120]
+      - generic [ref=e121]:
+        - link "🚀 Doba Pilot AI E-commerce" [ref=e122] [cursor=pointer]:
+          - /url: /tools/doba-pilot/
+          - generic [ref=e123]: 🚀
+          - generic [ref=e124]: Doba Pilot
+          - generic [ref=e125]: AI E-commerce
+        - link "🛒 Klaviyo AI E-commerce" [ref=e126] [cursor=pointer]:
+          - /url: /tools/klaviyo/
+          - generic [ref=e127]: 🛒
+          - generic [ref=e128]: Klaviyo
+          - generic [ref=e129]: AI E-commerce
+        - link "🛍️ Shopify AI E-commerce" [ref=e130] [cursor=pointer]:
+          - /url: /tools/shopify/
+          - generic [ref=e131]: 🛍️
+          - generic [ref=e132]: Shopify
+          - generic [ref=e133]: AI E-commerce
+        - link "🛒 BigCommerce AI E-commerce" [ref=e134] [cursor=pointer]:
+          - /url: /tools/bigcommerce/
+          - generic [ref=e135]: 🛒
+          - generic [ref=e136]: BigCommerce
+          - generic [ref=e137]: AI E-commerce
+        - link "🛒 WooCommerce AI E-commerce" [ref=e138] [cursor=pointer]:
+          - /url: /tools/woocommerce/
+          - generic [ref=e139]: 🛒
+          - generic [ref=e140]: WooCommerce
+          - generic [ref=e141]: AI E-commerce
+    - generic [ref=e142]:
+      - heading "📚 Related Articles" [level=3] [ref=e143]
+      - generic [ref=e144]:
+        - 'link "📖 LLM API Pricing Compared in 2026: GPT-6 2026-11-14" [ref=e145] [cursor=pointer]':
+          - /url: /articles/best-llm-api-pricing-2026-openai-gpt-6-vs-claude-opus-5-5-vs-gemini-4-vs-deepseek-compared/
+          - generic [ref=e146]: "📖 LLM API Pricing Compared in 2026: GPT-6"
+          - generic [ref=e147]: 2026-11-14
+        - 'link "📖 Best CDN Pricing in 2026: Bunny CDN vs C 2026-11-13" [ref=e148] [cursor=pointer]':
+          - /url: /articles/best-cdn-pricing-2026-bunny-vs-cloudflare-vs-fastly-vs-cloudfront-compared/
+          - generic [ref=e149]: "📖 Best CDN Pricing in 2026: Bunny CDN vs C"
+          - generic [ref=e150]: 2026-11-13
+        - 'link "📖 Best Managed Kafka Hosting in 2026: Conf 2026-11-12" [ref=e151] [cursor=pointer]':
+          - /url: /articles/best-managed-kafka-hosting-2026-confluent-vs-msk-vs-redpanda-vs-aiven-pricing-compared/
+          - generic [ref=e152]: "📖 Best Managed Kafka Hosting in 2026: Conf"
+          - generic [ref=e153]: 2026-11-12
+  - contentinfo [ref=e154]:
+    - paragraph [ref=e155]:
+      - text: © 2026 AI Tool Lab · Best AI Tools, Updated Daily ·
+      - link "中文版" [ref=e156] [cursor=pointer]:
+        - /url: https://www.aitoollab.cn/
+  - button "Back to top":
+    - img
+  - button "Toggle dark mode" [ref=e157] [cursor=pointer]: 🌙

@@ -1582,11 +1582,16 @@ img { max-width: 100%; height: auto; }
   box-shadow: var(--shadow-sm);
 }
 .ks-val {
-  display: block;
-  font-size: 20px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+  font-size: 18px;
   font-weight: 800;
+  line-height: 1.35;
   color: var(--primary-color);
   margin-bottom: 4px;
+  word-break: break-word;
 }
 .ks-label {
   display: block;

@@ -446,10 +446,23 @@ def build_tool_page_en(tool: dict, all_tools: list, all_articles: list = None) -
         bc = {'hot':'#ff4444','new':'#00aa00','pick':'#2563eb'}.get(tool['badge'].get('type'),'#2563eb')
         badge_html = f' <span class="badge" style="background:{bc};color:#fff;padding:2px 8px;border-radius:4px;font-size:12px;">{tool["badge"]["text"]}</span>'
 
-    # Platform
+    # Platform — hero meta line shows a short label only; long prose stays out of the layout
+    def _short_stat(value: str, limit: int) -> str:
+        """Shorten a stat value for display: first sentence only, hard-capped."""
+        v = (value or '').strip()
+        if len(v) <= limit:
+            return v
+        for sep in ('. ', '。', '; ', ' - ', ' — '):
+            idx = v.find(sep)
+            if 0 < idx <= limit:
+                return v[:idx + 1].strip()
+        return v[:limit - 1].rstrip() + '…'
+    platform_short = _short_stat(tool.get('platform', ''), 60) if tool.get('platform') else ''
+    platform_full = (tool.get('platform') or '').strip()
     platform_html = ''
-    if tool.get('platform'):
-        platform_html = f'<div class="tool-meta-item">📦 <strong>Platform</strong>: {tool["platform"]}</div>'
+    if platform_short:
+        title_attr = f' title="{escape_html(platform_full)}"' if len(platform_full) > 60 else ''
+        platform_html = f'<div class="tool-meta-item"{title_attr}>📦 <strong>Platform</strong>: {escape_html(platform_short)}</div>'
 
     # Dates
     today_iso   = datetime.now().strftime('%Y-%m-%d')
@@ -594,16 +607,20 @@ def build_tool_page_en(tool: dict, all_tools: list, all_articles: list = None) -
         </div>'''
 
     # Key Stats section (GEO — citation-worthy data points AI engines can quote)
+    # Cards must stay scannable: only short values qualify as stats. Long prose
+    # fields (some legacy data has paragraphs in visits/platform) are dropped here —
+    # the same information lives in the TL;DR box and the review body.
     key_stats_html = ''
     stat_items = []
+    visits_val = (tool.get('visits') or '').strip()
     if tool.get('rating'):
         stat_items.append(f'<div class="ks-item"><span class="ks-val">{tool["rating"].replace("⭐ ","")}</span><span class="ks-label">User Rating</span></div>')
-    if tool.get('visits'):
-        stat_items.append(f'<div class="ks-item"><span class="ks-val">{tool["visits"]}</span><span class="ks-label">Monthly Visits</span></div>')
+    if visits_val and len(visits_val) <= 40:
+        stat_items.append(f'<div class="ks-item"><span class="ks-val">{escape_html(visits_val)}</span><span class="ks-label">Monthly Visits</span></div>')
     if tool.get('price'):
-        stat_items.append(f'<div class="ks-item"><span class="ks-val">{tool["price"]}</span><span class="ks-label">Pricing</span></div>')
-    if tool.get('platform'):
-        stat_items.append(f'<div class="ks-item"><span class="ks-val">{tool["platform"]}</span><span class="ks-label">Platform</span></div>')
+        stat_items.append(f'<div class="ks-item"><span class="ks-val">{escape_html(tool["price"])}</span><span class="ks-label">Pricing</span></div>')
+    if platform_short:
+        stat_items.append(f'<div class="ks-item"><span class="ks-val">{escape_html(platform_short)}</span><span class="ks-label">Platform</span></div>')
     if stat_items:
         key_stats_html = f'''<div class="key-stats">
             <h4>📊 Key Statistics</h4>
@@ -671,7 +688,7 @@ def build_tool_page_en(tool: dict, all_tools: list, all_articles: list = None) -
                 <div class="tool-header-info">
                     <h2>{escape_html(name)}{badge_html}</h2>
                     <p class="subtitle">{escape_html(tool['description'])}</p>
-                    <div class="rating-bar">{tool['rating']} <span style="font-size:14px;color:#999;">({tool.get('visits','0')} visits)</span></div>
+                    <div class="rating-bar">{tool['rating']}{' <span style="font-size:14px;color:#999;">(' + escape_html(visits_val) + ' visits)</span>' if visits_val and len(visits_val) <= 12 else ''}</div>
                 </div>
             </div>
             <div class="tool-meta">
