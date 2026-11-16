@@ -21,7 +21,7 @@
     <meta name="twitter:title" content="Qwen3.8-27B vs DeepSeek V4 Flash: Which Should You Actually Use in 2026? - AI Tool Lab">
     <meta name="twitter:description" content="A hands-on, data-backed comparison of Alibaba's Qwen3.8-27B (multimodal, local-runnable, agentic) against DeepSeek V4 Flash (cheaper, text-only, knowledge-dense). Benchmarks, local-deploy cost, web-search wiring, and a runnable Ollama + Tavily agent.">
     <meta name="twitter:image" content="https://www.aitoolbox.hk/images/og/qwen3-8-27b-vs-deepseek-v4-flash-en-og.png">
-    <link rel="stylesheet" href="/css/style.css?v=20261116092034">
+    <link rel="stylesheet" href="/css/style.css?v=20261116155217">
     <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -128,19 +128,22 @@
         <a href="/">Home</a> &gt; <a href="/category/ai-development/">AI Development</a> &gt; <span>Qwen3.8-27B vs DeepSeek V4 Fla...</span>
     </nav>
 
-    <main class="article-container">
-        <article class="article-body" data-tts>
-            <h1 style="margin-bottom:16px;">Qwen3.8-27B vs DeepSeek V4 Flash: Which Should You Actually Use in 2026?</h1>
-            <div style="color:#999;font-size:14px;margin-bottom:24px;">
-                2026-08-21 · AI Development ·
-                <span itemprop="author" itemscope itemtype="https://schema.org/Organization"><a href="/author/" itemprop="url" style="color:#2563eb;text-decoration:none;"><span itemprop="name">AI Tool Lab Editorial Team</span></a></span> ·
-                <span style="color:#bbb;">23 min read</span>
+    <main class="article-container article-container-wide">
+        <header class="article-header">
+            <a class="article-kicker" href="/category/ai-development/">AI Development</a>
+            <h1 class="article-title">Qwen3.8-27B vs DeepSeek V4 Flash: Which Should You Actually Use in 2026?</h1>
+            <div class="article-meta-row">
+                <span>2026-08-21</span>
+                <span aria-hidden="true">·</span>
+                <span itemprop="author" itemscope itemtype="https://schema.org/Organization"><a href="/author/" itemprop="url"><span itemprop="name">AI Tool Lab Editorial Team</span></a></span>
+                <span aria-hidden="true">·</span>
+                <span>23 min read</span>
             </div>
-            <div class="tldr-box" style="background:linear-gradient(135deg,#fff8e6,#ffefb8);border-left:4px solid #f5a623;padding:16px 20px;margin-bottom:24px;border-radius:0 8px 8px 0;font-size:14.5px;line-height:1.7;">
-                <strong style="color:var(--brand-blue);font-size:15px;">TL;DR</strong><br>
-                <span style="color:#555;">A hands-on, data-backed comparison of Alibaba's Qwen3.8-27B (multimodal, local-runnable, agentic) against DeepSeek V4 Flash (cheaper, text-only, knowledge-dense). Benchmarks, local-deploy cost, web-search wiring, and a runnable Ollama + Tavily agent.</span>
-            </div>
-            <p>Alibaba dropped Qwen3.8-27B on August 14, 2026, and the question everyone building on open models is now asking is simple: is it better than DeepSeek V4 Flash? The honest answer is "it depends on what you're building" — but the dependency is sharper than usual, because these two models are almost exact opposites on the two axes that matter most in 2026: <strong>modality</strong> and <strong>where the model runs</strong>.
+        </header>
+        <div class="article-layout">
+            <article class="article-body" data-tts>
+                <div class="tldr-box"><strong>TL;DR</strong><p>A hands-on, data-backed comparison of Alibaba's Qwen3.8-27B (multimodal, local-runnable, agentic) against DeepSeek V4 Flash (cheaper, text-only, knowledge-dense). Benchmarks, local-deploy cost, web-search wiring, and a runnable Ollama + Tavily agent.</p></div>
+                <p>Alibaba dropped Qwen3.8-27B on August 14, 2026, and the question everyone building on open models is now asking is simple: is it better than DeepSeek V4 Flash? The honest answer is "it depends on what you're building" — but the dependency is sharper than usual, because these two models are almost exact opposites on the two axes that matter most in 2026: <strong>modality</strong> and <strong>where the model runs</strong>.
 </p>
 
 <p>Qwen3.8-27B is the first open 27B-class model that is genuinely multimodal (text + image + video) *and* agentic out of the box, and it runs on a single 24GB GPU. DeepSeek V4 Flash is a text-only mixture-of-experts that is cheaper per token, stronger on raw knowledge, and faster on pure coding — but you can't run it at home and it can't see an image. If you pick based on a single leaderboard number, you will pick wrong for your use case about half the time.
@@ -149,14 +152,14 @@
 <p>This is a hands-on, data-backed comparison. Every benchmark below is sourced (Artificial Analysis, the Veladan agent suite, and Fox-in-the-Box's Hermes agent leaderboard), and the second half gives you a runnable local agent so you can test Qwen3.8-27B with live web search yourself.
 </p>
 
-<h2>What each model actually is</h2>
+<h2 id="what-each-model-actually-is">What each model actually is</h2>
 
 <table><thead><tr><th>Qwen3.8-27B</th><th>DeepSeek V4 Flash</th></tr></thead><tbody><tr><td>Release</td><td>2026-08-14</td><td>2026 (current gen)</td></tr><tr><td>Architecture</td><td>27B dense</td><td>284B total / 13B active (MoE)</td></tr><tr><td>Modality</td><td>Text <strong>+ image + video</strong></td><td>Text only</td></tr><tr><td>License</td><td>Apache 2.0</td><td>MIT</td></tr><tr><td>Context</td><td>262K native, 1M via YaRN</td><td>1M</td></tr><tr><td>Local run</td><td>Yes (~17GB 4-bit, 24GB GPU)</td><td>API only (too large)</td></tr><tr><td>Hosted API (OpenRouter)</td><td>$0.45 in / $3.20 out per M</td><td>$0.0826 in / $0.1652 out per M</td></tr><tr><td>Native web search</td><td>Yes (hosted API)</td><td>No (wire via tools)</td></tr></tbody></table>
 
 <p>The single biggest difference is <strong>modality</strong>. Qwen3.8-27B can take a screenshot, a PDF page, or a video frame and reason over it. DeepSeek V4 Flash is text in, text out. There is no prompt engineering around that — if your product needs to read images, the comparison is already over.
 </p>
 
-<h2>Head-to-head on the public benchmarks</h2>
+<h2 id="head-to-head-on-the-public-benchmarks">Head-to-head on the public benchmarks</h2>
 
 <p>These are third-party aggregate numbers, not vendor claims. Intelligence Index and Agentic Index are from Artificial Analysis; HLE and Terminal-Bench are public eval suites.
 </p>
@@ -169,7 +172,7 @@
 <p>This is the crux: Qwen3.8-27B is the better *agent*; DeepSeek V4 Flash is the better *knowledge engine*.
 </p>
 
-<h2>Multimodal is the dealbreaker, not the cherry on top</h2>
+<h2 id="multimodal-is-the-dealbreaker-not-the-cherry-on-top">Multimodal is the dealbreaker, not the cherry on top</h2>
 
 <p>A lot of "multimodal" models can caption an image. Qwen3.8-27B's differentiator is that vision is wired into the same reasoning path as text — you can hand it a chart and ask "why did this metric drop," or paste a UI screenshot and say "write the test for this button." For any workflow that touches documents, screenshots, or video (RAG over scanned PDFs, visual QA, content moderation, assistive tools), DeepSeek V4 Flash simply cannot participate.
 </p>
@@ -177,7 +180,7 @@
 <p>If your entire pipeline is text → text (chatbots, summarization, code gen from specs), modality doesn't matter and you should optimize on cost and knowledge instead.
 </p>
 
-<h2>Local deployment: Qwen3.8-27B runs on one 24GB card</h2>
+<h2 id="local-deployment-qwen3-8-27b-runs-on-one-24gb-card">Local deployment: Qwen3.8-27B runs on one 24GB card</h2>
 
 <p>This is where Qwen3.8-27B changes the economics. At 4-bit quantization it needs roughly 17GB of VRAM, so a single RTX 4090 (24GB) runs it comfortably. That means:
 </p>
@@ -194,7 +197,7 @@
 <p>DeepSeek V4 Flash cannot be run locally on consumer hardware (284B total params), so it is an API-only line item forever. If you're serving at scale, DeepSeek's $0.08/$0.16 OpenRouter price is brutally cheap — but it never reaches zero, and your data transits a third party.
 </p>
 
-<h2>Web search closes the knowledge gap</h2>
+<h2 id="web-search-closes-the-knowledge-gap">Web search closes the knowledge gap</h2>
 
 <p>The one place Qwen3.8-27B looks weak on paper is knowledge breadth (HLE 30.8% vs 45.1%). That gap is mostly *training-data recency*, not reasoning ability — and it is fixable with tool calling.
 </p>
@@ -206,7 +209,7 @@
 <p>Bottom line: once both models have web search, the static-knowledge gap shrinks dramatically. Qwen's native hosted search makes that easiest; its local path just needs the agent code below.
 </p>
 
-<h2>Run Qwen3.8-27B locally with live web search (hands-on)</h2>
+<h2 id="run-qwen3-8-27b-locally-with-live-web-search-hands-on">Run Qwen3.8-27B locally with live web search (hands-on)</h2>
 
 <p>Setup (one time): install Ollama, then pull the model with <code>ollama pull qwen3.8:27b</code> (≈17 GB, 4-bit), <code>pip install requests tavily-python</code>, and export your <code>TAVILY_API_KEY</code>. Then run the agent below — Ollama serves Qwen3.8-27B locally, Tavily provides web search, and the model decides when to call it.
 </p>
@@ -267,14 +270,14 @@ tavily  = TavilyClient(api_key=os.environ["TAVILY_API_KEY"])
 <p>Swap <code>MODEL</code> to any OpenAI-compatible endpoint (SiliconFlow, OpenRouter, vLLM) and the same loop drives DeepSeek V4 Flash — the only difference is DeepSeek can't take the screenshot you'd otherwise pass in.
 </p>
 
-<h2>Real API pricing (OpenRouter, Aug 2026)</h2>
+<h2 id="real-api-pricing-openrouter-aug-2026">Real API pricing (OpenRouter, Aug 2026)</h2>
 
 <table><thead><tr><th>Model</th><th>Input / M tokens</th><th>Output / M tokens</th><th>1M output tokens cost</th></tr></thead><tbody><tr><td>Qwen3.8-27B</td><td>$0.45</td><td>$3.20</td><td>$3.20</td></tr><tr><td>DeepSeek V4 Flash</td><td>$0.0826</td><td>$0.1652</td><td>$0.17</td></tr></tbody></table>
 
 <p>DeepSeek V4 Flash is roughly <strong>19× cheaper per output token</strong> on OpenRouter. At high volume that dominates. Qwen3.8-27B's output is pricey for an open 27B — that's the cost of its size and the hosted markup; the offset is running it locally for free, or using DashScope's own (often discounted) Qwen pricing.
 </p>
 
-<h2>On the Hermes / agentic leaderboards</h2>
+<h2 id="on-the-hermes-agentic-leaderboards">On the Hermes / agentic leaderboards</h2>
 
 <p>Fox-in-the-Box's Hermes agent benchmark (real multi-step agent workloads — tool use, planning, failure recovery) is the most relevant public test for "which model is a better agent." Their May 2026 leaderboard scored DeepSeek V4 Pro at 50.3 and V4 Flash at 45.1 — but it <strong>predates Qwen3.8-27B (Aug 2026)</strong>, so there is no single published head-to-head yet.
 </p>
@@ -288,7 +291,7 @@ tavily  = TavilyClient(api_key=os.environ["TAVILY_API_KEY"])
 <p>Translation: on agentic work Qwen3.8-27B is the safer bet today; on knowledge-heavy single-shot reasoning, DeepSeek V4 Flash still wins. The cleanest production setup is <strong>routing</strong> — Qwen for multimodal + agentic, DeepSeek for cheap knowledge retrieval — which is exactly what multi-provider setups are for.
 </p>
 
-<h2>Verdict: which should you use</h2>
+<h2 id="verdict-which-should-you-use">Verdict: which should you use</h2>
 
 <p><strong>Pick Qwen3.8-27B if:</strong>
 </p>
@@ -307,7 +310,7 @@ tavily  = TavilyClient(api_key=os.environ["TAVILY_API_KEY"])
 <p><strong>The pragmatic answer for most builders:</strong> use both. Run Qwen3.8-27B locally for anything multimodal or agentic, and route cheap knowledge/coding calls to DeepSeek V4 Flash. The code above is the template — change one line and the same agent loop drives either model.
 </p>
 
-<h2>FAQ</h2>
+<h2 id="faq">FAQ</h2>
 
 <p><strong>Can Qwen3.8-27B really run on a 24GB GPU?</strong> Yes. At 4-bit (Q4) it uses ~17GB VRAM, leaving headroom on a 24GB card like the RTX 4090. Larger contexts need more memory, so 32GB+ is comfortable for long documents.
 </p>
@@ -324,15 +327,13 @@ tavily  = TavilyClient(api_key=os.environ["TAVILY_API_KEY"])
 <p><strong>Is the benchmark comparison official?</strong> No single vendor publishes a clean head-to-head. The numbers here come from Artificial Analysis, the Veladan suite, and Fox-in-the-Box's Hermes leaderboard — independent third parties. Treat HLE/Terminal-Bench as directional, not absolute.
 </p>
 
-            <div style="margin-top:40px;padding:20px;background:#f8f9fa;border-radius:8px;border-left:4px solid #2563eb;">
-                <p style="margin:0 0 8px 0;font-size:14px;color:#555;">
-                    <strong>About the author:</strong> This article was written by the <a href="/author/" style="color:#2563eb;text-decoration:none;">AI Tool Lab Editorial Team</a>, with 5+ years of paid AI tool testing experience and $200+ monthly subscription spend. All reviews are based on real paid long-term use.
-                </p>
-                <p style="margin:0;font-size:13px;color:#888;">
-                    <strong>Data statement:</strong> All data in this article cites its source and is verifiable. Found an error? Report it via our <a href="/contact.html" style="color:#2563eb;text-decoration:none;">contact page</a>, we verify within 48 hours.
-                </p>
-            </div>
-        </article>
+                <div class="author-note">
+                    <p><strong>About the author:</strong> This article was written by the <a href="/author/">AI Tool Lab Editorial Team</a>, with 5+ years of paid AI tool testing experience and $200+ monthly subscription spend. All reviews are based on real paid long-term use.</p>
+                    <p><strong>Data statement:</strong> All data in this article cites its source and is verifiable. Found an error? Report it via our <a href="/contact.html">contact page</a>, we verify within 48 hours.</p>
+                </div>
+            </article>
+            <aside class="article-toc" aria-label="Table of contents"><div class="toc-title">On this page</div><ul><li><a href="#what-each-model-actually-is">What each model actually is</a></li><li><a href="#head-to-head-on-the-public-benchmarks">Head-to-head on the public benchmarks</a></li><li><a href="#multimodal-is-the-dealbreaker-not-the-cherry-on-top">Multimodal is the dealbreaker, not the cherry on top</a></li><li><a href="#local-deployment-qwen3-8-27b-runs-on-one-24gb-card">Local deployment: Qwen3.8-27B runs on one 24GB card</a></li><li><a href="#web-search-closes-the-knowledge-gap">Web search closes the knowledge gap</a></li><li><a href="#run-qwen3-8-27b-locally-with-live-web-search-hands-on">Run Qwen3.8-27B locally with live web search (hands-on)</a></li><li><a href="#real-api-pricing-openrouter-aug-2026">Real API pricing (OpenRouter, Aug 2026)</a></li><li><a href="#on-the-hermes-agentic-leaderboards">On the Hermes / agentic leaderboards</a></li><li><a href="#verdict-which-should-you-use">Verdict: which should you use</a></li><li><a href="#faq">FAQ</a></li></ul></aside>
+        </div>
 
         <div class="related-tools">
             <h3>Related Articles</h3>

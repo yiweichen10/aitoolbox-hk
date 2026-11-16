@@ -21,7 +21,7 @@
     <meta name="twitter:title" content="Best GPU Cloud Providers in 2026: RunPod vs Lambda vs Vast.ai vs CoreWeave - AI Tool Lab">
     <meta name="twitter:description" content="RunPod vs Lambda vs Vast.ai vs CoreWeave on November 2026 pricing: per-second billing, a 15% Lambda hike effective November 16, marketplace medians, $49.24 H100 nodes, and four worked bills for the same 96 GPU-hours.">
     <meta name="twitter:image" content="https://www.aitoolbox.hk/images/og/best-gpu-cloud-providers-2026-runpod-vs-lambda-vs-vast-ai-vs-coreweave-en-og.png">
-    <link rel="stylesheet" href="/css/style.css?v=20261116092034">
+    <link rel="stylesheet" href="/css/style.css?v=20261116155217">
     <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -129,22 +129,25 @@
         <a href="/">Home</a> &gt; <a href="/category/ai-infrastructure/">AI Infrastructure</a> &gt; <span>Best GPU Cloud Providers in 20...</span>
     </nav>
 
-    <main class="article-container">
-        <article class="article-body" data-tts>
-            <h1 style="margin-bottom:16px;">Best GPU Cloud Providers in 2026: RunPod vs Lambda vs Vast.ai vs CoreWeave</h1>
-            <div style="color:#999;font-size:14px;margin-bottom:24px;">
-                2026-11-10 · AI Infrastructure ·
-                <span itemprop="author" itemscope itemtype="https://schema.org/Organization"><a href="/author/" itemprop="url" style="color:#2563eb;text-decoration:none;"><span itemprop="name">AI Tool Lab Editorial Team</span></a></span> ·
-                <span style="color:#bbb;">30 min read</span>
+    <main class="article-container article-container-wide">
+        <header class="article-header">
+            <a class="article-kicker" href="/category/ai-infrastructure/">AI Infrastructure</a>
+            <h1 class="article-title">Best GPU Cloud Providers in 2026: RunPod vs Lambda vs Vast.ai vs CoreWeave</h1>
+            <div class="article-meta-row">
+                <span>2026-11-10</span>
+                <span aria-hidden="true">·</span>
+                <span itemprop="author" itemscope itemtype="https://schema.org/Organization"><a href="/author/" itemprop="url"><span itemprop="name">AI Tool Lab Editorial Team</span></a></span>
+                <span aria-hidden="true">·</span>
+                <span>30 min read</span>
             </div>
-            <div class="tldr-box" style="background:linear-gradient(135deg,#fff8e6,#ffefb8);border-left:4px solid #f5a623;padding:16px 20px;margin-bottom:24px;border-radius:0 8px 8px 0;font-size:14.5px;line-height:1.7;">
-                <strong style="color:var(--brand-blue);font-size:15px;">TL;DR</strong><br>
-                <span style="color:#555;">RunPod vs Lambda vs Vast.ai vs CoreWeave on November 2026 pricing: per-second billing, a 15% Lambda hike effective November 16, marketplace medians, $49.24 H100 nodes, and four worked bills for the same 96 GPU-hours.</span>
-            </div>
-            <p>An eight-GPU H100 node rents for $49.24 per hour on CoreWeave's published rate card and for about $18.64 per hour at the median rate on Vast.ai's marketplace. Same silicon, same NVIDIA HGX reference build, 2.6 times apart. Widen the lens and the spread gets worse: GetDeploying's index tracks 47 providers renting H100s anywhere from $0.61 to $14.90 per GPU-hour, and its B200 average has climbed roughly 31% since July 2025. The rental market moved backward in 2026 — one-year H100 contract rates rose about 40% between October 2025 and March 2026, according to SemiAnalysis, and Lambda Labs repriced upward again this month. Where you rent now matters as much as whether you rent. The four GPU cloud providers worth shortlisting — RunPod, Lambda, Vast.ai, and CoreWeave — no longer sell the same product: one bills seconds, one bills minutes on brand-new hardware, one runs a live market, and one sells nodes and contracts. Every price below is quoted the way the bill actually arrives, including the storage, bandwidth, and commitment terms that never make the headline hourly rate.
+        </header>
+        <div class="article-layout">
+            <article class="article-body" data-tts>
+                <div class="tldr-box"><strong>TL;DR</strong><p>RunPod vs Lambda vs Vast.ai vs CoreWeave on November 2026 pricing: per-second billing, a 15% Lambda hike effective November 16, marketplace medians, $49.24 H100 nodes, and four worked bills for the same 96 GPU-hours.</p></div>
+                <p>An eight-GPU H100 node rents for $49.24 per hour on CoreWeave's published rate card and for about $18.64 per hour at the median rate on Vast.ai's marketplace. Same silicon, same NVIDIA HGX reference build, 2.6 times apart. Widen the lens and the spread gets worse: GetDeploying's index tracks 47 providers renting H100s anywhere from $0.61 to $14.90 per GPU-hour, and its B200 average has climbed roughly 31% since July 2025. The rental market moved backward in 2026 — one-year H100 contract rates rose about 40% between October 2025 and March 2026, according to SemiAnalysis, and Lambda Labs repriced upward again this month. Where you rent now matters as much as whether you rent. The four GPU cloud providers worth shortlisting — RunPod, Lambda, Vast.ai, and CoreWeave — no longer sell the same product: one bills seconds, one bills minutes on brand-new hardware, one runs a live market, and one sells nodes and contracts. Every price below is quoted the way the bill actually arrives, including the storage, bandwidth, and commitment terms that never make the headline hourly rate.
 </p>
 
-<h2>What GPU cloud providers actually sell in 2026</h2>
+<h2 id="what-gpu-cloud-providers-actually-sell-in-2026">What GPU cloud providers actually sell in 2026</h2>
 
 <p>Strip away the landing pages and each platform is a different meter with a GPU attached. RunPod sells per-second compute — pods for development and long-running jobs, serverless workers for inference — with no ingress or egress fees. Lambda sells minutes on HGX instances and fixed-price 1-Click Clusters sized in GPU counts. Vast.ai sells access to a marketplace where 20,000-plus GPUs across 40-plus data centers are priced by their hosts, in on-demand, interruptible, and reserved modes. CoreWeave sells eight-GPU nodes with published on-demand and spot rates, and reserved contracts behind them.
 </p>
@@ -154,7 +157,7 @@
 
 <table><thead><tr><th>Provider</th><th>What it actually sells</th><th>H100 anchor price, Nov 2026</th><th>The fee that surprises people</th></tr></thead><tbody><tr><td>RunPod</td><td>Per-second pods plus serverless workers</td><td>$2.89/hr PCIe, $3.99/hr SXM (Secure Cloud; Community from $1.99)</td><td>Stopped pods keep billing storage — volume disk doubles to $0.20/GB/mo</td></tr><tr><td>Lambda</td><td>Per-minute HGX instances and 1-Click Clusters</td><td>$2.49/hr PCIe (1x) today; $4.59/GPU-hr on 8x from Nov 16</td><td>The November rate card itself: +15% on H100 and B200</td></tr><tr><td>Vast.ai</td><td>A live market with host-set rates</td><td>From $2.27/hr, median $2.33 (H100 SXM)</td><td>Bandwidth billed per byte both ways, at host-set rates</td></tr><tr><td>CoreWeave</td><td>8-GPU nodes, spot, and reserve contracts</td><td>$49.24/node/hr on-demand = $6.16/GPU-hr</td><td>8-GPU minimum on every H100-class GPU; GH200 is the only single-GPU option</td></tr><tr><td>AWS P5 (reference)</td><td>8-GPU P5 instances</td><td>About $6.88/GPU-hr normalized</td><td>Egress $0.09/GB after 10 TB per month</td></tr></tbody></table>
 
-<h2>Where each vendor breaks</h2>
+<h2 id="where-each-vendor-breaks">Where each vendor breaks</h2>
 
 <p>Four rate cards, four different failure modes. Each section below prices one vendor the way an invoice does — GPU line first, then everything that accrues around it.
 </p>
@@ -191,7 +194,7 @@
 <p>What the premium buys is determinism: bare-metal single-tenant nodes, an InfiniBand fabric, and vendor-reported 51-52% model FLOPs utilization at 1,024-GPU scale against a 35-45% industry average. Those numbers matter on 70B-plus multi-node training runs and mean little on anything smaller. Even the inference option is priced accordingly — CoreWeave's per-GPU inference rate for H100 is $6.16, above RunPod's $5.39 serverless H100. Egress off CoreWeave's network is metered and storage bills separately, per third-party reconciliations of the card. Rent CoreWeave when the run is big enough that a 2.6x sticker is cheaper than a 20% utilization penalty; anything else is paying for capacity you cannot measure.
 </p>
 
-<h2>The H100 rental price went up in 2026</h2>
+<h2 id="the-h100-rental-price-went-up-in-2026">The H100 rental price went up in 2026</h2>
 
 <p>The prevailing narrative says GPU rental gets cheaper every quarter as supply catches up with demand. The 2026 data says the opposite. GetDeploying's on-demand median across 53 tracked providers sat near $3.39 per GPU-hour in September. SemiAnalysis measured one-year contract rates rising from $1.70 to $2.35 per GPU-hour — about 40% — between October 2025 and March 2026, as capacity sold out. The B200 average is up roughly 31% since July 2025. Lambda repriced +15% this month. Meanwhile the hyperscalers never were the cheapest GPU cloud: normalized to a single GPU-hour, AWS's P5 family runs about $6.88, Google Cloud's A3 about $11.06, and Azure's 8-GPU ND H100 node about $12.29.
 </p>
@@ -199,7 +202,7 @@
 <p>The exit ramps are interruptible capacity, spot windows, and longer commitments — and the buy-versus-rent floor keeps moving: a new H100 PCIe card runs about $31,000 and a full 8-GPU server $250,000 to $320,000, per CloudZero, so renting still wins unless utilization is high and steady for years. Sticker rates, meanwhile, are a minority of real bills. The <a href="/articles/best-cloud-cost-management-tools-2026-cloudzero-vs-finout-vs-vantage-vs-kubecost/">cloud cost management</a> category exists because GPU line items routinely hide storage, egress, and idle capacity behind them — the same discipline applies here, at smaller scale.
 </p>
 
-<h2>The fine-tuning math: 96 GPU-hours, four bills</h2>
+<h2 id="the-fine-tuning-math-96-gpu-hours-four-bills">The fine-tuning math: 96 GPU-hours, four bills</h2>
 
 <p>GPU rental for fine-tuning is the cleanest way to compare meters, because the job is fixed. Take a LoRA fine-tune of Llama-3.1-8B on one 8x H100 SXM node for 12 hours — 96 GPU-hours of identical work, priced four ways.
 </p>
@@ -209,7 +212,7 @@
 <p>The same job costs $218 to $591 depending on where you click. Three modifiers move the real number. First, interruptions: Vast's interruptible tier would cut that bill another 50% or more if your checkpointing survives preemption. Second, breakeven: on RunPod, keeping a Secure Cloud pod warm at $3.99 beats paying serverless $5.39 only above roughly 74% utilization — Community pods, at $2.69, flip at 50% — so below those thresholds, per-second serverless billing is the cheaper meter. Third, the tail: heavy data movement on Vast costs bandwidth both ways, while RunPod and Lambda charge nothing for egress.
 </p>
 
-<h2>How to choose without overpaying</h2>
+<h2 id="how-to-choose-without-overpaying">How to choose without overpaying</h2>
 
 <p>Rules of thumb that survive contact with a real invoice. Bursty or unattended API traffic goes to RunPod serverless. Single-node experiments and checkpointed fine-tunes go to Vast.ai on-demand, interruptible if preemption is survivable. Steady weeks-long single-node runs go to RunPod pods or Lambda instances — whichever has capacity at your GPU class, with the November 16 Lambda repricing in mind. Multi-node training at 70B-plus goes to Lambda 1-Click Clusters or a CoreWeave reserved term, and the discount belongs in the contract, not in a slide. Compliance-bound inference goes to RunPod Secure Cloud or CoreWeave, both SOC 2 Type II.
 </p>
@@ -217,7 +220,7 @@
 <p>Two disqualifiers worth stating plainly. If your workload calls hosted models rather than your own weights, you are shopping the wrong meter: <a href="/tools/groq/">Groq</a> and <a href="/tools/replicate/">Replicate</a> bill per token or per second of inference, and the <a href="/articles/best-llm-gateways-2026-portkey-vs-litellm-vs-cloudflare-vs-helicone/">LLM gateway comparison</a> covers the routing layer that sits above them. And if nobody on the team reads storage and bandwidth lines, budget 20-30% above the GPU line regardless of provider — that gap is where GPU bills actually live.
 </p>
 
-<h2>Frequently Asked Questions</h2>
+<h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
 
 <h3>How much does an H100 cost per hour in 2026?</h3>
 
@@ -244,19 +247,17 @@
 <p>No. The only single-GPU option is a GH200 at $6.50 per hour; every H100-class GPU is an 8-GPU node minimum. CoreWeave alternatives for single-GPU work: RunPod per-second pods from $2.89, Lambda single-GPU instances at $3.29 SXM or $2.49 PCIe, or the Vast.ai marketplace with H100s from $2.27.
 </p>
 
-<h2>The Bottom Line</h2>
+<h2 id="the-bottom-line">The Bottom Line</h2>
 
 <p>Among GPU cloud providers in 2026, the meter decides the bill more than the GPU does. RunPod owns seconds: $3.99 for an H100 SXM on Secure Cloud, no egress, storage that outlives stopped pods. Lambda owns minutes on new HGX hardware — at a rate that just moved 15% and takes effect November 16. Vast.ai owns the market: a $2.33 median with bandwidth and interruption risk attached. CoreWeave owns nodes and contracts: $49.24 an hour on demand, a quarter to six-tenths off if you commit. Pick by workload shape, price the storage and bandwidth lines before the GPU line, and re-quote every quarter — this market reprices faster than your architecture does.
 </p>
-            <div style="margin-top:40px;padding:20px;background:#f8f9fa;border-radius:8px;border-left:4px solid #2563eb;">
-                <p style="margin:0 0 8px 0;font-size:14px;color:#555;">
-                    <strong>About the author:</strong> This article was written by the <a href="/author/" style="color:#2563eb;text-decoration:none;">AI Tool Lab Editorial Team</a>, with 5+ years of paid AI tool testing experience and $200+ monthly subscription spend. All reviews are based on real paid long-term use.
-                </p>
-                <p style="margin:0;font-size:13px;color:#888;">
-                    <strong>Data statement:</strong> All data in this article cites its source and is verifiable. Found an error? Report it via our <a href="/contact.html" style="color:#2563eb;text-decoration:none;">contact page</a>, we verify within 48 hours.
-                </p>
-            </div>
-        </article>
+                <div class="author-note">
+                    <p><strong>About the author:</strong> This article was written by the <a href="/author/">AI Tool Lab Editorial Team</a>, with 5+ years of paid AI tool testing experience and $200+ monthly subscription spend. All reviews are based on real paid long-term use.</p>
+                    <p><strong>Data statement:</strong> All data in this article cites its source and is verifiable. Found an error? Report it via our <a href="/contact.html">contact page</a>, we verify within 48 hours.</p>
+                </div>
+            </article>
+            <aside class="article-toc" aria-label="Table of contents"><div class="toc-title">On this page</div><ul><li><a href="#what-gpu-cloud-providers-actually-sell-in-2026">What GPU cloud providers actually sell in 2026</a></li><li><a href="#where-each-vendor-breaks">Where each vendor breaks</a></li><li><a href="#the-h100-rental-price-went-up-in-2026">The H100 rental price went up in 2026</a></li><li><a href="#the-fine-tuning-math-96-gpu-hours-four-bills">The fine-tuning math: 96 GPU-hours, four bills</a></li><li><a href="#how-to-choose-without-overpaying">How to choose without overpaying</a></li><li><a href="#frequently-asked-questions">Frequently Asked Questions</a></li><li><a href="#the-bottom-line">The Bottom Line</a></li></ul></aside>
+        </div>
 
         <div class="related-tools">
             <h3>Related Articles</h3>

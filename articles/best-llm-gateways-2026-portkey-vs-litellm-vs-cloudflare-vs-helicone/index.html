@@ -21,7 +21,7 @@
     <meta name="twitter:title" content="Best LLM Gateways in 2026: Portkey vs LiteLLM vs Cloudflare vs Helicone — Pricing &amp; ROI - AI Tool Lab">
     <meta name="twitter:description" content="Portkey, LiteLLM, Cloudflare AI Gateway, and Helicone compared on routing, failover, pricing, operational burden, and the ROI test teams should run before production.">
     <meta name="twitter:image" content="https://www.aitoolbox.hk/images/og/best-llm-gateways-2026-portkey-vs-litellm-vs-cloudflare-vs-helicone-en-og.png">
-    <link rel="stylesheet" href="/css/style.css?v=20261116092034">
+    <link rel="stylesheet" href="/css/style.css?v=20261116155217">
     <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -129,25 +129,28 @@
         <a href="/">Home</a> &gt; <a href="/category/ai-developer-tools/">AI Developer Tools</a> &gt; <span>Best LLM Gateways in 2026: Por...</span>
     </nav>
 
-    <main class="article-container">
-        <article class="article-body" data-tts>
-            <h1 style="margin-bottom:16px;">Best LLM Gateways in 2026: Portkey vs LiteLLM vs Cloudflare vs Helicone — Pricing &amp; ROI</h1>
-            <div style="color:#999;font-size:14px;margin-bottom:24px;">
-                2026-10-06 · AI Developer Tools ·
-                <span itemprop="author" itemscope itemtype="https://schema.org/Organization"><a href="/author/" itemprop="url" style="color:#2563eb;text-decoration:none;"><span itemprop="name">AI Tool Lab Editorial Team</span></a></span> ·
-                <span style="color:#bbb;">32 min read</span>
+    <main class="article-container article-container-wide">
+        <header class="article-header">
+            <a class="article-kicker" href="/category/ai-developer-tools/">AI Developer Tools</a>
+            <h1 class="article-title">Best LLM Gateways in 2026: Portkey vs LiteLLM vs Cloudflare vs Helicone — Pricing &amp; ROI</h1>
+            <div class="article-meta-row">
+                <span>2026-10-06</span>
+                <span aria-hidden="true">·</span>
+                <span itemprop="author" itemscope itemtype="https://schema.org/Organization"><a href="/author/" itemprop="url"><span itemprop="name">AI Tool Lab Editorial Team</span></a></span>
+                <span aria-hidden="true">·</span>
+                <span>32 min read</span>
             </div>
-            <div class="tldr-box" style="background:linear-gradient(135deg,#fff8e6,#ffefb8);border-left:4px solid #f5a623;padding:16px 20px;margin-bottom:24px;border-radius:0 8px 8px 0;font-size:14.5px;line-height:1.7;">
-                <strong style="color:var(--brand-blue);font-size:15px;">TL;DR</strong><br>
-                <span style="color:#555;">Portkey, LiteLLM, Cloudflare AI Gateway, and Helicone compared on routing, failover, pricing, operational burden, and the ROI test teams should run before production.</span>
-            </div>
-            <p>A one-million-request workload averaging 1,000 input tokens and 200 output tokens per call sends 1.2 billion model tokens through the stack: 1.0 billion in, 200 million out, before retries. That is a workload calculation, not a market statistic. An LLM gateway will not shrink that bill just by sitting between your app and a model provider.
+        </header>
+        <div class="article-layout">
+            <article class="article-body" data-tts>
+                <div class="tldr-box"><strong>TL;DR</strong><p>Portkey, LiteLLM, Cloudflare AI Gateway, and Helicone compared on routing, failover, pricing, operational burden, and the ROI test teams should run before production.</p></div>
+                <p>A one-million-request workload averaging 1,000 input tokens and 200 output tokens per call sends 1.2 billion model tokens through the stack: 1.0 billion in, 200 million out, before retries. That is a workload calculation, not a market statistic. An LLM gateway will not shrink that bill just by sitting between your app and a model provider.
 </p>
 
 <p>It can make model access more reliable, observable, and governable. Whether those controls repay their price depends on your traffic, failure rate, engineering capacity, and ability to route or cache requests without degrading answers. Portkey, LiteLLM, Cloudflare AI Gateway, and Helicone all sit in this middle layer, but they sell different operating models. This comparison uses their public pricing and product documentation checked October 6, 2026; it is not a controlled performance benchmark.
 </p>
 
-<h2>What a model routing layer should solve before you buy one</h2>
+<h2 id="what-a-model-routing-layer-should-solve-before-you-buy-one">What a model routing layer should solve before you buy one</h2>
 
 <p>A gateway receives an application request, applies policies or routing logic, then sends it to a model provider. The useful features are mundane: one API shape across providers, credential control, per-team budgets, request logs, rate limits, retries, fallback destinations, and a way to see which model produced a costly or failed response. Some products also add prompt management, caching, guardrails, or provider credits.
 </p>
@@ -158,7 +161,7 @@
 <p>Treat an LLM gateway as a control plane, not a magic model optimizer. A fallback to a cheaper or more available model can change tone, accuracy, tool-call behavior, or structured output. A retry can duplicate a request that was processed upstream but timed out on the return path. A cache can serve a stale answer or the wrong user’s response if keys are not scoped correctly. Those are design decisions, not checkboxes.
 </p>
 
-<h2>LLM gateway pricing comparison: costs that deserve a line item</h2>
+<h2 id="llm-gateway-pricing-comparison-costs-that-deserve-a-line-ite">LLM gateway pricing comparison: costs that deserve a line item</h2>
 
 <table><thead><tr><th>Product</th><th>Public gateway price checked Oct. 6, 2026</th><th>Routing and control</th><th>Likely ROI fit</th></tr></thead><tbody><tr><td>Portkey</td><td>Developer free; Production listed at $49/month; Enterprise custom</td><td>Config-based fallback, load balancing, retries, caching, and observability; open-source gateway option</td><td>Teams that want a managed control plane and a clear monthly entry price</td></tr><tr><td>LiteLLM</td><td>Open-source gateway is $0 to self-host; enterprise is quote-based</td><td>100+ provider connections, virtual keys, budgets, rate limits, retries, and fallbacks</td><td>Platform teams that value control and can own deployment and on-call work</td></tr><tr><td>Cloudflare AI Gateway</td><td>Core features on all plans; inference passes through at provider rates; Unified Billing credits carry a 5% fee</td><td>Analytics, caching, rate limits, request retries, and model fallback</td><td>Apps already on Cloudflare that want a low-cost first control layer</td></tr><tr><td>Helicone</td><td>Hobby free for 10,000 requests and 1 GB storage; Pro $79/month; Team $799/month; usage-based charges apply</td><td>Request analytics plus caching, limits, automatic fallbacks, and provider routing</td><td>Product teams wanting gateway controls tied closely to debugging and usage review</td></tr></tbody></table>
 
@@ -168,7 +171,7 @@
 <p>The categories also differ. LiteLLM is an open-source proxy you can run yourself. Cloudflare’s gateway is part of a broader edge platform. Portkey sells a managed gateway layer and publishes an open-source option. Helicone combines gateway functions with request analysis. Compare the full workflow you need, not just the row with the smallest dollar figure.
 </p>
 
-<h2>How each option earns its place</h2>
+<h2 id="how-each-option-earns-its-place">How each option earns its place</h2>
 
 <h3>Portkey: managed controls without building the control plane</h3>
 
@@ -214,7 +217,7 @@
 <p>Helicone’s documentation says routing can select among providers offering the requested model, with the gateway applying user keys first when configured and managed keys as a fallback. Automatic provider selection is convenient, but some organizations require a named region, deployment, or contract. In those cases, pin the route deliberately and test that failover cannot escape the approved boundary.
 </p>
 
-<h2>Model the return before comparing small monthly fees</h2>
+<h2 id="model-the-return-before-comparing-small-monthly-fees">Model the return before comparing small monthly fees</h2>
 
 <p>Start with three costs: gateway subscription or usage charges, model inference, and internal operations. Then list the benefits you can measure: fewer failed requests, less engineering time spent tracing provider issues, lower inference spend from safe caching or routing, or reduced credential-management work. Do not count a retry as a saved request unless it actually avoids a user-visible failure; often it creates another model call.
 </p>
@@ -231,7 +234,7 @@
 <p>Teams weighing an observability-first approach can also read the <a href="https://www.aitoolbox.hk/articles/best-ai-llm-observability-tools-2026-langsmith-vs-langfuse-vs-arize-vs-braintrust/" target="_blank" rel="noopener">LLM observability tools comparison</a>. For retrieval-heavy applications, the <a href="https://www.aitoolbox.hk/articles/best-ai-vector-database-tools-2026-pinecone-vs-weaviate-vs-qdrant-vs-milvus/" target="_blank" rel="noopener">vector database comparison</a> covers a separate layer of the same architecture; a gateway will not repair poor retrieval or bad source documents.
 </p>
 
-<h2>Choose by team shape, not feature count</h2>
+<h2 id="choose-by-team-shape-not-feature-count">Choose by team shape, not feature count</h2>
 
 <p>Choose Portkey if a managed configuration layer and visible entry pricing matter more than owning the runtime. Choose LiteLLM if you have a platform owner, need network-level control, and accept the ongoing operations burden. Choose Cloudflare if your app already runs there and the core gateway controls cover your use case; read the log and credit terms before calling the deployment free. Choose Helicone if request debugging, analytics, and provider routing belong in one workflow and its data-retention terms fit your needs.
 </p>
@@ -239,7 +242,7 @@
 <p>For a single product, compare the best AI model routing gateway for production against a direct integration plus a thin internal adapter. The internal adapter is often enough when you use one provider, have modest traffic, and need only a fallback. A full gateway earns its complexity when multiple teams share providers, policies, keys, or usage budgets. If those conditions are not present, do not buy future flexibility at the cost of a current dependency.
 </p>
 
-<h2>Frequently Asked Questions</h2>
+<h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
 
 <h3>Which model gateway is cheapest for a small team?</h3>
 
@@ -266,22 +269,20 @@
 <p>Not by default. A direct SDK call with secure secrets and provider-side usage controls is simpler. Add a gateway when centralized budgets, reliable failover, cross-app logs, or multiple teams solve a measured operational problem—not because a diagram looks more mature with another box.
 </p>
 
-<h2>The buying rule</h2>
+<h2 id="the-buying-rule">The buying rule</h2>
 
 <p>The right choice is the least expensive system that meets your reliability, governance, and debugging requirements without adding unowned infrastructure. Compare the monthly subscription with model spend, logs, hosting, and staff time; verify routing behavior with your real prompts; and keep a direct-call fallback plan for the gateway itself. An LLM gateway is justified when its measured savings or avoided failures exceed those costs, not when its feature list is long.
 </p>
 
 <p>Pricing and product details were checked October 6, 2026. Confirm current terms before purchase: <a href="https://portkey.ai/pricing" target="_blank" rel="noopener">Portkey pricing</a> and <a href="https://portkey.ai/docs/product/ai-gateway/configs" target="_blank" rel="noopener">gateway configs</a>; <a href="https://www.litellm.ai/pricing" target="_blank" rel="noopener">LiteLLM pricing</a> and <a href="https://docs.litellm.ai/docs/completion/reliable_completions" target="_blank" rel="noopener">reliability docs</a>; <a href="https://developers.cloudflare.com/ai-gateway/reference/pricing/" target="_blank" rel="noopener">Cloudflare AI Gateway pricing</a> and <a href="https://developers.cloudflare.com/ai-gateway/" target="_blank" rel="noopener">overview</a>; <a href="https://www.helicone.ai/pricing" target="_blank" rel="noopener">Helicone pricing</a> and <a href="https://docs.helicone.ai/gateway/provider-routing" target="_blank" rel="noopener">provider routing</a>.
 </p>
-            <div style="margin-top:40px;padding:20px;background:#f8f9fa;border-radius:8px;border-left:4px solid #2563eb;">
-                <p style="margin:0 0 8px 0;font-size:14px;color:#555;">
-                    <strong>About the author:</strong> This article was written by the <a href="/author/" style="color:#2563eb;text-decoration:none;">AI Tool Lab Editorial Team</a>, with 5+ years of paid AI tool testing experience and $200+ monthly subscription spend. All reviews are based on real paid long-term use.
-                </p>
-                <p style="margin:0;font-size:13px;color:#888;">
-                    <strong>Data statement:</strong> All data in this article cites its source and is verifiable. Found an error? Report it via our <a href="/contact.html" style="color:#2563eb;text-decoration:none;">contact page</a>, we verify within 48 hours.
-                </p>
-            </div>
-        </article>
+                <div class="author-note">
+                    <p><strong>About the author:</strong> This article was written by the <a href="/author/">AI Tool Lab Editorial Team</a>, with 5+ years of paid AI tool testing experience and $200+ monthly subscription spend. All reviews are based on real paid long-term use.</p>
+                    <p><strong>Data statement:</strong> All data in this article cites its source and is verifiable. Found an error? Report it via our <a href="/contact.html">contact page</a>, we verify within 48 hours.</p>
+                </div>
+            </article>
+            <aside class="article-toc" aria-label="Table of contents"><div class="toc-title">On this page</div><ul><li><a href="#what-a-model-routing-layer-should-solve-before-you-buy-one">What a model routing layer should solve before you buy one</a></li><li><a href="#llm-gateway-pricing-comparison-costs-that-deserve-a-line-ite">LLM gateway pricing comparison: costs that deserve a line item</a></li><li><a href="#how-each-option-earns-its-place">How each option earns its place</a></li><li><a href="#model-the-return-before-comparing-small-monthly-fees">Model the return before comparing small monthly fees</a></li><li><a href="#choose-by-team-shape-not-feature-count">Choose by team shape, not feature count</a></li><li><a href="#frequently-asked-questions">Frequently Asked Questions</a></li><li><a href="#the-buying-rule">The buying rule</a></li></ul></aside>
+        </div>
 
         <div class="related-tools">
             <h3>Related Articles</h3>

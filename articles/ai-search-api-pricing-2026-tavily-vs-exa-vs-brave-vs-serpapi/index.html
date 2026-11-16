@@ -21,7 +21,7 @@
     <meta name="twitter:title" content="Best AI Search APIs in 2026: Tavily vs Exa vs Brave vs SerpApi — Pricing &amp; ROI - AI Tool Lab">
     <meta name="twitter:description" content="Compare Tavily, Exa, Brave Search API, and SerpApi on request pricing, retrieval style, privacy, result controls, and the cost of a useful answer.">
     <meta name="twitter:image" content="https://www.aitoolbox.hk/images/og/ai-search-api-pricing-2026-tavily-vs-exa-vs-brave-vs-serpapi-en-og.png">
-    <link rel="stylesheet" href="/css/style.css?v=20261116092034">
+    <link rel="stylesheet" href="/css/style.css?v=20261116155217">
     <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -129,25 +129,28 @@
         <a href="/">Home</a> &gt; <a href="/category/ai-search/">AI Search</a> &gt; <span>Best AI Search APIs in 2026: T...</span>
     </nav>
 
-    <main class="article-container">
-        <article class="article-body" data-tts>
-            <h1 style="margin-bottom:16px;">Best AI Search APIs in 2026: Tavily vs Exa vs Brave vs SerpApi — Pricing &amp; ROI</h1>
-            <div style="color:#999;font-size:14px;margin-bottom:24px;">
-                2026-10-17 · AI Search ·
-                <span itemprop="author" itemscope itemtype="https://schema.org/Organization"><a href="/author/" itemprop="url" style="color:#2563eb;text-decoration:none;"><span itemprop="name">AI Tool Lab Editorial Team</span></a></span> ·
-                <span style="color:#bbb;">35 min read</span>
+    <main class="article-container article-container-wide">
+        <header class="article-header">
+            <a class="article-kicker" href="/category/ai-search/">AI Search</a>
+            <h1 class="article-title">Best AI Search APIs in 2026: Tavily vs Exa vs Brave vs SerpApi — Pricing &amp; ROI</h1>
+            <div class="article-meta-row">
+                <span>2026-10-17</span>
+                <span aria-hidden="true">·</span>
+                <span itemprop="author" itemscope itemtype="https://schema.org/Organization"><a href="/author/" itemprop="url"><span itemprop="name">AI Tool Lab Editorial Team</span></a></span>
+                <span aria-hidden="true">·</span>
+                <span>35 min read</span>
             </div>
-            <div class="tldr-box" style="background:linear-gradient(135deg,#fff8e6,#ffefb8);border-left:4px solid #f5a623;padding:16px 20px;margin-bottom:24px;border-radius:0 8px 8px 0;font-size:14.5px;line-height:1.7;">
-                <strong style="color:var(--brand-blue);font-size:15px;">TL;DR</strong><br>
-                <span style="color:#555;">Compare Tavily, Exa, Brave Search API, and SerpApi on request pricing, retrieval style, privacy, result controls, and the cost of a useful answer.</span>
-            </div>
-            <p>At list price, Brave charges $5 per 1,000 Search requests, Exa Instant starts at $4 per 1,000 requests, Tavily’s $30 plan buys 4,000 credits, and SerpApi’s Starter plan costs $25 for 1,000 monthly searches. For buyers comparing AI search APIs, that spread looks decisive until you notice that the vendors count different things: a Tavily advanced query costs two credits, an Exa request can return more than 10 results for an added fee, and SerpApi sells monthly search capacity rather than a simple per-call balance.
+        </header>
+        <div class="article-layout">
+            <article class="article-body" data-tts>
+                <div class="tldr-box"><strong>TL;DR</strong><p>Compare Tavily, Exa, Brave Search API, and SerpApi on request pricing, retrieval style, privacy, result controls, and the cost of a useful answer.</p></div>
+                <p>At list price, Brave charges $5 per 1,000 Search requests, Exa Instant starts at $4 per 1,000 requests, Tavily’s $30 plan buys 4,000 credits, and SerpApi’s Starter plan costs $25 for 1,000 monthly searches. For buyers comparing AI search APIs, that spread looks decisive until you notice that the vendors count different things: a Tavily advanced query costs two credits, an Exa request can return more than 10 results for an added fee, and SerpApi sells monthly search capacity rather than a simple per-call balance.
 </p>
 
 <p>This comparison uses the vendors’ public pricing and product documentation checked on October 17, 2026. It does not claim a winner from a one-off latency test. Search quality depends on the query, region, filters, and what your application calls a useful result. The practical question is whether you need agent-ready web context, semantic discovery, a first-party index, or Google-shaped result pages—and what your team must build around that data.
 </p>
 
-<h2>AI search APIs compared: price, control, and where each fits</h2>
+<h2 id="ai-search-apis-compared-price-control-and-where-each-fits">AI search APIs compared: price, control, and where each fits</h2>
 
 <table><thead><tr><th>Provider</th><th>Public entry cost</th><th>What a request buys</th><th>Best fit</th><th>Main cost trap</th></tr></thead><tbody><tr><td>Tavily</td><td>Free: 1,000 credits/month; Project: $30 for 4,000 credits</td><td>Search, plus separate extract, map, crawl, and research endpoints</td><td>Agent workflows that need search and page retrieval in one vendor</td><td>Advanced search uses 2 credits; crawl combines mapping and extraction</td></tr><tr><td>Exa</td><td>$10 free monthly credits; Instant Search: $4/1,000 requests</td><td>Semantic web search, with up to 10 results in the base price</td><td>Meaning-based discovery, research, and code/document retrieval</td><td>Extra results, page contents, summaries, or deep search add separate charges</td></tr><tr><td>Brave</td><td>$5/1,000 Search requests; $5 monthly credits</td><td>Results from Brave’s independent index, plus LLM Context and other search endpoints</td><td>Teams that want broad web coverage and control of their own answer model</td><td>Answers is a separate endpoint with request and token charges</td></tr><tr><td>SerpApi</td><td>Free: 250 searches/month; Starter: $25 for 1,000/month</td><td>Structured results from Google and many other search engines</td><td>Localized, engine-specific SERP data and rank-sensitive tasks</td><td>Monthly capacity costs more than raw request pricing at small volumes</td></tr></tbody></table>
 
@@ -157,7 +160,7 @@
 <p>A second distinction matters: Tavily and Exa position their products around agent and semantic retrieval; Brave sells access to a search index it operates; SerpApi parses search-engine result pages into structured fields. Those are different data products. If your product depends on ranking position, the first two may be a poor substitute for SERP collection. If it needs a model to find conceptually related pages, a conventional ranking endpoint may force extra query rewriting and reranking work.
 </p>
 
-<h2>Tavily vs Exa pricing: credits or request-based billing?</h2>
+<h2 id="tavily-vs-exa-pricing-credits-or-request-based-billing">Tavily vs Exa pricing: credits or request-based billing?</h2>
 
 <p>Tavily is easiest to budget when a workflow uses several parts of its web-retrieval stack. The public free tier lists 1,000 credits a month with no card required. Its Project plan is $30 for 4,000 credits, or $0.0075 per credit; pay-as-you-go is $0.008. Basic search costs one credit and advanced search costs two. A thousand advanced searches therefore consume 2,000 credits, not 1,000. The startup and higher-volume plans reduce the listed cost per credit, while enterprise rates are custom.
 </p>
@@ -171,7 +174,7 @@
 <p>Read the <a href="https://docs.tavily.com/documentation/api-credits" target="_blank" rel="noopener">Tavily API credit documentation</a> before estimating. For the product category beyond APIs, our <a href="https://www.aitoolbox.hk/articles/best-ai-search-tools-2026-perplexity-vs-chatgpt-vs-you-vs-consensus/" target="_blank" rel="noopener">AI search tools comparison</a> covers end-user research products; those are not interchangeable with developer endpoints.
 </p>
 
-<h2>Exa Search API pricing: pay for the query, then the content</h2>
+<h2 id="exa-search-api-pricing-pay-for-the-query-then-the-content">Exa Search API pricing: pay for the query, then the content</h2>
 
 <p>Exa separates search from page retrieval. Its free tier provides $10 in monthly credits and a one-time $10 onboarding bonus; the monthly balance resets, and the page says no payment method is required to start. Instant Search costs $4 per 1,000 requests for up to 10 results. Fast and auto search cost $7 per 1,000, while deep search costs $12 and deep-reasoning costs $15 per 1,000 requests. Search results above ten are billed at $1 per 1,000 additional results.
 </p>
@@ -185,7 +188,7 @@
 <p>For a small agent, the Exa Search API pricing is unusually easy to test: use the free balance, cap results at ten, and add Contents only for URLs that pass a relevance threshold. Avoid fetching every result by default. On broad queries, page retrieval rather than search may become the larger line item. On high-volume systems, compare the per-query rate with the cost of storing and refreshing your own source set.
 </p>
 
-<h2>Brave Search API alternative to scraped Google results</h2>
+<h2 id="brave-search-api-alternative-to-scraped-google-results">Brave Search API alternative to scraped Google results</h2>
 
 <p>Brave charges $5 per 1,000 requests for its Search plan and lists $5 in monthly credits. Search includes web data and LLM Context, with extra snippets and structured information; its wider API catalog includes news, images, videos, local results, and other specialized endpoints. Brave says its index contains more than 30 billion pages and receives more than 100 million page updates per day. Those are vendor-reported figures, not a substitute for testing coverage on your own queries.
 </p>
@@ -199,7 +202,7 @@
 <p>Privacy and retention need procurement review. Brave’s product pages advertise Zero Data Retention and SOC 2 Type II attestation, while its free-plan FAQ says a card is required as an anti-fraud check. Confirm the current contract terms, the endpoint covered, and any attribution conditions before launch. A marketing page is not your data-processing agreement.
 </p>
 
-<h2>SerpApi pricing per 1,000 searches: pay for SERP fidelity</h2>
+<h2 id="serpapi-pricing-per-1-000-searches-pay-for-serp-fidelity">SerpApi pricing per 1,000 searches: pay for SERP fidelity</h2>
 
 <p>SerpApi is a structured search-results service, not merely an agent search endpoint. It supports Google and many other engines, with parameters for location, language, device, and result type. That matters for rank tracking, local search audits, shopping results, or products that need a defined engine’s fields in predictable JSON. If the application only wants supporting sources for a conversational answer, that specificity may be overhead.
 </p>
@@ -213,7 +216,7 @@
 <p>For exact search-position data, compare the parser’s returned fields and coverage for your target engine, country, and device. Do not rely on a generic “Google result” claim. Search can vary with language, geolocation, safe-search settings, and personalized or local context. Capture those settings with every measurement so a later comparison is reproducible.
 </p>
 
-<h2>Which provider is the best search API for AI agents?</h2>
+<h2 id="which-provider-is-the-best-search-api-for-ai-agents">Which provider is the best search API for AI agents?</h2>
 
 <p>There is no universal winner because each product sells a different unit of work. AI search APIs are priced against different units, so one headline rate cannot decide the purchase. Pick Tavily if a single workflow needs query search plus extraction, crawling, or site mapping and you want credit accounting across those operations. Pick Exa when semantic discovery or page-level content is the core job and you can keep the number of fetched results under control. Pick Brave when an independent index, broader search endpoints, or a clear split between retrieval and answer generation matters. Pick SerpApi when engine-specific structured SERPs are the product requirement.
 </p>
@@ -227,7 +230,7 @@
 <p>Our <a href="https://www.aitoolbox.hk/articles/best-llm-gateways-2026-portkey-vs-litellm-vs-cloudflare-vs-helicone/" target="_blank" rel="noopener">LLM gateway comparison</a> is useful if you are also routing model calls. A gateway can centralize retries and provider selection, but it does not fix poor search evidence. Keep retrieval quality and generation quality as separate rows in your evaluation sheet.
 </p>
 
-<h2>ROI math that survives finance review</h2>
+<h2 id="roi-math-that-survives-finance-review">ROI math that survives finance review</h2>
 
 <p>Use cost per accepted answer, not cost per search. A compact formula is: (search requests + page retrieval + answer-model tokens + retries + engineering and monitoring time) divided by the number of outputs that meet your evidence and freshness rules. The first four are visible on an invoice; the last two are often omitted even though operating a brittle pipeline consumes paid staff hours.
 </p>
@@ -241,7 +244,7 @@
 <p>The pilot should also reveal the exit cost. Keep a thin internal interface around query, locale, freshness, result, and citation fields. Store the original provider response during development where contracts allow it, and write adapters that normalize only the fields you need. If the next provider requires a different schema, a small adapter is manageable; vendor-specific logic spread across prompts and business rules is not. Recheck retention, rate limits, and pricing before a material traffic increase.
 </p>
 
-<h2>Frequently Asked Questions</h2>
+<h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
 
 <h3>Which web search API is cheapest for 1,000 monthly requests?</h3>
 
@@ -268,22 +271,20 @@
 <p>Use one when speed of implementation outweighs control and its citations pass your review. Keep search and answer generation separate when you need model choice, custom safety rules, auditable prompts, or consistent evaluation across multiple retrieval providers. Either way, validate the cited pages; a citation is a URL, not a guarantee that the claim follows from it.
 </p>
 
-<h2>The buying decision</h2>
+<h2 id="the-buying-decision">The buying decision</h2>
 
 <p>Start with the data contract your product needs. Choose engine-specific SERPs for ranking work, semantic retrieval for conceptual discovery, bundled search-and-extract for agent research, or an independent index when source diversity and control matter. Then price one realistic month of calls, including retries, pages, result count, and output generation. Test the same queries, score evidence before looking at the invoice, and keep an exit path in your design.
 </p>
 
 <p>AI search APIs are not interchangeable utilities with different logos. They differ in index, retrieval method, billing unit, and the amount of infrastructure a small team must own. Buy the one that supplies acceptable evidence at a measured total cost—not the one with the most dramatic pricing badge.
 </p>
-            <div style="margin-top:40px;padding:20px;background:#f8f9fa;border-radius:8px;border-left:4px solid #2563eb;">
-                <p style="margin:0 0 8px 0;font-size:14px;color:#555;">
-                    <strong>About the author:</strong> This article was written by the <a href="/author/" style="color:#2563eb;text-decoration:none;">AI Tool Lab Editorial Team</a>, with 5+ years of paid AI tool testing experience and $200+ monthly subscription spend. All reviews are based on real paid long-term use.
-                </p>
-                <p style="margin:0;font-size:13px;color:#888;">
-                    <strong>Data statement:</strong> All data in this article cites its source and is verifiable. Found an error? Report it via our <a href="/contact.html" style="color:#2563eb;text-decoration:none;">contact page</a>, we verify within 48 hours.
-                </p>
-            </div>
-        </article>
+                <div class="author-note">
+                    <p><strong>About the author:</strong> This article was written by the <a href="/author/">AI Tool Lab Editorial Team</a>, with 5+ years of paid AI tool testing experience and $200+ monthly subscription spend. All reviews are based on real paid long-term use.</p>
+                    <p><strong>Data statement:</strong> All data in this article cites its source and is verifiable. Found an error? Report it via our <a href="/contact.html">contact page</a>, we verify within 48 hours.</p>
+                </div>
+            </article>
+            <aside class="article-toc" aria-label="Table of contents"><div class="toc-title">On this page</div><ul><li><a href="#ai-search-apis-compared-price-control-and-where-each-fits">AI search APIs compared: price, control, and where each fits</a></li><li><a href="#tavily-vs-exa-pricing-credits-or-request-based-billing">Tavily vs Exa pricing: credits or request-based billing?</a></li><li><a href="#exa-search-api-pricing-pay-for-the-query-then-the-content">Exa Search API pricing: pay for the query, then the content</a></li><li><a href="#brave-search-api-alternative-to-scraped-google-results">Brave Search API alternative to scraped Google results</a></li><li><a href="#serpapi-pricing-per-1-000-searches-pay-for-serp-fidelity">SerpApi pricing per 1,000 searches: pay for SERP fidelity</a></li><li><a href="#which-provider-is-the-best-search-api-for-ai-agents">Which provider is the best search API for AI agents?</a></li><li><a href="#roi-math-that-survives-finance-review">ROI math that survives finance review</a></li><li><a href="#frequently-asked-questions">Frequently Asked Questions</a></li><li><a href="#the-buying-decision">The buying decision</a></li></ul></aside>
+        </div>
 
         <div class="related-tools">
             <h3>Related Articles</h3>

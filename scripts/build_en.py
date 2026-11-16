@@ -809,6 +809,34 @@ def build_tool_page_en(tool: dict, all_tools: list, all_articles: list = None) -
 
 # ─── Article page ─────────────────────────────────────────────────────────────
 
+# ─── TOC / heading anchors (article pages) ────────────────────────────────────
+
+def _toc_slug(text: str, used: set) -> str:
+    base = re.sub(r'[^a-z0-9]+', '-', text.lower()).strip('-')[:60] or 'section'
+    slug, i = base, 2
+    while slug in used:
+        slug = f'{base}-{i}'
+        i += 1
+    used.add(slug)
+    return slug
+
+
+def add_heading_anchors(content_html: str):
+    """Add stable ids to <h2> headings for TOC deep-links; returns (html, [(id, text)])."""
+    used: set = set()
+    items: list = []
+
+    def _repl(m):
+        attrs, inner = m.group(1), m.group(2)
+        text = re.sub(r'<[^>]+>', '', inner).strip()
+        hid = _toc_slug(text, used)
+        items.append((hid, text))
+        return f'<h2{attrs} id="{hid}">{inner}</h2>'
+
+    html = re.sub(r'<h2([^>]*)>(.*?)</h2>', _repl, content_html, flags=re.DOTALL)
+    return html, items
+
+
 def build_article_page_en(article: dict, all_articles: list, all_tools: list = None) -> str:
     slug     = article['slug']
     title    = article['title']
@@ -897,16 +925,24 @@ def build_article_page_en(article: dict, all_articles: list, all_tools: list = N
     structured_json = json.dumps(article_schema,   ensure_ascii=False, indent=2)
 
     content_html = markdown_to_html(article.get('content') or article.get('body',''))
+    content_html, toc_items = add_heading_anchors(content_html)
+    if len(toc_items) >= 3:
+        toc_links = ''.join(
+            f'<li><a href="#{hid}">{escape_html(text)}</a></li>' for hid, text in toc_items
+        )
+        toc_html = (f'<aside class="article-toc" aria-label="Table of contents">'
+                    f'<div class="toc-title">On this page</div>'
+                    f'<ul>{toc_links}</ul></aside>')
+    else:
+        toc_html = ''
     hreflang     = hreflang_tags(f'/articles/{slug}/', f'/articles/{slug}/')
     og_image     = ensure_en_og_image(slug, article, is_article=True)
 
     # TL;DR box (answer-first format for GEO - AI engines extract first 200 words)
+    # Class-only markup: Visual System v2 owns the styling (blue info block).
     tldr_text = article.get('description','').strip()
     if tldr_text:
-        tldr_html = f'''<div class="tldr-box" style="background:linear-gradient(135deg,#fff8e6,#ffefb8);border-left:4px solid #f5a623;padding:16px 20px;margin-bottom:24px;border-radius:0 8px 8px 0;font-size:14.5px;line-height:1.7;">
-                <strong style="color:var(--brand-blue);font-size:15px;">TL;DR</strong><br>
-                <span style="color:#555;">{escape_html(tldr_text)}</span>
-            </div>'''
+        tldr_html = f'<div class="tldr-box"><strong>TL;DR</strong><p>{escape_html(tldr_text)}</p></div>'
     else:
         tldr_html = ''
 
@@ -1047,25 +1083,29 @@ def build_article_page_en(article: dict, all_articles: list, all_tools: list = N
         <a href="/">Home</a> &gt; <a href="/category/{cat_slug}/">{escape_html(cat)}</a> &gt; <span>{escape_html(title)[:30]}...</span>
     </nav>
 
-    <main class="article-container">
-        <article class="article-body" data-tts>
-            <h1 style="margin-bottom:16px;">{escape_html(title)}</h1>
-            <div style="color:#999;font-size:14px;margin-bottom:24px;">
-                {date_str} · {escape_html(cat)} ·
-                <span itemprop="author" itemscope itemtype="https://schema.org/Organization"><a href="/author/" itemprop="url" style="color:#2563eb;text-decoration:none;"><span itemprop="name">AI Tool Lab Editorial Team</span></a></span> ·
-                <span style="color:#bbb;">{max(3, len(article.get('content','')) // 500)} min read</span>
+    <main class="article-container article-container-wide">
+        <header class="article-header">
+            <a class="article-kicker" href="/category/{cat_slug}/">{escape_html(cat)}</a>
+            <h1 class="article-title">{escape_html(title)}</h1>
+            <div class="article-meta-row">
+                <span>{date_str}</span>
+                <span aria-hidden="true">·</span>
+                <span itemprop="author" itemscope itemtype="https://schema.org/Organization"><a href="/author/" itemprop="url"><span itemprop="name">AI Tool Lab Editorial Team</span></a></span>
+                <span aria-hidden="true">·</span>
+                <span>{max(3, len(article.get('content','')) // 500)} min read</span>
             </div>
-            {tldr_html}
-            {content_html}
-            <div style="margin-top:40px;padding:20px;background:#f8f9fa;border-radius:8px;border-left:4px solid #2563eb;">
-                <p style="margin:0 0 8px 0;font-size:14px;color:#555;">
-                    <strong>About the author:</strong> This article was written by the <a href="/author/" style="color:#2563eb;text-decoration:none;">AI Tool Lab Editorial Team</a>, with 5+ years of paid AI tool testing experience and $200+ monthly subscription spend. All reviews are based on real paid long-term use.
-                </p>
-                <p style="margin:0;font-size:13px;color:#888;">
-                    <strong>Data statement:</strong> All data in this article cites its source and is verifiable. Found an error? Report it via our <a href="/contact.html" style="color:#2563eb;text-decoration:none;">contact page</a>, we verify within 48 hours.
-                </p>
-            </div>
-        </article>
+        </header>
+        <div class="article-layout">
+            <article class="article-body" data-tts>
+                {tldr_html}
+                {content_html}
+                <div class="author-note">
+                    <p><strong>About the author:</strong> This article was written by the <a href="/author/">AI Tool Lab Editorial Team</a>, with 5+ years of paid AI tool testing experience and $200+ monthly subscription spend. All reviews are based on real paid long-term use.</p>
+                    <p><strong>Data statement:</strong> All data in this article cites its source and is verifiable. Found an error? Report it via our <a href="/contact.html">contact page</a>, we verify within 48 hours.</p>
+                </div>
+            </article>
+            {toc_html}
+        </div>
 
         {related_html}
 
@@ -1174,8 +1214,8 @@ def build_category_page_en(cat_name: str, tools: list) -> str:
     </nav>
 
     <main class="tool-list-container">
-        <h1 style="margin-bottom:8px;">Best {escape_html(cat_name)} Tools 2026</h1>
-        <p style="color:#666;margin-bottom:24px;">{len(tools)} tools reviewed and ranked</p>
+        <h1 class="page-title">Best {escape_html(cat_name)} Tools 2026</h1>
+        <p class="page-sub">{len(tools)} tools reviewed and ranked</p>
         <div class="tool-grid">
             {tool_cards}
         </div>
@@ -1241,7 +1281,7 @@ def build_article_list_en(articles: list, current_page: int = 1, total_pages: in
     </nav>
 
     <main class="article-list-container">
-        <h1 style="margin-bottom:24px;">AI Tool Articles & Guides</h1>
+        <h1 class="page-title">AI Tool Articles &amp; Guides</h1>
         <div class="article-list">{cards}</div>
         {pagination_html}
     </main>

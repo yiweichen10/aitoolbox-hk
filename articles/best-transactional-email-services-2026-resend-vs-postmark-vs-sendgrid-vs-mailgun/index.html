@@ -21,7 +21,7 @@
     <meta name="twitter:title" content="Best Transactional Email Services in 2026: Resend vs Postmark vs SendGrid vs Mailgun — Pricing, Free Tiers &amp; Deliverability - AI Tool Lab">
     <meta name="twitter:description" content="The same 50,000 emails cost $16.50, $20, $35, or $90 across Resend vs Postmark vs SendGrid vs Mailgun. Compare 2026 pricing, free tiers, deliverability, and overage rates.">
     <meta name="twitter:image" content="https://www.aitoolbox.hk/images/og/best-transactional-email-services-2026-resend-vs-postmark-vs-sendgrid-vs-mailgun-en-og.png">
-    <link rel="stylesheet" href="/css/style.css?v=20261116092034">
+    <link rel="stylesheet" href="/css/style.css?v=20261116155217">
     <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -129,22 +129,25 @@
         <a href="/">Home</a> &gt; <a href="/category/ai-development/">AI Development</a> &gt; <span>Best Transactional Email Servi...</span>
     </nav>
 
-    <main class="article-container">
-        <article class="article-body" data-tts>
-            <h1 style="margin-bottom:16px;">Best Transactional Email Services in 2026: Resend vs Postmark vs SendGrid vs Mailgun — Pricing, Free Tiers &amp; Deliverability</h1>
-            <div style="color:#999;font-size:14px;margin-bottom:24px;">
-                2026-10-26 · AI Development ·
-                <span itemprop="author" itemscope itemtype="https://schema.org/Organization"><a href="/author/" itemprop="url" style="color:#2563eb;text-decoration:none;"><span itemprop="name">AI Tool Lab Editorial Team</span></a></span> ·
-                <span style="color:#bbb;">28 min read</span>
+    <main class="article-container article-container-wide">
+        <header class="article-header">
+            <a class="article-kicker" href="/category/ai-development/">AI Development</a>
+            <h1 class="article-title">Best Transactional Email Services in 2026: Resend vs Postmark vs SendGrid vs Mailgun — Pricing, Free Tiers &amp; Deliverability</h1>
+            <div class="article-meta-row">
+                <span>2026-10-26</span>
+                <span aria-hidden="true">·</span>
+                <span itemprop="author" itemscope itemtype="https://schema.org/Organization"><a href="/author/" itemprop="url"><span itemprop="name">AI Tool Lab Editorial Team</span></a></span>
+                <span aria-hidden="true">·</span>
+                <span>28 min read</span>
             </div>
-            <div class="tldr-box" style="background:linear-gradient(135deg,#fff8e6,#ffefb8);border-left:4px solid #f5a623;padding:16px 20px;margin-bottom:24px;border-radius:0 8px 8px 0;font-size:14.5px;line-height:1.7;">
-                <strong style="color:var(--brand-blue);font-size:15px;">TL;DR</strong><br>
-                <span style="color:#555;">The same 50,000 emails cost $16.50, $20, $35, or $90 across Resend vs Postmark vs SendGrid vs Mailgun. Compare 2026 pricing, free tiers, deliverability, and overage rates.</span>
-            </div>
-            <p>The same 50,000 monthly password resets and receipts will cost you $16.50, $20, $35, or $90 depending on nothing but the billing structure you sign — and the vendor with the weakest free tier is the one owned by the biggest company. That is the state of transactional email services in October 2026. Postmark starts paid plans at $15 for 10,000 emails with overage at $1.30 per thousand on its Pro tier, and claims delivery speeds up to 4x faster than other providers — a claim its customer list (Asana, IKEA, 1Password, Litmus) effectively underwrites. Resend sells 50,000 emails for a flat $20 with no daily cap and a permanent free tier of 3,000. Mailgun wants $35 for the same 50,000. SendGrid, now folded into Twilio's pricing pages, has no permanent free tier at all — 100 emails a day for 60 days, then Essentials from $19.95. I have shipped email infrastructure on all four platforms across client work, from an 8,000-send side project to a marketplace pushing 400,000 notifications a month, and the pattern that keeps repeating: deliverability differences among the big three are smaller than their marketing implies, while the billing structures differ enough to double your costs by year three. This is a comparison of invoices, not feature grids, because the features have converged.
+        </header>
+        <div class="article-layout">
+            <article class="article-body" data-tts>
+                <div class="tldr-box"><strong>TL;DR</strong><p>The same 50,000 emails cost $16.50, $20, $35, or $90 across Resend vs Postmark vs SendGrid vs Mailgun. Compare 2026 pricing, free tiers, deliverability, and overage rates.</p></div>
+                <p>The same 50,000 monthly password resets and receipts will cost you $16.50, $20, $35, or $90 depending on nothing but the billing structure you sign — and the vendor with the weakest free tier is the one owned by the biggest company. That is the state of transactional email services in October 2026. Postmark starts paid plans at $15 for 10,000 emails with overage at $1.30 per thousand on its Pro tier, and claims delivery speeds up to 4x faster than other providers — a claim its customer list (Asana, IKEA, 1Password, Litmus) effectively underwrites. Resend sells 50,000 emails for a flat $20 with no daily cap and a permanent free tier of 3,000. Mailgun wants $35 for the same 50,000. SendGrid, now folded into Twilio's pricing pages, has no permanent free tier at all — 100 emails a day for 60 days, then Essentials from $19.95. I have shipped email infrastructure on all four platforms across client work, from an 8,000-send side project to a marketplace pushing 400,000 notifications a month, and the pattern that keeps repeating: deliverability differences among the big three are smaller than their marketing implies, while the billing structures differ enough to double your costs by year three. This is a comparison of invoices, not feature grids, because the features have converged.
 </p>
 
-<h2>How the four transactional email services meter the same workload</h2>
+<h2 id="how-the-four-transactional-email-services-meter-the-same-wor">How the four transactional email services meter the same workload</h2>
 
 <p>Every platform here does the same core job: send email through a REST API or SMTP relay, manage DKIM and SPF for your domains, track opens and bounces, fire webhooks, and keep enough log history for you to debug why a customer never got their invoice. On raw sending, any of the four works on day one.
 </p>
@@ -160,7 +163,7 @@
 <p>One market note: "deliverability" is the word every vendor here uses to justify its price, and it is partially real. Shared IP pools at Postmark and Resend are actively managed; SendGrid and Mailgun pool more aggressively across sender types. But after Yahoo and Google's 2024 sender requirements, every serious provider enforces DMARC, bounce handling, and spam-rate monitoring. The vendor is no longer your deliverability strategy — your sending hygiene is. What you are actually paying a premium for is reputation isolation and how fast a human answers when something breaks. Wire bounce and delivery webhooks into your observability stack from the first week; our <a href="/articles/best-error-tracking-tools-2026-sentry-vs-rollbar-vs-bugsnag-vs-datadog">error tracking tools comparison</a> covers where those events belong alongside your application errors.
 </p>
 
-<h2>Resend pricing 2026: flat bundles and a real free tier</h2>
+<h2 id="resend-pricing-2026-flat-bundles-and-a-real-free-tier">Resend pricing 2026: flat bundles and a real free tier</h2>
 
 <p>Resend is the transactional email API for developers that the TypeScript generation adopted wholesale, and its pricing page reads like a reaction to SendGrid's. The Free plan is permanent: 3,000 emails a month with a 100-per-day cap, custom domains, 10,000 automation runs, 30-day data retention, batch sending, open and link tracking, and inbound — no trial countdown attached. The 100/day cap is the trap for launch days, not the monthly total.
 </p>
@@ -171,7 +174,7 @@
 <p>Two structural details matter. First, Resend's marketing email product is a separate contact-based plan — a SaaS sending receipts and a newsletter pays twice, honestly labeled. Second, the free tier's 30-day log retention and single webhook endpoint are the walls that push growing teams to Pro, and as walls go that one is fair: $20 is not a negotiation event. For a solo founder, the whole migration is an API key swap and a DNS record.
 </p>
 
-<h2>Postmark vs SendGrid: the specialist against the incumbent</h2>
+<h2 id="postmark-vs-sendgrid-the-specialist-against-the-incumbent">Postmark vs SendGrid: the specialist against the incumbent</h2>
 
 <p>Postmark is the category's specialist. Its free Developer plan — 100 emails a month, forever, no expiry — exists purely to test your integration. Basic starts at $15 a month for 10,000 emails with $1.80 per 1,000 overage, 45-day retention, and 5 custom domains. Pro, the tier most teams actually pick, is $16.50 for 10,000 with $1.30 overage, inbound email processing, and 10 domains. Platform is $18 with $1.20 overage, unlimited domains, and unlimited users. Volume scales through a slider — 50K, 125K, 300K, 700K, 1.5M stops — and Postmark only reveals the price after you set your volume, which is transparent arithmetic performed behind a curtain: stay on the 10,000 base while sending 50,000 and the overage math lands near $68. Dedicated IPs start at $50 a month, on Pro or higher, and only for senders above 300,000 a month. Postmark also publishes its own delivery statistics publicly, which none of the others do.
 </p>
@@ -182,7 +185,7 @@
 <p>My take after running both: Postmark's premium buys a vendor whose entire business is the email your product depends on, and its message-stream separation keeps transactional reputation untouched by any bulk sending. SendGrid buys breadth and a Twilio bill you can consolidate. Neither publishes independent inbox-placement benchmarks, and both perform well on shared IPs in practice — pick on billing shape and support, not folklore.
 </p>
 
-<h2>Mailgun pricing 2026: the volume middleweight with a short memory</h2>
+<h2 id="mailgun-pricing-2026-the-volume-middleweight-with-a-short-me">Mailgun pricing 2026: the volume middleweight with a short memory</h2>
 
 <p>Mailgun, now part of Sinch, positions itself as the volume middleman. Its free plan is a test bench: 100 emails a day with 1-day log retention, 1 custom domain, and ticket support. Basic is $15 a month for 10,000 emails with overage from $1.80 per 1,000 — and the same 1-day log retention, which is the sting. Foundation, the real starter tier, is $35 a month for 50,000 ($1.30 per 1,000 overage), 1,000 custom domains, a template builder, and 5-day logs. Scale is $90 for 100,000 ($1.10 overage) and adds SAML SSO, 5,000 email validations, dedicated IP pools, and 30-day log retention — one of the few places where a $90 tier includes a dedicated IP without an add-on conversation.
 </p>
@@ -190,14 +193,14 @@
 <p>Mailgun pricing 2026 rewards one specific shape: teams that need EU or US data residency (Mailgun hosts in both regions from a single account), moderate volume, and no interest in paying bundle prices for tooling they will not open. Its deliverability tooling — inbox placement tests, reputation monitoring — lives in the separate Optimize product line, which is how the headline plan price stays lean. Budget for it if email is an ops function at your company rather than an assumption.
 </p>
 
-<h2>Feature and cost comparison</h2>
+<h2 id="feature-and-cost-comparison">Feature and cost comparison</h2>
 
 <p>The table distills the meters. Prices are list prices from each vendor's pricing page as of October 2026.
 </p>
 
 <table><thead><tr><th>Platform</th><th>Starting paid price</th><th>Free tier</th><th>Overage per 1,000</th><th>Best fit</th></tr></thead><tbody><tr><td>Resend</td><td>$20/mo for 50,000 (Pro)</td><td>3,000/mo permanent, 100/day cap</td><td>$0.90</td><td>TypeScript/React teams; launch-stage SaaS</td></tr><tr><td>Postmark</td><td>$15/mo for 10,000 (Basic)</td><td>100/mo forever</td><td>$1.30 (Pro)</td><td>Password resets and receipts that must land</td></tr><tr><td>SendGrid</td><td>$19.95/mo for 50,000 (Essentials)</td><td>60-day trial only</td><td>Varies by tier</td><td>High volume inside the Twilio stack</td></tr><tr><td>Mailgun</td><td>$15/mo for 10,000 (Basic)</td><td>100/day test plan, 1-day logs</td><td>$1.30 (Foundation)</td><td>Regional hosting; mid-volume senders</td></tr></tbody></table>
 
-<h2>Which of these transactional email services fits your product</h2>
+<h2 id="which-of-these-transactional-email-services-fits-your-produc">Which of these transactional email services fits your product</h2>
 
 <p>Under 10,000 sends a month, pre-revenue or side project: stay free. Resend's 3,000-a-month permanent tier or Postmark's 100-a-month plan covers it, and both upgrade in place without re-pointing DNS. That is the best free transactional email service calculus for most early products — Resend if you want headroom and a modern API, Postmark if the thought of a password reset landing in spam during your first paid launch keeps you up at night.
 </p>
@@ -208,7 +211,7 @@
 <p>One hundred thousand and up: shortlist by bundled rate and infrastructure control. Resend's $90 Scale tier, Mailgun's $90 Scale with a dedicated IP included, and SendGrid Pro from $89.95 with an IP included sit within a rounding error of each other at 100K — so the decision moves to dedicated IP costs at 500K, support SLAs, and where the rest of your Twilio or Sinch spending already lives.
 </p>
 
-<h2>Frequently Asked Questions</h2>
+<h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
 
 <h3>What is the best free transactional email service in 2026?</h3>
 
@@ -235,19 +238,17 @@
 <p>Increasingly, yes — not by regulation but by IP reputation arithmetic. A bulk campaign that trips spam filters drags down every email sharing its pool. Postmark enforces separation through message streams, Resend splits marketing into a different contact-based product, and SendGrid and Mailgun sell bulk as entirely separate SKUs. The 2024 Gmail and Yahoo sender requirements made this table stakes: one-click unsubscribe and a spam-complaint rate under 0.3% are now enforced, and mixing streams makes both harder to hold.
 </p>
 
-<h2>The bottom line</h2>
+<h2 id="the-bottom-line">The bottom line</h2>
 
 <p>In 2026, transactional email services stopped competing on features — all four send, track, template, and webhook acceptably — and now compete on the shape of the bill and the depth of the logs. Resend wins the developer-experience and bundle-pricing fight below 100,000 emails, with a free tier that actually ships product. Postmark wins when a lost email costs revenue and you want a specialist on the other end, and its pricing rewards staying small and transactional. SendGrid wins consolidation plays and high volume inside the Twilio ecosystem, at the cost of a product split and no real free tier. Mailgun wins regional-hosting requirements and teams that want a dedicated IP at $90 without an add-on negotiation. Pick the meter that matches your send curve, separate transactional from bulk on day one, and read the log-retention line before you sign — it is the line item every vendor buries and every team eventually regrets.
 </p>
-            <div style="margin-top:40px;padding:20px;background:#f8f9fa;border-radius:8px;border-left:4px solid #2563eb;">
-                <p style="margin:0 0 8px 0;font-size:14px;color:#555;">
-                    <strong>About the author:</strong> This article was written by the <a href="/author/" style="color:#2563eb;text-decoration:none;">AI Tool Lab Editorial Team</a>, with 5+ years of paid AI tool testing experience and $200+ monthly subscription spend. All reviews are based on real paid long-term use.
-                </p>
-                <p style="margin:0;font-size:13px;color:#888;">
-                    <strong>Data statement:</strong> All data in this article cites its source and is verifiable. Found an error? Report it via our <a href="/contact.html" style="color:#2563eb;text-decoration:none;">contact page</a>, we verify within 48 hours.
-                </p>
-            </div>
-        </article>
+                <div class="author-note">
+                    <p><strong>About the author:</strong> This article was written by the <a href="/author/">AI Tool Lab Editorial Team</a>, with 5+ years of paid AI tool testing experience and $200+ monthly subscription spend. All reviews are based on real paid long-term use.</p>
+                    <p><strong>Data statement:</strong> All data in this article cites its source and is verifiable. Found an error? Report it via our <a href="/contact.html">contact page</a>, we verify within 48 hours.</p>
+                </div>
+            </article>
+            <aside class="article-toc" aria-label="Table of contents"><div class="toc-title">On this page</div><ul><li><a href="#how-the-four-transactional-email-services-meter-the-same-wor">How the four transactional email services meter the same workload</a></li><li><a href="#resend-pricing-2026-flat-bundles-and-a-real-free-tier">Resend pricing 2026: flat bundles and a real free tier</a></li><li><a href="#postmark-vs-sendgrid-the-specialist-against-the-incumbent">Postmark vs SendGrid: the specialist against the incumbent</a></li><li><a href="#mailgun-pricing-2026-the-volume-middleweight-with-a-short-me">Mailgun pricing 2026: the volume middleweight with a short memory</a></li><li><a href="#feature-and-cost-comparison">Feature and cost comparison</a></li><li><a href="#which-of-these-transactional-email-services-fits-your-produc">Which of these transactional email services fits your product</a></li><li><a href="#frequently-asked-questions">Frequently Asked Questions</a></li><li><a href="#the-bottom-line">The bottom line</a></li></ul></aside>
+        </div>
 
         <div class="related-tools">
             <h3>Related Articles</h3>

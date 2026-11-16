@@ -21,7 +21,7 @@
     <meta name="twitter:title" content="Best Managed Kubernetes in 2026: EKS vs GKE vs AKS vs DOKS Pricing Compared - AI Tool Lab">
     <meta name="twitter:description" content="EKS vs GKE vs AKS vs DOKS on November 2026 list prices: $73 control planes, the $438 extended-support trap, per-pod Autopilot billing, and worked monthly bills for the same 3-node cluster.">
     <meta name="twitter:image" content="https://www.aitoolbox.hk/images/og/best-managed-kubernetes-2026-eks-vs-gke-vs-aks-vs-doks-pricing-compared-en-og.png">
-    <link rel="stylesheet" href="/css/style.css?v=20261116092034">
+    <link rel="stylesheet" href="/css/style.css?v=20261116155217">
     <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -129,22 +129,25 @@
         <a href="/">Home</a> &gt; <a href="/category/ai-infrastructure/">AI Infrastructure</a> &gt; <span>Best Managed Kubernetes in 202...</span>
     </nav>
 
-    <main class="article-container">
-        <article class="article-body" data-tts>
-            <h1 style="margin-bottom:16px;">Best Managed Kubernetes in 2026: EKS vs GKE vs AKS vs DOKS Pricing Compared</h1>
-            <div style="color:#999;font-size:14px;margin-bottom:24px;">
-                2026-11-11 · AI Infrastructure ·
-                <span itemprop="author" itemscope itemtype="https://schema.org/Organization"><a href="/author/" itemprop="url" style="color:#2563eb;text-decoration:none;"><span itemprop="name">AI Tool Lab Editorial Team</span></a></span> ·
-                <span style="color:#bbb;">28 min read</span>
+    <main class="article-container article-container-wide">
+        <header class="article-header">
+            <a class="article-kicker" href="/category/ai-infrastructure/">AI Infrastructure</a>
+            <h1 class="article-title">Best Managed Kubernetes in 2026: EKS vs GKE vs AKS vs DOKS Pricing Compared</h1>
+            <div class="article-meta-row">
+                <span>2026-11-11</span>
+                <span aria-hidden="true">·</span>
+                <span itemprop="author" itemscope itemtype="https://schema.org/Organization"><a href="/author/" itemprop="url"><span itemprop="name">AI Tool Lab Editorial Team</span></a></span>
+                <span aria-hidden="true">·</span>
+                <span>28 min read</span>
             </div>
-            <div class="tldr-box" style="background:linear-gradient(135deg,#fff8e6,#ffefb8);border-left:4px solid #f5a623;padding:16px 20px;margin-bottom:24px;border-radius:0 8px 8px 0;font-size:14.5px;line-height:1.7;">
-                <strong style="color:var(--brand-blue);font-size:15px;">TL;DR</strong><br>
-                <span style="color:#555;">EKS vs GKE vs AKS vs DOKS on November 2026 list prices: $73 control planes, the $438 extended-support trap, per-pod Autopilot billing, and worked monthly bills for the same 3-node cluster.</span>
-            </div>
-            <p>Nearly 90% of Kubernetes users now run their clusters on a cloud-managed service, up from roughly 70% in 2020, according to CNCF's cloud native survey — and the fee for that privilege ranges from $0 to $73 a month before a single worker node exists. The control plane is the smallest line on the bill and the one teams still get wrong: leave an EKS cluster on a Kubernetes version past its 14-month standard support window, and AWS bills $438 a month for it — six times the normal rate — until somebody runs the upgrade. This guide compares Amazon EKS, Google GKE, Microsoft AKS, and DigitalOcean DOKS on list prices pulled from each vendor's pricing pages in November 2026: control-plane fees, node rates, per-pod Autopilot billing, bandwidth, and the version-support fees that quietly multiply across a fleet. On managed Kubernetes pricing, the short version: AKS is free without an SLA, GKE makes one zonal cluster free per billing account, EKS charges $73 for every cluster, and DOKS charges nothing for the control plane while selling the cheapest nodes of the four.
+        </header>
+        <div class="article-layout">
+            <article class="article-body" data-tts>
+                <div class="tldr-box"><strong>TL;DR</strong><p>EKS vs GKE vs AKS vs DOKS on November 2026 list prices: $73 control planes, the $438 extended-support trap, per-pod Autopilot billing, and worked monthly bills for the same 3-node cluster.</p></div>
+                <p>Nearly 90% of Kubernetes users now run their clusters on a cloud-managed service, up from roughly 70% in 2020, according to CNCF's cloud native survey — and the fee for that privilege ranges from $0 to $73 a month before a single worker node exists. The control plane is the smallest line on the bill and the one teams still get wrong: leave an EKS cluster on a Kubernetes version past its 14-month standard support window, and AWS bills $438 a month for it — six times the normal rate — until somebody runs the upgrade. This guide compares Amazon EKS, Google GKE, Microsoft AKS, and DigitalOcean DOKS on list prices pulled from each vendor's pricing pages in November 2026: control-plane fees, node rates, per-pod Autopilot billing, bandwidth, and the version-support fees that quietly multiply across a fleet. On managed Kubernetes pricing, the short version: AKS is free without an SLA, GKE makes one zonal cluster free per billing account, EKS charges $73 for every cluster, and DOKS charges nothing for the control plane while selling the cheapest nodes of the four.
 </p>
 
-<h2>Managed Kubernetes Control Plane Cost: $0 to $73 a Month</h2>
+<h2 id="managed-kubernetes-control-plane-cost-0-to-73-a-month">Managed Kubernetes Control Plane Cost: $0 to $73 a Month</h2>
 
 <p>All four vendors run the control plane for you — API server, etcd, scheduler. What they charge for it differs more than any other line item.
 </p>
@@ -166,7 +169,7 @@
 <p>The stale-version column deserves its own section, and gets one below.
 </p>
 
-<h2>Node Pricing Is Where the Bill Actually Lives</h2>
+<h2 id="node-pricing-is-where-the-bill-actually-lives">Node Pricing Is Where the Bill Actually Lives</h2>
 
 <p>Control-plane fees are trivia; nodes are where 85% of a healthy cluster's spend sits. On the standard small node — 2 vCPU, 4 GB — the four diverge immediately:
 </p>
@@ -193,7 +196,7 @@
 <p>Three clusters instead of one? Multiply the control-plane column: EKS hits $219, AKS Standard $219, GKE $146 after its single free credit, DOKS still $0.
 </p>
 
-<h2>The Bandwidth Line Item Nobody Budgets</h2>
+<h2 id="the-bandwidth-line-item-nobody-budgets">The Bandwidth Line Item Nobody Budgets</h2>
 
 <p>Hyperscaler node prices exclude outbound traffic. AWS charges $0.09 per GB after 100 free GB, Azure about $0.087 after its own 100 GB allowance, and GCP's standard-tier egress runs roughly $0.085. DigitalOcean pools a per-node bandwidth allowance and charges $0.01/GiB beyond it.
 </p>
@@ -207,7 +210,7 @@
 <p>When storage and transfer dominate the bill more than compute, the same per-gigabyte math applies to cluster backup targets — see the <a href="/articles/best-object-storage-pricing-2026-aws-s3-vs-cloudflare-r2-vs-backblaze-b2-vs-wasabi">object storage pricing comparison (S3 vs R2 vs B2 vs Wasabi)</a>.
 </p>
 
-<h2>EKS vs GKE vs AKS: Which Cloud Wins on Total Cost</h2>
+<h2 id="eks-vs-gke-vs-aks-which-cloud-wins-on-total-cost">EKS vs GKE vs AKS: Which Cloud Wins on Total Cost</h2>
 
 <p>For a 100-vCPU fleet, one 2026 FinOps analysis puts the on-demand compute lines within about 20% of each other — $2,300 to $2,900 a month across the three hyperscalers. The tiebreakers are discounts, egress, and operational depth.
 </p>
@@ -229,12 +232,12 @@
 <p>If the workloads would honestly fit on plain VMs, the cheaper conversation is a <a href="/articles/best-vps-hosting-2026-hetzner-vs-digitalocean-vs-vultr-vs-linode">VPS comparison — three Hetzner nodes</a> run a self-managed cluster for less than one hyperscaler control-plane fee.
 </p>
 
-<h2>Don't Sleep on the Kubernetes Extended Support Fee</h2>
+<h2 id="don-t-sleep-on-the-kubernetes-extended-support-fee">Don't Sleep on the Kubernetes Extended Support Fee</h2>
 
 <p>All three hyperscalers now price version staleness at the same rate. EKS standard support runs 14 months per version; after that the cluster bills $0.60 per hour — $438 a month — by default until you upgrade or the extended window closes and AWS force-upgrades it. GKE charges the identical $0.60 combined rate on its Extended channel once standard support lapses; clusters on the Rapid, Regular, and Stable channels upgrade automatically and never see the fee. AKS keeps versions patched for about a year and sells longer windows only through the $438 Premium tier. Two stale EKS clusters cost an extra $730 a month for the privilege of postponing an upgrade that gets harder the longer it waits. Set the EKS upgrade policy to STANDARD, stay on GKE's standard channels, and the fee never fires. Third-party support-calendar trackers put EKS 1.34 at the end of standard support on December 2, 2026 — clusters still sitting on 1.32 or 1.33 are already paying the six-times rate.
 </p>
 
-<h2>Frequently Asked Questions</h2>
+<h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
 
 <h3>How much does Amazon EKS cost per month?</h3>
 
@@ -261,19 +264,17 @@
 <p>On EKS, the cluster auto-enters extended support at 14 months and bills $0.60 per hour — six times the standard rate — with no action needed to trigger the fee, only to stop it (set the upgrade policy to STANDARD). GKE bills the same combined $0.60 rate, but only on its Extended channel. AKS stops patching after roughly a year unless you have bought Premium LTS. DOKS publishes no extended-support fee; upgrades run through the console with maintenance windows. The fee buys security patches only — it does not make your Helm charts compatible, and the forced upgrade at the end of the window still arrives.
 </p>
 
-<h2>Bottom Line</h2>
+<h2 id="bottom-line">Bottom Line</h2>
 
 <p>Managed Kubernetes pricing in 2026 is three bills pretending to be one: the control plane ($0-73 per cluster per month), the nodes ($24-30 each at the small end), and everything the landing pages omit — egress near $0.09 per GB, IPv4, cross-AZ chatter, and the $438-a-month stale-version tax all three hyperscalers now charge. On raw math, DOKS runs the same three-node dev cluster for $72 where EKS and AKS Standard land at $164 and GKE's free-credit cluster costs $73 but loses the credit on your second cluster. The hyperscalers earn their premium in regions, managed add-ons, and enterprise integration — pay it when you actually need those, not because a landing page equates Kubernetes with one vendor. Audit the version calendar before anything else; it is the only line item that can 6x itself overnight. And if no workload here truly needs an orchestrator, the <a href="/articles/heroku-alternatives-2026-railway-vs-render-vs-flyio-pricing-compared">Heroku alternatives comparison</a> shows where plain PaaS hosting still wins.
 </p>
-            <div style="margin-top:40px;padding:20px;background:#f8f9fa;border-radius:8px;border-left:4px solid #2563eb;">
-                <p style="margin:0 0 8px 0;font-size:14px;color:#555;">
-                    <strong>About the author:</strong> This article was written by the <a href="/author/" style="color:#2563eb;text-decoration:none;">AI Tool Lab Editorial Team</a>, with 5+ years of paid AI tool testing experience and $200+ monthly subscription spend. All reviews are based on real paid long-term use.
-                </p>
-                <p style="margin:0;font-size:13px;color:#888;">
-                    <strong>Data statement:</strong> All data in this article cites its source and is verifiable. Found an error? Report it via our <a href="/contact.html" style="color:#2563eb;text-decoration:none;">contact page</a>, we verify within 48 hours.
-                </p>
-            </div>
-        </article>
+                <div class="author-note">
+                    <p><strong>About the author:</strong> This article was written by the <a href="/author/">AI Tool Lab Editorial Team</a>, with 5+ years of paid AI tool testing experience and $200+ monthly subscription spend. All reviews are based on real paid long-term use.</p>
+                    <p><strong>Data statement:</strong> All data in this article cites its source and is verifiable. Found an error? Report it via our <a href="/contact.html">contact page</a>, we verify within 48 hours.</p>
+                </div>
+            </article>
+            <aside class="article-toc" aria-label="Table of contents"><div class="toc-title">On this page</div><ul><li><a href="#managed-kubernetes-control-plane-cost-0-to-73-a-month">Managed Kubernetes Control Plane Cost: $0 to $73 a Month</a></li><li><a href="#node-pricing-is-where-the-bill-actually-lives">Node Pricing Is Where the Bill Actually Lives</a></li><li><a href="#the-bandwidth-line-item-nobody-budgets">The Bandwidth Line Item Nobody Budgets</a></li><li><a href="#eks-vs-gke-vs-aks-which-cloud-wins-on-total-cost">EKS vs GKE vs AKS: Which Cloud Wins on Total Cost</a></li><li><a href="#don-t-sleep-on-the-kubernetes-extended-support-fee">Don't Sleep on the Kubernetes Extended Support Fee</a></li><li><a href="#frequently-asked-questions">Frequently Asked Questions</a></li><li><a href="#bottom-line">Bottom Line</a></li></ul></aside>
+        </div>
 
         <div class="related-tools">
             <h3>Related Articles</h3>

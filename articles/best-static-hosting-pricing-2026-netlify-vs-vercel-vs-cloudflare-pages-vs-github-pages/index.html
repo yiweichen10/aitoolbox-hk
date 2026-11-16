@@ -21,7 +21,7 @@
     <meta name="twitter:title" content="Static Hosting Pricing in 2026: Netlify vs Vercel vs Cloudflare Pages vs GitHub Pages - AI Tool Lab">
     <meta name="twitter:description" content="Static hosting pricing compared for 2026: Netlify credit plans, Vercel Flat Rate CDN tiers, Cloudflare Pages' unlimited static delivery, and GitHub Pages limits. Worked bills from 20 GB to 5 TB.">
     <meta name="twitter:image" content="https://www.aitoolbox.hk/images/og/best-static-hosting-pricing-2026-netlify-vs-vercel-vs-cloudflare-pages-vs-github-pages-en-og.png">
-    <link rel="stylesheet" href="/css/style.css?v=20261116092034">
+    <link rel="stylesheet" href="/css/style.css?v=20261116155217">
     <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -129,25 +129,28 @@
         <a href="/">Home</a> &gt; <a href="/category/ai-infrastructure/">AI Infrastructure</a> &gt; <span>Static Hosting Pricing in 2026...</span>
     </nav>
 
-    <main class="article-container">
-        <article class="article-body" data-tts>
-            <h1 style="margin-bottom:16px;">Static Hosting Pricing in 2026: Netlify vs Vercel vs Cloudflare Pages vs GitHub Pages</h1>
-            <div style="color:#999;font-size:14px;margin-bottom:24px;">
-                2026-11-15 · AI Infrastructure ·
-                <span itemprop="author" itemscope itemtype="https://schema.org/Organization"><a href="/author/" itemprop="url" style="color:#2563eb;text-decoration:none;"><span itemprop="name">AI Tool Lab Editorial Team</span></a></span> ·
-                <span style="color:#bbb;">32 min read</span>
+    <main class="article-container article-container-wide">
+        <header class="article-header">
+            <a class="article-kicker" href="/category/ai-infrastructure/">AI Infrastructure</a>
+            <h1 class="article-title">Static Hosting Pricing in 2026: Netlify vs Vercel vs Cloudflare Pages vs GitHub Pages</h1>
+            <div class="article-meta-row">
+                <span>2026-11-15</span>
+                <span aria-hidden="true">·</span>
+                <span itemprop="author" itemscope itemtype="https://schema.org/Organization"><a href="/author/" itemprop="url"><span itemprop="name">AI Tool Lab Editorial Team</span></a></span>
+                <span aria-hidden="true">·</span>
+                <span>32 min read</span>
             </div>
-            <div class="tldr-box" style="background:linear-gradient(135deg,#fff8e6,#ffefb8);border-left:4px solid #f5a623;padding:16px 20px;margin-bottom:24px;border-radius:0 8px 8px 0;font-size:14.5px;line-height:1.7;">
-                <strong style="color:var(--brand-blue);font-size:15px;">TL;DR</strong><br>
-                <span style="color:#555;">Static hosting pricing compared for 2026: Netlify credit plans, Vercel Flat Rate CDN tiers, Cloudflare Pages' unlimited static delivery, and GitHub Pages limits. Worked bills from 20 GB to 5 TB.</span>
-            </div>
-            <p>The same static site pushing one terabyte of traffic a month bills at $5 on Cloudflare, $20 on Vercel under its Flat Rate CDN, about $199 on Netlify's credit-based Personal plan, and $0 on GitHub Pages — if you are willing to violate GitHub's commercial-use policy to get it. That is a 40x spread on identical traffic, and it means the platform you pick without reading the rate card can cost 10x more than the one your competitor picked. Two of the four vendors rewrote their pricing inside the last 14 months: Netlify moved every new account onto a credit system on September 4, 2025, and Vercel replaced per-gigabyte overage math with Flat Rate CDN capacity tiers. Cloudflare quietly folded Pages billing into Workers. Anyone comparing static hosting pricing on a two-year-old blog post is comparing rate cards that no longer exist.
+        </header>
+        <div class="article-layout">
+            <article class="article-body" data-tts>
+                <div class="tldr-box"><strong>TL;DR</strong><p>Static hosting pricing compared for 2026: Netlify credit plans, Vercel Flat Rate CDN tiers, Cloudflare Pages' unlimited static delivery, and GitHub Pages limits. Worked bills from 20 GB to 5 TB.</p></div>
+                <p>The same static site pushing one terabyte of traffic a month bills at $5 on Cloudflare, $20 on Vercel under its Flat Rate CDN, about $199 on Netlify's credit-based Personal plan, and $0 on GitHub Pages — if you are willing to violate GitHub's commercial-use policy to get it. That is a 40x spread on identical traffic, and it means the platform you pick without reading the rate card can cost 10x more than the one your competitor picked. Two of the four vendors rewrote their pricing inside the last 14 months: Netlify moved every new account onto a credit system on September 4, 2025, and Vercel replaced per-gigabyte overage math with Flat Rate CDN capacity tiers. Cloudflare quietly folded Pages billing into Workers. Anyone comparing static hosting pricing on a two-year-old blog post is comparing rate cards that no longer exist.
 </p>
 
 <p>This guide rebuilds the comparison from the current official pricing pages (all checked November 15, 2026), runs four traffic scenarios through real bills, and flags the terms-of-service clauses — Netlify's one-way migration, Vercel's Hobby commercial ban, GitHub Pages' outright prohibition on business sites — that decide whether a plan is actually usable.
 </p>
 
-<h2>Static Hosting Pricing at a Glance</h2>
+<h2 id="static-hosting-pricing-at-a-glance">Static Hosting Pricing at a Glance</h2>
 
 <p>Four platforms, four billing philosophies. Netlify meters everything through credits. Vercel meters bandwidth unless you opt into flat tiers. Cloudflare meters Worker compute and gives static asset delivery away. GitHub meters nothing and polices usage with a policy document instead.
 </p>
@@ -157,7 +160,7 @@
 <p>Three things stand out. First, the free tiers are no longer comparable: Vercel still hands Hobby users 100 GB a month, Netlify's credit conversion cuts that to roughly 15 GB for new accounts, and Cloudflare does not count static traffic at all. Second, only Cloudflare's bandwidth price is $0 in writing; GitHub's is $0 by absence of a billing system, enforced by a soft cap GitHub can revoke. Third, the paid floors span $4 to $20 a month before a single overage, and that $16 gap buys very different things — Vercel's floor includes a 1 TB Flat Rate CDN tier, Netlify's includes unlimited team seats.
 </p>
 
-<h2>Netlify Credits Explained: What 300 Free Credits Actually Buys</h2>
+<h2 id="netlify-credits-explained-what-300-free-credits-actually-buy">Netlify Credits Explained: What 300 Free Credits Actually Buys</h2>
 
 <p>Since September 4, 2025, every new Netlify account runs on credits. One credit is worth about a cent: auto-recharge packs sell 500 credits for $5 on Personal and 1,500 for $10 on Pro. The official meter rates stack up like this:
 </p>
@@ -176,7 +179,7 @@
 <p>One more thing worth knowing before you migrate in: accounts created before September 4, 2025 keep the legacy plans, with 100 GB of included bandwidth and $55-per-100-GB overage blocks. You cannot move back to a legacy plan after switching to credits. Netlify's own docs call the change permanent.
 </p>
 
-<h2>Vercel Flat Rate CDN Changed the Math</h2>
+<h2 id="vercel-flat-rate-cdn-changed-the-math">Vercel Flat Rate CDN Changed the Math</h2>
 
 <p>Vercel bandwidth pricing runs on-demand at $0.15 per GB of Fast Data Transfer and $2.00 per million CDN requests. The Hobby plan includes 100 GB and 1 million requests free — still the largest raw bandwidth number among the metered platforms — but Hobby carries a restriction that matters more than the quota. Vercel's fair use policy restricts Hobby to "non-commercial personal use only": running ads, affiliate links as the site's primary purpose, or charging for anything all count as commercial. Asking for donations, notably, does not. Any commercial deployment "requires either a Pro or Enterprise plan."
 </p>
@@ -192,7 +195,7 @@
 <p>The catch is scope. Flat Rate CDN excludes bulk file distribution, media delivery where files are the majority of bandwidth, and storage-style hosting — Vercel can move violating projects onto its throttled Flex network. The 50 TB tier is for web apps, not for serving your users' uploads. Heavy file delivery belongs on object storage or a <a href="/articles/best-cdn-pricing-2026-bunny-vs-cloudflare-vs-fastly-vs-cloudfront-compared">CDN that prices video honestly</a>.
 </p>
 
-<h2>Cloudflare Pages Pricing Is Now Workers Pricing</h2>
+<h2 id="cloudflare-pages-pricing-is-now-workers-pricing">Cloudflare Pages Pricing Is Now Workers Pricing</h2>
 
 <p>Search for a Cloudflare Pages pricing page in 2026 and you land on a 404 — Pages billing now lives inside the Workers pricing docs, and Pages Functions are billed as Workers. The facts that matter for static site hosting:
 </p>
@@ -206,7 +209,7 @@
 <p>One date to watch: Workers Logs switches to Cloudflare's Observability pricing on December 1, 2026, so heavy logging under the $5 plan gets more expensive from December onward. Static delivery itself is untouched.
 </p>
 
-<h2>GitHub Pages Limits and the Commercial-Use Ban</h2>
+<h2 id="github-pages-limits-and-the-commercial-use-ban">GitHub Pages Limits and the Commercial-Use Ban</h2>
 
 <p>GitHub Pages remains the only option here with no billing system at all, which is both its appeal and its trap. The published limits: a soft bandwidth cap of 100 GB per month, a soft limit of 10 builds per hour (waived when you publish through a custom GitHub Actions workflow), a 1 GB ceiling on the published site, and deploys that time out at 10 minutes.
 </p>
@@ -217,7 +220,7 @@
 <p>For what it is built for — documentation, portfolios, open-source project sites — Pages is genuinely free, and private-repo Pages only needs GitHub Pro at $4 a month or Team at $4 per user. For anything that earns money, it is a terms-of-service violation with a shutdown date attached.
 </p>
 
-<h2>Worked Bills: Four Traffic Levels, Four Platforms</h2>
+<h2 id="worked-bills-four-traffic-levels-four-platforms">Worked Bills: Four Traffic Levels, Four Platforms</h2>
 
 <p>Rates only matter when they hit a bill, so here is static hosting pricing run through four common traffic profiles, using each platform's current rate card and fixed assumptions: solo operator, 50 KB pages, 20 deploys a month, monthly billing.
 </p>
@@ -232,7 +235,7 @@
 
 <table><thead><tr><th>Your situation</th><th>Pick</th><th>Why</th><th>Likely bill</th></tr></thead><tbody><tr><td>Docs or open-source project site</td><td>GitHub Pages</td><td>Free within policy, Actions deploys</td><td>$0</td></tr><tr><td>Static site with real traffic, no server code</td><td>Cloudflare Pages</td><td>Unlimited static requests, $5 floor</td><td>$0–$5</td></tr><tr><td>Next.js app, mixed static and functions</td><td>Vercel Pro</td><td>Flat Rate CDN plus function compute on one bill</td><td>$20–$100</td></tr><tr><td>Team of 3+, frequent deploys, previews</td><td>Netlify Pro</td><td>Unlimited seats, free deploy previews, credit rollover at 5K</td><td>$20+</td></tr></tbody></table>
 
-<h2>Netlify vs Vercel Pricing: The Head-to-Head</h2>
+<h2 id="netlify-vs-vercel-pricing-the-head-to-head">Netlify vs Vercel Pricing: The Head-to-Head</h2>
 
 <p>The two metered incumbents now diverge on every axis worth measuring, and the netlify vs vercel pricing question has different answers depending on which meter dominates your bill. At 1 TB of traffic it is roughly $199 against $20, an order of magnitude. At the request meter, Netlify charges about $1 per million requests against Vercel's $2.00 — half the rate. On seats, the polarity flips: Netlify Pro includes unlimited team members while Vercel charges $20 per developer seat, so a five-developer team pays $100 a month on Vercel against $20 on Netlify before any traffic.
 </p>
@@ -240,7 +243,7 @@
 <p>Both carry migration locks worth reading twice. Netlify's credit switch is permanent — legacy accounts that move cannot move back. Vercel's Flat Rate CDN comes with fair-use exclusions that let the company re-tier throttled projects. Neither trap fires on ordinary web apps, but both reward re-checking the current terms before an annual commitment, because this category re-prices itself every year.
 </p>
 
-<h2>Frequently Asked Questions</h2>
+<h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
 
 <h3>Is Cloudflare Pages really free for unlimited bandwidth?</h3>
 <p>Yes for static assets. Cloudflare's pricing docs state that requests to static assets are free and unlimited on both the Free and Workers Paid plans, and there is no egress or bandwidth fee. You pay only when code runs — Workers, Pages Functions, D1, KV — and the Workers Paid plan has a $5 monthly minimum. A purely static site that never invokes a Worker can run on the Free plan at $0 indefinitely.
@@ -262,22 +265,20 @@
 <p>Cloudflare Pages is $0 with unlimited static requests and no commercial-use asterisk, which makes it the cheapest static hosting choice for a portfolio that might earn money someday. GitHub Pages is also $0 if the portfolio carries no ads or paid engagements. Vercel's Hobby tier is $0 but the Vercel Hobby commercial use rule restricts it to non-commercial personal projects, and Netlify's Free plan works only under roughly 15 GB of monthly traffic given its 300-credit hard limit.
 </p>
 
-<h2>Bottom Line</h2>
+<h2 id="bottom-line">Bottom Line</h2>
 
 <p>Static hosting pricing in 2026 splits cleanly by traffic volume rather than by brand loyalty. Under 15 GB a month, every platform here is $0 and the decision is workflow, not cost. Between 50 GB and a terabyte, Cloudflare Pages is the price anchor — $0 to $5 against $20-plus on the metered platforms — and Vercel's Flat Rate CDN is the only metered option that makes bandwidth math stop mattering. Past a terabyte of app delivery, Vercel's $100 tier covers 50 TB while Netlify's credit meter crosses $999 at 5 TB. GitHub Pages stays free for docs and portfolios and off-limits for business.
 </p>
 
 <p>Two warnings to carry forward. First, rate cards in this category now expire: Netlify's credit system is one-way for accounts that switch, and Vercel has already restructured CDN billing once. Re-check the official pages before any annual commitment. Second, the free tiers carry terms, not just quotas — Vercel and GitHub both ban commercial use on their $0 plans, and "free" that ends in a takedown notice is not free. If heavy downloads are part of the plan, pair the static site with storage priced for it; the <a href="/articles/best-object-storage-pricing-2026-aws-s3-vs-cloudflare-r2-vs-backblaze-b2-vs-wasabi">object storage comparison</a> covers the zero-egress options that pair naturally with Pages. The cheapest platform is the one whose bill and terms you have actually read.
 </p>
-            <div style="margin-top:40px;padding:20px;background:#f8f9fa;border-radius:8px;border-left:4px solid #2563eb;">
-                <p style="margin:0 0 8px 0;font-size:14px;color:#555;">
-                    <strong>About the author:</strong> This article was written by the <a href="/author/" style="color:#2563eb;text-decoration:none;">AI Tool Lab Editorial Team</a>, with 5+ years of paid AI tool testing experience and $200+ monthly subscription spend. All reviews are based on real paid long-term use.
-                </p>
-                <p style="margin:0;font-size:13px;color:#888;">
-                    <strong>Data statement:</strong> All data in this article cites its source and is verifiable. Found an error? Report it via our <a href="/contact.html" style="color:#2563eb;text-decoration:none;">contact page</a>, we verify within 48 hours.
-                </p>
-            </div>
-        </article>
+                <div class="author-note">
+                    <p><strong>About the author:</strong> This article was written by the <a href="/author/">AI Tool Lab Editorial Team</a>, with 5+ years of paid AI tool testing experience and $200+ monthly subscription spend. All reviews are based on real paid long-term use.</p>
+                    <p><strong>Data statement:</strong> All data in this article cites its source and is verifiable. Found an error? Report it via our <a href="/contact.html">contact page</a>, we verify within 48 hours.</p>
+                </div>
+            </article>
+            <aside class="article-toc" aria-label="Table of contents"><div class="toc-title">On this page</div><ul><li><a href="#static-hosting-pricing-at-a-glance">Static Hosting Pricing at a Glance</a></li><li><a href="#netlify-credits-explained-what-300-free-credits-actually-buy">Netlify Credits Explained: What 300 Free Credits Actually Buys</a></li><li><a href="#vercel-flat-rate-cdn-changed-the-math">Vercel Flat Rate CDN Changed the Math</a></li><li><a href="#cloudflare-pages-pricing-is-now-workers-pricing">Cloudflare Pages Pricing Is Now Workers Pricing</a></li><li><a href="#github-pages-limits-and-the-commercial-use-ban">GitHub Pages Limits and the Commercial-Use Ban</a></li><li><a href="#worked-bills-four-traffic-levels-four-platforms">Worked Bills: Four Traffic Levels, Four Platforms</a></li><li><a href="#netlify-vs-vercel-pricing-the-head-to-head">Netlify vs Vercel Pricing: The Head-to-Head</a></li><li><a href="#frequently-asked-questions">Frequently Asked Questions</a></li><li><a href="#bottom-line">Bottom Line</a></li></ul></aside>
+        </div>
 
         <div class="related-tools">
             <h3>Related Articles</h3>

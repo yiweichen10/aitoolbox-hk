@@ -21,7 +21,7 @@
     <meta name="twitter:title" content="Best Managed Redis Hosting in 2026: Upstash vs Redis Cloud vs Dragonfly vs ElastiCache - AI Tool Lab">
     <meta name="twitter:description" content="Upstash vs Redis Cloud vs Dragonfly Cloud vs ElastiCache on November 2026 pricing: per-command billing, the $91 idle floor, HA memory doubling, and four worked workloads.">
     <meta name="twitter:image" content="https://www.aitoolbox.hk/images/og/best-managed-redis-hosting-2026-upstash-vs-redis-cloud-vs-dragonfly-vs-elasticache-en-og.png">
-    <link rel="stylesheet" href="/css/style.css?v=20261116092034">
+    <link rel="stylesheet" href="/css/style.css?v=20261116155217">
     <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -129,19 +129,22 @@
         <a href="/">Home</a> &gt; <a href="/category/ai-infrastructure/">AI Infrastructure</a> &gt; <span>Best Managed Redis Hosting in ...</span>
     </nav>
 
-    <main class="article-container">
-        <article class="article-body" data-tts>
-            <h1 style="margin-bottom:16px;">Best Managed Redis Hosting in 2026: Upstash vs Redis Cloud vs Dragonfly vs ElastiCache</h1>
-            <div style="color:#999;font-size:14px;margin-bottom:24px;">
-                2026-11-09 · AI Infrastructure ·
-                <span itemprop="author" itemscope itemtype="https://schema.org/Organization"><a href="/author/" itemprop="url" style="color:#2563eb;text-decoration:none;"><span itemprop="name">AI Tool Lab Editorial Team</span></a></span> ·
-                <span style="color:#bbb;">32 min read</span>
+    <main class="article-container article-container-wide">
+        <header class="article-header">
+            <a class="article-kicker" href="/category/ai-infrastructure/">AI Infrastructure</a>
+            <h1 class="article-title">Best Managed Redis Hosting in 2026: Upstash vs Redis Cloud vs Dragonfly vs ElastiCache</h1>
+            <div class="article-meta-row">
+                <span>2026-11-09</span>
+                <span aria-hidden="true">·</span>
+                <span itemprop="author" itemscope itemtype="https://schema.org/Organization"><a href="/author/" itemprop="url"><span itemprop="name">AI Tool Lab Editorial Team</span></a></span>
+                <span aria-hidden="true">·</span>
+                <span>32 min read</span>
             </div>
-            <div class="tldr-box" style="background:linear-gradient(135deg,#fff8e6,#ffefb8);border-left:4px solid #f5a623;padding:16px 20px;margin-bottom:24px;border-radius:0 8px 8px 0;font-size:14.5px;line-height:1.7;">
-                <strong style="color:var(--brand-blue);font-size:15px;">TL;DR</strong><br>
-                <span style="color:#555;">Upstash vs Redis Cloud vs Dragonfly Cloud vs ElastiCache on November 2026 pricing: per-command billing, the $91 idle floor, HA memory doubling, and four worked workloads.</span>
-            </div>
-            <p>An idle 1 GB cache costs $0 on Upstash, about $18 on Redis Cloud Essentials, and $91.25 on ElastiCache Serverless for Redis OSS — the same data, on the same wire protocol, doing absolutely nothing. That spread is the most important fact in managed Redis hosting right now, because the four viable providers stopped selling the same product. Upstash sells commands. Redis Cloud sells provisioned memory. Dragonfly sells RAM with an SSD escape hatch. AWS sells node-hours plus a metered serverless mode it introduced in late 2024.
+        </header>
+        <div class="article-layout">
+            <article class="article-body" data-tts>
+                <div class="tldr-box"><strong>TL;DR</strong><p>Upstash vs Redis Cloud vs Dragonfly Cloud vs ElastiCache on November 2026 pricing: per-command billing, the $91 idle floor, HA memory doubling, and four worked workloads.</p></div>
+                <p>An idle 1 GB cache costs $0 on Upstash, about $18 on Redis Cloud Essentials, and $91.25 on ElastiCache Serverless for Redis OSS — the same data, on the same wire protocol, doing absolutely nothing. That spread is the most important fact in managed Redis hosting right now, because the four viable providers stopped selling the same product. Upstash sells commands. Redis Cloud sells provisioned memory. Dragonfly sells RAM with an SSD escape hatch. AWS sells node-hours plus a metered serverless mode it introduced in late 2024.
 </p>
 
 <p>The market fractured before the prices did. In March 2024, Redis Ltd. moved its core database under the RSALv2 and SSPL licenses; a Linux Foundation fork named Valkey appeared within days, and AWS, Google Cloud, DigitalOcean, and Aiven all standardized on it. Redis answered a year later by returning the core to open source under AGPLv3 with Redis 8 — but the fork economics stuck. On AWS in November 2026, Valkey nodes run about 20% cheaper than equivalent Redis OSS nodes, and Valkey Serverless undercuts Redis OSS by roughly 33% on storage and processing units. Engine choice moves your bill by a third before you compare vendors at all.
@@ -150,7 +153,7 @@
 <p>This guide prices the four realistic options — Upstash, Redis Cloud, Dragonfly Cloud, and Amazon ElastiCache — on November 2026 public rates, then runs four real workloads through each bill. The winner changes per workload, and the crossover points are sharper than most vendor pages admit. Caches rarely sit alone: if yours backs a Postgres database, the <a href="/articles/best-serverless-postgres-hosting-2026-neon-vs-supabase-vs-planetscale-vs-amazon-rds">serverless Postgres hosting comparison</a> covers the other half of that stack.
 </p>
 
-<h2>Four Billing Models, One Protocol</h2>
+<h2 id="four-billing-models-one-protocol">Four Billing Models, One Protocol</h2>
 
 <p>Every provider here speaks the RESP protocol, so switching is a client-library change, not a rewrite. What differs is what the meter counts.
 </p>
@@ -167,7 +170,7 @@
 <p>ElastiCache prices two ways: classic node-hours from $0.0128/hour (cache.t4g.micro on Valkey, about $9.34/month), or Serverless at $0.084 per GB-hour plus $0.0023 per million ECPUs on Valkey. There is no scale-to-zero — billing starts when the cache becomes Available and stops only when you delete it. ElastiCache and most cloud platforms now default to Valkey, protocol-compatible with Redis clients; Dragonfly is a separate multi-threaded engine that also speaks the Redis, Valkey, and Memcached APIs. Only Redis Cloud runs the first-party module set, so if a workload depends on TimeSeries or Bloom, capability beats price.
 </p>
 
-<h2>Managed Redis Hosting Pricing, Side by Side</h2>
+<h2 id="managed-redis-hosting-pricing-side-by-side">Managed Redis Hosting Pricing, Side by Side</h2>
 
 <table><thead><tr><th>Platform</th><th>Engine</th><th>Billing model</th><th>Entry paid price</th><th>Free tier</th><th>High availability</th></tr></thead><tbody><tr><td>Upstash</td><td>Redis-compatible protocol</td><td>Per command, or fixed plans</td><td>$0 PAYG; $10/mo (250 MB)</td><td>256 MB + 500K commands/mo</td><td>Prod Pack: +$200/mo per database</td></tr><tr><td>Redis Cloud</td><td>Redis 8 (first-party)</td><td>Per provisioned GB</td><td>~$5/mo (250 MB)</td><td>30 MB at 100 ops/sec</td><td>HA doubles billed memory; Active-Active doubles it again</td></tr><tr><td>Dragonfly Cloud</td><td>Dragonfly (Redis/Valkey/Memcached APIs)</td><td>Flat plans, per GB RAM</td><td>$36/mo (Flex)</td><td>Trial only; self-hosted CE is free</td><td>Included on Flex and up</td></tr><tr><td>ElastiCache</td><td>Valkey / Redis OSS / Memcached</td><td>Node-hour, or serverless GB-hr + ECPU</td><td>~$9.34/mo (t4g.micro)</td><td>$100 credits (new accounts)</td><td>Second node at full cost</td></tr></tbody></table>
 
@@ -180,7 +183,7 @@
 <p>Dragonfly prices RAM at $11/GB-month on Flex, with the tiered option at $16.50/GB-month for eight times the capacity. ElastiCache node rates in us-east-1: cache.t4g.micro $0.0128/hour (~$9.34/month), cache.t4g.medium $0.052/hour (~$38/month), cache.r7g.large $0.1752/hour on Valkey versus $0.219 on Redis OSS (~$128 versus ~$160/month), and cache.r7g.xlarge $0.3496/hour (~$255/month). High availability means a second node — every node price doubles. Cross-AZ traffic between your app and the cache costs $0.01/GB each way, a line item that doesn't exist on the other three unless you replicate across regions. Reserved nodes cut up to 55%, and Database Savings Plans trim Serverless up to 30% on a one-year commitment.
 </p>
 
-<h2>Four Workloads, Three Different Winners</h2>
+<h2 id="four-workloads-three-different-winners">Four Workloads, Three Different Winners</h2>
 
 <p>The arithmetic of managed Redis hosting never resolves into a single winner; it resolves per workload. Four worked examples at us-east-1 rates, November 2026:
 </p>
@@ -199,7 +202,7 @@
 <p>The memory-bound case is Dragonfly's pitch, from its own published example: 400 GB with 50 GB hot provisions 50 GB of RAM plus 350 GB of SSD at $16.50/GB-month, or $825/month — versus $4,400 all-RAM, an 81% cut. Upstash's fixed 500 GB plan is $1,500. ElastiCache Serverless is roughly $24,500 at 400 GB, but its r6gd nodes tier to SSD for what AWS claims is over 60% savings at maximum use, so node tiering is the AWS answer here. Redis Cloud quotes this scale custom through Pro.
 </p>
 
-<h2>Where Each Vendor Breaks</h2>
+<h2 id="where-each-vendor-breaks">Where Each Vendor Breaks</h2>
 
 <h3>Upstash: the command meter cuts both ways</h3>
 
@@ -221,7 +224,7 @@
 <p>AWS-native means VPC-only networking — there is no public endpoint, so ElastiCache cannot serve an edge application — plus IAM and a per-region operations burden. The Valkey vs Redis OSS decision mostly answers itself: protocol-identical clients, 20% cheaper nodes, 33% cheaper Serverless. Reserved nodes (up to 55% off) fit steady throughput, and the one-year Database Savings Plan (up to 30%) is the only Serverless discount. The structural trap is the floor: an idle Redis OSS Serverless cache bills $91.25/month before serving a single request, and no ElastiCache configuration scales to zero — you delete the cache to stop the meter.
 </p>
 
-<h2>Frequently Asked Questions</h2>
+<h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
 
 <h3>Is Upstash cheaper than Redis Cloud?</h3>
 
@@ -248,22 +251,20 @@
 <p>It is the same wire protocol under different governance — the reason Redis alternatives like Valkey and Dragonfly exist at all. Valkey forked from Redis 7.x days after the March 2024 license change and lives under the Linux Foundation, with AWS and Google Cloud running it in production. Redis 8 returned to open source under AGPLv3 in May 2025 and added features Valkey has not matched yet, including vector sets. On AWS the price delta is 20–33% in Valkey's favor, so the practical question is whether you need Redis-specific features — not whether Valkey clients work, because they do.
 </p>
 
-<h2>The Bottom Line</h2>
+<h2 id="the-bottom-line">The Bottom Line</h2>
 
 <p>Managed Redis hosting in 2026 is a billing-model decision before it is a vendor decision. Spiky, low-volume, or edge-deployed traffic belongs on Upstash, because $0 idle and HTTP access match serverless economics — just move to a fixed plan past 5M commands/month. Steady mid-size caches that need first-party Search, JSON, TimeSeries, or Bloom belong on Redis Cloud, budgeting for replication to double the memory line. Very large, mostly-cold datasets belong on Dragonfly's tiered memory ($825 versus $4,400 on a 400 GB set) or ElastiCache r6gd nodes if you are AWS-committed. High sustained throughput inside a VPC belongs on ElastiCache for Valkey with reserved nodes — and never on Redis OSS Serverless unless you enjoy a $91 monthly floor on an empty cache.
 </p>
 
 <p>Your app platform decision interacts with all of this: Railway, Render, and Fly.io price bandwidth and add-ons differently, and the <a href="/articles/heroku-alternatives-2026-railway-vs-render-vs-flyio-pricing-compared">PaaS pricing comparison</a> covers where self-deployed Redis fits that picture. Price the cache model first, then the stack around it.
 </p>
-            <div style="margin-top:40px;padding:20px;background:#f8f9fa;border-radius:8px;border-left:4px solid #2563eb;">
-                <p style="margin:0 0 8px 0;font-size:14px;color:#555;">
-                    <strong>About the author:</strong> This article was written by the <a href="/author/" style="color:#2563eb;text-decoration:none;">AI Tool Lab Editorial Team</a>, with 5+ years of paid AI tool testing experience and $200+ monthly subscription spend. All reviews are based on real paid long-term use.
-                </p>
-                <p style="margin:0;font-size:13px;color:#888;">
-                    <strong>Data statement:</strong> All data in this article cites its source and is verifiable. Found an error? Report it via our <a href="/contact.html" style="color:#2563eb;text-decoration:none;">contact page</a>, we verify within 48 hours.
-                </p>
-            </div>
-        </article>
+                <div class="author-note">
+                    <p><strong>About the author:</strong> This article was written by the <a href="/author/">AI Tool Lab Editorial Team</a>, with 5+ years of paid AI tool testing experience and $200+ monthly subscription spend. All reviews are based on real paid long-term use.</p>
+                    <p><strong>Data statement:</strong> All data in this article cites its source and is verifiable. Found an error? Report it via our <a href="/contact.html">contact page</a>, we verify within 48 hours.</p>
+                </div>
+            </article>
+            <aside class="article-toc" aria-label="Table of contents"><div class="toc-title">On this page</div><ul><li><a href="#four-billing-models-one-protocol">Four Billing Models, One Protocol</a></li><li><a href="#managed-redis-hosting-pricing-side-by-side">Managed Redis Hosting Pricing, Side by Side</a></li><li><a href="#four-workloads-three-different-winners">Four Workloads, Three Different Winners</a></li><li><a href="#where-each-vendor-breaks">Where Each Vendor Breaks</a></li><li><a href="#frequently-asked-questions">Frequently Asked Questions</a></li><li><a href="#the-bottom-line">The Bottom Line</a></li></ul></aside>
+        </div>
 
         <div class="related-tools">
             <h3>Related Articles</h3>

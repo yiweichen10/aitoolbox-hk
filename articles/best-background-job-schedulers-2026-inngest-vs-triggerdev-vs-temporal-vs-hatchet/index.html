@@ -21,7 +21,7 @@
     <meta name="twitter:title" content="Best Background Job Schedulers in 2026: Inngest vs Trigger.dev vs Temporal vs Hatchet - AI Tool Lab">
     <meta name="twitter:description" content="Inngest, Trigger.dev, Temporal Cloud, and Hatchet compared: 2026 pricing, metering models, self-hosting options, and which durable execution engine fits your workload.">
     <meta name="twitter:image" content="https://www.aitoolbox.hk/images/og/best-background-job-schedulers-2026-inngest-vs-triggerdev-vs-temporal-vs-hatchet-en-og.png">
-    <link rel="stylesheet" href="/css/style.css?v=20261116092034">
+    <link rel="stylesheet" href="/css/style.css?v=20261116155217">
     <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -129,22 +129,25 @@
         <a href="/">Home</a> &gt; <a href="/category/ai-web-development/">AI Web Development</a> &gt; <span>Best Background Job Schedulers...</span>
     </nav>
 
-    <main class="article-container">
-        <article class="article-body" data-tts>
-            <h1 style="margin-bottom:16px;">Best Background Job Schedulers in 2026: Inngest vs Trigger.dev vs Temporal vs Hatchet</h1>
-            <div style="color:#999;font-size:14px;margin-bottom:24px;">
-                2026-11-01 · AI Web Development ·
-                <span itemprop="author" itemscope itemtype="https://schema.org/Organization"><a href="/author/" itemprop="url" style="color:#2563eb;text-decoration:none;"><span itemprop="name">AI Tool Lab Editorial Team</span></a></span> ·
-                <span style="color:#bbb;">34 min read</span>
+    <main class="article-container article-container-wide">
+        <header class="article-header">
+            <a class="article-kicker" href="/category/ai-web-development/">AI Web Development</a>
+            <h1 class="article-title">Best Background Job Schedulers in 2026: Inngest vs Trigger.dev vs Temporal vs Hatchet</h1>
+            <div class="article-meta-row">
+                <span>2026-11-01</span>
+                <span aria-hidden="true">·</span>
+                <span itemprop="author" itemscope itemtype="https://schema.org/Organization"><a href="/author/" itemprop="url"><span itemprop="name">AI Tool Lab Editorial Team</span></a></span>
+                <span aria-hidden="true">·</span>
+                <span>34 min read</span>
             </div>
-            <div class="tldr-box" style="background:linear-gradient(135deg,#fff8e6,#ffefb8);border-left:4px solid #f5a623;padding:16px 20px;margin-bottom:24px;border-radius:0 8px 8px 0;font-size:14.5px;line-height:1.7;">
-                <strong style="color:var(--brand-blue);font-size:15px;">TL;DR</strong><br>
-                <span style="color:#555;">Inngest, Trigger.dev, Temporal Cloud, and Hatchet compared: 2026 pricing, metering models, self-hosting options, and which durable execution engine fits your workload.</span>
-            </div>
-            <p>Run the same workload through each of the four background job schedulers in this comparison — 500,000 workflow runs a month, four steps per run — and the invoices land roughly $15 apart from each other at the extremes: about $15 a month on Hatchet, $125 on Temporal Cloud, $174 on Inngest, and near $182 on Trigger.dev once compute time is added. A twelve-fold spread for identical work, decided almost entirely by what each vendor's meter counts: runs, actions, executions, or seconds of compute. I have shipped production queues on all four — cron-driven data pipelines, multi-day AI agent runs, and event-driven fan-outs — and for this comparison I verified every figure against the vendors' own pricing pages in the first week of November 2026. The pattern that holds across every migration I have been part of: the sticker price is a rounding error, the overage table is the product spec, and two of the four platforms will run on your own hardware for exactly $0.
+        </header>
+        <div class="article-layout">
+            <article class="article-body" data-tts>
+                <div class="tldr-box"><strong>TL;DR</strong><p>Inngest, Trigger.dev, Temporal Cloud, and Hatchet compared: 2026 pricing, metering models, self-hosting options, and which durable execution engine fits your workload.</p></div>
+                <p>Run the same workload through each of the four background job schedulers in this comparison — 500,000 workflow runs a month, four steps per run — and the invoices land roughly $15 apart from each other at the extremes: about $15 a month on Hatchet, $125 on Temporal Cloud, $174 on Inngest, and near $182 on Trigger.dev once compute time is added. A twelve-fold spread for identical work, decided almost entirely by what each vendor's meter counts: runs, actions, executions, or seconds of compute. I have shipped production queues on all four — cron-driven data pipelines, multi-day AI agent runs, and event-driven fan-outs — and for this comparison I verified every figure against the vendors' own pricing pages in the first week of November 2026. The pattern that holds across every migration I have been part of: the sticker price is a rounding error, the overage table is the product spec, and two of the four platforms will run on your own hardware for exactly $0.
 </p>
 
-<h2>What these four actually are, and the meter that defines each</h2>
+<h2 id="what-these-four-actually-are-and-the-meter-that-defines-each">What these four actually are, and the meter that defines each</h2>
 
 <p>All four are durable execution engines: your function runs survive crashes, deploys, and reboots, and every step retries with backoff when an API hiccups. Below that shared promise, the architectures — and the invoices — diverge fast.
 </p>
@@ -155,7 +158,7 @@
 <p>That last column is the one to internalize. When a renewal invoice shocks a team, it is almost always because the meter was counting something nobody budgeted for: steps, seconds, or storage.
 </p>
 
-<h2>The 2026 prices, in one table</h2>
+<h2 id="the-2026-prices-in-one-table">The 2026 prices, in one table</h2>
 
 <p>Every figure below comes from the vendors' published pricing pages as of November 1, 2026. Three of the four have no traditional plan ladder — pay-as-you-go is the norm here, which makes the free-tier and overage columns more important than a "starting at" price.
 </p>
@@ -165,7 +168,7 @@
 <p>Two footnotes before you budget. First, Hatchet's no-card tier caps at 2,000 runs a day — production-capable for a side project, but the million-run free allowance needs a card on file. Second, Temporal publishes no plan ladder at all: support is an add-on (Business from $500/month or 10% of usage, whichever is greater), and everything from SAML to the 99.9% SLA ships on the base platform.
 </p>
 
-<h2>How the metering math plays out on a real workload</h2>
+<h2 id="how-the-metering-math-plays-out-on-a-real-workload">How the metering math plays out on a real workload</h2>
 
 <p>Take that 500,000-run month with four steps per run and ten seconds of compute per run, and the four background job schedulers part ways immediately.
 </p>
@@ -176,7 +179,7 @@
 <p>Now flip one variable. Halve the steps to two per run, and Inngest drops to $99 flat while Temporal falls to $75 — the gap between them nearly closes. Double compute to slow LLM calls and Trigger.dev doubles while the other three hold still. Inngest's own pricing FAQ concedes the point: it modeled third-party comparisons and found the ranking flips depending on step count and per-step duration, then recommends running your own workload shape through each meter. That is the correct advice, and it is rare to see a vendor say it out loud.
 </p>
 
-<h2>Inngest: the step tax and the sharpest free tier</h2>
+<h2 id="inngest-the-step-tax-and-the-sharpest-free-tier">Inngest: the step tax and the sharpest free tier</h2>
 
 <p>Inngest's free tier is the most usable starting point of the four: 50,000 executions a month, 500,000 events ingested, five seats, and a local dev server that mirrors production behavior in one command. It is enough to run a real side project, not a demo sandbox. Inngest pricing 2026 gets interesting at Pro: $99 a month buys one million executions, 100 concurrent steps, fifteen seats, and seven-day trace history — the observability window most teams actually need for debugging multi-step runs.
 </p>
@@ -187,7 +190,7 @@
 <p>One more honesty note from the vendor's own table: on the free plan there is no metered overage at all. Execution pauses when the 50,000-run quota empties, which for a cron-driven pipeline means silent stalls rather than surprise invoices. Whether that reads as a safety rail or an outage depends on your pager.
 </p>
 
-<h2>Trigger.dev: pay for seconds, not structure</h2>
+<h2 id="trigger-dev-pay-for-seconds-not-structure">Trigger.dev: pay for seconds, not structure</h2>
 
 <p>Trigger.dev's model is the easiest to reason about for teams that think in compute terms: every run that starts on managed workers costs a $0.000025 invocation plus per-second compute on a chosen machine size, from a 0.25-vCPU Micro at $0.0000169 per second to a 16GB Large-2x at $0.00068. The vendor's own worked example — a ten-second task run 100 times a day on the default machine — lands at $1.09 a month, and that math checks out against the published rates.
 </p>
@@ -198,7 +201,7 @@
 <p>Concurrency is the other dial: 20 runs free, 50 on Hobby, 200 on Pro at $50 a month with $10 per extra 50. If you fan out 10,000 batch jobs at midnight, you will be buying concurrency, not compute. The platform is Apache 2.0 with a documented self-hosting guide, so the exit door is real.
 </p>
 
-<h2>Temporal Cloud: the enterprise floor, priced honestly</h2>
+<h2 id="temporal-cloud-the-enterprise-floor-priced-honestly">Temporal Cloud: the enterprise floor, priced honestly</h2>
 
 <p>Temporal is the platform the other three benchmark against, and its cloud offering has quietly become one of the simplest in this market: no base fee, no feature-gated tiers, $150 in credits for 90 days, and a flat $50 per million actions with self-service volume discounts down to $25. SAML SSO, the 99.9% SLA (99.99% with the HA option), audit logging, and SOC 2 and HIPAA compliance all ship on the base platform — the same feature set that costs four figures a month on most enterprise tools.
 </p>
@@ -209,7 +212,7 @@
 <p>Temporal Cloud pricing rewards teams that model their action counts the way they model database queries: carefully. Teams that skip that step are the source of most "Temporal is expensive" threads, and both halves of that sentence are correct.
 </p>
 
-<h2>Hatchet: the price floor, and what it costs you</h2>
+<h2 id="hatchet-the-price-floor-and-what-it-costs-you">Hatchet: the price floor, and what it costs you</h2>
 
 <p>Hatchet's pitch is arithmetic: 1 million runs and 1 million events free every month, then $30 per million runs and $5 per million events, with no invocation fee, no compute meter, and no plan fee. For high-volume, low-compute workloads — fan-outs, event routers, scheduled cleanups — nothing in this comparison touches it. Failed runs count as billable runs; retries, refreshingly, do not.
 </p>
@@ -220,7 +223,7 @@
 <p>Hatchet is also the purest open source job scheduler here: MIT-licensed, self-hosted over 10,000 times a month by its own count, with the cloud product as a managed layer rather than a different product.
 </p>
 
-<h2>Which background job schedulers fit which team</h2>
+<h2 id="which-background-job-schedulers-fit-which-team">Which background job schedulers fit which team</h2>
 
 <p>Solo developers and side projects: start with Hatchet's free million runs or Inngest's free tier, both of which run real production workloads without a card. If your jobs are cron-shaped — one trigger, a handful of steps, done — the best cron job scheduler for developers in this group is whichever free tier your language SDK supports best, and both publish honest quota tables.
 </p>
@@ -234,7 +237,7 @@
 <p>High-volume, short-task workloads on a budget: Hatchet, with eyes open about its younger ecosystem. Whatever you pick, wire failure alerts before launch — the <a href="/articles/best-error-tracking-tools-2026-sentry-vs-rollbar-vs-bugsnag-vs-datadog">error tracking comparison</a> covers the monitoring layer these platforms assume you already have, and the <a href="/articles/best-uptime-monitoring-tools-2026-better-stack-vs-uptimerobot-vs-checkly-vs-pingdom">uptime monitoring comparison</a> covers the outside-in checks that catch a stalled queue before your users do.
 </p>
 
-<h2>Switching costs nobody budgets for</h2>
+<h2 id="switching-costs-nobody-budgets-for">Switching costs nobody budgets for</h2>
 
 <p>Migration effort runs on two axes: SDK surface and history. Moving between the JavaScript-native platforms (Inngest and Trigger.dev) is a rewrite of function decorators, not a data migration — both export run history, neither depends on it at runtime. Hatchet publishes migration guides for Temporal and Celery and clearly intends to be the landing pad; moving to Hatchet means porting workflow definitions but the meter gets cheaper the moment you land. Temporal is the hardest to leave and the easiest to adopt: the MIT-licensed open source engine matches the cloud feature-for-feature at the orchestration layer, so a self-hosted escape hatch exists at every size.
 </p>
@@ -242,7 +245,7 @@
 <p>The cost nobody models is mental-model retraining. Inngest's event-and-step style, Trigger.dev's imperative tasks, Temporal's workflow-versioning discipline, and Hatchet's declarative fan-outs are four different ways of thinking about the same problem, and your engineers absorb that cost once per migration. Choose on metering model and SDK fit first; every other axis can be changed later.
 </p>
 
-<h2>Frequently Asked Questions</h2>
+<h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
 
 <h3>How much does Temporal Cloud cost in 2026?</h3>
 
@@ -269,19 +272,17 @@
 <p>Hatchet explicitly does not bill retries, but a failed run still counts as a run. Trigger.dev bills every run that starts executing on managed workers, retries included. Inngest and Temporal meter executions and actions respectively, so a retried activity or step bills again. Build retry budgets into your cost model from day one — at scale, retries are a line item, not an edge case.
 </p>
 
-<h2>The bottom line</h2>
+<h2 id="the-bottom-line">The bottom line</h2>
 
 <p>In 2026, background job schedulers are chosen by metering model before feature grid. Hatchet owns the price floor at $30 per million runs with a genuinely free million monthly; Temporal sells the deepest platform at $50 per million actions with nothing gated behind enterprise tiers; Inngest prices structure at $99 for a million executions; and Trigger.dev prices time at fractions of a cent per invocation plus per-second compute. Write down your run count, your step count, and your seconds per step before you write a line of code — on these four platforms, that trio of numbers is the entire purchasing decision, and the vendors' own pricing pages now say so too.
 </p>
-            <div style="margin-top:40px;padding:20px;background:#f8f9fa;border-radius:8px;border-left:4px solid #2563eb;">
-                <p style="margin:0 0 8px 0;font-size:14px;color:#555;">
-                    <strong>About the author:</strong> This article was written by the <a href="/author/" style="color:#2563eb;text-decoration:none;">AI Tool Lab Editorial Team</a>, with 5+ years of paid AI tool testing experience and $200+ monthly subscription spend. All reviews are based on real paid long-term use.
-                </p>
-                <p style="margin:0;font-size:13px;color:#888;">
-                    <strong>Data statement:</strong> All data in this article cites its source and is verifiable. Found an error? Report it via our <a href="/contact.html" style="color:#2563eb;text-decoration:none;">contact page</a>, we verify within 48 hours.
-                </p>
-            </div>
-        </article>
+                <div class="author-note">
+                    <p><strong>About the author:</strong> This article was written by the <a href="/author/">AI Tool Lab Editorial Team</a>, with 5+ years of paid AI tool testing experience and $200+ monthly subscription spend. All reviews are based on real paid long-term use.</p>
+                    <p><strong>Data statement:</strong> All data in this article cites its source and is verifiable. Found an error? Report it via our <a href="/contact.html">contact page</a>, we verify within 48 hours.</p>
+                </div>
+            </article>
+            <aside class="article-toc" aria-label="Table of contents"><div class="toc-title">On this page</div><ul><li><a href="#what-these-four-actually-are-and-the-meter-that-defines-each">What these four actually are, and the meter that defines each</a></li><li><a href="#the-2026-prices-in-one-table">The 2026 prices, in one table</a></li><li><a href="#how-the-metering-math-plays-out-on-a-real-workload">How the metering math plays out on a real workload</a></li><li><a href="#inngest-the-step-tax-and-the-sharpest-free-tier">Inngest: the step tax and the sharpest free tier</a></li><li><a href="#trigger-dev-pay-for-seconds-not-structure">Trigger.dev: pay for seconds, not structure</a></li><li><a href="#temporal-cloud-the-enterprise-floor-priced-honestly">Temporal Cloud: the enterprise floor, priced honestly</a></li><li><a href="#hatchet-the-price-floor-and-what-it-costs-you">Hatchet: the price floor, and what it costs you</a></li><li><a href="#which-background-job-schedulers-fit-which-team">Which background job schedulers fit which team</a></li><li><a href="#switching-costs-nobody-budgets-for">Switching costs nobody budgets for</a></li><li><a href="#frequently-asked-questions">Frequently Asked Questions</a></li><li><a href="#the-bottom-line">The bottom line</a></li></ul></aside>
+        </div>
 
         <div class="related-tools">
             <h3>Related Articles</h3>
