@@ -21,7 +21,7 @@
     <meta name="twitter:title" content="Exa AI Review 2026 - AI Tool Lab">
     <meta name="twitter:description" content="Exa AI (formerly Metaphor) is an API-first web search engine built for AI agents and LLMs - it matches meaning with embe">
     <meta name="twitter:image" content="https://www.aitoolbox.hk/images/og/exa-ai-en-og.png">
-    <link rel="stylesheet" href="/css/style.css?v=20261116155217">
+    <link rel="stylesheet" href="/css/style.css?v=20261116185308">
     <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -250,54 +250,47 @@
         </div>
     </header>
 
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-        <a href="/">Home</a> &gt; <a href="/category/ai-search/">AI Search</a> &gt; <span>Exa AI</span>
+    <nav class="breadcrumb td-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a><span class="sep">/</span><a href="/category/ai-search/">AI Search</a><span class="sep">/</span><span>Exa AI</span>
     </nav>
 
-    <main class="article-container">
-        <div class="tool-header">
-            <div class="tool-header-top">
+    <main>
+        <section class="td-hero">
+            <div class="td-identity">
                 <img class="tool-logo tool-icon-lg" src="/assets/icons/exa-ai.png" alt="Exa AI" width="56" height="56" loading="lazy" decoding="async">
-                <div class="tool-header-info">
-                    <div class="tool-title-row"><h1>Exa AI</h1><span class="status-chip status-verified">Verified</span></div>
-                    <p class="subtitle">Exa AI (formerly Metaphor) is an API-first web search engine built for AI agents and LLMs - it matches meaning with embeddings instead of keywords, so long natural-language queries like 'startups quietly building AI tools for construction project managers' come back with the right pages instead of a keyword soup. I build research agents and sales-intelligence tools for clients on it: the tool costs about $0.007 per search, and a client research retainer bills at $500-$2,000 a month, so the margin is close to the full invoice. Cursor uses Exa to ground its coding assistant in fresh docs; you can do the same kind of thing for any vertical you can name.</p>
-                    <div class="rating-bar">⭐ 4.6</div>
+                <h1>Exa AI</h1>
+                <p class="td-summary">Exa AI (formerly Metaphor) is an API-first web search engine built for AI agents and LLMs - it matches meaning with embeddings instead of keywords, so long natural-language queries like 'startups quietly building AI tools for construction project managers' come back with the right pages instead of a keyword soup. I build research agents and sales-intelligence tools for clients on it: the tool costs about $0.007 per search, and a client research retainer bills at $500-$2,000 a month, so the margin is close to the full invoice. Cursor uses Exa to ground its coding assistant in fresh docs; you can do the same kind of thing for any vertical you can name.</p>
+                <div class="td-chips">
+                    <span class="td-chip td-chip-neutral">AI Search</span>
+                    
+                    <span class="td-chip td-chip-verified">✓ Independently reviewed</span>
                 </div>
             </div>
-            <div class="tool-meta">
-                <div class="tool-meta-item"><strong>Website</strong>: exa.ai</div>
-                <div class="tool-meta-item"><strong>Price</strong>: Pay-as-you-go from $7/1K req</div>
-                <div class="tool-meta-item" title="REST API with Python and TypeScript SDKs, open-source MCP server (connects Claude, Cursor, VS Code, Windsurf, Gemini CLI and 10+ tools), native integrations with LangChain, LlamaIndex and CrewAI, tool-use support for Claude and OpenAI agents"><strong>Platform</strong>: REST API with Python and TypeScript SDKs, open-source MCP s…</div>
-                <div class="tool-meta-item"><strong>Category</strong>: AI Search</div>
-            </div>
-            <div class="action-bar">
-                <a href="https://exa.ai" target="_blank" rel="noopener" class="action-btn action-btn-primary">Visit Exa AI →</a>
-            </div>
+            <aside class="td-score-card">
+                <div class="td-score-label">EDITOR SCORE</div>
+                <div class="td-score-value">4.6 / 5</div>
+                <div class="td-score-note">✓ Verified  ·  Independently tested</div>
+                <a class="td-visit-btn" href="https://exa.ai" target="_blank" rel="noopener">Visit Exa AI →</a>
+            </aside>
+        </section>
+
+        <div class="td-body">
+            <div class="td-proscons">
+            <div class="td-card"><div class="td-card-head pros">WHAT WORKS</div><ul><li>✓&nbsp;&nbsp;Semantic retrieval is genuinely better than keyword search for long natural-language queries - the whole point of the product, and it shows on multi-hop research tasks where it scores 81% on WebWalker versus Tavily's 71%</li><li>✓&nbsp;&nbsp;The free tier is real and generous: $20 on sign-up plus $10 every month is enough to prototype a working research agent or RAG app before anyone spends money</li><li>✓&nbsp;&nbsp;Exa Instant mode runs sub-150ms searches, which makes it one of the fastest search APIs on the market for latency-sensitive agent loops</li><li>✓&nbsp;&nbsp;The Contents endpoint returns clean, parsed page text with query-dependent highlights - it saves you a scraping layer and keeps token usage down, and the top-10 contents are included in the base search price since March 2026</li><li>✓&nbsp;&nbsp;Domain-specific indexes for people (1B+), companies (50M+) and research papers (100M+) plus GitHub repo/docs search give agents curated structured data that generic web search cannot match</li><li>✓&nbsp;&nbsp;The free open-source MCP server wires Exa into Claude, Cursor, VS Code and Windsurf in minutes - no custom API plumbing, which is what most client demos need to be fast</li></ul></div>
+            <div class="td-card"><div class="td-card-head cons">LIMITATIONS</div><ul><li>—&nbsp;&nbsp;It is API-only. There is no consumer search box, no no-code builder, no dashboard where a non-developer can 'use' it - if you cannot read code, this tool is useless to you</li><li>—&nbsp;&nbsp;Deep search gets expensive fast: $12-$15 per 1,000 requests versus $7 for standard search, and research-grade workloads can burn hundreds of requests per report</li><li>—&nbsp;&nbsp;Freshness is a real weak spot - it scored only 24% on FreshQA, meaning queries about events from the past week or month frequently return outdated results from its index</li><li>—&nbsp;&nbsp;The default rate limit is 10 QPS (600 requests a minute), so multi-agent pipelines need retry and queuing logic, and raising the limit means an enterprise sales call rather than a plan upgrade</li><li>—&nbsp;&nbsp;Its index is smaller than Google's, so obscure long-tail pages that exist on the open web are sometimes missing entirely</li><li>—&nbsp;&nbsp;Credits and per-request billing take discipline to track - the Agent auto mode meters usage up to $5 a run, and if you forget to cap it, a sloppy prompt can quietly cost more than the client invoice covers</li></ul></div>
         </div>
 
-        <div class="tldr-box">
-            <strong>TL;DR</strong>
-            <p>Exa AI (formerly Metaphor) is an API-first web search engine built for AI agents and LLMs - it matches meaning with embeddings instead of keywords, so long natural-language queries like 'startups quietly building AI tools for construction project managers' come back with the right pages instead of a keyword soup. I build research agents and sales-intelligence tools for clients on it: the tool costs about $0.007 per search, and a client research retainer bills at $500-$2,000 a month, so the margin is close to the full invoice. Cursor uses Exa to ground its coding assistant in fresh docs; you can do the same kind of thing for any vertical you can name.</p>
+            <div class="td-card td-pricing">
+        <div class="td-card-head faint">PRICING&nbsp;·&nbsp;UPDATED 16 Nov 2026</div>
+        <div class="td-price-tile">
+            <div class="td-price-label">CURRENT PRICING</div>
+            <div class="td-price-value">Pay-as-you-go from $7/1K req</div>
+            <div class="td-price-detail">Pay-as-you-go, no subscription and no minimum: Search $7/1,000 requests (contents for the first 10 results included since March 2026); each extra result above 10 adds $1/1,000; Deep Search $12/1,000; Deep-Reasoning $15/1,000; Contents $1/1,000 pages; AI page summaries $1/1,000 pages; Answer $5/1,000 requests; Monitors $15/1,000 requests; Agent $0.012-$1.00 per run by effort (minimal/low/medium/high/xhigh) or metered on auto (Agent Compute Units $0.10/ACU, search tool calls $0.005, email enrichment $0.02/email, phone enrichment $0.07/phone); free tier $20 on sign-up + $10/month credits; startups and education projects can apply for $1,000 in credits; Enterprise gets custom rate limits, custom indexes, Zero Data Retention and volume discounts</div>
         </div>
+    </div>
 
-        <div class="key-stats">
-            <h4>Key Statistics</h4>
-            <div class="ks-grid"><div class="ks-item"><span class="ks-val">4.6</span><span class="ks-label">User Rating</span></div><div class="ks-item"><span class="ks-val">Pay-as-you-go from $7/1K req</span><span class="ks-label">Pricing</span></div><div class="ks-item"><span class="ks-val">REST API with Python and TypeScript SDKs, open-source MCP s…</span><span class="ks-label">Platform</span></div></div>
-        </div>
-
-        <div class="features-grid"><div class="feature-item">Neural Search - embedding-based retrieval that matches meaning, not keywords; ideal for long, natural-language and abstract queries</div>
-<div class="feature-item">Exa Instant - sub-150ms search mode for real-time agent loops and chat copilots where latency kills the experience</div>
-<div class="feature-item">Deep Search & Deep-Reasoning - multi-step research modes with structured outputs and citations for harder questions ($12-$15/1k)</div>
-<div class="feature-item">Contents Endpoint - clean parsed page text, query-dependent highlights and AI summaries for LLM context windows ($1/1k pages)</div>
-<div class="feature-item">Monitors - scheduled searches that surface new web events, delivered via webhooks ($15/1k)</div>
-<div class="feature-item">Agent API - async deep research, list building and entity enrichment with email ($0.02) and phone ($0.07) contact enrichment</div>
-<div class="feature-item">Domain Indexes - curated collections for people (1B+), companies (50M+), research papers (100M+) and GitHub repos/docs/changelogs</div>
-<div class="feature-item">MCP Server - free open-source Model Context Protocol server that connects Claude, Cursor, VS Code, Windsurf, Gemini CLI and 10+ tools</div>
-<div class="feature-item">Native Integrations - LangChain, LlamaIndex and CrewAI tooling plus Claude/OpenAI function-calling support</div>
-</div>
-
-        <article class="article-body" data-tts>
-            <h2>What Exa Actually Is (From Someone Who Builds Research Agents)</h2>
+            <article class="article-body" data-tts>
+                <h2>What Exa Actually Is (From Someone Who Builds Research Agents)</h2>
 
 <p>I build AI research and sales-intelligence agents for clients, and for the last year Exa has been the search layer in most of them. Exa (formerly Metaphor) is a web search API built for machines, not humans. Instead of matching keywords the way Google does, it embeds both your query and the pages it has indexed into vectors, then finds pages that are semantically close to what you actually asked. That sounds like marketing speak until you run a real query. Ask Google for "startups quietly building AI tools for construction project managers" and you get a list of articles containing those words. Ask Exa the same thing and you get actual startups doing exactly that, because it understood the meaning, not the terms.
 </p>
@@ -377,50 +370,34 @@
 </ul>
 <p>The bottom line: Exa is not a search box you open, it is a search engine you build on. For anyone creating research products, sales-intelligence services or AI agents, it is currently the best semantic retrieval layer in the category - and at $0.007 a search, the engine costs almost nothing next to what the product built on it can bill.
 </p>
-        </article>
+            </article>
 
-        <div class="pros-cons">
-            <div class="pros">
-                <h4>Pros</h4>
-                <ul><li>Semantic retrieval is genuinely better than keyword search for long natural-language queries - the whole point of the product, and it shows on multi-hop research tasks where it scores 81% on WebWalker versus Tavily's 71%</li><li>The free tier is real and generous: $20 on sign-up plus $10 every month is enough to prototype a working research agent or RAG app before anyone spends money</li><li>Exa Instant mode runs sub-150ms searches, which makes it one of the fastest search APIs on the market for latency-sensitive agent loops</li><li>The Contents endpoint returns clean, parsed page text with query-dependent highlights - it saves you a scraping layer and keeps token usage down, and the top-10 contents are included in the base search price since March 2026</li><li>Domain-specific indexes for people (1B+), companies (50M+) and research papers (100M+) plus GitHub repo/docs search give agents curated structured data that generic web search cannot match</li><li>The free open-source MCP server wires Exa into Claude, Cursor, VS Code and Windsurf in minutes - no custom API plumbing, which is what most client demos need to be fast</li></ul>
-            </div>
-            <div class="cons">
-                <h4>Cons</h4>
-                <ul><li>It is API-only. There is no consumer search box, no no-code builder, no dashboard where a non-developer can 'use' it - if you cannot read code, this tool is useless to you</li><li>Deep search gets expensive fast: $12-$15 per 1,000 requests versus $7 for standard search, and research-grade workloads can burn hundreds of requests per report</li><li>Freshness is a real weak spot - it scored only 24% on FreshQA, meaning queries about events from the past week or month frequently return outdated results from its index</li><li>The default rate limit is 10 QPS (600 requests a minute), so multi-agent pipelines need retry and queuing logic, and raising the limit means an enterprise sales call rather than a plan upgrade</li><li>Its index is smaller than Google's, so obscure long-tail pages that exist on the open web are sometimes missing entirely</li><li>Credits and per-request billing take discipline to track - the Agent auto mode meters usage up to $5 a run, and if you forget to cap it, a sloppy prompt can quietly cost more than the client invoice covers</li></ul>
-            </div>
-        </div>
-
-        <div class="faq-section"><h3>FAQ</h3><div class="faq-item">
-                    <details>
-                        <summary>Can I actually build a business on Exa without being a hardcore engineer?</summary>
-                        <div class="faq-answer"><p>You need to be comfortable with code - Exa is an API, so the floor is 'can you call a REST endpoint and parse JSON'. The realistic entry point for a solo operator is the research-as-a-service model: funds, consultancies and VC firms pay $500-$2,000 a month for someone to run deep, well-cited research they cannot get out of Google. A single 50-page sector report might cost you $2-5 in Exa credits at the deep-search rate and bill at $300-800. The other path is building search-powered agents for small businesses - a lead-research bot, a competitor tracker, a news monitor - at $2K-$5K build plus $200-$500 a month to run it. If you cannot write code at all, this is not your tool; you would be better off selling the research on the first path with a developer partner.
+            <div class="td-faq"><h2 class="td-faq-head">Questions we get asked</h2><div class="td-faq-item">
+                    <h3>Can I actually build a business on Exa without being a hardcore engineer?</h3>
+                    <div class="td-faq-a"><p>You need to be comfortable with code - Exa is an API, so the floor is 'can you call a REST endpoint and parse JSON'. The realistic entry point for a solo operator is the research-as-a-service model: funds, consultancies and VC firms pay $500-$2,000 a month for someone to run deep, well-cited research they cannot get out of Google. A single 50-page sector report might cost you $2-5 in Exa credits at the deep-search rate and bill at $300-800. The other path is building search-powered agents for small businesses - a lead-research bot, a competitor tracker, a news monitor - at $2K-$5K build plus $200-$500 a month to run it. If you cannot write code at all, this is not your tool; you would be better off selling the research on the first path with a developer partner.
 </p></div>
-                    </details>
                 </div>
-<div class="faq-item">
-                    <details>
-                        <summary>Exa, Tavily or SerpAPI - which should I build on?</summary>
-                        <div class="faq-answer"><p>For pure semantic retrieval on long natural-language queries, most developers rank Exa first - it matches meaning, which is exactly what an LLM agent needs. Tavily is optimized for LLM-friendly summarized results and bundles AI answers inline, and it is easier for beginners. SerpAPI is a wrapper around Google's actual rankings, so pick it only if you specifically need Google's result order for SEO work. Exa's weak spots are freshness (recent-event queries score badly) and the 10 QPS default rate limit; Tavily is lighter on both. My rule of thumb: research agents, sales intelligence and company/people enrichment -> Exa; quick answer-inline chatbots -> Tavily; anything that must mirror Google SERPs -> SerpAPI. You can also run Exa for research and Tavily for chat in the same product; the per-call cost makes a hybrid trivial.
+<div class="td-faq-divider"></div>
+<div class="td-faq-item">
+                    <h3>Exa, Tavily or SerpAPI - which should I build on?</h3>
+                    <div class="td-faq-a"><p>For pure semantic retrieval on long natural-language queries, most developers rank Exa first - it matches meaning, which is exactly what an LLM agent needs. Tavily is optimized for LLM-friendly summarized results and bundles AI answers inline, and it is easier for beginners. SerpAPI is a wrapper around Google's actual rankings, so pick it only if you specifically need Google's result order for SEO work. Exa's weak spots are freshness (recent-event queries score badly) and the 10 QPS default rate limit; Tavily is lighter on both. My rule of thumb: research agents, sales intelligence and company/people enrichment -> Exa; quick answer-inline chatbots -> Tavily; anything that must mirror Google SERPs -> SerpAPI. You can also run Exa for research and Tavily for chat in the same product; the per-call cost makes a hybrid trivial.
 </p></div>
-                    </details>
                 </div>
-<div class="faq-item">
-                    <details>
-                        <summary>Is the free tier enough to prototype a real product?</summary>
-                        <div class="faq-answer"><p>Yes, and that is one of Exa's better moves. New accounts get $20 in credits plus $10 a month, which the vendor says is roughly 20,000 requests a month - at standard search prices that is a serious prototyping budget. A working RAG app or a research agent that calls the API a few hundred times a day runs comfortably inside it. Startups and education projects can apply for $1,000 in extra credits, which effectively extends the runway to a funded launch. The moment you graduate to production, watch the deep-search tier: a report-style workload on $12-15/1k burns credits about twice as fast as standard search, so cap your agent runs and meter the spend before a sloppy prompt writes you a bill.
+<div class="td-faq-divider"></div>
+<div class="td-faq-item">
+                    <h3>Is the free tier enough to prototype a real product?</h3>
+                    <div class="td-faq-a"><p>Yes, and that is one of Exa's better moves. New accounts get $20 in credits plus $10 a month, which the vendor says is roughly 20,000 requests a month - at standard search prices that is a serious prototyping budget. A working RAG app or a research agent that calls the API a few hundred times a day runs comfortably inside it. Startups and education projects can apply for $1,000 in extra credits, which effectively extends the runway to a funded launch. The moment you graduate to production, watch the deep-search tier: a report-style workload on $12-15/1k burns credits about twice as fast as standard search, so cap your agent runs and meter the spend before a sloppy prompt writes you a bill.
 </p></div>
-                    </details>
                 </div>
-<div class="faq-item">
-                    <details>
-                        <summary>What are the common beginner mistakes with Exa?</summary>
-                        <div class="faq-answer"><p>Three, in my experience. First, treating it like Google - people write keyword queries and then complain the results are odd; Exa wants a full natural-language question, the longer and more specific the better. Second, ignoring the rate limit - agents that fire 600 requests a minute hit the 10 QPS wall and start erroring; you need retry and queue logic from day one, not after the crash. Third, skipping the freshness check - if your use case is time-sensitive (news, pricing, anything this week), Exa's index lags and you will confidently hand a client stale facts; validate the top results or pair it with a second source for recent-event queries. And a money one: leave Agent auto mode uncapped and a 200-step research run can meter up to $5 a pop before you notice.
+<div class="td-faq-divider"></div>
+<div class="td-faq-item">
+                    <h3>What are the common beginner mistakes with Exa?</h3>
+                    <div class="td-faq-a"><p>Three, in my experience. First, treating it like Google - people write keyword queries and then complain the results are odd; Exa wants a full natural-language question, the longer and more specific the better. Second, ignoring the rate limit - agents that fire 600 requests a minute hit the 10 QPS wall and start erroring; you need retry and queue logic from day one, not after the crash. Third, skipping the freshness check - if your use case is time-sensitive (news, pricing, anything this week), Exa's index lags and you will confidently hand a client stale facts; validate the top results or pair it with a second source for recent-event queries. And a money one: leave Agent auto mode uncapped and a 200-step research run can meter up to $5 a pop before you notice.
 </p></div>
-                    </details>
                 </div>
 </div>
 
-        <div class="author-block">
+            <div class="author-block">
         <div class="author-block-inner">
             <div class="author-avatar">A</div>
             <div class="author-body">
@@ -431,7 +408,7 @@
         </div>
     </div>
 
-        <div class="related-tools" id="relatedSection">
+            <div class="related-tools" id="relatedSection">
             <h3>Related Tools</h3>
             <div class="related-grid"><a href="/tools/perplexity/" class="related-card">
                 <img class="tool-logo related-tile" src="/assets/icons/perplexity.svg" alt="Perplexity" width="40" height="40" loading="lazy" decoding="async">
@@ -461,7 +438,7 @@
 </div>
         </div>
 
-        <div class="related-tools">
+            <div class="related-tools">
                 <h3>Related Articles</h3>
                 <div class="related-grid"><a href="/articles/best-serverless-functions-pricing-2026-aws-lambda-vs-cloudflare-workers-vs-vercel-vs-deno-deploy/" class="related-card">
                     <div style="font-weight:600;margin-bottom:4px;">Serverless Functions Pricing in 2026: AW</div>
@@ -477,6 +454,7 @@
                 </a>
 </div>
             </div>
+        </div>
     </main>
 
     <footer class="footer">

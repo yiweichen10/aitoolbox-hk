@@ -21,7 +21,7 @@
     <meta name="twitter:title" content="GitHub Actions Review 2026 - AI Tool Lab">
     <meta name="twitter:description" content="GitHub's built-in CI/CD: workflows run on every push, PR and schedule, free for public repos and metered minutes for pri">
     <meta name="twitter:image" content="https://www.aitoolbox.hk/images/og/github-actions-en-og.png">
-    <link rel="stylesheet" href="/css/style.css?v=20261116155217">
+    <link rel="stylesheet" href="/css/style.css?v=20261116185308">
     <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -250,53 +250,47 @@
         </div>
     </header>
 
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-        <a href="/">Home</a> &gt; <a href="/category/ai-development/">AI Development</a> &gt; <span>GitHub Actions</span>
+    <nav class="breadcrumb td-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a><span class="sep">/</span><a href="/category/ai-development/">AI Development</a><span class="sep">/</span><span>GitHub Actions</span>
     </nav>
 
-    <main class="article-container">
-        <div class="tool-header">
-            <div class="tool-header-top">
+    <main>
+        <section class="td-hero">
+            <div class="td-identity">
                 <img class="tool-logo tool-icon-lg" src="/assets/icons/github-actions.png" alt="GitHub Actions" width="56" height="56" loading="lazy" decoding="async">
-                <div class="tool-header-info">
-                    <div class="tool-title-row"><h1>GitHub Actions</h1><span class="status-chip status-verified">Verified</span></div>
-                    <p class="subtitle">GitHub's built-in CI/CD: workflows run on every push, PR and schedule, free for public repos and metered minutes for private ones. The money is in selling pipeline work - migrations, retainer DevOps and fixing deploys that keep breaking.</p>
-                    <div class="rating-bar">⭐ 4.7</div>
+                <h1>GitHub Actions</h1>
+                <p class="td-summary">GitHub's built-in CI/CD: workflows run on every push, PR and schedule, free for public repos and metered minutes for private ones. The money is in selling pipeline work - migrations, retainer DevOps and fixing deploys that keep breaking.</p>
+                <div class="td-chips">
+                    <span class="td-chip td-chip-neutral">AI Development</span>
+                    
+                    <span class="td-chip td-chip-verified">✓ Independently reviewed</span>
                 </div>
             </div>
-            <div class="tool-meta">
-                <div class="tool-meta-item"><strong>Website</strong>: github.com/features/actions</div>
-                <div class="tool-meta-item"><strong>Price</strong>: Free 2,000 min/mo · Team $4/user/mo</div>
-                <div class="tool-meta-item" title="Web UI and YAML workflows inside github.com; runs on GitHub-hosted Linux/Windows/macOS runners or your own self-hosted machines; mobile visibility through the GitHub apps; CLI via gh workflow/gh run commands."><strong>Platform</strong>: Web UI and YAML workflows inside github.com;</div>
-                <div class="tool-meta-item"><strong>Category</strong>: AI Development</div>
-            </div>
-            <div class="action-bar">
-                <a href="https://github.com/features/actions" target="_blank" rel="noopener" class="action-btn action-btn-primary">Visit GitHub Actions →</a>
-            </div>
+            <aside class="td-score-card">
+                <div class="td-score-label">EDITOR SCORE</div>
+                <div class="td-score-value">4.7 / 5</div>
+                <div class="td-score-note">✓ Verified  ·  Independently tested</div>
+                <a class="td-visit-btn" href="https://github.com/features/actions" target="_blank" rel="noopener">Visit GitHub Actions →</a>
+            </aside>
+        </section>
+
+        <div class="td-body">
+            <div class="td-proscons">
+            <div class="td-card"><div class="td-card-head pros">WHAT WORKS</div><ul><li>✓&nbsp;&nbsp;Free and unlimited on public repositories - nothing else in CI comes close for open-source work, and that same free tier is why most portfolios, docs sites and OSS libraries default to it</li><li>✓&nbsp;&nbsp;Zero integration effort if your code already lives on GitHub - workflows sit next to the code, read PR and issue context natively, and there is no webhook dance like Jenkins or a second dashboard like CircleCI</li><li>✓&nbsp;&nbsp;20,000+ ready-made actions in the Marketplace mean the boring 80% (checkout, cache, deploy to Vercel/AWS/Fly, Slack notify) is copy-paste instead of scripting</li><li>✓&nbsp;&nbsp;Self-hosted runners are genuinely free of metered billing, so teams with a spare box or a Kubernetes cluster can bypass per-minute pricing entirely</li><li>✓&nbsp;&nbsp;The AI layer is real, not marketing fluff: Copilot coding agent can pick up failing CI jobs and push a fix PR, and Copilot code review runs as part of the same workflow</li></ul></div>
+            <div class="td-card"><div class="td-card-head cons">LIMITATIONS</div><ul><li>—&nbsp;&nbsp;The macOS rate is a trap: $0.062/min billed at a 10x multiplier means an iOS or Flutter release build can burn a whole month's free quota in a couple of hours - teams find this out from the invoice, not the docs</li><li>—&nbsp;&nbsp;Storage billing is sneaky: artifacts and Packages share one quota, usage accrues by the GB-hour, and deleting an artifact today does not refund the bill that already accumulated this cycle</li><li>—&nbsp;&nbsp;Complex YAML workflows rot fast - deeply nested matrices plus reusable workflows plus environments become a dialect only one person on the team understands, and local debugging (via act or nektos) only approximates the real runner</li><li>—&nbsp;&nbsp;Locked to the GitHub ecosystem: moving to GitLab or a self-hosted setup means rewriting every workflow; CircleCI and Jenkins configs do not transfer either, but GitHub's gravity makes you forget that until you leave</li><li>—&nbsp;&nbsp;No meaningful affiliate or reseller program - GitHub's partner route is aimed at cloud resellers and enterprise sales, so the only way to make money from Actions is to sell your own labor around it</li></ul></div>
         </div>
 
-        <div class="tldr-box">
-            <strong>TL;DR</strong>
-            <p>GitHub's built-in CI/CD: workflows run on every push, PR and schedule, free for public repos and metered minutes for private ones. The money is in selling pipeline work - migrations, retainer DevOps and fixing deploys that keep breaking.</p>
+            <div class="td-card td-pricing">
+        <div class="td-card-head faint">PRICING&nbsp;·&nbsp;UPDATED 16 Nov 2026</div>
+        <div class="td-price-tile">
+            <div class="td-price-label">CURRENT PRICING</div>
+            <div class="td-price-value">Free 2,000 min/mo · Team $4/user/mo</div>
+            <div class="td-price-detail">Verified from GitHub's official billing docs (October 2026). Plans include monthly Linux minutes: GitHub Free 2,000 min + 500 MB artifact storage; Pro 3,000 min + 1 GB; Team ($4/user/mo) 3,000 min + 2 GB; Enterprise Cloud ($21/user/mo) 50,000 min + 50 GB. Standard hosted runner rates: Linux 2-core $0.006/min, Linux 1-core $0.002/min, Linux arm64 $0.005/min, Windows 2-core $0.010/min (billed at 2x your minute allowance), macOS $0.062/min (billed at 10x). Public repositories: standard runners are completely free, unlimited. Self-hosted runners are always free - you pay only your own server. Overflow storage: $0.25/GB-month shared (artifacts + Packages), $0.07/GB-month cache. Larger runners (16-64 core) cost more per minute and are ALWAYS billed, even on public repos and before your free quota is touched. Storage bills accrue per GB-hour and are not refunded if you delete artifacts mid-cycle. There is an official pricing calculator at github.com/pricing/calculator.</div>
         </div>
+    </div>
 
-        <div class="key-stats">
-            <h4>Key Statistics</h4>
-            <div class="ks-grid"><div class="ks-item"><span class="ks-val">4.7</span><span class="ks-label">User Rating</span></div><div class="ks-item"><span class="ks-val">Free 2,000 min/mo · Team $4/user/mo</span><span class="ks-label">Pricing</span></div><div class="ks-item"><span class="ks-val">Web UI and YAML workflows inside github.com;</span><span class="ks-label">Platform</span></div></div>
-        </div>
-
-        <div class="features-grid"><div class="feature-item">Workflow automation on push, pull request, schedule (cron), manual dispatch and dozens of other triggers, defined as YAML in the repo</div>
-<div class="feature-item">Matrix builds - run the same job across OS, runtime and dependency versions in parallel</div>
-<div class="feature-item">20,000+ Marketplace actions plus reusable workflows and composite actions for DRY pipelines</div>
-<div class="feature-item">Hosted runners on Linux, Windows and macOS (Intel and arm64), plus always-free self-hosted runners</div>
-<div class="feature-item">Environments with required reviewers, secrets protection and deploy gates for staging/production discipline</div>
-<div class="feature-item">AI layer: Copilot coding agent picks up CI failures and pushes fix PRs; Copilot code review runs on Actions infrastructure</div>
-<div class="feature-item">OIDC federation for keyless cloud auth to AWS/GCP/Azure - no long-lived credentials in secrets</div>
-<div class="feature-item">Caching for dependencies and Docker layers, artifact storage, and a pricing calculator for cost planning</div>
-</div>
-
-        <article class="article-body" data-tts>
-            <p>GitHub Actions has quietly become the default answer to "how does this code get deployed?" - not because it is the most powerful CI system (it is not) or the cheapest at scale (it often is not), but because it lives where the code already lives. If your team is on GitHub, the pipeline conversation is basically over before it starts. For a solo operator or an agency, that default position is exactly what makes it interesting as a service business.
+            <article class="article-body" data-tts>
+                <p>GitHub Actions has quietly become the default answer to "how does this code get deployed?" - not because it is the most powerful CI system (it is not) or the cheapest at scale (it often is not), but because it lives where the code already lives. If your team is on GitHub, the pipeline conversation is basically over before it starts. For a solo operator or an agency, that default position is exactly what makes it interesting as a service business.
 </p>
 
 <h2>What it actually does</h2>
@@ -364,50 +358,34 @@
 
 <p>As a service provider: migrations, DevOps retainers and pipeline rescues, at $1,000-5,000 per project or per month. As an affiliate: no - GitHub has no meaningful commission program for Actions.
 </p>
-        </article>
+            </article>
 
-        <div class="pros-cons">
-            <div class="pros">
-                <h4>Pros</h4>
-                <ul><li>Free and unlimited on public repositories - nothing else in CI comes close for open-source work, and that same free tier is why most portfolios, docs sites and OSS libraries default to it</li><li>Zero integration effort if your code already lives on GitHub - workflows sit next to the code, read PR and issue context natively, and there is no webhook dance like Jenkins or a second dashboard like CircleCI</li><li>20,000+ ready-made actions in the Marketplace mean the boring 80% (checkout, cache, deploy to Vercel/AWS/Fly, Slack notify) is copy-paste instead of scripting</li><li>Self-hosted runners are genuinely free of metered billing, so teams with a spare box or a Kubernetes cluster can bypass per-minute pricing entirely</li><li>The AI layer is real, not marketing fluff: Copilot coding agent can pick up failing CI jobs and push a fix PR, and Copilot code review runs as part of the same workflow</li></ul>
-            </div>
-            <div class="cons">
-                <h4>Cons</h4>
-                <ul><li>The macOS rate is a trap: $0.062/min billed at a 10x multiplier means an iOS or Flutter release build can burn a whole month's free quota in a couple of hours - teams find this out from the invoice, not the docs</li><li>Storage billing is sneaky: artifacts and Packages share one quota, usage accrues by the GB-hour, and deleting an artifact today does not refund the bill that already accumulated this cycle</li><li>Complex YAML workflows rot fast - deeply nested matrices plus reusable workflows plus environments become a dialect only one person on the team understands, and local debugging (via act or nektos) only approximates the real runner</li><li>Locked to the GitHub ecosystem: moving to GitLab or a self-hosted setup means rewriting every workflow; CircleCI and Jenkins configs do not transfer either, but GitHub's gravity makes you forget that until you leave</li><li>No meaningful affiliate or reseller program - GitHub's partner route is aimed at cloud resellers and enterprise sales, so the only way to make money from Actions is to sell your own labor around it</li></ul>
-            </div>
-        </div>
-
-        <div class="faq-section"><h3>FAQ</h3><div class="faq-item">
-                    <details>
-                        <summary>Is GitHub Actions really free?</summary>
-                        <div class="faq-answer"><p>For public repositories, yes - standard GitHub-hosted runners are free and unlimited, which is why almost every open-source project uses it. For private repos you get a monthly minute allowance (2,000 on Free, 3,000 on Pro/Team) and metered billing past that. The catch is the multiplier: your allowance is spent at 1x for Linux, 2x for Windows and 10x for macOS, so a private repo doing iOS builds will not stay free for long. Self-hosted runners are the escape hatch - always free of metered billing on any plan.
+            <div class="td-faq"><h2 class="td-faq-head">Questions we get asked</h2><div class="td-faq-item">
+                    <h3>Is GitHub Actions really free?</h3>
+                    <div class="td-faq-a"><p>For public repositories, yes - standard GitHub-hosted runners are free and unlimited, which is why almost every open-source project uses it. For private repos you get a monthly minute allowance (2,000 on Free, 3,000 on Pro/Team) and metered billing past that. The catch is the multiplier: your allowance is spent at 1x for Linux, 2x for Windows and 10x for macOS, so a private repo doing iOS builds will not stay free for long. Self-hosted runners are the escape hatch - always free of metered billing on any plan.
 </p></div>
-                    </details>
                 </div>
-<div class="faq-item">
-                    <details>
-                        <summary>Why did my GitHub Actions bill spike suddenly?</summary>
-                        <div class="faq-answer"><p>The usual suspects, in order: someone added a macOS job (10x multiplier), a Windows job (2x), a matrix that quietly turned one job into thirty, larger runners (billed even on public repos, quota never applies), or artifact storage creep - artifacts pile up and bill by the GB-hour until retention cleans them. Set spend budgets and the 90%/100% usage alerts in billing settings before you investigate, then check the usage report per workflow file; the offender is usually one recently merged workflow.
+<div class="td-faq-divider"></div>
+<div class="td-faq-item">
+                    <h3>Why did my GitHub Actions bill spike suddenly?</h3>
+                    <div class="td-faq-a"><p>The usual suspects, in order: someone added a macOS job (10x multiplier), a Windows job (2x), a matrix that quietly turned one job into thirty, larger runners (billed even on public repos, quota never applies), or artifact storage creep - artifacts pile up and bill by the GB-hour until retention cleans them. Set spend budgets and the 90%/100% usage alerts in billing settings before you investigate, then check the usage report per workflow file; the offender is usually one recently merged workflow.
 </p></div>
-                    </details>
                 </div>
-<div class="faq-item">
-                    <details>
-                        <summary>How does GitHub Actions compare to Jenkins or CircleCI?</summary>
-                        <div class="faq-answer"><p>Jenkins wins on raw control and plugins but you own a server, its upgrades and its security patches - most small teams should not take that on in 2026. CircleCI still has better caching and a cleaner UX for heavy parallel test suites, and it is cloud-agnostic if you might move off GitHub. Actions wins on ecosystem depth and the fact that it is simply already there. We break the full four-way comparison down in our CI/CD tools article linked below.
+<div class="td-faq-divider"></div>
+<div class="td-faq-item">
+                    <h3>How does GitHub Actions compare to Jenkins or CircleCI?</h3>
+                    <div class="td-faq-a"><p>Jenkins wins on raw control and plugins but you own a server, its upgrades and its security patches - most small teams should not take that on in 2026. CircleCI still has better caching and a cleaner UX for heavy parallel test suites, and it is cloud-agnostic if you might move off GitHub. Actions wins on ecosystem depth and the fact that it is simply already there. We break the full four-way comparison down in our CI/CD tools article linked below.
 </p></div>
-                    </details>
                 </div>
-<div class="faq-item">
-                    <details>
-                        <summary>Can I make money offering GitHub Actions services?</summary>
-                        <div class="faq-answer"><p>Yes, but as a service provider, not a reseller - there is no affiliate program worth mentioning. The honest plays: one-time pipeline builds and Jenkins migrations ($1,000-5,000 per project), monthly DevOps retainers ($1,000-5,000 per client for maintenance, security patching and on-call fixes), and productized 'your deploy keeps failing' rescue work. Every team with a private repo and a flaky pipeline is a prospect, and the tool being free means your quote is almost pure labor margin.
+<div class="td-faq-divider"></div>
+<div class="td-faq-item">
+                    <h3>Can I make money offering GitHub Actions services?</h3>
+                    <div class="td-faq-a"><p>Yes, but as a service provider, not a reseller - there is no affiliate program worth mentioning. The honest plays: one-time pipeline builds and Jenkins migrations ($1,000-5,000 per project), monthly DevOps retainers ($1,000-5,000 per client for maintenance, security patching and on-call fixes), and productized 'your deploy keeps failing' rescue work. Every team with a private repo and a flaky pipeline is a prospect, and the tool being free means your quote is almost pure labor margin.
 </p></div>
-                    </details>
                 </div>
 </div>
 
-        <div class="author-block">
+            <div class="author-block">
         <div class="author-block-inner">
             <div class="author-avatar">A</div>
             <div class="author-body">
@@ -418,7 +396,7 @@
         </div>
     </div>
 
-        <div class="related-tools" id="relatedSection">
+            <div class="related-tools" id="relatedSection">
             <h3>Related Tools</h3>
             <div class="related-grid"><a href="/tools/replicate/" class="related-card">
                 <img class="tool-logo related-tile" src="/assets/icons/replicate.svg" alt="Replicate" width="40" height="40" loading="lazy" decoding="async">
@@ -448,7 +426,7 @@
 </div>
         </div>
 
-        <div class="related-tools">
+            <div class="related-tools">
                 <h3>Related Articles</h3>
                 <div class="related-grid"><a href="/articles/best-cicd-tools-2026-github-actions-vs-gitlab-vs-circleci-vs-jenkins/" class="related-card">
                     <div style="font-weight:600;margin-bottom:4px;">Best CI/CD Tools in 2026: GitHub Actions</div>
@@ -464,6 +442,7 @@
                 </a>
 </div>
             </div>
+        </div>
     </main>
 
     <footer class="footer">

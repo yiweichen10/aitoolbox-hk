@@ -21,7 +21,7 @@
     <meta name="twitter:title" content="RAGFlow Review 2026 - AI Tool Lab">
     <meta name="twitter:description" content="RAGFlow is an open-source RAG (Retrieval-Augmented Generation) engine that turns your documents, PDFs, spreadsheets, and">
     <meta name="twitter:image" content="https://www.aitoolbox.hk/images/og/ragflow-en-og.png">
-    <link rel="stylesheet" href="/css/style.css?v=20261116155217">
+    <link rel="stylesheet" href="/css/style.css?v=20261116185308">
     <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -250,57 +250,47 @@
         </div>
     </header>
 
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-        <a href="/">Home</a> &gt; <a href="/category/ai-development/">AI Development</a> &gt; <span>RAGFlow</span>
+    <nav class="breadcrumb td-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a><span class="sep">/</span><a href="/category/ai-development/">AI Development</a><span class="sep">/</span><span>RAGFlow</span>
     </nav>
 
-    <main class="article-container">
-        <div class="tool-header">
-            <div class="tool-header-top">
+    <main>
+        <section class="td-hero">
+            <div class="td-identity">
                 <img class="tool-logo tool-icon-lg" src="/assets/icons/ragflow.svg" alt="RAGFlow" width="56" height="56" loading="lazy" decoding="async">
-                <div class="tool-header-info">
-                    <div class="tool-title-row"><h1>RAGFlow</h1><span class="status-chip status-verified">Verified</span></div>
-                    <p class="subtitle">RAGFlow is an open-source RAG (Retrieval-Augmented Generation) engine that turns your documents, PDFs, spreadsheets, and databases into a searchable AI knowledge base. Unlike LangChain where you code every step, RAGFlow gives you a visual pipeline builder with deep document parsing that actually understands tables, images, and complex layouts. The money angle: I build custom AI knowledge bases for SMBs who have piles of internal docs but no way to search them. $2,000-$5,000 setup fee + $300-$800/month retainer per client. Two clients covers my rent. The open-source license (Apache 2.0) means zero licensing costs, and the self-hosted Docker version runs on a $40/month VPS handling 5-10 client deployments.</p>
-                    <div class="rating-bar">⭐ 4.6 <span style="font-size:14px;color:#999;">(520K visits)</span></div>
+                <h1>RAGFlow</h1>
+                <p class="td-summary">RAGFlow is an open-source RAG (Retrieval-Augmented Generation) engine that turns your documents, PDFs, spreadsheets, and databases into a searchable AI knowledge base. Unlike LangChain where you code every step, RAGFlow gives you a visual pipeline builder with deep document parsing that actually understands tables, images, and complex layouts. The money angle: I build custom AI knowledge bases for SMBs who have piles of internal docs but no way to search them. $2,000-$5,000 setup fee + $300-$800/month retainer per client. Two clients covers my rent. The open-source license (Apache 2.0) means zero licensing costs, and the self-hosted Docker version runs on a $40/month VPS handling 5-10 client deployments.</p>
+                <div class="td-chips">
+                    <span class="td-chip td-chip-neutral">AI Development</span>
+                    
+                    <span class="td-chip td-chip-verified">✓ Independently reviewed</span>
                 </div>
             </div>
-            <div class="tool-meta">
-                <div class="tool-meta-item"><strong>Website</strong>: ragflow.io</div>
-                <div class="tool-meta-item"><strong>Price</strong>: Free self-host + Cloud from $49/mo + Enterprise custom</div>
-                <div class="tool-meta-item"><strong>Platform</strong>: Web / Docker / Self-hosted / API</div>
-                <div class="tool-meta-item"><strong>Category</strong>: AI Development</div>
-            </div>
-            <div class="action-bar">
-                <a href="https://ragflow.io" target="_blank" rel="noopener" class="action-btn action-btn-primary">Visit RAGFlow →</a>
-            </div>
+            <aside class="td-score-card">
+                <div class="td-score-label">EDITOR SCORE</div>
+                <div class="td-score-value">4.6 / 5</div>
+                <div class="td-score-note">✓ Verified  ·  Independently tested</div>
+                <a class="td-visit-btn" href="https://ragflow.io" target="_blank" rel="noopener">Visit RAGFlow →</a>
+            </aside>
+        </section>
+
+        <div class="td-body">
+            <div class="td-proscons">
+            <div class="td-card"><div class="td-card-head pros">WHAT WORKS</div><ul><li>✓&nbsp;&nbsp;The document parsing is the real differentiator. RAGFlow does not just extract text from PDFs — it understands tables, charts, images with text, and multi-column layouts. I uploaded a 200-page product manual with diagrams, tables, and three-column formatting, and it parsed the layout correctly. Most RAG tools choke on anything more complex than plain text. This matters because real business documents are messy — contracts with tables, invoices with line items, technical manuals with diagrams. RAGFlow handles them, which means fewer 'I could not find that' responses from your chatbot</li><li>✓&nbsp;&nbsp;Self-hosted deployment means zero per-query costs. I run RAGFlow on a $40/month Hetzner VPS with Docker Compose. It handles 5 client knowledge bases with 50,000+ documents total. My only API cost is the LLM calls (I use DeepSeek V3 at $0.27/1M tokens input). Compare that to managed RAG services that charge $0.50-$2.00 per query — with 1,000 queries/day across clients, self-hosting saves me $500-$2,000/month. The math is not close</li><li>✓&nbsp;&nbsp;The visual pipeline builder is genuinely usable. You drag components onto a canvas — document loader, text splitter, embedding model, vector database, LLM — and connect them. It is similar to Flowise but the document parsing quality is significantly better. I built a working RAG pipeline for a law firm's 15,000 case files in about 4 hours, including chunking optimization and testing. The same project in LangChain would have taken me 3-4 days</li><li>✓&nbsp;&nbsp;Deep document chunking with context preservation. Instead of naively splitting documents at 500-token boundaries (which cuts sentences in half and loses context), RAGFlow uses a 'knowledge base' approach that preserves document structure. Headers stay with their content. Tables stay intact. Related paragraphs are grouped. The result: retrieval accuracy is 15-25% higher than naive chunking in my testing. For a client's HR policy chatbot, this was the difference between 'your chatbot is useless' and 'this is better than searching the intranet'</li><li>✓&nbsp;&nbsp;The community and update cadence are strong. 30K+ GitHub stars, 200+ contributors, releases every 2-3 weeks. When I ran into a bug with Excel file parsing, I filed a GitHub issue and got a fix merged in 5 days. The Discord community (8,000+ members) is active and helpful — I have gotten deployment advice, chunking strategy tips, and even a client referral from other RAGFlow users</li></ul></div>
+            <div class="td-card"><div class="td-card-head cons">LIMITATIONS</div><ul><li>—&nbsp;&nbsp;You need to understand RAG fundamentals or you will build something useless. The visual UI is 'low-code' but not 'no-knowledge.' If you do not understand what chunk overlap means, why embedding dimension matters, or how retrieval top-K affects hallucination rates, your chatbot will confidently give wrong answers. Two of my first four client projects failed because my chunking strategy was bad — too large (lost specificity) and then too small (lost context). Budget 20-40 hours of learning before you take paying clients</li><li>—&nbsp;&nbsp;The self-hosted setup is not trivial. Getting RAGFlow running with Docker Compose, configuring persistent storage, setting up SSL with Nginx reverse proxy, and integrating with an external LLM API (OpenAI, DeepSeek, Ollama) takes 4-6 hours the first time. The documentation walks you through it, but you need comfort with Docker, Linux server administration, and networking. If you have never SSH'd into a VPS before, start with the cloud tier</li><li>—&nbsp;&nbsp;Document parsing is resource-intensive. Parsing a 100-page PDF with complex layouts (tables, images, multi-column) can take 2-5 minutes on a 4-vCPU VPS. When onboarding a new client with 10,000 documents, the initial ingestion can run for 6-12 hours. You need to plan for this — schedule onboarding during off-hours, use batch processing, and communicate timelines clearly. One client expected their knowledge base 'ready tomorrow' and the ingestion was still running 18 hours later</li><li>—&nbsp;&nbsp;The cloud pricing gets expensive fast for serious use. $49/month gets you 100MB of document storage and 10,000 queries. A medium client with 5,000 documents (500MB+) needs the $199/month plan. At 5 clients, that is $1,000/month in cloud fees versus $40/month self-hosted. The cloud tier only makes sense if you are prototyping or absolutely refuse to manage servers. Once you have 2+ paying clients, self-host and pocket the difference</li><li>—&nbsp;&nbsp;No built-in user management or multi-tenancy for self-hosted. If you want to host multiple client knowledge bases on one RAGFlow instance with separate logins, access controls, and usage tracking, you have to build that layer yourself. I use a simple approach: separate Docker Compose instances per client (each on a different port) with Nginx routing, but it is manual and does not scale past 10 clients. The enterprise version has multi-tenancy, but pricing is opaque (contact sales) and likely $2,000+/month</li></ul></div>
         </div>
 
-        <div class="tldr-box">
-            <strong>TL;DR</strong>
-            <p>RAGFlow is an open-source RAG (Retrieval-Augmented Generation) engine that turns your documents, PDFs, spreadsheets, and databases into a searchable AI knowledge base. Unlike LangChain where you code every step, RAGFlow gives you a visual pipeline builder with deep document parsing that actually understands tables, images, and complex layouts. The money angle: I build custom AI knowledge bases for SMBs who have piles of internal docs but no way to search them. $2,000-$5,000 setup fee + $300-$800/month retainer per client. Two clients covers my rent. The open-source license (Apache 2.0) means zero licensing costs, and the self-hosted Docker version runs on a $40/month VPS handling 5-10 client deployments.</p>
+            <div class="td-card td-pricing">
+        <div class="td-card-head faint">PRICING&nbsp;·&nbsp;UPDATED 16 Nov 2026</div>
+        <div class="td-price-tile">
+            <div class="td-price-label">CURRENT PRICING</div>
+            <div class="td-price-value">Free self-host + Cloud from $49/mo + Enterprise custom</div>
+            
         </div>
+    </div>
 
-        <div class="key-stats">
-            <h4>Key Statistics</h4>
-            <div class="ks-grid"><div class="ks-item"><span class="ks-val">4.6</span><span class="ks-label">User Rating</span></div><div class="ks-item"><span class="ks-val">520K</span><span class="ks-label">Monthly Visits</span></div><div class="ks-item"><span class="ks-val">Free self-host + Cloud from $49/mo + Enterprise custom</span><span class="ks-label">Pricing</span></div><div class="ks-item"><span class="ks-val">Web / Docker / Self-hosted / API</span><span class="ks-label">Platform</span></div></div>
-        </div>
-
-        <div class="features-grid"><div class="feature-item">Visual RAG pipeline builder (drag-and-drop)</div>
-<div class="feature-item">Deep document parsing (PDF, DOCX, Excel, PPT, images, HTML)</div>
-<div class="feature-item">Table extraction and structured data understanding</div>
-<div class="feature-item">Multi-model support (OpenAI, DeepSeek, Claude, Llama, Ollama, etc.)</div>
-<div class="feature-item">20+ chunking strategies with context preservation</div>
-<div class="feature-item">Vector database integration (Elasticsearch, Milvus, Qdrant, etc.)</div>
-<div class="feature-item">Knowledge base management with access controls</div>
-<div class="feature-item">REST API for chatbot integration</div>
-<div class="feature-item">Real-time document ingestion and indexing</div>
-<div class="feature-item">Citation and source tracking in responses</div>
-<div class="feature-item">Docker-based self-hosted deployment</div>
-<div class="feature-item">Cloud-hosted option with managed infrastructure</div>
-</div>
-
-        <article class="article-body" data-tts>
-            <h2>What Is RAGFlow?</h2>
+            <article class="article-body" data-tts>
+                <h2>What Is RAGFlow?</h2>
 
 <p>RAGFlow is an open-source engine for building AI that can actually read and understand your documents. Not just extract text — actually understand tables, images, multi-column layouts, and the relationship between different parts of a document. It takes your pile of PDFs, Word docs, spreadsheets, and web pages, and turns them into a searchable knowledge base that anyone can query in plain English.
 </p>
@@ -432,50 +422,34 @@
 
 <p>If you are a developer who wants to build an AI consulting business with real margins (your infrastructure cost is 3-5% of what clients pay), RAGFlow is the foundation. If you want a ready-to-use product you can resell without technical work, this is not it.
 </p>
-        </article>
+            </article>
 
-        <div class="pros-cons">
-            <div class="pros">
-                <h4>Pros</h4>
-                <ul><li>The document parsing is the real differentiator. RAGFlow does not just extract text from PDFs — it understands tables, charts, images with text, and multi-column layouts. I uploaded a 200-page product manual with diagrams, tables, and three-column formatting, and it parsed the layout correctly. Most RAG tools choke on anything more complex than plain text. This matters because real business documents are messy — contracts with tables, invoices with line items, technical manuals with diagrams. RAGFlow handles them, which means fewer 'I could not find that' responses from your chatbot</li><li>Self-hosted deployment means zero per-query costs. I run RAGFlow on a $40/month Hetzner VPS with Docker Compose. It handles 5 client knowledge bases with 50,000+ documents total. My only API cost is the LLM calls (I use DeepSeek V3 at $0.27/1M tokens input). Compare that to managed RAG services that charge $0.50-$2.00 per query — with 1,000 queries/day across clients, self-hosting saves me $500-$2,000/month. The math is not close</li><li>The visual pipeline builder is genuinely usable. You drag components onto a canvas — document loader, text splitter, embedding model, vector database, LLM — and connect them. It is similar to Flowise but the document parsing quality is significantly better. I built a working RAG pipeline for a law firm's 15,000 case files in about 4 hours, including chunking optimization and testing. The same project in LangChain would have taken me 3-4 days</li><li>Deep document chunking with context preservation. Instead of naively splitting documents at 500-token boundaries (which cuts sentences in half and loses context), RAGFlow uses a 'knowledge base' approach that preserves document structure. Headers stay with their content. Tables stay intact. Related paragraphs are grouped. The result: retrieval accuracy is 15-25% higher than naive chunking in my testing. For a client's HR policy chatbot, this was the difference between 'your chatbot is useless' and 'this is better than searching the intranet'</li><li>The community and update cadence are strong. 30K+ GitHub stars, 200+ contributors, releases every 2-3 weeks. When I ran into a bug with Excel file parsing, I filed a GitHub issue and got a fix merged in 5 days. The Discord community (8,000+ members) is active and helpful — I have gotten deployment advice, chunking strategy tips, and even a client referral from other RAGFlow users</li></ul>
-            </div>
-            <div class="cons">
-                <h4>Cons</h4>
-                <ul><li>You need to understand RAG fundamentals or you will build something useless. The visual UI is 'low-code' but not 'no-knowledge.' If you do not understand what chunk overlap means, why embedding dimension matters, or how retrieval top-K affects hallucination rates, your chatbot will confidently give wrong answers. Two of my first four client projects failed because my chunking strategy was bad — too large (lost specificity) and then too small (lost context). Budget 20-40 hours of learning before you take paying clients</li><li>The self-hosted setup is not trivial. Getting RAGFlow running with Docker Compose, configuring persistent storage, setting up SSL with Nginx reverse proxy, and integrating with an external LLM API (OpenAI, DeepSeek, Ollama) takes 4-6 hours the first time. The documentation walks you through it, but you need comfort with Docker, Linux server administration, and networking. If you have never SSH'd into a VPS before, start with the cloud tier</li><li>Document parsing is resource-intensive. Parsing a 100-page PDF with complex layouts (tables, images, multi-column) can take 2-5 minutes on a 4-vCPU VPS. When onboarding a new client with 10,000 documents, the initial ingestion can run for 6-12 hours. You need to plan for this — schedule onboarding during off-hours, use batch processing, and communicate timelines clearly. One client expected their knowledge base 'ready tomorrow' and the ingestion was still running 18 hours later</li><li>The cloud pricing gets expensive fast for serious use. $49/month gets you 100MB of document storage and 10,000 queries. A medium client with 5,000 documents (500MB+) needs the $199/month plan. At 5 clients, that is $1,000/month in cloud fees versus $40/month self-hosted. The cloud tier only makes sense if you are prototyping or absolutely refuse to manage servers. Once you have 2+ paying clients, self-host and pocket the difference</li><li>No built-in user management or multi-tenancy for self-hosted. If you want to host multiple client knowledge bases on one RAGFlow instance with separate logins, access controls, and usage tracking, you have to build that layer yourself. I use a simple approach: separate Docker Compose instances per client (each on a different port) with Nginx routing, but it is manual and does not scale past 10 clients. The enterprise version has multi-tenancy, but pricing is opaque (contact sales) and likely $2,000+/month</li></ul>
-            </div>
-        </div>
-
-        <div class="faq-section"><h3>FAQ</h3><div class="faq-item">
-                    <details>
-                        <summary>Can I really build a business around RAGFlow? What does the revenue look like?</summary>
-                        <div class="faq-answer"><p>Yes, and the unit economics are better than most SaaS businesses because your only recurring cost is server hosting and LLM API calls. Here is a realistic model for a solo consultant. You charge $3,000 average setup fee per client (includes document ingestion, pipeline configuration, testing, a basic chat UI, and training). Monthly retainer $500/client (covers monitoring, updates, new document ingestion, and minor improvements). Your costs: $40/month VPS (handles 5 clients), roughly $50-$100/month in LLM API calls across all clients (DeepSeek V3 or GPT-4o-mini), and your time — about 40 hours per client for initial setup, then 3-5 hours/month per client for maintenance. At 5 clients: setup revenue = $15,000 (one-time), monthly recurring = $2,500, monthly costs = $140, monthly profit = $2,360 for roughly 25 hours of work. At 8 clients (you will need a second VPS): $4,000/month recurring profit. The beauty: once a knowledge base is built and tested, the maintenance is light. Most client work is ingesting new documents (10 minutes per batch) and occasionally tweaking chunking parameters when accuracy drops. The hardest part is sales — finding SMBs who understand what a 'custom AI knowledge base' can do for them. I target law firms (case document search), real estate agencies (property listing Q&A), and manufacturing companies (equipment manual search). These industries have high document volumes, clear ROI, and budget for technology.
+            <div class="td-faq"><h2 class="td-faq-head">Questions we get asked</h2><div class="td-faq-item">
+                    <h3>Can I really build a business around RAGFlow? What does the revenue look like?</h3>
+                    <div class="td-faq-a"><p>Yes, and the unit economics are better than most SaaS businesses because your only recurring cost is server hosting and LLM API calls. Here is a realistic model for a solo consultant. You charge $3,000 average setup fee per client (includes document ingestion, pipeline configuration, testing, a basic chat UI, and training). Monthly retainer $500/client (covers monitoring, updates, new document ingestion, and minor improvements). Your costs: $40/month VPS (handles 5 clients), roughly $50-$100/month in LLM API calls across all clients (DeepSeek V3 or GPT-4o-mini), and your time — about 40 hours per client for initial setup, then 3-5 hours/month per client for maintenance. At 5 clients: setup revenue = $15,000 (one-time), monthly recurring = $2,500, monthly costs = $140, monthly profit = $2,360 for roughly 25 hours of work. At 8 clients (you will need a second VPS): $4,000/month recurring profit. The beauty: once a knowledge base is built and tested, the maintenance is light. Most client work is ingesting new documents (10 minutes per batch) and occasionally tweaking chunking parameters when accuracy drops. The hardest part is sales — finding SMBs who understand what a 'custom AI knowledge base' can do for them. I target law firms (case document search), real estate agencies (property listing Q&A), and manufacturing companies (equipment manual search). These industries have high document volumes, clear ROI, and budget for technology.
 </p></div>
-                    </details>
                 </div>
-<div class="faq-item">
-                    <details>
-                        <summary>RAGFlow vs LangChain vs Flowise — which should I use for building client solutions?</summary>
-                        <div class="faq-answer"><p>After using all three for client projects, here is how I decide. Use RAGFlow when document understanding quality is the priority. If your client has complex documents — contracts with tables, technical manuals with diagrams, financial reports with multi-column layouts — RAGFlow's document parsing is miles ahead. Use LangChain when you need maximum flexibility and do not mind writing code. If you are building a custom agent with tool calling, complex routing logic, or integration with proprietary APIs, LangChain gives you the most control. Use Flowise when you need quick prototypes and the client wants something visual to approve. Flowise has a nicer UI for demoing workflows to non-technical stakeholders. In practice, I use all three: RAGFlow for production document-heavy knowledge bases, Flowise for initial prototypes and client demos, and LangChain when a client needs custom logic that neither visual builder supports. For most small business use cases (HR policy chatbot, product manual Q&A, internal wiki search), RAGFlow is the best fit because document quality matters more than workflow complexity.
+<div class="td-faq-divider"></div>
+<div class="td-faq-item">
+                    <h3>RAGFlow vs LangChain vs Flowise — which should I use for building client solutions?</h3>
+                    <div class="td-faq-a"><p>After using all three for client projects, here is how I decide. Use RAGFlow when document understanding quality is the priority. If your client has complex documents — contracts with tables, technical manuals with diagrams, financial reports with multi-column layouts — RAGFlow's document parsing is miles ahead. Use LangChain when you need maximum flexibility and do not mind writing code. If you are building a custom agent with tool calling, complex routing logic, or integration with proprietary APIs, LangChain gives you the most control. Use Flowise when you need quick prototypes and the client wants something visual to approve. Flowise has a nicer UI for demoing workflows to non-technical stakeholders. In practice, I use all three: RAGFlow for production document-heavy knowledge bases, Flowise for initial prototypes and client demos, and LangChain when a client needs custom logic that neither visual builder supports. For most small business use cases (HR policy chatbot, product manual Q&A, internal wiki search), RAGFlow is the best fit because document quality matters more than workflow complexity.
 </p></div>
-                    </details>
                 </div>
-<div class="faq-item">
-                    <details>
-                        <summary>What is the biggest mistake people make when building a RAGFlow knowledge base for a client?</summary>
-                        <div class="faq-answer"><p>They skip the document audit and ingestion quality check. You cannot just point RAGFlow at a folder of 5,000 PDFs and expect good results. I learned this the hard way. Client #2 was a manufacturing company that handed me 8,000 PDFs — equipment manuals, safety procedures, maintenance logs, training materials — and said 'make it searchable.' I ingested everything, configured a standard chunking pipeline, and deployed. The chatbot was terrible. Why? Half the PDFs were scanned images with no OCR text. A third were in Chinese (the client wanted English-only search). Several hundred were duplicates with different filenames. The maintenance logs were handwritten and completely unreadable to the parser. Here is the process I use now: (1) Document audit first — sample 100 random documents, check format, language, quality, and OCR-readability. (2) Filter aggressively — remove duplicates, non-searchable scans, wrong-language documents, and anything not relevant to the use case. (3) Preprocess — OCR scanned PDFs with Tesseract, convert images to searchable text, clean up formatting artifacts. (4) Organize into logical knowledge bases (HR policies separate from product manuals, separate from training materials). (5) Test retrieval on 20 sample questions before showing the client. This process takes 8-12 hours for a medium-sized document set but it is the difference between a chatbot the client raves about and one they cancel after the first month.
+<div class="td-faq-divider"></div>
+<div class="td-faq-item">
+                    <h3>What is the biggest mistake people make when building a RAGFlow knowledge base for a client?</h3>
+                    <div class="td-faq-a"><p>They skip the document audit and ingestion quality check. You cannot just point RAGFlow at a folder of 5,000 PDFs and expect good results. I learned this the hard way. Client #2 was a manufacturing company that handed me 8,000 PDFs — equipment manuals, safety procedures, maintenance logs, training materials — and said 'make it searchable.' I ingested everything, configured a standard chunking pipeline, and deployed. The chatbot was terrible. Why? Half the PDFs were scanned images with no OCR text. A third were in Chinese (the client wanted English-only search). Several hundred were duplicates with different filenames. The maintenance logs were handwritten and completely unreadable to the parser. Here is the process I use now: (1) Document audit first — sample 100 random documents, check format, language, quality, and OCR-readability. (2) Filter aggressively — remove duplicates, non-searchable scans, wrong-language documents, and anything not relevant to the use case. (3) Preprocess — OCR scanned PDFs with Tesseract, convert images to searchable text, clean up formatting artifacts. (4) Organize into logical knowledge bases (HR policies separate from product manuals, separate from training materials). (5) Test retrieval on 20 sample questions before showing the client. This process takes 8-12 hours for a medium-sized document set but it is the difference between a chatbot the client raves about and one they cancel after the first month.
 </p></div>
-                    </details>
                 </div>
-<div class="faq-item">
-                    <details>
-                        <summary>What LLM should I use with RAGFlow for production client deployments?</summary>
-                        <div class="faq-answer"><p>After testing 6 different models across 3 client deployments, my recommendation depends on your budget and accuracy requirements. For budget-conscious deployments (under $100/month LLM costs): DeepSeek V3 at $0.27/1M input tokens. It handles RAG context well, follows system prompts reliably, and the pricing makes it viable at scale. 10,000 queries/month with 2,000-token context costs about $6. For high-accuracy requirements (legal, medical, financial where a wrong answer has consequences): GPT-4o at $2.50/1M input tokens. The accuracy difference is real — about 8-12% better at answering questions that require synthesizing information across multiple documents. For clients who need data sovereignty (documents never leave their infrastructure): Ollama with Llama 3.1 70B running locally. The accuracy is 10-15% below GPT-4o but the zero-data-leak guarantee is worth it for some industries. My standard stack: DeepSeek V3 for 80% of deployments, GPT-4o for high-stakes use cases, and Ollama when the client's compliance team insists on local-only. One tip: always use the same embedding model and LLM from the same provider when possible. Mixing OpenAI embeddings with DeepSeek generation works but you lose 2-3% accuracy from the embedding-query mismatch.
+<div class="td-faq-divider"></div>
+<div class="td-faq-item">
+                    <h3>What LLM should I use with RAGFlow for production client deployments?</h3>
+                    <div class="td-faq-a"><p>After testing 6 different models across 3 client deployments, my recommendation depends on your budget and accuracy requirements. For budget-conscious deployments (under $100/month LLM costs): DeepSeek V3 at $0.27/1M input tokens. It handles RAG context well, follows system prompts reliably, and the pricing makes it viable at scale. 10,000 queries/month with 2,000-token context costs about $6. For high-accuracy requirements (legal, medical, financial where a wrong answer has consequences): GPT-4o at $2.50/1M input tokens. The accuracy difference is real — about 8-12% better at answering questions that require synthesizing information across multiple documents. For clients who need data sovereignty (documents never leave their infrastructure): Ollama with Llama 3.1 70B running locally. The accuracy is 10-15% below GPT-4o but the zero-data-leak guarantee is worth it for some industries. My standard stack: DeepSeek V3 for 80% of deployments, GPT-4o for high-stakes use cases, and Ollama when the client's compliance team insists on local-only. One tip: always use the same embedding model and LLM from the same provider when possible. Mixing OpenAI embeddings with DeepSeek generation works but you lose 2-3% accuracy from the embedding-query mismatch.
 </p></div>
-                    </details>
                 </div>
 </div>
 
-        <div class="author-block">
+            <div class="author-block">
         <div class="author-block-inner">
             <div class="author-avatar">A</div>
             <div class="author-body">
@@ -486,7 +460,7 @@
         </div>
     </div>
 
-        <div class="related-tools" id="relatedSection">
+            <div class="related-tools" id="relatedSection">
             <h3>Related Tools</h3>
             <div class="related-grid"><a href="/tools/replicate/" class="related-card">
                 <img class="tool-logo related-tile" src="/assets/icons/replicate.svg" alt="Replicate" width="40" height="40" loading="lazy" decoding="async">
@@ -516,7 +490,7 @@
 </div>
         </div>
 
-        <div class="related-tools">
+            <div class="related-tools">
                 <h3>Related Articles</h3>
                 <div class="related-grid"><a href="/articles/best-serverless-functions-pricing-2026-aws-lambda-vs-cloudflare-workers-vs-vercel-vs-deno-deploy/" class="related-card">
                     <div style="font-weight:600;margin-bottom:4px;">Serverless Functions Pricing in 2026: AW</div>
@@ -532,6 +506,7 @@
                 </a>
 </div>
             </div>
+        </div>
     </main>
 
     <footer class="footer">

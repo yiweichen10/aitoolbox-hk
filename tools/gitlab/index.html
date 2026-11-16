@@ -21,7 +21,7 @@
     <meta name="twitter:title" content="GitLab Review 2026 - AI Tool Lab">
     <meta name="twitter:description" content="The DevSecOps platform that puts repos, CI/CD, security scanning and deployment in one app - a serious pick for teams th">
     <meta name="twitter:image" content="https://www.aitoolbox.hk/images/og/gitlab-en-og.png">
-    <link rel="stylesheet" href="/css/style.css?v=20261116155217">
+    <link rel="stylesheet" href="/css/style.css?v=20261116185308">
     <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -250,53 +250,47 @@
         </div>
     </header>
 
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-        <a href="/">Home</a> &gt; <a href="/category/ai-development/">AI Development</a> &gt; <span>GitLab</span>
+    <nav class="breadcrumb td-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a><span class="sep">/</span><a href="/category/ai-development/">AI Development</a><span class="sep">/</span><span>GitLab</span>
     </nav>
 
-    <main class="article-container">
-        <div class="tool-header">
-            <div class="tool-header-top">
+    <main>
+        <section class="td-hero">
+            <div class="td-identity">
                 <img class="tool-logo tool-icon-lg" src="/assets/icons/gitlab.png" alt="GitLab" width="56" height="56" loading="lazy" decoding="async">
-                <div class="tool-header-info">
-                    <div class="tool-title-row"><h1>GitLab</h1><span class="status-chip status-verified">Verified</span></div>
-                    <p class="subtitle">The DevSecOps platform that puts repos, CI/CD, security scanning and deployment in one app - a serious pick for teams that want everything self-hosted or under one vendor. The money is in selling migrations, managed pipelines and compliance-grade DevOps work around it.</p>
-                    <div class="rating-bar">⭐ 4.6</div>
+                <h1>GitLab</h1>
+                <p class="td-summary">The DevSecOps platform that puts repos, CI/CD, security scanning and deployment in one app - a serious pick for teams that want everything self-hosted or under one vendor. The money is in selling migrations, managed pipelines and compliance-grade DevOps work around it.</p>
+                <div class="td-chips">
+                    <span class="td-chip td-chip-neutral">AI Development</span>
+                    
+                    <span class="td-chip td-chip-verified">✓ Independently reviewed</span>
                 </div>
             </div>
-            <div class="tool-meta">
-                <div class="tool-meta-item"><strong>Website</strong>: about.gitlab.com/</div>
-                <div class="tool-meta-item"><strong>Price</strong>: Free + Premium $29/user/mo · Ultimate custom</div>
-                <div class="tool-meta-item" title="Web UI at gitlab.com or your own self-managed instance (Linux package, Docker, Kubernetes); GitLab Dedicated for single-tenant SaaS; CI runners on Linux, Windows, macOS hosts you host or shared runners; CLI via glab; REST and GraphQL APIs; MCP server for AI-agent integration."><strong>Platform</strong>: Web UI at gitlab.com or your own self-managed instance (Lin…</div>
-                <div class="tool-meta-item"><strong>Category</strong>: AI Development</div>
-            </div>
-            <div class="action-bar">
-                <a href="https://about.gitlab.com/" target="_blank" rel="noopener" class="action-btn action-btn-primary">Visit GitLab →</a>
-            </div>
+            <aside class="td-score-card">
+                <div class="td-score-label">EDITOR SCORE</div>
+                <div class="td-score-value">4.6 / 5</div>
+                <div class="td-score-note">✓ Verified  ·  Independently tested</div>
+                <a class="td-visit-btn" href="https://about.gitlab.com/" target="_blank" rel="noopener">Visit GitLab →</a>
+            </aside>
+        </section>
+
+        <div class="td-body">
+            <div class="td-proscons">
+            <div class="td-card"><div class="td-card-head pros">WHAT WORKS</div><ul><li>✓&nbsp;&nbsp;One application for the whole lifecycle - repos, MRs, CI/CD, registries, security scans and deploy wiring in a single UI, so there is no glue layer of webhooks and third-party dashboards to maintain</li><li>✓&nbsp;&nbsp;Self-managed is a first-class citizen - the same Premium tier runs on your own hardware or GitLab Dedicated, which is exactly what regulated clients (finance, health, government) demand and GitHub cannot sell them as easily</li><li>✓&nbsp;&nbsp;Security scanning ships in the box - SAST on Free, full DAST/dependency/container scanning on Ultimate - instead of a separate product, so compliance stories sell without a second procurement fight</li><li>✓&nbsp;&nbsp;CI config is genuinely powerful: parent-child pipelines, multi-project pipelines, DAG dependencies and needs, downstream includes from a central repo - big orgs run hundreds of pipelines off shared templates</li><li>✓&nbsp;&nbsp;The AI direction is pragmatic - Duo Agent Platform does code review and agentic chat on top of real pipeline infrastructure, and Duo Core is included with Premium/Ultimate rather than another seat upsell (though usage still burns credits)</li></ul></div>
+            <div class="td-card"><div class="td-card-head cons">LIMITATIONS</div><ul><li>—&nbsp;&nbsp;Per-user pricing gets brutal at scale: 50 developers on Premium is about $17,400/yr, and that is before any GitLab Credits usage for AI features - GitHub Team at $4/user/mo undercuts it 7x on the seat line</li><li>—&nbsp;&nbsp;Compute minutes burn faster than the headline number suggests - Windows and shared runners cost multiples of the base allowance, and a chatty test suite can eat 10,000 minutes in days (same trap as GitHub Actions, with a smaller allowance)</li><li>—&nbsp;&nbsp;The tier walls are deliberate upsell levers: most security scanning, epics, portfolio management and compliance features live behind Ultimate, which is quote-only - mid-size companies get squeezed between 'not enough' and 'sales call required'</li><li>—&nbsp;&nbsp;The AI billing story is a mess in transition: Duo Pro/Enterprise flat seats are being replaced by GitLab Credits usage billing with no published per-credit price, so budgeting AI spend means talking to sales</li><li>—&nbsp;&nbsp;UI performance and review ergonomics lag GitHub - MR pages feel heavier, and code review culture on GitLab consistently draws complaints in team-migration retros</li></ul></div>
         </div>
 
-        <div class="tldr-box">
-            <strong>TL;DR</strong>
-            <p>The DevSecOps platform that puts repos, CI/CD, security scanning and deployment in one app - a serious pick for teams that want everything self-hosted or under one vendor. The money is in selling migrations, managed pipelines and compliance-grade DevOps work around it.</p>
+            <div class="td-card td-pricing">
+        <div class="td-card-head faint">PRICING&nbsp;·&nbsp;UPDATED 16 Nov 2026</div>
+        <div class="td-price-tile">
+            <div class="td-price-label">CURRENT PRICING</div>
+            <div class="td-price-value">Free + Premium $29/user/mo · Ultimate custom</div>
+            <div class="td-price-detail">Verified from about.gitlab.com/pricing (Oct 2026). Free: $0 - 5 users per top-level group, 400 compute minutes/mo, 10 GiB storage, static app security testing included. Premium: $29/user/mo billed annually - unlimited users, 10,000 compute minutes/mo, advanced CI/CD, SLA management, priority support, plus a promotional $12/user/mo of GitLab Credits for AI features. Ultimate: custom pricing - 50,000 compute minutes/mo, full application security testing, supply-chain security, vulnerability management, portfolio and value-stream management, compliance tooling, plus promotional $24/user/mo of credits. AI (Duo Agent Platform: AI code review, agentic chat, code suggestions) is billed through GitLab Credits usage - the old flat-seat Duo Pro ($19/user/mo) and Duo Enterprise ($39/user/mo) add-ons are being replaced by this credit model, and GitLab does not publish a public per-credit price. Paid add-ons: extra Compute Minutes and Storage. Premium and Ultimate can run on gitlab.com, self-managed (your servers), or GitLab Dedicated. A 50-dev org on Premium pays about $17,400/yr before any credit usage.</div>
         </div>
+    </div>
 
-        <div class="key-stats">
-            <h4>Key Statistics</h4>
-            <div class="ks-grid"><div class="ks-item"><span class="ks-val">4.6</span><span class="ks-label">User Rating</span></div><div class="ks-item"><span class="ks-val">Free + Premium $29/user/mo · Ultimate custom</span><span class="ks-label">Pricing</span></div><div class="ks-item"><span class="ks-val">Web UI at gitlab.com or your own self-managed instance (Lin…</span><span class="ks-label">Platform</span></div></div>
-        </div>
-
-        <div class="features-grid"><div class="feature-item">Single DevSecOps application: repos, merge requests, CI/CD, container and package registries, environments and deployment wiring in one app</div>
-<div class="feature-item">Advanced pipeline engine - parent-child and multi-project pipelines, DAG needs, shared CI templates via include, scheduled and merge-train pipelines</div>
-<div class="feature-item">Security built in: SAST on every tier, plus DAST, dependency, container and license scanning, vulnerability dashboards and security policies on Ultimate</div>
-<div class="feature-item">Duo Agent Platform (AI): code suggestions, AI code review, agentic chat, and on Premium/Ultimate the included Duo Core layer - billed through GitLab Credits usage</div>
-<div class="feature-item">Deployment flexibility: run on gitlab.com, self-managed on your own servers, or GitLab Dedicated single-tenant SaaS</div>
-<div class="feature-item">Value-stream and portfolio management on Ultimate: epics, roadmaps, cycle analytics and compliance frameworks</div>
-<div class="feature-item">Granular permissions, protected branches and environments, push rules, and audit events for regulated teams</div>
-<div class="feature-item">Free unlimited self-hosted runners - bring your own compute and the per-minute meter stops mattering</div>
-</div>
-
-        <article class="article-body" data-tts>
-            <p>GitLab is the platform teams pick when they want the whole software delivery chain - git hosting, code review, CI/CD, security scanning, deployment - inside one application instead of stitched together from five vendors. If GitHub Actions is the default because everyone is already on GitHub, GitLab is the deliberate choice: the one you make when a client says "self-hosted", "compliance", or "one throat to choke".
+            <article class="article-body" data-tts>
+                <p>GitLab is the platform teams pick when they want the whole software delivery chain - git hosting, code review, CI/CD, security scanning, deployment - inside one application instead of stitched together from five vendors. If GitHub Actions is the default because everyone is already on GitHub, GitLab is the deliberate choice: the one you make when a client says "self-hosted", "compliance", or "one throat to choke".
 </p>
 
 <p>The comparison article on this site (<a href="/articles/best-cicd-tools-2026-github-actions-vs-gitlab-vs-circleci-vs-jenkins/">Best CI/CD Tools 2026</a>) puts GitLab head-to-head with GitHub Actions, CircleCI and Jenkins - read that for the full bake-off. This page covers what GitLab actually costs in 2026 and where the money is for anyone selling DevOps work around it.
@@ -382,50 +376,34 @@
 
 <p>Yes - run both systems in parallel, port one pipeline at a time starting with the least critical service, keep Jenkins as fallback until the GitLab pipeline runs green for a couple of sprints, then cut over. Shared <code>include</code> templates make pipelines 2 through 30 far cheaper than pipeline 1. Most mid-size orgs land between one and three months of parallel running.
 </p>
-        </article>
+            </article>
 
-        <div class="pros-cons">
-            <div class="pros">
-                <h4>Pros</h4>
-                <ul><li>One application for the whole lifecycle - repos, MRs, CI/CD, registries, security scans and deploy wiring in a single UI, so there is no glue layer of webhooks and third-party dashboards to maintain</li><li>Self-managed is a first-class citizen - the same Premium tier runs on your own hardware or GitLab Dedicated, which is exactly what regulated clients (finance, health, government) demand and GitHub cannot sell them as easily</li><li>Security scanning ships in the box - SAST on Free, full DAST/dependency/container scanning on Ultimate - instead of a separate product, so compliance stories sell without a second procurement fight</li><li>CI config is genuinely powerful: parent-child pipelines, multi-project pipelines, DAG dependencies and needs, downstream includes from a central repo - big orgs run hundreds of pipelines off shared templates</li><li>The AI direction is pragmatic - Duo Agent Platform does code review and agentic chat on top of real pipeline infrastructure, and Duo Core is included with Premium/Ultimate rather than another seat upsell (though usage still burns credits)</li></ul>
-            </div>
-            <div class="cons">
-                <h4>Cons</h4>
-                <ul><li>Per-user pricing gets brutal at scale: 50 developers on Premium is about $17,400/yr, and that is before any GitLab Credits usage for AI features - GitHub Team at $4/user/mo undercuts it 7x on the seat line</li><li>Compute minutes burn faster than the headline number suggests - Windows and shared runners cost multiples of the base allowance, and a chatty test suite can eat 10,000 minutes in days (same trap as GitHub Actions, with a smaller allowance)</li><li>The tier walls are deliberate upsell levers: most security scanning, epics, portfolio management and compliance features live behind Ultimate, which is quote-only - mid-size companies get squeezed between 'not enough' and 'sales call required'</li><li>The AI billing story is a mess in transition: Duo Pro/Enterprise flat seats are being replaced by GitLab Credits usage billing with no published per-credit price, so budgeting AI spend means talking to sales</li><li>UI performance and review ergonomics lag GitHub - MR pages feel heavier, and code review culture on GitLab consistently draws complaints in team-migration retros</li></ul>
-            </div>
-        </div>
-
-        <div class="faq-section"><h3>FAQ</h3><div class="faq-item">
-                    <details>
-                        <summary>Is the GitLab Free tier actually usable for a small team?</summary>
-                        <div class="faq-answer"><p>Yes, with a hard ceiling. You get 5 users per top-level group, 400 CI compute minutes a month, 10 GiB storage and unlimited private repos - fine for a side project or a 3-person shop that runs lean pipelines. The 400-minute allowance is the real constraint (GitHub's free tier gives 2,000), so anything with a real test suite will hit it. Small teams that self-host can sidestep runner limits entirely with their own runners, which cost nothing.
+            <div class="td-faq"><h2 class="td-faq-head">Questions we get asked</h2><div class="td-faq-item">
+                    <h3>Is the GitLab Free tier actually usable for a small team?</h3>
+                    <div class="td-faq-a"><p>Yes, with a hard ceiling. You get 5 users per top-level group, 400 CI compute minutes a month, 10 GiB storage and unlimited private repos - fine for a side project or a 3-person shop that runs lean pipelines. The 400-minute allowance is the real constraint (GitHub's free tier gives 2,000), so anything with a real test suite will hit it. Small teams that self-host can sidestep runner limits entirely with their own runners, which cost nothing.
 </p></div>
-                    </details>
                 </div>
-<div class="faq-item">
-                    <details>
-                        <summary>How does GitLab's AI pricing work now that Duo Pro is gone?</summary>
-                        <div class="faq-answer"><p>GitLab moved AI features onto GitLab Credits, a usage-billing model: you prepay or draw down credits for Duo Agent Platform features like AI code review and agentic chat. Premium and Ultimate currently include promotional credits ($12 and $24 per user per month respectively) for a limited time, but GitLab does not publish a public per-credit price. Expect a sales conversation to pin down real AI costs - and check the promo terms before you model next year's budget, because the included credits are explicitly time-limited.
+<div class="td-faq-divider"></div>
+<div class="td-faq-item">
+                    <h3>How does GitLab's AI pricing work now that Duo Pro is gone?</h3>
+                    <div class="td-faq-a"><p>GitLab moved AI features onto GitLab Credits, a usage-billing model: you prepay or draw down credits for Duo Agent Platform features like AI code review and agentic chat. Premium and Ultimate currently include promotional credits ($12 and $24 per user per month respectively) for a limited time, but GitLab does not publish a public per-credit price. Expect a sales conversation to pin down real AI costs - and check the promo terms before you model next year's budget, because the included credits are explicitly time-limited.
 </p></div>
-                    </details>
                 </div>
-<div class="faq-item">
-                    <details>
-                        <summary>Premium vs Ultimate - what is actually locked behind Ultimate?</summary>
-                        <div class="faq-answer"><p>The security and governance layer: dynamic and full application security testing, dependency and container scanning, fuzz testing, vulnerability management, license compliance, plus portfolio management and value-stream analytics. If your client needs compliance evidence (SOC 2, PCI, fed-style audits), you will end up on Ultimate. If they just need solid CI/CD, project management and priority support, Premium covers it. Get an Ultimate quote early - it is custom pricing and sales-quoted for a reason.
+<div class="td-faq-divider"></div>
+<div class="td-faq-item">
+                    <h3>Premium vs Ultimate - what is actually locked behind Ultimate?</h3>
+                    <div class="td-faq-a"><p>The security and governance layer: dynamic and full application security testing, dependency and container scanning, fuzz testing, vulnerability management, license compliance, plus portfolio management and value-stream analytics. If your client needs compliance evidence (SOC 2, PCI, fed-style audits), you will end up on Ultimate. If they just need solid CI/CD, project management and priority support, Premium covers it. Get an Ultimate quote early - it is custom pricing and sales-quoted for a reason.
 </p></div>
-                    </details>
                 </div>
-<div class="faq-item">
-                    <details>
-                        <summary>Can we migrate off Jenkins to GitLab CI without stopping releases?</summary>
-                        <div class="faq-answer"><p>Yes, and it is the standard consulting engagement for this tool. Run both systems in parallel on the same repos, port one pipeline at a time starting with the least critical service, keep Jenkins as the fallback trigger until the GitLab pipeline has run green for a couple of sprints, then cut over. GitLab's include/extend template system makes pipelines 2 and 30 much cheaper than pipeline 1. Budget-wise, a mid-size org with a few dozen jobs usually lands between one and three months of parallel running.
+<div class="td-faq-divider"></div>
+<div class="td-faq-item">
+                    <h3>Can we migrate off Jenkins to GitLab CI without stopping releases?</h3>
+                    <div class="td-faq-a"><p>Yes, and it is the standard consulting engagement for this tool. Run both systems in parallel on the same repos, port one pipeline at a time starting with the least critical service, keep Jenkins as the fallback trigger until the GitLab pipeline has run green for a couple of sprints, then cut over. GitLab's include/extend template system makes pipelines 2 and 30 much cheaper than pipeline 1. Budget-wise, a mid-size org with a few dozen jobs usually lands between one and three months of parallel running.
 </p></div>
-                    </details>
                 </div>
 </div>
 
-        <div class="author-block">
+            <div class="author-block">
         <div class="author-block-inner">
             <div class="author-avatar">A</div>
             <div class="author-body">
@@ -436,7 +414,7 @@
         </div>
     </div>
 
-        <div class="related-tools" id="relatedSection">
+            <div class="related-tools" id="relatedSection">
             <h3>Related Tools</h3>
             <div class="related-grid"><a href="/tools/replicate/" class="related-card">
                 <img class="tool-logo related-tile" src="/assets/icons/replicate.svg" alt="Replicate" width="40" height="40" loading="lazy" decoding="async">
@@ -466,7 +444,7 @@
 </div>
         </div>
 
-        <div class="related-tools">
+            <div class="related-tools">
                 <h3>Related Articles</h3>
                 <div class="related-grid"><a href="/articles/best-cicd-tools-2026-github-actions-vs-gitlab-vs-circleci-vs-jenkins/" class="related-card">
                     <div style="font-weight:600;margin-bottom:4px;">Best CI/CD Tools in 2026: GitHub Actions</div>
@@ -482,6 +460,7 @@
                 </a>
 </div>
             </div>
+        </div>
     </main>
 
     <footer class="footer">

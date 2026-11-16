@@ -21,7 +21,7 @@
     <meta name="twitter:title" content="LM Studio Review 2026 - AI Tool Lab">
     <meta name="twitter:description" content="LM Studio is a free desktop app that runs open-weight LLMs - Llama, Qwen, DeepSeek, Gemma, Mistral - entirely on your ow">
     <meta name="twitter:image" content="https://www.aitoolbox.hk/images/og/lm-studio-en-og.png">
-    <link rel="stylesheet" href="/css/style.css?v=20261116155217">
+    <link rel="stylesheet" href="/css/style.css?v=20261116185308">
     <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -249,52 +249,47 @@
         </div>
     </header>
 
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-        <a href="/">Home</a> &gt; <a href="/category/ai-development/">AI Development</a> &gt; <span>LM Studio</span>
+    <nav class="breadcrumb td-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a><span class="sep">/</span><a href="/category/ai-development/">AI Development</a><span class="sep">/</span><span>LM Studio</span>
     </nav>
 
-    <main class="article-container">
-        <div class="tool-header">
-            <div class="tool-header-top">
+    <main>
+        <section class="td-hero">
+            <div class="td-identity">
                 <img class="tool-logo tool-icon-lg" src="/assets/icons/lm-studio.png" alt="LM Studio" width="56" height="56" loading="lazy" decoding="async">
-                <div class="tool-header-info">
-                    <div class="tool-title-row"><h1>LM Studio</h1><span class="status-chip status-trending">Trending</span></div>
-                    <p class="subtitle">LM Studio is a free desktop app that runs open-weight LLMs - Llama, Qwen, DeepSeek, Gemma, Mistral - entirely on your own machine through a clean GUI, with a one-click local API server. I set it up for solo lawyers, therapists, and writers who want private AI but cannot touch a terminal; the money is in handing a non-technical client a working desktop app they can actually click, not a server they will never maintain.</p>
-                    <div class="rating-bar">⭐ 4.8</div>
+                <h1>LM Studio</h1>
+                <p class="td-summary">LM Studio is a free desktop app that runs open-weight LLMs - Llama, Qwen, DeepSeek, Gemma, Mistral - entirely on your own machine through a clean GUI, with a one-click local API server. I set it up for solo lawyers, therapists, and writers who want private AI but cannot touch a terminal; the money is in handing a non-technical client a working desktop app they can actually click, not a server they will never maintain.</p>
+                <div class="td-chips">
+                    <span class="td-chip td-chip-neutral">AI Development</span>
+                    
+                    <span class="td-chip td-chip-verified">✓ Independently reviewed</span>
                 </div>
             </div>
-            <div class="tool-meta">
-                <div class="tool-meta-item"><strong>Website</strong>: lmstudio.ai</div>
-                <div class="tool-meta-item"><strong>Price</strong>: Free (local) + Enterprise (teams/SSO)</div>
-                <div class="tool-meta-item"><strong>Platform</strong>: macOS (Apple Silicon), Windows, Linux</div>
-                <div class="tool-meta-item"><strong>Category</strong>: AI Development</div>
-            </div>
-            <div class="action-bar">
-                <a href="https://lmstudio.ai" target="_blank" rel="noopener" class="action-btn action-btn-primary">Visit LM Studio →</a>
-            </div>
+            <aside class="td-score-card">
+                <div class="td-score-label">EDITOR SCORE</div>
+                <div class="td-score-value">4.8 / 5</div>
+                <div class="td-score-note">↑ Trending  ·  Fast-growing adoption</div>
+                <a class="td-visit-btn" href="https://lmstudio.ai" target="_blank" rel="noopener">Visit LM Studio →</a>
+            </aside>
+        </section>
+
+        <div class="td-body">
+            <div class="td-proscons">
+            <div class="td-card"><div class="td-card-head pros">WHAT WORKS</div><ul><li>✓&nbsp;&nbsp;Free for personal and commercial use since July 2025 - no license, no form, your margin on every job is near 100%</li><li>✓&nbsp;&nbsp;The GUI removes the biggest barrier - search, download, chat with no terminal, Docker, or config files</li><li>✓&nbsp;&nbsp;One-click local OpenAI-compatible server at localhost:1234 for a free, private dev backend</li><li>✓&nbsp;&nbsp;Built-in document RAG - drop a .pdf, .docx, or .txt in and it retrieves from long files automatically</li><li>✓&nbsp;&nbsp;Dual engine: llama.cpp everywhere, native MLX on Apple Silicon (often 200+ tokens/sec on small models)</li><li>✓&nbsp;&nbsp;Friendly for experimenting - load several models, compare on the same prompt, watch VRAM and tokens/sec live</li></ul></div>
+            <div class="td-card"><div class="td-card-head cons">LIMITATIONS</div><ul><li>—&nbsp;&nbsp;Closed-source desktop app - you cannot audit or modify it, which matters for compliance-minded clients</li><li>—&nbsp;&nbsp;Not built for headless or multi-user serving - the GUI is one person, one machine; llmster exists but is newer than Ollama's server</li><li>—&nbsp;&nbsp;No built-in cloud fallback - if the client's hardware cannot run the model, there is no LM Studio Cloud to scale into</li><li>—&nbsp;&nbsp;Hardware hungry - a 7B-13B model at Q4 wants 16GB+ RAM and 6-9GB VRAM; bigger models need a real GPU</li><li>—&nbsp;&nbsp;Apple Silicon only for the fast MLX path; Intel Macs are not supported and Windows/Linux use the slower llama.cpp route</li><li>—&nbsp;&nbsp;'Free for work' has a ceiling - the Enterprise tier (SSO, model/MCP gating) costs money for real organizations</li><li>—&nbsp;&nbsp;Smaller local models still trail the cloud on hard reasoning - set expectations or you will hear about it</li></ul></div>
         </div>
 
-        <div class="tldr-box">
-            <strong>TL;DR</strong>
-            <p>LM Studio is a free desktop app that runs open-weight LLMs - Llama, Qwen, DeepSeek, Gemma, Mistral - entirely on your own machine through a clean GUI, with a one-click local API server. I set it up for solo lawyers, therapists, and writers who want private AI but cannot touch a terminal; the money is in handing a non-technical client a working desktop app they can actually click, not a server they will never maintain.</p>
+            <div class="td-card td-pricing">
+        <div class="td-card-head faint">PRICING&nbsp;·&nbsp;UPDATED 16 Nov 2026</div>
+        <div class="td-price-tile">
+            <div class="td-price-label">CURRENT PRICING</div>
+            <div class="td-price-value">Free (local) + Enterprise (teams/SSO)</div>
+            
         </div>
+    </div>
 
-        <div class="key-stats">
-            <h4>Key Statistics</h4>
-            <div class="ks-grid"><div class="ks-item"><span class="ks-val">4.8</span><span class="ks-label">User Rating</span></div><div class="ks-item"><span class="ks-val">5M+ downloads</span><span class="ks-label">Monthly Visits</span></div><div class="ks-item"><span class="ks-val">Free (local) + Enterprise (teams/SSO)</span><span class="ks-label">Pricing</span></div><div class="ks-item"><span class="ks-val">macOS (Apple Silicon), Windows, Linux</span><span class="ks-label">Platform</span></div></div>
-        </div>
-
-        <div class="features-grid"><div class="feature-item">Free desktop app for macOS, Windows, Linux (Apple Silicon 14+) from Element Labs</div>
-<div class="feature-item">Built-in model store (Discover tab) connected to Hugging Face - search, filter by hardware, one-click download</div>
-<div class="feature-item">ChatGPT-style chat UI with multi-turn context, system prompts, and character personas</div>
-<div class="feature-item">Local OpenAI-compatible API server at http://localhost:1234/v1 (chat, completions, embeddings)</div>
-<div class="feature-item">Document chat with automatic RAG for .pdf, .docx, .txt files</div>
-<div class="feature-item">llama.cpp (GGUF) + native MLX dual runtime; tool calling and structured JSON output via API</div>
-<div class="feature-item">Headless llmster daemon + lms CLI for server/CI; LM Link for encrypted remote access (Tailscale)</div>
-</div>
-
-        <article class="article-body" data-tts>
-            <h2>What LM Studio Actually Is (From a Private-AI Setup Guy)</h2>
+            <article class="article-body" data-tts>
+                <h2>What LM Studio Actually Is (From a Private-AI Setup Guy)</h2>
 
 <p>I help solo professionals - lawyers, therapists, writers, small accounting shops - get private AI without sending their files to a cloud they cannot see. For the past year most of that work ran on Ollama, because Ollama is a server you wire into other apps. But a lot of my clients are not developers, and a server they cannot click on scares them. That is exactly where LM Studio earns its keep.
 </p>
@@ -405,50 +400,34 @@ For 7B-14B models, any modern Mac or PC with 16GB+ RAM runs them fine. For 32B+ 
 <li>Use the local server as a free dev proxy before quoting any cloud API work.</li>
 <li>Keep the Enterprise tier in mind for bigger clients, but do not promise "free forever" to an organization with IT rules.</li>
 </ul>
-        </article>
+            </article>
 
-        <div class="pros-cons">
-            <div class="pros">
-                <h4>Pros</h4>
-                <ul><li>Free for personal and commercial use since July 2025 - no license, no form, your margin on every job is near 100%</li><li>The GUI removes the biggest barrier - search, download, chat with no terminal, Docker, or config files</li><li>One-click local OpenAI-compatible server at localhost:1234 for a free, private dev backend</li><li>Built-in document RAG - drop a .pdf, .docx, or .txt in and it retrieves from long files automatically</li><li>Dual engine: llama.cpp everywhere, native MLX on Apple Silicon (often 200+ tokens/sec on small models)</li><li>Friendly for experimenting - load several models, compare on the same prompt, watch VRAM and tokens/sec live</li></ul>
-            </div>
-            <div class="cons">
-                <h4>Cons</h4>
-                <ul><li>Closed-source desktop app - you cannot audit or modify it, which matters for compliance-minded clients</li><li>Not built for headless or multi-user serving - the GUI is one person, one machine; llmster exists but is newer than Ollama's server</li><li>No built-in cloud fallback - if the client's hardware cannot run the model, there is no LM Studio Cloud to scale into</li><li>Hardware hungry - a 7B-13B model at Q4 wants 16GB+ RAM and 6-9GB VRAM; bigger models need a real GPU</li><li>Apple Silicon only for the fast MLX path; Intel Macs are not supported and Windows/Linux use the slower llama.cpp route</li><li>'Free for work' has a ceiling - the Enterprise tier (SSO, model/MCP gating) costs money for real organizations</li><li>Smaller local models still trail the cloud on hard reasoning - set expectations or you will hear about it</li></ul>
-            </div>
-        </div>
-
-        <div class="faq-section"><h3>FAQ</h3><div class="faq-item">
-                    <details>
-                        <summary>Is LM Studio really free for commercial use?</summary>
-                        <div class="faq-answer"><p>Yes. Since July 8, 2025 the desktop app is free for personal and work use - no license, no registration, no fee. Element Labs sells a separate Enterprise tier with SSO and policy controls for larger teams, but the app most solo users and consultants want is free, which is what makes the margin on setup work so high.
+            <div class="td-faq"><h2 class="td-faq-head">Questions we get asked</h2><div class="td-faq-item">
+                    <h3>Is LM Studio really free for commercial use?</h3>
+                    <div class="td-faq-a"><p>Yes. Since July 8, 2025 the desktop app is free for personal and work use - no license, no registration, no fee. Element Labs sells a separate Enterprise tier with SSO and policy controls for larger teams, but the app most solo users and consultants want is free, which is what makes the margin on setup work so high.
 </p></div>
-                    </details>
                 </div>
-<div class="faq-item">
-                    <details>
-                        <summary>Can you actually make money with a free tool?</summary>
-                        <div class="faq-answer"><p>You do not sell the software; you sell a working, private setup a non-technical person can use, plus training and support. Because LM Studio costs you nothing, a $1,800 build or a $200/month retainer is close to pure profit minus your time. The work is trust and configuration, not licensing.
+<div class="td-faq-divider"></div>
+<div class="td-faq-item">
+                    <h3>Can you actually make money with a free tool?</h3>
+                    <div class="td-faq-a"><p>You do not sell the software; you sell a working, private setup a non-technical person can use, plus training and support. Because LM Studio costs you nothing, a $1,800 build or a $200/month retainer is close to pure profit minus your time. The work is trust and configuration, not licensing.
 </p></div>
-                    </details>
                 </div>
-<div class="faq-item">
-                    <details>
-                        <summary>LM Studio vs Ollama - which should I learn?</summary>
-                        <div class="faq-answer"><p>If you serve developers or build integrations, learn Ollama - its server and API are the industry default for local inference. If your clients are non-technical one-person shops, lead with LM Studio because the GUI is what they will actually open. Most people in this business end up using both: LM Studio on the client's desk, Ollama on the server.
+<div class="td-faq-divider"></div>
+<div class="td-faq-item">
+                    <h3>LM Studio vs Ollama - which should I learn?</h3>
+                    <div class="td-faq-a"><p>If you serve developers or build integrations, learn Ollama - its server and API are the industry default for local inference. If your clients are non-technical one-person shops, lead with LM Studio because the GUI is what they will actually open. Most people in this business end up using both: LM Studio on the client's desk, Ollama on the server.
 </p></div>
-                    </details>
                 </div>
-<div class="faq-item">
-                    <details>
-                        <summary>What hardware does a client need?</summary>
-                        <div class="faq-answer"><p>For 7B-14B models, any modern Mac or PC with 16GB+ RAM runs them fine. For 32B+ you want 32GB+ RAM and ideally an Apple Silicon Mac or a dedicated GPU. I tell prospects upfront: if their only machine is a 16GB laptop, we stick to smaller models or I spec them a $1,000-$1,800 mini workstation. Do not lead with a 70B pitch that needs new hardware.
+<div class="td-faq-divider"></div>
+<div class="td-faq-item">
+                    <h3>What hardware does a client need?</h3>
+                    <div class="td-faq-a"><p>For 7B-14B models, any modern Mac or PC with 16GB+ RAM runs them fine. For 32B+ you want 32GB+ RAM and ideally an Apple Silicon Mac or a dedicated GPU. I tell prospects upfront: if their only machine is a 16GB laptop, we stick to smaller models or I spec them a $1,000-$1,800 mini workstation. Do not lead with a 70B pitch that needs new hardware.
 </p></div>
-                    </details>
                 </div>
 </div>
 
-        <div class="author-block">
+            <div class="author-block">
         <div class="author-block-inner">
             <div class="author-avatar">A</div>
             <div class="author-body">
@@ -459,7 +438,7 @@ For 7B-14B models, any modern Mac or PC with 16GB+ RAM runs them fine. For 32B+ 
         </div>
     </div>
 
-        <div class="related-tools" id="relatedSection">
+            <div class="related-tools" id="relatedSection">
             <h3>Related Tools</h3>
             <div class="related-grid"><a href="/tools/replicate/" class="related-card">
                 <img class="tool-logo related-tile" src="/assets/icons/replicate.svg" alt="Replicate" width="40" height="40" loading="lazy" decoding="async">
@@ -489,7 +468,7 @@ For 7B-14B models, any modern Mac or PC with 16GB+ RAM runs them fine. For 32B+ 
 </div>
         </div>
 
-        <div class="related-tools">
+            <div class="related-tools">
                 <h3>Related Articles</h3>
                 <div class="related-grid"><a href="/articles/best-serverless-functions-pricing-2026-aws-lambda-vs-cloudflare-workers-vs-vercel-vs-deno-deploy/" class="related-card">
                     <div style="font-weight:600;margin-bottom:4px;">Serverless Functions Pricing in 2026: AW</div>
@@ -505,6 +484,7 @@ For 7B-14B models, any modern Mac or PC with 16GB+ RAM runs them fine. For 32B+ 
                 </a>
 </div>
             </div>
+        </div>
     </main>
 
     <footer class="footer">

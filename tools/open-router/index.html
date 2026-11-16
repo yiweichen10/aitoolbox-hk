@@ -21,7 +21,7 @@
     <meta name="twitter:title" content="OpenRouter Review 2026 - AI Tool Lab">
     <meta name="twitter:description" content="Unified API gateway that gives you access to 200+ AI models through a single endpoint. Monetization angle: build SaaS pr">
     <meta name="twitter:image" content="https://www.aitoolbox.hk/images/og/open-router-en-og.png">
-    <link rel="stylesheet" href="/css/style.css?v=20261116155217">
+    <link rel="stylesheet" href="/css/style.css?v=20261116185308">
     <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -250,54 +250,47 @@
         </div>
     </header>
 
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-        <a href="/">Home</a> &gt; <a href="/category/ai-api/">AI API</a> &gt; <span>OpenRouter</span>
+    <nav class="breadcrumb td-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a><span class="sep">/</span><a href="/category/ai-api/">AI API</a><span class="sep">/</span><span>OpenRouter</span>
     </nav>
 
-    <main class="article-container">
-        <div class="tool-header">
-            <div class="tool-header-top">
+    <main>
+        <section class="td-hero">
+            <div class="td-identity">
                 <img class="tool-logo tool-icon-lg" src="/assets/icons/open-router.svg" alt="OpenRouter" width="56" height="56" loading="lazy" decoding="async">
-                <div class="tool-header-info">
-                    <div class="tool-title-row"><h1>OpenRouter</h1></div>
-                    <p class="subtitle">Unified API gateway that gives you access to 200+ AI models through a single endpoint. Monetization angle: build SaaS products on top of multiple LLMs without managing separate accounts, offer model-switching arbitrage ($0.10 credit on one model can generate $1.00+ in served queries), or white-label AI chat services with custom model routing.</p>
-                    <div class="rating-bar">⭐ 4.6 <span style="font-size:14px;color:#999;">(320K visits)</span></div>
+                <h1>OpenRouter</h1>
+                <p class="td-summary">Unified API gateway that gives you access to 200+ AI models through a single endpoint. Monetization angle: build SaaS products on top of multiple LLMs without managing separate accounts, offer model-switching arbitrage ($0.10 credit on one model can generate $1.00+ in served queries), or white-label AI chat services with custom model routing.</p>
+                <div class="td-chips">
+                    <span class="td-chip td-chip-neutral">AI API</span>
+                    <span class="td-chip td-chip-neutral">API</span>
+                    <span class="td-chip td-chip-verified">✓ Independently reviewed</span>
                 </div>
             </div>
-            <div class="tool-meta">
-                <div class="tool-meta-item"><strong>Website</strong>: openrouter.ai</div>
-                <div class="tool-meta-item"><strong>Price</strong>: Free ($1 credit) + Pay-as-you-go</div>
-                <div class="tool-meta-item"><strong>Platform</strong>: API</div>
-                <div class="tool-meta-item"><strong>Category</strong>: AI API</div>
-            </div>
-            <div class="action-bar">
-                <a href="https://openrouter.ai" target="_blank" rel="noopener" class="action-btn action-btn-primary">Visit OpenRouter →</a>
-            </div>
+            <aside class="td-score-card">
+                <div class="td-score-label">EDITOR SCORE</div>
+                <div class="td-score-value">4.6 / 5</div>
+                <div class="td-score-note muted">Based on hands-on testing</div>
+                <a class="td-visit-btn" href="https://openrouter.ai" target="_blank" rel="noopener">Visit OpenRouter →</a>
+            </aside>
+        </section>
+
+        <div class="td-body">
+            <div class="td-proscons">
+            <div class="td-card"><div class="td-card-head pros">WHAT WORKS</div><ul><li>✓&nbsp;&nbsp;Single API for 200+ models means you never vendor-lock to one provider. Switch from GPT-4o to Claude 4 Sonnet to DeepSeek V4 by changing one string in your request — no SDK swap, no new integration</li><li>✓&nbsp;&nbsp;Built-in fallback logic: if your primary model is down or rate-limited, OpenRouter automatically routes to a backup. This alone saves hours of uptime engineering for production apps</li><li>✓&nbsp;&nbsp;The pricing is transparent — every model shows per-token cost, and OpenRouter does not add a margin on most models (you pay the provider rate + a small fixed fee). No surprise bills</li><li>✓&nbsp;&nbsp;Prompt caching and batching built in. You get the speed benefits without implementing the caching logic yourself</li><li>✓&nbsp;&nbsp;Free $1 credit on signup is enough to thoroughly test 10+ models and find the best fit for your use case before spending real money</li></ul></div>
+            <div class="td-card"><div class="td-card-head cons">LIMITATIONS</div><ul><li>—&nbsp;&nbsp;Latency is noticeably higher than calling a provider API directly. OpenRouter adds 200-500ms overhead per request because it sits as a proxy layer. For real-time chat applications, this is a real problem and not just theoretical</li><li>—&nbsp;&nbsp;Rate limits are stricter than major providers. Heavy production usage ($500+/month) often requires applying for higher limits, and the approval is not instant or guaranteed</li><li>—&nbsp;&nbsp;When a model provider goes down (happens often with smaller open-source model hosts), OpenRouter backup routing sometimes sends requests to a model with completely different output quality — your app gets a response, but it might be from Mistral when you needed GPT-4o</li><li>—&nbsp;&nbsp;No SLA guarantees on the free/pay-as-you-go tier. If your business depends on uptime, you need the Team plan ($99/month) which has a 99.9% SLA, and that adds to your cost stack</li><li>—&nbsp;&nbsp;Documentation can be sparse for less popular models. The API docs are well-written for major models (GPT, Claude, Gemini), but smaller models often have incomplete parameter docs or missing example requests</li></ul></div>
         </div>
 
-        <div class="tldr-box">
-            <strong>TL;DR</strong>
-            <p>Unified API gateway that gives you access to 200+ AI models through a single endpoint. Monetization angle: build SaaS products on top of multiple LLMs without managing separate accounts, offer model-switching arbitrage ($0.10 credit on one model can generate $1.00+ in served queries), or white-label AI chat services with custom model routing.</p>
+            <div class="td-card td-pricing">
+        <div class="td-card-head faint">PRICING&nbsp;·&nbsp;UPDATED 16 Nov 2026</div>
+        <div class="td-price-tile">
+            <div class="td-price-label">CURRENT PRICING</div>
+            <div class="td-price-value">Free ($1 credit) + Pay-as-you-go</div>
+            
         </div>
+    </div>
 
-        <div class="key-stats">
-            <h4>Key Statistics</h4>
-            <div class="ks-grid"><div class="ks-item"><span class="ks-val">4.6</span><span class="ks-label">User Rating</span></div><div class="ks-item"><span class="ks-val">320K</span><span class="ks-label">Monthly Visits</span></div><div class="ks-item"><span class="ks-val">Free ($1 credit) + Pay-as-you-go</span><span class="ks-label">Pricing</span></div><div class="ks-item"><span class="ks-val">API</span><span class="ks-label">Platform</span></div></div>
-        </div>
-
-        <div class="features-grid"><div class="feature-item">Unified API for 200+ LLMs (OpenAI, Anthropic, Meta, Mistral, DeepSeek, Google, etc.)</div>
-<div class="feature-item">Automatic fallback routing when primary model fails</div>
-<div class="feature-item">Prompt caching across all supported models</div>
-<div class="feature-item">Streaming support for real-time applications</div>
-<div class="feature-item">Usage analytics and cost tracking dashboard</div>
-<div class="feature-item">API key management with granular permissions</div>
-<div class="feature-item">Model comparison playground for side-by-side testing</div>
-<div class="feature-item">Provider status monitoring and alerts</div>
-<div class="feature-item">REST API and OpenAI-compatible SDK</div>
-</div>
-
-        <article class="article-body" data-tts>
-            <h2>What is OpenRouter?</h2>
+            <article class="article-body" data-tts>
+                <h2>What is OpenRouter?</h2>
 
 <p>OpenRouter is a unified API gateway for large language models. Instead of creating accounts with each AI provider, getting different API keys, and learning different SDKs, you make one integration and get access to 200+ models from OpenAI, Anthropic, Meta, Mistral, Google, DeepSeek, and dozens of smaller providers.
 </p>
@@ -375,43 +368,28 @@
 
 <p>The monetization play is straightforward: build on OpenRouter to launch fast with zero provider lock-in, optimize costs through model switching, and scale up. By the time latency becomes a problem, you will have the revenue to hire someone to manage direct provider connections.
 </p>
-        </article>
+            </article>
 
-        <div class="pros-cons">
-            <div class="pros">
-                <h4>Pros</h4>
-                <ul><li>Single API for 200+ models means you never vendor-lock to one provider. Switch from GPT-4o to Claude 4 Sonnet to DeepSeek V4 by changing one string in your request — no SDK swap, no new integration</li><li>Built-in fallback logic: if your primary model is down or rate-limited, OpenRouter automatically routes to a backup. This alone saves hours of uptime engineering for production apps</li><li>The pricing is transparent — every model shows per-token cost, and OpenRouter does not add a margin on most models (you pay the provider rate + a small fixed fee). No surprise bills</li><li>Prompt caching and batching built in. You get the speed benefits without implementing the caching logic yourself</li><li>Free $1 credit on signup is enough to thoroughly test 10+ models and find the best fit for your use case before spending real money</li></ul>
-            </div>
-            <div class="cons">
-                <h4>Cons</h4>
-                <ul><li>Latency is noticeably higher than calling a provider API directly. OpenRouter adds 200-500ms overhead per request because it sits as a proxy layer. For real-time chat applications, this is a real problem and not just theoretical</li><li>Rate limits are stricter than major providers. Heavy production usage ($500+/month) often requires applying for higher limits, and the approval is not instant or guaranteed</li><li>When a model provider goes down (happens often with smaller open-source model hosts), OpenRouter backup routing sometimes sends requests to a model with completely different output quality — your app gets a response, but it might be from Mistral when you needed GPT-4o</li><li>No SLA guarantees on the free/pay-as-you-go tier. If your business depends on uptime, you need the Team plan ($99/month) which has a 99.9% SLA, and that adds to your cost stack</li><li>Documentation can be sparse for less popular models. The API docs are well-written for major models (GPT, Claude, Gemini), but smaller models often have incomplete parameter docs or missing example requests</li></ul>
-            </div>
-        </div>
-
-        <div class="faq-section"><h3>FAQ</h3><div class="faq-item">
-                    <details>
-                        <summary>How does OpenRouter pricing compare to using ChatGPT Plus or Claude Pro directly?</summary>
-                        <div class="faq-answer"><p>OpenRouter is pay-as-you-go per token, not a flat subscription. For light usage (a few thousand queries per month), ChatGPT Plus ($20/month) or Claude Pro ($20/month) are cheaper. But if you need multiple models, varied usage patterns, or custom model routing, OpenRouter wins on flexibility. A typical developer spends $5-$30/month on OpenRouter and gets access to all models instead of being locked into one. The real cost savings come from model arbitrage — use expensive models for hard tasks and cheap models for simple ones, all through the same API.
+            <div class="td-faq"><h2 class="td-faq-head">Questions we get asked</h2><div class="td-faq-item">
+                    <h3>How does OpenRouter pricing compare to using ChatGPT Plus or Claude Pro directly?</h3>
+                    <div class="td-faq-a"><p>OpenRouter is pay-as-you-go per token, not a flat subscription. For light usage (a few thousand queries per month), ChatGPT Plus ($20/month) or Claude Pro ($20/month) are cheaper. But if you need multiple models, varied usage patterns, or custom model routing, OpenRouter wins on flexibility. A typical developer spends $5-$30/month on OpenRouter and gets access to all models instead of being locked into one. The real cost savings come from model arbitrage — use expensive models for hard tasks and cheap models for simple ones, all through the same API.
 </p></div>
-                    </details>
                 </div>
-<div class="faq-item">
-                    <details>
-                        <summary>Can I use OpenRouter in production without worrying about rate limits?</summary>
-                        <div class="faq-answer"><p>For small-scale production (under 10K requests/day), the free tier handles it fine. For larger volumes, you need to apply for higher rate limits — expect $500+/month usage before they approve substantial increases. The Team plan ($99/month) includes priority routing and a 99.9% SLA. If your app needs to serve millions of requests, you are better off calling provider APIs directly and using OpenRouter as a fallback or multi-model supplement, not as your sole gateway.
+<div class="td-faq-divider"></div>
+<div class="td-faq-item">
+                    <h3>Can I use OpenRouter in production without worrying about rate limits?</h3>
+                    <div class="td-faq-a"><p>For small-scale production (under 10K requests/day), the free tier handles it fine. For larger volumes, you need to apply for higher rate limits — expect $500+/month usage before they approve substantial increases. The Team plan ($99/month) includes priority routing and a 99.9% SLA. If your app needs to serve millions of requests, you are better off calling provider APIs directly and using OpenRouter as a fallback or multi-model supplement, not as your sole gateway.
 </p></div>
-                    </details>
                 </div>
-<div class="faq-item">
-                    <details>
-                        <summary>Does OpenRouter support streaming responses?</summary>
-                        <div class="faq-answer"><p>Yes, OpenRouter supports server-sent events (SSE) streaming just like the native OpenAI API. The streaming latency is higher than direct API calls (adds ~300ms on average) but for most chatbot and text generation use cases, the difference is barely noticeable. If you are doing real-time voice or time-sensitive streaming, the overhead might be an issue and you should test first.
+<div class="td-faq-divider"></div>
+<div class="td-faq-item">
+                    <h3>Does OpenRouter support streaming responses?</h3>
+                    <div class="td-faq-a"><p>Yes, OpenRouter supports server-sent events (SSE) streaming just like the native OpenAI API. The streaming latency is higher than direct API calls (adds ~300ms on average) but for most chatbot and text generation use cases, the difference is barely noticeable. If you are doing real-time voice or time-sensitive streaming, the overhead might be an issue and you should test first.
 </p></div>
-                    </details>
                 </div>
 </div>
 
-        <div class="author-block">
+            <div class="author-block">
         <div class="author-block-inner">
             <div class="author-avatar">A</div>
             <div class="author-body">
@@ -422,7 +400,7 @@
         </div>
     </div>
 
-        <div class="related-tools" id="relatedSection">
+            <div class="related-tools" id="relatedSection">
             <h3>Related Tools</h3>
             <div class="related-grid"><a href="/tools/chatgpt/" class="related-card">
                 <img class="tool-logo related-tile" src="/assets/icons/chatgpt.png" alt="ChatGPT" width="40" height="40" loading="lazy" decoding="async">
@@ -452,7 +430,7 @@
 </div>
         </div>
 
-        <div class="related-tools">
+            <div class="related-tools">
                 <h3>Related Articles</h3>
                 <div class="related-grid"><a href="/articles/best-serverless-functions-pricing-2026-aws-lambda-vs-cloudflare-workers-vs-vercel-vs-deno-deploy/" class="related-card">
                     <div style="font-weight:600;margin-bottom:4px;">Serverless Functions Pricing in 2026: AW</div>
@@ -468,6 +446,7 @@
                 </a>
 </div>
             </div>
+        </div>
     </main>
 
     <footer class="footer">

@@ -21,7 +21,7 @@
     <meta name="twitter:title" content="Claude Code Review 2026 - AI Tool Lab">
     <meta name="twitter:description" content="A command-line AI agent by Anthropic that can read entire codebases, run terminal commands, and perform complex refactor">
     <meta name="twitter:image" content="https://www.aitoolbox.hk/images/og/claude-code-en-og.png">
-    <link rel="stylesheet" href="/css/style.css?v=20261116155217">
+    <link rel="stylesheet" href="/css/style.css?v=20261116185308">
     <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -231,49 +231,47 @@
         </div>
     </header>
 
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-        <a href="/">Home</a> &gt; <a href="/category/ai-coding/">AI Coding</a> &gt; <span>Claude Code</span>
+    <nav class="breadcrumb td-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a><span class="sep">/</span><a href="/category/ai-coding/">AI Coding</a><span class="sep">/</span><span>Claude Code</span>
     </nav>
 
-    <main class="article-container">
-        <div class="tool-header">
-            <div class="tool-header-top">
+    <main>
+        <section class="td-hero">
+            <div class="td-identity">
                 <img class="tool-logo tool-icon-lg" src="/assets/icons/claude-code.svg" alt="Claude Code" width="56" height="56" loading="lazy" decoding="async">
-                <div class="tool-header-info">
-                    <div class="tool-title-row"><h1>Claude Code</h1><span class="status-chip status-verified">Verified</span></div>
-                    <p class="subtitle">A command-line AI agent by Anthropic that can read entire codebases, run terminal commands, and perform complex refactoring autonomously.</p>
-                    <div class="rating-bar">⭐ 4.8 <span style="font-size:14px;color:#999;">(8K visits)</span></div>
+                <h1>Claude Code</h1>
+                <p class="td-summary">A command-line AI agent by Anthropic that can read entire codebases, run terminal commands, and perform complex refactoring autonomously.</p>
+                <div class="td-chips">
+                    <span class="td-chip td-chip-neutral">AI Coding</span>
+                    <span class="td-chip td-chip-neutral">Terminal / CLI</span>
+                    <span class="td-chip td-chip-verified">✓ Independently reviewed</span>
                 </div>
             </div>
-            <div class="tool-meta">
-                <div class="tool-meta-item"><strong>Website</strong>: claude.ai</div>
-                <div class="tool-meta-item"><strong>Price</strong>: Claude Pro $20/mo | API usage</div>
-                <div class="tool-meta-item"><strong>Platform</strong>: Terminal / CLI</div>
-                <div class="tool-meta-item"><strong>Category</strong>: AI Coding</div>
-            </div>
-            <div class="action-bar">
-                <a href="https://claude.ai" target="_blank" rel="noopener" class="action-btn action-btn-primary">Visit Claude Code →</a>
-            </div>
+            <aside class="td-score-card">
+                <div class="td-score-label">EDITOR SCORE</div>
+                <div class="td-score-value">4.8 / 5</div>
+                <div class="td-score-note">✓ Verified  ·  Independently tested</div>
+                <a class="td-visit-btn" href="https://claude.ai" target="_blank" rel="noopener">Visit Claude Code →</a>
+            </aside>
+        </section>
+
+        <div class="td-body">
+            <div class="td-proscons">
+            <div class="td-card"><div class="td-card-head pros">WHAT WORKS</div><ul><li>✓&nbsp;&nbsp;Handles massive 200K context codebases</li><li>✓&nbsp;&nbsp;Agentic terminal capabilities (runs tests/commands)</li><li>✓&nbsp;&nbsp;Excellent at project-wide refactoring</li><li>✓&nbsp;&nbsp;Editor-agnostic (works with any IDE)</li></ul></div>
+            <div class="td-card"><div class="td-card-head cons">LIMITATIONS</div><ul><li>—&nbsp;&nbsp;No GUI, strictly terminal-based</li><li>—&nbsp;&nbsp;API costs can add up for large projects</li><li>—&nbsp;&nbsp;Steeper learning curve than standard extensions</li></ul></div>
         </div>
 
-        <div class="tldr-box">
-            <strong>TL;DR</strong>
-            <p>A command-line AI agent by Anthropic that can read entire codebases, run terminal commands, and perform complex refactoring autonomously.</p>
-        </div>
-
-        <div class="key-stats">
-            <h4>Key Statistics</h4>
-            <div class="ks-grid"><div class="ks-item"><span class="ks-val">4.8</span><span class="ks-label">User Rating</span></div><div class="ks-item"><span class="ks-val">8K</span><span class="ks-label">Monthly Visits</span></div><div class="ks-item"><span class="ks-val">Claude Pro $20/mo | API usage</span><span class="ks-label">Pricing</span></div><div class="ks-item"><span class="ks-val">Terminal / CLI</span><span class="ks-label">Platform</span></div></div>
-        </div>
-
-        <div class="features-grid"><div class="feature-item">Agentic CLI</div>
-<div class="feature-item">200K context window</div>
-<div class="feature-item">Prompt caching</div>
-<div class="feature-item">Smart refactoring</div>
-</div>
-
-        <article class="article-body" data-tts>
+            <div class="td-card td-pricing">
+        <div class="td-card-head faint">PRICING&nbsp;·&nbsp;UPDATED 16 Nov 2026</div>
+        <div class="td-price-tile">
+            <div class="td-price-label">CURRENT PRICING</div>
+            <div class="td-price-value">Claude Pro $20/mo | API usage</div>
             
+        </div>
+    </div>
+
+            <article class="article-body" data-tts>
+                
 <h2>Claude Code Review Draft</h2>
 
 <p>In this Claude Code review, we are looking at the tool that's currently changing the way developers interact with their own computers. If you’ve ever felt like your AI assistant was a "backseat driver" who just tells you what to do without actually doing it, Claude Code might be the solution you’ve been looking for. Anthropic has released a CLI (Command Line Interface) agent that doesn't just suggest code snippets; it can actually read your entire codebase, run terminal commands, and even fix failing tests on its own.
@@ -346,50 +344,34 @@
 <p>If you are looking to take your productivity to the next level, this tool is the real deal. A <strong>Claude Code review</strong> shows that the gap between "human thinking" and "computer doing" is shrinking every day. While it might take a few days to get used to the CLI workflow, once you experience the speed of an agent that can fix its own bugs, it’s very hard to go back to manual coding.
 </p>
 
-        </article>
+            </article>
 
-        <div class="pros-cons">
-            <div class="pros">
-                <h4>Pros</h4>
-                <ul><li>Handles massive 200K context codebases</li><li>Agentic terminal capabilities (runs tests/commands)</li><li>Excellent at project-wide refactoring</li><li>Editor-agnostic (works with any IDE)</li></ul>
-            </div>
-            <div class="cons">
-                <h4>Cons</h4>
-                <ul><li>No GUI, strictly terminal-based</li><li>API costs can add up for large projects</li><li>Steeper learning curve than standard extensions</li></ul>
-            </div>
-        </div>
-
-        <div class="faq-section"><h3>FAQ</h3><div class="faq-item">
-                    <details>
-                        <summary>Is Claude Code better than GitHub Copilot?</summary>
-                        <div class="faq-answer"><p>For simple coding, Copilot is better integrated. For macro tasks like refactoring a whole project, Claude Code is significantly more powerful due to its agentic nature and context window.
+            <div class="td-faq"><h2 class="td-faq-head">Questions we get asked</h2><div class="td-faq-item">
+                    <h3>Is Claude Code better than GitHub Copilot?</h3>
+                    <div class="td-faq-a"><p>For simple coding, Copilot is better integrated. For macro tasks like refactoring a whole project, Claude Code is significantly more powerful due to its agentic nature and context window.
 </p></div>
-                    </details>
                 </div>
-<div class="faq-item">
-                    <details>
-                        <summary>How much does Claude Code cost?</summary>
-                        <div class="faq-answer"><p>The tool is free to install, but you pay for Anthropic API usage. Claude Pro subscribers get some usage included, but heavy use is pay-as-you-go.
+<div class="td-faq-divider"></div>
+<div class="td-faq-item">
+                    <h3>How much does Claude Code cost?</h3>
+                    <div class="td-faq-a"><p>The tool is free to install, but you pay for Anthropic API usage. Claude Pro subscribers get some usage included, but heavy use is pay-as-you-go.
 </p></div>
-                    </details>
                 </div>
-<div class="faq-item">
-                    <details>
-                        <summary>What is Claude Code best for?</summary>
-                        <div class="faq-answer"><p>It is best for refactoring, debugging across multiple files, writing documentation, and running tests autonomously from the command line.
+<div class="td-faq-divider"></div>
+<div class="td-faq-item">
+                    <h3>What is Claude Code best for?</h3>
+                    <div class="td-faq-a"><p>It is best for refactoring, debugging across multiple files, writing documentation, and running tests autonomously from the command line.
 </p></div>
-                    </details>
                 </div>
-<div class="faq-item">
-                    <details>
-                        <summary>Is Claude Code free to use?</summary>
-                        <div class="faq-answer"><p>The CLI tool is free, but the Claude model requires a subscription or API key. It is not free to operate.
+<div class="td-faq-divider"></div>
+<div class="td-faq-item">
+                    <h3>Is Claude Code free to use?</h3>
+                    <div class="td-faq-a"><p>The CLI tool is free, but the Claude model requires a subscription or API key. It is not free to operate.
 </p></div>
-                    </details>
                 </div>
 </div>
 
-        <div class="author-block">
+            <div class="author-block">
         <div class="author-block-inner">
             <div class="author-avatar">A</div>
             <div class="author-body">
@@ -400,7 +382,7 @@
         </div>
     </div>
 
-        <div class="related-tools" id="relatedSection">
+            <div class="related-tools" id="relatedSection">
             <h3>Related Tools</h3>
             <div class="related-grid"><a href="/tools/github-copilot/" class="related-card">
                 <img class="tool-logo related-tile" src="/assets/icons/github-copilot.png" alt="GitHub Copilot" width="40" height="40" loading="lazy" decoding="async">
@@ -430,7 +412,7 @@
 </div>
         </div>
 
-        <div class="related-tools">
+            <div class="related-tools">
                 <h3>Related Articles</h3>
                 <div class="related-grid"><a href="/articles/best-serverless-functions-pricing-2026-aws-lambda-vs-cloudflare-workers-vs-vercel-vs-deno-deploy/" class="related-card">
                     <div style="font-weight:600;margin-bottom:4px;">Serverless Functions Pricing in 2026: AW</div>
@@ -446,6 +428,7 @@
                 </a>
 </div>
             </div>
+        </div>
     </main>
 
     <footer class="footer">

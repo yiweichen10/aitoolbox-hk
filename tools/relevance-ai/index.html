@@ -21,7 +21,7 @@
     <meta name="twitter:title" content="Relevance AI Review 2026 - AI Tool Lab">
     <meta name="twitter:description" content="Relevance AI is a visual platform for building AI agents and automated workflows without writing backend code. The busin">
     <meta name="twitter:image" content="https://www.aitoolbox.hk/images/og/relevance-ai-en-og.png">
-    <link rel="stylesheet" href="/css/style.css?v=20261116155217">
+    <link rel="stylesheet" href="/css/style.css?v=20261116185308">
     <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -250,55 +250,47 @@
         </div>
     </header>
 
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-        <a href="/">Home</a> &gt; <a href="/category/ai-automation/">AI Automation</a> &gt; <span>Relevance AI</span>
+    <nav class="breadcrumb td-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a><span class="sep">/</span><a href="/category/ai-automation/">AI Automation</a><span class="sep">/</span><span>Relevance AI</span>
     </nav>
 
-    <main class="article-container">
-        <div class="tool-header">
-            <div class="tool-header-top">
+    <main>
+        <section class="td-hero">
+            <div class="td-identity">
                 <img class="tool-logo tool-icon-lg" src="/assets/icons/relevance-ai.png" alt="Relevance AI" width="56" height="56" loading="lazy" decoding="async">
-                <div class="tool-header-info">
-                    <div class="tool-title-row"><h1>Relevance AI</h1><span class="status-chip status-trending">Trending</span></div>
-                    <p class="subtitle">Relevance AI is a visual platform for building AI agents and automated workflows without writing backend code. The business angle is straightforward: build custom AI agents for small and mid-size businesses that have real problems but no engineering team to solve them. A lead qualification agent that reads inbound emails and scores prospects? $2,000 build fee plus $200/month maintenance. A customer onboarding agent that auto-generates setup guides from CRM data? $1,500-$3,000 per client. I have been building on Relevance since mid-2025 and the market for 'I need AI but I do not know how' is bigger than most developers realize.</p>
-                    <div class="rating-bar">⭐ 4.5 <span style="font-size:14px;color:#999;">(500K+ visits)</span></div>
+                <h1>Relevance AI</h1>
+                <p class="td-summary">Relevance AI is a visual platform for building AI agents and automated workflows without writing backend code. The business angle is straightforward: build custom AI agents for small and mid-size businesses that have real problems but no engineering team to solve them. A lead qualification agent that reads inbound emails and scores prospects? $2,000 build fee plus $200/month maintenance. A customer onboarding agent that auto-generates setup guides from CRM data? $1,500-$3,000 per client. I have been building on Relevance since mid-2025 and the market for 'I need AI but I do not know how' is bigger than most developers realize.</p>
+                <div class="td-chips">
+                    <span class="td-chip td-chip-neutral">AI Automation</span>
+                    <span class="td-chip td-chip-neutral">Web, API, Python SDK</span>
+                    <span class="td-chip td-chip-verified">✓ Independently reviewed</span>
                 </div>
             </div>
-            <div class="tool-meta">
-                <div class="tool-meta-item"><strong>Website</strong>: relevanceai.com</div>
-                <div class="tool-meta-item"><strong>Price</strong>: Free + Pro from $49/mo</div>
-                <div class="tool-meta-item"><strong>Platform</strong>: Web, API, Python SDK</div>
-                <div class="tool-meta-item"><strong>Category</strong>: AI Automation</div>
-            </div>
-            <div class="action-bar">
-                <a href="https://relevanceai.com" target="_blank" rel="noopener" class="action-btn action-btn-primary">Visit Relevance AI →</a>
-            </div>
+            <aside class="td-score-card">
+                <div class="td-score-label">EDITOR SCORE</div>
+                <div class="td-score-value">4.5 / 5</div>
+                <div class="td-score-note">↑ Trending  ·  Fast-growing adoption</div>
+                <a class="td-visit-btn" href="https://relevanceai.com" target="_blank" rel="noopener">Visit Relevance AI →</a>
+            </aside>
+        </section>
+
+        <div class="td-body">
+            <div class="td-proscons">
+            <div class="td-card"><div class="td-card-head pros">WHAT WORKS</div><ul><li>✓&nbsp;&nbsp;The visual drag-and-drop workflow builder gets you from idea to working prototype in under an hour. You drag a 'Trigger' block, connect it to an 'LLM Call' block, route the output through a condition check, and send results to Slack or email. If you have ever tried building the same thing in Python with LangChain and FastAPI, you know that is normally a 3-day project. For client work, this speed is the difference between delivering 2 projects a month and delivering 8.</li><li>✓&nbsp;&nbsp;Multi-model support means you are not locked into OpenAI pricing. GPT-4o is great for complex reasoning but costs add up fast on high-volume agents. Claude 3.5 Sonnet handles most business logic at half the token cost. Gemini Flash works for classification tasks at a fraction of the price. I route different agent steps to different models based on complexity — retrieval to Gemini Flash, reasoning to Claude, generation to GPT-4o. This model arbitrage alone can cut a client's monthly API bill by 40-60% compared to running everything through OpenAI. That is a selling point clients actually care about.</li><li>✓&nbsp;&nbsp;The built-in vector database saves you from managing a separate Pinecone or Weaviate instance. Upload a client's knowledge base — product docs, SOPs, customer emails, Slack history — and the agent searches it semantically before generating responses. For RAG-based agents (support bots, onboarding assistants, internal Q&amp;A tools), this is the difference between an agent that hallucinates and one that gives accurate, sourced answers. One of my clients runs a 50-employee logistics company and their support agent has indexed 3 years of email threads, 200 SOP documents, and their entire product catalog. The agent resolves 60% of internal questions without human intervention.</li><li>✓&nbsp;&nbsp;The API deployment step is literally one click. Build your agent, test it in the playground, hit 'Deploy as API,' and you get an endpoint you can call from any app. No Docker, no AWS, no managing rate limits. For a solo consultant, this eliminates the DevOps work that normally eats 30% of a project timeline. You spend your time on the AI logic and the client relationship, not on infrastructure.</li><li>✓&nbsp;&nbsp;Team collaboration features mean you can bring a client into the workspace during development. Instead of sending them screenshots and waiting 3 days for feedback on 'should the agent respond this way?', you give them viewer access and they test the agent themselves. This cuts feedback cycles from days to hours and — critically — the client feels ownership of the final product, which reduces scope creep and revision requests after delivery.</li></ul></div>
+            <div class="td-card"><div class="td-card-head cons">LIMITATIONS</div><ul><li>—&nbsp;&nbsp;The free tier is a glorified demo. You get limited workflow runs, restricted model access, and none of the team features. You cannot build a real client agent on the free plan — you need at least the Pro tier at $49/month. For a solo consultant, that is fine (it is a business expense), but if you are evaluating whether to learn the platform, the free tier does not give you enough to make an informed decision. You need to commit to at least one paid month to really understand what the platform can do.</li><li>—&nbsp;&nbsp;The learning curve is steeper than the marketing suggests. Relevance bills itself as 'no-code for anyone,' but the reality is that building a production-grade AI agent requires understanding prompt engineering, RAG architecture, model selection, and error handling patterns. The visual editor makes the technical plumbing easier — you do not write code — but you still need to understand the concepts. I have seen clients try to build agents themselves after watching a 10-minute demo and produce hallucinations, infinite loops, and agents that respond to 'what is your return policy?' with a recipe for banana bread. If you sell agent-building as a service, part of your value proposition is navigating this complexity on the client's behalf.</li><li>—&nbsp;&nbsp;Pricing opacity at the enterprise level is frustrating. Once you hit the limits of the Business plan (more than 10 team members, custom SLA requirements, high-volume API calls), you have to book a sales call. Two of my larger clients needed enterprise features and the back-and-forth took 3 weeks each time — demo, proposal, negotiation, legal review. If you are pitching Relevance-based solutions to companies with compliance requirements (healthcare, finance, legal), budget that sales cycle into your project timeline. I lost one deal because the client's procurement team ran out of patience waiting for a custom quote.</li><li>—&nbsp;&nbsp;The agent occasionally breaks in unexpected ways that are hard to debug. When a Python script has a bug, you get a stack trace. When a visual workflow has a logic error — say a condition branch that never triggers because the LLM returns slightly different text than expected — you get silence. The agent just stops responding or loops the same output. Debugging involves adding test blocks, running sample queries, and tracing the workflow step by step. For simple flows, this is annoying. For complex multi-agent orchestrations with 30+ blocks, it can eat half a day. I have learned to build smaller, testable sub-agents rather than monolithic workflows, but the debugging tools are not where they need to be for production-grade reliability.</li><li>—&nbsp;&nbsp;Vendor lock-in is real, even if they do not call it that. Your agent logic, prompt chains, data schemas, and vector indexes live inside Relevance's proprietary format. There is no one-click export to LangChain or CrewAI. If Relevance raises prices, changes their API, or gets acquired and shut down, you are rebuilding every client agent from scratch. For a solo consultant with 10 clients running on the platform, that is a business-ending event. I mitigate this by exporting prompt templates and knowledge base data regularly, but the workflow logic itself is not portable. This is a trade-off you accept for the speed of visual development.</li></ul></div>
         </div>
 
-        <div class="tldr-box">
-            <strong>TL;DR</strong>
-            <p>Relevance AI is a visual platform for building AI agents and automated workflows without writing backend code. The business angle is straightforward: build custom AI agents for small and mid-size businesses that have real problems but no engineering team to solve them. A lead qualification agent that reads inbound emails and scores prospects? $2,000 build fee plus $200/month maintenance. A customer onboarding agent that auto-generates setup guides from CRM data? $1,500-$3,000 per client. I have been building on Relevance since mid-2025 and the market for 'I need AI but I do not know how' is bigger than most developers realize.</p>
+            <div class="td-card td-pricing">
+        <div class="td-card-head faint">PRICING&nbsp;·&nbsp;UPDATED 16 Nov 2026</div>
+        <div class="td-price-tile">
+            <div class="td-price-label">CURRENT PRICING</div>
+            <div class="td-price-value">Free + Pro from $49/mo</div>
+            <div class="td-price-detail">Free tier available; Pro from $49/month; Business from $199/month; Enterprise custom</div>
         </div>
+    </div>
 
-        <div class="key-stats">
-            <h4>Key Statistics</h4>
-            <div class="ks-grid"><div class="ks-item"><span class="ks-val">4.5</span><span class="ks-label">User Rating</span></div><div class="ks-item"><span class="ks-val">500K+</span><span class="ks-label">Monthly Visits</span></div><div class="ks-item"><span class="ks-val">Free + Pro from $49/mo</span><span class="ks-label">Pricing</span></div><div class="ks-item"><span class="ks-val">Web, API, Python SDK</span><span class="ks-label">Platform</span></div></div>
-        </div>
-
-        <div class="features-grid"><div class="feature-item">Visual drag-and-drop AI agent builder — connect triggers, LLM calls, condition logic, and actions without writing backend code</div>
-<div class="feature-item">Built-in vector database for RAG (Retrieval-Augmented Generation) — upload documents, websites, and data sources for semantic search</div>
-<div class="feature-item">Multi-model support across OpenAI (GPT-4o, GPT-4.1), Anthropic (Claude 3.5 Sonnet, Claude Opus), Google (Gemini Flash, Gemini Pro), and open-source models</div>
-<div class="feature-item">One-click API deployment — turn any agent into a REST endpoint callable from websites, apps, or other automation tools</div>
-<div class="feature-item">Real-time monitoring dashboard — track agent usage, response times, error rates, and token consumption per client or per agent</div>
-<div class="feature-item">Role-based team collaboration — invite clients as viewers, editors, or admins with granular permission controls</div>
-<div class="feature-item">Pre-built templates for common use cases: customer support, lead qualification, content generation, data extraction, meeting summarization</div>
-<div class="feature-item">Webhook and third-party integrations — connect agents to Slack, email, CRMs, databases, and 100+ apps via native connectors</div>
-<div class="feature-item">Python SDK for advanced customization — extend visual workflows with custom code blocks when drag-and-drop hits its limits</div>
-<div class="feature-item">Enterprise SSO (Okta, Azure AD), audit logging, and custom SLAs on the Business/Enterprise plans</div>
-</div>
-
-        <article class="article-body" data-tts>
-            <h2>What Is Relevance AI?</h2>
+            <article class="article-body" data-tts>
+                <h2>What Is Relevance AI?</h2>
 
 <p>Relevance AI is a visual platform for building, testing, and deploying AI agents and automated workflows. Think of it as a drag-and-drop editor where each block represents an AI action — call GPT-4 to analyze text, search a knowledge base for relevant info, send a Slack message, update a CRM record, make an API call — and you connect these blocks into a complete agent that runs autonomously.
 </p>
@@ -405,43 +397,28 @@
 
 <p>Start with one agent for one client in one industry. Get it working reliably. Get a testimonial. Then scale. That boring, focused approach has produced all of my actual revenue on this platform. The universal mega-agents that try to do everything? Those are still sitting in my drafts folder.
 </p>
-        </article>
+            </article>
 
-        <div class="pros-cons">
-            <div class="pros">
-                <h4>Pros</h4>
-                <ul><li>The visual drag-and-drop workflow builder gets you from idea to working prototype in under an hour. You drag a 'Trigger' block, connect it to an 'LLM Call' block, route the output through a condition check, and send results to Slack or email. If you have ever tried building the same thing in Python with LangChain and FastAPI, you know that is normally a 3-day project. For client work, this speed is the difference between delivering 2 projects a month and delivering 8.</li><li>Multi-model support means you are not locked into OpenAI pricing. GPT-4o is great for complex reasoning but costs add up fast on high-volume agents. Claude 3.5 Sonnet handles most business logic at half the token cost. Gemini Flash works for classification tasks at a fraction of the price. I route different agent steps to different models based on complexity — retrieval to Gemini Flash, reasoning to Claude, generation to GPT-4o. This model arbitrage alone can cut a client's monthly API bill by 40-60% compared to running everything through OpenAI. That is a selling point clients actually care about.</li><li>The built-in vector database saves you from managing a separate Pinecone or Weaviate instance. Upload a client's knowledge base — product docs, SOPs, customer emails, Slack history — and the agent searches it semantically before generating responses. For RAG-based agents (support bots, onboarding assistants, internal Q&A tools), this is the difference between an agent that hallucinates and one that gives accurate, sourced answers. One of my clients runs a 50-employee logistics company and their support agent has indexed 3 years of email threads, 200 SOP documents, and their entire product catalog. The agent resolves 60% of internal questions without human intervention.</li><li>The API deployment step is literally one click. Build your agent, test it in the playground, hit 'Deploy as API,' and you get an endpoint you can call from any app. No Docker, no AWS, no managing rate limits. For a solo consultant, this eliminates the DevOps work that normally eats 30% of a project timeline. You spend your time on the AI logic and the client relationship, not on infrastructure.</li><li>Team collaboration features mean you can bring a client into the workspace during development. Instead of sending them screenshots and waiting 3 days for feedback on 'should the agent respond this way?', you give them viewer access and they test the agent themselves. This cuts feedback cycles from days to hours and — critically — the client feels ownership of the final product, which reduces scope creep and revision requests after delivery.</li></ul>
-            </div>
-            <div class="cons">
-                <h4>Cons</h4>
-                <ul><li>The free tier is a glorified demo. You get limited workflow runs, restricted model access, and none of the team features. You cannot build a real client agent on the free plan — you need at least the Pro tier at $49/month. For a solo consultant, that is fine (it is a business expense), but if you are evaluating whether to learn the platform, the free tier does not give you enough to make an informed decision. You need to commit to at least one paid month to really understand what the platform can do.</li><li>The learning curve is steeper than the marketing suggests. Relevance bills itself as 'no-code for anyone,' but the reality is that building a production-grade AI agent requires understanding prompt engineering, RAG architecture, model selection, and error handling patterns. The visual editor makes the technical plumbing easier — you do not write code — but you still need to understand the concepts. I have seen clients try to build agents themselves after watching a 10-minute demo and produce hallucinations, infinite loops, and agents that respond to 'what is your return policy?' with a recipe for banana bread. If you sell agent-building as a service, part of your value proposition is navigating this complexity on the client's behalf.</li><li>Pricing opacity at the enterprise level is frustrating. Once you hit the limits of the Business plan (more than 10 team members, custom SLA requirements, high-volume API calls), you have to book a sales call. Two of my larger clients needed enterprise features and the back-and-forth took 3 weeks each time — demo, proposal, negotiation, legal review. If you are pitching Relevance-based solutions to companies with compliance requirements (healthcare, finance, legal), budget that sales cycle into your project timeline. I lost one deal because the client's procurement team ran out of patience waiting for a custom quote.</li><li>The agent occasionally breaks in unexpected ways that are hard to debug. When a Python script has a bug, you get a stack trace. When a visual workflow has a logic error — say a condition branch that never triggers because the LLM returns slightly different text than expected — you get silence. The agent just stops responding or loops the same output. Debugging involves adding test blocks, running sample queries, and tracing the workflow step by step. For simple flows, this is annoying. For complex multi-agent orchestrations with 30+ blocks, it can eat half a day. I have learned to build smaller, testable sub-agents rather than monolithic workflows, but the debugging tools are not where they need to be for production-grade reliability.</li><li>Vendor lock-in is real, even if they do not call it that. Your agent logic, prompt chains, data schemas, and vector indexes live inside Relevance's proprietary format. There is no one-click export to LangChain or CrewAI. If Relevance raises prices, changes their API, or gets acquired and shut down, you are rebuilding every client agent from scratch. For a solo consultant with 10 clients running on the platform, that is a business-ending event. I mitigate this by exporting prompt templates and knowledge base data regularly, but the workflow logic itself is not portable. This is a trade-off you accept for the speed of visual development.</li></ul>
-            </div>
-        </div>
-
-        <div class="faq-section"><h3>FAQ</h3><div class="faq-item">
-                    <details>
-                        <summary>How is Relevance AI different from building agents with LangChain or CrewAI?</summary>
-                        <div class="faq-answer"><p>LangChain and CrewAI are code frameworks — you write Python to define agent logic, manage state, and handle errors. Relevance AI gives you a visual interface where you drag blocks instead of writing code. The trade-off: Relevance gets you to production 5-10x faster for standard agent patterns (RAG chatbots, lead qualifiers, data extractors), but it limits you when you need custom behavior that does not fit the block model. For most client projects — the kind where a small business needs a support bot or a lead scoring agent — Relevance is the faster path to revenue. For complex multi-agent systems with custom memory architectures and dynamic tool selection, LangChain or CrewAI give you more control. I use both: Relevance for client work where speed matters, LangChain for custom projects where the client has specific technical requirements.
+            <div class="td-faq"><h2 class="td-faq-head">Questions we get asked</h2><div class="td-faq-item">
+                    <h3>How is Relevance AI different from building agents with LangChain or CrewAI?</h3>
+                    <div class="td-faq-a"><p>LangChain and CrewAI are code frameworks — you write Python to define agent logic, manage state, and handle errors. Relevance AI gives you a visual interface where you drag blocks instead of writing code. The trade-off: Relevance gets you to production 5-10x faster for standard agent patterns (RAG chatbots, lead qualifiers, data extractors), but it limits you when you need custom behavior that does not fit the block model. For most client projects — the kind where a small business needs a support bot or a lead scoring agent — Relevance is the faster path to revenue. For complex multi-agent systems with custom memory architectures and dynamic tool selection, LangChain or CrewAI give you more control. I use both: Relevance for client work where speed matters, LangChain for custom projects where the client has specific technical requirements.
 </p></div>
-                    </details>
                 </div>
-<div class="faq-item">
-                    <details>
-                        <summary>Can you actually make money building agents on Relevance AI as a solo consultant?</summary>
-                        <div class="faq-answer"><p>Yes, and the numbers work better than most people expect. Here is the model I run: target small and mid-size businesses (10-200 employees) in B2B industries — logistics, real estate, professional services, e-commerce. These companies have operational inefficiencies that agents solve but zero engineering capacity to build them. Typical project: $1,500-$3,000 build fee for a single agent (lead qualifier, support bot, onboarding assistant), plus $100-$300/month maintenance retainer per client. With 8-10 active clients delivering 2-3 new agents per month, that is $5,000-$9,000 in build fees plus $800-$3,000 in monthly recurring revenue. Operating costs: Relevance Pro plan ($49/month), OpenAI/Anthropic API costs passed through to clients ($50-$200/month total across clients), and your time. Full-time solo consultants doing this are hitting $8,000-$15,000/month within 6-12 months. The key is niching into a specific industry where you can reuse agent templates across clients — logistics dispatch agents, real estate lead qualifiers, legal document reviewers — rather than building bespoke agents for random industries every time.
+<div class="td-faq-divider"></div>
+<div class="td-faq-item">
+                    <h3>Can you actually make money building agents on Relevance AI as a solo consultant?</h3>
+                    <div class="td-faq-a"><p>Yes, and the numbers work better than most people expect. Here is the model I run: target small and mid-size businesses (10-200 employees) in B2B industries — logistics, real estate, professional services, e-commerce. These companies have operational inefficiencies that agents solve but zero engineering capacity to build them. Typical project: $1,500-$3,000 build fee for a single agent (lead qualifier, support bot, onboarding assistant), plus $100-$300/month maintenance retainer per client. With 8-10 active clients delivering 2-3 new agents per month, that is $5,000-$9,000 in build fees plus $800-$3,000 in monthly recurring revenue. Operating costs: Relevance Pro plan ($49/month), OpenAI/Anthropic API costs passed through to clients ($50-$200/month total across clients), and your time. Full-time solo consultants doing this are hitting $8,000-$15,000/month within 6-12 months. The key is niching into a specific industry where you can reuse agent templates across clients — logistics dispatch agents, real estate lead qualifiers, legal document reviewers — rather than building bespoke agents for random industries every time.
 </p></div>
-                    </details>
                 </div>
-<div class="faq-item">
-                    <details>
-                        <summary>What is the biggest mistake people make when they start building agents on Relevance AI?</summary>
-                        <div class="faq-answer"><p>Building agents that try to do too much. I see new builders create a 'universal business assistant' that handles support, sales, onboarding, data analysis, and content creation in one workflow. The agent breaks constantly, debugging takes days, and the client gets frustrated because it does nothing well. The better approach: build single-purpose agents that do one thing reliably. An agent that only reads inbound emails and classifies them as lead/support/spam. An agent that only answers questions from a specific product manual. An agent that only generates weekly sales summaries from a CRM. When you have 3-4 reliable single-purpose agents, you can chain them together. But starting with one broken mega-agent is the fastest way to lose a client. I wasted 3 months on a 40-block workflow in 2025 that never worked reliably, then rebuilt it as 4 separate agents connected through webhooks — the rebuild took one week and has been running without issues for a year.
+<div class="td-faq-divider"></div>
+<div class="td-faq-item">
+                    <h3>What is the biggest mistake people make when they start building agents on Relevance AI?</h3>
+                    <div class="td-faq-a"><p>Building agents that try to do too much. I see new builders create a 'universal business assistant' that handles support, sales, onboarding, data analysis, and content creation in one workflow. The agent breaks constantly, debugging takes days, and the client gets frustrated because it does nothing well. The better approach: build single-purpose agents that do one thing reliably. An agent that only reads inbound emails and classifies them as lead/support/spam. An agent that only answers questions from a specific product manual. An agent that only generates weekly sales summaries from a CRM. When you have 3-4 reliable single-purpose agents, you can chain them together. But starting with one broken mega-agent is the fastest way to lose a client. I wasted 3 months on a 40-block workflow in 2025 that never worked reliably, then rebuilt it as 4 separate agents connected through webhooks — the rebuild took one week and has been running without issues for a year.
 </p></div>
-                    </details>
                 </div>
 </div>
 
-        <div class="author-block">
+            <div class="author-block">
         <div class="author-block-inner">
             <div class="author-avatar">A</div>
             <div class="author-body">
@@ -452,7 +429,7 @@
         </div>
     </div>
 
-        <div class="related-tools" id="relatedSection">
+            <div class="related-tools" id="relatedSection">
             <h3>Related Tools</h3>
             <div class="related-grid"><a href="/tools/make/" class="related-card">
                 <img class="tool-logo related-tile" src="/assets/icons/make.svg" alt="Make" width="40" height="40" loading="lazy" decoding="async">
@@ -482,7 +459,7 @@
 </div>
         </div>
 
-        <div class="related-tools">
+            <div class="related-tools">
                 <h3>Related Articles</h3>
                 <div class="related-grid"><a href="/articles/best-serverless-functions-pricing-2026-aws-lambda-vs-cloudflare-workers-vs-vercel-vs-deno-deploy/" class="related-card">
                     <div style="font-weight:600;margin-bottom:4px;">Serverless Functions Pricing in 2026: AW</div>
@@ -498,6 +475,7 @@
                 </a>
 </div>
             </div>
+        </div>
     </main>
 
     <footer class="footer">

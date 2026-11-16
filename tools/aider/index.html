@@ -21,7 +21,7 @@
     <meta name="twitter:title" content="Aider Review 2026 - AI Tool Lab">
     <meta name="twitter:description" content="Aider is an open-source AI pair programming tool that lives in your terminal. It reads your entire Git repo, understands">
     <meta name="twitter:image" content="https://www.aitoolbox.hk/images/og/aider-en-og.png">
-    <link rel="stylesheet" href="/css/style.css?v=20261116155217">
+    <link rel="stylesheet" href="/css/style.css?v=20261116185308">
     <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -250,53 +250,47 @@
         </div>
     </header>
 
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-        <a href="/">Home</a> &gt; <a href="/category/ai-coding/">AI Coding</a> &gt; <span>Aider</span>
+    <nav class="breadcrumb td-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a><span class="sep">/</span><a href="/category/ai-coding/">AI Coding</a><span class="sep">/</span><span>Aider</span>
     </nav>
 
-    <main class="article-container">
-        <div class="tool-header">
-            <div class="tool-header-top">
+    <main>
+        <section class="td-hero">
+            <div class="td-identity">
                 <img class="tool-logo tool-icon-lg" src="/assets/icons/aider.png" alt="Aider" width="56" height="56" loading="lazy" decoding="async">
-                <div class="tool-header-info">
-                    <div class="tool-title-row"><h1>Aider</h1><span class="status-chip status-verified">Verified</span></div>
-                    <p class="subtitle">Aider is an open-source AI pair programming tool that lives in your terminal. It reads your entire Git repo, understands the codebase, and makes multi-file edits from plain English prompts — no IDE plugin, no cloud dependency. The money angle: freelance devs and small agencies use it to ship client projects 2-3x faster. One person handling 4-5 clients solo is the standard Aider power-user story.</p>
-                    <div class="rating-bar">⭐ 4.6 <span style="font-size:14px;color:#999;">(180K visits)</span></div>
+                <h1>Aider</h1>
+                <p class="td-summary">Aider is an open-source AI pair programming tool that lives in your terminal. It reads your entire Git repo, understands the codebase, and makes multi-file edits from plain English prompts — no IDE plugin, no cloud dependency. The money angle: freelance devs and small agencies use it to ship client projects 2-3x faster. One person handling 4-5 clients solo is the standard Aider power-user story.</p>
+                <div class="td-chips">
+                    <span class="td-chip td-chip-neutral">AI Coding</span>
+                    
+                    <span class="td-chip td-chip-verified">✓ Independently reviewed</span>
                 </div>
             </div>
-            <div class="tool-meta">
-                <div class="tool-meta-item"><strong>Website</strong>: aider.chat</div>
-                <div class="tool-meta-item"><strong>Price</strong>: Free (open source). You bring your own LLM API key.</div>
-                <div class="tool-meta-item"><strong>Platform</strong>: macOS, Linux, Windows (terminal)</div>
-                <div class="tool-meta-item"><strong>Category</strong>: AI Coding</div>
-            </div>
-            <div class="action-bar">
-                <a href="https://aider.chat" target="_blank" rel="noopener" class="action-btn action-btn-primary">Visit Aider →</a>
-            </div>
+            <aside class="td-score-card">
+                <div class="td-score-label">EDITOR SCORE</div>
+                <div class="td-score-value">4.6 / 5</div>
+                <div class="td-score-note">✓ Verified  ·  Independently tested</div>
+                <a class="td-visit-btn" href="https://aider.chat" target="_blank" rel="noopener">Visit Aider →</a>
+            </aside>
+        </section>
+
+        <div class="td-body">
+            <div class="td-proscons">
+            <div class="td-card"><div class="td-card-head pros">WHAT WORKS</div><ul><li>✓&nbsp;&nbsp;Actually understands your codebase. Not fuzzy matching — it reads the full repo map and knows which files depend on which. When you say &quot;refactor the payment module to use async,&quot; it touches all the right files and none of the wrong ones</li><li>✓&nbsp;&nbsp;Model-agnostic. Claude 3.5 Sonnet for complex refactors where correctness matters. GPT-4o for speed. Gemini Flash when you want to go fast and cheap. DeepSeek when you are on a budget. No lock-in, no forced upgrade treadmill</li><li>✓&nbsp;&nbsp;Open source with a real community. GitHub issues get answered. PRs get merged. The documentation is good enough that you rarely get stuck, and when you do, the Discord is full of people who already solved your exact problem</li><li>✓&nbsp;&nbsp;Multi-file edits that actually work. Ask it to extract a shared utility function used across 8 files — it finds all the call sites, refactors them, and updates the imports. The kind of grunt work that burns 2 hours of a developer's afternoon</li><li>✓&nbsp;&nbsp;Git integration is native, not bolted on. Every change gets a clean, descriptive commit message automatically. Reverts are one command. No merge conflicts from generated code because it works on the current working state</li></ul></div>
+            <div class="td-card"><div class="td-card-head cons">LIMITATIONS</div><ul><li>—&nbsp;&nbsp;Terminal-only. If you have never used a command line, this tool is not for you. There is no GUI, no VS Code extension, no web interface. The learning curve starts at &quot;comfortable with bash&quot; and goes up from there</li><li>—&nbsp;&nbsp;API costs are not zero. Running Aider on GPT-4o for a full day of coding burns $1-3 in API fees. Claude 3.5 Sonnet costs about the same. It is cheap for what you get, but it is not free in practice — budget $20-50/month in API costs for heavy use</li><li>—&nbsp;&nbsp;Large monorepos slow it down. On projects under 50K lines, Aider is snappy. Past 100K lines, the repo map generation takes 5-10 seconds per prompt and the context window gets tight. You will need to learn strategies like limiting the file scope</li><li>—&nbsp;&nbsp;It gets confused on heavily abstracted codebases. If your project has 6 layers of inheritance and dependency injection frameworks, Aider's analysis gets shallow. It works best with straightforward code where the call chain is visible from the surface</li><li>—&nbsp;&nbsp;No built-in copilot-style inline autocomplete. Aider is a chat-based pair programmer — you describe what you want and it does it. If you want tab-to-complete as you type, use Copilot or Cursor alongside it</li></ul></div>
         </div>
 
-        <div class="tldr-box">
-            <strong>TL;DR</strong>
-            <p>Aider is an open-source AI pair programming tool that lives in your terminal. It reads your entire Git repo, understands the codebase, and makes multi-file edits from plain English prompts — no IDE plugin, no cloud dependency. The money angle: freelance devs and small agencies use it to ship client projects 2-3x faster. One person handling 4-5 clients solo is the standard Aider power-user story.</p>
+            <div class="td-card td-pricing">
+        <div class="td-card-head faint">PRICING&nbsp;·&nbsp;UPDATED 16 Nov 2026</div>
+        <div class="td-price-tile">
+            <div class="td-price-label">CURRENT PRICING</div>
+            <div class="td-price-value">Free (open source). You bring your own LLM API key.</div>
+            
         </div>
+    </div>
 
-        <div class="key-stats">
-            <h4>Key Statistics</h4>
-            <div class="ks-grid"><div class="ks-item"><span class="ks-val">4.6</span><span class="ks-label">User Rating</span></div><div class="ks-item"><span class="ks-val">180K</span><span class="ks-label">Monthly Visits</span></div><div class="ks-item"><span class="ks-val">Free (open source). You bring your own LLM API key.</span><span class="ks-label">Pricing</span></div><div class="ks-item"><span class="ks-val">macOS, Linux, Windows (terminal)</span><span class="ks-label">Platform</span></div></div>
-        </div>
-
-        <div class="features-grid"><div class="feature-item">Full repo map generation — scans your entire project and builds a dependency graph showing which files import which, what classes extend what, what functions call what</div>
-<div class="feature-item">Multi-file refactoring from natural language prompts — "split this 800-line service into smaller modules" → Aider creates the files, moves the code, updates all imports, and runs your tests</div>
-<div class="feature-item">Native Git integration with automatic commit messages — every change committed with a detailed message explaining what changed and why</div>
-<div class="feature-item">Multi-model support — Claude 3.5 Sonnet, GPT-4o, Gemini, DeepSeek, local models via Ollama, and anything with an OpenAI-compatible API</div>
-<div class="feature-item">Voice coding mode — speak your changes instead of typing them. Surprisingly usable for quick edits and simple refactors, less useful for explaining complex architecture changes</div>
-<div class="feature-item">In-chat shell command execution — Aider can run tests, linters, and build commands as part of the coding loop, catching errors before they reach your commit</div>
-<div class="feature-item">Architect + Editor mode — two-model workflow where a reasoning model plans the changes and a faster model executes them, saving money on token-heavy thinking models</div>
-<div class="feature-item">Custom rules file — define project-specific conventions (naming, libraries, patterns) that Aider follows across every prompt</div>
-</div>
-
-        <article class="article-body" data-tts>
-            <h2>What Is Aider?</h2>
+            <article class="article-body" data-tts>
+                <h2>What Is Aider?</h2>
 
 <p>Aider is an open-source AI pair programmer that runs in your terminal. You point it at a Git repo, tell it what you want in plain English, and it reads your entire codebase, figures out what needs to change, and makes multi-file edits. Think of it as a senior developer who joins your project, reads all the code, and then actually writes the changes — not just suggests them.
 </p>
@@ -405,50 +399,34 @@
 
 <p>For freelance developers who bill by the project and want to ship faster without sacrificing quality, Aider is the highest-ROI tool in my toolkit. The $30/month API cost is noise compared to the extra $4,000-8,000/month in project throughput. If you are already comfortable with Git and the command line, you can be productive with Aider within a week. If you are not comfortable with either, invest those skills first — the tool assumes you have them.
 </p>
-        </article>
+            </article>
 
-        <div class="pros-cons">
-            <div class="pros">
-                <h4>Pros</h4>
-                <ul><li>Actually understands your codebase. Not fuzzy matching — it reads the full repo map and knows which files depend on which. When you say "refactor the payment module to use async," it touches all the right files and none of the wrong ones</li><li>Model-agnostic. Claude 3.5 Sonnet for complex refactors where correctness matters. GPT-4o for speed. Gemini Flash when you want to go fast and cheap. DeepSeek when you are on a budget. No lock-in, no forced upgrade treadmill</li><li>Open source with a real community. GitHub issues get answered. PRs get merged. The documentation is good enough that you rarely get stuck, and when you do, the Discord is full of people who already solved your exact problem</li><li>Multi-file edits that actually work. Ask it to extract a shared utility function used across 8 files — it finds all the call sites, refactors them, and updates the imports. The kind of grunt work that burns 2 hours of a developer's afternoon</li><li>Git integration is native, not bolted on. Every change gets a clean, descriptive commit message automatically. Reverts are one command. No merge conflicts from generated code because it works on the current working state</li></ul>
-            </div>
-            <div class="cons">
-                <h4>Cons</h4>
-                <ul><li>Terminal-only. If you have never used a command line, this tool is not for you. There is no GUI, no VS Code extension, no web interface. The learning curve starts at "comfortable with bash" and goes up from there</li><li>API costs are not zero. Running Aider on GPT-4o for a full day of coding burns $1-3 in API fees. Claude 3.5 Sonnet costs about the same. It is cheap for what you get, but it is not free in practice — budget $20-50/month in API costs for heavy use</li><li>Large monorepos slow it down. On projects under 50K lines, Aider is snappy. Past 100K lines, the repo map generation takes 5-10 seconds per prompt and the context window gets tight. You will need to learn strategies like limiting the file scope</li><li>It gets confused on heavily abstracted codebases. If your project has 6 layers of inheritance and dependency injection frameworks, Aider's analysis gets shallow. It works best with straightforward code where the call chain is visible from the surface</li><li>No built-in copilot-style inline autocomplete. Aider is a chat-based pair programmer — you describe what you want and it does it. If you want tab-to-complete as you type, use Copilot or Cursor alongside it</li></ul>
-            </div>
-        </div>
-
-        <div class="faq-section"><h3>FAQ</h3><div class="faq-item">
-                    <details>
-                        <summary>Can I actually make more money as a freelance developer using Aider?</summary>
-                        <div class="faq-answer"><p>Yes, and the math is straightforward. The average freelance web developer charges $75-150/hour and bills maybe 25 productive hours a week. The other 15-20 hours go to context-switching, debugging, writing boilerplate, and refactoring. Aider cuts the non-billable time by 40-60%. If you reclaim even 8 hours a week and redirect 4 of them to billable client work at $100/hour, that is $1,600/month in extra revenue — for a tool that costs $20-50/month in API fees. The real money is in project-based pricing: quote a client $8,000 for a 4-week project, deliver it in 2 weeks with Aider, and take another $8,000 project in the freed-up 2 weeks. Double throughput without doubling hours. This is not theoretical — I talked to a solo dev on the Aider Discord who went from 3 simultaneous clients to 7 in six months after adopting the tool, and his code quality actually improved because the grunt work was handled by the AI while he focused on architecture and edge cases.
+            <div class="td-faq"><h2 class="td-faq-head">Questions we get asked</h2><div class="td-faq-item">
+                    <h3>Can I actually make more money as a freelance developer using Aider?</h3>
+                    <div class="td-faq-a"><p>Yes, and the math is straightforward. The average freelance web developer charges $75-150/hour and bills maybe 25 productive hours a week. The other 15-20 hours go to context-switching, debugging, writing boilerplate, and refactoring. Aider cuts the non-billable time by 40-60%. If you reclaim even 8 hours a week and redirect 4 of them to billable client work at $100/hour, that is $1,600/month in extra revenue — for a tool that costs $20-50/month in API fees. The real money is in project-based pricing: quote a client $8,000 for a 4-week project, deliver it in 2 weeks with Aider, and take another $8,000 project in the freed-up 2 weeks. Double throughput without doubling hours. This is not theoretical — I talked to a solo dev on the Aider Discord who went from 3 simultaneous clients to 7 in six months after adopting the tool, and his code quality actually improved because the grunt work was handled by the AI while he focused on architecture and edge cases.
 </p></div>
-                    </details>
                 </div>
-<div class="faq-item">
-                    <details>
-                        <summary>Aider vs Cursor vs GitHub Copilot — which one should I use?</summary>
-                        <div class="faq-answer"><p>Use all of them, actually. They solve different problems. Copilot is best for inline autocomplete — when you are typing a function and it guesses the next 3 lines, that is Copilot's wheelhouse. Cursor is best for IDE-level AI features — in-editor chat that sees your open files, one-click apply of suggested diffs, and a polished UI experience. Aider is best for multi-file refactoring and project-level changes — when you need to touch 10+ files, understand imports, and keep the whole codebase consistent. My actual workflow: Copilot for the tab-to-accept completions as I type, Cursor for quick file-level edits with a nice diff preview, and Aider for the big structural refactors where understanding the full repo matters. None of them replaces the others. If I had to pick one for freelancing productivity, it would be Aider — the multi-file capability and the ability to hand off entire chunks of grunt work is where the real time savings happen.
+<div class="td-faq-divider"></div>
+<div class="td-faq-item">
+                    <h3>Aider vs Cursor vs GitHub Copilot — which one should I use?</h3>
+                    <div class="td-faq-a"><p>Use all of them, actually. They solve different problems. Copilot is best for inline autocomplete — when you are typing a function and it guesses the next 3 lines, that is Copilot's wheelhouse. Cursor is best for IDE-level AI features — in-editor chat that sees your open files, one-click apply of suggested diffs, and a polished UI experience. Aider is best for multi-file refactoring and project-level changes — when you need to touch 10+ files, understand imports, and keep the whole codebase consistent. My actual workflow: Copilot for the tab-to-accept completions as I type, Cursor for quick file-level edits with a nice diff preview, and Aider for the big structural refactors where understanding the full repo matters. None of them replaces the others. If I had to pick one for freelancing productivity, it would be Aider — the multi-file capability and the ability to hand off entire chunks of grunt work is where the real time savings happen.
 </p></div>
-                    </details>
                 </div>
-<div class="faq-item">
-                    <details>
-                        <summary>Do I need to be a senior developer to use Aider effectively?</summary>
-                        <div class="faq-answer"><p>You need to be at a level where you can read and understand the code Aider generates. If you blindly accept every change without reviewing it, you will ship bugs — Aider makes mistakes, especially on edge cases and complex business logic. The developers who get the most value from Aider are the ones who treat it like a junior pair programmer: they give clear instructions, review every diff carefully, run the tests, and catch the mistakes before they reach production. If you are a junior dev, Aider can accelerate your learning — ask it to explain why it made a change, compare alternative approaches, and walk through the reasoning. But do not make it your sole code author until you can reliably spot when it is wrong. The sweet spot is mid-level to senior developers who already know what good code looks like and just want to type less and ship faster.
+<div class="td-faq-divider"></div>
+<div class="td-faq-item">
+                    <h3>Do I need to be a senior developer to use Aider effectively?</h3>
+                    <div class="td-faq-a"><p>You need to be at a level where you can read and understand the code Aider generates. If you blindly accept every change without reviewing it, you will ship bugs — Aider makes mistakes, especially on edge cases and complex business logic. The developers who get the most value from Aider are the ones who treat it like a junior pair programmer: they give clear instructions, review every diff carefully, run the tests, and catch the mistakes before they reach production. If you are a junior dev, Aider can accelerate your learning — ask it to explain why it made a change, compare alternative approaches, and walk through the reasoning. But do not make it your sole code author until you can reliably spot when it is wrong. The sweet spot is mid-level to senior developers who already know what good code looks like and just want to type less and ship faster.
 </p></div>
-                    </details>
                 </div>
-<div class="faq-item">
-                    <details>
-                        <summary>How much do the API costs actually add up to per month?</summary>
-                        <div class="faq-answer"><p>Depends on your model and usage patterns. Here is what real users report: light use (1-2 hours/day, Claude 3.5 Sonnet or GPT-4o) = $10-20/month. Moderate use (4-6 hours/day, same models) = $30-50/month. Heavy use (8+ hours/day, large codebases, Architect mode enabled) = $80-150/month. The money-saving trick is to use cheaper models for simple tasks: DeepSeek V3 costs about $2/month for light use and handles basic refactors and boilerplate generation fine. Use the expensive models (Sonnet, GPT-4o) only for the complex multi-file work where correctness is critical. Architect + Editor mode also helps — let the expensive reasoning model plan the changes, then use a cheaper model to execute them. Net cost for the average freelancer using this strategy: $25-40/month. At $100/hour billing rate, if Aider saves you 25 minutes a month, it has paid for itself.
+<div class="td-faq-divider"></div>
+<div class="td-faq-item">
+                    <h3>How much do the API costs actually add up to per month?</h3>
+                    <div class="td-faq-a"><p>Depends on your model and usage patterns. Here is what real users report: light use (1-2 hours/day, Claude 3.5 Sonnet or GPT-4o) = $10-20/month. Moderate use (4-6 hours/day, same models) = $30-50/month. Heavy use (8+ hours/day, large codebases, Architect mode enabled) = $80-150/month. The money-saving trick is to use cheaper models for simple tasks: DeepSeek V3 costs about $2/month for light use and handles basic refactors and boilerplate generation fine. Use the expensive models (Sonnet, GPT-4o) only for the complex multi-file work where correctness is critical. Architect + Editor mode also helps — let the expensive reasoning model plan the changes, then use a cheaper model to execute them. Net cost for the average freelancer using this strategy: $25-40/month. At $100/hour billing rate, if Aider saves you 25 minutes a month, it has paid for itself.
 </p></div>
-                    </details>
                 </div>
 </div>
 
-        <div class="author-block">
+            <div class="author-block">
         <div class="author-block-inner">
             <div class="author-avatar">A</div>
             <div class="author-body">
@@ -459,7 +437,7 @@
         </div>
     </div>
 
-        <div class="related-tools" id="relatedSection">
+            <div class="related-tools" id="relatedSection">
             <h3>Related Tools</h3>
             <div class="related-grid"><a href="/tools/github-copilot/" class="related-card">
                 <img class="tool-logo related-tile" src="/assets/icons/github-copilot.png" alt="GitHub Copilot" width="40" height="40" loading="lazy" decoding="async">
@@ -489,7 +467,7 @@
 </div>
         </div>
 
-        <div class="related-tools">
+            <div class="related-tools">
                 <h3>Related Articles</h3>
                 <div class="related-grid"><a href="/articles/best-serverless-functions-pricing-2026-aws-lambda-vs-cloudflare-workers-vs-vercel-vs-deno-deploy/" class="related-card">
                     <div style="font-weight:600;margin-bottom:4px;">Serverless Functions Pricing in 2026: AW</div>
@@ -505,6 +483,7 @@
                 </a>
 </div>
             </div>
+        </div>
     </main>
 
     <footer class="footer">

@@ -3238,3 +3238,247 @@ img.tool-logo.ft-icon      { width: 56px; height: 56px; padding: 9px; border-rad
   font-size: 16px;
   margin: 0 0 28px;
 }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   TOOL DETAIL v2 — 1:1 implementation of design frame "04 Tool Detail"
+   (Ardot canvas 747573810851775 · ops OP15-OP17)
+   Structure: breadcrumb → white hero band (identity + score card + CTA)
+   → review body (pros/cons cards · pricing card · editorial body · FAQ)
+   All colours ride the Visual System v2 tokens, so dark mode follows
+   [data-theme="dark"] automatically.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+:root {
+  --text-faint: #8A8880;
+  --chip-neutral: #F1F0EC;
+}
+[data-theme="dark"] {
+  --text-faint: #7A828D;
+  --chip-neutral: #20262F;
+}
+
+/* Breadcrumb — 12px muted, slash separators, generous top air */
+.td-breadcrumb {
+  background: var(--body-bg);
+  padding: 24px clamp(24px, 8.33vw, 120px) 8px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--text-faint);
+}
+.td-breadcrumb a { color: var(--text-faint); text-decoration: none; }
+.td-breadcrumb a:hover { color: var(--brand-blue); }
+.td-breadcrumb .sep { color: var(--border-subtle); }
+.td-breadcrumb [aria-current] { color: var(--text-faint); }
+
+/* Tool Hero — full-bleed white band, identity left / score card right */
+.td-hero {
+  background: var(--surface-bg);
+  padding: 40px clamp(24px, 8.33vw, 120px);
+  display: flex;
+  gap: 48px;
+  align-items: flex-start;
+}
+.td-identity {
+  flex: 1 1 720px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.td-identity .tool-icon-lg,
+.td-identity .tool-logo.tool-icon-lg {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+}
+.td-identity h1 {
+  font-family: var(--font-display);
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -1px;
+  color: var(--text-main);
+  margin: 0;
+}
+.td-summary {
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--text-muted);
+  max-width: 640px;
+  margin: 0;
+}
+.td-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.td-chip {
+  display: inline-flex;
+  align-items: center;
+  height: 26px;
+  padding: 0 10px;
+  border-radius: var(--radius-sm);
+  font-size: 11px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.td-chip-neutral { background: var(--chip-neutral); color: var(--text-muted); }
+.td-chip-verified { background: var(--signal-green-soft); color: var(--signal-green); }
+
+/* Score card — paper tile with mono score and the single orange CTA */
+.td-score-card {
+  flex: 0 0 360px;
+  width: 360px;
+  background: var(--body-bg);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.td-score-label {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: var(--text-faint);
+}
+.td-score-value {
+  font-family: var(--font-mono);
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--brand-blue);
+  font-variant-numeric: tabular-nums;
+}
+.td-score-note {
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--signal-green);
+}
+.td-score-note.muted { color: var(--text-muted); }
+.td-visit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background: var(--signal-orange);
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: filter .15s ease;
+}
+.td-visit-btn:hover { filter: brightness(.94); color: #FFFFFF; }
+
+/* Review body — paper background, vertical rhythm 28px */
+.td-body {
+  background: var(--body-bg);
+  padding: 48px clamp(24px, 8.33vw, 120px);
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* Pros / Cons — two equal white cards */
+.td-proscons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.td-card {
+  background: var(--surface-bg);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.td-card-head {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.td-card-head.pros  { color: var(--signal-green); }
+.td-card-head.cons  { color: var(--signal-red); }
+.td-card-head.faint { color: var(--text-faint); }
+.td-proscons ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.td-proscons li {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text-main);
+}
+
+/* Pricing card — prominent mono price tile, plan data stays data-driven */
+.td-price-tile {
+  background: var(--body-bg);
+  border-radius: var(--radius-md);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.td-price-label {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: var(--text-faint);
+}
+.td-price-value {
+  font-family: var(--font-mono);
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--text-main);
+}
+.td-price-detail {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+/* FAQ — serif headline, open Q/A pairs, hairline dividers */
+.td-faq {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 860px;
+}
+.td-faq-head {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-main);
+  margin: 0 0 4px;
+}
+.td-faq-item { display: flex; flex-direction: column; gap: 6px; }
+.td-faq-item h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-main);
+  margin: 0;
+}
+.td-faq-a {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+.td-faq-divider { height: 1px; background: var(--border-subtle); }
+
+/* Responsive — stack the hero under 1024px, single column cards under 720px */
+@media (max-width: 1024px) {
+  .td-hero { flex-direction: column; gap: 24px; }
+  .td-score-card { flex: 1 1 auto; width: 100%; }
+}
+@media (max-width: 720px) {
+  .td-proscons { grid-template-columns: 1fr; }
+  .td-identity h1 { font-size: 34px; }
+}

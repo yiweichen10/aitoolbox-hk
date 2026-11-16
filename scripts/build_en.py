@@ -108,6 +108,16 @@ def tool_tile(tool: dict, css_class: str = 'tool-icon') -> str:
             f'{escape_html(letter)}</div>')
 
 
+def status_role(tool: dict) -> str:
+    """'verified' | 'choice' | 'trending' | '' — semantic role of the tool's badge."""
+    b = tool.get('badge') or {}
+    text = str(b.get('text') or '').strip()
+    if not text or text.lower() in ('none', 'null', 'n/a'):
+        return ''
+    return {'new': 'verified', 'pick': 'choice', 'hot': 'trending'}.get(
+        str(b.get('type') or '').lower(), 'verified')
+
+
 def status_chip(tool: dict) -> str:
     """Three semantic badge roles only.
 
@@ -477,54 +487,40 @@ def build_tool_page_en(tool: dict, all_tools: list, all_articles: list = None) -
                 <div class="related-grid">{cards}</div>
             </div>'''
 
-    # Pros / cons
+    # Pros / cons — design frame 04: two white cards, green/red kickers, ✓/— list items
     pros_cons_html = ''
     if tool.get('pros') and tool.get('cons'):
-        pros_html = ''.join(f'<li>{p}</li>' for p in tool['pros'])
-        cons_html = ''.join(f'<li>{c}</li>' for c in tool['cons'])
-        pros_cons_html = f'''<div class="pros-cons">
-            <div class="pros">
-                <h4>Pros</h4>
-                <ul>{pros_html}</ul>
-            </div>
-            <div class="cons">
-                <h4>Cons</h4>
-                <ul>{cons_html}</ul>
-            </div>
+        pros_items = ''.join(f'<li>✓&nbsp;&nbsp;{escape_html(p)}</li>' for p in tool['pros'])
+        cons_items = ''.join(f'<li>—&nbsp;&nbsp;{escape_html(c)}</li>' for c in tool['cons'])
+        pros_cons_html = f'''<div class="td-proscons">
+            <div class="td-card"><div class="td-card-head pros">WHAT WORKS</div><ul>{pros_items}</ul></div>
+            <div class="td-card"><div class="td-card-head cons">LIMITATIONS</div><ul>{cons_items}</ul></div>
         </div>'''
 
-    # Features
-    features_html = ''
-    if tool.get('features'):
-        items = ''.join(f'<div class="feature-item">{f}</div>\n' for f in tool['features'])
-        features_html = f'<div class="features-grid">{items}</div>'
-
-    # FAQ
+    # FAQ — design frame 04: serif headline, open Q/A pairs with hairline dividers
     faq_html   = ''
     faq_schema = []
     if tool.get('faq'):
+        faq_items = ''
         for fi in tool['faq']:
             q, a = fi.get('question',''), fi.get('answer','')
             if q and a:
-                faq_html += f'''<div class="faq-item">
-                    <details>
-                        <summary>{escape_html(q)}</summary>
-                        <div class="faq-answer">{markdown_to_html(a)}</div>
-                    </details>
+                if faq_items:
+                    faq_items += '<div class="td-faq-divider"></div>\n'
+                faq_items += f'''<div class="td-faq-item">
+                    <h3>{escape_html(q)}</h3>
+                    <div class="td-faq-a">{markdown_to_html(a)}</div>
                 </div>\n'''
                 faq_schema.append({'@type':'Question','name':plain_text_for_schema(q),'acceptedAnswer':{'@type':'Answer','text':plain_text_for_schema(a)}})
-        if faq_html:
-            faq_html = f'<div class="faq-section"><h3>FAQ</h3>{faq_html}</div>'
+        if faq_items:
+            faq_html = f'<div class="td-faq"><h2 class="td-faq-head">Questions we get asked</h2>{faq_items}</div>'
 
     faq_page_schema = ''
     if faq_schema:
         faq_sd = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":faq_schema}
         faq_page_schema = f'<script type="application/ld+json">{json.dumps(faq_sd, ensure_ascii=False)}</script>'
 
-    # Badge
-    badge_html = status_chip(tool)
-
-    # Platform — hero meta line shows a short label only; long prose stays out of the layout
+    # Platform — a short label may appear as a neutral chip in the hero identity
     def _short_stat(value: str, limit: int) -> str:
         """Shorten a stat value for display: first sentence only, hard-capped."""
         v = (value or '').strip()
@@ -536,11 +532,6 @@ def build_tool_page_en(tool: dict, all_tools: list, all_articles: list = None) -
                 return v[:idx + 1].strip()
         return v[:limit - 1].rstrip() + '…'
     platform_short = _short_stat(tool.get('platform', ''), 60) if tool.get('platform') else ''
-    platform_full = (tool.get('platform') or '').strip()
-    platform_html = ''
-    if platform_short:
-        title_attr = f' title="{escape_html(platform_full)}"' if len(platform_full) > 60 else ''
-        platform_html = f'<div class="tool-meta-item"{title_attr}><strong>Platform</strong>: {escape_html(platform_short)}</div>'
 
     # Dates
     today_iso   = datetime.now().strftime('%Y-%m-%d')
@@ -675,35 +666,39 @@ def build_tool_page_en(tool: dict, all_tools: list, all_articles: list = None) -
     breadcrumb_json  = json.dumps(breadcrumb_data,  ensure_ascii=False, indent=2)
     structured_json  = json.dumps(software_data,    ensure_ascii=False, indent=2)
 
-    # TL;DR box (GEO — answer-first, citation optimized)
-    tldr_html = ''
-    desc_short = tool.get('description','')
-    if desc_short:
-        tldr_html = f'''<div class="tldr-box">
-            <strong>TL;DR</strong>
-            <p>{escape_html(desc_short)}</p>
-        </div>'''
+    # Tool Detail v2 (design frame 04) — hero identity + editor score card
+    score_val = str(tool.get('rating', '')).replace('⭐', '').replace('/ 5', '').strip()
+    role = status_role(tool)
+    score_notes = {
+        'choice': "★ Editor's Choice  ·  Based on hands-on paid testing",
+        'verified': "✓ Verified  ·  Independently tested",
+        'trending': "↑ Trending  ·  Fast-growing adoption",
+    }
+    score_note = score_notes.get(role, 'Based on hands-on testing')
+    score_note_cls = '' if role else ' muted'
 
-    # Key Stats section (GEO — citation-worthy data points AI engines can quote)
-    # Cards must stay scannable: only short values qualify as stats. Long prose
-    # fields (some legacy data has paragraphs in visits/platform) are dropped here —
-    # the same information lives in the TL;DR box and the review body.
-    key_stats_html = ''
-    stat_items = []
-    visits_val = (tool.get('visits') or '').strip()
-    if tool.get('rating'):
-        stat_items.append(f'<div class="ks-item"><span class="ks-val">{tool["rating"].replace("⭐ ","")}</span><span class="ks-label">User Rating</span></div>')
-    if visits_val and len(visits_val) <= 40:
-        stat_items.append(f'<div class="ks-item"><span class="ks-val">{escape_html(visits_val)}</span><span class="ks-label">Monthly Visits</span></div>')
-    if tool.get('price'):
-        stat_items.append(f'<div class="ks-item"><span class="ks-val">{escape_html(tool["price"])}</span><span class="ks-label">Pricing</span></div>')
-    if platform_short:
-        stat_items.append(f'<div class="ks-item"><span class="ks-val">{escape_html(platform_short)}</span><span class="ks-label">Platform</span></div>')
-    if stat_items:
-        key_stats_html = f'''<div class="key-stats">
-            <h4>Key Statistics</h4>
-            <div class="ks-grid">{"".join(stat_items)}</div>
-        </div>'''
+    def _fmt_disp_date(iso: str) -> str:
+        try:
+            return datetime.strptime(iso, '%Y-%m-%d').strftime('%d %b %Y').lstrip('0')
+        except Exception:
+            return iso
+    date_disp = _fmt_disp_date(date_mod)
+
+    platform_chip = (f'<span class="td-chip td-chip-neutral">{escape_html(platform_short)}</span>'
+                     if platform_short and len(platform_short) <= 28 else '')
+
+    # Pricing card — one prominent price tile; plan tiles stay data-driven only
+    pricing_details = (tool.get('pricing_details') or '').strip()
+    pricing_detail_html = (f'<div class="td-price-detail">{escape_html(pricing_details)}</div>'
+                           if pricing_details else '')
+    pricing_html = f'''<div class="td-card td-pricing">
+        <div class="td-card-head faint">PRICING&nbsp;·&nbsp;UPDATED {escape_html(date_disp)}</div>
+        <div class="td-price-tile">
+            <div class="td-price-label">CURRENT PRICING</div>
+            <div class="td-price-value">{escape_html(tool.get('price', 'Free'))}</div>
+            {pricing_detail_html}
+        </div>
+    </div>'''
 
     # Author trust block (GEO — EEAT signals for AI engines)
     today_iso_author = datetime.now().strftime('%Y-%m-%d')
@@ -755,50 +750,47 @@ def build_tool_page_en(tool: dict, all_tools: list, all_articles: list = None) -
 <body>
 {header_html()}
 
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-        <a href="/">Home</a> &gt; <a href="/category/{cat_slug}/">{escape_html(cat)}</a> &gt; <span>{escape_html(name)}</span>
+    <nav class="breadcrumb td-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a><span class="sep">/</span><a href="/category/{cat_slug}/">{escape_html(cat)}</a><span class="sep">/</span><span>{escape_html(name)}</span>
     </nav>
 
-    <main class="article-container">
-        <div class="tool-header">
-            <div class="tool-header-top">
+    <main>
+        <section class="td-hero">
+            <div class="td-identity">
                 {tool_tile(tool, 'tool-icon-lg')}
-                <div class="tool-header-info">
-                    <div class="tool-title-row"><h1>{escape_html(name)}</h1>{badge_html}</div>
-                    <p class="subtitle">{escape_html(tool['description'])}</p>
-                    <div class="rating-bar">{tool['rating']}{' <span style="font-size:14px;color:#999;">(' + escape_html(visits_val) + ' visits)</span>' if visits_val and len(visits_val) <= 12 else ''}</div>
+                <h1>{escape_html(name)}</h1>
+                <p class="td-summary">{escape_html(tool['description'])}</p>
+                <div class="td-chips">
+                    <span class="td-chip td-chip-neutral">{escape_html(cat)}</span>
+                    {platform_chip}
+                    <span class="td-chip td-chip-verified">✓ Independently reviewed</span>
                 </div>
             </div>
-            <div class="tool-meta">
-                <div class="tool-meta-item"><strong>Website</strong>: {tool['url'].replace('https://','')}</div>
-                <div class="tool-meta-item"><strong>Price</strong>: {tool.get('price','')}</div>
-                {platform_html}
-                <div class="tool-meta-item"><strong>Category</strong>: {escape_html(cat)}</div>
-            </div>
-            <div class="action-bar">
-                <a href="{get_tool_link(tool, slug, 'en')[0]}" target="_blank" rel="{'nofollow noopener sponsored' if get_tool_link(tool, slug, 'en')[1] else 'noopener'}" class="action-btn action-btn-primary">Visit {escape_html(name)} →</a>
-            </div>
+            <aside class="td-score-card">
+                <div class="td-score-label">EDITOR SCORE</div>
+                <div class="td-score-value">{escape_html(score_val)} / 5</div>
+                <div class="td-score-note{score_note_cls}">{score_note}</div>
+                <a class="td-visit-btn" href="{get_tool_link(tool, slug, 'en')[0]}" target="_blank" rel="{'nofollow noopener sponsored' if get_tool_link(tool, slug, 'en')[1] else 'noopener'}">Visit {escape_html(name)} →</a>
+            </aside>
+        </section>
+
+        <div class="td-body">
+            {pros_cons_html}
+
+            {pricing_html}
+
+            <article class="article-body" data-tts>
+                {content_html}
+            </article>
+
+            {faq_html}
+
+            {author_block}
+
+            {related_html}
+
+            {related_articles_html}
         </div>
-
-        {tldr_html}
-
-        {key_stats_html}
-
-        {features_html}
-
-        <article class="article-body" data-tts>
-            {content_html}
-        </article>
-
-        {pros_cons_html}
-
-        {faq_html}
-
-        {author_block}
-
-        {related_html}
-
-        {related_articles_html}
     </main>
 
 {footer_html()}

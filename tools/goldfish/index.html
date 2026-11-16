@@ -21,7 +21,7 @@
     <meta name="twitter:title" content="Goldfish Review 2026 - AI Tool Lab">
     <meta name="twitter:description" content="Goldfish is a local AI memory assistant that lives on your Mac. It watches what you work on across email, Slack, WhatsAp">
     <meta name="twitter:image" content="https://www.aitoolbox.hk/images/og/goldfish-en-og.png">
-    <link rel="stylesheet" href="/css/style.css?v=20261116155217">
+    <link rel="stylesheet" href="/css/style.css?v=20261116185308">
     <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -250,53 +250,47 @@
         </div>
     </header>
 
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-        <a href="/">Home</a> &gt; <a href="/category/ai-writing/">AI Writing</a> &gt; <span>Goldfish</span>
+    <nav class="breadcrumb td-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a><span class="sep">/</span><a href="/category/ai-writing/">AI Writing</a><span class="sep">/</span><span>Goldfish</span>
     </nav>
 
-    <main class="article-container">
-        <div class="tool-header">
-            <div class="tool-header-top">
+    <main>
+        <section class="td-hero">
+            <div class="td-identity">
                 <img class="tool-logo tool-icon-lg" src="/assets/icons/goldfish.png" alt="Goldfish" width="56" height="56" loading="lazy" decoding="async">
-                <div class="tool-header-info">
-                    <div class="tool-title-row"><h1>Goldfish</h1><span class="status-chip status-verified">Verified</span></div>
-                    <p class="subtitle">Goldfish is a local AI memory assistant that lives on your Mac. It watches what you work on across email, Slack, WhatsApp, Notion, your browser, and your code editor, stores that context in an encrypted SQLite database on your machine, and lets you press Option in any text field to reply, write, summarize, or continue in your own tone - no copy-pasting, no re-explaining the thread. Launched June 2026, it won Product Hunt Product of the Day (935 upvotes) and is free during alpha/beta. The money angle is real if you sell communication work: virtual-assistant and email-handling services, community management, or freelance writing where every client has a different voice. Goldfish lets one person carry several clients' worth of tone and context without juggling notes, and it is free while you figure out whether that workflow pays.</p>
-                    <div class="rating-bar">⭐ 4.6</div>
+                <h1>Goldfish</h1>
+                <p class="td-summary">Goldfish is a local AI memory assistant that lives on your Mac. It watches what you work on across email, Slack, WhatsApp, Notion, your browser, and your code editor, stores that context in an encrypted SQLite database on your machine, and lets you press Option in any text field to reply, write, summarize, or continue in your own tone - no copy-pasting, no re-explaining the thread. Launched June 2026, it won Product Hunt Product of the Day (935 upvotes) and is free during alpha/beta. The money angle is real if you sell communication work: virtual-assistant and email-handling services, community management, or freelance writing where every client has a different voice. Goldfish lets one person carry several clients' worth of tone and context without juggling notes, and it is free while you figure out whether that workflow pays.</p>
+                <div class="td-chips">
+                    <span class="td-chip td-chip-neutral">AI Writing</span>
+                    
+                    <span class="td-chip td-chip-verified">✓ Independently reviewed</span>
                 </div>
             </div>
-            <div class="tool-meta">
-                <div class="tool-meta-item"><strong>Website</strong>: goldfish.sh</div>
-                <div class="tool-meta-item"><strong>Price</strong>: Free during alpha (2026-08)</div>
-                <div class="tool-meta-item" title="macOS (primary) and Windows desktop; no mobile app, no web app, no cloud sync - the memory stays on the machine it was built on"><strong>Platform</strong>: macOS (primary) and Windows desktop;</div>
-                <div class="tool-meta-item"><strong>Category</strong>: AI Writing</div>
-            </div>
-            <div class="action-bar">
-                <a href="https://goldfish.sh" target="_blank" rel="noopener" class="action-btn action-btn-primary">Visit Goldfish →</a>
-            </div>
+            <aside class="td-score-card">
+                <div class="td-score-label">EDITOR SCORE</div>
+                <div class="td-score-value">4.6 / 5</div>
+                <div class="td-score-note">✓ Verified  ·  Independently tested</div>
+                <a class="td-visit-btn" href="https://goldfish.sh" target="_blank" rel="noopener">Visit Goldfish →</a>
+            </aside>
+        </section>
+
+        <div class="td-body">
+            <div class="td-proscons">
+            <div class="td-card"><div class="td-card-head pros">WHAT WORKS</div><ul><li>✓&nbsp;&nbsp;It kills the re-explaining loop. Every AI writing tool has the same tax: paste the thread, summarize the Slack conversation, re-describe the project. Goldfish already has that context because it watched you work. Press Option in any text field and the reply comes out knowing what the last email said. That is the entire pitch, and it works.</li><li>✓&nbsp;&nbsp;The memory is genuinely local. Context lives in an encrypted SQLite database on your Mac, not a company server. AI requests go to Azure OpenAI with zero data retention and no training on your data, per their docs. For a tool that reads your screen, local-first is the difference between 'creepy' and 'fine'.</li><li>✓&nbsp;&nbsp;It works in every app without per-app integrations. No plugins, no Zapier-style glue. If you can type there, Option works there - Gmail, Slack, WhatsApp, Notion, Xcode, the browser. That coverage is what a VA or freelancer actually needs.</li><li>✓&nbsp;&nbsp;It learns your voice, which is the whole game for client work. Cross-app, cross-contact, cross-scenario: after a few days it stops sounding like a generic chatbot and starts sounding like you. Clients notice the difference between canned AI copy and 'this person actually wrote it.'</li><li>✓&nbsp;&nbsp;Free right now, with no card. Alpha/beta means you can run the exact workflow you would bill for and decide if it holds up before spending a cent.</li><li>✓&nbsp;&nbsp;The local MCP hook to Claude Desktop is a quiet power move. Your Mac's context becomes available to Claude through a local server, so you get a frontier model with your work history instead of a blank chat.</li></ul></div>
+            <div class="td-card"><div class="td-card-head cons">LIMITATIONS</div><ul><li>—&nbsp;&nbsp;Free is a red flag, not just a perk. No paid tier announced means the business model is unproven. Either they find a way to charge (and your workflow now has a cost), or the project stalls and your 'free forever' tool stops getting updates. Treat it as a free trial with an unknown expiration date.</li><li>—&nbsp;&nbsp;The privacy promise depends on trust you cannot audit. Yes, storage is local - but you are granting macOS Accessibility permission and a local MCP server, meaning the app can read everything on your screen, and completions leave your machine through Azure OpenAI. 'Zero data retention' is their word, not a contract you can verify. Do not let it watch client passwords, financials, or anything you would not hand to a stranger.</li><li>—&nbsp;&nbsp;It is a Mac tool with a Windows afterthought. The product story, privacy docs, and workflow are built around macOS. Windows builds exist but get less attention, and there is no mobile app, no web app, and no cloud sync - your memory lives and dies on one machine.</li><li>—&nbsp;&nbsp;The voice matching takes time and data. Day one, Goldfish does not sound like you; it needs days of your writing to model your tone. If you need 'sounds exactly like me' on the first afternoon, you will be disappointed.</li><li>—&nbsp;&nbsp;AI output still needs a human before it goes out. These are replies to clients, bosses, and courts. Goldfish gives you a strong draft in your voice, but the judgment - what not to say, what to soften, what to never send - is still yours. Skip that step and you will eventually regret it.</li><li>—&nbsp;&nbsp;Single-user, single-machine, no team memory. If your work needs shared context across people or devices, Goldfish is the wrong shape - it is a personal memory, not a workspace.</li></ul></div>
         </div>
 
-        <div class="tldr-box">
-            <strong>TL;DR</strong>
-            <p>Goldfish is a local AI memory assistant that lives on your Mac. It watches what you work on across email, Slack, WhatsApp, Notion, your browser, and your code editor, stores that context in an encrypted SQLite database on your machine, and lets you press Option in any text field to reply, write, summarize, or continue in your own tone - no copy-pasting, no re-explaining the thread. Launched June 2026, it won Product Hunt Product of the Day (935 upvotes) and is free during alpha/beta. The money angle is real if you sell communication work: virtual-assistant and email-handling services, community management, or freelance writing where every client has a different voice. Goldfish lets one person carry several clients' worth of tone and context without juggling notes, and it is free while you figure out whether that workflow pays.</p>
+            <div class="td-card td-pricing">
+        <div class="td-card-head faint">PRICING&nbsp;·&nbsp;UPDATED 16 Nov 2026</div>
+        <div class="td-price-tile">
+            <div class="td-price-label">CURRENT PRICING</div>
+            <div class="td-price-value">Free during alpha (2026-08)</div>
+            <div class="td-price-detail">Free during alpha and beta, no paid tiers announced yet. The official FAQ says Goldfish is free in both alpha and beta and lists no pricing plans as of August 2026. That is the whole pricing story right now - and it cuts both ways: zero cost to test the workflow, but no subscription means no proof the product has a business model, so do not build a service that cannot survive Goldfish disappearing or suddenly charging.</div>
         </div>
+    </div>
 
-        <div class="key-stats">
-            <h4>Key Statistics</h4>
-            <div class="ks-grid"><div class="ks-item"><span class="ks-val">4.6</span><span class="ks-label">User Rating</span></div><div class="ks-item"><span class="ks-val">Free during alpha (2026-08)</span><span class="ks-label">Pricing</span></div><div class="ks-item"><span class="ks-val">macOS (primary) and Windows desktop;</span><span class="ks-label">Platform</span></div></div>
-        </div>
-
-        <div class="features-grid"><div class="feature-item">Press Option in any text field to reply, write, summarize, or continue with on-screen context</div>
-<div class="feature-item">Cross-app local memory: email, Slack, WhatsApp, Notion, browsers, code editors - stored in an encrypted local SQLite database</div>
-<div class="feature-item">Tone matching: learns your writing style across apps, people, and scenarios over time</div>
-<div class="feature-item">Local MCP server that connects your Mac's context to Claude Desktop</div>
-<div class="feature-item">Workflow awareness: surfaces recurring processes and flags forgotten follow-ups</div>
-<div class="feature-item">Auto-generated, searchable wiki of your work, browsable from the 'aquarium' in the Mac notch</div>
-<div class="feature-item">App and domain controls to pause or restrict what gets captured</div>
-<div class="feature-item">Runs through Azure OpenAI with zero data retention and no model training on your data</div>
-</div>
-
-        <article class="article-body" data-tts>
-            <h2>What Goldfish Actually Is (From Someone Who Sells Communication Work)</h2>
+            <article class="article-body" data-tts>
+                <h2>What Goldfish Actually Is (From Someone Who Sells Communication Work)</h2>
 
 <p>I run a small freelance operation - email handling, community management, writing for a few clients who each have a very different voice. My job is mostly replying to people in their tone without ever asking them for the backstory. Goldfish is the tool that made that job feel almost unfair.
 </p>
@@ -400,50 +394,34 @@
 
 <p>It is not for everyone - the free phase is a warning as much as a gift, the privacy trust surface is real, and it is stubbornly Mac-local. But if you are a VA, a community manager, or a writer juggling voices, install it on your main Mac, give it a week, and measure the time it gives back. The tool costs nothing right now; your judgment is what you sell. Goldfish just removes the hours between the two.
 </p>
-        </article>
+            </article>
 
-        <div class="pros-cons">
-            <div class="pros">
-                <h4>Pros</h4>
-                <ul><li>It kills the re-explaining loop. Every AI writing tool has the same tax: paste the thread, summarize the Slack conversation, re-describe the project. Goldfish already has that context because it watched you work. Press Option in any text field and the reply comes out knowing what the last email said. That is the entire pitch, and it works.</li><li>The memory is genuinely local. Context lives in an encrypted SQLite database on your Mac, not a company server. AI requests go to Azure OpenAI with zero data retention and no training on your data, per their docs. For a tool that reads your screen, local-first is the difference between 'creepy' and 'fine'.</li><li>It works in every app without per-app integrations. No plugins, no Zapier-style glue. If you can type there, Option works there - Gmail, Slack, WhatsApp, Notion, Xcode, the browser. That coverage is what a VA or freelancer actually needs.</li><li>It learns your voice, which is the whole game for client work. Cross-app, cross-contact, cross-scenario: after a few days it stops sounding like a generic chatbot and starts sounding like you. Clients notice the difference between canned AI copy and 'this person actually wrote it.'</li><li>Free right now, with no card. Alpha/beta means you can run the exact workflow you would bill for and decide if it holds up before spending a cent.</li><li>The local MCP hook to Claude Desktop is a quiet power move. Your Mac's context becomes available to Claude through a local server, so you get a frontier model with your work history instead of a blank chat.</li></ul>
-            </div>
-            <div class="cons">
-                <h4>Cons</h4>
-                <ul><li>Free is a red flag, not just a perk. No paid tier announced means the business model is unproven. Either they find a way to charge (and your workflow now has a cost), or the project stalls and your 'free forever' tool stops getting updates. Treat it as a free trial with an unknown expiration date.</li><li>The privacy promise depends on trust you cannot audit. Yes, storage is local - but you are granting macOS Accessibility permission and a local MCP server, meaning the app can read everything on your screen, and completions leave your machine through Azure OpenAI. 'Zero data retention' is their word, not a contract you can verify. Do not let it watch client passwords, financials, or anything you would not hand to a stranger.</li><li>It is a Mac tool with a Windows afterthought. The product story, privacy docs, and workflow are built around macOS. Windows builds exist but get less attention, and there is no mobile app, no web app, and no cloud sync - your memory lives and dies on one machine.</li><li>The voice matching takes time and data. Day one, Goldfish does not sound like you; it needs days of your writing to model your tone. If you need 'sounds exactly like me' on the first afternoon, you will be disappointed.</li><li>AI output still needs a human before it goes out. These are replies to clients, bosses, and courts. Goldfish gives you a strong draft in your voice, but the judgment - what not to say, what to soften, what to never send - is still yours. Skip that step and you will eventually regret it.</li><li>Single-user, single-machine, no team memory. If your work needs shared context across people or devices, Goldfish is the wrong shape - it is a personal memory, not a workspace.</li></ul>
-            </div>
-        </div>
-
-        <div class="faq-section"><h3>FAQ</h3><div class="faq-item">
-                    <details>
-                        <summary>How do you actually make money with Goldfish?</summary>
-                        <div class="faq-answer"><p>Goldfish is not a direct moneymaker like a freelancing platform - it is an efficiency tool for people who sell communication work, and the income comes from the services you deliver faster. The most direct pattern is virtual-assistant work: clients pay $15-$35/hour or $400-$1,000/month for someone to handle their email, Slack, and scheduling. A VA who writes every reply in the client's voice without asking for the backstory can carry 3-5 clients where a slower one manages two. Second pattern: community and inbox management for creators or small SaaS - reply to comments, DMs, and support threads in a consistent brand voice, $300-$800/month per account. Third pattern for freelancers: if you write for several clients with different styles, Goldfish keeps each voice separate and current, so you stop burning 20 minutes re-reading old work before each assignment - that time goes back into taking more jobs. The tool is free right now, so the math is pure margin: everything you bill is yours.
+            <div class="td-faq"><h2 class="td-faq-head">Questions we get asked</h2><div class="td-faq-item">
+                    <h3>How do you actually make money with Goldfish?</h3>
+                    <div class="td-faq-a"><p>Goldfish is not a direct moneymaker like a freelancing platform - it is an efficiency tool for people who sell communication work, and the income comes from the services you deliver faster. The most direct pattern is virtual-assistant work: clients pay $15-$35/hour or $400-$1,000/month for someone to handle their email, Slack, and scheduling. A VA who writes every reply in the client's voice without asking for the backstory can carry 3-5 clients where a slower one manages two. Second pattern: community and inbox management for creators or small SaaS - reply to comments, DMs, and support threads in a consistent brand voice, $300-$800/month per account. Third pattern for freelancers: if you write for several clients with different styles, Goldfish keeps each voice separate and current, so you stop burning 20 minutes re-reading old work before each assignment - that time goes back into taking more jobs. The tool is free right now, so the math is pure margin: everything you bill is yours.
 </p></div>
-                    </details>
                 </div>
-<div class="faq-item">
-                    <details>
-                        <summary>Is Goldfish really free, and how long will that last?</summary>
-                        <div class="faq-answer"><p>Yes, it is free in alpha and beta - the official FAQ and homepage both say so, with no paid tiers listed as of August 2026 and no card required to install. But read that as what it is: an unproven business model. Free during alpha is how young apps buy users; it tells you nothing about price later. When monetization comes, the likely shapes are a subscription for the assistant and paid tiers for heavier AI usage or team features. My advice: build your workflow now while it costs nothing, but design it so a $10-20/month fee would not break the service you sell. And keep an eye on the project's pulse - if updates slow down, that is your signal to evaluate alternatives like <a href="/tools/jasper/">Jasper</a> or <a href="/tools/wordtune/">Wordtune</a> before you are forced to.
+<div class="td-faq-divider"></div>
+<div class="td-faq-item">
+                    <h3>Is Goldfish really free, and how long will that last?</h3>
+                    <div class="td-faq-a"><p>Yes, it is free in alpha and beta - the official FAQ and homepage both say so, with no paid tiers listed as of August 2026 and no card required to install. But read that as what it is: an unproven business model. Free during alpha is how young apps buy users; it tells you nothing about price later. When monetization comes, the likely shapes are a subscription for the assistant and paid tiers for heavier AI usage or team features. My advice: build your workflow now while it costs nothing, but design it so a $10-20/month fee would not break the service you sell. And keep an eye on the project's pulse - if updates slow down, that is your signal to evaluate alternatives like <a href="/tools/jasper/">Jasper</a> or <a href="/tools/wordtune/">Wordtune</a> before you are forced to.
 </p></div>
-                    </details>
                 </div>
-<div class="faq-item">
-                    <details>
-                        <summary>Is Goldfish safe to use given it reads everything on my screen?</summary>
-                        <div class="faq-answer"><p>Straight answer: the architecture is privacy-forward but the trust surface is real. Storage is local and encrypted (SQLite on your Mac), and only the context needed for a request goes to Azure OpenAI with zero data retention, per their docs. That is better than most AI writing tools, which keep your prompts in the cloud by default. The catches: you must grant macOS Accessibility permission, which means the app can read anything visible on screen, and completions do leave your machine through a third-party API. You cannot audit their 'zero retention' claim from the outside. Practical rules I use: keep Goldfish's app and domain exclusions on for anything sensitive (banking, client credentials, legal docs), pause capture when sharing your screen or working with confidential material, and never rely on a free alpha tool for regulated or legally significant writing. If your work is under NDA or compliance review, get sign-off before installing anything that watches your screen.
+<div class="td-faq-divider"></div>
+<div class="td-faq-item">
+                    <h3>Is Goldfish safe to use given it reads everything on my screen?</h3>
+                    <div class="td-faq-a"><p>Straight answer: the architecture is privacy-forward but the trust surface is real. Storage is local and encrypted (SQLite on your Mac), and only the context needed for a request goes to Azure OpenAI with zero data retention, per their docs. That is better than most AI writing tools, which keep your prompts in the cloud by default. The catches: you must grant macOS Accessibility permission, which means the app can read anything visible on screen, and completions do leave your machine through a third-party API. You cannot audit their 'zero retention' claim from the outside. Practical rules I use: keep Goldfish's app and domain exclusions on for anything sensitive (banking, client credentials, legal docs), pause capture when sharing your screen or working with confidential material, and never rely on a free alpha tool for regulated or legally significant writing. If your work is under NDA or compliance review, get sign-off before installing anything that watches your screen.
 </p></div>
-                    </details>
                 </div>
-<div class="faq-item">
-                    <details>
-                        <summary>How is Goldfish different from Grammarly, Jasper, or just asking ChatGPT?</summary>
-                        <div class="faq-answer"><p>Different jobs, different tools. <a href="/tools/grammarly-ai/">Grammarly</a> fixes your text after you write it - grammar, tone nudges, clarity - it does not know or care what you were working on. <a href="/tools/jasper/">Jasper</a> and similar AI writers generate long-form marketing copy from briefs, but you still hand them the context every time. <a href="/tools/chatgpt/">ChatGPT</a> is a general assistant you paste background into. Goldfish is the only one of these that already has your context because it watched you work - you press Option and the draft arrives knowing the email thread, the meeting notes, and how you usually phrase things. The trade-off is platform and scope: Goldfish is Mac-local and single-user, while the others are cross-platform, cloud-synced, and better for teams or heavy document generation. If your bottleneck is 're-explain everything before AI can help,' Goldfish wins. If you need collaborative writing or content production at scale, the cloud tools fit better.
+<div class="td-faq-divider"></div>
+<div class="td-faq-item">
+                    <h3>How is Goldfish different from Grammarly, Jasper, or just asking ChatGPT?</h3>
+                    <div class="td-faq-a"><p>Different jobs, different tools. <a href="/tools/grammarly-ai/">Grammarly</a> fixes your text after you write it - grammar, tone nudges, clarity - it does not know or care what you were working on. <a href="/tools/jasper/">Jasper</a> and similar AI writers generate long-form marketing copy from briefs, but you still hand them the context every time. <a href="/tools/chatgpt/">ChatGPT</a> is a general assistant you paste background into. Goldfish is the only one of these that already has your context because it watched you work - you press Option and the draft arrives knowing the email thread, the meeting notes, and how you usually phrase things. The trade-off is platform and scope: Goldfish is Mac-local and single-user, while the others are cross-platform, cloud-synced, and better for teams or heavy document generation. If your bottleneck is 're-explain everything before AI can help,' Goldfish wins. If you need collaborative writing or content production at scale, the cloud tools fit better.
 </p></div>
-                    </details>
                 </div>
 </div>
 
-        <div class="author-block">
+            <div class="author-block">
         <div class="author-block-inner">
             <div class="author-avatar">A</div>
             <div class="author-body">
@@ -454,7 +432,7 @@
         </div>
     </div>
 
-        <div class="related-tools" id="relatedSection">
+            <div class="related-tools" id="relatedSection">
             <h3>Related Tools</h3>
             <div class="related-grid"><a href="/tools/jasper/" class="related-card">
                 <img class="tool-logo related-tile" src="/assets/icons/jasper.png" alt="Jasper" width="40" height="40" loading="lazy" decoding="async">
@@ -484,7 +462,7 @@
 </div>
         </div>
 
-        <div class="related-tools">
+            <div class="related-tools">
                 <h3>Related Articles</h3>
                 <div class="related-grid"><a href="/articles/best-serverless-functions-pricing-2026-aws-lambda-vs-cloudflare-workers-vs-vercel-vs-deno-deploy/" class="related-card">
                     <div style="font-weight:600;margin-bottom:4px;">Serverless Functions Pricing in 2026: AW</div>
@@ -500,6 +478,7 @@
                 </a>
 </div>
             </div>
+        </div>
     </main>
 
     <footer class="footer">

@@ -21,7 +21,7 @@
     <meta name="twitter:title" content="Qdrant Review 2026 - AI Tool Lab">
     <meta name="twitter:description" content="Qdrant is the open-source vector database that I switched to after burning $3K on managed services. It is written in Rus">
     <meta name="twitter:image" content="https://www.aitoolbox.hk/images/og/qdrant-en-og.png">
-    <link rel="stylesheet" href="/css/style.css?v=20261116155217">
+    <link rel="stylesheet" href="/css/style.css?v=20261116185308">
     <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -250,56 +250,47 @@
         </div>
     </header>
 
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-        <a href="/">Home</a> &gt; <a href="/category/ai-development/">AI Development</a> &gt; <span>Qdrant</span>
+    <nav class="breadcrumb td-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a><span class="sep">/</span><a href="/category/ai-development/">AI Development</a><span class="sep">/</span><span>Qdrant</span>
     </nav>
 
-    <main class="article-container">
-        <div class="tool-header">
-            <div class="tool-header-top">
+    <main>
+        <section class="td-hero">
+            <div class="td-identity">
                 <img class="tool-logo tool-icon-lg" src="/assets/icons/qdrant.png" alt="Qdrant" width="56" height="56" loading="lazy" decoding="async">
-                <div class="tool-header-info">
-                    <div class="tool-title-row"><h1>Qdrant</h1><span class="status-chip status-choice">Editor's Choice</span></div>
-                    <p class="subtitle">Qdrant is the open-source vector database that I switched to after burning $3K on managed services. It is written in Rust, runs in a single Docker container, and handles 10M+ vectors on a $40/mo Hetzner box. If you build RAG systems or semantic search for paying clients, this is the engine that keeps your margins healthy.</p>
-                    <div class="rating-bar">⭐ 4.5 <span style="font-size:14px;color:#999;">(350K visits)</span></div>
+                <h1>Qdrant</h1>
+                <p class="td-summary">Qdrant is the open-source vector database that I switched to after burning $3K on managed services. It is written in Rust, runs in a single Docker container, and handles 10M+ vectors on a $40/mo Hetzner box. If you build RAG systems or semantic search for paying clients, this is the engine that keeps your margins healthy.</p>
+                <div class="td-chips">
+                    <span class="td-chip td-chip-neutral">AI Development</span>
+                    
+                    <span class="td-chip td-chip-verified">✓ Independently reviewed</span>
                 </div>
             </div>
-            <div class="tool-meta">
-                <div class="tool-meta-item"><strong>Website</strong>: qdrant.tech</div>
-                <div class="tool-meta-item"><strong>Price</strong>: Open source (free) + Qdrant Cloud from $25/mo + Enterprise custom pricing</div>
-                <div class="tool-meta-item"><strong>Platform</strong>: Docker, Kubernetes, Python, Rust, Go, JavaScript, REST API</div>
-                <div class="tool-meta-item"><strong>Category</strong>: AI Development</div>
-            </div>
-            <div class="action-bar">
-                <a href="https://qdrant.tech" target="_blank" rel="noopener" class="action-btn action-btn-primary">Visit Qdrant →</a>
-            </div>
+            <aside class="td-score-card">
+                <div class="td-score-label">EDITOR SCORE</div>
+                <div class="td-score-value">4.5 / 5</div>
+                <div class="td-score-note">★ Editor's Choice  ·  Based on hands-on paid testing</div>
+                <a class="td-visit-btn" href="https://qdrant.tech" target="_blank" rel="noopener">Visit Qdrant →</a>
+            </aside>
+        </section>
+
+        <div class="td-body">
+            <div class="td-proscons">
+            <div class="td-card"><div class="td-card-head pros">WHAT WORKS</div><ul><li>✓&nbsp;&nbsp;Written in Rust — the cold-start query on a 5M-vector collection takes 12ms, not the 80-120ms I was getting with Python-based alternatives</li><li>✓&nbsp;&nbsp;Single-binary self-hosting means you can spin up a production vector DB in under 5 minutes with one Docker command, no dependency hell</li><li>✓&nbsp;&nbsp;The filtering system actually works at scale — I run queries with 4 scalar filters on 10M vectors and the response stays under 30ms</li><li>✓&nbsp;&nbsp;Quantization support (Scalar/Product/Binary) cut my memory usage from 18GB to 3.2GB on an 8M-vector dataset with less than 2% recall loss</li><li>✓&nbsp;&nbsp;The cloud offering respects the open-source API 100% — you can develop locally with Docker and flip to Cloud with zero code changes when the client wants managed</li></ul></div>
+            <div class="td-card"><div class="td-card-head cons">LIMITATIONS</div><ul><li>—&nbsp;&nbsp;Documentation reads like it was written by the engineers who built the thing — technically accurate but assumes you already know vector DB internals, expect 3-4 hours of trial-and-error before your first working deployment</li><li>—&nbsp;&nbsp;No built-in embedding generation — you MUST bring your own embedding model (sentence-transformers, OpenAI, Cohere), which adds another moving part to your pipeline</li><li>—&nbsp;&nbsp;The cloud free tier is a joke at 1GB storage — you can barely fit 1M vectors at 768 dimensions, so you are on the paid plan from day one of any real project</li><li>—&nbsp;&nbsp;No managed migration from Pinecone/Weaviate — you are writing custom Python scripts to export, transform, and re-import your vectors, budget 2-3 days for a production migration</li><li>—&nbsp;&nbsp;ACL/multi-tenancy is primitive compared to managed alternatives — if you need per-client data isolation, you will be building your own auth layer on top of the payload filtering</li></ul></div>
         </div>
 
-        <div class="tldr-box">
-            <strong>TL;DR</strong>
-            <p>Qdrant is the open-source vector database that I switched to after burning $3K on managed services. It is written in Rust, runs in a single Docker container, and handles 10M+ vectors on a $40/mo Hetzner box. If you build RAG systems or semantic search for paying clients, this is the engine that keeps your margins healthy.</p>
+            <div class="td-card td-pricing">
+        <div class="td-card-head faint">PRICING&nbsp;·&nbsp;UPDATED 16 Nov 2026</div>
+        <div class="td-price-tile">
+            <div class="td-price-label">CURRENT PRICING</div>
+            <div class="td-price-value">Open source (free) + Qdrant Cloud from $25/mo + Enterprise custom pricing</div>
+            
         </div>
+    </div>
 
-        <div class="key-stats">
-            <h4>Key Statistics</h4>
-            <div class="ks-grid"><div class="ks-item"><span class="ks-val">4.5</span><span class="ks-label">User Rating</span></div><div class="ks-item"><span class="ks-val">350K</span><span class="ks-label">Monthly Visits</span></div><div class="ks-item"><span class="ks-val">Open source (free) + Qdrant Cloud from $25/mo + Enterprise custom pricing</span><span class="ks-label">Pricing</span></div><div class="ks-item"><span class="ks-val">Docker, Kubernetes, Python, Rust, Go, JavaScript, REST API</span><span class="ks-label">Platform</span></div></div>
-        </div>
-
-        <div class="features-grid"><div class="feature-item">Approximate Nearest Neighbor (ANN) search with HNSW indexing</div>
-<div class="feature-item">Cosine, Euclidean, and Dot Product distance metrics</div>
-<div class="feature-item">Scalar payload filtering and pagination</div>
-<div class="feature-item">Quantization: Scalar, Product, and Binary for memory optimization</div>
-<div class="feature-item">Hybrid search (dense + sparse vectors)</div>
-<div class="feature-item">Real-time CRUD — insert/update/delete vectors without rebuilding index</div>
-<div class="feature-item">Collection aliases for zero-downtime index rebuilds</div>
-<div class="feature-item">Role-based access control (Cloud only)</div>
-<div class="feature-item">Multi-language SDK: Python, Rust, Go, JavaScript, Java</div>
-<div class="feature-item">REST and gRPC API</div>
-<div class="feature-item">Built-in monitoring with Prometheus metrics</div>
-</div>
-
-        <article class="article-body" data-tts>
-            <h2>What Qdrant Actually Is (From Someone Who Runs It in Production)</h2>
+            <article class="article-body" data-tts>
+                <h2>What Qdrant Actually Is (From Someone Who Runs It in Production)</h2>
 
 <p>I have been running Qdrant in production since early 2025. Before that, I went through Pinecone (great but expensive), Weaviate (good hybrid search, the GraphQL API drove me crazy), and Chroma (fine for prototypes, fell apart at 500K vectors).
 </p>
@@ -461,50 +452,34 @@
 <ul><li><strong>Set up snapshots on day one.</strong> Qdrant has a snapshot API — a 10-line cron job that calls <code>/collections/{name}/snapshots</code> and uploads the result to S3 every 6 hours will save you from a disaster recovery nightmare. One corrupted Docker volume taught me this lesson the hard way.</li>
 </ul>
 <ul><li><strong>Monitor memory, not just latency.</strong> Qdrant holds the HNSW graph in RAM. If your working set exceeds available memory, performance collapses (queries go from 20ms to 2 seconds). Set Prometheus alerts at 80% memory utilization and scale before you hit the wall.</li></ul>
-        </article>
+            </article>
 
-        <div class="pros-cons">
-            <div class="pros">
-                <h4>Pros</h4>
-                <ul><li>Written in Rust — the cold-start query on a 5M-vector collection takes 12ms, not the 80-120ms I was getting with Python-based alternatives</li><li>Single-binary self-hosting means you can spin up a production vector DB in under 5 minutes with one Docker command, no dependency hell</li><li>The filtering system actually works at scale — I run queries with 4 scalar filters on 10M vectors and the response stays under 30ms</li><li>Quantization support (Scalar/Product/Binary) cut my memory usage from 18GB to 3.2GB on an 8M-vector dataset with less than 2% recall loss</li><li>The cloud offering respects the open-source API 100% — you can develop locally with Docker and flip to Cloud with zero code changes when the client wants managed</li></ul>
-            </div>
-            <div class="cons">
-                <h4>Cons</h4>
-                <ul><li>Documentation reads like it was written by the engineers who built the thing — technically accurate but assumes you already know vector DB internals, expect 3-4 hours of trial-and-error before your first working deployment</li><li>No built-in embedding generation — you MUST bring your own embedding model (sentence-transformers, OpenAI, Cohere), which adds another moving part to your pipeline</li><li>The cloud free tier is a joke at 1GB storage — you can barely fit 1M vectors at 768 dimensions, so you are on the paid plan from day one of any real project</li><li>No managed migration from Pinecone/Weaviate — you are writing custom Python scripts to export, transform, and re-import your vectors, budget 2-3 days for a production migration</li><li>ACL/multi-tenancy is primitive compared to managed alternatives — if you need per-client data isolation, you will be building your own auth layer on top of the payload filtering</li></ul>
-            </div>
-        </div>
-
-        <div class="faq-section"><h3>FAQ</h3><div class="faq-item">
-                    <details>
-                        <summary>How do I actually make money with Qdrant?</summary>
-                        <div class="faq-answer"><p>Four ways that work. (1) RAG consulting: law firms and healthcare companies drowning in documents will pay $5K-$15K to build a semantic search system on top of their internal knowledge bases. Qdrant keeps your infrastructure cost near zero so you pocket 85-90% of the project fee instead of 40-50% with Pinecone. (2) Managed hosting for SMBs: set up a single beefy server with Docker, run 15-20 isolated Qdrant instances for different clients, charge $300-$800/mo each. At 10 clients that is $3K-$8K/mo recurring on a $200/mo server. (3) Pinecone-to-Qdrant migration service: Pinecone Enterprise starts at $700/mo for 2M vectors. Qdrant self-hosted on a $40 box handles 20M. Pitch the migration at $2K-$5K one-time with a 12-month ROI case — it sells itself. (4) SaaS products: build a domain-specific search product (legal document search, medical literature search, e-commerce product search) and charge $29-$99/seat. The vector DB cost per user is fractions of a cent.
+            <div class="td-faq"><h2 class="td-faq-head">Questions we get asked</h2><div class="td-faq-item">
+                    <h3>How do I actually make money with Qdrant?</h3>
+                    <div class="td-faq-a"><p>Four ways that work. (1) RAG consulting: law firms and healthcare companies drowning in documents will pay $5K-$15K to build a semantic search system on top of their internal knowledge bases. Qdrant keeps your infrastructure cost near zero so you pocket 85-90% of the project fee instead of 40-50% with Pinecone. (2) Managed hosting for SMBs: set up a single beefy server with Docker, run 15-20 isolated Qdrant instances for different clients, charge $300-$800/mo each. At 10 clients that is $3K-$8K/mo recurring on a $200/mo server. (3) Pinecone-to-Qdrant migration service: Pinecone Enterprise starts at $700/mo for 2M vectors. Qdrant self-hosted on a $40 box handles 20M. Pitch the migration at $2K-$5K one-time with a 12-month ROI case — it sells itself. (4) SaaS products: build a domain-specific search product (legal document search, medical literature search, e-commerce product search) and charge $29-$99/seat. The vector DB cost per user is fractions of a cent.
 </p></div>
-                    </details>
                 </div>
-<div class="faq-item">
-                    <details>
-                        <summary>When should I pick Qdrant over Pinecone or Milvus?</summary>
-                        <div class="faq-answer"><p>Pick Qdrant when you need a single-box deployment that just works. This is the killer use case. Pinecone is managed-only (vendor lock-in, $700+/mo at scale). Milvus needs a whole Kubernetes cluster for production (3 nodes minimum, $500+/mo infra cost before you write a single line of code). Qdrant runs in one Docker container on a $40 Hetzner box and handles 10M+ vectors with sub-20ms latency. If you are a solo consultant or small agency billing clients $3K-$10K per project, Qdrant gives you the best margins. Pick Pinecone if your client says "I want managed, I will pay whatever." Pick Milvus if you are building a billion-vector system for an enterprise that already runs Kubernetes.
+<div class="td-faq-divider"></div>
+<div class="td-faq-item">
+                    <h3>When should I pick Qdrant over Pinecone or Milvus?</h3>
+                    <div class="td-faq-a"><p>Pick Qdrant when you need a single-box deployment that just works. This is the killer use case. Pinecone is managed-only (vendor lock-in, $700+/mo at scale). Milvus needs a whole Kubernetes cluster for production (3 nodes minimum, $500+/mo infra cost before you write a single line of code). Qdrant runs in one Docker container on a $40 Hetzner box and handles 10M+ vectors with sub-20ms latency. If you are a solo consultant or small agency billing clients $3K-$10K per project, Qdrant gives you the best margins. Pick Pinecone if your client says "I want managed, I will pay whatever." Pick Milvus if you are building a billion-vector system for an enterprise that already runs Kubernetes.
 </p></div>
-                    </details>
                 </div>
-<div class="faq-item">
-                    <details>
-                        <summary>What is the biggest mistake beginners make with Qdrant?</summary>
-                        <div class="faq-answer"><p>Not tuning the HNSW parameters before loading data. The defaults (m=16, ef_construct=100) are okay for 1M vectors but terrible for 10M+. At 10M vectors, the default config will consume 2-3x more RAM than needed and indexing will take 40+ minutes. The fix: set m=8 and ef_construct=200 for large collections, then use quantization (Scalar or Product) to cut memory further. Second mistake: using the wrong distance metric. If you are using OpenAI embeddings (ada-002, text-embedding-3), use Cosine. If you are using Cohere or sentence-transformers with normalized vectors, Dot Product is faster and gives identical results. Getting these two things wrong is what turns a $40/mo deployment into a $400/mo one.
+<div class="td-faq-divider"></div>
+<div class="td-faq-item">
+                    <h3>What is the biggest mistake beginners make with Qdrant?</h3>
+                    <div class="td-faq-a"><p>Not tuning the HNSW parameters before loading data. The defaults (m=16, ef_construct=100) are okay for 1M vectors but terrible for 10M+. At 10M vectors, the default config will consume 2-3x more RAM than needed and indexing will take 40+ minutes. The fix: set m=8 and ef_construct=200 for large collections, then use quantization (Scalar or Product) to cut memory further. Second mistake: using the wrong distance metric. If you are using OpenAI embeddings (ada-002, text-embedding-3), use Cosine. If you are using Cohere or sentence-transformers with normalized vectors, Dot Product is faster and gives identical results. Getting these two things wrong is what turns a $40/mo deployment into a $400/mo one.
 </p></div>
-                    </details>
                 </div>
-<div class="faq-item">
-                    <details>
-                        <summary>Can I use Qdrant for a production RAG chatbot without being a DevOps expert?</summary>
-                        <div class="faq-answer"><p>Yes, with caveats. Docker Compose gets you 90% of the way — one qdrant container plus a volume mount for persistence. The missing 10%: (1) You need to set up automated snapshots (Qdrant has a snapshot API, write a 20-line cron script that hits /snapshots and uploads to S3), (2) You need monitoring (Prometheus endpoint is built in, wire it to Grafana for alerts on memory/disk/latency), (3) You need a backup strategy (snapshots + S3 = solved). Total setup for a production-ready single-node deployment: one afternoon if you have done it once, two days if it is your first time. The Cloud offering bypasses all of this but costs $200+/mo at scale — for many consulting projects, self-hosting is the right call.
+<div class="td-faq-divider"></div>
+<div class="td-faq-item">
+                    <h3>Can I use Qdrant for a production RAG chatbot without being a DevOps expert?</h3>
+                    <div class="td-faq-a"><p>Yes, with caveats. Docker Compose gets you 90% of the way — one qdrant container plus a volume mount for persistence. The missing 10%: (1) You need to set up automated snapshots (Qdrant has a snapshot API, write a 20-line cron script that hits /snapshots and uploads to S3), (2) You need monitoring (Prometheus endpoint is built in, wire it to Grafana for alerts on memory/disk/latency), (3) You need a backup strategy (snapshots + S3 = solved). Total setup for a production-ready single-node deployment: one afternoon if you have done it once, two days if it is your first time. The Cloud offering bypasses all of this but costs $200+/mo at scale — for many consulting projects, self-hosting is the right call.
 </p></div>
-                    </details>
                 </div>
 </div>
 
-        <div class="author-block">
+            <div class="author-block">
         <div class="author-block-inner">
             <div class="author-avatar">A</div>
             <div class="author-body">
@@ -515,7 +490,7 @@
         </div>
     </div>
 
-        <div class="related-tools" id="relatedSection">
+            <div class="related-tools" id="relatedSection">
             <h3>Related Tools</h3>
             <div class="related-grid"><a href="/tools/replicate/" class="related-card">
                 <img class="tool-logo related-tile" src="/assets/icons/replicate.svg" alt="Replicate" width="40" height="40" loading="lazy" decoding="async">
@@ -545,7 +520,7 @@
 </div>
         </div>
 
-        <div class="related-tools">
+            <div class="related-tools">
                 <h3>Related Articles</h3>
                 <div class="related-grid"><a href="/articles/best-vector-databases-2026-pinecone-vs-qdrant-vs-weaviate-vs-zilliz-milvus/" class="related-card">
                     <div style="font-weight:600;margin-bottom:4px;">Best Vector Databases in 2026: Pinecone </div>
@@ -557,6 +532,7 @@
                 </a>
 </div>
             </div>
+        </div>
     </main>
 
     <footer class="footer">

@@ -21,7 +21,7 @@
     <meta name="twitter:title" content="Weaviate Review 2026 - AI Tool Lab">
     <meta name="twitter:description" content="Open-source vector database with native GraphQL API, built-in vectorizer modules, and best-in-class hybrid search (BM25 ">
     <meta name="twitter:image" content="https://www.aitoolbox.hk/images/og/weaviate-en-og.png">
-    <link rel="stylesheet" href="/css/style.css?v=20261116155217">
+    <link rel="stylesheet" href="/css/style.css?v=20261116185308">
     <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -250,53 +250,47 @@
         </div>
     </header>
 
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-        <a href="/">Home</a> &gt; <a href="/category/ai-development/">AI Development</a> &gt; <span>Weaviate</span>
+    <nav class="breadcrumb td-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a><span class="sep">/</span><a href="/category/ai-development/">AI Development</a><span class="sep">/</span><span>Weaviate</span>
     </nav>
 
-    <main class="article-container">
-        <div class="tool-header">
-            <div class="tool-header-top">
+    <main>
+        <section class="td-hero">
+            <div class="td-identity">
                 <img class="tool-logo tool-icon-lg" src="/assets/icons/weaviate.png" alt="Weaviate" width="56" height="56" loading="lazy" decoding="async">
-                <div class="tool-header-info">
-                    <div class="tool-title-row"><h1>Weaviate</h1><span class="status-chip status-verified">Verified</span></div>
-                    <p class="subtitle">Open-source vector database with native GraphQL API, built-in vectorizer modules, and best-in-class hybrid search (BM25 + vector). Written in Go, used by enterprises for RAG, semantic search, and AI application infrastructure.</p>
-                    <div class="rating-bar">⭐ 4.6 <span style="font-size:14px;color:#999;">(850K visits)</span></div>
+                <h1>Weaviate</h1>
+                <p class="td-summary">Open-source vector database with native GraphQL API, built-in vectorizer modules, and best-in-class hybrid search (BM25 + vector). Written in Go, used by enterprises for RAG, semantic search, and AI application infrastructure.</p>
+                <div class="td-chips">
+                    <span class="td-chip td-chip-neutral">AI Development</span>
+                    
+                    <span class="td-chip td-chip-verified">✓ Independently reviewed</span>
                 </div>
             </div>
-            <div class="tool-meta">
-                <div class="tool-meta-item"><strong>Website</strong>: weaviate.io</div>
-                <div class="tool-meta-item"><strong>Price</strong>: Free (self-host) + Cloud $25/mo</div>
-                <div class="tool-meta-item"><strong>Platform</strong>: Self-hosted (Docker/K8s) / Weaviate Cloud / Linux / macOS</div>
-                <div class="tool-meta-item"><strong>Category</strong>: AI Development</div>
-            </div>
-            <div class="action-bar">
-                <a href="https://weaviate.io" target="_blank" rel="noopener" class="action-btn action-btn-primary">Visit Weaviate →</a>
-            </div>
+            <aside class="td-score-card">
+                <div class="td-score-label">EDITOR SCORE</div>
+                <div class="td-score-value">4.6 / 5</div>
+                <div class="td-score-note">✓ Verified  ·  Independently tested</div>
+                <a class="td-visit-btn" href="https://weaviate.io" target="_blank" rel="noopener">Visit Weaviate →</a>
+            </aside>
+        </section>
+
+        <div class="td-body">
+            <div class="td-proscons">
+            <div class="td-card"><div class="td-card-head pros">WHAT WORKS</div><ul><li>✓&nbsp;&nbsp;GraphQL-native API — no SQL-to-vector translation layer, queries are direct and composable</li><li>✓&nbsp;&nbsp;Built-in vectorizer modules (OpenAI, Cohere, Hugging Face) — skip the separate embedding service</li><li>✓&nbsp;&nbsp;Hybrid search is genuinely best-in-class — BM25 keyword + vector semantic in one query</li><li>✓&nbsp;&nbsp;Multi-tenancy with strict isolation — run separate clients in the same cluster without cross-contamination</li><li>✓&nbsp;&nbsp;Self-hosted cost is predictable — the Docker container uses what you give it, no surprise bills</li></ul></div>
+            <div class="td-card"><div class="td-card-head cons">LIMITATIONS</div><ul><li>—&nbsp;&nbsp;Go dependency ecosystem is smaller than Python — fewer community modules than Pinecone/Qdrant</li><li>—&nbsp;&nbsp;GraphQL learning curve for teams that only know REST — the query syntax is not intuitive at first</li><li>—&nbsp;&nbsp;No serverless self-host option — the Docker container needs to stay running, cold starts kill latency</li><li>—&nbsp;&nbsp;Cloud pricing gets steep at scale — the 25M-vector WCS plan jumps from $25 to hundreds fast</li><li>—&nbsp;&nbsp;Module-based vectorizers are convenient but opaque — debugging why an embedding is wrong means digging through module internals</li></ul></div>
         </div>
 
-        <div class="tldr-box">
-            <strong>TL;DR</strong>
-            <p>Open-source vector database with native GraphQL API, built-in vectorizer modules, and best-in-class hybrid search (BM25 + vector). Written in Go, used by enterprises for RAG, semantic search, and AI application infrastructure.</p>
+            <div class="td-card td-pricing">
+        <div class="td-card-head faint">PRICING&nbsp;·&nbsp;UPDATED 16 Nov 2026</div>
+        <div class="td-price-tile">
+            <div class="td-price-label">CURRENT PRICING</div>
+            <div class="td-price-value">Free (self-host) + Cloud $25/mo</div>
+            <div class="td-price-detail">Free self-hosted (BSD-3). Weaviate Cloud (WCS) Serverless starts at $25/mo. Enterprise: custom pricing.</div>
         </div>
+    </div>
 
-        <div class="key-stats">
-            <h4>Key Statistics</h4>
-            <div class="ks-grid"><div class="ks-item"><span class="ks-val">4.6</span><span class="ks-label">User Rating</span></div><div class="ks-item"><span class="ks-val">850K</span><span class="ks-label">Monthly Visits</span></div><div class="ks-item"><span class="ks-val">Free (self-host) + Cloud $25/mo</span><span class="ks-label">Pricing</span></div><div class="ks-item"><span class="ks-val">Self-hosted (Docker/K8s) / Weaviate Cloud / Linux / macOS</span><span class="ks-label">Platform</span></div></div>
-        </div>
-
-        <div class="features-grid"><div class="feature-item">Hybrid search: BM25 keyword + vector semantic in one API call</div>
-<div class="feature-item">Built-in vectorizer modules (text2vec-openai, text2vec-cohere, text2vec-huggingface, multi2vec-clip)</div>
-<div class="feature-item">Native GraphQL query interface — no bolt-on, no adapter</div>
-<div class="feature-item">Real-time CRUD with sub-second indexing (HNSW + flat index backends)</div>
-<div class="feature-item">Multi-tenancy: class-level and tenant-level isolation for SaaS architectures</div>
-<div class="feature-item">Generative Search: auto-augments retrieved results with LLM-generated answers (RAG in one call)</div>
-<div class="feature-item">Cross-reference (object linking) for building knowledge graphs on top of vectors</div>
-<div class="feature-item">Compression: PQ, BQ, and SQ quantization for reducing memory by 60-80%</div>
-</div>
-
-        <article class="article-body" data-tts>
-            <h2>What You Need to Know About Weaviate (From Someone Who Runs It)</h2>
+            <article class="article-body" data-tts>
+                <h2>What You Need to Know About Weaviate (From Someone Who Runs It)</h2>
 
 <p>I have been running Weaviate in production since mid-2024. I started with Pinecone, got annoyed by the pricing, tried Qdrant (Rust, fast, limited ecosystem), and landed on Weaviate for the GraphQL API and the built-in vectorizer modules. I now run it for three clients — a legal document search system, an e-commerce product recommendation engine, and an internal knowledge base for a 40-person consulting firm.
 </p>
@@ -491,50 +485,34 @@
 
 <p>For a solo consultant or small agency building RAG systems and semantic search products, Weaviate hits the sweet spot: open-source so your business model is not shackled to a vendor's pricing page, powerful enough for production, and differentiated enough that clients see "GraphQL-native vector search" and understand they are getting something not every consultant can deliver. That is the money angle — and it works.
 </p>
-        </article>
+            </article>
 
-        <div class="pros-cons">
-            <div class="pros">
-                <h4>Pros</h4>
-                <ul><li>GraphQL-native API — no SQL-to-vector translation layer, queries are direct and composable</li><li>Built-in vectorizer modules (OpenAI, Cohere, Hugging Face) — skip the separate embedding service</li><li>Hybrid search is genuinely best-in-class — BM25 keyword + vector semantic in one query</li><li>Multi-tenancy with strict isolation — run separate clients in the same cluster without cross-contamination</li><li>Self-hosted cost is predictable — the Docker container uses what you give it, no surprise bills</li></ul>
-            </div>
-            <div class="cons">
-                <h4>Cons</h4>
-                <ul><li>Go dependency ecosystem is smaller than Python — fewer community modules than Pinecone/Qdrant</li><li>GraphQL learning curve for teams that only know REST — the query syntax is not intuitive at first</li><li>No serverless self-host option — the Docker container needs to stay running, cold starts kill latency</li><li>Cloud pricing gets steep at scale — the 25M-vector WCS plan jumps from $25 to hundreds fast</li><li>Module-based vectorizers are convenient but opaque — debugging why an embedding is wrong means digging through module internals</li></ul>
-            </div>
-        </div>
-
-        <div class="faq-section"><h3>FAQ</h3><div class="faq-item">
-                    <details>
-                        <summary>How does Weaviate compare to Pinecone for RAG applications?</summary>
-                        <div class="faq-answer"><p>The biggest difference: Pinecone is closed-source SaaS-only, Weaviate is open-source with a cloud option. If you need full control over your data and infrastructure, Weaviate wins. Pinecone is easier to start with (no Docker, no config files) but you pay a premium for that convenience. At 10M vectors, self-hosted Weaviate on a $80/mo VM beats Pinecone Standard at $700/mo. But if your team has zero DevOps capacity, Pinecone's managed approach might save you more in labor than it costs in markup.
+            <div class="td-faq"><h2 class="td-faq-head">Questions we get asked</h2><div class="td-faq-item">
+                    <h3>How does Weaviate compare to Pinecone for RAG applications?</h3>
+                    <div class="td-faq-a"><p>The biggest difference: Pinecone is closed-source SaaS-only, Weaviate is open-source with a cloud option. If you need full control over your data and infrastructure, Weaviate wins. Pinecone is easier to start with (no Docker, no config files) but you pay a premium for that convenience. At 10M vectors, self-hosted Weaviate on a $80/mo VM beats Pinecone Standard at $700/mo. But if your team has zero DevOps capacity, Pinecone's managed approach might save you more in labor than it costs in markup.
 </p></div>
-                    </details>
                 </div>
-<div class="faq-item">
-                    <details>
-                        <summary>Can I use Weaviate without setting up a separate embedding service?</summary>
-                        <div class="faq-answer"><p>Yes — this is one of Weaviate's biggest differentiators. The built-in vectorizer modules (text2vec-openai, text2vec-cohere, text2vec-huggingface) handle embedding generation automatically. You send raw text to Weaviate, it calls the embedding API for you, stores the vectors, and returns results — all in one request. The tradeoff: you are dependent on external API availability and rate limits. For production, I still prefer generating embeddings separately in a pipeline for control, but for prototyping and MVPs, the built-in modules save 2-3 days of infrastructure work.
+<div class="td-faq-divider"></div>
+<div class="td-faq-item">
+                    <h3>Can I use Weaviate without setting up a separate embedding service?</h3>
+                    <div class="td-faq-a"><p>Yes — this is one of Weaviate's biggest differentiators. The built-in vectorizer modules (text2vec-openai, text2vec-cohere, text2vec-huggingface) handle embedding generation automatically. You send raw text to Weaviate, it calls the embedding API for you, stores the vectors, and returns results — all in one request. The tradeoff: you are dependent on external API availability and rate limits. For production, I still prefer generating embeddings separately in a pipeline for control, but for prototyping and MVPs, the built-in modules save 2-3 days of infrastructure work.
 </p></div>
-                    </details>
                 </div>
-<div class="faq-item">
-                    <details>
-                        <summary>What is Weaviate bad at, honestly?</summary>
-                        <div class="faq-answer"><p>Three things: (1) Very large clusters (>50M vectors) require careful shard planning — the default config will not handle it gracefully. (2) The GraphQL API, while powerful, adds a learning curve that frustrates REST-only teams — expect 1-2 weeks of ramp-up. (3) Multi-region replication is still immature compared to Elasticsearch — if you need low-latency search across continents, you will hit limitations.
+<div class="td-faq-divider"></div>
+<div class="td-faq-item">
+                    <h3>What is Weaviate bad at, honestly?</h3>
+                    <div class="td-faq-a"><p>Three things: (1) Very large clusters (>50M vectors) require careful shard planning — the default config will not handle it gracefully. (2) The GraphQL API, while powerful, adds a learning curve that frustrates REST-only teams — expect 1-2 weeks of ramp-up. (3) Multi-region replication is still immature compared to Elasticsearch — if you need low-latency search across continents, you will hit limitations.
 </p></div>
-                    </details>
                 </div>
-<div class="faq-item">
-                    <details>
-                        <summary>How do I make money with Weaviate as a solo consultant?</summary>
-                        <div class="faq-answer"><p>Three paths: (1) RAG system deployment for SMBs — build a custom knowledge base search for a law firm, clinic, or SaaS company. Charge $3K-$8K setup + $300-$800/mo hosting retainer. At 3-5 clients, that is $11K-$20K/mo recurring. (2) Pinecone-to-Weaviate migration — companies bleeding $700+/mo on managed vector DBs will pay $2K-$5K for a migration that pays for itself in 3 months. (3) Managed Weaviate hosting — spin up clients on a single beefy server with multi-tenancy, charge $200-$500/mo each. A $200/mo Hetzner dedicated can host 10-15 small tenants. The math works.
+<div class="td-faq-divider"></div>
+<div class="td-faq-item">
+                    <h3>How do I make money with Weaviate as a solo consultant?</h3>
+                    <div class="td-faq-a"><p>Three paths: (1) RAG system deployment for SMBs — build a custom knowledge base search for a law firm, clinic, or SaaS company. Charge $3K-$8K setup + $300-$800/mo hosting retainer. At 3-5 clients, that is $11K-$20K/mo recurring. (2) Pinecone-to-Weaviate migration — companies bleeding $700+/mo on managed vector DBs will pay $2K-$5K for a migration that pays for itself in 3 months. (3) Managed Weaviate hosting — spin up clients on a single beefy server with multi-tenancy, charge $200-$500/mo each. A $200/mo Hetzner dedicated can host 10-15 small tenants. The math works.
 </p></div>
-                    </details>
                 </div>
 </div>
 
-        <div class="author-block">
+            <div class="author-block">
         <div class="author-block-inner">
             <div class="author-avatar">A</div>
             <div class="author-body">
@@ -545,7 +523,7 @@
         </div>
     </div>
 
-        <div class="related-tools" id="relatedSection">
+            <div class="related-tools" id="relatedSection">
             <h3>Related Tools</h3>
             <div class="related-grid"><a href="/tools/replicate/" class="related-card">
                 <img class="tool-logo related-tile" src="/assets/icons/replicate.svg" alt="Replicate" width="40" height="40" loading="lazy" decoding="async">
@@ -575,7 +553,7 @@
 </div>
         </div>
 
-        <div class="related-tools">
+            <div class="related-tools">
                 <h3>Related Articles</h3>
                 <div class="related-grid"><a href="/articles/best-vector-databases-2026-pinecone-vs-qdrant-vs-weaviate-vs-zilliz-milvus/" class="related-card">
                     <div style="font-weight:600;margin-bottom:4px;">Best Vector Databases in 2026: Pinecone </div>
@@ -587,6 +565,7 @@
                 </a>
 </div>
             </div>
+        </div>
     </main>
 
     <footer class="footer">

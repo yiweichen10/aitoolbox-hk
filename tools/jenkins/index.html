@@ -21,7 +21,7 @@
     <meta name="twitter:title" content="Jenkins Review 2026 - AI Tool Lab">
     <meta name="twitter:description" content="The 20-year-old open-source automation server that still runs a huge slice of enterprise CI. Free to run, expensive to m">
     <meta name="twitter:image" content="https://www.aitoolbox.hk/images/og/jenkins-en-og.png">
-    <link rel="stylesheet" href="/css/style.css?v=20261116155217">
+    <link rel="stylesheet" href="/css/style.css?v=20261116185308">
     <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -248,51 +248,47 @@
         </div>
     </header>
 
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-        <a href="/">Home</a> &gt; <a href="/category/ai-development/">AI Development</a> &gt; <span>Jenkins</span>
+    <nav class="breadcrumb td-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a><span class="sep">/</span><a href="/category/ai-development/">AI Development</a><span class="sep">/</span><span>Jenkins</span>
     </nav>
 
-    <main class="article-container">
-        <div class="tool-header">
-            <div class="tool-header-top">
+    <main>
+        <section class="td-hero">
+            <div class="td-identity">
                 <img class="tool-logo tool-icon-lg" src="/assets/icons/jenkins.svg" alt="Jenkins" width="56" height="56" loading="lazy" decoding="async">
-                <div class="tool-header-info">
-                    <div class="tool-title-row"><h1>Jenkins</h1><span class="status-chip status-verified">Verified</span></div>
-                    <p class="subtitle">The 20-year-old open-source automation server that still runs a huge slice of enterprise CI. Free to run, expensive to maintain - and that labor line is exactly where the money is: migrations, managed-Jenkins retainers and pipeline rescue work.</p>
-                    <div class="rating-bar">⭐ 4.4</div>
+                <h1>Jenkins</h1>
+                <p class="td-summary">The 20-year-old open-source automation server that still runs a huge slice of enterprise CI. Free to run, expensive to maintain - and that labor line is exactly where the money is: migrations, managed-Jenkins retainers and pipeline rescue work.</p>
+                <div class="td-chips">
+                    <span class="td-chip td-chip-neutral">AI Development</span>
+                    
+                    <span class="td-chip td-chip-verified">✓ Independently reviewed</span>
                 </div>
             </div>
-            <div class="tool-meta">
-                <div class="tool-meta-item"><strong>Website</strong>: www.jenkins.io/</div>
-                <div class="tool-meta-item"><strong>Price</strong>: Free · open source (MIT)</div>
-                <div class="tool-meta-item" title="Self-hosted Java application (WAR file, official Docker image, or native packages for Windows, Linux and macOS); one controller plus any number of distributed build agents; web UI with Jenkinsfile pipeline-as-code in your repository; CLI and REST API; runs on-prem, in any cloud, or fully air-gapped."><strong>Platform</strong>: Self-hosted Java application (WAR file, official Docker ima…</div>
-                <div class="tool-meta-item"><strong>Category</strong>: AI Development</div>
-            </div>
-            <div class="action-bar">
-                <a href="https://www.jenkins.io/" target="_blank" rel="noopener" class="action-btn action-btn-primary">Visit Jenkins →</a>
-            </div>
+            <aside class="td-score-card">
+                <div class="td-score-label">EDITOR SCORE</div>
+                <div class="td-score-value">4.4 / 5</div>
+                <div class="td-score-note">✓ Verified  ·  Independently tested</div>
+                <a class="td-visit-btn" href="https://www.jenkins.io/" target="_blank" rel="noopener">Visit Jenkins →</a>
+            </aside>
+        </section>
+
+        <div class="td-body">
+            <div class="td-proscons">
+            <div class="td-card"><div class="td-card-head pros">WHAT WORKS</div><ul><li>✓&nbsp;&nbsp;Zero license cost with no feature gates - unlimited users, jobs and concurrency on the free core, so a 200-job monorepo setup costs the same in software as a 3-job hobby one</li><li>✓&nbsp;&nbsp;2,300+ plugins is the deepest integration catalog in CI - for every mainstream tool and half the obscure ones, the integration already exists and is battle-tested by someone else's pain</li><li>✓&nbsp;&nbsp;Full environmental control: air-gapped installs, agents on exotic hardware, data that never leaves your network - the only CI in its weight class that runs entirely inside your firewall</li><li>✓&nbsp;&nbsp;Declarative pipelines plus shared libraries keep large estates manageable - 200 similar pipelines can collapse into one library function each, which hosted CI declarative YAML has trouble matching</li><li>✓&nbsp;&nbsp;LTS every 12 weeks, weekly releases for the impatient, and a very large community - almost every failure mode you hit has a Stack Overflow answer from 2014</li><li>✓&nbsp;&nbsp;It is the incumbent: any developer you hire over 30 has shipped through Jenkins, and every enterprise SCM system on earth has a Jenkins plugin</li></ul></div>
+            <div class="td-card"><div class="td-card-head cons">LIMITATIONS</div><ul><li>—&nbsp;&nbsp;You are the ops team: controller upgrades, plugin dependency conflicts, backups, disk-full incidents and security advisories are your calendar, not a vendor's - 2-5 hours a month minimum, more when it goes wrong</li><li>—&nbsp;&nbsp;Plugin decay is the structural risk: with 2,300+ plugins, many single-maintainer, upgrades break and abandoned plugins rot in place - version pinning becomes a survival skill</li><li>—&nbsp;&nbsp;The UI has not aged well: Blue Ocean was supposed to fix it, went quiet years ago, and the classic interface is functional at best</li><li>—&nbsp;&nbsp;Exposed or unpatched Jenkins controllers are a classic breach vector - it needs the same security attention as any internet-facing service, which small teams routinely skip</li><li>—&nbsp;&nbsp;Scripted Groovy pipelines age terribly - five years later nobody can debug the 400-line pipeline file, and rewriting it is billable work</li><li>—&nbsp;&nbsp;No usage or cost analytics: since the software is free, nobody tracks build cost or queue health until the labor bill or a multi-hour build queue forces the conversation</li></ul></div>
         </div>
 
-        <div class="tldr-box">
-            <strong>TL;DR</strong>
-            <p>The 20-year-old open-source automation server that still runs a huge slice of enterprise CI. Free to run, expensive to maintain - and that labor line is exactly where the money is: migrations, managed-Jenkins retainers and pipeline rescue work.</p>
+            <div class="td-card td-pricing">
+        <div class="td-card-head faint">PRICING&nbsp;·&nbsp;UPDATED 16 Nov 2026</div>
+        <div class="td-price-tile">
+            <div class="td-price-label">CURRENT PRICING</div>
+            <div class="td-price-value">Free · open source (MIT)</div>
+            <div class="td-price-detail">Verified from jenkins.io (Oct 2026). The software itself is MIT-licensed open source and free forever - no seat limits, no feature gates, no metered minutes, no paid tier that unlocks anything. What you actually pay: (1) Controller infrastructure - a 4 vCPU / 8 GB VPS handles most mid-size setups at roughly $10-40/mo from Hetzner, DigitalOcean or an in-house box; (2) Build agents - ephemeral Docker agents on the same machine, or cloud VMs billed per minute only while jobs run, or your own machines at zero marginal cost; (3) Maintenance labor - plugin updates, security advisories (published roughly weekly), LTS upgrades every 12 weeks; budget 2-5 hours/month for a healthy instance, significantly more if the plugin tree is old or the instance is neglected; (4) Commercial support - CloudBees CI, the commercial Jenkins distribution with high availability, governance and SLAs, is quote-only with no public price list, and several independent consultancies sell Jenkins support contracts the same way. A realistic all-in for a 10-developer team: $30-100/mo of infrastructure plus the labor. That labor line is precisely why Jenkins-to-modern-CI migrations are a whole industry.</div>
         </div>
+    </div>
 
-        <div class="key-stats">
-            <h4>Key Statistics</h4>
-            <div class="ks-grid"><div class="ks-item"><span class="ks-val">4.4</span><span class="ks-label">User Rating</span></div><div class="ks-item"><span class="ks-val">Free · open source (MIT)</span><span class="ks-label">Pricing</span></div><div class="ks-item"><span class="ks-val">Self-hosted Java application (WAR file, official Docker ima…</span><span class="ks-label">Platform</span></div></div>
-        </div>
-
-        <div class="features-grid"><div class="feature-item">Free open-source core under the MIT license - no seat limits, no feature gates, no metered minutes, ever</div>
-<div class="feature-item">2,300+ community plugins covering practically every build, test, deploy and notification integration in existence</div>
-<div class="feature-item">Distributed builds: one controller drives fleets of agents on Linux, Windows, macOS, Docker or exotic hardware, scaled per job</div>
-<div class="feature-item">Pipeline-as-code via Jenkinsfile (declarative or scripted) with shared libraries for org-wide reusable pipeline logic</div>
-<div class="feature-item">LTS releases every 12 weeks plus a weekly release line, with roughly weekly security advisories from a very active community</div>
-<div class="feature-item">Runs fully air-gapped: nothing outside the firewall required, which no hosted CI competitor can offer</div>
-</div>
-
-        <article class="article-body" data-tts>
-            <p>Jenkins has been around since 2004, which in software makes it older than most of the tools that replaced it. It is an open-source automation server written in Java, MIT-licensed, and it still sits at the heart of CI for a very large share of enterprise engineering organizations. The pitch has never changed: install it once, connect it to everything through 2,300+ plugins, and build a pipeline for literally any toolchain - including the obscure legacy SDK that no hosted CI will ever support. The trade has not changed either: you get unlimited everything for $0 in software, and you pay for it with your own operating labor.
+            <article class="article-body" data-tts>
+                <p>Jenkins has been around since 2004, which in software makes it older than most of the tools that replaced it. It is an open-source automation server written in Java, MIT-licensed, and it still sits at the heart of CI for a very large share of enterprise engineering organizations. The pitch has never changed: install it once, connect it to everything through 2,300+ plugins, and build a pipeline for literally any toolchain - including the obscure legacy SDK that no hosted CI will ever support. The trade has not changed either: you get unlimited everything for $0 in software, and you pay for it with your own operating labor.
 </p>
 
 <h2>Pricing: the real math</h2>
@@ -359,43 +355,28 @@
 
 <p>When nobody on the team owns its upkeep. Greenfield teams without a dedicated ops person are better served by GitHub Actions or CircleCI, where the controller, security patching and runner fleet are someone else's job. If your team spends more time maintaining the CI than the software it builds, that is the signal - migrate, or hand the instance to someone who runs them for a living.
 </p>
-        </article>
+            </article>
 
-        <div class="pros-cons">
-            <div class="pros">
-                <h4>Pros</h4>
-                <ul><li>Zero license cost with no feature gates - unlimited users, jobs and concurrency on the free core, so a 200-job monorepo setup costs the same in software as a 3-job hobby one</li><li>2,300+ plugins is the deepest integration catalog in CI - for every mainstream tool and half the obscure ones, the integration already exists and is battle-tested by someone else's pain</li><li>Full environmental control: air-gapped installs, agents on exotic hardware, data that never leaves your network - the only CI in its weight class that runs entirely inside your firewall</li><li>Declarative pipelines plus shared libraries keep large estates manageable - 200 similar pipelines can collapse into one library function each, which hosted CI declarative YAML has trouble matching</li><li>LTS every 12 weeks, weekly releases for the impatient, and a very large community - almost every failure mode you hit has a Stack Overflow answer from 2014</li><li>It is the incumbent: any developer you hire over 30 has shipped through Jenkins, and every enterprise SCM system on earth has a Jenkins plugin</li></ul>
-            </div>
-            <div class="cons">
-                <h4>Cons</h4>
-                <ul><li>You are the ops team: controller upgrades, plugin dependency conflicts, backups, disk-full incidents and security advisories are your calendar, not a vendor's - 2-5 hours a month minimum, more when it goes wrong</li><li>Plugin decay is the structural risk: with 2,300+ plugins, many single-maintainer, upgrades break and abandoned plugins rot in place - version pinning becomes a survival skill</li><li>The UI has not aged well: Blue Ocean was supposed to fix it, went quiet years ago, and the classic interface is functional at best</li><li>Exposed or unpatched Jenkins controllers are a classic breach vector - it needs the same security attention as any internet-facing service, which small teams routinely skip</li><li>Scripted Groovy pipelines age terribly - five years later nobody can debug the 400-line pipeline file, and rewriting it is billable work</li><li>No usage or cost analytics: since the software is free, nobody tracks build cost or queue health until the labor bill or a multi-hour build queue forces the conversation</li></ul>
-            </div>
-        </div>
-
-        <div class="faq-section"><h3>FAQ</h3><div class="faq-item">
-                    <details>
-                        <summary>Is Jenkins really free? What is the catch?</summary>
-                        <div class="faq-answer"><p>The software is genuinely free under the MIT license - every plugin, unlimited users and jobs, no feature locked behind payment. The catch is that free software transfers the operating burden to you: you provision the controller, manage agents, apply plugin updates and security advisories, and fix the pipeline when a plugin upgrade breaks it. For a 10-developer team, expect $30-100/mo in infrastructure and a few hours of maintenance a month. Teams that cannot spare that labor either buy CloudBees CI (the commercial distribution, quote-only pricing) or pay a consultant - which is a real market, not a defect.
+            <div class="td-faq"><h2 class="td-faq-head">Questions we get asked</h2><div class="td-faq-item">
+                    <h3>Is Jenkins really free? What is the catch?</h3>
+                    <div class="td-faq-a"><p>The software is genuinely free under the MIT license - every plugin, unlimited users and jobs, no feature locked behind payment. The catch is that free software transfers the operating burden to you: you provision the controller, manage agents, apply plugin updates and security advisories, and fix the pipeline when a plugin upgrade breaks it. For a 10-developer team, expect $30-100/mo in infrastructure and a few hours of maintenance a month. Teams that cannot spare that labor either buy CloudBees CI (the commercial distribution, quote-only pricing) or pay a consultant - which is a real market, not a defect.
 </p></div>
-                    </details>
                 </div>
-<div class="faq-item">
-                    <details>
-                        <summary>Why do enterprises still run Jenkins in 2026?</summary>
-                        <div class="faq-answer"><p>Three reasons. First, sunk depth: many companies have hundreds of pipelines, shared libraries and plugin integrations built over a decade - migrating is expensive and risk-laden. Second, control requirements: air-gapped networks, on-prem data policies and exotic build hardware (specialized SDKs, legacy toolchains, physical devices) fit Jenkins and sit badly with hosted CI. Third, freedom: no metered minutes, no per-seat bill that grows with headcount, and the ability to run agents anywhere. Whether those reasons justify the maintenance labor is a different question - which is exactly why migration consulting exists.
+<div class="td-faq-divider"></div>
+<div class="td-faq-item">
+                    <h3>Why do enterprises still run Jenkins in 2026?</h3>
+                    <div class="td-faq-a"><p>Three reasons. First, sunk depth: many companies have hundreds of pipelines, shared libraries and plugin integrations built over a decade - migrating is expensive and risk-laden. Second, control requirements: air-gapped networks, on-prem data policies and exotic build hardware (specialized SDKs, legacy toolchains, physical devices) fit Jenkins and sit badly with hosted CI. Third, freedom: no metered minutes, no per-seat bill that grows with headcount, and the ability to run agents anywhere. Whether those reasons justify the maintenance labor is a different question - which is exactly why migration consulting exists.
 </p></div>
-                    </details>
                 </div>
-<div class="faq-item">
-                    <details>
-                        <summary>When does Jenkins stop making sense?</summary>
-                        <div class="faq-answer"><p>For a greenfield team without a dedicated ops person, it is usually the wrong starting point: GitHub Actions gives you hosted runners, zero-maintenance controllers and a free tier that covers small projects, and CircleCI adds fast parallel test splitting. Jenkins earns its keep when you need full control (air-gapped, on-prem, custom hardware), when you already have a large estate that works, or when usage-based pricing on hosted CI would cost more than a $40 VPS and an hour a week of upkeep. If you are spending more time maintaining Jenkins than writing software, that is the signal to migrate - or to hire someone to run it for you.
+<div class="td-faq-divider"></div>
+<div class="td-faq-item">
+                    <h3>When does Jenkins stop making sense?</h3>
+                    <div class="td-faq-a"><p>For a greenfield team without a dedicated ops person, it is usually the wrong starting point: GitHub Actions gives you hosted runners, zero-maintenance controllers and a free tier that covers small projects, and CircleCI adds fast parallel test splitting. Jenkins earns its keep when you need full control (air-gapped, on-prem, custom hardware), when you already have a large estate that works, or when usage-based pricing on hosted CI would cost more than a $40 VPS and an hour a week of upkeep. If you are spending more time maintaining Jenkins than writing software, that is the signal to migrate - or to hire someone to run it for you.
 </p></div>
-                    </details>
                 </div>
 </div>
 
-        <div class="author-block">
+            <div class="author-block">
         <div class="author-block-inner">
             <div class="author-avatar">A</div>
             <div class="author-body">
@@ -406,7 +387,7 @@
         </div>
     </div>
 
-        <div class="related-tools" id="relatedSection">
+            <div class="related-tools" id="relatedSection">
             <h3>Related Tools</h3>
             <div class="related-grid"><a href="/tools/replicate/" class="related-card">
                 <img class="tool-logo related-tile" src="/assets/icons/replicate.svg" alt="Replicate" width="40" height="40" loading="lazy" decoding="async">
@@ -436,7 +417,7 @@
 </div>
         </div>
 
-        <div class="related-tools">
+            <div class="related-tools">
                 <h3>Related Articles</h3>
                 <div class="related-grid"><a href="/articles/best-cicd-tools-2026-github-actions-vs-gitlab-vs-circleci-vs-jenkins/" class="related-card">
                     <div style="font-weight:600;margin-bottom:4px;">Best CI/CD Tools in 2026: GitHub Actions</div>
@@ -452,6 +433,7 @@
                 </a>
 </div>
             </div>
+        </div>
     </main>
 
     <footer class="footer">
