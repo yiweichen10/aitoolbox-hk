@@ -97,7 +97,38 @@ def upload() -> int:
         "--project-name", PROJECT, "--branch", "main", "--commit-dirty=true",
     ]
     print("RUN", " ".join(cmd[:4]), "...")
-    return subprocess.call(cmd, cwd=str(ROOT))
+
+    # 2026-11-16 实测：GitHub push 与 Cloudflare API 同日先后断流（ECONNRESET /
+    # ConnectTimeout / HTTP 408）。部署失败即停会让自动化 19 当天不更新，
+    # 因此这里对「瞬时网络错误」自动重试 3 次，间隔 20s。
+    TRANSIENT = ("ECONNRESET", "ETIMEDOUT", "ConnectTimeoutError", "fetch failed",
+                 "timed out", "408", "Connection reset", "socket hang up")
+    attempts = 3
+    for i in range(1, attempts + 1):
+        proc = subprocess.run(cmd, cwd=str(ROOT), text=True,
+                              encoding="utf-8", errors="replace",
+                              capture_output=True)
+        output = (proc.stdout or "") + (proc.stderr or "")
+        tail = "\n".join(output.strip().splitlines()[-12:])
+        ok = proc.returncode == 0 and "Deployment complete" in output
+        if ok:
+            print(tail)
+            print(f"DEPLOY attempt {i}: OK")
+            return 0
+        transient = any(marker.lower() in output.lower() for marker in TRANSIENT)
+        print(f"DEPLOY attempt {i}: FAILED (exit {proc.returncode}, "
+              f"{'transient network' if transient else 'non-transient'})")
+        if tail:
+            print(tail)
+        if i < attempts and transient:
+            import time
+            print(f"retrying in 20s ...")
+            time.sleep(20)
+        elif i < attempts:
+            print("non-transient failure, no retry")
+            break
+    print("DEPLOY failed after retries — see logs above.")
+    return proc.returncode or 1
 
 
 if __name__ == "__main__":
