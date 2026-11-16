@@ -3583,3 +3583,56 @@ img.tool-logo.ft-icon      { width: 56px; height: 56px; padding: 9px; border-rad
 .cat-table td a:hover { color: var(--brand-blue); }
 .cat-table td.reps a { color: var(--brand-blue); }
 .cat-table td.reps a + a { margin-left: 10px; }
+
+/* Category mini-grid — CN-site hot-mini pattern: compact chips, one screen
+   holds every category even on mobile. Token-driven for dark mode. */
+.cat-mini-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 12px 10px;
+}
+.cat-mini {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  padding: 12px 8px;
+  border-radius: 12px;
+  background: var(--surface-bg);
+  border: 1px solid var(--border-subtle);
+  text-decoration: none;
+  transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+}
+.cat-mini:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--brand-blue);
+}
+.cat-mini-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  flex: none;
+  background: var(--brand-blue-soft);
+  color: var(--brand-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cat-mini-icon svg { width: 17px; height: 17px; }
+.cat-mini-name {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--text-main);
+  text-align: center;
+  line-height: 1.2;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.cat-mini-meta { font-size: 11px; color: var(--text-faint); }
+@media (max-width: 640px) {
+  .cat-mini-grid { grid-template-columns: repeat(auto-fill, minmax(98px, 1fr)); gap: 10px 8px; }
+  .cat-mini-name { font-size: 12px; }
+}

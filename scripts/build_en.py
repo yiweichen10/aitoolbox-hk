@@ -1424,18 +1424,16 @@ def build_category_index_en(tools_by_cat: dict) -> str:
             '</tr>\n'
         )
 
-    # ── Mini-card grid (icon tiles) ──
+    # ── Mini-card grid — CN-site compact chips so one screen holds every category ──
     cat_cards = ''
     for cslug, data in cats:
         cname = data['display']
-        cat_tile = f'<div class="cat-tile" aria-hidden="true">{category_icon_svg(cname)}</div>'
-        cat_cards += f'''<a href="/category/{cslug}/" class="tool-card" style="text-decoration:none;">
-            {cat_tile}
-            <div class="tool-info">
-                <h3>{escape_html(cname)}</h3>
-                <p>{len(data['tools'])} tools reviewed</p>
-            </div>
-        </a>\n'''
+        n = len(data['tools'])
+        cat_cards += (f'<a class="cat-mini" href="/category/{cslug}/" title="{escape_html(cname)}">'
+                      f'<span class="cat-mini-icon">{category_icon_svg(cname)}</span>'
+                      f'<span class="cat-mini-name">{escape_html(cname)}</span>'
+                      f'<span class="cat-mini-meta">{n} tool{"s" if n != 1 else ""}</span>'
+                      f'</a>\n')
 
     # ── FAQ: plain-text answers, rendered + FAQPage schema (GEO core) ──
     top5_txt = ', '.join(f"{data['display']} ({len(data['tools'])})" for _, data in cats[:5])
@@ -1550,7 +1548,7 @@ def build_category_index_en(tools_by_cat: dict) -> str:
 
         <section class="cat-section" id="browse">
             <h2>Browse by category</h2>
-            <div class="tool-grid">
+            <div class="cat-mini-grid">
                 {cat_cards}
             </div>
         </section>
