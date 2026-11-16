@@ -3476,9 +3476,31 @@ img.tool-logo.ft-icon      { width: 56px; height: 56px; padding: 9px; border-rad
 /* Responsive — stack the hero under 1024px, single column cards under 720px */
 @media (max-width: 1024px) {
   .td-hero { flex-direction: column; gap: 24px; }
+  /* In column direction `flex-basis: 720px` would become a 720px HEIGHT
+     reservation — reset to auto so the identity hugs its content. */
+  .td-identity { flex: 1 1 auto; }
   .td-score-card { flex: 1 1 auto; width: 100%; }
 }
 @media (max-width: 720px) {
   .td-proscons { grid-template-columns: 1fr; }
   .td-identity h1 { font-size: 34px; }
+}
+
+/* Header on small screens — the v2 brand/nav markup needs its own squeeze
+   rules: brand never wraps or shrinks, nav scrolls horizontally instead. */
+@media (max-width: 768px) {
+  .header .site-brand {
+    flex-shrink: 0;
+    white-space: nowrap;
+    font-size: 17px;
+    gap: 6px;
+  }
+  .header .site-brand .brand-mark {
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    font-size: 13px;
+  }
+  .header-inner { padding: 10px 16px; gap: 12px; }
+  .header-nav { flex: 1 1 auto; min-width: 0; }
 }
