@@ -249,7 +249,7 @@ SCHEMA_HOMEPAGE_BLOCK = '''    <!-- Schema: WebSite + SearchAction (AEO+GEO 2026
             "@type": "SearchAction",
             "target": {
                 "@type": "EntryPoint",
-                "urlTemplate": "https://www.aitoolbox.hk/?q={search_term_string}"
+                "urlTemplate": "https://www.aitoolbox.hk/search/?q={search_term_string}"
             },
             "query-input": "required name=search_term_string"
         }
@@ -1910,62 +1910,9 @@ def build_index_en(tools: list, articles: list) -> str:
 
     <script>
     function performSearch() {
-        var q = (document.getElementById('searchInput').value || '').trim().toLowerCase();
-        var resultsEl = document.getElementById('searchResults');
-        var cards = document.querySelectorAll('.tool-card');
-        var totalHits = 0;
-
-        if (!q) {
-            cards.forEach(function(c) { c.style.display = ''; });
-            document.querySelectorAll('section').forEach(function(s) { s.style.display = ''; });
-            document.querySelectorAll('h2').forEach(function(h) { h.style.display = ''; });
-            if (resultsEl) resultsEl.style.display = 'none';
-            return;
-        }
-
-        var toolSection = null;
-        cards.forEach(function(card) {
-            var name = (card.querySelector('h3') || {}).textContent || '';
-            var desc = (card.querySelector('p') || {}).textContent || '';
-            var tags = (card.querySelector('.tool-meta-row') || {}).textContent || '';
-            var match = name.toLowerCase().indexOf(q) !== -1 ||
-                        desc.toLowerCase().indexOf(q) !== -1 ||
-                        tags.toLowerCase().indexOf(q) !== -1;
-            card.style.display = match ? '' : 'none';
-            if (match) {
-                totalHits++;
-                if (!toolSection) toolSection = card.closest('section');
-            }
-        });
-
-        document.querySelectorAll('section').forEach(function(section) {
-            if (!section.querySelector('.tool-grid')) return;
-            var hasVisible = false;
-            section.querySelectorAll('.tool-card').forEach(function(c) {
-                if (c.style.display !== 'none') hasVisible = true;
-            });
-            section.style.display = hasVisible ? '' : 'none';
-            var h2 = section.querySelector('h2');
-            if (h2) h2.style.display = hasVisible ? '' : 'none';
-        });
-
-        if (resultsEl) {
-            if (totalHits > 0) {
-                resultsEl.innerHTML = 'Found <strong>' + totalHits + '</strong> tool' + (totalHits !== 1 ? 's' : '') + ' matching "' + q + '"';
-                resultsEl.style.display = 'block';
-            } else {
-                resultsEl.innerHTML = 'No tools found matching "' + q + '". Try a different search term.';
-                resultsEl.style.display = 'block';
-            }
-        }
-
-        if (totalHits > 0 && toolSection) {
-            setTimeout(function() {
-                var headerEl = document.querySelector('.header');
-                var stickyHeight = headerEl ? headerEl.getBoundingClientRect().height : 0;
-                var top = toolSection.getBoundingClientRect().top + window.pageYOffset - stickyHeight - 16;
-                window.scrollTo({top: top, behavior: 'smooth'});
-            }, 100);
+        var q = (document.getElementById('searchInput').value || '').trim();
+        if (q) {
+            window.location.href = '/search/?q=' + encodeURIComponent(q);
         }
     }
 
@@ -2037,6 +1984,318 @@ def inject_global_nav_en():
 
 
 # ─── Main build ───────────────────────────────────────────────────────────────
+
+def generate_llms_txt_en(tools: list, articles: list) -> str:
+    """llms.txt (llmstxt.org) — machine-readable site brief for AI models.
+    Regenerated on EVERY build so counts, dates and URLs never drift stale
+    (the 2026-11-16 audit found counts off by one and every link missing its
+    trailing slash vs the sitemap)."""
+    today_iso = datetime.now().strftime('%Y-%m-%d')
+    n_tools, n_arts = len(tools), len(articles)
+
+    merged = {}
+    for t in tools:
+        s = get_category_slug_en(t.get('category', ''))
+        if s not in merged:
+            merged[s] = {'display': t.get('category', ''), 'tools': []}
+        merged[s]['tools'].append(t)
+
+    def _rate(t):
+        try:
+            return float(re.sub(r'[^\d.]', '', str(t.get('rating', ''))) or 0)
+        except Exception:
+            return 0.0
+
+    def _brief(text, limit=110):
+        text = (text or '').strip().replace('\n', ' ')
+        if len(text) <= limit:
+            return text
+        cut = text[:limit]
+        sp = cut.rfind(' ')
+        if sp > 60:
+            cut = cut[:sp]
+        return cut.rstrip(' ,.;:') + '…'
+
+    cats_sorted = sorted(merged.items(), key=lambda kv: -len(kv[1]['tools']))
+    cat_list_txt = ', '.join(v['display'] for _, v in cats_sorted)
+
+    out = ['# AI Tool Box (aitoolbox.hk)', '']
+    out.append(f'> A curated AI tool directory & review platform for Hong Kong and global English-speaking users. Currently lists {n_tools} AI tools across {len(cats_sorted)} categories ({cat_list_txt}), with editor-tested reviews covering features, pricing, pros/cons and use cases. The site is updated daily.')
+    out.append('')
+    out.append('<!-- llms.txt — machine-readable site description for AI models -->')
+    out.append('<!-- Spec: https://llmstxt.org -->')
+    out.append('<!-- Regenerated by scripts/build_en.py on every build, from data/tools_en.json + data/articles_en.json -->')
+    out.append(f'<!-- Updated: {today_iso} -->')
+    out.append('')
+    out.append('## Basic Info')
+    out.append('')
+    out.append('- Primary language: English (Chinese companion site: aitoollab.cn)')
+    out.append('- Copyright: AI Tool Box (aitoolbox.hk)')
+    out.append('- AI models may cite content from this site; please credit AI Tool Box (aitoolbox.hk)')
+    out.append('')
+    out.append('## Core Pages (priority crawl)')
+    out.append('')
+    out.append('- [Home](https://www.aitoolbox.hk/): featured, latest and hot AI tools')
+    out.append(f'- [Category Overview](https://www.aitoolbox.hk/category/): all {len(cats_sorted)} category pages with a quick-reference table')
+    out.append('- [Search](https://www.aitoolbox.hk/search/): instant search across all tools and articles')
+    out.append(f'- [Articles](https://www.aitoolbox.hk/articles/): original hands-on reviews, comparisons and guides ({n_arts} articles)')
+    out.append('')
+    out.append(f'## Important Tool Pages (top 5 by rating per category, {n_tools} tools total)')
+    out.append('')
+    for _, v in cats_sorted:
+        clist = sorted(v['tools'], key=_rate, reverse=True)[:5]
+        out.append(f"### {v['display']} ({len(v['tools'])})")
+        for t in clist:
+            out.append(f"- [{t.get('name','')}](https://www.aitoolbox.hk/tools/{t.get('slug','')}/): {_brief(t.get('description',''))}")
+        out.append('')
+    out.append(f'## Important Article Pages ({n_arts} total, latest 16 by date)')
+    out.append('')
+    for a in sorted(articles, key=lambda a: str(a.get('date', '')), reverse=True)[:16]:
+        out.append(f"- [{a.get('title','')}](https://www.aitoolbox.hk/articles/{a.get('slug','')}/)")
+    out.append('')
+    out.append('## Update Frequency')
+    out.append('')
+    out.append(f'- Tool database: updated daily ({n_tools} tools listed)')
+    out.append(f'- Articles: new original reviews published regularly ({n_arts} total)')
+    out.append('- Ratings/pricing: recalibrated continuously')
+    out.append('')
+    out.append('## Sitemap')
+    out.append('')
+    out.append('https://www.aitoolbox.hk/sitemap.xml')
+    out.append('')
+    out.append('## Contact')
+    out.append('')
+    out.append('Website: https://www.aitoolbox.hk')
+    return '\n'.join(out) + '\n'
+
+
+def build_search_page_en(tools: list, articles: list) -> str:
+    """Standalone search page (/search/) — static client-side index of every
+    tool, article and category. noindex,follow (utility page, not in sitemap);
+    the homepage WebSite SearchAction points here."""
+    merged = {}
+    for t in tools:
+        s = get_category_slug_en(t.get('category', ''))
+        if s not in merged:
+            merged[s] = {'display': t.get('category', ''), 'tools': []}
+        merged[s]['tools'].append(t)
+    cats_idx = [{'name': v['display'], 'slug': s, 'count': len(v['tools'])}
+                for s, v in sorted(merged.items(), key=lambda kv: -len(kv[1]['tools']))]
+    tools_idx = [{'name': t.get('name', ''), 'slug': t.get('slug', ''),
+                  'cat': t.get('category', ''), 'price': t.get('price', ''),
+                  'rating': re.sub(r'[^\d.]', '', str(t.get('rating', ''))),
+                  'desc': (t.get('description', '') or '')[:110]}
+                 for t in tools]
+    arts_idx = [{'title': a.get('title', ''), 'slug': a.get('slug', ''),
+                 'date': str(a.get('date', ''))[:10],
+                 'desc': (a.get('description', '') or '')[:110]}
+                for a in articles]
+    index_json = json.dumps({'tools': tools_idx, 'articles': arts_idx, 'cats': cats_idx},
+                            ensure_ascii=False, separators=(',', ':'))
+    total_pages = len(tools) + len(articles)
+    hreflang = hreflang_tags('/search/', '/search/')
+
+    idle_chips = ''.join(
+        f'<a class="cat-mini" href="/category/{c["slug"]}/">'
+        f'<span class="cat-mini-icon">{category_icon_svg(c["name"])}</span>'
+        f'<span class="cat-mini-name">{escape_html(c["name"])}</span>'
+        f'<span class="cat-mini-meta">{c["count"]} tools</span></a>'
+        for c in cats_idx[:12])
+
+    page = r'''<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search AI Tools & Reviews - AI Tool Lab</title>
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://www.aitoolbox.hk/search/">
+__HREFLANG__
+    <link rel="stylesheet" href="/css/style.css?__CSSV__">
+__VERIFYGA__
+</head>
+<body>
+__HEADER__
+
+    <main class="search-page">
+        <h1 class="page-title">Search AI Tools & Reviews</h1>
+        <p class="search-sub">__TOTAL__ pages indexed — every tool review, article and category.</p>
+        <div class="search-box">
+            <input id="q" type="search" placeholder="Try &ldquo;pricing&rdquo;, &ldquo;video&rdquo;, or a tool name&hellip;" autocomplete="off" autofocus aria-label="Search AI tools">
+        </div>
+        <div class="sr-filters" id="srFilters">
+            <button class="sr-chip active" data-f="all" type="button">All</button>
+            <button class="sr-chip" data-f="tools" type="button">Tools</button>
+            <button class="sr-chip" data-f="articles" type="button">Articles</button>
+            <button class="sr-chip" data-f="cats" type="button">Categories</button>
+        </div>
+        <div id="srMeta" class="sr-meta" aria-live="polite"></div>
+        <div id="srResults" class="sr-results"></div>
+        <div id="srEmpty" class="sr-empty" hidden>
+            <p>No results. Try a shorter term — &ldquo;pricing&rdquo;, &ldquo;video&rdquo;, &ldquo;writing&rdquo; — or a tool name like &ldquo;ChatGPT&rdquo;.</p>
+        </div>
+        <div id="srIdle" class="sr-idle">
+            <p>POPULAR CATEGORIES</p>
+            <div class="cat-mini-grid">
+                __IDLE_CHIPS__
+            </div>
+        </div>
+    </main>
+
+__FOOTER__
+__BLOCKS__
+
+    <script>
+    var IDX = __INDEX_JSON__;
+    var $q = document.getElementById('q');
+    var $res = document.getElementById('srResults');
+    var $meta = document.getElementById('srMeta');
+    var $empty = document.getElementById('srEmpty');
+    var $idle = document.getElementById('srIdle');
+    var filter = 'all';
+    var currentHrefs = [];
+    var activeIdx = -1;
+
+    function esc(s) {
+        return String(s).replace(/[&<>"]/g, function(c) {
+            return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];
+        });
+    }
+    function escRe(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
+    function hl(text, tokens) {
+        var e = esc(text);
+        if (!tokens.length) return e;
+        return e.replace(new RegExp('(' + tokens.map(escRe).join('|') + ')', 'gi'), '<mark>$1</mark>');
+    }
+    function score(tokens, name, meta, desc) {
+        var n = name.toLowerCase(), m = (meta || '').toLowerCase(), d = (desc || '').toLowerCase(), s = 0;
+        for (var i = 0; i < tokens.length; i++) {
+            var t = tokens[i];
+            if (n.indexOf(t) === 0) s += 4;
+            else if (n.indexOf(t) > -1) s += 3;
+            else if (m.indexOf(t) > -1) s += 2;
+            else if (d.indexOf(t) > -1) s += 1;
+            else return -1;
+        }
+        return s;
+    }
+    function runSearch(q) {
+        $idle.hidden = true;
+        $empty.hidden = true;
+        var tokens = q.toLowerCase().split(/\s+/).filter(Boolean);
+        if (!tokens.length) {
+            $res.innerHTML = ''; $meta.textContent = ''; currentHrefs = [];
+            $idle.hidden = false;
+            return;
+        }
+        var tools = [], articles = [], cats = [];
+        if (filter === 'all' || filter === 'tools') {
+            IDX.tools.forEach(function(t) {
+                var s = score(tokens, t.name, t.cat + ' ' + t.price, t.desc);
+                if (s >= 0) tools.push({s: s + (parseFloat(t.rating || 0) / 10), t: t});
+            });
+        }
+        if (filter === 'all' || filter === 'articles') {
+            IDX.articles.forEach(function(a) {
+                var s = score(tokens, a.title, a.date, a.desc);
+                if (s >= 0) articles.push({s: s, t: a});
+            });
+        }
+        if (filter === 'all' || filter === 'cats') {
+            IDX.cats.forEach(function(c) {
+                var s = score(tokens, c.name, '', '');
+                if (s >= 0) cats.push({s: s, t: c});
+            });
+        }
+        tools.sort(function(a, b) { return b.s - a.s; });
+        articles.sort(function(a, b) { return b.s - a.s; });
+        cats.sort(function(a, b) { return b.s - a.s; });
+        var total = tools.length + articles.length + cats.length;
+        if (!total) {
+            $res.innerHTML = ''; $meta.textContent = ''; currentHrefs = [];
+            $empty.hidden = false;
+            return;
+        }
+        var html = '', shown = 0;
+        currentHrefs = [];
+        activeIdx = -1;
+        function group(title, items, fmt, cap) {
+            if (!items.length) return;
+            html += '<div class="sr-group">' + title + '</div>';
+            items.slice(0, cap).forEach(function(w) { html += fmt(w.t); });
+        }
+        group('Categories', cats, function(c) {
+            var href = '/category/' + c.slug + '/';
+            currentHrefs.push(href); shown++;
+            return '<a class="sr-item" href="' + href + '"><span class="sr-type t-cat">Category</span><span class="sr-body"><span class="sr-name">' + hl(c.name, tokens) + '</span><span class="sr-meta2">' + c.count + ' tools</span></span></a>';
+        }, 10);
+        group('Tools', tools, function(t) {
+            var href = '/tools/' + t.slug + '/';
+            currentHrefs.push(href); shown++;
+            return '<a class="sr-item" href="' + href + '"><span class="sr-type t-tool">Tool</span><span class="sr-body"><span class="sr-name">' + hl(t.name, tokens) + '</span><span class="sr-meta2">' + esc(t.cat) + ' · ' + esc(t.price) + ' · ' + esc(t.rating) + '/5</span></span></a>';
+        }, 30);
+        group('Articles', articles, function(a) {
+            var href = '/articles/' + a.slug + '/';
+            currentHrefs.push(href); shown++;
+            return '<a class="sr-item" href="' + href + '"><span class="sr-type t-art">Article</span><span class="sr-body"><span class="sr-name">' + hl(a.title, tokens) + '</span><span class="sr-meta2">' + esc(a.date) + '</span></span></a>';
+        }, 30);
+        $res.innerHTML = html;
+        $meta.textContent = 'Found ' + total + ' result' + (total !== 1 ? 's' : '') + ' for "' + q + '"' + (shown < total ? ' — showing top ' + shown : '');
+    }
+    var deb;
+    $q.addEventListener('input', function() {
+        clearTimeout(deb);
+        deb = setTimeout(function() { runSearch($q.value.trim()); }, 140);
+    });
+    $q.addEventListener('keydown', function(e) {
+        var items = $res.querySelectorAll('.sr-item');
+        if (e.key === 'ArrowDown' && currentHrefs.length) {
+            e.preventDefault();
+            activeIdx = Math.min(activeIdx + 1, currentHrefs.length - 1);
+            items.forEach(function(el, i) { el.classList.toggle('active', i === activeIdx); });
+        } else if (e.key === 'ArrowUp' && currentHrefs.length) {
+            e.preventDefault();
+            activeIdx = Math.max(activeIdx - 1, 0);
+            items.forEach(function(el, i) { el.classList.toggle('active', i === activeIdx); });
+        } else if (e.key === 'Enter') {
+            var href = currentHrefs[activeIdx >= 0 ? activeIdx : 0];
+            if (href) window.location.href = href;
+        } else if (e.key === 'Escape') {
+            $q.value = ''; runSearch('');
+        }
+    });
+    document.getElementById('srFilters').addEventListener('click', function(e) {
+        var b = e.target.closest('.sr-chip');
+        if (!b) return;
+        filter = b.getAttribute('data-f');
+        this.querySelectorAll('.sr-chip').forEach(function(c) { c.classList.toggle('active', c === b); });
+        runSearch($q.value.trim());
+    });
+    (function() {
+        var q0 = '';
+        try { q0 = new URLSearchParams(location.search).get('q') || ''; } catch (err) {}
+        $q.value = q0;
+        if (q0.trim()) runSearch(q0.trim());
+        $q.focus();
+    })();
+    </script>
+</body>
+</html>'''
+
+    blocks = BACK_TO_TOP_BLOCK + DARK_MODE_BLOCK
+    page = (page
+            .replace('__INDEX_JSON__', index_json)
+            .replace('__HEADER__', header_html())
+            .replace('__FOOTER__', footer_html())
+            .replace('__BLOCKS__', blocks)
+            .replace('__VERIFYGA__', VERIFICATION_BLOCK + GA_BLOCK)
+            .replace('__HREFLANG__', hreflang)
+            .replace('__CSSV__', CSS_VERSION)
+            .replace('__TOTAL__', str(total_pages))
+            .replace('__IDLE_CHIPS__', idle_chips))
+    return page
+
 
 def build_all_en(target: str = 'all'):
     # Load data
@@ -2183,6 +2442,19 @@ def build_all_en(target: str = 'all'):
     with open(os.path.join(OUT_DIR, 'sitemap.xml'), 'w', encoding='utf-8') as f:
         f.write(sitemap)
     print(f'[OK] en/sitemap.xml ({len(published_tools)} tools + {len(articles)} articles)')
+
+    # ── Search page (client-side index; noindex, not in sitemap) ──────────────
+    search_dir = os.path.join(OUT_DIR, 'search')
+    os.makedirs(search_dir, exist_ok=True)
+    with open(os.path.join(search_dir, 'index.html'), 'w', encoding='utf-8') as f:
+        f.write(build_search_page_en(published_tools, articles))
+    print(f'[OK] en/search/index.html ({len(published_tools)} tools + {len(articles)} articles indexed)')
+
+    # ── llms.txt (regenerated on every build — counts/dates never drift) ──────
+    llms_txt = generate_llms_txt_en(published_tools, articles)
+    with open(os.path.join(OUT_DIR, 'llms.txt'), 'w', encoding='utf-8') as f:
+        f.write(llms_txt)
+    print(f'[OK] en/llms.txt ({len(published_tools)} tools / {len(articles)} articles)')
 
     # ── IndexNow push ─────────────────────────────────────────────────────────
     cache_file = os.path.join(BASE_DIR, '.indexnow_en_pushed.json')
