@@ -33,7 +33,7 @@ ROOT_FILES = [
 ]
 
 # 需要整目录复制的站点资源
-DIRS = ["articles", "author", "category", "css", "images", "js", "tools"]
+DIRS = ["articles", "author", "category", "css", "images", "js", "tools", "assets"]
 
 
 def prepare() -> tuple[int, int]:
