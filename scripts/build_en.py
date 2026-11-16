@@ -1701,7 +1701,7 @@ def build_index_en(tools: list, articles: list) -> str:
             "@type": "SearchAction",
             "target": {{
                 "@type": "EntryPoint",
-                "urlTemplate": "https://www.aitoolbox.hk/?q={{search_term_string}}"
+                "urlTemplate": "https://www.aitoolbox.hk/search/?q={{search_term_string}}"
             }},
             "query-input": "required name=search_term_string"
         }}
