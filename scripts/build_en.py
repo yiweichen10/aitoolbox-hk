@@ -1533,9 +1533,16 @@ def build_category_index_en(tools_by_cat: dict) -> str:
     <main class="cat-hub">
         <h1 class="page-title">AI Tool Categories</h1>
         <p class="cat-intro">AI Tool Lab has independently reviewed {total_tools} AI tools across
-            {total_cats} categories, from {intro_links}. The quick-reference table below lists
-            every category's size, typical use cases and top picks — open any category for the
-            full ranked list.</p>
+            {total_cats} categories, from {intro_links}. Browse the grid below to jump straight
+            into a category — the quick-reference table after it lists every category's size,
+            typical use cases and top picks.</p>
+
+        <section class="cat-section" id="browse">
+            <h2>Browse by category</h2>
+            <div class="cat-mini-grid">
+                {cat_cards}
+            </div>
+        </section>
 
         <section class="cat-section" id="quick-reference">
             <h2>AI tool categories quick reference ({total_cats} categories)</h2>
@@ -1544,13 +1551,6 @@ def build_category_index_en(tools_by_cat: dict) -> str:
                 <tbody>
 {table_rows}                </tbody>
             </table></div>
-        </section>
-
-        <section class="cat-section" id="browse">
-            <h2>Browse by category</h2>
-            <div class="cat-mini-grid">
-                {cat_cards}
-            </div>
         </section>
 
         <section class="cat-section" id="faq">
