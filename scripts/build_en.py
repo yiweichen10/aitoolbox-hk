@@ -1345,17 +1345,165 @@ def build_article_list_en(articles: list, current_page: int = 1, total_pages: in
 # ─── Category index page ──────────────────────────────────────────────────────
 
 def build_category_index_en(tools_by_cat: dict) -> str:
-    cat_cards = ''
+    # ═══ Category hub — same information architecture as the CN site hub ═══
+    # Direct-answer intro → GEO quick-reference table (category / tools /
+    # best for / top picks) → icon card grid → FAQ (rendered + FAQPage JSON-LD)
+    # + ItemList JSON-LD. Tables are the structure AI engines quote most.
+
+    # Merge raw category names by slug (AI Video / Video AI → ai-video, ...)
+    merged = {}
     for cat_name, tools in tools_by_cat.items():
-        cat_slug  = get_category_slug_en(cat_name)
-        cat_tile  = f'<div class="cat-tile" aria-hidden="true">{category_icon_svg(cat_name)}</div>'
-        cat_cards += f'''<a href="/category/{cat_slug}/" class="tool-card" style="text-decoration:none;">
+        s = get_category_slug_en(cat_name)
+        if s not in merged:
+            merged[s] = {'display': cat_name, 'tools': list(tools)}
+        else:
+            merged[s]['tools'].extend(tools)
+    cats = sorted(merged.items(), key=lambda kv: len(kv[1]['tools']), reverse=True)
+    total_cats = len(cats)
+    total_tools = sum(len(v['tools']) for v in merged.values())
+    today_iso = datetime.now().strftime('%Y-%m-%d')
+
+    # Typical use cases per category family — lets AI answer "which tools for X"
+    category_scenes = {
+        'ai-chat': 'Daily Q&A, research, writing and code help',
+        'ai-writing': 'Blog posts, marketing copy, essays and rewriting',
+        'ai-image': 'Illustrations, e-commerce visuals, posters and concept art',
+        'ai-coding': 'Code completion, bug fixes, tests and refactoring',
+        'ai-video': 'Short-form video, avatars, subtitles and editing',
+        'ai-audio': 'Text-to-speech, transcription, music and noise removal',
+        'ai-office': 'Slides, spreadsheets, meeting notes and document summaries',
+        'ai-design': 'UI design, prototypes, logos and brand visuals',
+        'ai-search': 'Web-connected search, cited answers, literature lookup',
+        'ai-translation': 'Documents, subtitles and product localization',
+        'ai-automation': 'Workflow orchestration, data sync, cross-app execution',
+        'ai-productivity': 'Notes, task planning and personal knowledge',
+        'ai-agents': 'Task agents, automated research, multi-step execution',
+        'ai-development': 'Model APIs, vector databases and app frameworks',
+        'ai-income': 'Making money with AI: side hustles, content and micro-SaaS',
+        'ai-e-commerce': 'Product listings, ad creative and store operations',
+        'ai-seo': 'Keyword research, content optimization and rank tracking',
+        'ai-website-builder': 'Landing pages and full websites from prompts',
+        'market-research': 'Surveys, competitor analysis and demand validation',
+        'ai-research': 'Paper search, literature review and experiment design',
+        # slug variants of the families above (Video AI, Writing, Image, ...)
+        'ai-marketing': 'Ad creative, campaign copy, audience research and content calendars',
+        'marketing': 'Ad creative, campaign copy, audience research and content calendars',
+        'video-ai': 'Short-form video, avatars, subtitles and editing',
+        'writing': 'Blog posts, marketing copy, essays and rewriting',
+        'image': 'Illustrations, e-commerce visuals, posters and concept art',
+        'ai-images': 'Illustrations, e-commerce visuals, posters and concept art',
+        'productivity': 'Notes, task planning and personal knowledge',
+        'automation': 'Workflow orchestration, data sync, cross-app execution',
+        'seo': 'Keyword research, content optimization and rank tracking',
+        'ai-dev': 'Model APIs, vector databases and app frameworks',
+        'ai-api': 'Model APIs, vector databases and app frameworks',
+        'ai-web-design': 'Landing pages, UI mockups and brand visuals from prompts',
+    }
+
+    def _rating_num(t):
+        try:
+            return float(re.sub(r'[^\d.]', '', str(t.get('rating', ''))) or 0)
+        except Exception:
+            return 0
+
+    # ── Quick-reference table rows ──
+    table_rows = ''
+    for cslug, data in cats:
+        cname, clist = data['display'], data['tools']
+        scene = category_scenes.get(cslug, f'{cname} use cases')
+        reps = sorted(clist, key=_rating_num, reverse=True)[:3]
+        reps_txt = ' '.join(
+            f'<a href="/tools/{r["slug"]}/">{escape_html(r["name"])}</a>' for r in reps
+        ) if reps else 'Curated continuously'
+        table_rows += (
+            '<tr>'
+            f'<td><a href="/category/{cslug}/"><strong>{escape_html(cname)}</strong></a></td>'
+            f'<td class="num">{len(clist)}</td>'
+            f'<td>{escape_html(scene)}</td>'
+            f'<td class="reps">{reps_txt}</td>'
+            '</tr>\n'
+        )
+
+    # ── Mini-card grid (icon tiles) ──
+    cat_cards = ''
+    for cslug, data in cats:
+        cname = data['display']
+        cat_tile = f'<div class="cat-tile" aria-hidden="true">{category_icon_svg(cname)}</div>'
+        cat_cards += f'''<a href="/category/{cslug}/" class="tool-card" style="text-decoration:none;">
             {cat_tile}
             <div class="tool-info">
-                <h3>{escape_html(cat_name)}</h3>
-                <p>{len(tools)} tools reviewed</p>
+                <h3>{escape_html(cname)}</h3>
+                <p>{len(data['tools'])} tools reviewed</p>
             </div>
         </a>\n'''
+
+    # ── FAQ: plain-text answers, rendered + FAQPage schema (GEO core) ──
+    top5_txt = ', '.join(f"{data['display']} ({len(data['tools'])})" for _, data in cats[:5])
+    all_cats_txt = ', '.join(data['display'] for _, data in cats)
+    faq_items = [
+        (
+            'What categories of AI tools are there?',
+            f'AI Tool Lab organizes its {total_tools} independently reviewed AI tools into '
+            f'{total_cats} categories: {all_cats_txt}. The most extensive are {top5_txt}. '
+            'Every category page ranks its tools by editor score and states the price model of each tool.'
+        ),
+        (
+            "I'm new to AI tools — where should I start?",
+            'Start with AI Chat: these tools are the most general-purpose and cover Q&A, writing, '
+            'translation and code explanation with no learning curve. Then move into a vertical '
+            'category that matches your work: AI Writing for content, AI Image for visuals, '
+            'AI Coding for programming, and AI Office for reports and presentations.'
+        ),
+        (
+            'Are there free AI tools in these categories?',
+            'Yes. Almost every category includes both free and paid tools, most commonly a free '
+            'tier with a paid subscription on top. Each tool page states its price model, and the '
+            'quick-reference table above links straight to every category so you can compare prices.'
+        ),
+        (
+            'What is the fastest way to find the right AI tool?',
+            'Three ways: use the quick-reference table on this page to match your task to a '
+            'category; open a category page and sort by editor score; or read one of our hands-on '
+            'comparison articles when you have two or three candidates and need a verdict.'
+        ),
+        (
+            'How often are the categories updated?',
+            f'The tool library is updated daily and the category structure grows as new tools are '
+            f'added. This page was last updated on {today_iso}: {total_cats} categories, '
+            f'{total_tools} reviewed tools.'
+        ),
+    ]
+    faq_schema = {'@context': 'https://schema.org', '@type': 'FAQPage', 'mainEntity': [
+        {'@type': 'Question', 'name': q,
+         'acceptedAnswer': {'@type': 'Answer', 'text': a}} for q, a in faq_items
+    ]}
+    faq_json = json.dumps(faq_schema, ensure_ascii=False)
+
+    itemlist = {'@context': 'https://schema.org', '@type': 'ItemList',
+                'name': 'AI tool categories',
+                'itemListElement': [
+                    {'@type': 'ListItem', 'position': i, 'name': data['display'],
+                     'url': f'{SITE_DOMAIN}/category/{cslug}/'}
+                    for i, (cslug, data) in enumerate(cats, 1)
+                ]}
+    itemlist_json = json.dumps(itemlist, ensure_ascii=False)
+
+    # FAQ HTML with hairline dividers (same visual language as tool pages)
+    faq_html = ''
+    for q, a in faq_items:
+        if faq_html:
+            faq_html += '<div class="td-faq-divider"></div>\n'
+        faq_html += (f'<div class="td-faq-item"><h3>{escape_html(q)}</h3>'
+                     f'<div class="td-faq-a"><p>{escape_html(a)}</p></div></div>\n')
+
+    intro_links = ', '.join(
+        f'<a href="/category/{cslug}/">{escape_html(data["display"])}</a>'
+        for cslug, data in cats[:4]
+    )
+    page_title = f'AI Tool Categories 2026: {total_cats} Categories, {total_tools} Tools Reviewed'
+    meta_desc = (f'Browse all {total_cats} AI tool categories on {SITE_NAME} — {total_tools} '
+                 f'independently reviewed tools with a quick-reference table of use cases and '
+                 f'top picks. Updated {today_iso}.')
 
     hreflang = hreflang_tags('/category/', '/category/')
     return f'''<!DOCTYPE html>
@@ -1364,24 +1512,55 @@ def build_category_index_en(tools_by_cat: dict) -> str:
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All AI Tool Categories 2026 - {SITE_NAME}</title>
-    <meta name="description" content="Browse all AI tool categories. Find the best AI tools for writing, coding, image generation, video, and more.">
+    <title>{escape_html(page_title)} - {SITE_NAME}</title>
+    <meta name="description" content="{escape_html(meta_desc)}">
     <link rel="canonical" href="{SITE_DOMAIN}/category/">
-{hreflang}    <link rel="stylesheet" href="/css/style.css?{CSS_VERSION}">
+{hreflang}    <meta property="og:type" content="website">
+    <meta property="og:title" content="{escape_html(page_title)}">
+    <meta property="og:description" content="{escape_html(meta_desc)}">
+    <meta property="og:url" content="{SITE_DOMAIN}/category/">
+    <meta property="og:site_name" content="{SITE_NAME}">
+    <link rel="stylesheet" href="/css/style.css?{CSS_VERSION}">
+    <script type="application/ld+json">{faq_json}</script>
+    <script type="application/ld+json">{itemlist_json}</script>
 {VERIFICATION_BLOCK}{GA_BLOCK}
 </head>
 <body>
 {header_html()}
 
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-        <a href="/">Home</a> &gt; <span>All Categories</span>
+    <nav class="breadcrumb td-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a><span class="sep">/</span><span>All Categories</span>
     </nav>
 
-    <main class="tool-list-container">
-        <h1 style="margin-bottom:24px;">All AI Tool Categories</h1>
-        <div class="tool-grid">
-            {cat_cards}
-        </div>
+    <main class="cat-hub">
+        <h1 class="page-title">AI Tool Categories</h1>
+        <p class="cat-intro">AI Tool Lab has independently reviewed {total_tools} AI tools across
+            {total_cats} categories, from {intro_links}. The quick-reference table below lists
+            every category's size, typical use cases and top picks — open any category for the
+            full ranked list.</p>
+
+        <section class="cat-section" id="quick-reference">
+            <h2>AI tool categories quick reference ({total_cats} categories)</h2>
+            <div class="cat-table-wrap"><table class="cat-table">
+                <thead><tr><th>Category</th><th>Tools</th><th>Best for</th><th>Top picks</th></tr></thead>
+                <tbody>
+{table_rows}                </tbody>
+            </table></div>
+        </section>
+
+        <section class="cat-section" id="browse">
+            <h2>Browse by category</h2>
+            <div class="tool-grid">
+                {cat_cards}
+            </div>
+        </section>
+
+        <section class="cat-section" id="faq">
+            <h2>Questions about AI tool categories</h2>
+            <div class="td-faq">
+                {faq_html}
+            </div>
+        </section>
     </main>
 
 {footer_html()}
