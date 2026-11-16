@@ -141,6 +141,64 @@ def status_chip(tool: dict) -> str:
     }[role]
     return f'<span class="status-chip status-{role}">{label}</span>'
 
+# ─── Category icons (line style, same visual language as the trust icons) ────
+_CAT_ICON_PATHS = {
+    'income':   '<circle cx="12" cy="12" r="9"/><path d="M12 6.5v11"/><path d="M14.8 8.8c-.6-.8-1.7-1.3-2.8-1.3-1.6 0-2.9.8-2.9 2s1.1 1.7 2.9 2.1c1.8.4 2.9 1 2.9 2.1s-1.3 2-2.9 2c-1.1 0-2.2-.5-2.8-1.3"/>',
+    'video':    '<circle cx="12" cy="12" r="9"/><path d="M10 8.5l6 3.5-6 3.5V8.5z"/>',
+    'image':    '<rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="9" cy="9" r="1.8"/><path d="M21 15.5L16 10.5l-8.5 8"/>',
+    'code':     '<path d="M8.5 7L3.5 12l5 5"/><path d="M15.5 7l5 5-5 5"/>',
+    'terminal': '<rect x="3" y="4" width="18" height="16" rx="3"/><path d="M7 9.5l3 3-3 3"/><path d="M13 15.5h4"/>',
+    'api':      '<path d="M8 3H7a2 2 0 00-2 2v4a2 2 0 01-2 2 2 2 0 012 2v4a2 2 0 002 2h1"/><path d="M16 3h1a2 2 0 012 2v4a2 2 0 002 2 2 2 0 00-2 2v4a2 2 0 01-2 2h-1"/>',
+    'browser':  '<rect x="3" y="4" width="18" height="16" rx="3"/><path d="M3 9h18"/><path d="M6.5 6.5h.01"/><path d="M9.5 6.5h.01"/>',
+    'audio':    '<path d="M4 10v4"/><path d="M8 7v10"/><path d="M12 4v16"/><path d="M16 7v10"/><path d="M20 10v4"/>',
+    'design':   '<circle cx="8.5" cy="8.5" r="4.5"/><rect x="13" y="13" width="8" height="8" rx="1.5"/>',
+    'pen':      '<path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/>',
+    'chat':     '<path d="M21 15a2 2 0 01-2 2H8l-5 4V5a2 2 0 012-2h14a2 2 0 012 2v10z"/>',
+    'megaphone': '<path d="M3 11l18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 11-5.8-1.6"/>',
+    'checklist': '<rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8.5 12l2.3 2.3 4.7-4.8"/>',
+    'zap':      '<path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/>',
+    'bot':      '<rect x="4" y="8" width="16" height="11" rx="3"/><path d="M12 8V4"/><path d="M9 4h6"/><circle cx="9" cy="13.5" r="1"/><circle cx="15" cy="13.5" r="1"/>',
+    'search':   '<circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/>',
+    'cart':     '<circle cx="9" cy="20" r="1.5"/><circle cx="17.5" cy="20" r="1.5"/><path d="M3 4h2l2.4 11h11.2L21 8H6"/>',
+    'briefcase': '<rect x="3" y="8" width="18" height="12" rx="2.5"/><path d="M9 8V6a3 3 0 013-3 3 3 0 013 3v2"/>',
+    'globe':    '<circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 010 18"/><path d="M12 3a14 14 0 000 18"/>',
+    'trending': '<path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/>',
+    'chart':    '<path d="M4 20v-6"/><path d="M10 20V8"/><path d="M16 20v-8"/><path d="M2 20h20"/>',
+    'flask':    '<path d="M9.5 3h5"/><path d="M10 3v6l-5.3 9a2 2 0 001.7 3h11.2a2 2 0 001.7-3L14 9V3"/><path d="M7.5 15h9"/>',
+    'grid':     '<rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="3" width="8" height="8" rx="2"/><rect x="3" y="13" width="8" height="8" rx="2"/><rect x="13" y="13" width="8" height="8" rx="2"/>',
+}
+
+def category_icon_svg(cat_name: str) -> str:
+    """Inline line icon per category family. Keyword match, grid fallback."""
+    n = (cat_name or '').lower()
+    if 'income' in n:                      k = 'income'
+    elif 'video' in n:                     k = 'video'
+    elif 'image' in n or 'photo' in n:     k = 'image'
+    elif 'coding' in n:                    k = 'code'
+    elif 'development' in n or n == 'ai dev': k = 'terminal'
+    elif 'api' in n:                       k = 'api'
+    elif 'website' in n:                   k = 'browser'
+    elif 'audio' in n or 'music' in n:     k = 'audio'
+    elif 'design' in n or '3d' in n:       k = 'design'
+    elif 'writing' in n:                   k = 'pen'
+    elif 'chat' in n:                      k = 'chat'
+    elif 'marketing' in n:                 k = 'megaphone'
+    elif 'productivity' in n:              k = 'checklist'
+    elif 'automation' in n:                k = 'zap'
+    elif 'agent' in n:                     k = 'bot'
+    elif 'search' in n:                    k = 'search'
+    elif 'commerce' in n:                  k = 'cart'
+    elif 'office' in n:                    k = 'briefcase'
+    elif 'translation' in n:               k = 'globe'
+    elif 'seo' in n:                       k = 'trending'
+    elif 'market research' in n:           k = 'chart'
+    elif 'research' in n:                  k = 'flask'
+    else:                                  k = 'grid'
+    return (f'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" '
+            f'stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" '
+            f'aria-hidden="true">{_CAT_ICON_PATHS[k]}</svg>')
+
+
 # ─── Back-to-top button (no Chinese) ──────────────────────────────────────────
 BACK_TO_TOP_BLOCK = '''<button id="backToTop" aria-label="Back to top">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
@@ -1290,9 +1348,9 @@ def build_category_index_en(tools_by_cat: dict) -> str:
     cat_cards = ''
     for cat_name, tools in tools_by_cat.items():
         cat_slug  = get_category_slug_en(cat_name)
-        sample_tile = tool_tile({'name': cat_name, 'color': '#1C1C1C'})
+        cat_tile  = f'<div class="cat-tile" aria-hidden="true">{category_icon_svg(cat_name)}</div>'
         cat_cards += f'''<a href="/category/{cat_slug}/" class="tool-card" style="text-decoration:none;">
-            {sample_tile}
+            {cat_tile}
             <div class="tool-info">
                 <h3>{escape_html(cat_name)}</h3>
                 <p>{len(tools)} tools reviewed</p>

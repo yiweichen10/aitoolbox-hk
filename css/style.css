@@ -3504,3 +3504,18 @@ img.tool-logo.ft-icon      { width: 56px; height: 56px; padding: 9px; border-rad
   .header-inner { padding: 10px 16px; gap: 12px; }
   .header-nav { flex: 1 1 auto; min-width: 0; }
 }
+
+/* Category index — line-icon tiles replace the legacy black letter tiles.
+   Soft blue plate + blue icon, token-driven so dark mode follows. */
+.cat-tile {
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+  border-radius: 14px;
+  background: var(--brand-blue-soft);
+  color: var(--brand-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cat-tile svg { width: 26px; height: 26px; }
