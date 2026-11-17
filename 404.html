@@ -27,10 +27,11 @@
             line-height: 1;
             margin-bottom: 8px;
         }
-        .error-404 .error-emoji {
-            font-size: 48px;
-            margin-bottom: 16px;
-            animation: float 3s ease-in-out infinite;
+        .error-404 .error-mark {
+            width: 56px; height: 56px; margin: 0 auto 16px;
+            background: #1D4ED8; border-radius: 14px;
+            color: #fff; font-size: 26px; font-weight: 700;
+            display: flex; align-items: center; justify-content: center;
         }
         @keyframes float {
             0%, 100% { transform: translateY(0); }
@@ -134,7 +135,7 @@
     </header>
 
     <div class="error-404">
-        <div class="error-emoji">🔍</div>
+        <div class="error-mark">A</div>
         <div class="error-code">404</div>
         <h1>Page Not Found</h1>
         <p class="error-desc">The page you're looking for may have been moved, deleted, or never existed. No worries — try these links to find the AI tool you need.</p>

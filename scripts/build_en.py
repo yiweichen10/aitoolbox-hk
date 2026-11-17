@@ -550,7 +550,8 @@ def ensure_en_og_image(slug: str, data_obj: dict, is_article: bool = False) -> s
     """Return the expected OG image URL for English pages."""
     return f'{SITE_DOMAIN}/images/og/{slug}-en-og.png'
 
-def build_tool_page_en(tool: dict, all_tools: list, all_articles: list = None, alt_slug: str = '') -> str:
+def build_tool_page_en(tool: dict, all_tools: list, all_articles: list = None, alt_slug: str = '',
+                       vs_partners: list = None) -> str:
     slug = tool['slug']
     name = tool['name']
     cat  = tool.get('category', 'AI Tools')
@@ -558,6 +559,17 @@ def build_tool_page_en(tool: dict, all_tools: list, all_articles: list = None, a
     # "See all alternatives" link — only rendered when an /alternatives/ page exists
     alt_link_html = (f'<a class="alt-see-all" href="/alternatives/{slug}/">'
                      f'See all {escape_html(name)} alternatives &rarr;</a>') if alt_slug else ''
+    # Head-to-head links — up to 2 partners, alphabetical by slug for stable URLs
+    _by_slug = {t['slug']: t for t in all_tools}
+    vs_link_tags = []
+    for pslug in sorted(vs_partners or [])[:2]:
+        p = _by_slug.get(pslug)
+        if not p:
+            continue
+        lo, hi = tuple(sorted([slug, pslug]))
+        vs_link_tags.append(f'<a class="alt-see-all" href="/vs/{lo}-vs-{hi}/">'
+                            f'{escape_html(name)} vs {escape_html(p["name"])} &rarr;</a>')
+    vs_html = '<br>'.join(vs_link_tags)
 
     # Related tools
     same_cat   = [t for t in all_tools if t['slug'] != slug and t.get('category') == cat]
@@ -576,6 +588,7 @@ def build_tool_page_en(tool: dict, all_tools: list, all_articles: list = None, a
         related_html = f'''<div class="related-tools" id="relatedSection">
             <h3>Related Tools</h3>
             {alt_link_html}
+            {vs_html}
             <div class="related-grid">{cards}</div>
         </div>'''
 
@@ -2037,7 +2050,8 @@ def build_index_en(tools: list, articles: list) -> str:
 
 # ─── Sitemap (English only) ───────────────────────────────────────────────────
 
-def generate_sitemap_en(tools: list, articles: list, cat_slugs: list, alt_slugs: list = None) -> str:
+def generate_sitemap_en(tools: list, articles: list, cat_slugs: list, alt_slugs: list = None,
+                        vs_urls: list = None) -> str:
     today = datetime.now().strftime('%Y-%m-%d')
     urls  = [
         f'    <url><loc>{SITE_DOMAIN}/</loc><lastmod>{today}</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>',
@@ -2048,6 +2062,8 @@ def generate_sitemap_en(tools: list, articles: list, cat_slugs: list, alt_slugs:
         urls.append(f'    <url><loc>{SITE_DOMAIN}/category/{cs}/</loc><lastmod>{today}</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>')
     for s in (alt_slugs or []):
         urls.append(f'    <url><loc>{SITE_DOMAIN}/alternatives/{s}/</loc><lastmod>{today}</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>')
+    for u in (vs_urls or []):
+        urls.append(f'    <url><loc>{u}</loc><lastmod>{today}</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>')
     for t in tools:
         urls.append(f'    <url><loc>{SITE_DOMAIN}/tools/{t["slug"]}/</loc><lastmod>{today}</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>')
     for a in articles:
@@ -2154,6 +2170,7 @@ def generate_llms_txt_en(tools: list, articles: list) -> str:
     out.append('- [Home](https://www.aitoolbox.hk/): featured, latest and hot AI tools')
     out.append(f'- [Category Overview](https://www.aitoolbox.hk/category/): all {len(cats_sorted)} category pages with a quick-reference table')
     out.append('- [Search](https://www.aitoolbox.hk/search/): instant search across all tools and articles')
+    out.append(f'- [Submit a tool](https://www.aitoolbox.hk/submit.html): free submissions, editor-tested before review; rankings cannot be bought')
     out.append(f'- [Articles](https://www.aitoolbox.hk/articles/): original hands-on reviews, comparisons and guides ({n_arts} articles)')
     out.append('')
     out.append(f'## Important Tool Pages (top 5 by rating per category, {n_tools} tools total)')
@@ -2624,6 +2641,296 @@ def build_alternatives_page_en(tool: dict, candidates: list) -> str:
 </html>'''
 
 
+CONTACT_EMAIL = 'AIToolLabTeam@gmail.com'
+
+# Curated marquee cross-category pairs for /vs/ pages (filtered against the
+# catalog at build time; same-category pairs are generated from rating top-3s).
+MARQUEE_VS_PAIRS = [
+    ('chatgpt', 'claude'), ('chatgpt', 'gemini'), ('chatgpt', 'perplexity'),
+    ('claude', 'gemini'), ('midjourney', 'dall-e-3'), ('midjourney', 'leonardo-ai'),
+    ('midjourney', 'flux-1'), ('sora', 'veo'), ('runway', 'sora'), ('runway', 'veo'),
+    ('elevenlabs', 'descript'), ('cursor', 'github-copilot'), ('cursor', 'lovable'),
+    ('lovable', 'bolt.new'), ('zapier-ai', 'n8n'), ('zapier-ai', 'make'),
+    ('n8n', 'make'), ('heygen', 'synthesia'), ('jasper', 'writesonic'),
+    ('writesonic', 'anyword'),
+]
+
+
+def build_contact_page_en() -> str:
+    """contact.html — the author block on every tool page links here; it was a
+    404 until 2026-11-17. One honest channel: the team email."""
+    today_iso = datetime.now().strftime('%Y-%m-%d')
+    hreflang = hreflang_tags('/contact.html', '/contact.html')
+    return f'''<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact AI Tool Lab - {SITE_NAME}</title>
+    <meta name="description" content="Reach the AI Tool Lab editorial team: factual corrections, tool submissions and general feedback. Corrections to factual errors are fixed within 48 hours.">
+    <link rel="canonical" href="{SITE_DOMAIN}/contact.html">
+{hreflang}    <link rel="stylesheet" href="/css/style.css?{CSS_VERSION}">
+{VERIFICATION_BLOCK}{GA_BLOCK}
+</head>
+<body>
+{header_html()}
+
+    <main class="cat-hub">
+        <h1 class="page-title">Contact AI Tool Lab</h1>
+        <p class="cat-intro">One channel, read by the editors who write the reviews:
+            <a href="mailto:{CONTACT_EMAIL}">{CONTACT_EMAIL}</a>. We read everything.</p>
+
+        <section class="cat-section">
+            <h2>What to email us about</h2>
+            <div class="td-faq">
+                <div class="td-faq-item"><h3>Corrections to facts or pricing</h3>
+                    <div class="td-faq-a"><p>Put the tool name and the wrong figure in the subject line.
+                        Factual errors are fixed within 48 hours — the same promise printed on every tool review.</p></div></div>
+                <div class="td-faq-divider"></div>
+                <div class="td-faq-item"><h3>Tool submissions</h3>
+                    <div class="td-faq-a"><p>Use the <a href="/submit.html">submission page</a> so your entry carries
+                        everything our editors need. Submissions are free; rankings are not for sale.</p></div></div>
+                <div class="td-faq-divider"></div>
+                <div class="td-faq-item"><h3>Everything else</h3>
+                    <div class="td-faq-a"><p>Feedback on the methodology, requests for comparisons, and partnership
+                        questions that do not involve buying rankings. See <a href="/about.html">about</a> for how
+                        we review and how the site is funded.</p></div></div>
+            </div>
+        </section>
+    </main>
+
+{footer_html()}
+    ''' + BACK_TO_TOP_BLOCK + DARK_MODE_BLOCK + '''
+</body>
+</html>'''
+
+
+def build_submit_page_en() -> str:
+    """submit.html — free submissions only. The site's trust position is that
+    rankings cannot be bought, so this page must never promise paid placement
+    or guaranteed review dates."""
+    hreflang = hreflang_tags('/submit.html', '/submit.html')
+    return f'''<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit an AI Tool - {SITE_NAME}</title>
+    <meta name="description" content="Submit your AI tool to AI Tool Lab for free. Every submission is editor-tested before review; rankings cannot be bought and are never for sale.">
+    <link rel="canonical" href="{SITE_DOMAIN}/submit.html">
+{hreflang}    <link rel="stylesheet" href="/css/style.css?{CSS_VERSION}">
+{VERIFICATION_BLOCK}{GA_BLOCK}
+</head>
+<body>
+{header_html()}
+
+    <main class="cat-hub">
+        <h1 class="page-title">Submit an AI Tool</h1>
+        <p class="cat-intro">Submissions are <strong>free</strong>. Every tool that enters the catalog is
+            tested with a real account by our editors before it gets a review, and the catalog is
+            updated daily. What we cannot offer — at any price — is a better ranking.</p>
+
+        <section class="cat-section">
+            <h2>How to submit</h2>
+            <p class="cat-intro">Email <a href="mailto:{CONTACT_EMAIL}?subject=Tool%20submission">{CONTACT_EMAIL}</a>
+                with the subject <strong>"Tool submission"</strong> and include:</p>
+            <div class="td-faq">
+                <div class="td-faq-item"><h3>1 · The basics</h3>
+                    <div class="td-faq-a"><p>Tool name, official URL, and a one-line description of what it does.</p></div></div>
+                <div class="td-faq-divider"></div>
+                <div class="td-faq-item"><h3>2 · Pricing page URL</h3>
+                    <div class="td-faq-a"><p>We verify pricing from the official page at review time, so link it directly.</p></div></div>
+                <div class="td-faq-divider"></div>
+                <div class="td-faq-item"><h3>3 · Category suggestion</h3>
+                    <div class="td-faq-a"><p>One category from our <a href="/category/">category list</a> that fits best. Our editors make the final call.</p></div></div>
+                <div class="td-faq-divider"></div>
+                <div class="td-faq-item"><h3>4 · Access</h3>
+                    <div class="td-faq-a"><p>A trial code or free-tier access if the tool is paid — reviews come from real
+                        usage, not demo decks. Tools that cannot be tested cannot be reviewed.</p></div></div>
+            </div>
+        </section>
+
+        <section class="cat-section">
+            <h2>What happens next</h2>
+            <div class="td-faq">
+                <div class="td-faq-item"><h3>Editorial review</h3>
+                    <div class="td-faq-a"><p>The catalog is updated daily; review order follows editorial priority and we
+                        cannot promise a date. Tools that cannot be tested are not listed.</p></div></div>
+                <div class="td-faq-divider"></div>
+                <div class="td-faq-item"><h3>Honest scores, no exceptions</h3>
+                    <div class="td-faq-a"><p>Rankings are not for sale — the same rule printed on the homepage. A review
+                        may be critical; that is the product. If a fact is wrong, email us and it is fixed within 48 hours.</p></div></div>
+                <div class="td-faq-divider"></div>
+                <div class="td-faq-item"><h3>What we do not accept</h3>
+                    <div class="td-faq-a"><p>Paid placements, link exchanges, "guaranteed review" packages, and AI wrappers
+                        with no working product. If your tool ships, we want to see it.</p></div></div>
+            </div>
+        </section>
+    </main>
+
+{footer_html()}
+    ''' + BACK_TO_TOP_BLOCK + DARK_MODE_BLOCK + '''
+</body>
+</html>'''
+
+
+def build_vs_page_en(a: dict, b: dict) -> str:
+    """/vs/{a}-vs-{b}/ — head-to-head pages built only from data that exists
+    (editor scores, price labels, pros/cons, descriptions). No invented test
+    verdicts; the "choose X if" section states facts, not marketing."""
+    na, nb = a.get('name', ''), b.get('name', '')
+    slug_a, slug_b = a.get('slug', ''), b.get('slug', '')
+    ra = re.sub(r'[^\d.]', '', str(a.get('rating', '')))
+    rb = re.sub(r'[^\d.]', '', str(b.get('rating', '')))
+    pa, pb = a.get('price', ''), b.get('price', '')
+    ca, cb = a.get('category', ''), b.get('category', '')
+    cat_slug = get_category_slug_en(ca)
+    today_iso = datetime.now().strftime('%Y-%m-%d')
+    higher_name = na if rating_num(a) >= rating_num(b) else nb
+    free_side = ''
+    ta, tb = price_type(pa), price_type(pb)
+    if ta in ('free', 'freemium') and tb == 'paid':
+        free_side = f'{na} has a free tier; {nb} is paid from the start.'
+    elif tb in ('free', 'freemium') and ta == 'paid':
+        free_side = f'{nb} has a free tier; {na} is paid from the start.'
+    same_cat = 'y' if ca == cb else 'n'
+
+    pros_a = ''.join(f'<li>✓&nbsp;&nbsp;{escape_html(p)}</li>' for p in (a.get('pros') or [])[:2])
+    cons_a = ''.join(f'<li>—&nbsp;&nbsp;{escape_html(c)}</li>' for c in (a.get('cons') or [])[:1])
+    pros_b = ''.join(f'<li>✓&nbsp;&nbsp;{escape_html(p)}</li>' for p in (b.get('pros') or [])[:2])
+    cons_b = ''.join(f'<li>—&nbsp;&nbsp;{escape_html(c)}</li>' for c in (b.get('cons') or [])[:1])
+
+    def _card(t, side_rating, side_price, side_pros, side_cons):
+        return f'''<div class="vs-card">
+            {tool_tile(t, 'tool-icon-lg')}
+            <h2><a href="/tools/{t["slug"]}/">{escape_html(t["name"])}</a></h2>
+            <div class="vs-score">{escape_html(side_rating)}/5 <span>editor score</span></div>
+            <div class="vs-price">{escape_html(side_price)}</div>
+            <ul>{side_pros}{side_cons}</ul>
+            <a class="td-visit-btn alt-visit" href="/tools/{t["slug"]}/">Full {escape_html(t["name"])} review</a>
+        </div>'''
+    cards = _card(a, ra, pa, pros_a, cons_a) + _card(b, rb, pb, pros_b, cons_b)
+
+    choose_a, choose_b = [], []
+    if ta in ('free', 'freemium') and tb == 'paid':
+        choose_a.append('you want to start on a free tier')
+    if tb in ('free', 'freemium') and ta == 'paid':
+        choose_b.append('you want to start on a free tier')
+    if rating_num(a) > rating_num(b):
+        choose_a.append('editor score is your primary tiebreaker')
+    elif rating_num(b) > rating_num(a):
+        choose_b.append('editor score is your primary tiebreaker')
+    choose_a.append('your work matches its strengths listed above')
+    choose_b.append('your work matches its strengths listed above')
+    choose_html = ('<p><strong>Choose ' + escape_html(na) + '</strong> if ' + ' or '.join(choose_a) +
+                   '. <strong>Choose ' + escape_html(nb) + '</strong> if ' + ' or '.join(choose_b) + '.</p>')
+
+    faq_items = [
+        (f'Is {nb} better than {na}?',
+         f'On our editor scores, {na} rates {ra}/5 and {nb} rates {rb}/5. Scores weigh pricing, '
+         f'output quality and workflow fit from hands-on testing — read both reviews and match the '
+         f'strengths to your own workflow before deciding.'),
+        (f'Which is cheaper: {na} or {nb}?',
+         f'{na} is listed at "{pa}" and {nb} at "{pb}" (verified {today_iso}). '
+         + (free_side if free_side else 'Neither lists a free tier — check each review for trial options.')),
+        (f'Can I use {na} and {nb} together?',
+         (f'Most readers pick one from the {ca} category — running both is possible but usually redundant. '
+          f'If your workflow spans different stages, the pros list above shows where each one is strongest.')
+         if ca == cb else
+         (f'{na} sits in {ca} and {nb} in {cb} — they can complement each other in one workflow rather '
+          f'than compete. Match each to the stage of work it is strongest at.')),
+    ]
+    faq_json = json.dumps({'@context': 'https://schema.org', '@type': 'FAQPage', 'mainEntity': [
+        {'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': a2}}
+        for q, a2 in faq_items
+    ]}, ensure_ascii=False)
+    breadcrumb = json.dumps({'@context': 'https://schema.org', '@type': 'BreadcrumbList', 'itemListElement': [
+        {'@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': f'{SITE_DOMAIN}/'},
+        {'@type': 'ListItem', 'position': 2, 'name': na, 'item': f'{SITE_DOMAIN}/tools/{slug_a}/'},
+        {'@type': 'ListItem', 'position': 3, 'name': f'{na} vs {nb}', 'item': f'{SITE_DOMAIN}/vs/{slug_a}-vs-{slug_b}/'},
+    ]}, ensure_ascii=False)
+
+    faq_html = ''
+    for q, a2 in faq_items:
+        if faq_html:
+            faq_html += '<div class="td-faq-divider"></div>\n'
+        faq_html += (f'<div class="td-faq-item"><h3>{escape_html(q)}</h3>'
+                     f'<div class="td-faq-a"><p>{escape_html(a2)}</p></div></div>\n')
+
+    title = f'{na} vs {nb} (2026): Editor Scores, Pricing & Which to Pick'
+    meta_desc = (f'{na} ({ra}/5, {pa}) vs {nb} ({rb}/5, {pb}) — hands-on comparison of scores, '
+                 f'pricing and strengths, with honest guidance on which one fits your work. '
+                 f'Verified {today_iso}.')
+
+    return f'''<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{escape_html(title)} - {SITE_NAME}</title>
+    <meta name="description" content="{escape_html(meta_desc)}">
+    <link rel="canonical" href="{SITE_DOMAIN}/vs/{slug_a}-vs-{slug_b}/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="{escape_html(title)}">
+    <meta property="og:description" content="{escape_html(meta_desc)}">
+    <meta property="og:url" content="{SITE_DOMAIN}/vs/{slug_a}-vs-{slug_b}/">
+    <meta property="og:site_name" content="{SITE_NAME}">
+    <link rel="stylesheet" href="/css/style.css?{CSS_VERSION}">
+    <script type="application/ld+json">{breadcrumb}</script>
+    <script type="application/ld+json">{faq_json}</script>
+{VERIFICATION_BLOCK}{GA_BLOCK}
+</head>
+<body>
+{header_html()}
+
+    <nav class="breadcrumb td-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a><span class="sep">/</span><a href="/tools/{slug_a}/">{escape_html(na)}</a><span class="sep">/</span><span>vs {escape_html(nb)}</span>
+    </nav>
+
+    <main class="cat-hub">
+        <h1 class="page-title">{escape_html(na)} vs {escape_html(nb)}</h1>
+        <p class="cat-intro">Both tools are in our catalog with hands-on reviews: {escape_html(na)} scores
+            {escape_html(ra)}/5 and {escape_html(nb)} scores {escape_html(rb)}/5. Below is everything
+            our testing surfaced — scores, pricing, strengths and weaknesses — without sponsorship from either side.</p>
+
+        <div class="vs-grid">
+            {cards}
+        </div>
+
+        <section class="cat-section">
+            <h2>Side by side</h2>
+            <div class="cat-table-wrap"><table class="cat-table">
+                <thead><tr><th></th><th>{escape_html(na)}</th><th>{escape_html(nb)}</th></tr></thead>
+                <tbody>
+                    <tr><td>Editor score</td><td class="num">{escape_html(ra)}/5</td><td class="num">{escape_html(rb)}/5</td></tr>
+                    <tr><td>Pricing</td><td>{escape_html(pa)}</td><td>{escape_html(pb)}</td></tr>
+                    <tr><td>Category</td><td>{escape_html(ca)}</td><td>{escape_html(cb)}</td></tr>
+                </tbody>
+            </table></div>
+        </section>
+
+        <section class="cat-section">
+            <h2>Which should you choose?</h2>
+            {choose_html}
+        </section>
+
+        <section class="cat-section">
+            <h2>Questions about {escape_html(na)} vs {escape_html(nb)}</h2>
+            <div class="td-faq">
+                {faq_html}
+            </div>
+        </section>
+    </main>
+
+{footer_html()}
+    ''' + BACK_TO_TOP_BLOCK + DARK_MODE_BLOCK + '''
+</body>
+</html>'''
+
+
 def build_all_en(target: str = 'all'):
     # Load data
     tools_en_path    = os.path.join(DATA_DIR, 'tools_en.json')
@@ -2667,6 +2974,28 @@ def build_all_en(target: str = 'all'):
                   if t['slug'] not in _marquee]
     alt_slugs = (_marquee + _by_rating)[:50]
     alt_set = set(alt_slugs)
+
+    # Head-to-head "X vs Y" pages: per-category rating top-3 pairs + curated
+    # marquee cross-category pairs, deduped and capped at 80 (thin-content guard).
+    from itertools import combinations
+    tool_by_slug = {t['slug']: t for t in published_tools}
+    vs_pairs = set()
+    by_cat_pub = {}
+    for t in published_tools:
+        by_cat_pub.setdefault(get_category_slug_en(t.get('category', '')), []).append(t)
+    for _, lst in by_cat_pub.items():
+        top3 = sorted(lst, key=rating_num, reverse=True)[:3]
+        for pa_, pb_ in combinations(top3, 2):
+            vs_pairs.add(tuple(sorted([pa_['slug'], pb_['slug']])))
+    for pa_, pb_ in MARQUEE_VS_PAIRS:
+        if pa_ in tool_by_slug and pb_ in tool_by_slug and pa_ != pb_:
+            vs_pairs.add(tuple(sorted([pa_, pb_])))
+    vs_pairs = sorted(vs_pairs, key=lambda p: -(rating_num(tool_by_slug[p[0]]) + rating_num(tool_by_slug[p[1]])))[:80]
+    vs_by_slug = {}
+    for sa, sb in vs_pairs:
+        vs_by_slug.setdefault(sa, []).append(sb)
+        vs_by_slug.setdefault(sb, []).append(sa)
+    vs_urls = [f'{SITE_DOMAIN}/vs/{sa}-vs-{sb}/' for sa, sb in vs_pairs]
     print(f'[EN] {len(published_tools)} published tools, {len(articles)} articles')
 
     # ── Validate price field length (2026-08-05 fix; 2026-09-07 升级为阻断闸门) ──
@@ -2725,7 +3054,8 @@ def build_all_en(target: str = 'all'):
             dir_path = os.path.join(OUT_DIR, 'tools', slug)
             os.makedirs(dir_path, exist_ok=True)
             html = build_tool_page_en(tool, published_tools, articles,
-                                      alt_slug=tool['slug'] if tool['slug'] in alt_set else '')
+                                      alt_slug=tool['slug'] if tool['slug'] in alt_set else '',
+                                      vs_partners=vs_by_slug.get(tool['slug'], []))
             with open(os.path.join(dir_path, 'index.html'), 'w', encoding='utf-8') as f:
                 f.write(html)
             print(f'[OK] en/tools/{slug}/index.html')
@@ -2775,7 +3105,7 @@ def build_all_en(target: str = 'all'):
 
     # ── Sitemap ───────────────────────────────────────────────────────────────
     cat_slugs = [get_category_slug_en(c) for c in tools_by_cat.keys()]
-    sitemap   = generate_sitemap_en(published_tools, articles, cat_slugs, alt_slugs)
+    sitemap   = generate_sitemap_en(published_tools, articles, cat_slugs, alt_slugs, vs_urls)
     with open(os.path.join(OUT_DIR, 'sitemap.xml'), 'w', encoding='utf-8') as f:
         f.write(sitemap)
     print(f'[OK] en/sitemap.xml ({len(published_tools)} tools + {len(articles)} articles)')
@@ -2833,6 +3163,42 @@ def build_all_en(target: str = 'all'):
                 os.rmdir(os.path.join(alt_dir, d))
     print(f'[OK] en/alternatives/ ({alt_built} pages from top {len(alt_slugs)} tools)')
 
+    # ── Head-to-head "/vs/" pages (deduped pairs, capped, stale dirs pruned) ──
+    vs_dir = os.path.join(OUT_DIR, 'vs')
+    os.makedirs(vs_dir, exist_ok=True)
+    vs_urls = []
+    for sa, sb in vs_pairs:
+        ta_, tb_ = tool_by_slug.get(sa), tool_by_slug.get(sb)
+        if not ta_ or not tb_:
+            continue
+        pair_slug = f'{sa}-vs-{sb}'
+        vdir = os.path.join(vs_dir, pair_slug)
+        os.makedirs(vdir, exist_ok=True)
+        with open(os.path.join(vdir, 'index.html'), 'w', encoding='utf-8') as f:
+            f.write(build_vs_page_en(ta_, tb_))
+        vs_urls.append(f'{SITE_DOMAIN}/vs/{pair_slug}/')
+    _vs_valid = {f'{sa}-vs-{sb}' for sa, sb in vs_pairs}
+    for d in os.listdir(vs_dir):
+        if d not in _vs_valid and os.path.isdir(os.path.join(vs_dir, d)):
+            try:
+                import shutil
+                shutil.rmtree(os.path.join(vs_dir, d))
+            except Exception:
+                for root, dirs_, files_ in os.walk(os.path.join(vs_dir, d), topdown=False):
+                    for fn in files_:
+                        os.remove(os.path.join(root, fn))
+                    for dn in dirs_:
+                        os.rmdir(os.path.join(root, dn))
+                os.rmdir(os.path.join(vs_dir, d))
+    print(f'[OK] en/vs/ ({len(vs_urls)} head-to-head pages)')
+
+    # ── Contact + Submit pages (linked from every tool review) ────────────────
+    with open(os.path.join(OUT_DIR, 'contact.html'), 'w', encoding='utf-8') as f:
+        f.write(build_contact_page_en())
+    with open(os.path.join(OUT_DIR, 'submit.html'), 'w', encoding='utf-8') as f:
+        f.write(build_submit_page_en())
+    print('[OK] en/contact.html + en/submit.html')
+
     # ── IndexNow push ─────────────────────────────────────────────────────────
     cache_file = os.path.join(BASE_DIR, '.indexnow_en_pushed.json')
     pushed = set()
@@ -2845,6 +3211,7 @@ def build_all_en(target: str = 'all'):
     all_urls += [f"{SITE_DOMAIN}/articles/{a['slug']}/" for a in articles]
     all_urls += [f"{SITE_DOMAIN}/category/{get_category_slug_en(c)}/" for c in tools_by_cat]
     all_urls += [f"{SITE_DOMAIN}/alternatives/{s}/" for s in alt_slugs]
+    all_urls += vs_urls
 
     new_urls = [u for u in all_urls if u not in pushed]
     if new_urls:
