@@ -21,7 +21,7 @@
     <meta name="twitter:title" content="Static Hosting Pricing in 2026: Netlify vs Vercel vs Cloudflare Pages vs GitHub Pages - AI Tool Lab">
     <meta name="twitter:description" content="Static hosting pricing compared for 2026: Netlify credit plans, Vercel Flat Rate CDN tiers, Cloudflare Pages' unlimited static delivery, and GitHub Pages limits. Worked bills from 20 GB to 5 TB.">
     <meta name="twitter:image" content="https://www.aitoolbox.hk/images/og/best-static-hosting-pricing-2026-netlify-vs-vercel-vs-cloudflare-pages-vs-github-pages-en-og.png">
-    <link rel="stylesheet" href="/css/style.css?v=20261118072407">
+    <link rel="stylesheet" href="/css/style.css?v=20261118073252">
     <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -192,7 +192,7 @@
 <p>The mechanics favor predictability: Vercel sizes your tier on typical monthly usage, and a one-day spike does not trigger an upgrade — the tier only moves at the start of the next billing cycle. Exceed the top tier and you fall back to on-demand rates. Compared with on-demand pricing, the included 1 TB tier breaks even at about 133 GB of monthly transfer ($20 divided by $0.15); past that point every gigabyte is effectively $0.02 instead of $0.15.
 </p>
 
-<p>The catch is scope. Flat Rate CDN excludes bulk file distribution, media delivery where files are the majority of bandwidth, and storage-style hosting — Vercel can move violating projects onto its throttled Flex network. The 50 TB tier is for web apps, not for serving your users' uploads. Heavy file delivery belongs on object storage or a <a href="/articles/best-cdn-pricing-2026-bunny-vs-cloudflare-vs-fastly-vs-cloudfront-compared">CDN that prices video honestly</a>.
+<p>The catch is scope. Flat Rate CDN excludes bulk file distribution, media delivery where files are the majority of bandwidth, and storage-style hosting — Vercel can move violating projects onto its throttled Flex network. The 50 TB tier is for web apps, not for serving your users' uploads. Heavy file delivery belongs on object storage or a <a href="/articles/best-cdn-pricing-2026-bunny-vs-cloudflare-vs-fastly-vs-cloudfront-compared/">CDN that prices video honestly</a>.
 </p>
 
 <h2 id="cloudflare-pages-pricing-is-now-workers-pricing">Cloudflare Pages Pricing Is Now Workers Pricing</h2>
@@ -230,7 +230,7 @@
 <p>The 1 TB row is the headline. Netlify's meter charges $0.20 per gigabyte at Personal recharge rates, so 950 GB of overage lands the bill near $199. Vercel's Flat Rate CDN includes the full terabyte inside the $20 Pro subscription. Cloudflare charges nothing for static delivery, so the bill is the $5 subscription floor. Same traffic, 40x difference — and the ordering stays stable at 5 TB, where Netlify crosses four figures and Vercel's $100 tier covers fifty.
 </p>
 
-<p>The portfolio row exposes the free-tier traps. A portfolio running ads is commercial under both Vercel's and GitHub's definitions, which leaves Netlify's $9 Personal tier (1,000 credits cover 50 GB) and Cloudflare's genuinely free unlimited tier. GitHub Pages is the only column with "not allowed" written into it, and Vercel Hobby's $0 carries the same asterisk. If the site needs real backend compute — cron jobs, queues, long-running processes — static hosts are the wrong category entirely; the <a href="/articles/heroku-alternatives-2026-railway-vs-render-vs-flyio-pricing-compared">PaaS alternatives comparison</a> covers where that spend belongs.
+<p>The portfolio row exposes the free-tier traps. A portfolio running ads is commercial under both Vercel's and GitHub's definitions, which leaves Netlify's $9 Personal tier (1,000 credits cover 50 GB) and Cloudflare's genuinely free unlimited tier. GitHub Pages is the only column with "not allowed" written into it, and Vercel Hobby's $0 carries the same asterisk. If the site needs real backend compute — cron jobs, queues, long-running processes — static hosts are the wrong category entirely; the <a href="/articles/heroku-alternatives-2026-railway-vs-render-vs-flyio-pricing-compared/">PaaS alternatives comparison</a> covers where that spend belongs.
 </p>
 
 <table><thead><tr><th>Your situation</th><th>Pick</th><th>Why</th><th>Likely bill</th></tr></thead><tbody><tr><td>Docs or open-source project site</td><td>GitHub Pages</td><td>Free within policy, Actions deploys</td><td>$0</td></tr><tr><td>Static site with real traffic, no server code</td><td>Cloudflare Pages</td><td>Unlimited static requests, $5 floor</td><td>$0–$5</td></tr><tr><td>Next.js app, mixed static and functions</td><td>Vercel Pro</td><td>Flat Rate CDN plus function compute on one bill</td><td>$20–$100</td></tr><tr><td>Team of 3+, frequent deploys, previews</td><td>Netlify Pro</td><td>Unlimited seats, free deploy previews, credit rollover at 5K</td><td>$20+</td></tr></tbody></table>
@@ -270,7 +270,7 @@
 <p>Static hosting pricing in 2026 splits cleanly by traffic volume rather than by brand loyalty. Under 15 GB a month, every platform here is $0 and the decision is workflow, not cost. Between 50 GB and a terabyte, Cloudflare Pages is the price anchor — $0 to $5 against $20-plus on the metered platforms — and Vercel's Flat Rate CDN is the only metered option that makes bandwidth math stop mattering. Past a terabyte of app delivery, Vercel's $100 tier covers 50 TB while Netlify's credit meter crosses $999 at 5 TB. GitHub Pages stays free for docs and portfolios and off-limits for business.
 </p>
 
-<p>Two warnings to carry forward. First, rate cards in this category now expire: Netlify's credit system is one-way for accounts that switch, and Vercel has already restructured CDN billing once. Re-check the official pages before any annual commitment. Second, the free tiers carry terms, not just quotas — Vercel and GitHub both ban commercial use on their $0 plans, and "free" that ends in a takedown notice is not free. If heavy downloads are part of the plan, pair the static site with storage priced for it; the <a href="/articles/best-object-storage-pricing-2026-aws-s3-vs-cloudflare-r2-vs-backblaze-b2-vs-wasabi">object storage comparison</a> covers the zero-egress options that pair naturally with Pages. The cheapest platform is the one whose bill and terms you have actually read.
+<p>Two warnings to carry forward. First, rate cards in this category now expire: Netlify's credit system is one-way for accounts that switch, and Vercel has already restructured CDN billing once. Re-check the official pages before any annual commitment. Second, the free tiers carry terms, not just quotas — Vercel and GitHub both ban commercial use on their $0 plans, and "free" that ends in a takedown notice is not free. If heavy downloads are part of the plan, pair the static site with storage priced for it; the <a href="/articles/best-object-storage-pricing-2026-aws-s3-vs-cloudflare-r2-vs-backblaze-b2-vs-wasabi/">object storage comparison</a> covers the zero-egress options that pair naturally with Pages. The cheapest platform is the one whose bill and terms you have actually read.
 </p>
                 <div class="author-note">
                     <p><strong>About the author:</strong> This article was written by the <a href="/author/">AI Tool Lab Editorial Team</a>, with 5+ years of paid AI tool testing experience and $200+ monthly subscription spend. All reviews are based on real paid long-term use.</p>
@@ -282,17 +282,17 @@
 
         <div class="related-tools">
             <h3>Related Articles</h3>
-            <div class="related-grid"><a href="/articles/best-llm-inference-pricing-2026-groq-vs-together-vs-fireworks-vs-replicate/" class="related-card">
+            <div class="related-grid"><a href="/articles/best-speech-to-text-api-pricing-2026-deepgram-vs-assemblyai-vs-openai-vs-elevenlabs/" class="related-card">
+                <div style="font-weight:600;margin-bottom:4px;">Speech-to-Text API Pricing in 2026: Deepgram vs AssemblyAI vs OpenAI vs ElevenLabs Compared</div>
+                <div style="font-size:13px;color:#666;">2026-11-18</div>
+            </a>
+<a href="/articles/best-llm-inference-pricing-2026-groq-vs-together-vs-fireworks-vs-replicate/" class="related-card">
                 <div style="font-weight:600;margin-bottom:4px;">LLM Inference Pricing in 2026: Groq vs Together AI vs Fireworks vs Replicate Compared</div>
                 <div style="font-size:13px;color:#666;">2026-11-17</div>
             </a>
 <a href="/articles/best-serverless-functions-pricing-2026-aws-lambda-vs-cloudflare-workers-vs-vercel-vs-deno-deploy/" class="related-card">
                 <div style="font-weight:600;margin-bottom:4px;">Serverless Functions Pricing in 2026: AWS Lambda vs Cloudflare Workers vs Vercel vs Deno Deploy</div>
                 <div style="font-size:13px;color:#666;">2026-11-16</div>
-            </a>
-<a href="/articles/best-llm-api-pricing-2026-openai-gpt-6-vs-claude-opus-5-5-vs-gemini-4-vs-deepseek-compared/" class="related-card">
-                <div style="font-weight:600;margin-bottom:4px;">LLM API Pricing Compared in 2026: GPT-6 Astra vs Claude Opus 5.5 vs Gemini 4 vs DeepSeek</div>
-                <div style="font-size:13px;color:#666;">2026-11-14</div>
             </a>
 </div>
         </div>

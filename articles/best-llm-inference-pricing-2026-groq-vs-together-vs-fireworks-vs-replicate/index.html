@@ -21,7 +21,7 @@
     <meta name="twitter:title" content="LLM Inference Pricing in 2026: Groq vs Together AI vs Fireworks vs Replicate Compared - AI Tool Lab">
     <meta name="twitter:description" content="Groq, Together AI, Fireworks and Replicate rate cards for open-weight models, worked token bills at four volumes, and the math for per-second GPU billing.">
     <meta name="twitter:image" content="https://www.aitoolbox.hk/images/og/best-llm-inference-pricing-2026-groq-vs-together-vs-fireworks-vs-replicate-en-og.png">
-    <link rel="stylesheet" href="/css/style.css?v=20261118072407">
+    <link rel="stylesheet" href="/css/style.css?v=20261118073252">
     <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -144,7 +144,7 @@
         <div class="article-layout">
             <article class="article-body" data-tts>
                 <div class="tldr-box"><strong>TL;DR</strong><p>Groq, Together AI, Fireworks and Replicate rate cards for open-weight models, worked token bills at four volumes, and the math for per-second GPU billing.</p></div>
-                <p>Serving the same 26 million tokens a month on GPT-OSS 120B costs $6.60 on Groq, $6.60 on Fireworks, $6.60 on Together AI — and $4,008 for a dedicated H100 on Replicate that runs around the clock. That is a 600x spread between platforms hosting the same open-weight model, and it exists because three of them bill in tokens while the fourth bills in seconds. The open-weight market has flattened LLM inference pricing to a few tenths of a dollar per million tokens, so the real differences now hide in caching discounts, batch modes, latency guarantees, and what happens when your model sits idle between requests. <a href="/articles/best-llm-api-pricing-2026-openai-gpt-6-vs-claude-opus-5-5-vs-gemini-4-vs-deepseek-compared">Frontier model API pricing</a> — GPT-6, Claude, Gemini — gets the headlines, but the open-weight hosting layer underneath is where most production budgets actually live.
+                <p>Serving the same 26 million tokens a month on GPT-OSS 120B costs $6.60 on Groq, $6.60 on Fireworks, $6.60 on Together AI — and $4,008 for a dedicated H100 on Replicate that runs around the clock. That is a 600x spread between platforms hosting the same open-weight model, and it exists because three of them bill in tokens while the fourth bills in seconds. The open-weight market has flattened LLM inference pricing to a few tenths of a dollar per million tokens, so the real differences now hide in caching discounts, batch modes, latency guarantees, and what happens when your model sits idle between requests. <a href="/articles/best-llm-api-pricing-2026-openai-gpt-6-vs-claude-opus-5-5-vs-gemini-4-vs-deepseek-compared/">Frontier model API pricing</a> — GPT-6, Claude, Gemini — gets the headlines, but the open-weight hosting layer underneath is where most production budgets actually live.
 </p>
 
 <h2 id="llm-inference-pricing-at-a-glance">LLM Inference Pricing at a Glance</h2>
@@ -172,7 +172,7 @@
 <p>Together AI pricing spans four product layers: serverless tokens, provisioned throughput, dedicated instances, and raw GPU clusters. On the serverless layer, GPT-OSS 120B runs the same $0.15/$0.60 as Groq and Fireworks; DeepSeek V4.1 Flash runs $0.30/$1.20 with cached input at just $0.006 — a 98% discount on repeat context; DeepSeek V4 Pro 0813 runs $1.32/$3.96, matching DeepSeek's own API peak rates; GLM-5.3 runs $1.40/$4.40; Kimi K3 runs $3.00/$15.00; MiniMax M3.1 Flash runs $0.15/$0.60; and Qwen2.5 7B Instruct Turbo runs $0.30/$0.30. One catalog model, Ternary Bonsai 27B, is listed free. Everything on the list can be geo-pinned to US regions at roughly a 25% premium.
 </p>
 
-<p>The dedicated layers are where the platform starts to resemble a cloud provider. Dedicated inference instances run $5.49 per GPU-hour on H100, $5.99 on H200, $9.29 on B200, $11.49 on B300, and $15.79 on a GB300 NVL72 rack. Raw clusters undercut that: an H100 on-demand costs $3.99 per hour, or $1.99 preemptible. Fine-tuning is priced per training token — Llama 3.3 70B supervised fine-tuning costs $2.03 per million tokens with a $4 minimum, Llama 4 Scout $2.10. If you want a model nobody serverless-hosts, Together is usually where it appears first; the catalog holds dozens of open-weight releases the other two token platforms never picked up. Pair it with a <a href="/articles/best-vector-databases-2026-pinecone-vs-qdrant-vs-weaviate-vs-zilliz-milvus">self-hosted vector database</a> and the whole open RAG stack runs on one invoice. The cost is complexity: four billing meters, and the difference between $3.99 and $5.49 for nominally the same GPU depends on which product page you walked in through.
+<p>The dedicated layers are where the platform starts to resemble a cloud provider. Dedicated inference instances run $5.49 per GPU-hour on H100, $5.99 on H200, $9.29 on B200, $11.49 on B300, and $15.79 on a GB300 NVL72 rack. Raw clusters undercut that: an H100 on-demand costs $3.99 per hour, or $1.99 preemptible. Fine-tuning is priced per training token — Llama 3.3 70B supervised fine-tuning costs $2.03 per million tokens with a $4 minimum, Llama 4 Scout $2.10. If you want a model nobody serverless-hosts, Together is usually where it appears first; the catalog holds dozens of open-weight releases the other two token platforms never picked up. Pair it with a <a href="/articles/best-vector-databases-2026-pinecone-vs-qdrant-vs-weaviate-vs-zilliz-milvus/">self-hosted vector database</a> and the whole open RAG stack runs on one invoice. The cost is complexity: four billing meters, and the difference between $3.99 and $5.49 for nominally the same GPU depends on which product page you walked in through.
 </p>
 
 <h2 id="fireworks-ai-pricing-one-model-five-price-points">Fireworks AI Pricing: One Model, Five Price Points</h2>
@@ -198,7 +198,7 @@
 
 <table><thead><tr><th>Monthly workload (in / out)</th><th>Groq</th><th>Fireworks</th><th>Together AI</th><th>Replicate</th></tr></thead><tbody><tr><td>2M / 0.6M tokens (side project)</td><td>$0.66</td><td>$0.66</td><td>$0.66</td><td>n/a — no per-token GPT-OSS</td></tr><tr><td>20M / 6M tokens (small app)</td><td>$6.60</td><td>$6.60</td><td>$6.60</td><td>$135 on DeepSeek R1 ($3.75/$10)</td></tr><tr><td>200M / 60M tokens (growing product)</td><td>$66.00</td><td>$66.00</td><td>$66.00</td><td>$4,008 dedicated H100, 24/7</td></tr><tr><td>2B / 600M tokens (scale)</td><td>$660.00</td><td>$660.00</td><td>$660.00</td><td>$4,008 dedicated H100, still one box</td></tr></tbody></table>
 
-<p>Two things hide in that flat line. First, caching. A chat app where 80% of input tokens hit cache pays $5.40 on Groq, $4.44 on Fireworks, and — switching to DeepSeek V4.1 Flash to get a published cached rate — $8.50 on Together for a workload that costs $13.20 uncached. Same base rates, 18%, 33%, and 36% discounts respectively, because each platform prices the cache differently. Second, Replicate's per-token alternative is not a rounding error: its hosted DeepSeek R1 costs $135 for the workload the token platforms serve for $6.60 to $13.20 — and that R1 rate is per-token; DeepSeek V4's own API rates run lower still, as tracked on the <a href="/tools/deepseek-v4">DeepSeek V4 tool page</a>. This is the part of LLM inference pricing that sticker rates hide — the billing unit, not the rate, decides the bill.
+<p>Two things hide in that flat line. First, caching. A chat app where 80% of input tokens hit cache pays $5.40 on Groq, $4.44 on Fireworks, and — switching to DeepSeek V4.1 Flash to get a published cached rate — $8.50 on Together for a workload that costs $13.20 uncached. Same base rates, 18%, 33%, and 36% discounts respectively, because each platform prices the cache differently. Second, Replicate's per-token alternative is not a rounding error: its hosted DeepSeek R1 costs $135 for the workload the token platforms serve for $6.60 to $13.20 — and that R1 rate is per-token; DeepSeek V4's own API rates run lower still, as tracked on the <a href="/tools/deepseek-v4/">DeepSeek V4 tool page</a>. This is the part of LLM inference pricing that sticker rates hide — the billing unit, not the rate, decides the bill.
 </p>
 
 <h2 id="per-token-vs-per-second-billing-where-the-crossover-sits">Per Token vs Per Second Billing: Where the Crossover Sits</h2>
@@ -206,7 +206,7 @@
 <p>Per token vs per second billing comes down to one question: can you keep the hardware busy? A dedicated H100 on Replicate costs $5.49 per hour, or about $4,008 a month running flat out. Against the $0.285 blended rate of the token platforms — a 70/30 input/output mix on GPT-OSS 120B — that H100 breaks even at roughly 14 billion total tokens per month. That volume exceeds what a single H100 can realistically serve on a 120B model, so for text serving, per-second dedicated billing loses to per-token at every scale a small team actually runs. Replicate GPU pricing is not a competitive threat to the token platforms; it is a different product aimed at workloads they do not sell.
 </p>
 
-<p>Where the per-second model genuinely wins: image and video generation, which none of the token platforms serve; long-tail fine-tunes that Together would require you to host on dedicated instances anyway; and bursty public-model traffic, where Replicate charges nothing between requests. If the workload is raw GPU rental rather than managed inference, the <a href="/articles/best-gpu-cloud-providers-2026-runpod-vs-lambda-vs-vast-ai-vs-coreweave">GPU cloud providers</a> — RunPod, Lambda, Vast.ai — sit below everyone here, with H100s around $2 to $3 per hour bare; what you give up is the API layer, autoscaling, and the person who pages you at 3 a.m. when the node dies.
+<p>Where the per-second model genuinely wins: image and video generation, which none of the token platforms serve; long-tail fine-tunes that Together would require you to host on dedicated instances anyway; and bursty public-model traffic, where Replicate charges nothing between requests. If the workload is raw GPU rental rather than managed inference, the <a href="/articles/best-gpu-cloud-providers-2026-runpod-vs-lambda-vs-vast-ai-vs-coreweave/">GPU cloud providers</a> — RunPod, Lambda, Vast.ai — sit below everyone here, with H100s around $2 to $3 per hour bare; what you give up is the API layer, autoscaling, and the person who pages you at 3 a.m. when the node dies.
 </p>
 
 <h2 id="free-tiers-and-the-cheapest-start">Free Tiers and the Cheapest Start</h2>
@@ -255,17 +255,17 @@
 
         <div class="related-tools">
             <h3>Related Articles</h3>
-            <div class="related-grid"><a href="/articles/best-serverless-functions-pricing-2026-aws-lambda-vs-cloudflare-workers-vs-vercel-vs-deno-deploy/" class="related-card">
+            <div class="related-grid"><a href="/articles/best-speech-to-text-api-pricing-2026-deepgram-vs-assemblyai-vs-openai-vs-elevenlabs/" class="related-card">
+                <div style="font-weight:600;margin-bottom:4px;">Speech-to-Text API Pricing in 2026: Deepgram vs AssemblyAI vs OpenAI vs ElevenLabs Compared</div>
+                <div style="font-size:13px;color:#666;">2026-11-18</div>
+            </a>
+<a href="/articles/best-serverless-functions-pricing-2026-aws-lambda-vs-cloudflare-workers-vs-vercel-vs-deno-deploy/" class="related-card">
                 <div style="font-weight:600;margin-bottom:4px;">Serverless Functions Pricing in 2026: AWS Lambda vs Cloudflare Workers vs Vercel vs Deno Deploy</div>
                 <div style="font-size:13px;color:#666;">2026-11-16</div>
             </a>
 <a href="/articles/best-static-hosting-pricing-2026-netlify-vs-vercel-vs-cloudflare-pages-vs-github-pages/" class="related-card">
                 <div style="font-weight:600;margin-bottom:4px;">Static Hosting Pricing in 2026: Netlify vs Vercel vs Cloudflare Pages vs GitHub Pages</div>
                 <div style="font-size:13px;color:#666;">2026-11-15</div>
-            </a>
-<a href="/articles/best-llm-api-pricing-2026-openai-gpt-6-vs-claude-opus-5-5-vs-gemini-4-vs-deepseek-compared/" class="related-card">
-                <div style="font-weight:600;margin-bottom:4px;">LLM API Pricing Compared in 2026: GPT-6 Astra vs Claude Opus 5.5 vs Gemini 4 vs DeepSeek</div>
-                <div style="font-size:13px;color:#666;">2026-11-14</div>
             </a>
 </div>
         </div>

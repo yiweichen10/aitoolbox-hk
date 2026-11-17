@@ -3314,17 +3314,30 @@ def main():
     )
     args = parser.parse_args()
 
-    # Validate internal links before building (2026-06-25: prevent 404 links)
+    # Validate internal links before building (2026-06-25 original; 2026-11-18 hardened)
+    # 旧版 validate_internal_links.py 只校验 /articles/ 一种形态，裸 slug (/chatgpt/)、
+    # /en/ 多余前缀、/tool/ 单数等全部漏过 → 每天 build 假绿灯，404 累积到 972 处。
+    # 现统一走 check_internal_links.py：覆盖 tools/articles/category + 裸 slug + 前缀漂移，
+    # 且目标存在性以"当前 slug 集合 + 已构建页面"为准。失败即 exit 1，禁止静默跳过。
     if args.target in ('all', 'articles'):
         try:
-            from validate_internal_links import validate
-            print("\n[VALIDATE] Checking internal links...")
-            if not validate():
-                print("[VALIDATE] ERROR: Broken internal links detected. Fix before building!")
+            from check_internal_links import validate_all
+            print("\n[VALIDATE] Checking internal links (all forms)...")
+            n, errs = validate_all()
+            if n:
+                print(f"[VALIDATE] ERROR: {n} broken internal links. Fix before building!")
+                for owner, e in errs[:15]:
+                    print(f"  {owner}: {e['kind']} {e['href']} ({e['reason']})")
+                if n > 15:
+                    print(f"  ... and {n-15} more")
                 import sys
                 sys.exit(1)
-        except ImportError:
-            pass  # validation script not available, skip silently
+            print("[VALIDATE] OK — all internal links resolve.")
+        except ImportError as exc:
+            # 校验器缺失 = 闸门失效，必须硬失败，不允许静默跳过（2026-11-18 治本）
+            print(f"[VALIDATE] FATAL: link validator unavailable ({exc}). Refusing to build with the gate down.")
+            import sys
+            sys.exit(1)
 
     build_all_en(args.target)
 

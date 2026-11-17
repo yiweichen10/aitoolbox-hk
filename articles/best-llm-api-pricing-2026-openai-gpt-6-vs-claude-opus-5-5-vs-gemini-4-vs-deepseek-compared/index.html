@@ -21,7 +21,7 @@
     <meta name="twitter:title" content="LLM API Pricing Compared in 2026: GPT-6 Astra vs Claude Opus 5.5 vs Gemini 4 vs DeepSeek - AI Tool Lab">
     <meta name="twitter:description" content="GPT-6 Astra bills $10/$50, Opus 5.5 $4/$20, Gemini 4 Carbon doubles to $4/$20 on December 1, DeepSeek V4-Pro runs $0.66-$1.32 input. Cache economics, surcharges, worked bills.">
     <meta name="twitter:image" content="https://www.aitoolbox.hk/images/og/best-llm-api-pricing-2026-openai-gpt-6-vs-claude-opus-5-5-vs-gemini-4-vs-deepseek-compared-en-og.png">
-    <link rel="stylesheet" href="/css/style.css?v=20261118072407">
+    <link rel="stylesheet" href="/css/style.css?v=20261118073252">
     <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -188,7 +188,7 @@
 
 <h2 id="prompt-caching-is-the-third-price-column">Prompt Caching Is the Third Price Column</h2>
 
-<p>Every vendor now prices a cached token differently from a fresh one, and the deltas are large enough to reorder a comparison. OpenAI's structure on the 5.6 generation mirrors Anthropic's: cache reads run at 10 percent of list input (Sol $0.40, Astra $1.00), but writes carry a premium — $5.00 per million for a 30-minute TTL and $10.00 for a 12-hour one on Sol. Anthropic charges 1.25x list input for a 5-minute write and 2x for an hour, then reads back at 5 percent on current models — $0.10 on Sonnet 5.5, $0.20 on Opus 5.5 — with break-even after a single read. Google only supports implicit caching on Gemini 4, which means you cannot pin a retrieval corpus the way explicit caching APIs let you — a real constraint for RAG stacks, which we compared in our <a href="/articles/best-vector-databases-2026-pinecone-vs-qdrant-vs-weaviate-vs-zilliz-milvus">vector database review</a> — and several Flash models add a storage fee per million cached tokens per hour. DeepSeek remains the outlier: no write premium, and a V4-Pro cache hit at $0.044, about 3 percent of its peak input price.
+<p>Every vendor now prices a cached token differently from a fresh one, and the deltas are large enough to reorder a comparison. OpenAI's structure on the 5.6 generation mirrors Anthropic's: cache reads run at 10 percent of list input (Sol $0.40, Astra $1.00), but writes carry a premium — $5.00 per million for a 30-minute TTL and $10.00 for a 12-hour one on Sol. Anthropic charges 1.25x list input for a 5-minute write and 2x for an hour, then reads back at 5 percent on current models — $0.10 on Sonnet 5.5, $0.20 on Opus 5.5 — with break-even after a single read. Google only supports implicit caching on Gemini 4, which means you cannot pin a retrieval corpus the way explicit caching APIs let you — a real constraint for RAG stacks, which we compared in our <a href="/articles/best-vector-databases-2026-pinecone-vs-qdrant-vs-weaviate-vs-zilliz-milvus/">vector database review</a> — and several Flash models add a storage fee per million cached tokens per hour. DeepSeek remains the outlier: no write premium, and a V4-Pro cache hit at $0.044, about 3 percent of its peak input price.
 </p>
 
 <p>Run the numbers on the support-chatbot shape — 20M input and 4M output a month, 75 percent of input served from cache, one-time write premiums excluded — and caching cuts Anthropic's bill from $160 to $103, Astra's from $400 to $265, and DeepSeek's peak bill from $42.24 to $23.10. The ordering does not change. The magnitude does: on agent loops that resend the same system prompt and file context all day, the cache column is routinely worth more than a list-price negotiation would be.
@@ -206,10 +206,10 @@
 
 <h2 id="when-deepseek-is-the-rational-default-and-when-it-is-not">When DeepSeek Is the Rational Default — and When It Is Not</h2>
 
-<p>DeepSeek's off-peak window deserves a second look from US-based teams, because the peak hours are drawn in UTC: 01:00–04:00 and 06:00–10:00, which maps to 8:00–11:00 PM and 1:00–5:00 AM Eastern. American business hours are entirely off-peak. A US office running batch extraction, evaluation suites, or background summarization during the workday pays the half rate all day, every day — the full picture is on our <a href="/tools/deepseek-v4">DeepSeek V4 tool profile</a>.
+<p>DeepSeek's off-peak window deserves a second look from US-based teams, because the peak hours are drawn in UTC: 01:00–04:00 and 06:00–10:00, which maps to 8:00–11:00 PM and 1:00–5:00 AM Eastern. American business hours are entirely off-peak. A US office running batch extraction, evaluation suites, or background summarization during the workday pays the half rate all day, every day — the full picture is on our <a href="/tools/deepseek-v4/">DeepSeek V4 tool profile</a>.
 </p>
 
-<p>The honest caveats: 500 concurrent requests on V4-Pro and 2,500 on flash are hard caps that high-fanout agent fleets can hit, the API bills its web-search and file-parsing tools separately — the same unbundling we documented across <a href="/articles/ai-search-api-pricing-2026-tavily-vs-exa-vs-brave-vs-serpapi">search APIs</a> — and the standard disclaimer applies with extra force here: a price sheet says nothing about whether the model is good enough for your task. Run both models on your own traffic before migrating anything; a 5x cheaper model that needs 3x the tokens to finish a job is not cheaper. Teams that end up running a mixed fleet — a cheap model for drafts, a frontier one for the hard turn — usually wrap the routing in a gateway rather than hardcoding endpoints; we compared the main options in our <a href="/articles/best-llm-gateways-2026-portkey-vs-litellm-vs-cloudflare-vs-helicone">LLM gateway roundup</a>.
+<p>The honest caveats: 500 concurrent requests on V4-Pro and 2,500 on flash are hard caps that high-fanout agent fleets can hit, the API bills its web-search and file-parsing tools separately — the same unbundling we documented across <a href="/articles/ai-search-api-pricing-2026-tavily-vs-exa-vs-brave-vs-serpapi/">search APIs</a> — and the standard disclaimer applies with extra force here: a price sheet says nothing about whether the model is good enough for your task. Run both models on your own traffic before migrating anything; a 5x cheaper model that needs 3x the tokens to finish a job is not cheaper. Teams that end up running a mixed fleet — a cheap model for drafts, a frontier one for the hard turn — usually wrap the routing in a gateway rather than hardcoding endpoints; we compared the main options in our <a href="/articles/best-llm-gateways-2026-portkey-vs-litellm-vs-cloudflare-vs-helicone/">LLM gateway roundup</a>.
 </p>
 
 <h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
@@ -253,17 +253,17 @@
 
         <div class="related-tools">
             <h3>Related Articles</h3>
-            <div class="related-grid"><a href="/articles/best-llm-inference-pricing-2026-groq-vs-together-vs-fireworks-vs-replicate/" class="related-card">
+            <div class="related-grid"><a href="/articles/best-speech-to-text-api-pricing-2026-deepgram-vs-assemblyai-vs-openai-vs-elevenlabs/" class="related-card">
+                <div style="font-weight:600;margin-bottom:4px;">Speech-to-Text API Pricing in 2026: Deepgram vs AssemblyAI vs OpenAI vs ElevenLabs Compared</div>
+                <div style="font-size:13px;color:#666;">2026-11-18</div>
+            </a>
+<a href="/articles/best-llm-inference-pricing-2026-groq-vs-together-vs-fireworks-vs-replicate/" class="related-card">
                 <div style="font-weight:600;margin-bottom:4px;">LLM Inference Pricing in 2026: Groq vs Together AI vs Fireworks vs Replicate Compared</div>
                 <div style="font-size:13px;color:#666;">2026-11-17</div>
             </a>
 <a href="/articles/best-serverless-functions-pricing-2026-aws-lambda-vs-cloudflare-workers-vs-vercel-vs-deno-deploy/" class="related-card">
                 <div style="font-weight:600;margin-bottom:4px;">Serverless Functions Pricing in 2026: AWS Lambda vs Cloudflare Workers vs Vercel vs Deno Deploy</div>
                 <div style="font-size:13px;color:#666;">2026-11-16</div>
-            </a>
-<a href="/articles/best-static-hosting-pricing-2026-netlify-vs-vercel-vs-cloudflare-pages-vs-github-pages/" class="related-card">
-                <div style="font-weight:600;margin-bottom:4px;">Static Hosting Pricing in 2026: Netlify vs Vercel vs Cloudflare Pages vs GitHub Pages</div>
-                <div style="font-size:13px;color:#666;">2026-11-15</div>
             </a>
 </div>
         </div>

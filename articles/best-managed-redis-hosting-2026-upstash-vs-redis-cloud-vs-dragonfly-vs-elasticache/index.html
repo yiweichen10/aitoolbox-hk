@@ -21,7 +21,7 @@
     <meta name="twitter:title" content="Best Managed Redis Hosting in 2026: Upstash vs Redis Cloud vs Dragonfly vs ElastiCache - AI Tool Lab">
     <meta name="twitter:description" content="Upstash vs Redis Cloud vs Dragonfly Cloud vs ElastiCache on November 2026 pricing: per-command billing, the $91 idle floor, HA memory doubling, and four worked workloads.">
     <meta name="twitter:image" content="https://www.aitoolbox.hk/images/og/best-managed-redis-hosting-2026-upstash-vs-redis-cloud-vs-dragonfly-vs-elasticache-en-og.png">
-    <link rel="stylesheet" href="/css/style.css?v=20261118072407">
+    <link rel="stylesheet" href="/css/style.css?v=20261118073252">
     <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -150,7 +150,7 @@
 <p>The market fractured before the prices did. In March 2024, Redis Ltd. moved its core database under the RSALv2 and SSPL licenses; a Linux Foundation fork named Valkey appeared within days, and AWS, Google Cloud, DigitalOcean, and Aiven all standardized on it. Redis answered a year later by returning the core to open source under AGPLv3 with Redis 8 — but the fork economics stuck. On AWS in November 2026, Valkey nodes run about 20% cheaper than equivalent Redis OSS nodes, and Valkey Serverless undercuts Redis OSS by roughly 33% on storage and processing units. Engine choice moves your bill by a third before you compare vendors at all.
 </p>
 
-<p>This guide prices the four realistic options — Upstash, Redis Cloud, Dragonfly Cloud, and Amazon ElastiCache — on November 2026 public rates, then runs four real workloads through each bill. The winner changes per workload, and the crossover points are sharper than most vendor pages admit. Caches rarely sit alone: if yours backs a Postgres database, the <a href="/articles/best-serverless-postgres-hosting-2026-neon-vs-supabase-vs-planetscale-vs-amazon-rds">serverless Postgres hosting comparison</a> covers the other half of that stack.
+<p>This guide prices the four realistic options — Upstash, Redis Cloud, Dragonfly Cloud, and Amazon ElastiCache — on November 2026 public rates, then runs four real workloads through each bill. The winner changes per workload, and the crossover points are sharper than most vendor pages admit. Caches rarely sit alone: if yours backs a Postgres database, the <a href="/articles/best-serverless-postgres-hosting-2026-neon-vs-supabase-vs-planetscale-vs-amazon-rds/">serverless Postgres hosting comparison</a> covers the other half of that stack.
 </p>
 
 <h2 id="four-billing-models-one-protocol">Four Billing Models, One Protocol</h2>
@@ -216,7 +216,7 @@
 
 <h3>Dragonfly vs Redis: a bet on threads and SSDs</h3>
 
-<p>The "25x faster than Redis" claim is Dragonfly's marketing; the verifiable part is architectural — a multi-threaded, shared-nothing engine that holds more data per GB in the vendor's benchmarks, priced at $11/GB-month against Redis Cloud's small-scale effective rates and ElastiCache Serverless's ~$61/GB-month storage math. What you can check without benchmarks: it speaks the Memcached API too, so it is the only vendor here that can absorb a legacy Memcached fleet without a client rewrite. The risk is ecosystem age — fewer years of production scars than the 2009-vintage original. If the cold tail of your dataset belongs on cheap object storage instead, the <a href="/articles/best-object-storage-pricing-2026-aws-s3-vs-cloudflare-r2-vs-backblaze-b2-vs-wasabi">object storage pricing comparison</a> prices that layer separately.
+<p>The "25x faster than Redis" claim is Dragonfly's marketing; the verifiable part is architectural — a multi-threaded, shared-nothing engine that holds more data per GB in the vendor's benchmarks, priced at $11/GB-month against Redis Cloud's small-scale effective rates and ElastiCache Serverless's ~$61/GB-month storage math. What you can check without benchmarks: it speaks the Memcached API too, so it is the only vendor here that can absorb a legacy Memcached fleet without a client rewrite. The risk is ecosystem age — fewer years of production scars than the 2009-vintage original. If the cold tail of your dataset belongs on cheap object storage instead, the <a href="/articles/best-object-storage-pricing-2026-aws-s3-vs-cloudflare-r2-vs-backblaze-b2-vs-wasabi/">object storage pricing comparison</a> prices that layer separately.
 </p>
 
 <h3>ElastiCache pricing: floors, reservations, and the Valkey decision</h3>
@@ -256,7 +256,7 @@
 <p>Managed Redis hosting in 2026 is a billing-model decision before it is a vendor decision. Spiky, low-volume, or edge-deployed traffic belongs on Upstash, because $0 idle and HTTP access match serverless economics — just move to a fixed plan past 5M commands/month. Steady mid-size caches that need first-party Search, JSON, TimeSeries, or Bloom belong on Redis Cloud, budgeting for replication to double the memory line. Very large, mostly-cold datasets belong on Dragonfly's tiered memory ($825 versus $4,400 on a 400 GB set) or ElastiCache r6gd nodes if you are AWS-committed. High sustained throughput inside a VPC belongs on ElastiCache for Valkey with reserved nodes — and never on Redis OSS Serverless unless you enjoy a $91 monthly floor on an empty cache.
 </p>
 
-<p>Your app platform decision interacts with all of this: Railway, Render, and Fly.io price bandwidth and add-ons differently, and the <a href="/articles/heroku-alternatives-2026-railway-vs-render-vs-flyio-pricing-compared">PaaS pricing comparison</a> covers where self-deployed Redis fits that picture. Price the cache model first, then the stack around it.
+<p>Your app platform decision interacts with all of this: Railway, Render, and Fly.io price bandwidth and add-ons differently, and the <a href="/articles/heroku-alternatives-2026-railway-vs-render-vs-flyio-pricing-compared/">PaaS pricing comparison</a> covers where self-deployed Redis fits that picture. Price the cache model first, then the stack around it.
 </p>
                 <div class="author-note">
                     <p><strong>About the author:</strong> This article was written by the <a href="/author/">AI Tool Lab Editorial Team</a>, with 5+ years of paid AI tool testing experience and $200+ monthly subscription spend. All reviews are based on real paid long-term use.</p>
@@ -268,17 +268,17 @@
 
         <div class="related-tools">
             <h3>Related Articles</h3>
-            <div class="related-grid"><a href="/articles/best-llm-inference-pricing-2026-groq-vs-together-vs-fireworks-vs-replicate/" class="related-card">
+            <div class="related-grid"><a href="/articles/best-speech-to-text-api-pricing-2026-deepgram-vs-assemblyai-vs-openai-vs-elevenlabs/" class="related-card">
+                <div style="font-weight:600;margin-bottom:4px;">Speech-to-Text API Pricing in 2026: Deepgram vs AssemblyAI vs OpenAI vs ElevenLabs Compared</div>
+                <div style="font-size:13px;color:#666;">2026-11-18</div>
+            </a>
+<a href="/articles/best-llm-inference-pricing-2026-groq-vs-together-vs-fireworks-vs-replicate/" class="related-card">
                 <div style="font-weight:600;margin-bottom:4px;">LLM Inference Pricing in 2026: Groq vs Together AI vs Fireworks vs Replicate Compared</div>
                 <div style="font-size:13px;color:#666;">2026-11-17</div>
             </a>
 <a href="/articles/best-serverless-functions-pricing-2026-aws-lambda-vs-cloudflare-workers-vs-vercel-vs-deno-deploy/" class="related-card">
                 <div style="font-weight:600;margin-bottom:4px;">Serverless Functions Pricing in 2026: AWS Lambda vs Cloudflare Workers vs Vercel vs Deno Deploy</div>
                 <div style="font-size:13px;color:#666;">2026-11-16</div>
-            </a>
-<a href="/articles/best-static-hosting-pricing-2026-netlify-vs-vercel-vs-cloudflare-pages-vs-github-pages/" class="related-card">
-                <div style="font-weight:600;margin-bottom:4px;">Static Hosting Pricing in 2026: Netlify vs Vercel vs Cloudflare Pages vs GitHub Pages</div>
-                <div style="font-size:13px;color:#666;">2026-11-15</div>
             </a>
 </div>
         </div>

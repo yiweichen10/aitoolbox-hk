@@ -63,6 +63,20 @@ def append_article(content_file: str, slug: str, category: str, date: str = None
         else:
             description = first_para
 
+    # 2026-11-18: 内链闭环——写入端拦截断链（裸 slug / 不存在的目标）。
+    # 注意：新文章的 slug 尚未写入 articles_en.json，校验器读的是入库前的 catalog，
+    # 因此只需保证正文里引用的目标都已存在即可；本文章自身的链接不会被引用。
+    try:
+        sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+        from check_internal_links import validate_text
+        link_errs = validate_text(body)
+        if link_errs:
+            msgs = "\n".join(f"    - {e['href']}: {e['reason']}" for e in link_errs[:10])
+            raise ValueError(f"REJECTED: {len(link_errs)} broken internal links in article body:\n{msgs}\n"
+                             "  Use /tools/<slug>/ or /articles/<slug>/ with an EXISTING target.")
+    except ImportError:
+        raise RuntimeError("Link validator unavailable — refusing to write with the gate down")
+
     article = {
         "title": title,
         "slug": slug,

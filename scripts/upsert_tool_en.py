@@ -42,6 +42,15 @@ def validate(tool: dict) -> list:
         print(f"  [hint] {slug}: price {len(price)} chars (>50). Consider a shorter label.")
     if len(tool.get("description", "") or "") < 40:
         errs.append(f"{slug}: description too short (<40 chars)")
+    # 2026-11-18: 内链闭环——写入端拦截断链，杜绝 /chatgpt/ 之类裸 slug 再次入库
+    try:
+        sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+        from check_internal_links import validate_text
+        for e in validate_text(tool.get("content", "")):
+            errs.append(f"{slug}: BAD LINK {e['href']} — {e['reason']}. "
+                        f"Use /tools/<slug>/ or /articles/<slug>/ with an existing target.")
+    except ImportError:
+        errs.append(f"{slug}: link validator unavailable — refusing to write with gate down")
     return errs
 
 

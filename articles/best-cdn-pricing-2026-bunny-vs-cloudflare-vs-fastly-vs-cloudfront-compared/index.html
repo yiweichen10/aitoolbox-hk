@@ -21,7 +21,7 @@
     <meta name="twitter:title" content="Best CDN Pricing in 2026: Bunny CDN vs Cloudflare vs Fastly vs CloudFront Compared - AI Tool Lab">
     <meta name="twitter:description" content="Bunny at $0.01/GB, CloudFront's $15 plan with 50TB, Cloudflare's unmetered-but-restricted CDN, Fastly's 2025 reprice — worked bills at real traffic levels.">
     <meta name="twitter:image" content="https://www.aitoolbox.hk/images/og/best-cdn-pricing-2026-bunny-vs-cloudflare-vs-fastly-vs-cloudfront-compared-en-og.png">
-    <link rel="stylesheet" href="/css/style.css?v=20261118072407">
+    <link rel="stylesheet" href="/css/style.css?v=20261118073252">
     <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -198,7 +198,7 @@
 <p>The clause sits in the CDN service-specific terms: "Unless you are an Enterprise customer, Cloudflare offers specific Paid Services (e.g., the Developer Platform, Images, and Stream) that you must use in order to serve video and other large files via the CDN," with the right to "disable or limit your access" if you serve "video or a disproportionate percentage of pictures, audio files, or other large files" without them. That is not a dead letter. Cloudflare's H1 2025 transparency report describes actioning 54,000 abuse reports, terminating 21,000 accounts, and states plainly: "Every second of a typical video requires as much bandwidth as loading a full webpage... we've always restricted use of our free services to deliver streaming video."
 </p>
 
-<p>Read it as a boundary, not a gotcha: images and scripts inside pages are fine at any volume; a file locker, a video library, or bulk downloads push you onto Stream, Images, or R2 — the zero-egress object storage that still undercuts most S3 bills, as our <a href="/articles/best-object-storage-pricing-2026-aws-s3-vs-cloudflare-r2-vs-backblaze-b2-vs-wasabi">object storage comparison</a> shows — or onto an Enterprise contract. On those products the "unmetered" story becomes per-minute and per-operation meters, so quote them separately before migrating.
+<p>Read it as a boundary, not a gotcha: images and scripts inside pages are fine at any volume; a file locker, a video library, or bulk downloads push you onto Stream, Images, or R2 — the zero-egress object storage that still undercuts most S3 bills, as our <a href="/articles/best-object-storage-pricing-2026-aws-s3-vs-cloudflare-r2-vs-backblaze-b2-vs-wasabi/">object storage comparison</a> shows — or onto an Enterprise contract. On those products the "unmetered" story becomes per-minute and per-operation meters, so quote them separately before migrating.
 </p>
 
 <h2 id="fastly-you-pay-for-purge-speed-and-edge-compute-not-bandwidt">Fastly: You Pay for Purge Speed and Edge Compute, Not Bandwidth</h2>
@@ -224,7 +224,7 @@
 
 <table><thead><tr><th>Provider</th><th>Request meter</th><th>Per 1M HTTPS</th><th>Added at 100M requests/mo</th></tr></thead><tbody><tr><td>Bunny CDN</td><td>None</td><td>$0</td><td>$0</td></tr><tr><td>Cloudflare</td><td>None</td><td>$0</td><td>$0</td></tr><tr><td>Amazon CloudFront (PAYG)</td><td>$0.01 per 10K (US/EU)</td><td>$1.00</td><td>~$100</td></tr><tr><td>Fastly</td><td>$0.01 per 10K after 1M free</td><td>$1.00</td><td>~$99</td></tr></tbody></table>
 
-<p>Fastly's 50 TB figure is a third-party estimate (LatencyCost pegs it near $4,400) because the published card stops at 20 TB; treat both Fastly estimates as sales-quote territory. CloudFront's PAYG figures use the always-free 1 TB plus the tiered rates above. The origin side of this stack carries its own bill — the <a href="/articles/best-vps-hosting-2026-hetzner-vs-digitalocean-vs-vultr-vs-linode">VPS pricing comparison</a> covers where the bytes come from, and the <a href="/articles/heroku-alternatives-2026-railway-vs-render-vs-flyio-pricing-compared">Heroku alternatives breakdown</a> shows how PaaS platforms meter the same egress at $0.02–$0.15 per GB.
+<p>Fastly's 50 TB figure is a third-party estimate (LatencyCost pegs it near $4,400) because the published card stops at 20 TB; treat both Fastly estimates as sales-quote territory. CloudFront's PAYG figures use the always-free 1 TB plus the tiered rates above. The origin side of this stack carries its own bill — the <a href="/articles/best-vps-hosting-2026-hetzner-vs-digitalocean-vs-vultr-vs-linode/">VPS pricing comparison</a> covers where the bytes come from, and the <a href="/articles/heroku-alternatives-2026-railway-vs-render-vs-flyio-pricing-compared/">Heroku alternatives breakdown</a> shows how PaaS platforms meter the same egress at $0.02–$0.15 per GB.
 </p>
 
 <h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
@@ -271,17 +271,17 @@
 
         <div class="related-tools">
             <h3>Related Articles</h3>
-            <div class="related-grid"><a href="/articles/best-llm-inference-pricing-2026-groq-vs-together-vs-fireworks-vs-replicate/" class="related-card">
+            <div class="related-grid"><a href="/articles/best-speech-to-text-api-pricing-2026-deepgram-vs-assemblyai-vs-openai-vs-elevenlabs/" class="related-card">
+                <div style="font-weight:600;margin-bottom:4px;">Speech-to-Text API Pricing in 2026: Deepgram vs AssemblyAI vs OpenAI vs ElevenLabs Compared</div>
+                <div style="font-size:13px;color:#666;">2026-11-18</div>
+            </a>
+<a href="/articles/best-llm-inference-pricing-2026-groq-vs-together-vs-fireworks-vs-replicate/" class="related-card">
                 <div style="font-weight:600;margin-bottom:4px;">LLM Inference Pricing in 2026: Groq vs Together AI vs Fireworks vs Replicate Compared</div>
                 <div style="font-size:13px;color:#666;">2026-11-17</div>
             </a>
 <a href="/articles/best-serverless-functions-pricing-2026-aws-lambda-vs-cloudflare-workers-vs-vercel-vs-deno-deploy/" class="related-card">
                 <div style="font-weight:600;margin-bottom:4px;">Serverless Functions Pricing in 2026: AWS Lambda vs Cloudflare Workers vs Vercel vs Deno Deploy</div>
                 <div style="font-size:13px;color:#666;">2026-11-16</div>
-            </a>
-<a href="/articles/best-static-hosting-pricing-2026-netlify-vs-vercel-vs-cloudflare-pages-vs-github-pages/" class="related-card">
-                <div style="font-weight:600;margin-bottom:4px;">Static Hosting Pricing in 2026: Netlify vs Vercel vs Cloudflare Pages vs GitHub Pages</div>
-                <div style="font-size:13px;color:#666;">2026-11-15</div>
             </a>
 </div>
         </div>
