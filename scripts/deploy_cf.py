@@ -25,7 +25,7 @@ PROJECT = "aitoolbox-hk"
 # 网站根目录下的静态文件白名单
 ROOT_FILES = [
     "index.html", "404.html", "about.html", "tts-demo.html",
-    "favicon.ico", "robots.txt", "sitemap.xml", "llms.txt",
+    "favicon.ico", "robots.txt", "sitemap.xml", "llms.txt", "rss.xml",
     "_headers", "_redirects",
     "00859eedcd7c1f5e6a38204096fe2a57.txt",   # IndexNow key
     "google06ea2c88965e9881.html",             # Google 验证
