@@ -2817,6 +2817,20 @@ def build_all_en(target: str = 'all'):
         with open(os.path.join(adir, 'index.html'), 'w', encoding='utf-8') as f:
             f.write(build_alternatives_page_en(t0, cands))
         alt_built += 1
+    # Remove stale alternatives dirs (e.g. after the selection strategy changes)
+    # so the deployed set always matches the sitemap exactly.
+    for d in os.listdir(alt_dir):
+        if d not in alt_set and os.path.isdir(os.path.join(alt_dir, d)):
+            try:
+                import shutil
+                shutil.rmtree(os.path.join(alt_dir, d))
+            except Exception:
+                for root, dirs_, files_ in os.walk(os.path.join(alt_dir, d), topdown=False):
+                    for fn in files_:
+                        os.remove(os.path.join(root, fn))
+                    for dn in dirs_:
+                        os.rmdir(os.path.join(root, dn))
+                os.rmdir(os.path.join(alt_dir, d))
     print(f'[OK] en/alternatives/ ({alt_built} pages from top {len(alt_slugs)} tools)')
 
     # ── IndexNow push ─────────────────────────────────────────────────────────
