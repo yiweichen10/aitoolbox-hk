@@ -2985,8 +2985,17 @@ def build_all_en(target: str = 'all'):
         by_cat_pub.setdefault(get_category_slug_en(t.get('category', '')), []).append(t)
     for _, lst in by_cat_pub.items():
         top3 = sorted(lst, key=rating_num, reverse=True)[:3]
-        for pa_, pb_ in combinations(top3, 2):
-            vs_pairs.add(tuple(sorted([pa_['slug'], pb_['slug']])))
+    for pa_, pb_ in combinations(top3, 2):
+        vs_pairs.add(tuple(sorted([pa_['slug'], pb_['slug']])))
+    # Guard against near-duplicate catalog entries comparing themselves
+    # (e.g. 'perplexity' vs 'perplexity-ai'): skip when one normalized name
+    # is contained in the other.
+    def _norm_name(t):
+        return re.sub(r'[^a-z0-9]', '', str(t.get('name', '')).lower())
+    vs_pairs = {p for p in vs_pairs
+                if tool_by_slug.get(p[0]) and tool_by_slug.get(p[1])
+                and _norm_name(tool_by_slug[p[0]]) not in _norm_name(tool_by_slug[p[1]])
+                and _norm_name(tool_by_slug[p[1]]) not in _norm_name(tool_by_slug[p[0]])}
     for pa_, pb_ in MARQUEE_VS_PAIRS:
         if pa_ in tool_by_slug and pb_ in tool_by_slug and pa_ != pb_:
             vs_pairs.add(tuple(sorted([pa_, pb_])))
