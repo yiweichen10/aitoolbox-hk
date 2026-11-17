@@ -1434,16 +1434,38 @@ def _windowed_page_numbers(current: int, total: int, span: int = 2) -> list:
     return out
 
 
+_MONTHS_ABBR = ('', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+                'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec')
+
+
+def _nice_date(value: str) -> str:
+    try:
+        y, m, d = value.split('-')
+        return f'{_MONTHS_ABBR[int(m)]} {int(d)}, {y}'
+    except (ValueError, IndexError):
+        return value
+
+
 def build_article_list_en(articles: list, current_page: int = 1, total_pages: int = 1) -> str:
-    cards   = ''
+    cards = ''
     for a in articles:
-        cards += f'''<article class="article-card">
-            <h3><a href="/articles/{a['slug']}/">{escape_html(a['title'])}</a></h3>
-            <div class="article-meta">
-                <span class="date">{a.get('date','')}</span>
-                <span class="category">{escape_html(a.get('category',''))}</span>
-            </div>
-            <p class="summary">{escape_html(a.get('description',''))}</p>
+        slug = a['slug']
+        url = f'/articles/{slug}/'
+        raw_date = a.get('date', '')
+        read_min = max(1, (len(a.get('content', '').split()) + 219) // 220)
+        cards += f'''<article class="al-card">
+            <a class="al-card-link" href="{url}">
+                <div class="al-top">
+                    <span class="al-chip">{escape_html(a.get('category',''))}</span>
+                    <time class="al-date" datetime="{raw_date}">{_nice_date(raw_date)}</time>
+                </div>
+                <h2 class="al-title">{escape_html(a['title'])}</h2>
+                <p class="al-summary">{escape_html(a.get('description',''))}</p>
+                <div class="al-foot">
+                    <span class="al-read">{read_min} min read</span>
+                    <span class="al-arrow" aria-hidden="true">&rarr;</span>
+                </div>
+            </a>
         </article>\n'''
 
     # Pagination controls
@@ -1490,7 +1512,10 @@ def build_article_list_en(articles: list, current_page: int = 1, total_pages: in
     </nav>
 
     <main class="article-list-container">
-        <h1 class="page-title">AI Tool Articles &amp; Guides</h1>
+        <header class="al-header">
+            <h1 class="page-title">AI Tool Articles &amp; Guides</h1>
+            <p class="page-sub">In-depth comparisons and pricing breakdowns, published daily.</p>
+        </header>
         <div class="article-list">{cards}</div>
         {pagination_html}
     </main>
