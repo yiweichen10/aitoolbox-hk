@@ -15,6 +15,7 @@ __pycache__/
 data/_*.py
 # Generated analysis snapshots (regenerable from source data)
 data/_pricing_index_snapshot.json
+data/_pricing_index_history.json
 # Backup files — never commit
 *.bak
 

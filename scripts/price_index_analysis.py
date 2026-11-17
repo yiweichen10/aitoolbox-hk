@@ -10,11 +10,15 @@ Extraction rules (conservative, no invented numbers):
 Prints a full audit table plus aggregate stats by category.
 """
 import json
+import os
 import re
 import statistics
 from collections import defaultdict
+from datetime import date
 
 DATA = "data/tools_en.json"
+SNAPSHOT = "data/_pricing_index_snapshot.json"
+HISTORY = "data/_pricing_index_history.json"
 
 # $20/mo, $19.99/mo, $9.95 /mo -> collect all explicit USD monthly figures
 RE_MONTHLY = re.compile(r"\$\s*(\d+(?:\.\d+)?)\s*/\s*mo\b", re.I)
@@ -102,6 +106,7 @@ def main():
 
     # export machine-readable snapshot for article generation
     out = {
+        "generated_date": date.today().isoformat(),
         "generated_from": DATA,
         "total_tools": len(rows),
         "free_tier_count": len(free),
@@ -114,9 +119,38 @@ def main():
         ],
         "rows": rows,
     }
-    with open("data/_pricing_index_snapshot.json", "w", encoding="utf-8") as f:
+
+    # Archive the PREVIOUS snapshot's headline figures before overwriting.
+    # This is the only durable record for month-over-month comparison.
+    hist = []
+    if os.path.exists(HISTORY):
+        try:
+            hist = json.load(open(HISTORY, encoding="utf-8"))
+        except Exception:
+            hist = []
+    if os.path.exists(SNAPSHOT):
+        try:
+            prev = json.load(open(SNAPSHOT, encoding="utf-8"))
+            prev_date = prev.get("generated_date")
+            if prev_date and not any(h.get("date") == prev_date for h in hist):
+                hist.append({
+                    "date": prev_date,
+                    "total_tools": prev["total_tools"],
+                    "free_tier_count": prev["free_tier_count"],
+                    "priced_count": prev["priced_count"],
+                    "mean_entry": prev["mean_entry"],
+                    "median_entry": prev["median_entry"],
+                })
+        except Exception:
+            pass
+    hist = sorted(hist, key=lambda h: h["date"])[-24:]  # keep up to 2 years
+    with open(HISTORY, "w", encoding="utf-8") as f:
+        json.dump(hist, f, ensure_ascii=False, indent=2)
+    print(f"[OK] history -> {HISTORY} ({len(hist)} snapshots)")
+
+    with open(SNAPSHOT, "w", encoding="utf-8") as f:
         json.dump(out, f, ensure_ascii=False, indent=2)
-    print("\n[OK] snapshot -> data/_pricing_index_snapshot.json")
+    print(f"[OK] snapshot -> {SNAPSHOT}")
 
 
 if __name__ == "__main__":

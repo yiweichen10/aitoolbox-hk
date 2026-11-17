@@ -3227,7 +3227,7 @@ img.tool-logo.ft-icon      { width: 56px; height: 56px; padding: 9px; border-rad
 /* Breadcrumb — 12px muted, slash separators, generous top air */
 .td-breadcrumb {
   background: var(--body-bg);
-  padding: 24px clamp(24px, 8.33vw, 120px) 8px;
+  padding: 24px max(24px, calc((100% - 1120px) / 2)) 8px;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -3243,7 +3243,7 @@ img.tool-logo.ft-icon      { width: 56px; height: 56px; padding: 9px; border-rad
 /* Tool Hero — full-bleed white band, identity left / score card right */
 .td-hero {
   background: var(--surface-bg);
-  padding: 40px clamp(24px, 8.33vw, 120px);
+  padding: 40px max(24px, calc((100% - 1120px) / 2));
   display: flex;
   gap: 48px;
   align-items: flex-start;
@@ -3341,7 +3341,7 @@ img.tool-logo.ft-icon      { width: 56px; height: 56px; padding: 9px; border-rad
 /* Review body — paper background, vertical rhythm 28px */
 .td-body {
   background: var(--body-bg);
-  padding: 48px clamp(24px, 8.33vw, 120px);
+  padding: 48px max(24px, calc((100% - 1120px) / 2));
   display: flex;
   flex-direction: column;
   gap: 28px;
@@ -3490,9 +3490,11 @@ img.tool-logo.ft-icon      { width: 56px; height: 56px; padding: 9px; border-rad
 /* Category hub — CN-site information architecture:
    direct-answer intro → quick-reference table → card grid → FAQ */
 .cat-hub {
-  max-width: 1120px;
+  /* Content width unified at 1120px across the directory family (hub,
+     tool detail, alternatives, vs, category listing). Symmetric gutters
+     keep band backgrounds full-bleed while capping the content. */
   margin: 0 auto;
-  padding: 40px clamp(24px, 6vw, 80px) 64px;
+  padding: 40px max(24px, calc((100% - 1120px) / 2)) 64px;
 }
 .cat-intro {
   font-size: 16px;
@@ -3886,4 +3888,10 @@ img.tool-logo.ft-icon      { width: 56px; height: 56px; padding: 9px; border-rad
   .article-list-container { padding: 4px 16px 48px; }
   .article-list-container .al-card-link { padding: 20px; }
   .article-list-container .al-title { font-size: 19px; }
+}
+
+/* Category listing — same 1120px content width as the directory family
+   (was uncapped: the grid stretched edge-to-edge on wide screens) */
+.tool-list-container {
+  padding: 0 max(24px, calc((100% - 1120px) / 2));
 }

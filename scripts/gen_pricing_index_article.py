@@ -2,16 +2,17 @@
 """Generate the 'AI Tool Pricing Index 2026' sample article from the snapshot.
 
 All figures are injected from data/_pricing_index_snapshot.json — no hand-typed
-numbers. Appends (or replaces by slug) one entry in data/articles_en.json.
+numbers. Title tool-count and date come from the snapshot, so a monthly refresh
+never carries stale numbers. Appends (or replaces by slug) one entry in
+data/articles_en.json.
 """
 import json
 import os
 
 SNAPSHOT = "data/_pricing_index_snapshot.json"
+HISTORY = "data/_pricing_index_history.json"
 ARTICLES = "data/articles_en.json"
 SLUG = "ai-tool-pricing-index-2026"
-TITLE = "AI Tool Pricing Index 2026: What 261 Tools Actually Cost"
-DATE = "2026-11-17"
 CATEGORY = "AI Tools"
 
 
@@ -21,7 +22,7 @@ def money(v: float) -> str:
     return f"${v:.2f}"
 
 
-def build_content(s):
+def build_content(s, date_str, prev=None):
     total = s["total_tools"]
     free = s["free_tier_count"]
     priced = s["priced_count"]
@@ -30,6 +31,23 @@ def build_content(s):
     median = s["median_entry"]
     free_pct = free / total * 100
     priced_pct = priced / total * 100
+
+    # month-over-month paragraph only when a prior snapshot exists
+    mom_block = ""
+    if prev:
+        def delta(cur, old, suffix=""):
+            if old is None:
+                return ""
+            d = cur - old
+            if abs(d) < 0.005:
+                return "unchanged"
+            arrow = "up" if d > 0 else "down"
+            return f"{arrow} {abs(d):g}{suffix}"
+        mom_block = f"""
+## What changed since the last update
+
+Compared with our {prev['date']} snapshot, the database now tracks **{total} tools** ({delta(total, prev.get('total_tools'))}). The median entry price is **{money(median)}/mo** ({delta(median, prev.get('median_entry'))}), the mean is **{money(mean)}/mo** ({delta(mean, prev.get('mean_entry'))}), and the share of tools with a free tier is **{free_pct:.0f}%**. These shifts reflect both new tools entering the database and vendors changing plan prices — we do not treat every move as a market trend.
+"""
 
     # category table: only categories with >= 3 priced tools, top 12 by median
     cats = [c for c in s["by_category"] if c["priced"] >= 3][:12]
@@ -56,7 +74,7 @@ We reviewed {total} tools across the categories we track. Here is what the prici
 - **{priced} tools ({priced_pct:.0f}%) publish a clear USD monthly price** we could extract and verify from their listed plan.
 - **{unpriced} tools ({100-priced_pct:.0f}%) do not publish a comparable monthly figure.** These are API/usage-based tools, per-seat or per-builder plans, one-time purchases, non-USD pricing, or free-only products. We left them out of the averages rather than guess.
 - **Median entry price: {money(median)}/mo. Mean: {money(mean)}/mo.** The gap between the two is the story — a handful of expensive suites pull the average up, while the typical tool sits near {money(median)}.
-
+{mom_block}
 ## Entry price by category
 
 The table below compares the **lowest published monthly plan** in each category. "Priced" is the number of tools in that category with a verifiable USD monthly figure; categories with fewer than three priced tools are excluded because the sample is too small to be meaningful.
@@ -77,7 +95,7 @@ Two patterns are worth flagging. First, "free" is now the default entry point fo
 
 ## How we calculated this (methodology)
 
-We extracted prices from the published plan labels in our tool database on {DATE}. The rules were deliberately conservative:
+We extracted prices from the published plan labels in our tool database on {date_str}. The rules were deliberately conservative:
 
 1. **Entry price** is the lowest explicitly stated USD per-month figure in a tool's plan label — for example "$29 - $249/mo" contributes $29, not $249.
 2. **Annual-equivalent prices** (e.g. "$4.17/mo when billed yearly") are excluded, because they are not the month-to-month price.
@@ -103,16 +121,28 @@ In our data, {priciest[0]['category']} has the highest median entry price at {mo
 
 ## Can I use these numbers?
 
-Yes, with attribution. This is original research from our own tool database. Quote a figure with a link back to this page and note that prices are a {DATE} snapshot. If you need the underlying dataset or want to check a specific tool, each tool's detail page lists its current published price and source.
+Yes, with attribution. This is original research from our own tool database. Quote a figure with a link back to this page and note that prices are a {date_str} snapshot. If you need the underlying dataset or want to check a specific tool, each tool's detail page lists its current published price and source.
 """
     return content
 
 
 def main():
     s = json.load(open(SNAPSHOT, encoding="utf-8"))
-    content = build_content(s)
+    date_str = s["generated_date"]
+    total = s["total_tools"]
+    title = f"AI Tool Pricing Index 2026: What {total} Tools Actually Cost"
+
+    # previous snapshot for month-over-month comparison
+    prev = None
+    if os.path.exists(HISTORY):
+        hist = json.load(open(HISTORY, encoding="utf-8"))
+        earlier = [h for h in hist if h.get("date") < date_str]
+        if earlier:
+            prev = sorted(earlier, key=lambda h: h["date"])[-1]
+
+    content = build_content(s, date_str, prev)
     desc = (
-        f"We analyzed the published price of {s['total_tools']} AI tools. "
+        f"We analyzed the published price of {total} AI tools. "
         f"{s['free_tier_count']} offer a free tier; the median paid plan is "
         f"{money(s['median_entry'])}/mo. Original data, reproducible method."
     )
@@ -121,9 +151,9 @@ def main():
         "AI tool free tier statistics,AI software median price,AI pricing report 2026"
     )
     article = {
-        "title": TITLE,
+        "title": title,
         "slug": SLUG,
-        "date": DATE,
+        "date": date_str,
         "category": CATEGORY,
         "description": desc,
         "keywords": keywords,
