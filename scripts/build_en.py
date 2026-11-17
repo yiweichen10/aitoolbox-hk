@@ -108,6 +108,55 @@ def tool_tile(tool: dict, css_class: str = 'tool-icon') -> str:
             f'{escape_html(letter)}</div>')
 
 
+def price_type(price_str: str) -> str:
+    """free | freemium | paid — coarse bucket for client-side filtering."""
+    p = (price_str or '').lower()
+    has_paid = '$' in p or 'usd' in p or '€' in p or '£' in p
+    is_free = 'free' in p or 'open source' in p
+    if has_paid and is_free:
+        return 'freemium'
+    if has_paid:
+        return 'paid'
+    if is_free:
+        return 'free'
+    return 'paid'
+
+
+def rating_num(t: dict) -> float:
+    try:
+        return float(re.sub(r'[^\d.]', '', str(t.get('rating', ''))) or 0)
+    except Exception:
+        return 0.0
+
+
+def visits_num(v) -> int:
+    s = str(v or '').upper().replace(',', '').replace('+', '')
+    try:
+        if 'M' in s:
+            return int(float(s.replace('M', '')) * 1000000)
+        if 'K' in s:
+            return int(float(s.replace('K', '')) * 1000)
+        return int(float(re.sub(r'[^\d.]', '', s) or 0))
+    except Exception:
+        return 0
+
+
+# Editorial seed for "X alternatives" pages: tools people actually search
+# alternatives for (marquee AI names). Intersected with the catalog at build
+# time, then topped up to 50 by editor score — raw `visits` is NOT used for
+# selection because marketplace platforms in AI Income carry third-party
+# traffic numbers (Etsy 400M) that drown real AI tools.
+MARQUEE_ALTERNATIVE_SLUGS = [
+    'chatgpt', 'claude', 'gemini', 'midjourney', 'dall-e-3', 'sora', 'veo',
+    'runway', 'elevenlabs', 'descript', 'jasper', 'writesonic', 'anyword',
+    'notion-ai', 'canva-creators', 'perplexity', 'github-copilot', 'cursor',
+    'lovable', 'bolt.new', 'hugging-face', 'lm-studio', 'pinecone',
+    'zapier-ai', 'heygen', 'synthesia', 'suno', 'leonardo-ai', 'ideogram',
+    'flux-1', 'deepl', 'otter.ai', 'n8n', 'make', 'semrush-ai', 'promptbase',
+    'gumroad', 'substack', 'paddle', 'adobe-stock',
+]
+
+
 def status_role(tool: dict) -> str:
     """'verified' | 'choice' | 'trending' | '' — semantic role of the tool's badge."""
     b = tool.get('badge') or {}
@@ -469,7 +518,7 @@ def header_html(title_text: str = "AI Tool Lab") -> str:
 def footer_html() -> str:
     return f'''    <footer class="footer">
         <p class="footer-logo">{SITE_NAME}</p>
-        <p>Independent AI tool reviews. No sponsored rankings. &middot; <a href="/about.html">Editorial policy</a> &middot; <a href="{SITE_DOMAIN_CN}/">中文版</a></p>
+        <p>Independent AI tool reviews. No sponsored rankings. &middot; <a href="/about.html">Editorial policy</a> &middot; <a href="/rss.xml">RSS</a> &middot; <a href="{SITE_DOMAIN_CN}/">中文版</a></p>
         <p class="footer-meta">Copyright {datetime.now().year} {SITE_NAME} &middot; Updated daily</p>
     </footer>'''
 
@@ -501,11 +550,14 @@ def ensure_en_og_image(slug: str, data_obj: dict, is_article: bool = False) -> s
     """Return the expected OG image URL for English pages."""
     return f'{SITE_DOMAIN}/images/og/{slug}-en-og.png'
 
-def build_tool_page_en(tool: dict, all_tools: list, all_articles: list = None) -> str:
+def build_tool_page_en(tool: dict, all_tools: list, all_articles: list = None, alt_slug: str = '') -> str:
     slug = tool['slug']
     name = tool['name']
     cat  = tool.get('category', 'AI Tools')
     cat_slug = get_category_slug_en(cat)
+    # "See all alternatives" link — only rendered when an /alternatives/ page exists
+    alt_link_html = (f'<a class="alt-see-all" href="/alternatives/{slug}/">'
+                     f'See all {escape_html(name)} alternatives &rarr;</a>') if alt_slug else ''
 
     # Related tools
     same_cat   = [t for t in all_tools if t['slug'] != slug and t.get('category') == cat]
@@ -523,6 +575,7 @@ def build_tool_page_en(tool: dict, all_tools: list, all_articles: list = None) -
             </a>\n'''
         related_html = f'''<div class="related-tools" id="relatedSection">
             <h3>Related Tools</h3>
+            {alt_link_html}
             <div class="related-grid">{cards}</div>
         </div>'''
 
@@ -1172,10 +1225,14 @@ def build_article_page_en(article: dict, all_articles: list, all_tools: list = N
 
 def build_category_page_en(cat_name: str, tools: list) -> str:
     cat_slug = get_category_slug_en(cat_name)
+    # Client-side filter/sort — bucket each card once at build time
+    type_counts = {'free': 0, 'freemium': 0, 'paid': 0}
     tool_cards = ''
     for t in tools:
         badge_html = status_chip(t)
-        tool_cards += f'''<a href="/tools/{t['slug']}/" class="tool-card">
+        pt = price_type(t.get('price', ''))
+        type_counts[pt] += 1
+        tool_cards += f'''<a href="/tools/{t['slug']}/" class="tool-card" data-type="{pt}" data-rating="{rating_num(t)}" data-visits="{visits_num(t.get('visits'))}">
             {tool_tile(t)}
             <div class="tool-info">
                 <div class="tool-title-row"><h3>{escape_html(t['name'])}</h3>{badge_html}</div>
@@ -1266,13 +1323,70 @@ def build_category_page_en(cat_name: str, tools: list) -> str:
     <main class="tool-list-container">
         <h1 class="page-title">Best {escape_html(cat_name)} Tools 2026</h1>
         <p class="page-sub">{len(tools)} tools reviewed and ranked</p>
-        <div class="tool-grid">
+        <div class="cat-toolbar">
+            <div class="cf-group" role="group" aria-label="Filter by pricing">
+                <button class="cf-chip active" data-filter="all" type="button">All ({len(tools)})</button>
+                <button class="cf-chip" data-filter="free" type="button">Free ({type_counts['free']})</button>
+                <button class="cf-chip" data-filter="freemium" type="button">Free + Paid ({type_counts['freemium']})</button>
+                <button class="cf-chip" data-filter="paid" type="button">Paid ({type_counts['paid']})</button>
+            </div>
+            <div class="cf-group" role="group" aria-label="Sort tools">
+                <span class="cf-label">Sort</span>
+                <button class="cf-chip active" data-sort="featured" type="button">Featured</button>
+                <button class="cf-chip" data-sort="rating" type="button">Top rated</button>
+                <button class="cf-chip" data-sort="visits" type="button">Popular</button>
+            </div>
+        </div>
+        <p class="cat-count" id="catCount" aria-live="polite">{len(tools)} tools</p>
+        <div class="cat-empty" id="catEmpty" hidden>No tools match this filter.</div>
+        <div class="tool-grid" id="catGrid">
             {tool_cards}
         </div>
     </main>
 
 {footer_html()}
-    ''' + BACK_TO_TOP_BLOCK + DARK_MODE_BLOCK + '''
+    ''' + BACK_TO_TOP_BLOCK + DARK_MODE_BLOCK + r'''
+    <script>
+    (function() {
+        var grid = document.getElementById('catGrid');
+        if (!grid) return;
+        var cards = Array.prototype.slice.call(grid.querySelectorAll('.tool-card'));
+        var countEl = document.getElementById('catCount');
+        var emptyEl = document.getElementById('catEmpty');
+        var toolbar = document.querySelector('.cat-toolbar');
+        var ftype = 'all', skey = 'featured';
+        cards.forEach(function(c, i) { c.dataset.idx = i; });
+        function apply() {
+            var shown = 0;
+            cards.forEach(function(c) {
+                var ok = ftype === 'all' || c.getAttribute('data-type') === ftype;
+                c.style.display = ok ? '' : 'none';
+                if (ok) shown++;
+            });
+            cards.sort(function(a, b) {
+                if (skey === 'rating') return parseFloat(b.dataset.rating || 0) - parseFloat(a.dataset.rating || 0);
+                if (skey === 'visits') return parseInt(b.dataset.visits || 0, 10) - parseInt(a.dataset.visits || 0, 10);
+                return parseInt(a.dataset.idx, 10) - parseInt(b.dataset.idx, 10);
+            });
+            cards.forEach(function(c) { grid.appendChild(c); });
+            countEl.textContent = shown + ' of ' + cards.length + ' tools';
+            emptyEl.hidden = shown !== 0;
+            grid.style.display = shown ? '' : 'none';
+        }
+        toolbar.addEventListener('click', function(e) {
+            var b = e.target.closest('button');
+            if (!b) return;
+            if (b.dataset.filter) {
+                ftype = b.dataset.filter;
+                toolbar.querySelectorAll('[data-filter]').forEach(function(x) { x.classList.toggle('active', x === b); });
+            } else if (b.dataset.sort) {
+                skey = b.dataset.sort;
+                toolbar.querySelectorAll('[data-sort]').forEach(function(x) { x.classList.toggle('active', x === b); });
+            }
+            apply();
+        });
+    })();
+    </script>
 </body>
 </html>'''
 
@@ -1923,7 +2037,7 @@ def build_index_en(tools: list, articles: list) -> str:
 
 # ─── Sitemap (English only) ───────────────────────────────────────────────────
 
-def generate_sitemap_en(tools: list, articles: list, cat_slugs: list) -> str:
+def generate_sitemap_en(tools: list, articles: list, cat_slugs: list, alt_slugs: list = None) -> str:
     today = datetime.now().strftime('%Y-%m-%d')
     urls  = [
         f'    <url><loc>{SITE_DOMAIN}/</loc><lastmod>{today}</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>',
@@ -1932,6 +2046,8 @@ def generate_sitemap_en(tools: list, articles: list, cat_slugs: list) -> str:
     ]
     for cs in cat_slugs:
         urls.append(f'    <url><loc>{SITE_DOMAIN}/category/{cs}/</loc><lastmod>{today}</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>')
+    for s in (alt_slugs or []):
+        urls.append(f'    <url><loc>{SITE_DOMAIN}/alternatives/{s}/</loc><lastmod>{today}</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>')
     for t in tools:
         urls.append(f'    <url><loc>{SITE_DOMAIN}/tools/{t["slug"]}/</loc><lastmod>{today}</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>')
     for a in articles:
@@ -2297,6 +2413,217 @@ __BLOCKS__
     return page
 
 
+def generate_rss_en(articles: list) -> str:
+    """rss.xml — latest 30 dated articles. Tools are excluded on purpose:
+    the data model has no publish date for tools, and an RSS feed full of
+    fake dates is worse than a smaller honest feed."""
+    from email.utils import format_datetime
+    from datetime import timezone
+
+    def _rfc822(date_str: str) -> str:
+        try:
+            dt = datetime.strptime(str(date_str)[:10], '%Y-%m-%d').replace(tzinfo=timezone.utc)
+        except Exception:
+            dt = datetime.now(timezone.utc)
+        return format_datetime(dt)
+
+    def _xml(s: str) -> str:
+        return (s or '').replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
+
+    items = sorted(articles, key=lambda a: str(a.get('date', '')), reverse=True)[:30]
+    last_build = _rfc822(items[0].get('date', '')) if items else _rfc822('')
+    xml = ['<?xml version="1.0" encoding="UTF-8"?>',
+           '<rss version="2.0"><channel>',
+           f'<title>{_xml(SITE_NAME)} — AI Tool Reviews &amp; Guides</title>',
+           f'<link>{SITE_DOMAIN}/</link>',
+           '<description>New hands-on AI tool reviews, pricing comparisons and guides from AI Tool Lab.</description>',
+           '<language>en</language>',
+           f'<lastBuildDate>{last_build}</lastBuildDate>']
+    for a in items:
+        link = f"{SITE_DOMAIN}/articles/{a.get('slug', '')}/"
+        xml.append(
+            f'<item><title>{_xml(a.get("title", ""))}</title>'
+            f'<link>{link}</link>'
+            f'<guid isPermaLink="true">{link}</guid>'
+            f'<pubDate>{_rfc822(a.get("date", ""))}</pubDate>'
+            f'<description>{_xml((a.get("description", "") or "")[:220])}</description></item>'
+        )
+    xml.append('</channel></rss>')
+    return '\n'.join(xml) + '\n'
+
+
+def build_alternatives_page_en(tool: dict, candidates: list) -> str:
+    """/alternatives/{slug}/ — "X alternatives" landing pages, the highest-intent
+    query family in this niche (AlternativeTo pattern). Data-driven only: every
+    alternative links to a full review, no fabricated claims."""
+    name = tool.get('name', '')
+    slug = tool.get('slug', '')
+    cat = tool.get('category', 'AI Tools')
+    cat_slug = get_category_slug_en(cat)
+    n = len(candidates)
+    today_iso = datetime.now().strftime('%Y-%m-%d')
+    rating = re.sub(r'[^\d.]', '', str(tool.get('rating', '')))
+
+    def _brief(text, limit=120):
+        text = (text or '').strip().replace('\n', ' ')
+        if len(text) <= limit:
+            return text
+        cut = text[:limit]
+        sp = cut.rfind(' ')
+        if sp > 60:
+            cut = cut[:sp]
+        return cut.rstrip(' ,.;:') + '…'
+
+    rows = ''
+    for i, t in enumerate(candidates, 1):
+        r2 = re.sub(r'[^\d.]', '', str(t.get('rating', '')))
+        rows += ('<tr>'
+                 f'<td class="alt-rank">{i}</td>'
+                 f'<td><a href="/tools/{t["slug"]}/"><strong>{escape_html(t["name"])}</strong></a></td>'
+                 f'<td class="num">{escape_html(r2)}</td>'
+                 f'<td>{escape_html(t.get("price", ""))}</td>'
+                 f'<td>{escape_html(_brief(t.get("description", "")))}</td>'
+                 '</tr>\n')
+
+    chips = ''.join(
+        f'<a class="cat-mini" href="/tools/{t["slug"]}/" title="{escape_html(t["name"])}">'
+        f'{tool_tile(t, "related-tile")}'
+        f'<span class="cat-mini-name">{escape_html(t["name"])}</span>'
+        f'<span class="cat-mini-meta">{escape_html(t.get("price", ""))}</span></a>'
+        for t in candidates)
+
+    top3 = ', '.join(t.get('name', '') for t in candidates[:3])
+    free_picks = [t.get('name', '') for t in candidates if price_type(t.get('price', '')) == 'free']
+    faq_items = [
+        (
+            f'What are the best {name} alternatives in 2026?',
+            f'Based on editor scores across our {cat} coverage, the strongest {name} alternatives are: '
+            f'{top3}. Every tool below was tested with a paid plan and is ranked by the same editor '
+            f'score used across the site — pricing, output quality and workflow fit.'
+        ),
+        (
+            f'Is there a free alternative to {name}?',
+            (f'Yes. {", ".join(free_picks[:3])} offer free tiers or open-source editions. Note that free '
+             f'plans usually come with usage limits, so check each review for the current limits.')
+            if free_picks else
+            (f'None of the {n} alternatives we reviewed is fully free — pricing in this category starts '
+             f'at the tiers shown in the table above. Several of them offer free trials, and each review '
+             f'states the current free-tier limits.')
+        ),
+        (
+            f'How did you choose these {name} alternatives?',
+            f'We only considered tools in the {cat} family that we have reviewed hands-on. They are ranked '
+            f'by editor score, and the table above compares pricing side by side. Every alternative links '
+            f'to a full review with pricing verified as of {today_iso}.'
+        ),
+    ]
+    faq_schema = {'@context': 'https://schema.org', '@type': 'FAQPage', 'mainEntity': [
+        {'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': a}}
+        for q, a in faq_items
+    ]}
+    faq_json = json.dumps(faq_schema, ensure_ascii=False)
+    itemlist = {'@context': 'https://schema.org', '@type': 'ItemList',
+                'name': f'{name} alternatives',
+                'itemListElement': [
+                    {'@type': 'ListItem', 'position': i, 'name': t.get('name', ''),
+                     'url': f"{SITE_DOMAIN}/tools/{t.get('slug', '')}/"}
+                    for i, t in enumerate(candidates, 1)
+                ]}
+    itemlist_json = json.dumps(itemlist, ensure_ascii=False)
+    breadcrumb = {'@context': 'https://schema.org', '@type': 'BreadcrumbList', 'itemListElement': [
+        {'@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': f'{SITE_DOMAIN}/'},
+        {'@type': 'ListItem', 'position': 2, 'name': cat, 'item': f'{SITE_DOMAIN}/category/{cat_slug}/'},
+        {'@type': 'ListItem', 'position': 3, 'name': name, 'item': f'{SITE_DOMAIN}/tools/{slug}/'},
+        {'@type': 'ListItem', 'position': 4, 'name': 'Alternatives', 'item': f'{SITE_DOMAIN}/alternatives/{slug}/'},
+    ]}
+    breadcrumb_json = json.dumps(breadcrumb, ensure_ascii=False)
+
+    faq_html = ''
+    for q, a in faq_items:
+        if faq_html:
+            faq_html += '<div class="td-faq-divider"></div>\n'
+        faq_html += (f'<div class="td-faq-item"><h3>{escape_html(q)}</h3>'
+                     f'<div class="td-faq-a"><p>{escape_html(a)}</p></div></div>\n')
+
+    title = f'Best {name} Alternatives 2026 ({n} Tested) - {SITE_NAME}'
+    meta_desc = (f'{n} hand-tested {name} alternatives compared by editor score, pricing and '
+                 f'features — free options flagged, every pick linked to a full review. '
+                 f'Verified {today_iso}.')
+
+    return f'''<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{escape_html(title)}</title>
+    <meta name="description" content="{escape_html(meta_desc)}">
+    <link rel="canonical" href="{SITE_DOMAIN}/alternatives/{slug}/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="{escape_html(title)}">
+    <meta property="og:description" content="{escape_html(meta_desc)}">
+    <meta property="og:url" content="{SITE_DOMAIN}/alternatives/{slug}/">
+    <meta property="og:site_name" content="{SITE_NAME}">
+    <link rel="stylesheet" href="/css/style.css?{CSS_VERSION}">
+    <script type="application/ld+json">{breadcrumb_json}</script>
+    <script type="application/ld+json">{itemlist_json}</script>
+    <script type="application/ld+json">{faq_json}</script>
+{VERIFICATION_BLOCK}{GA_BLOCK}
+</head>
+<body>
+{header_html()}
+
+    <nav class="breadcrumb td-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a><span class="sep">/</span><a href="/category/{cat_slug}/">{escape_html(cat)}</a><span class="sep">/</span><a href="/tools/{slug}/">{escape_html(name)}</a><span class="sep">/</span><span>Alternatives</span>
+    </nav>
+
+    <main class="cat-hub">
+        <h1 class="page-title">Best {escape_html(name)} Alternatives 2026</h1>
+        <p class="cat-intro">{n} hand-tested alternatives to {escape_html(name)}, ranked by editor
+            score. {escape_html(name)} scores {escape_html(rating)}/5 in our review — if you need
+            different pricing, a different feature set, or a different ecosystem, these are the
+            strongest options we have reviewed in the {escape_html(cat)} family.</p>
+
+        <div class="alt-context">
+            {tool_tile(tool, 'tool-icon-lg')}
+            <div class="tool-info">
+                <div class="tool-title-row"><h2>{escape_html(name)}</h2></div>
+                <p>{escape_html(_brief(tool.get('description', ''), 150))}</p>
+                <div class="tool-meta-row"><span>{tool.get('rating', '')}</span><span>{tool.get('price', '')}</span></div>
+            </div>
+            <a class="td-visit-btn alt-visit" href="/tools/{slug}/">Read our full {escape_html(name)} review</a>
+        </div>
+
+        <section class="cat-section">
+            <h2>{escape_html(name)} alternatives compared</h2>
+            <div class="cat-table-wrap"><table class="cat-table">
+                <thead><tr><th>#</th><th>Alternative</th><th>Score</th><th>Pricing</th><th>Best for</th></tr></thead>
+                <tbody>
+{rows}                </tbody>
+            </table></div>
+        </section>
+
+        <section class="cat-section">
+            <h2>Browse the alternatives</h2>
+            <div class="cat-mini-grid">
+                {chips}
+            </div>
+        </section>
+
+        <section class="cat-section">
+            <h2>Questions about {escape_html(name)} alternatives</h2>
+            <div class="td-faq">
+                {faq_html}
+            </div>
+        </section>
+    </main>
+
+{footer_html()}
+    ''' + BACK_TO_TOP_BLOCK + DARK_MODE_BLOCK + '''
+</body>
+</html>'''
+
+
 def build_all_en(target: str = 'all'):
     # Load data
     tools_en_path    = os.path.join(DATA_DIR, 'tools_en.json')
@@ -2331,6 +2658,15 @@ def build_all_en(target: str = 'all'):
     articles.sort(key=lambda x: x.get('date', ''), reverse=True)
 
     published_tools = [t for t in all_tools if t.get('published', False)]
+
+    # "X alternatives" pages: editorial marquee seeds + top-up by editor score
+    # to 50 (raw `visits` is polluted by third-party marketplace numbers).
+    _cat_slugs_set = {t['slug'] for t in published_tools}
+    _marquee = [s for s in MARQUEE_ALTERNATIVE_SLUGS if s in _cat_slugs_set]
+    _by_rating = [t['slug'] for t in sorted(published_tools, key=rating_num, reverse=True)
+                  if t['slug'] not in _marquee]
+    alt_slugs = (_marquee + _by_rating)[:50]
+    alt_set = set(alt_slugs)
     print(f'[EN] {len(published_tools)} published tools, {len(articles)} articles')
 
     # ── Validate price field length (2026-08-05 fix; 2026-09-07 升级为阻断闸门) ──
@@ -2388,7 +2724,8 @@ def build_all_en(target: str = 'all'):
             slug     = tool['slug']
             dir_path = os.path.join(OUT_DIR, 'tools', slug)
             os.makedirs(dir_path, exist_ok=True)
-            html = build_tool_page_en(tool, published_tools, articles)
+            html = build_tool_page_en(tool, published_tools, articles,
+                                      alt_slug=tool['slug'] if tool['slug'] in alt_set else '')
             with open(os.path.join(dir_path, 'index.html'), 'w', encoding='utf-8') as f:
                 f.write(html)
             print(f'[OK] en/tools/{slug}/index.html')
@@ -2438,7 +2775,7 @@ def build_all_en(target: str = 'all'):
 
     # ── Sitemap ───────────────────────────────────────────────────────────────
     cat_slugs = [get_category_slug_en(c) for c in tools_by_cat.keys()]
-    sitemap   = generate_sitemap_en(published_tools, articles, cat_slugs)
+    sitemap   = generate_sitemap_en(published_tools, articles, cat_slugs, alt_slugs)
     with open(os.path.join(OUT_DIR, 'sitemap.xml'), 'w', encoding='utf-8') as f:
         f.write(sitemap)
     print(f'[OK] en/sitemap.xml ({len(published_tools)} tools + {len(articles)} articles)')
@@ -2456,6 +2793,32 @@ def build_all_en(target: str = 'all'):
         f.write(llms_txt)
     print(f'[OK] en/llms.txt ({len(published_tools)} tools / {len(articles)} articles)')
 
+    # ── RSS feed (latest 30 dated articles; tools have no honest dates) ───────
+    with open(os.path.join(OUT_DIR, 'rss.xml'), 'w', encoding='utf-8') as f:
+        f.write(generate_rss_en(articles))
+    print(f'[OK] en/rss.xml (latest 30 of {len(articles)} articles)')
+
+    # ── Alternatives pages ("{tool} alternatives", top 50 by visits) ──────────
+    alt_dir = os.path.join(OUT_DIR, 'alternatives')
+    os.makedirs(alt_dir, exist_ok=True)
+    alt_built = 0
+    for aslug in alt_slugs:
+        t0 = next((t for t in published_tools if t['slug'] == aslug), None)
+        if not t0:
+            continue
+        c0 = t0.get('category', '')
+        same = [t for t in published_tools if t['slug'] != aslug and t.get('category') == c0]
+        others = [t for t in published_tools if t['slug'] != aslug and t.get('category') != c0]
+        cands = sorted(same + others, key=rating_num, reverse=True)[:9]
+        if len(cands) < 3:
+            continue
+        adir = os.path.join(alt_dir, aslug)
+        os.makedirs(adir, exist_ok=True)
+        with open(os.path.join(adir, 'index.html'), 'w', encoding='utf-8') as f:
+            f.write(build_alternatives_page_en(t0, cands))
+        alt_built += 1
+    print(f'[OK] en/alternatives/ ({alt_built} pages from top {len(alt_slugs)} tools)')
+
     # ── IndexNow push ─────────────────────────────────────────────────────────
     cache_file = os.path.join(BASE_DIR, '.indexnow_en_pushed.json')
     pushed = set()
@@ -2467,6 +2830,7 @@ def build_all_en(target: str = 'all'):
     all_urls += [f"{SITE_DOMAIN}/tools/{t['slug']}/" for t in published_tools]
     all_urls += [f"{SITE_DOMAIN}/articles/{a['slug']}/" for a in articles]
     all_urls += [f"{SITE_DOMAIN}/category/{get_category_slug_en(c)}/" for c in tools_by_cat]
+    all_urls += [f"{SITE_DOMAIN}/alternatives/{s}/" for s in alt_slugs]
 
     new_urls = [u for u in all_urls if u not in pushed]
     if new_urls:

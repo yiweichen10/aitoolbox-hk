@@ -3718,3 +3718,74 @@ img.tool-logo.ft-icon      { width: 56px; height: 56px; padding: 9px; border-rad
   color: var(--text-faint);
   margin: 24px 0 14px;
 }
+
+/* Category page filter/sort toolbar (client-side, build-time data attrs) */
+.cat-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  align-items: center;
+  margin: 0 0 16px;
+  padding: 14px 16px;
+  background: var(--surface-bg);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+}
+.cf-group { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.cf-label {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  margin-right: 4px;
+}
+.cf-chip {
+  height: 32px;
+  padding: 0 14px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border-subtle);
+  background: var(--body-bg);
+  color: var(--text-muted);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color .12s ease, color .12s ease;
+}
+.cf-chip:hover { border-color: var(--brand-blue); color: var(--brand-blue); }
+.cf-chip.active { background: var(--brand-blue); border-color: var(--brand-blue); color: #FFFFFF; }
+.cat-count { font-size: 13px; color: var(--text-faint); margin: 0 0 16px; }
+.cat-empty { padding: 32px 0; color: var(--text-muted); }
+
+/* Tool page "See all alternatives" link */
+.alt-see-all {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--brand-blue);
+  text-decoration: none;
+  margin: 2px 0 10px;
+}
+.alt-see-all:hover { text-decoration: underline; }
+
+/* Alternatives page */
+.alt-context {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 20px 24px;
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  background: var(--surface-bg);
+  margin: 8px 0 8px;
+  flex-wrap: wrap;
+}
+.alt-context .tool-logo.tool-icon-lg,
+.alt-context .tool-icon-lg { width: 56px; height: 56px; border-radius: 14px; }
+.alt-context .tool-info { flex: 1 1 320px; min-width: 0; }
+.alt-context h2 { font-family: var(--font-display); font-size: 24px; margin: 0 0 4px; color: var(--text-main); }
+.alt-context p { font-size: 14px; color: var(--text-muted); line-height: 1.5; margin: 0 0 8px; }
+.alt-visit { flex: none; padding: 0 22px; }
+.alt-rank { font-family: var(--font-mono); color: var(--text-faint); width: 34px; }
+.cat-mini .tool-logo.related-tile,
+.cat-mini .related-tile { width: 30px; height: 30px; border-radius: 8px; }

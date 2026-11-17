@@ -11,7 +11,7 @@
     <link rel="alternate" hreflang="zh-CN" href="https://www.aitoollab.cn/category/ai-coding/">
     <link rel="alternate" hreflang="en"    href="https://www.aitoolbox.hk/category/ai-coding/">
     <link rel="alternate" hreflang="x-default" href="https://www.aitoolbox.hk/category/ai-coding/">
-    <link rel="stylesheet" href="/css/style.css?v=20261116221721">
+    <link rel="stylesheet" href="/css/style.css?v=20261117082553">
     <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -223,8 +223,24 @@
     <main class="tool-list-container">
         <h1 class="page-title">Best AI Coding Tools 2026</h1>
         <p class="page-sub">13 tools reviewed and ranked</p>
-        <div class="tool-grid">
-            <a href="/tools/github-copilot/" class="tool-card">
+        <div class="cat-toolbar">
+            <div class="cf-group" role="group" aria-label="Filter by pricing">
+                <button class="cf-chip active" data-filter="all" type="button">All (13)</button>
+                <button class="cf-chip" data-filter="free" type="button">Free (1)</button>
+                <button class="cf-chip" data-filter="freemium" type="button">Free + Paid (10)</button>
+                <button class="cf-chip" data-filter="paid" type="button">Paid (2)</button>
+            </div>
+            <div class="cf-group" role="group" aria-label="Sort tools">
+                <span class="cf-label">Sort</span>
+                <button class="cf-chip active" data-sort="featured" type="button">Featured</button>
+                <button class="cf-chip" data-sort="rating" type="button">Top rated</button>
+                <button class="cf-chip" data-sort="visits" type="button">Popular</button>
+            </div>
+        </div>
+        <p class="cat-count" id="catCount" aria-live="polite">13 tools</p>
+        <div class="cat-empty" id="catEmpty" hidden>No tools match this filter.</div>
+        <div class="tool-grid" id="catGrid">
+            <a href="/tools/github-copilot/" class="tool-card" data-type="freemium" data-rating="4.7" data-visits="68000">
             <img class="tool-logo tool-icon" src="/assets/icons/github-copilot.png" alt="GitHub Copilot" width="40" height="40" loading="lazy" decoding="async">
             <div class="tool-info">
                 <div class="tool-title-row"><h3>GitHub Copilot</h3><span class="status-chip status-trending">Trending</span></div>
@@ -235,7 +251,7 @@
                 </div>
             </div>
         </a>
-<a href="/tools/cursor/" class="tool-card">
+<a href="/tools/cursor/" class="tool-card" data-type="freemium" data-rating="4.8" data-visits="59000">
             <img class="tool-logo tool-icon" src="/assets/icons/cursor.svg" alt="Cursor" width="40" height="40" loading="lazy" decoding="async">
             <div class="tool-info">
                 <div class="tool-title-row"><h3>Cursor</h3><span class="status-chip status-trending">Trending</span></div>
@@ -246,7 +262,7 @@
                 </div>
             </div>
         </a>
-<a href="/tools/replit-ai/" class="tool-card">
+<a href="/tools/replit-ai/" class="tool-card" data-type="freemium" data-rating="4.5" data-visits="72000">
             <img class="tool-logo tool-icon" src="/assets/icons/replit-ai.svg" alt="Replit AI" width="40" height="40" loading="lazy" decoding="async">
             <div class="tool-info">
                 <div class="tool-title-row"><h3>Replit AI</h3></div>
@@ -257,7 +273,7 @@
                 </div>
             </div>
         </a>
-<a href="/tools/lovable/" class="tool-card">
+<a href="/tools/lovable/" class="tool-card" data-type="freemium" data-rating="4.9" data-visits="12000">
             <img class="tool-logo tool-icon" src="/assets/icons/lovable.png" alt="Lovable" width="40" height="40" loading="lazy" decoding="async">
             <div class="tool-info">
                 <div class="tool-title-row"><h3>Lovable</h3><span class="status-chip status-verified">Verified</span></div>
@@ -268,7 +284,7 @@
                 </div>
             </div>
         </a>
-<a href="/tools/claude-code/" class="tool-card">
+<a href="/tools/claude-code/" class="tool-card" data-type="paid" data-rating="4.8" data-visits="8000">
             <img class="tool-logo tool-icon" src="/assets/icons/claude-code.svg" alt="Claude Code" width="40" height="40" loading="lazy" decoding="async">
             <div class="tool-info">
                 <div class="tool-title-row"><h3>Claude Code</h3><span class="status-chip status-verified">Verified</span></div>
@@ -279,7 +295,7 @@
                 </div>
             </div>
         </a>
-<a href="/tools/openai-codex/" class="tool-card">
+<a href="/tools/openai-codex/" class="tool-card" data-type="paid" data-rating="4.6" data-visits="35000">
             <img class="tool-logo tool-icon" src="/assets/icons/openai-codex.svg" alt="OpenAI Codex" width="40" height="40" loading="lazy" decoding="async">
             <div class="tool-info">
                 <div class="tool-title-row"><h3>OpenAI Codex</h3></div>
@@ -290,7 +306,7 @@
                 </div>
             </div>
         </a>
-<a href="/tools/bolt.new/" class="tool-card">
+<a href="/tools/bolt.new/" class="tool-card" data-type="freemium" data-rating="4.9" data-visits="88000">
             <img class="tool-logo tool-icon" src="/assets/icons/bolt.new.png" alt="Bolt.new" width="40" height="40" loading="lazy" decoding="async">
             <div class="tool-info">
                 <div class="tool-title-row"><h3>Bolt.new</h3></div>
@@ -301,7 +317,7 @@
                 </div>
             </div>
         </a>
-<a href="/tools/windsurf/" class="tool-card">
+<a href="/tools/windsurf/" class="tool-card" data-type="freemium" data-rating="4.7" data-visits="22000">
             <img class="tool-logo tool-icon" src="/assets/icons/windsurf.svg" alt="Windsurf" width="40" height="40" loading="lazy" decoding="async">
             <div class="tool-info">
                 <div class="tool-title-row"><h3>Windsurf</h3><span class="status-chip status-trending">Trending</span></div>
@@ -312,7 +328,7 @@
                 </div>
             </div>
         </a>
-<a href="/tools/devin-ai/" class="tool-card">
+<a href="/tools/devin-ai/" class="tool-card" data-type="freemium" data-rating="4.5" data-visits="620000">
             <img class="tool-logo tool-icon" src="/assets/icons/devin-ai.svg" alt="Devin AI" width="40" height="40" loading="lazy" decoding="async">
             <div class="tool-info">
                 <div class="tool-title-row"><h3>Devin AI</h3><span class="status-chip status-trending">Trending</span></div>
@@ -323,7 +339,7 @@
                 </div>
             </div>
         </a>
-<a href="/tools/v0-dev/" class="tool-card">
+<a href="/tools/v0-dev/" class="tool-card" data-type="freemium" data-rating="4.4" data-visits="170000">
             <img class="tool-logo tool-icon" src="/assets/icons/v0-dev.svg" alt="v0.dev" width="40" height="40" loading="lazy" decoding="async">
             <div class="tool-info">
                 <div class="tool-title-row"><h3>v0.dev</h3></div>
@@ -334,7 +350,7 @@
                 </div>
             </div>
         </a>
-<a href="/tools/cline/" class="tool-card">
+<a href="/tools/cline/" class="tool-card" data-type="freemium" data-rating="4.7" data-visits="850000">
             <img class="tool-logo tool-icon" src="/assets/icons/cline.png" alt="Cline" width="40" height="40" loading="lazy" decoding="async">
             <div class="tool-info">
                 <div class="tool-title-row"><h3>Cline</h3><span class="status-chip status-trending">Trending</span></div>
@@ -345,7 +361,7 @@
                 </div>
             </div>
         </a>
-<a href="/tools/aider/" class="tool-card">
+<a href="/tools/aider/" class="tool-card" data-type="free" data-rating="4.6" data-visits="180000">
             <img class="tool-logo tool-icon" src="/assets/icons/aider.png" alt="Aider" width="40" height="40" loading="lazy" decoding="async">
             <div class="tool-info">
                 <div class="tool-title-row"><h3>Aider</h3><span class="status-chip status-verified">Verified</span></div>
@@ -356,7 +372,7 @@
                 </div>
             </div>
         </a>
-<a href="/tools/warp/" class="tool-card">
+<a href="/tools/warp/" class="tool-card" data-type="freemium" data-rating="4.7" data-visits="850000">
             <img class="tool-logo tool-icon" src="/assets/icons/warp.png" alt="Warp" width="40" height="40" loading="lazy" decoding="async">
             <div class="tool-info">
                 <div class="tool-title-row"><h3>Warp</h3><span class="status-chip status-choice">Editor's Choice</span></div>
@@ -373,7 +389,7 @@
 
     <footer class="footer">
         <p class="footer-logo">AI Tool Lab</p>
-        <p>Independent AI tool reviews. No sponsored rankings. &middot; <a href="/about.html">Editorial policy</a> &middot; <a href="https://www.aitoollab.cn/">中文版</a></p>
+        <p>Independent AI tool reviews. No sponsored rankings. &middot; <a href="/about.html">Editorial policy</a> &middot; <a href="/rss.xml">RSS</a> &middot; <a href="https://www.aitoollab.cn/">中文版</a></p>
         <p class="footer-meta">Copyright 2026 AI Tool Lab &middot; Updated daily</p>
     </footer>
     <button id="backToTop" aria-label="Back to top">
@@ -403,5 +419,46 @@ document.addEventListener("DOMContentLoaded",function(){var b=document.getElemen
     });
 })();
 </script>
+    <script>
+    (function() {
+        var grid = document.getElementById('catGrid');
+        if (!grid) return;
+        var cards = Array.prototype.slice.call(grid.querySelectorAll('.tool-card'));
+        var countEl = document.getElementById('catCount');
+        var emptyEl = document.getElementById('catEmpty');
+        var toolbar = document.querySelector('.cat-toolbar');
+        var ftype = 'all', skey = 'featured';
+        cards.forEach(function(c, i) { c.dataset.idx = i; });
+        function apply() {
+            var shown = 0;
+            cards.forEach(function(c) {
+                var ok = ftype === 'all' || c.getAttribute('data-type') === ftype;
+                c.style.display = ok ? '' : 'none';
+                if (ok) shown++;
+            });
+            cards.sort(function(a, b) {
+                if (skey === 'rating') return parseFloat(b.dataset.rating || 0) - parseFloat(a.dataset.rating || 0);
+                if (skey === 'visits') return parseInt(b.dataset.visits || 0, 10) - parseInt(a.dataset.visits || 0, 10);
+                return parseInt(a.dataset.idx, 10) - parseInt(b.dataset.idx, 10);
+            });
+            cards.forEach(function(c) { grid.appendChild(c); });
+            countEl.textContent = shown + ' of ' + cards.length + ' tools';
+            emptyEl.hidden = shown !== 0;
+            grid.style.display = shown ? '' : 'none';
+        }
+        toolbar.addEventListener('click', function(e) {
+            var b = e.target.closest('button');
+            if (!b) return;
+            if (b.dataset.filter) {
+                ftype = b.dataset.filter;
+                toolbar.querySelectorAll('[data-filter]').forEach(function(x) { x.classList.toggle('active', x === b); });
+            } else if (b.dataset.sort) {
+                skey = b.dataset.sort;
+                toolbar.querySelectorAll('[data-sort]').forEach(function(x) { x.classList.toggle('active', x === b); });
+            }
+            apply();
+        });
+    })();
+    </script>
 </body>
 </html>

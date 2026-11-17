@@ -11,7 +11,7 @@
     <link rel="alternate" hreflang="zh-CN" href="https://www.aitoollab.cn/category/ai-search/">
     <link rel="alternate" hreflang="en"    href="https://www.aitoolbox.hk/category/ai-search/">
     <link rel="alternate" hreflang="x-default" href="https://www.aitoolbox.hk/category/ai-search/">
-    <link rel="stylesheet" href="/css/style.css?v=20261116221721">
+    <link rel="stylesheet" href="/css/style.css?v=20261117082553">
     <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -163,8 +163,24 @@
     <main class="tool-list-container">
         <h1 class="page-title">Best AI Search Tools 2026</h1>
         <p class="page-sub">7 tools reviewed and ranked</p>
-        <div class="tool-grid">
-            <a href="/tools/perplexity/" class="tool-card">
+        <div class="cat-toolbar">
+            <div class="cf-group" role="group" aria-label="Filter by pricing">
+                <button class="cf-chip active" data-filter="all" type="button">All (7)</button>
+                <button class="cf-chip" data-filter="free" type="button">Free (0)</button>
+                <button class="cf-chip" data-filter="freemium" type="button">Free + Paid (5)</button>
+                <button class="cf-chip" data-filter="paid" type="button">Paid (2)</button>
+            </div>
+            <div class="cf-group" role="group" aria-label="Sort tools">
+                <span class="cf-label">Sort</span>
+                <button class="cf-chip active" data-sort="featured" type="button">Featured</button>
+                <button class="cf-chip" data-sort="rating" type="button">Top rated</button>
+                <button class="cf-chip" data-sort="visits" type="button">Popular</button>
+            </div>
+        </div>
+        <p class="cat-count" id="catCount" aria-live="polite">7 tools</p>
+        <div class="cat-empty" id="catEmpty" hidden>No tools match this filter.</div>
+        <div class="tool-grid" id="catGrid">
+            <a href="/tools/perplexity/" class="tool-card" data-type="freemium" data-rating="4.8" data-visits="123000">
             <img class="tool-logo tool-icon" src="/assets/icons/perplexity.svg" alt="Perplexity" width="40" height="40" loading="lazy" decoding="async">
             <div class="tool-info">
                 <div class="tool-title-row"><h3>Perplexity</h3><span class="status-chip status-verified">Verified</span></div>
@@ -175,7 +191,7 @@
                 </div>
             </div>
         </a>
-<a href="/tools/you.com/" class="tool-card">
+<a href="/tools/you.com/" class="tool-card" data-type="freemium" data-rating="5.0" data-visits="170000">
             <img class="tool-logo tool-icon" src="/assets/icons/you.com.png" alt="You.com" width="40" height="40" loading="lazy" decoding="async">
             <div class="tool-info">
                 <div class="tool-title-row"><h3>You.com</h3></div>
@@ -186,7 +202,7 @@
                 </div>
             </div>
         </a>
-<a href="/tools/consensus/" class="tool-card">
+<a href="/tools/consensus/" class="tool-card" data-type="freemium" data-rating="4.4" data-visits="150000">
             <img class="tool-logo tool-icon" src="/assets/icons/consensus.png" alt="Consensus" width="40" height="40" loading="lazy" decoding="async">
             <div class="tool-info">
                 <div class="tool-title-row"><h3>Consensus</h3></div>
@@ -197,7 +213,7 @@
                 </div>
             </div>
         </a>
-<a href="/tools/perplexity-ai/" class="tool-card">
+<a href="/tools/perplexity-ai/" class="tool-card" data-type="freemium" data-rating="4.8" data-visits="45000">
             <img class="tool-logo tool-icon" src="/assets/icons/perplexity-ai.svg" alt="Perplexity AI" width="40" height="40" loading="lazy" decoding="async">
             <div class="tool-info">
                 <div class="tool-title-row"><h3>Perplexity AI</h3></div>
@@ -208,7 +224,7 @@
                 </div>
             </div>
         </a>
-<a href="/tools/glean/" class="tool-card">
+<a href="/tools/glean/" class="tool-card" data-type="paid" data-rating="4.5" data-visits="1800000">
             <img class="tool-logo tool-icon" src="/assets/icons/glean.png" alt="Glean" width="40" height="40" loading="lazy" decoding="async">
             <div class="tool-info">
                 <div class="tool-title-row"><h3>Glean</h3></div>
@@ -219,7 +235,7 @@
                 </div>
             </div>
         </a>
-<a href="/tools/exa-ai/" class="tool-card">
+<a href="/tools/exa-ai/" class="tool-card" data-type="paid" data-rating="4.6" data-visits="0">
             <img class="tool-logo tool-icon" src="/assets/icons/exa-ai.png" alt="Exa AI" width="40" height="40" loading="lazy" decoding="async">
             <div class="tool-info">
                 <div class="tool-title-row"><h3>Exa AI</h3><span class="status-chip status-verified">Verified</span></div>
@@ -230,7 +246,7 @@
                 </div>
             </div>
         </a>
-<a href="/tools/genspark/" class="tool-card">
+<a href="/tools/genspark/" class="tool-card" data-type="freemium" data-rating="4.5" data-visits="0">
             <img class="tool-logo tool-icon" src="/assets/icons/genspark.png" alt="Genspark" width="40" height="40" loading="lazy" decoding="async">
             <div class="tool-info">
                 <div class="tool-title-row"><h3>Genspark</h3><span class="status-chip status-trending">Trending</span></div>
@@ -247,7 +263,7 @@
 
     <footer class="footer">
         <p class="footer-logo">AI Tool Lab</p>
-        <p>Independent AI tool reviews. No sponsored rankings. &middot; <a href="/about.html">Editorial policy</a> &middot; <a href="https://www.aitoollab.cn/">中文版</a></p>
+        <p>Independent AI tool reviews. No sponsored rankings. &middot; <a href="/about.html">Editorial policy</a> &middot; <a href="/rss.xml">RSS</a> &middot; <a href="https://www.aitoollab.cn/">中文版</a></p>
         <p class="footer-meta">Copyright 2026 AI Tool Lab &middot; Updated daily</p>
     </footer>
     <button id="backToTop" aria-label="Back to top">
@@ -277,5 +293,46 @@ document.addEventListener("DOMContentLoaded",function(){var b=document.getElemen
     });
 })();
 </script>
+    <script>
+    (function() {
+        var grid = document.getElementById('catGrid');
+        if (!grid) return;
+        var cards = Array.prototype.slice.call(grid.querySelectorAll('.tool-card'));
+        var countEl = document.getElementById('catCount');
+        var emptyEl = document.getElementById('catEmpty');
+        var toolbar = document.querySelector('.cat-toolbar');
+        var ftype = 'all', skey = 'featured';
+        cards.forEach(function(c, i) { c.dataset.idx = i; });
+        function apply() {
+            var shown = 0;
+            cards.forEach(function(c) {
+                var ok = ftype === 'all' || c.getAttribute('data-type') === ftype;
+                c.style.display = ok ? '' : 'none';
+                if (ok) shown++;
+            });
+            cards.sort(function(a, b) {
+                if (skey === 'rating') return parseFloat(b.dataset.rating || 0) - parseFloat(a.dataset.rating || 0);
+                if (skey === 'visits') return parseInt(b.dataset.visits || 0, 10) - parseInt(a.dataset.visits || 0, 10);
+                return parseInt(a.dataset.idx, 10) - parseInt(b.dataset.idx, 10);
+            });
+            cards.forEach(function(c) { grid.appendChild(c); });
+            countEl.textContent = shown + ' of ' + cards.length + ' tools';
+            emptyEl.hidden = shown !== 0;
+            grid.style.display = shown ? '' : 'none';
+        }
+        toolbar.addEventListener('click', function(e) {
+            var b = e.target.closest('button');
+            if (!b) return;
+            if (b.dataset.filter) {
+                ftype = b.dataset.filter;
+                toolbar.querySelectorAll('[data-filter]').forEach(function(x) { x.classList.toggle('active', x === b); });
+            } else if (b.dataset.sort) {
+                skey = b.dataset.sort;
+                toolbar.querySelectorAll('[data-sort]').forEach(function(x) { x.classList.toggle('active', x === b); });
+            }
+            apply();
+        });
+    })();
+    </script>
 </body>
 </html>
