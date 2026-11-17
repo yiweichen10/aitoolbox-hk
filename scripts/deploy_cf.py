@@ -24,7 +24,7 @@ PROJECT = "aitoolbox-hk"
 
 # 网站根目录下的静态文件白名单
 ROOT_FILES = [
-    "index.html", "404.html", "about.html", "tts-demo.html",
+    "index.html", "404.html", "about.html",
     "favicon.ico", "robots.txt", "sitemap.xml", "llms.txt", "rss.xml",
     "contact.html", "submit.html",
     "_headers", "_redirects",

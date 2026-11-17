@@ -1251,7 +1251,7 @@ def build_category_page_en(cat_name: str, tools: list) -> str:
                 <div class="tool-title-row"><h3>{escape_html(t['name'])}</h3>{badge_html}</div>
                 <p>{escape_html(t['description'])}</p>
                 <div class="tool-meta-row">
-                    <span>{t['rating']}</span>
+                    <span>{rating_num(t):.1f}</span>
                     <span>{t.get('price','')}</span>
                 </div>
             </div>
@@ -1747,7 +1747,7 @@ def build_index_en(tools: list, articles: list) -> str:
                 <div class="tool-title-row"><h3>{escape_html(t['name'])}</h3>{badge_html}</div>
                 <p>{escape_html(t['description'])}</p>
                 <div class="tool-meta-row">
-                    <span>{t['rating']}</span>
+                    <span>{rating_num(t):.1f}</span>
                     <span>{t.get('price','')}</span>
                 </div>
             </div>
@@ -1797,7 +1797,7 @@ def build_index_en(tools: list, articles: list) -> str:
             {tool_tile(t, 'sidebar-tile')}
             <div style="flex:1;min-width:0;">
                 <a href="/tools/{t['slug']}/" style="color:var(--text-main);text-decoration:none;font-weight:600;display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">{escape_html(t['name'])}</a>
-                <span style="color:var(--text-muted);font-size:11px;">{t.get('rating','')}</span>
+                <span style="color:var(--text-muted);font-size:11px;">{rating_num(t):.1f}</span>
             </div>
         </li>'''
     top_rated_html += '</ol>'
@@ -1825,7 +1825,7 @@ def build_index_en(tools: list, articles: list) -> str:
             <div style="flex:1;">
                 <h3 style="margin:0 0 4px 0;font-size:18px;">{escape_html(featured['name'])}</h3>
                 <p style="margin:0 0 6px 0;font-size:13px;color:var(--text-muted);">{escape_html(featured['description'][:100])}</p>
-                <span style="font-size:13px;font-weight:600;color:var(--primary-color);">{featured.get('rating','')} · {featured.get('price','')} · {featured.get('visits','')} visitors</span>
+                <span style="font-size:13px;font-weight:600;color:var(--primary-color);">{rating_num(featured):.1f} · {featured.get('price','')} · {featured.get('visits','')} visitors</span>
             </div>
             <span style="font-size:24px;">→</span>
         </a>
@@ -2638,7 +2638,7 @@ def build_alternatives_page_en(tool: dict, candidates: list) -> str:
             <div class="tool-info">
                 <div class="tool-title-row"><h2>{escape_html(name)}</h2></div>
                 <p>{escape_html(_brief(tool.get('description', ''), 150))}</p>
-                <div class="tool-meta-row"><span>{tool.get('rating', '')}</span><span>{tool.get('price', '')}</span></div>
+                <div class="tool-meta-row"><span>{rating_num(tool):.1f}</span><span>{tool.get('price', '')}</span></div>
             </div>
             <a class="td-visit-btn alt-visit" href="/tools/{slug}/">Read our full {escape_html(name)} review</a>
         </div>

@@ -37,3 +37,6 @@ _deploy_cf.zip
 
 # Automation temp files (tool JSON staging, leaked by 16.Daily Tool Generator)
 _tmp_*
+_ff_check.html
+gf_check.html
+_genspark_check.html
