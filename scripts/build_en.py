@@ -3056,7 +3056,17 @@ def build_all_en(target: str = 'all'):
                 if tool_by_slug.get(p[0]) and tool_by_slug.get(p[1])
                 and _norm_name(tool_by_slug[p[0]]) not in _norm_name(tool_by_slug[p[1]])
                 and _norm_name(tool_by_slug[p[1]]) not in _norm_name(tool_by_slug[p[0]])}
-    vs_pairs = sorted(vs_pairs, key=lambda p: -(rating_num(tool_by_slug[p[0]]) + rating_num(tool_by_slug[p[1]])))[:80]
+    # 2026-11-17 治本：仅按评分和排序时，大量 pair 评分和并列（如 9.0 有 7 对），
+    # Python set 迭代顺序不稳定 → 每次 build 边界 pair 随机进出 → vs 页面反复删建。
+    # 增加 slug 作为确定性次级键，并列时按字母序，保证每次构建选出同一批 80 对。
+    vs_pairs = sorted(
+        vs_pairs,
+        key=lambda p: (
+            -(rating_num(tool_by_slug[p[0]]) + rating_num(tool_by_slug[p[1]])),
+            p[0],
+            p[1],
+        ),
+    )[:80]
     vs_by_slug = {}
     for sa, sb in vs_pairs:
         vs_by_slug.setdefault(sa, []).append(sb)
