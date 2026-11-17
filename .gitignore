@@ -13,6 +13,8 @@ __pycache__/
 
 # Temp data scripts — never commit
 data/_*.py
+# Generated analysis snapshots (regenerable from source data)
+data/_pricing_index_snapshot.json
 # Backup files — never commit
 *.bak
 
