@@ -683,6 +683,16 @@ img { max-width: 100%; height: auto; }
   background: var(--bg-gradient);  color: #fff;
   border-color: transparent;
 }
+.page-ellipsis {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  height: 40px;
+  color: var(--text-muted, #94a3b8);
+  font-weight: 500;
+  user-select: none;
+}
 
 .newsletter button:hover {
   transform: translateY(-3px);
@@ -1437,53 +1447,10 @@ img { max-width: 100%; height: auto; }
   overflow: hidden;
 }
 
-/* ========== 分页控件 ========== */
-.pagination {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-  padding: 32px 0 16px;
-}
-
-.pagination a {
-  display: inline-flex;
-  align-items: center;
-  padding: 10px 20px;
-  background: var(--primary-color, #2563eb);
-  color: #fff;
-  border-radius: 8px;
-  font-size: 14px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: background 0.2s ease, transform 0.15s ease;
-}
-
-.pagination a:hover {
-  background: #5a67d8;
-  transform: translateY(-1px);
-}
-
-.pagination .page-info {
-  font-size: 14px;
-  color: var(--text-muted, #94a3b8);
-  min-width: 60px;
-  text-align: center;
-}
-
+/* ========== 文章卡片窄屏适配（分页样式统一在上方 .pagination 定义） ========== */
 @media (max-width: 480px) {
   .article-card {
     padding: 16px;
-  }
-  .pagination {
-    gap: 6px;
-    flex-wrap: wrap;
-  }
-  .pagination a {
-    padding: 8px 12px;
-    font-size: 13px;
-    min-width: 36px;
-    height: 36px;
   }
 }
 

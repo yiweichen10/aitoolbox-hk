@@ -1406,6 +1406,34 @@ def build_category_page_en(cat_name: str, tools: list) -> str:
 
 # ─── Article list page ────────────────────────────────────────────────────────
 
+def _windowed_page_numbers(current: int, total: int, span: int = 2) -> list:
+    """Compact page-number window; None marks a gap (rendered as an ellipsis).
+
+    The first and last pages always stay reachable. Near either edge the
+    window is widened so the visible block never looks lopsided. Total page
+    counts small enough to fit are returned in full.
+    """
+    if total <= 7:
+        return list(range(1, total + 1))
+
+    lo = max(1, current - span)
+    hi = min(total, current + span)
+    if current <= 4:              # near the start → full leading block
+        lo, hi = 1, min(total, 5)
+    elif current >= total - 3:    # near the end → full trailing block
+        lo, hi = max(1, total - 4), total
+
+    pages = sorted({1, total} | set(range(lo, hi + 1)))
+
+    out, prev = [], None
+    for p in pages:
+        if prev is not None and p - prev > 1:
+            out.append(None)
+        out.append(p)
+        prev = p
+    return out
+
+
 def build_article_list_en(articles: list, current_page: int = 1, total_pages: int = 1) -> str:
     cards   = ''
     for a in articles:
@@ -1426,16 +1454,20 @@ def build_article_list_en(articles: list, current_page: int = 1, total_pages: in
             prev_url = '/articles/' if current_page == 2 else f'/articles/page/{current_page-1}/'
             links.append(f'<a href="{prev_url}" class="page-link">&laquo; Prev</a>')
         
-        for p in range(1, total_pages + 1):
+        for p in _windowed_page_numbers(current_page, total_pages):
+            if p is None:
+                links.append('<span class="page-ellipsis" aria-hidden="true">&hellip;</span>')
+                continue
             url = '/articles/' if p == 1 else f'/articles/page/{p}/'
             active = ' active' if p == current_page else ''
-            links.append(f'<a href="{url}" class="page-link{active}">{p}</a>')
-            
+            aria = ' aria-current="page"' if p == current_page else ''
+            links.append(f'<a href="{url}" class="page-link{active}"{aria}>{p}</a>')
+
         if current_page < total_pages:
             next_url = f'/articles/page/{current_page+1}/'
             links.append(f'<a href="{next_url}" class="page-link">Next &raquo;</a>')
-            
-        pagination_html = f'<div class="pagination">{"".join(links)}</div>'
+
+        pagination_html = f'<nav class="pagination" aria-label="Pagination">{"".join(links)}</nav>'
 
     hreflang = hreflang_tags('/articles/', '/articles/')
     return f'''<!DOCTYPE html>
