@@ -87,6 +87,16 @@ def append_article(content_file: str, slug: str, category: str, date: str = None
         CONTENT_FIELD: body,  # <-- THE ONLY VALID FIELD NAME
     }
 
+    # 2026-11-18: SERP 标题截断闭环——title>60 的文章自动生成 seo_title 短标题
+    # （<title>/og/twitter 用短标题，H1 保留完整标题）。与 gen_seo_titles.py 同规则。
+    if len(title) > 60:
+        try:
+            from gen_seo_titles import make_seo_title
+            article["seo_title"] = make_seo_title(title)
+            print(f"  seo_title (auto): {article['seo_title']}")
+        except ImportError:
+            pass  # generator unavailable; build-time warning will flag it
+
     # Read existing articles
     with open(ARTICLES_PATH, "r", encoding="utf-8") as f:
         articles = json.load(f)

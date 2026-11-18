@@ -858,7 +858,7 @@ def build_tool_page_en(tool: dict, all_tools: list, all_articles: list = None, a
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{escape_html(name)} Review 2026: Features, Pricing & Alternatives - {SITE_NAME}</title>
+    <title>{escape_html(name)} Review 2026: Pricing &amp; Alternatives</title>
     <meta name="description" content="{escape_html(name)} full review 2026: {escape_html(tool['description'][:120])} Pricing, pros, cons, and alternatives.">
     <meta name="keywords" content="{escape_html(name)},{escape_html(name)} review,{escape_html(name)} pricing,{escape_html(cat)},AI tools 2026">
     <link rel="canonical" href="{SITE_DOMAIN}/tools/{slug}/">
@@ -963,6 +963,12 @@ def add_heading_anchors(content_html: str):
 def build_article_page_en(article: dict, all_articles: list, all_tools: list = None) -> str:
     slug     = article['slug']
     title    = article['title']
+    # 2026-11-18: SERP 标题截断治理——<title>/og/twitter 用 seo_title（<=55 字符，
+    # 由 gen_seo_titles.py 生成，保留主关键词+年份），H1 与 JSON-LD headline 保留完整标题。
+    # 站名后缀只在放得下时拼接（保证 <title> 总长 <=60，否则裸用短标题）。
+    serp_title = article.get('seo_title') or title
+    _suffix = f" - {SITE_NAME}"
+    serp_title = serp_title + _suffix if len(serp_title) + len(_suffix) <= 60 else serp_title
     cat      = article.get('category', 'AI Tools')
     cat_slug = get_category_slug_en(cat)
     date_str = article.get('date','')
@@ -1195,18 +1201,18 @@ def build_article_page_en(article: dict, all_articles: list, all_tools: list = N
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{escape_html(title)} - {SITE_NAME}</title>
+    <title>{escape_html(serp_title)}</title>
     <meta name="description" content="{escape_html(article.get('description',''))}">
     <meta name="keywords" content="{escape_html(article.get('keywords',''))}">
     <link rel="canonical" href="{SITE_DOMAIN}/articles/{slug}/">
 {hreflang}    <meta property="og:type" content="article">
-    <meta property="og:title" content="{escape_html(title)} - {SITE_NAME}">
+    <meta property="og:title" content="{escape_html(serp_title)}">
     <meta property="og:description" content="{escape_html(article.get('description',''))}">
     <meta property="og:url" content="{SITE_DOMAIN}/articles/{slug}/">
     {'<meta property="og:image" content="' + og_image + '">' if og_image else ''}
     <meta property="og:site_name" content="{SITE_NAME}">
     <meta name="twitter:card" content="{'summary_large_image' if og_image else 'summary'}">
-    <meta name="twitter:title" content="{escape_html(title)} - {SITE_NAME}">
+    <meta name="twitter:title" content="{escape_html(serp_title)}">
     <meta name="twitter:description" content="{escape_html(article.get('description',''))}">
     {'<meta name="twitter:image" content="' + og_image + '">' if og_image else ''}
     <link rel="stylesheet" href="/css/style.css?{CSS_VERSION}">
@@ -3038,7 +3044,11 @@ def build_vs_page_en(a: dict, b: dict) -> str:
         faq_html += (f'<div class="td-faq-item"><h3>{escape_html(q)}</h3>'
                      f'<div class="td-faq-a"><p>{escape_html(a2)}</p></div></div>\n')
 
+    # 2026-11-18: SERP 截断治理——<title> 用短格式（完整信息保留在 H1/description）
     title = f'{na} vs {nb} (2026): Editor Scores, Pricing & Which to Pick'
+    serp_title = f'{na} vs {nb} (2026) Compared'
+    if len(serp_title) > 55:
+        serp_title = f'{na} vs {nb}'
     meta_desc = (f'{na} ({ra}/5, {pa}) vs {nb} ({rb}/5, {pb}) — hands-on comparison of scores, '
                  f'pricing and strengths, with honest guidance on which one fits your work. '
                  f'Verified {today_iso}.')
@@ -3049,11 +3059,11 @@ def build_vs_page_en(a: dict, b: dict) -> str:
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{escape_html(title)} - {SITE_NAME}</title>
+    <title>{escape_html(serp_title)} - {SITE_NAME}</title>
     <meta name="description" content="{escape_html(meta_desc)}">
     <link rel="canonical" href="{SITE_DOMAIN}/vs/{slug_a}-vs-{slug_b}/">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="{escape_html(title)}">
+    <meta property="og:title" content="{escape_html(serp_title)}">
     <meta property="og:description" content="{escape_html(meta_desc)}">
     <meta property="og:url" content="{SITE_DOMAIN}/vs/{slug_a}-vs-{slug_b}/">
     <meta property="og:site_name" content="{SITE_NAME}">

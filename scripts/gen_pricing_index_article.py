@@ -152,6 +152,7 @@ def main():
     )
     article = {
         "title": title,
+        "seo_title": f"AI Tool Pricing Index {date.today().year}",
         "slug": SLUG,
         "date": date_str,
         "category": CATEGORY,

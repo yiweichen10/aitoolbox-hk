@@ -110,6 +110,7 @@ def main():
     articles = json.load(open(ARTICLES, encoding="utf-8"))
     article = {
         "title": TITLE,
+        "seo_title": "How to Use AI at Work in 2026: Daily Workflow",
         "slug": SLUG,
         "date": DATE,
         "category": CATEGORY,
