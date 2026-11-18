@@ -566,10 +566,13 @@ def build_tool_page_en(tool: dict, all_tools: list, all_articles: list = None, a
     # "See all alternatives" link — only rendered when an /alternatives/ page exists
     alt_link_html = (f'<a class="alt-see-all" href="/alternatives/{slug}/">'
                      f'See all {escape_html(name)} alternatives &rarr;</a>') if alt_slug else ''
-    # Head-to-head links — up to 2 partners, alphabetical by slug for stable URLs
+    # Head-to-head links — 2026-11-18: 渲染全部 partners（此前 [:2] 按 slug 字母序
+    # 截断，明星工具的对比页如 sora-vs-veo 被字母序挤掉 → 全站零入链，只能靠
+    # sitemap 发现。每工具 partners ≤4，全渲染链接量可控，且保证每个 vs 页
+    # 从两端各获得至少一条入链（80 个 vs 页全部有站内入口）。
     _by_slug = {t['slug']: t for t in all_tools}
     vs_link_tags = []
-    for pslug in sorted(vs_partners or [])[:2]:
+    for pslug in sorted(vs_partners or []):
         p = _by_slug.get(pslug)
         if not p:
             continue
