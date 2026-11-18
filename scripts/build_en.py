@@ -947,6 +947,26 @@ def _toc_slug(text: str, used: set) -> str:
     return slug
 
 
+def _iso_date_for_schema(raw) -> str:
+    """schema.org datePublished/dateModified MUST be ISO 8601 (e.g.
+    2026-11-14). Non-ISO dates are ignored by Google/AI parsers, silently
+    killing freshness signals. Coerces any stored format to YYYY-MM-DD.
+    Year guard: strptime('07/05', '%m/%d') silently yields year 1900 —
+    anything older than 2015 is treated as a parse failure instead."""
+    raw = str(raw or '').strip()
+    m = re.match(r'^(\d{4}-\d{2}-\d{2})', raw)
+    if m:
+        return m.group(1)
+    for fmt in ('%m/%d/%Y', '%m/%d', '%B %d, %Y', '%b %d, %Y'):
+        try:
+            parsed = datetime.strptime(raw, fmt)
+            if parsed.year >= 2015:
+                return parsed.strftime('%Y-%m-%d')
+        except ValueError:
+            continue
+    return datetime.now().strftime('%Y-%m-%d')
+
+
 def add_heading_anchors(content_html: str):
     """Add stable ids to <h2> headings for TOC deep-links; returns (html, [(id, text)])."""
     used: set = set()
@@ -986,7 +1006,12 @@ def build_article_page_en(article: dict, all_articles: list, all_tools: list = N
                   if linkable else f'<span class="article-kicker">{escape_html(cat)}</span>')
 
     # Parse date to ISO for schema
-    article_date = article.get('dateFull', article.get('date', datetime.now().strftime('%Y-%m-%d')))
+    # 2026-11-18 fix: was article.get('dateFull', ...) — dateFull holds the
+    # HUMAN-readable date ("November 14, 2026") for 168 articles, and non-ISO
+    # dates in JSON-LD are ignored by parsers. Visible text keeps dateFull;
+    # schema always gets the ISO-normalized `date`.
+    article_date = _iso_date_for_schema(article.get('date'))
+    date_modified_raw = article.get('dateModified') or article_date
 
     # Related tools
     related_tools_html = ''
@@ -1047,7 +1072,7 @@ def build_article_page_en(article: dict, all_articles: list, all_tools: list = N
         "headline": title,
         "description": article.get('description',''),
         "datePublished": article_date,
-        "dateModified":  article.get('dateModified', article_date),
+        "dateModified":  _iso_date_for_schema(date_modified_raw),
         "inLanguage": "en",
         "author": {
             "@type": "Organization",
@@ -2339,7 +2364,8 @@ def inject_global_nav_en():
 
 # ─── Main build ───────────────────────────────────────────────────────────────
 
-def generate_llms_txt_en(tools: list, articles: list) -> str:
+def generate_llms_txt_en(tools: list, articles: list, alt_slugs: list = None,
+                         vs_pairs=None) -> str:
     """llms.txt (llmstxt.org) — machine-readable site brief for AI models.
     Regenerated on EVERY build so counts, dates and URLs never drift stale
     (the 2026-11-16 audit found counts off by one and every link missing its
@@ -2394,6 +2420,7 @@ def generate_llms_txt_en(tools: list, articles: list) -> str:
     out.append('- [Search](https://www.aitoolbox.hk/search/): instant search across all tools and articles')
     out.append(f'- [Submit a tool](https://www.aitoolbox.hk/submit.html): free submissions, editor-tested before review; rankings cannot be bought')
     out.append(f'- [Articles](https://www.aitoolbox.hk/articles/): original hands-on reviews, comparisons and guides ({n_arts} articles)')
+    out.append(f'- [Full content for AI models](https://www.aitoolbox.hk/llms-full.txt): llms-full.txt — every tool and article in one plain-text file')
     out.append('')
     out.append(f'## Important Tool Pages (top 5 by rating per category, {n_tools} tools total)')
     out.append('')
@@ -2403,6 +2430,30 @@ def generate_llms_txt_en(tools: list, articles: list) -> str:
         for t in clist:
             out.append(f"- [{t.get('name','')}](https://www.aitoolbox.hk/tools/{t.get('slug','')}/): {_brief(t.get('description',''))}")
         out.append('')
+    # ── Alternatives & head-to-head pages ── "X alternatives" / "X vs Y" are
+    # high-frequency AI answers ("what can replace ToolX?"); give the models
+    # a direct index instead of hiding 126 comparison pages.
+    name_by_slug = {t.get('slug', ''): t.get('name', '') for t in tools}
+    n_alt, n_vs = len(alt_slugs or []), len(list(vs_pairs or []))
+    if n_alt or n_vs:
+        out.append('## Alternatives & Head-to-Head Comparisons')
+        out.append('')
+        if n_alt:
+            out.append(f'### Alternatives pages ({n_alt} total, first 10)')
+            out.append('')
+            for s in (alt_slugs or [])[:10]:
+                nm = name_by_slug.get(s, s)
+                out.append(f'- [{nm} alternatives](https://www.aitoolbox.hk/alternatives/{s}/): editor-ranked alternatives to {nm}, compared on price and features')
+            out.append('')
+        if n_vs:
+            out.append(f'### Head-to-head comparisons ({n_vs} total)')
+            out.append('')
+            pairs_sorted = sorted(vs_pairs or [])
+            for lo, hi in pairs_sorted:
+                la, lb = name_by_slug.get(lo, lo), name_by_slug.get(hi, hi)
+                out.append(f'- [{la} vs {lb}](https://www.aitoolbox.hk/vs/{lo}-vs-{hi}/): pricing and feature comparison')
+            out.append('')
+
     out.append(f'## Important Article Pages ({n_arts} total, latest 16 by date)')
     out.append('')
     for a in sorted(articles, key=lambda a: str(a.get('date', '')), reverse=True)[:16]:
@@ -3522,7 +3573,7 @@ def build_all_en(target: str = 'all'):
     print(f'[OK] en/search/index.html ({len(published_tools)} tools + {len(articles)} articles indexed)')
 
     # ── llms.txt (regenerated on every build — counts/dates never drift) ──────
-    llms_txt = generate_llms_txt_en(published_tools, articles)
+    llms_txt = generate_llms_txt_en(published_tools, articles, alt_slugs, vs_pairs)
     with open(os.path.join(OUT_DIR, 'llms.txt'), 'w', encoding='utf-8') as f:
         f.write(llms_txt)
     print(f'[OK] en/llms.txt ({len(published_tools)} tools / {len(articles)} articles)')

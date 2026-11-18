@@ -20,6 +20,7 @@
 - [Search](https://www.aitoolbox.hk/search/): instant search across all tools and articles
 - [Submit a tool](https://www.aitoolbox.hk/submit.html): free submissions, editor-tested before review; rankings cannot be bought
 - [Articles](https://www.aitoolbox.hk/articles/): original hands-on reviews, comparisons and guides (228 articles)
+- [Full content for AI models](https://www.aitoolbox.hk/llms-full.txt): llms-full.txt — every tool and article in one plain-text file
 
 ## Important Tool Pages (top 5 by rating per category, 266 tools total)
 
@@ -170,6 +171,100 @@
 
 ### AI API (1)
 - [OpenRouter](https://www.aitoolbox.hk/tools/open-router/): Unified API gateway that gives you access to 200+ AI models through a single endpoint. Monetization angle…
+
+## Alternatives & Head-to-Head Comparisons
+
+### Alternatives pages (50 total, first 10)
+
+- [ChatGPT alternatives](https://www.aitoolbox.hk/alternatives/chatgpt/): editor-ranked alternatives to ChatGPT, compared on price and features
+- [Claude alternatives](https://www.aitoolbox.hk/alternatives/claude/): editor-ranked alternatives to Claude, compared on price and features
+- [Gemini alternatives](https://www.aitoolbox.hk/alternatives/gemini/): editor-ranked alternatives to Gemini, compared on price and features
+- [Midjourney alternatives](https://www.aitoolbox.hk/alternatives/midjourney/): editor-ranked alternatives to Midjourney, compared on price and features
+- [DALL-E 3 alternatives](https://www.aitoolbox.hk/alternatives/dall-e-3/): editor-ranked alternatives to DALL-E 3, compared on price and features
+- [Sora alternatives](https://www.aitoolbox.hk/alternatives/sora/): editor-ranked alternatives to Sora, compared on price and features
+- [Veo alternatives](https://www.aitoolbox.hk/alternatives/veo/): editor-ranked alternatives to Veo, compared on price and features
+- [Runway alternatives](https://www.aitoolbox.hk/alternatives/runway/): editor-ranked alternatives to Runway, compared on price and features
+- [ElevenLabs alternatives](https://www.aitoolbox.hk/alternatives/elevenlabs/): editor-ranked alternatives to ElevenLabs, compared on price and features
+- [Descript alternatives](https://www.aitoolbox.hk/alternatives/descript/): editor-ranked alternatives to Descript, compared on price and features
+
+### Head-to-head comparisons (76 total)
+
+- [10Web vs Durable](https://www.aitoolbox.hk/vs/10web-vs-durable/): pricing and feature comparison
+- [10Web vs Webflow AI](https://www.aitoolbox.hk/vs/10web-vs-webflow-ai/): pricing and feature comparison
+- [Anyword vs Writesonic](https://www.aitoolbox.hk/vs/anyword-vs-writesonic/): pricing and feature comparison
+- [ASCN No Code vs CrewAI](https://www.aitoolbox.hk/vs/ascn-no-code-vs-crew-ai/): pricing and feature comparison
+- [ASCN No Code vs MuleRun](https://www.aitoolbox.hk/vs/ascn-no-code-vs-mulerun/): pricing and feature comparison
+- [Beautiful.ai vs Relume AI](https://www.aitoolbox.hk/vs/beautiful.ai-vs-relume-ai/): pricing and feature comparison
+- [Beautiful.ai vs Wix AI](https://www.aitoolbox.hk/vs/beautiful.ai-vs-wix-ai/): pricing and feature comparison
+- [Beehiiv vs Predis AI](https://www.aitoolbox.hk/vs/beehiiv-vs-predis-ai/): pricing and feature comparison
+- [Beehiiv vs Semrush AI](https://www.aitoolbox.hk/vs/beehiiv-vs-semrush-ai/): pricing and feature comparison
+- [Bolt.new vs Cursor](https://www.aitoolbox.hk/vs/bolt.new-vs-cursor/): pricing and feature comparison
+- [Bolt.new vs Lovable](https://www.aitoolbox.hk/vs/bolt.new-vs-lovable/): pricing and feature comparison
+- [Brand24 vs Exploding Topics](https://www.aitoolbox.hk/vs/brand24-vs-exploding-topics/): pricing and feature comparison
+- [Brand24 vs GummySearch](https://www.aitoolbox.hk/vs/brand24-vs-gummysearch/): pricing and feature comparison
+- [ChatGPT vs Claude](https://www.aitoolbox.hk/vs/chatgpt-vs-claude/): pricing and feature comparison
+- [ChatGPT vs DeepSeek V4](https://www.aitoolbox.hk/vs/chatgpt-vs-deepseek-v4/): pricing and feature comparison
+- [ChatGPT vs Gemini](https://www.aitoolbox.hk/vs/chatgpt-vs-gemini/): pricing and feature comparison
+- [ChatGPT vs Perplexity](https://www.aitoolbox.hk/vs/chatgpt-vs-perplexity/): pricing and feature comparison
+- [Claude vs Gemini](https://www.aitoolbox.hk/vs/claude-vs-gemini/): pricing and feature comparison
+- [Comet vs Gamma](https://www.aitoolbox.hk/vs/comet-vs-gamma/): pricing and feature comparison
+- [Comet vs Notion AI](https://www.aitoolbox.hk/vs/comet-vs-notion-ai/): pricing and feature comparison
+- [CrewAI vs MuleRun](https://www.aitoolbox.hk/vs/crew-ai-vs-mulerun/): pricing and feature comparison
+- [Crowdin vs Lokalise](https://www.aitoolbox.hk/vs/crowdin-vs-lokalise/): pricing and feature comparison
+- [Crowdin vs Phrase](https://www.aitoolbox.hk/vs/crowdin-vs-phrase/): pricing and feature comparison
+- [Cursor vs GitHub Copilot](https://www.aitoolbox.hk/vs/cursor-vs-github-copilot/): pricing and feature comparison
+- [Cursor vs Lovable](https://www.aitoolbox.hk/vs/cursor-vs-lovable/): pricing and feature comparison
+- [DALL-E 3 vs Midjourney](https://www.aitoolbox.hk/vs/dall-e-3-vs-midjourney/): pricing and feature comparison
+- [DeepSeek V4 vs Gemini](https://www.aitoolbox.hk/vs/deepseek-v4-vs-gemini/): pricing and feature comparison
+- [Descript vs ElevenLabs](https://www.aitoolbox.hk/vs/descript-vs-elevenlabs/): pricing and feature comparison
+- [Dify vs Hugging Face](https://www.aitoolbox.hk/vs/dify-vs-hugging-face/): pricing and feature comparison
+- [Dify vs LM Studio](https://www.aitoolbox.hk/vs/dify-vs-lm-studio/): pricing and feature comparison
+- [Doba Pilot vs Klaviyo](https://www.aitoolbox.hk/vs/doba-pilot-vs-klaviyo/): pricing and feature comparison
+- [Doba Pilot vs Shopify](https://www.aitoolbox.hk/vs/doba-pilot-vs-shopify/): pricing and feature comparison
+- [Durable vs Webflow AI](https://www.aitoolbox.hk/vs/durable-vs-webflow-ai/): pricing and feature comparison
+- [ElevenLabs vs Krisp](https://www.aitoolbox.hk/vs/elevenlabs-vs-krisp/): pricing and feature comparison
+- [ElevenLabs vs Speechify](https://www.aitoolbox.hk/vs/elevenlabs-vs-speechify/): pricing and feature comparison
+- [Elicit vs Litmaps](https://www.aitoolbox.hk/vs/elicit-vs-litmaps/): pricing and feature comparison
+- [Elicit vs Scite](https://www.aitoolbox.hk/vs/elicit-vs-scite/): pricing and feature comparison
+- [Exploding Topics vs GummySearch](https://www.aitoolbox.hk/vs/exploding-topics-vs-gummysearch/): pricing and feature comparison
+- [Flux.1 vs Midjourney](https://www.aitoolbox.hk/vs/flux-1-vs-midjourney/): pricing and feature comparison
+- [Flux.1 vs Remove.bg](https://www.aitoolbox.hk/vs/flux-1-vs-remove.bg/): pricing and feature comparison
+- [Gamma vs Notion AI](https://www.aitoolbox.hk/vs/gamma-vs-notion-ai/): pricing and feature comparison
+- [Gumloop vs Make](https://www.aitoolbox.hk/vs/gumloop-vs-make/): pricing and feature comparison
+- [Gumloop vs Zapier AI](https://www.aitoolbox.hk/vs/gumloop-vs-zapier-ai/): pricing and feature comparison
+- [HeyGen vs Sora](https://www.aitoolbox.hk/vs/heygen-vs-sora/): pricing and feature comparison
+- [HeyGen vs Synthesia](https://www.aitoolbox.hk/vs/heygen-vs-synthesia/): pricing and feature comparison
+- [HeyGen vs Veo](https://www.aitoolbox.hk/vs/heygen-vs-veo/): pricing and feature comparison
+- [Hugging Face vs LM Studio](https://www.aitoolbox.hk/vs/hugging-face-vs-lm-studio/): pricing and feature comparison
+- [Jasper vs Writesonic](https://www.aitoolbox.hk/vs/jasper-vs-writesonic/): pricing and feature comparison
+- [Kit vs Skool](https://www.aitoolbox.hk/vs/kit-vs-skool/): pricing and feature comparison
+- [Kit vs Stan Store](https://www.aitoolbox.hk/vs/kit-vs-stan-store/): pricing and feature comparison
+- [Klaviyo vs Shopify](https://www.aitoolbox.hk/vs/klaviyo-vs-shopify/): pricing and feature comparison
+- [Krisp vs Speechify](https://www.aitoolbox.hk/vs/krisp-vs-speechify/): pricing and feature comparison
+- [Lark (Feishu) vs n8n](https://www.aitoolbox.hk/vs/lark-suite-vs-n8n/): pricing and feature comparison
+- [Lark (Feishu) vs NotebookLM](https://www.aitoolbox.hk/vs/lark-suite-vs-notebooklm/): pricing and feature comparison
+- [Leonardo AI vs Midjourney](https://www.aitoolbox.hk/vs/leonardo-ai-vs-midjourney/): pricing and feature comparison
+- [Litmaps vs Scite](https://www.aitoolbox.hk/vs/litmaps-vs-scite/): pricing and feature comparison
+- [Lokalise vs Phrase](https://www.aitoolbox.hk/vs/lokalise-vs-phrase/): pricing and feature comparison
+- [Make vs n8n](https://www.aitoolbox.hk/vs/make-vs-n8n/): pricing and feature comparison
+- [Make vs Zapier AI](https://www.aitoolbox.hk/vs/make-vs-zapier-ai/): pricing and feature comparison
+- [Midjourney vs Remove.bg](https://www.aitoolbox.hk/vs/midjourney-vs-remove.bg/): pricing and feature comparison
+- [n8n vs NotebookLM](https://www.aitoolbox.hk/vs/n8n-vs-notebooklm/): pricing and feature comparison
+- [n8n vs Zapier AI](https://www.aitoolbox.hk/vs/n8n-vs-zapier-ai/): pricing and feature comparison
+- [Peec AI vs Surfer SEO](https://www.aitoolbox.hk/vs/peec-ai-vs-surfer-seo/): pricing and feature comparison
+- [Peec AI vs Vryse AI](https://www.aitoolbox.hk/vs/peec-ai-vs-vryse-ai/): pricing and feature comparison
+- [Perplexity vs You.com](https://www.aitoolbox.hk/vs/perplexity-vs-you.com/): pricing and feature comparison
+- [Perplexity AI vs You.com](https://www.aitoolbox.hk/vs/perplexity-ai-vs-you.com/): pricing and feature comparison
+- [Predis AI vs Semrush AI](https://www.aitoolbox.hk/vs/predis-ai-vs-semrush-ai/): pricing and feature comparison
+- [QuillBot vs Wordtune](https://www.aitoolbox.hk/vs/quillbot-vs-wordtune/): pricing and feature comparison
+- [QuillBot vs Writesonic](https://www.aitoolbox.hk/vs/quillbot-vs-writesonic/): pricing and feature comparison
+- [Relume AI vs Wix AI](https://www.aitoolbox.hk/vs/relume-ai-vs-wix-ai/): pricing and feature comparison
+- [Runway vs Sora](https://www.aitoolbox.hk/vs/runway-vs-sora/): pricing and feature comparison
+- [Runway vs Veo](https://www.aitoolbox.hk/vs/runway-vs-veo/): pricing and feature comparison
+- [Skool vs Stan Store](https://www.aitoolbox.hk/vs/skool-vs-stan-store/): pricing and feature comparison
+- [Sora vs Veo](https://www.aitoolbox.hk/vs/sora-vs-veo/): pricing and feature comparison
+- [Surfer SEO vs Vryse AI](https://www.aitoolbox.hk/vs/surfer-seo-vs-vryse-ai/): pricing and feature comparison
+- [Wordtune vs Writesonic](https://www.aitoolbox.hk/vs/wordtune-vs-writesonic/): pricing and feature comparison
 
 ## Important Article Pages (228 total, latest 16 by date)
 

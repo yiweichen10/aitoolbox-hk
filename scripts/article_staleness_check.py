@@ -9,16 +9,49 @@ Rules:
   - article age = today - article.date; >180 days => stale candidate
   - ranked by (age desc, word count asc) so the oldest, thinnest pieces surface
   - also reports tools missing pricing_details (E-E-A-T gap flagged earlier)
+  - 2026-11-18: AI crawler whitelist freshness check — flags known AI bots
+    missing from robots.txt so the whitelist is reviewed monthly, not yearly
 
 Usage: python scripts/article_staleness_check.py [--days N]
 Exit 0 always (audit only — not a build gate).
 """
 import json
+import re
 import sys
 from datetime import date, datetime
+from pathlib import Path
 
 ARTICLES = "data/articles_en.json"
 TOOLS = "data/tools_en.json"
+ROBOTS = "robots.txt"
+
+# Reference list of known AI engine crawlers (2026-11). Any bot below that is
+# NOT explicitly allowed in robots.txt is flagged for manual review against
+# vendor docs (OpenAI / Anthropic / Google / Meta / Mistral / Perplexity).
+KNOWN_AI_BOTS = [
+    # OpenAI
+    "GPTBot", "ChatGPT-User", "OAI-SearchBot",
+    # Anthropic
+    "ClaudeBot", "Claude-SearchBot", "Claude-User", "Claude-Runner",
+    "Claude-Web", "anthropic-ai",
+    # Perplexity
+    "PerplexityBot", "Perplexity-User",
+    # Google / Apple / Amazon
+    "Google-Extended", "Applebot-Extended", "Amazonbot",
+    # Meta / Mistral / Common Crawl / ByteDance
+    "meta-externalagent", "meta-externalfetcher", "FacebookBot",
+    "MistralAI-User", "CCBot", "Bytespider",
+]
+
+
+def check_robots_crawlers() -> list:
+    """Return known AI bots not explicitly listed in robots.txt."""
+    try:
+        text = Path(ROBOTS).read_text(encoding="utf-8")
+    except OSError:
+        return KNOWN_AI_BOTS[:]
+    listed = {ua.strip().lower() for ua in re.findall(r"(?im)^user-agent:\s*(\S+)", text)}
+    return [b for b in KNOWN_AI_BOTS if b.lower() not in listed]
 
 
 def age_days(d: str) -> int:
@@ -55,6 +88,15 @@ def main():
     if len(stale) > 20:
         print(f"  ... and {len(stale) - 20} more")
     print(f"tools missing pricing_details: {len(no_pd)}/{len(tools)}")
+
+    missing_bots = check_robots_crawlers()
+    if missing_bots:
+        print(f"robots.txt AI crawler whitelist: {len(missing_bots)} known bot(s) NOT explicitly listed:")
+        for b in missing_bots:
+            print(f"  - {b}  (check vendor docs; default User-agent:* Allow covers it, but whitelist explicitly)")
+    else:
+        print("robots.txt AI crawler whitelist: all known AI bots explicitly listed")
+
     print("[NOTE] read-only audit — refresh decisions are human-owned.")
     sys.exit(0)
 
