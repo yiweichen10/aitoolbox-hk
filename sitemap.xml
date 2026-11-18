@@ -147,20 +147,20 @@
     <url><loc>https://www.aitoolbox.hk/vs/anyword-vs-writesonic/</loc><lastmod>2026-11-18</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
     <url><loc>https://www.aitoolbox.hk/vs/comet-vs-gamma/</loc><lastmod>2026-11-18</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
     <url><loc>https://www.aitoolbox.hk/vs/comet-vs-notion-ai/</loc><lastmod>2026-11-18</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
+    <url><loc>https://www.aitoolbox.hk/vs/exploding-topics-vs-gummysearch/</loc><lastmod>2026-11-18</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
     <url><loc>https://www.aitoolbox.hk/vs/jasper-vs-writesonic/</loc><lastmod>2026-11-18</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
-    <url><loc>https://www.aitoolbox.hk/vs/brandwatch-vs-gummysearch/</loc><lastmod>2026-11-18</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
     <url><loc>https://www.aitoolbox.hk/vs/elicit-vs-litmaps/</loc><lastmod>2026-11-18</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
     <url><loc>https://www.aitoolbox.hk/vs/gamma-vs-notion-ai/</loc><lastmod>2026-11-18</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
     <url><loc>https://www.aitoolbox.hk/vs/jenni-ai-vs-languagetool/</loc><lastmod>2026-11-18</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
     <url><loc>https://www.aitoolbox.hk/vs/jenni-ai-vs-wordtune/</loc><lastmod>2026-11-18</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
     <url><loc>https://www.aitoolbox.hk/vs/languagetool-vs-wordtune/</loc><lastmod>2026-11-18</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
     <url><loc>https://www.aitoolbox.hk/vs/ahrefs-vs-peec-ai/</loc><lastmod>2026-11-18</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
+    <url><loc>https://www.aitoolbox.hk/vs/brand24-vs-exploding-topics/</loc><lastmod>2026-11-18</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
     <url><loc>https://www.aitoolbox.hk/vs/crowdin-vs-phrase/</loc><lastmod>2026-11-18</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
     <url><loc>https://www.aitoolbox.hk/vs/elicit-vs-scite/</loc><lastmod>2026-11-18</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
     <url><loc>https://www.aitoolbox.hk/vs/litmaps-vs-scite/</loc><lastmod>2026-11-18</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
     <url><loc>https://www.aitoolbox.hk/vs/lokalise-vs-phrase/</loc><lastmod>2026-11-18</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
     <url><loc>https://www.aitoolbox.hk/vs/10web-vs-durable/</loc><lastmod>2026-11-18</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
-    <url><loc>https://www.aitoolbox.hk/vs/brand24-vs-brandwatch/</loc><lastmod>2026-11-18</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
     <url><loc>https://www.aitoolbox.hk/vs/crowdin-vs-lokalise/</loc><lastmod>2026-11-18</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
     <url><loc>https://www.aitoolbox.hk/vs/doba-pilot-vs-klaviyo/</loc><lastmod>2026-11-18</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
     <url><loc>https://www.aitoolbox.hk/vs/doba-pilot-vs-shopify/</loc><lastmod>2026-11-18</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
@@ -426,6 +426,11 @@
     <url><loc>https://www.aitoolbox.hk/tools/sparktoro/</loc><lastmod>2026-11-18</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
     <url><loc>https://www.aitoolbox.hk/tools/lindy/</loc><lastmod>2026-11-18</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
     <url><loc>https://www.aitoolbox.hk/tools/base44/</loc><lastmod>2026-11-18</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+    <url><loc>https://www.aitoolbox.hk/tools/mercor/</loc><lastmod>2026-11-18</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+    <url><loc>https://www.aitoolbox.hk/tools/exploding-topics/</loc><lastmod>2026-11-18</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+    <url><loc>https://www.aitoolbox.hk/tools/chatbase/</loc><lastmod>2026-11-18</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+    <url><loc>https://www.aitoolbox.hk/tools/browse-ai/</loc><lastmod>2026-11-18</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+    <url><loc>https://www.aitoolbox.hk/tools/pinterest/</loc><lastmod>2026-11-18</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
     <url><loc>https://www.aitoolbox.hk/articles/best-speech-to-text-api-pricing-2026-deepgram-vs-assemblyai-vs-openai-vs-elevenlabs/</loc><lastmod>2026-11-18</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
     <url><loc>https://www.aitoolbox.hk/articles/best-llm-inference-pricing-2026-groq-vs-together-vs-fireworks-vs-replicate/</loc><lastmod>2026-11-17</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
     <url><loc>https://www.aitoolbox.hk/articles/ai-tool-pricing-index-2026/</loc><lastmod>2026-11-17</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>

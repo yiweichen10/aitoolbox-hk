@@ -18899,5 +18899,345 @@
       }
     ],
     "content": "## What Base44 Actually Is\n\nBase44 is a vibe-coding platform that treats \"app\" as the deliverable, not a codebase. You describe what you want in a sentence; it returns a deployed, full-stack application - UI, database, authentication, hosting - that you refine through conversation. Founder Maor Shlomo bootstrapped it into one of the fastest-growing AI products of 2025, and Wix bought it mid-year for a reported ~$80M, which turned Base44 into both a standalone builder and the custom-app engine inside the Wix App Market.\n\nThe Wix integration is the differentiator that matters now. Open Base44 from a Wix dashboard and it detects what the site actually runs - Store, Bookings, Events, Restaurants, Blog, CRM - then proposes apps and agents built on that live data: a flash-sale campaign page that sells through Wix checkout, a profit-per-product dashboard, an agent that recovers abandoned checkouts or chases no-shows. Competitors generate generic apps; Base44 generates apps wired to a business that already exists.\n\nUnder the hood it runs a dual-credit economy: message credits buy your build-time conversation (25/month free up to 1,200/month on Elite), and integration credits buy your app's runtime - the AI calls, uploads, and database queries your end users generate (100/month free up to 50,000/month). Understanding that split is the difference between a $16 hobby and a $40 client-delivery business.\n\n## The Money Angle\n\n1. **Client micro-apps for local businesses.** The core freelance play: a clinic's appointment desk, a restaurant's lunch-special page, a salon's booking flow - one sentence to working software. Sell at $500-3,000 per build plus monthly care at $50-150, while your infrastructure cost sits on a $40 Builder plan. The approval-based workflow (build, demo, iterate) compresses what used to be a six-week agency job into days.\n\n2. **Wix-ecosystem services.** Millions of Wix sites run stores, bookings, and CRMs that the default dashboard doesn't serve well. Selling \"custom apps and AI agents for your Wix business\" - recovery agents, restock planners, staff schedulers on live data - is a new service category with a distribution channel no other vibe-coding tool has.\n\n3. **MVP validation for micro-SaaS.** Build the smallest working version on the free plan, put it in front of real users, and charge for it before writing production code. If it validates, either scale on higher tiers or rebuild on Replit/Lovable with an actual engineering budget - the $16 experiment cost is nothing.\n\n4. **Internal tools for your own operation.** The use case hiding in plain sight: profit dashboards, client-history views, restock forecasts built on your real data. Every hour saved is margin, and nobody bills you for it.\n\n5. **Sell the build, own the support.** Vibe-coded apps still need prompt maintenance as usage grows - and that maintenance is the retainer. The lock-in critics complain about is, from the service-provider side, the revenue guarantee.\n\n## What It Really Costs\n\n| Plan | Annual (per mo) | Monthly | Message credits | Integration credits | Key additions |\n|---|---|---|---|---|---|\n| Free | $0 | $0 | 25 | 100 | Auth + database included |\n| Starter | $16 | $20 | 100 | 2,000 | Unlimited apps, in-app code edits |\n| Builder | $40 | $50 | 250 | 10,000 | Custom domains, GitHub, backend functions |\n| Pro | $80 | $100 | 500 | 20,000 | Beta early access |\n| Elite | $160 | $200 | 1,200 | 50,000 | Max limits, premium support |\n\nThe pricing trap is runtime, not build time. A client app with 200 daily users can burn a Starter-tier 2,000 integration credits on AI calls and uploads alone - the fix is pricing client retainers against usage tiers, the same way hosting companies always have.\n\n## The Honest Cons\n\n- **The free tier is a demo, not a workspace.** Twenty-five messages end mid-project; plan on Starter the moment a build gets real.\n- **Lock-in is structural.** Apps live on Base44's infrastructure; GitHub export (Builder up) gives you source, not self-hosting. Migrations are rebuilds.\n- **Usage-based costs scale quietly.** Integration credits rise with your app's success while your plan price stays flat - monitor the meter as part of operating the app.\n- **The complexity ceiling is real.** Prompt-built apps tangle at multi-role permissions and long feature lists; serious products eventually need engineering.\n- **Wix direction risk.** The acquisition funds the roadmap - and could bend it toward Wix-site features over standalone builders.\n\n## vs The Field\n\n| | Base44 | Lovable | bolt.new |\n|---|---|---|---|\n| Model | Sentence to hosted full-stack app | Prompt to React app, supabase-backed | Full-stack dev environment in browser |\n| Free tier | 25 msgs + 100 integration credits | Daily message allowance | Limited daily tokens |\n| Paid entry | $16/mo (annual) | ~$25/mo | ~$20/mo |\n| Runtime cost model | Integration credits per usage | Included in tiers | Token consumption |\n| Code access | Edits from Starter, GitHub from Builder | GitHub sync mid-tier | Full code by default |\n| Distribution edge | Wix App Market + live Wix data | Design-forward community | Developer ecosystem |\n\nAgainst the site's reviews: lovable wins for polished consumer-facing products with real design demands; bolt.new wins for developers who want code first and hosting second; Base44 wins for operators and freelancers whose product is \"a working tool for a real business\" - especially when that business already runs on Wix. Durable and 10Web (also reviewed here) build marketing sites; Base44 builds software.\n\n## Bottom Line\n\nBase44 is the cheapest honest path from \"this business needs a small app\" to a URL that works - one sentence to full-stack, with the Wix acquisition adding a distribution channel its rivals cannot copy. The credit system is legible once you internalize the split: message credits are your building budget, integration credits are your operating budget, and client pricing should mirror both. The lock-in is real and the complexity ceiling exists, but for the micro-app and MVP tier where most side incomes actually live, $16/month for a hosted, login-ready product is the strongest cost-to-delivery ratio in the category. Start free, prove the idea in one sitting's worth of messages, then price the client work against the tiers."
+  },
+  {
+    "name": "Mercor",
+    "slug": "mercor",
+    "color": "#0B0B0F",
+    "description": "AI talent marketplace that pays professionals $40-$150+/hr to evaluate frontier-model output for AI labs. One AI interview scores your resume, then weekly Stripe payouts, no minimum, plus a 20% referral commission until a 4x-rate cap.",
+    "category": "AI Income",
+    "tags": [
+      {
+        "text": "AI Training Jobs"
+      },
+      {
+        "text": "Sell Expertise"
+      },
+      {
+        "text": "Weekly Payouts"
+      },
+      {
+        "text": "Remote Work"
+      }
+    ],
+    "rating": "4.4",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://mercor.com/",
+    "price": "Free to join · $40-$100/hr",
+    "pricing_details": "Joining Mercor is free - there is no signup fee, no subscription, and no commission taken from contractors (Mercor bills clients separately; payment processor terms apply on payout). Compensation is hourly or project-based, set per listing: generalist evaluation listings run roughly $40-$60/hr, the most common contractor band is $40-$75/hr, credentialed specialists (law, medicine, finance, senior engineering) commonly land $80-$150/hr, and rare expert panels (physicians, cybersecurity, elections experts) reach $200-$250/hr per independent tracking of open listings; Mercor's own site has cited a $108/hr average contracted rate. Payments process weekly - Stripe Connect payouts every Wednesday (or Wise in countries Stripe does not cover, e.g. Brazil, UAE, Nepal, Turkey) - with no minimum payout threshold. US contractors file W-9, international contractors W-8BEN. Hourly contracts are time-tracked via the Insightful desktop app (activity logging and screenshots). The referral program pays 20% of a referral's earnings until a cap of 4x their hourly rate (or a fixed cap on project work), paid twice weekly.",
+    "platform": "Web (mercor.com, work.mercor.com) + Insightful desktop tracker for hourly billing + Stripe/Wise payouts",
+    "published": true,
+    "pros": [
+      "The pay floor is real: generalist listings start around $40/hr and most accepted contractors land in the $40-$75/hr band, three to four times what annotation sites pay for similar evaluation work",
+      "Weekly payouts every Wednesday through Stripe or Wise with no minimum threshold - approved hours clear the following week, which is the fastest money cycle of any platform in this space",
+      "The referral program pays 20% of everything your referral earns until a cap (4x their hourly rate), and you can refer people without ever working on the platform yourself",
+      "One AI interview scores your profile and stays valid for roughly six months, generating instant offers by email without reapplying for every new listing",
+      "Contracts are with frontier labs and large enterprises doing model evaluation, red-teaming, and reference-answer writing - real work with verifiable client names, not filler tasks"
+    ],
+    "cons": [
+      "Most applicants get rejected - the AI interview drills into your resume specifics and vague answers fail; there is no human appeal and no feedback on why you were dropped",
+      "Work is feast-or-famine: engagements run 2-6 weeks at high intensity, then the queue goes silent for weeks; nobody should build rent around Mercor alone",
+      "Hourly contracts are tracked with the Insightful desktop app that logs activity and takes screenshots while you bill - you are watched minute by minute for every dollar",
+      "The pay week runs on India Standard Time, an odd detail that regularly surprises contractors calculating when their week closes",
+      "Many listings are restricted to US or US/Canada residence, and roughly a hundred countries cannot be onboarded at all per independent tracking"
+    ],
+    "features": [
+      "AI-led structured video interview (most reports: 15-30 minutes) that scores your resume against active listings and stays on your profile for about six months",
+      "Job board at work.mercor.com with roughly 50 live roles at any moment, from $40/hr generalist evaluators to $200+/hr specialist panels",
+      "Three work buckets: RLHF response evaluation for generalists, domain-expert review for credentialed professionals, and code/technical evaluation for engineers",
+      "Weekly Wednesday payouts via Stripe Connect or Wise, no minimum payout threshold, W-9 (US) or W-8BEN (international) handled at onboarding",
+      "Referral program: 20% of each referral's earnings until a cap of 4x their hourly rate, paid twice weekly (Wednesdays and Fridays, 12 PM PT)",
+      "Instant Offers system: email notifications with 24-48 hour response windows when a new listing matches your verified profile score"
+    ],
+    "faq": [
+      {
+        "question": "How much does Mercor actually pay per hour?",
+        "answer": "Realistic bands, cross-checked across contractor reports in 2026: generalist evaluation $15-$40/hr, the most common contractor band $40-$75/hr, credentialed specialists (law, medicine, finance, senior engineering) $80-$150/hr, and rare expert listings reaching $200-$250/hr. Mercor's own site has cited a $108/hr average contracted rate. The $200/hr roles go to verifiable senior credentials, not people who describe themselves as experts - plan around $50-$70/hr if you are a strong generalist."
+      },
+      {
+        "question": "Is Mercor legitimate and when does money arrive?",
+        "answer": "Yes - it is a San Francisco AI talent marketplace that raised venture funding at a multi-billion-dollar valuation and reports 30,000+ active contractors. Payments process weekly through Stripe (Wednesdays) or Wise depending on country, with no minimum payout threshold. Hourly work is time-tracked via the Insightful app with screenshots, which is invasive but also proof the billing system is real."
+      },
+      {
+        "question": "Can I use it alongside Outlier or other AI training platforms?",
+        "answer": "Yes, and you should. Nothing is exclusive - experienced contractors run Mercor, Outlier, and DataAnnotation simultaneously and let the platforms compete for their hours. Mercor pays the highest rates but has the most unpredictable supply; Outlier is easier to get into and steadier at lower rates. The practical stack is Outlier for baseline income while you wait for Mercor engagements to open."
+      }
+    ],
+    "content": "## What Mercor Actually Is\n\nMercor is a talent marketplace that sells your professional judgment to AI labs, and the part people miss is that it screens you once and keeps reselling that screening. You apply with a resume, a 15-30 minute AI interview scores how fluently you can discuss your actual work, and that score sits on your profile for about six months - generating instant offers whenever a client needs your niche. The clients are the labs and enterprises training frontier models, and the work is the expensive kind: comparing model outputs for correctness, writing reference answers a graduate student could not fake, red-teaming legal or medical reasoning chains.\n\nThe company started in 2023, raised at a multi-billion-dollar valuation, and reports 30,000+ active contractors. But the number that matters is on the listings: roughly 50 roles live at any moment at work.mercor.com, from $40/hr generalist panels to $200+/hr specialist work for physicians, M&A lawyers, and senior engineers.\n\n## The Money Angle\n\nThree separate ways this page pays, and most reviews only cover the first.\n\n**1. Hourly contracts.** The realistic band for a credentialed professional is $40-$75/hr, with specialists at $80-$150/hr and rare expert panels at $200-$250/hr. Mercor has cited a $108/hr average contracted rate. The pattern that decides your rate: specificity beats seniority. An \"Equity Research Expert\" listing pays $120/hr while a \"Finance Generalist\" listing pays $50 - often to the same person. Always apply to the narrowest listing your background honestly supports.\n\n**2. The referral program is the sleeper income.** You earn 20% of everything a referred person earns until they hit a cap of 4x their hourly rate. Payouts run twice weekly, and you do not need to work on Mercor yourself to refer. The platform's own math: one referral hired at $100/hr working 20 hours a week for two months is roughly $1,600 to the referrer. If you run a newsletter, a subreddit, or a professional Discord where AI training work is relevant, this is a 20% commission on other people's billable hours - better than most affiliate programs in any niche.\n\n**3. Stacking.** Mercor is not exclusive. Contractors who treat it as one leg of a three-platform stack (Mercor for high-rate spikes, plus steadier lower-rate platforms for baseline) report $2,000-$8,000/month when projects are active. The honest framing: Mercor is the highest-rate, least-steady leg, so it layers on top of a base, never replaces one.\n\n## What You Need to Get In\n\n| Gate | What it actually takes |\n|---|---|\n| Resume | Verifiable specifics - employers, publications, degrees. Vague bullets get drilled by the AI interview and fail |\n| AI interview | 15-30 minutes, probing projects on your resume; fluency with concrete detail is the pass bar |\n| Domain test | Some listings add a short exercise (code review, writing sample, math problem) - pass rates are high once you reach this step |\n| ID + paperwork | Identity check clears in days; W-9 for US contractors, W-8BEN for international |\n| Country | Many listings US or US/Canada only; roughly a hundred countries cannot onboard at all |\n\nRejection is silent - no feedback, no appeal, and reapplying before six months usually does not help. If the interview drops you, the fix is a sharper resume with named projects, not persistence.\n\n## What It Really Costs\n\nThere is no fee to join - anyone charging you for Mercor access is running a scam (fake WhatsApp and Telegram recruiting is common in this niche). The real costs are structural:\n\n- **Unpaid screening time**: resume tailoring plus the interview costs 1-2 hours you only get back if accepted\n- **Surveillance while billing**: hourly contracts run through the Insightful desktop app, which logs activity and takes screenshots - contractors who multitask get flagged\n- **The IST pay week**: the work week closes on India Standard Time, so your Friday hours may land in the wrong week if you bill late\n- **Idle periods**: feast-or-famine supply means your effective hourly across a quarter is lower than your billed hourly; a $100/hr rate that works 10 hours a month is $1,000\n\n## The Honest Cons\n\nThe rejection rate is the headline problem, and it is by design - Mercor's business is matching verified expertise, and their AI interview is tuned to catch people whose resume overclaims. The second problem is supply: engagements are intensive 2-6 week blocks followed by silent queues, and there is no human support worth the name when a project stalls. Third: the Insightful tracker means this is closer to supervised work than gig freedom. None of these are disqualifying if you go in with eyes open, but anyone promising passive income from AI training platforms is selling something.\n\n## Mercor vs The Field\n\n| | Mercor | [Outlier](/tools/outlier/) | DataAnnotation |\n|---|---|---|---|\n| Typical pay | $40-$75/hr common band | $15-$25/hr generalist | $20-$40/hr |\n| Specialist ceiling | $200-$250/hr | $30-$60/hr | $65/hr |\n| Acceptance | Selective, AI-interview gate | Broad | Moderate |\n| Work supply | Spiky 2-6 week blocks | Often 2-3 week dead queues | Steadier when active |\n| Payout | Weekly, Stripe/Wise, no minimum | Weekly, $10 minimum | Weekly, PayPal |\n| Best for | Credentialed pros maximizing rate | Beginners getting first paycheck | Strong writers wanting balance |\n\nThe practical answer is all three: apply to Mercor for the rate ceiling, keep an Outlier or DataAnnotation account for the weeks Mercor's queue is empty, and put the referral links from every platform into your content channels. For the full earning map beyond AI training work, see [the AI money tools guide](/articles/ai-tools-that-make-money-2026/) and [how to make money online with AI](/articles/how-to-use-ai-to-make-money-online-2026/).\n\n## Bottom Line\n\nMercor is the best-paying door into AI training work in 2026, and also the most selective one. If you have verifiable professional expertise - code you have shipped, clients you have served, credentials you can prove - the AI interview is a solvable exam and the rates are 3-5x the annotation average. If your background is thin, get your first paychecks on easier platforms, build a concrete resume, and come back in three months. And whoever you know doing this work, the 20% referral commission quietly outearns the hourly rate for a lot of people."
+  },
+  {
+    "name": "Exploding Topics",
+    "slug": "exploding-topics",
+    "color": "#1E1147",
+    "description": "Trend-discovery engine (Semrush-owned) scoring 1.1M+ rising topics, products, and startups with 12-month forecasts. Find demand 6-12 months early, then build the content, store, or report that monetizes it.",
+    "category": "Market Research",
+    "tags": [
+      {
+        "text": "Trend Discovery"
+      },
+      {
+        "text": "Market Research"
+      },
+      {
+        "text": "Product Research"
+      },
+      {
+        "text": "SEO"
+      }
+    ],
+    "rating": "4.5",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://explodingtopics.com/",
+    "price": "From $39/mo · 7-day trial",
+    "pricing_details": "Three paid tiers, all priced per month but billed annually, each with a 7-day free trial that converts automatically. Entrepreneur $39/mo: 100 tracked trends, 10 trend analyses/month, full Trends Database (1.1M+ trends), Trending Products, Meta Trends, Channel Breakdowns. Investor $99/mo: 500 tracked trends, 100 analyses/month, everything in Entrepreneur plus Trending Startups, Trend Forecasting, and CSV export. Business $249/mo: 2,000 tracked trends, 500 analyses/month, everything in Investor plus Trend Reports - and only Business subscribers can purchase the add-ons: Trends API ($1,000-$4,000/month depending on request volume) and TikTok Insights ($59/month). A free tier with no card required gives the public trending-topics directory, trending startups list, a website analytics directory, and free keyword/SEO tools. Owned by Semrush since August 2024; the Pro subscription is sold separately from Semrush plans. Figures per the official site (October 2026); prices can change.",
+    "platform": "Web app (explodingtopics.com/pro) + public directories + Trends API (Business tier) + weekly newsletter",
+    "published": true,
+    "pros": [
+      "Discovery-first: you browse 1.1M+ scored trends without knowing what to search for - Google Trends can only validate a topic you already thought of",
+      "The product and startup databases come with real commerce signals: monthly sales, price ranges, best-selling SKUs, funding rounds - not just search curves",
+      "Trend statuses (Exploding, Regular, Peaked) plus a 12-month machine forecast stop you from walking into a declining topic that only looks popular",
+      "The free tier is genuinely usable: public trending directory, startup list, a website analytics directory, and a stack of free keyword and SEO tools with no card required",
+      "Human analysts verify the top-scoring trends and filter out entertainment fads, which cuts the false-positive noise most scrapers deliver"
+    ],
+    "cons": [
+      "It tells you what is rising, not whether you can rank for it - search volume, keyword difficulty and SERP data still need Semrush or Ahrefs, billed separately",
+      "The caps bite fast: Entrepreneur tracks 100 trends with 10 analyses a month, and the product/startup databases that sellers actually want sit behind the $99 Investor tier",
+      "All three tiers bill annually, so the real entrance fee is $468 a year, not $39 - the $1.29/day framing hides that",
+      "The Trends API is a separate $1,000-$4,000/month add-on and only $249 Business subscribers can buy it, so programmatic access is effectively enterprise-only",
+      "No published false-positive rate; some flagged trends are newsletter hype that never converts into buyer demand"
+    ],
+    "features": [
+      "Trends Database: 1.1M+ searchable trends with growth scores, multi-year charts, and 1,000+ new entries added monthly",
+      "Trending Products: rising physical products with monthly sales estimates, price ranges, review scores, and best-selling SKUs",
+      "Trending Startups: early-growth companies with industry, headcount, funding round, and contact details (Investor tier and up)",
+      "Trend Forecasting: 12-month machine-learning projection labeling each trend growing, stationary, or declining",
+      "Meta Trends and Channel Breakdowns: clusters of related micro-trends, and where interest comes from - search, social, news, or commerce",
+      "Trends API and TikTok Insights add-ons for teams that need trend data piped into their own stack (Business tier required)"
+    ],
+    "faq": [
+      {
+        "question": "Is Exploding Topics worth $39/month, or is Google Trends enough?",
+        "answer": "They answer different questions. Google Trends tells you how a topic you already know about is performing; Exploding Topics surfaces topics you had not thought of, scored and forecast 12 months out. If your business depends on catching demand early - content sites, POD, dropshipping, product launches - the discovery layer earns its fee. If you only ever validate known keywords, stay free."
+      },
+      {
+        "question": "Which plan should an e-commerce seller actually buy?",
+        "answer": "Honestly: Investor at $99/mo. The Trending Products database is the reason sellers subscribe, and it is locked to the Investor tier, not the $39 Entrepreneur plan. Content-only users can stay on Entrepreneur; anyone needing CSV exports or the API is into Business ($249/mo) plus add-ons."
+      },
+      {
+        "question": "How do I turn a trend flag into actual money?",
+        "answer": "Treat the flag as step one of a pipeline: validate search volume and competition in a keyword tool, check whether products or content exist for it yet, then build for it early - a niche store on Etsy, a Printify design, a YouTube channel, or a content site monetized with display ads. The tool's own methodology is discovery, not execution; the money comes from what you build in the 6-12 month window before the trend goes mainstream."
+      }
+    ],
+    "content": "## What Exploding Topics Actually Is\n\nExploding Topics is a trend-discovery engine that reads millions of data points a day across search, social, forums, news, e-commerce, and podcasts, then scores which topics are climbing before they are obvious. Brian Dean (Backlinko) built it, Semrush bought it in 2024, and the database now holds 1.1M+ trends with roughly a thousand added each month. Every trend gets a status - Exploding, Regular, or Peaked - plus a 12-month forecast, which is the feature that separates it from free tools: Google Trends shows you the wave you already noticed, Exploding Topics hands you the wave six months before it breaks.\n\nThe platform runs three paid tiers - Entrepreneur $39/mo, Investor $99/mo, Business $249/mo, all billed annually with a 7-day trial - and every tier gates something you actually want, which is worth understanding before you pay.\n\n## The Money Angle\n\nThis is one of the few research tools where the output maps directly onto a monetization pipeline, and the people making real money with it run one of four plays:\n\n**1. Content sites that rank before competition exists.** Publish on a topic while it is still \"Exploding\" and you own the SERP when search volume arrives. That early traffic converts through display ads ([Google AdSense](/tools/google-adsense/)) or affiliate commissions ([Amazon Associates](/tools/amazon-associates/)). The catch flagged by every honest review: Exploding Topics gives you the topic, not the keyword difficulty - you validate volume and competition in Semrush or Ahrefs before writing.\n\n**2. Product businesses built on the Trending Products database.** The Investor tier ($99/mo) opens the door to rising physical products with monthly sales estimates, price bands, and best-selling SKUs. That is a sourcing brief for POD sellers ([Printify](/tools/printify/), [Etsy](/tools/etsy/)) and Amazon Merch designers ([amazon-merch-on-demand](/tools/amazon-merch-on-demand/)): design for the rising niche while the market is thin.\n\n**3. Selling the research itself.** Trend reports for a vertical - \"12 rising topics in home fitness, Q1 2026\" - are digital products that sell on [Gumroad](/tools/gumroad/) or become the backbone of a paid newsletter via [Substack](/tools/substack/). The Meta Trends reports give you the editorial framing for free.\n\n**4. Early-stage flipping.** Trending Startups data feeds people who buy and sell digital assets - a site or tool riding an early trend is worth multiples more on [Flippa](/tools/flippa/) before the trend is mainstream than after.\n\n## What It Really Costs\n\n| Plan | Price | Tracked trends | Analyses/mo | What it adds |\n|---|---|---|---|---|\n| Free | $0 | Public directory only | - | Trending topics list, startups list, free SEO tools, newsletter |\n| Entrepreneur | $39/mo (annual) | 100 | 10 | Full database, Trending Products, Meta Trends, channel breakdowns |\n| Investor | $99/mo (annual) | 500 | 100 | + Trending Startups, forecasting, CSV export |\n| Business | $249/mo (annual) | 2,000 | 500 | + Trend Reports; only tier eligible for API/TikTok add-ons |\n\nTwo pricing traps: every tier bills annually (Entrepreneur is $468/year, not $39), and the add-ons are brutal - the Trends API runs $1,000-$4,000/month and TikTok Insights adds $59/month, both restricted to Business subscribers. The startup and product databases are the reason most buyers subscribe, and they are not on the cheapest tier.\n\n## The Honest Cons\n\nDiscovery is not validation - the single most common regret in user reviews is paying $39, flagging ten trends, and having no idea which ones they can actually rank for or sell into. The caps push you up-tier quickly: 100 tracked trends fills fast if you work across niches, and 10 analyses a month is one working day's research for an agency. False positives exist and the company publishes no accuracy rate; some flagged \"trends\" are social chatter that never becomes buying intent. And because Semrush owns it, expect the product and pricing to keep moving - the Pro subscription is separate from a Semrush plan, so your keyword tool and your trend tool are two bills.\n\n## Exploding Topics vs The Field\n\n| | Exploding Topics | [SparkToro](/tools/sparktoro/) | [GummySearch](/tools/gummysearch/) | Google Trends |\n|---|---|---|---|---|\n| Core question | What is about to blow up? | Who is the audience? | What do Redditors complain about? | How did a known topic perform? |\n| Discovery | Proactive, 1.1M+ trends | Audience profiles | Reddit mining | None - reactive only |\n| Commerce data | Sales, SKUs, funding | Demographics, sources | Post engagement | None |\n| Price | $39-$249/mo annual | $450/yr (Personal) | From $49/mo | Free |\n| Best for | Content sites, product sellers | Marketers targeting niches | Community pain-point mining | Spot checks |\n\nThe tools stack rather than compete: Exploding Topics finds the wave, SparkToro profiles who rides it, GummySearch tells you what they complain about. For how researchers sequence these, see [the market research tools comparison](/articles/best-ai-market-research-tools-2026-gummysearch-vs-perplexity-vs-consensus-vs-chatgpt/).\n\n## Bottom Line\n\nExploding Topics is the closest thing to a legal crystal ball for demand, and the monetization paths are concrete: rank early, source early, or sell the research. Pay only when you have an execution plan - a site, a store, a channel - ready to move on what it flags. Buying discovery without execution is how people end up paying $468 a year to watch pretty charts. Start on the free directory for a month, confirm you will actually act on what you find, then buy Investor if products are your game."
+  },
+  {
+    "name": "Chatbase",
+    "slug": "chatbase",
+    "color": "#3B3663",
+    "description": "No-code AI support agents trained on your own docs, deployed across chat, WhatsApp, email, voice, and Slack. The classic agency play: a $40/mo subscription becomes a $150-500/month retainer per small-business client.",
+    "category": "AI Agents",
+    "tags": [
+      {
+        "text": "AI Chatbots"
+      },
+      {
+        "text": "Agency Reselling"
+      },
+      {
+        "text": "Customer Support"
+      },
+      {
+        "text": "No-code"
+      }
+    ],
+    "rating": "4.5",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://www.chatbase.co/",
+    "price": "Free · Paid from $40/mo",
+    "pricing_details": "Free $0: 50 message credits/month, 1 member, 1 MB training content, limited models - and AI agents are deleted after 14 days of inactivity. Hobby $40/mo: 700 credits, 2 members, 10 MB, advanced models, integrations, basic analytics, 5 AI Actions per agent. Standard $150/mo: 4,000 credits, 3 members, 20 MB, Helpdesk, voice/telephony, outbound campaigns, API access, personalization, auto-retrain, advanced integrations (Stripe, Zendesk, Salesforce, Shopify, and more). Pro $500/mo: 15,000 credits, 5 members, 40 MB, advanced analytics, sources suggestions, tickets-as-source, 12 AI Actions. Enterprise: custom committed-volume pricing with white-labeling, SSO, HIPAA eligibility, audit logs, and a dedicated success manager. Yearly billing saves 20%. Add-ons: auto-recharge credits $40/1,000 (non-expiring), extra agents $25/agent/month, branding removal $99/month, extra storage $25 per 10 MB/month. Compliance: SOC 2 Type II, GDPR; customer data is never used to train models. Figures per chatbase.co/pricing (November 2026); prices can change.",
+    "platform": "Web app + embeddable widget, WhatsApp, Slack, Messenger, Instagram, email, voice/phone; API and Zapier/Twilio integrations",
+    "published": true,
+    "pros": [
+      "Train an agent on your client's website, PDFs, and help docs in minutes, then deploy it across website chat, WhatsApp, email, Slack, Instagram, and phone - one build, every channel their customers use",
+      "The reseller math works: a $40 Hobby subscription covers a support bot you can bill a local business $150-$500/month for, with SOC 2 Type II and GDPR compliance on even the cheap plans",
+      "Model-agnostic - pick between OpenAI, Anthropic, Gemini, DeepSeek, Meta, and Mistral families per agent instead of betting the whole workspace on one provider",
+      "Actions, Procedures, and a built-in Helpdesk with ticketing and human handoff mean the agent can actually do things (order lookups, refunds) and escalate cleanly with the full transcript attached",
+      "Customer data is never used to train models on any plan, which closes the #1 objection SMB owners raise when you pitch them an AI agent"
+    ],
+    "cons": [
+      "Message credits are the whole business model: Hobby's 700 credits/month sounds fine until a chatty month burns it, and the auto-recharge add-on bills $40 per 1,000 extra credits",
+      "The free plan deletes your agents after 14 days of inactivity - fine for demos, useless as a portfolio of client bots you check monthly",
+      "Removing 'Powered by Chatbase' costs $99/month on top of your plan, which stings when white-labeling is exactly what agencies need; full white-labeling waits for Enterprise",
+      "Seat limits are tight (1/2/3/5 members by tier) while competitors sell unlimited seats - an agency team of four pays Pro rates",
+      "Voice and telephony, outbound campaigns, and API access all start at the $150 Standard tier, so the $40 Hobby plan is really a one-bot widget plan"
+    ],
+    "features": [
+      "Train on websites, documents, PDFs, Notion, and other business sources - 1 MB (Free) up to 40 MB per agent (Pro)",
+      "Deploy across website widget, email, voice/phone, WhatsApp, Slack, Messenger, and Instagram from one agent",
+      "Actions and Procedures: order lookups, refunds, booking flows, and multi-step workflows beyond answering questions (5-12 AI Actions per agent depending on tier)",
+      "Built-in Helpdesk with ticketing, assignment, custom statuses, routing, and human takeover with AI summaries",
+      "Integrations: Stripe, Zendesk, Salesforce, Intercom, HubSpot, Shopify, Zapier, Twilio, Calendly, and more (Standard tier and up)",
+      "Auto-recharge credits ($40/1,000), extra agents ($25/month each), branding removal ($99/month), and extra storage ($25/10 MB/month) as add-ons"
+    ],
+    "faq": [
+      {
+        "question": "How do people actually make money with Chatbase?",
+        "answer": "The dominant play is agency reselling: subscribe at Hobby ($40/mo), build a support agent trained on a local business's docs, and charge $150-$500/month for setup plus a retainer. Five clients at $200 covers your Standard plan ($150) and nets roughly $850/month. The second play is product-led: a support bot for your own Shopify store that deflects tickets you would otherwise pay a VA to answer. White-label reselling at scale needs Enterprise."
+      },
+      {
+        "question": "What happens when a client's bot exceeds its message credits?",
+        "answer": "Your subscription credits run out and service stops or degrades unless auto-recharge is on, which adds non-expiring credits at $40 per 1,000. Serious resellers put auto-recharge on and price client contracts above their worst-case credit burn - support volume is seasonal (holidays spike it), and eating a surprise $120 recharge bill is how reseller margins die."
+      },
+      {
+        "question": "Chatbase vs Voiceflow or Botpress - which should an agency pick?",
+        "answer": "Chatbase is the fastest to ship: paste a website, get a working agent the same afternoon. Voiceflow is stronger for complex conversation design with teams and client review flows; Botpress is more flexible for developers but slower to deliver. If your clients are SMBs that need 'a bot that answers questions from our docs,' Chatbase wins on time-to-invoice. For deeper comparisons see our chatbot builder breakdown."
+      }
+    ],
+    "content": "## What Chatbase Actually Is\n\nChatbase is a no-code platform for building AI support agents trained on a business's own material - paste a website URL, upload the PDFs, connect Notion, and you have a bot that answers customer questions in that company's voice. Founded by Yasser Elsaid, it now serves 10,000+ businesses, runs SOC 2 Type II and GDPR compliance on every plan, and deploys the same agent across website chat, WhatsApp, email, Slack, Instagram, and phone. Under the hood it is model-agnostic: each agent can run on OpenAI, Anthropic, Gemini, DeepSeek, Meta, or Mistral models, so you are never locked to one provider's pricing or quality.\n\nBut the reason this page sits in the money-tools row of this site is not the widget - it is the spread between what Chatbase costs and what a working AI support agent is worth to a small business.\n\n## The Money Angle\n\n**The reseller spread is the headline.** A local business - HVAC, dental, law, e-commerce - loses money every time a customer question goes unanswered at 9pm. They will pay $150-$500/month for a competent AI agent that answers from their own docs, handles order lookups, and hands off to a human with full context. Your cost to deliver that: a $40/mo Hobby subscription, an afternoon of setup, and the discipline to keep the training data fresh. Five clients on a $150 Standard plan nets roughly $850/month; ten clients put you past $2,000. The workflow that works: niche down (dental clinics, Shopify stores), build one polished template, and sell setup + monthly maintenance rather than one-off builds - [Contra](/tools/contra/) or [Fiverr](/tools/fiverr/) can carry the first clients, then referrals take over.\n\n**Own-product angle.** If you run a store or SaaS, the same $40 buys a support bot that deflects most ticket volume. One avoided VA shift pays the subscription several times over - and the built-in Helpdesk means the tickets the bot cannot handle route to a human queue with AI summaries attached.\n\n**The portfolio trap to avoid.** The free plan deletes agents after 14 days of inactivity, so never host client bots on Free - and budget the $99/month branding removal only when a client contract justifies it.\n\n## What It Really Costs\n\n| Plan | Price | Credits/mo | Seats | What it adds |\n|---|---|---|---|---|\n| Free | $0 | 50 | 1 | Demo bots only - agents deleted after 14 days idle |\n| Hobby | $40/mo | 700 | 2 | Advanced models, integrations, basic analytics |\n| Standard | $150/mo | 4,000 | 3 | Helpdesk, voice, outbound campaigns, API, Stripe/Zendesk integrations |\n| Pro | $500/mo | 15,000 | 5 | Advanced analytics, sources suggestions, tickets-as-source, 12 AI Actions |\n| Enterprise | Custom | Committed volume | Flexible | White-label, SSO, HIPAA, audit logs, dedicated CSM |\n\nYearly billing takes 20% off every self-serve plan. The add-on sheet is where budgets slip: $40 per 1,000 recharge credits, $25/month per extra agent, $99/month to remove Chatbase branding, $25/10 MB extra storage. Resellers should model credit burn per client before quoting a retainer - a busy month without auto-recharge is how a $160-margin client becomes a loss.\n\n## The Honest Cons\n\nThe credit model means your cost scales with your clients' success - a viral product launch for your client is your invoice. Seat counts are stingy next to competitors that sell unlimited seats, and the $99 branding removal on a $40 plan is a 250% markup for exactly the feature agencies want most. Voice, API, and the Helpdesk all live on Standard or above, so the Hobby tier is genuinely a one-bot plan. And Chatbase is now a full customer-support platform, not a hobby widget builder - if your project is a simple FAQ bot for a blog, the pricing page will feel like paying for a helpdesk you do not use.\n\n## Chatbase vs The Field\n\n| | Chatbase | [Voiceflow](/tools/voiceflow/) | [Coze](/tools/coze/) | [Intercom Fin](/tools/intercom/) |\n|---|---|---|---|---|\n| Core use | Doc-trained support agents | Complex conversation design | General agent building | Enterprise support resolution |\n| Starting price | $40/mo | Free tier, paid from ~$60/mo | Generous free tier | Per-resolution pricing |\n| Reseller fit | Strong (SOC 2, quick setup) | Strong (agency workflows) | Weaker (consumer roots) | Weak (expensive per-ticket) |\n| Channels | Web, WhatsApp, email, voice, Slack, IG | Web, voice | Web, messaging apps | Web, email, in-app |\n| Time to first invoice | One afternoon | Days | Hours | Enterprise sales cycle |\n\nChatbase wins the \"ship this week, invoice this month\" lane. For the full builder-by-builder breakdown, see [our chatbot platform comparison](/articles/best-ai-chatbot-builders-2026-chatbase-vs-voiceflow-vs-botpress-vs-coze/), and for voice-specific builds, [the voice agent platforms comparison](/articles/ai-voice-agent-platforms-2026-retell-vs-vapi-vs-bland-vs-synthflow/) covering [Vapi](/tools/vapi/) and [Retell AI](/tools/retell-ai/).\n\n## Bottom Line\n\nChatbase is the shortest path from \"I know AI tools\" to \"I invoice businesses monthly for AI agents.\" The platform is competent, the compliance box is ticked, and the reseller spread is real - but price your retainers against credit burn, put auto-recharge on before the holidays, and treat the $99 branding fee as a client-billable line item. Start with one niche, one template, one client at $200/month, and scale what works."
+  },
+  {
+    "name": "Browse AI",
+    "slug": "browse-ai",
+    "color": "#172554",
+    "description": "No-code web scraping and monitoring: record a robot once and it extracts data or watches a page forever, feeding Google Sheets and alerting on changes. The backbone of monitoring retainers and lead-gen services sold to businesses.",
+    "category": "AI Automation",
+    "tags": [
+      {
+        "text": "Web Scraping"
+      },
+      {
+        "text": "Monitoring"
+      },
+      {
+        "text": "Lead Generation"
+      },
+      {
+        "text": "No-code"
+      }
+    ],
+    "rating": "4.5",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://www.browse.ai/",
+    "price": "Free · From $19/mo annual",
+    "pricing_details": "Free $0: 50 credits/month, 2 domains, 3 users, unlimited robots, full platform access (REST API, webhooks, residential proxies), no card required. Personal $19/mo billed annually ($228 upfront, 12,000 credits/year; $38/mo tier doubles credits to 24,000/year) - monthly billing is $48/mo for 2,000 credits; 5 domains, 3 users, 60-day refund guarantee. Professional $69/mo annual ($828 upfront, 60,000 credits/year, scalable to 360,000 credits at $319/mo); monthly billing $87/mo for 5,000 credits; 10 domains, 10 users, priority support, robot setup services from $399. Premium managed data service from $500/month billed annually with a 98% data-accuracy SLA and dedicated account manager. Credit economics: 1 credit = 10 rows of data, 1 standard page, or 1 screenshot (whichever is larger); premium sites (Amazon, eBay) cost 2-10 credits/run; monitoring frequency multiplies burn (50 detail pages checked every 3 days = ~500 credits/month); credits do not roll over; top-ups $0.013-$0.024/credit (1,000 minimum, annual plans only); extra domains $2.40-$4/month. SOC 2 Type II, GDPR, CCPA. Figures per browse.ai/pricing (November 2026); prices change often - confirm on the vendor site.",
+    "platform": "Web app + Chrome extension (robot recording) + Google Sheets/Airtable/Zapier/Make/webhooks/REST API/S3 outputs",
+    "published": true,
+    "pros": [
+      "Point-and-click robot training: record yourself once on a webpage and the robot repeats the extraction forever, adapting when the site changes - most users ship their first automation in about 5 minutes",
+      "Every plan, including the free one, carries the full platform: unlimited robots, REST API, webhooks, bulk runs, residential proxies, and Google Sheets/Airtable/Zapier sync",
+      "250+ prebuilt robots for common targets - LinkedIn people, Amazon products, Google Maps listings, job boards - so many jobs need zero setup",
+      "Monitoring turns scraping into a recurring service: set a robot on a competitor's pricing page or a directory and get alerts the moment anything changes",
+      "SOC 2 Type II, GDPR, and CCPA compliance, which matters the moment you resell data services to business clients"
+    ],
+    "cons": [
+      "Monitoring is a credit treadmill: the vendor's own example - 50 product pages checked every 3 days - burns roughly 500 credits a month, and credits do not roll over",
+      "Annual billing means all credits upfront ($228 or $828 in one card hit), and monthly billing costs 2.5x more per credit ($48 for 2,000 credits vs $19 for 12,000 a year)",
+      "Domain caps (2 free, 5 Personal, 10 Professional) quietly force upgrades for multi-client work, and premium sites like Amazon cost 2-10 credits per run",
+      "The free tier's 50 credits is a demo, not production - one list page with detail-page follow-ups can consume it in a single run",
+      "Very high-volume extraction is cheaper on self-managed infrastructure; Browse AI's own Premium managed tier starts at $500/month for a reason"
+    ],
+    "features": [
+      "Table Studio and Robot Studio: AI-built tables from a URL, or point-and-click recording via the Chrome extension for custom extraction",
+      "Deep scraping: chain robots so one follows links captured by another and pulls detail pages behind a list",
+      "Monitoring with change detection and alerts - from hourly (free) down to minutes (paid tiers), with self-healing selectors when layouts shift",
+      "250+ prebuilt robots plus bulk runs up to 500,000 pages, anti-bot and CAPTCHA handling built in",
+      "Output anywhere: Google Sheets, Airtable, Excel/CSV/JSON, webhooks, REST API, Amazon S3, Zapier, Make, Pabbly",
+      "Formula columns, residential proxies included, screenshots (1 credit each), and a 60-day refund guarantee on paid plans"
+    ],
+    "faq": [
+      {
+        "question": "How much does Browse AI really cost per month for a monitoring job?",
+        "answer": "Do the credit math before subscribing. One credit covers 10 rows, one standard page, or one screenshot - whichever is larger. A competitor price monitor over 20 pages checked daily is roughly 600 credits/month, which fits Personal ($19/mo annual, 12,000 credits/year). A 100-product catalog with detail pages checked daily is 3,000+ credits/month and needs Professional ($69/mo annual). The trap is frequency: halving the check interval doubles the bill."
+      },
+      {
+        "question": "How do people make money with it?",
+        "answer": "Three proven plays: (1) sell monitoring retainers - local businesses and e-commerce sellers pay $100-$500/month for competitor price and listing alerts that cost you $19-$69 in credits; (2) lead generation - scrape directories and marketplaces into Google Sheets, clean them, and feed outreach tools like Apollo or Instantly; (3) arbitrage alerts - robots watching eBay, Facebook Marketplace, and retail clearance pages flag underpriced items for resellers within minutes of posting."
+      },
+      {
+        "question": "Browse AI vs Apify - which should I pick?",
+        "answer": "Browse AI for point-and-click speed and monitoring retainers where a business user maintains the robots; Apify for developer-grade actors, huge volumes, and its marketplace. If you cannot write code and your deliverable is 'a live spreadsheet that updates itself,' Browse AI wins on time. For a deeper breakdown see our web scraping tools comparison."
+      }
+    ],
+    "content": "## What Browse AI Actually Is\n\nBrowse AI trains little cloud robots to do the most boring job on the internet: revisit a webpage forever and copy the changing parts into a spreadsheet. You install a Chrome extension, click through the data you want - a pricing table, a directory of leads, a product listing - and the robot replays your clicks on a schedule, handling pagination, login walls, and layout changes on its own. When the site redesigns, the self-healing selectors adapt instead of silently breaking like a hand-written scraper.\n\nThe company (founded 2020 in Canada, public since 2021) claims 770,000+ users, runs SOC 2 Type II and GDPR compliance, and ships 250+ prebuilt robots for popular targets. But the interesting shift since 2024 is that Browse AI now sells monitoring as much as extraction - and monitoring is where the money is.\n\n## The Money Angle\n\n**1. Monitoring retainers, the quiet agency product.** E-commerce sellers, real estate agents, and recruiters all have the same need: tell me the moment a competitor changes a price, a listing appears, or a job gets posted. A Browse AI robot does that for $19-$69/month in credits; businesses pay $100-$500/month for the alert service with a clean report. The robot does the work, you own the client relationship - the same reseller spread as any agency product, with near-zero marginal cost per added client. Client intake through [Contra](/tools/contra/) or [Fiverr](/tools/fiverr/) gets the first contracts going.\n\n**2. Lead lists from public directories.** Robots scrape Google Maps, LinkedIn, and industry directories into Google Sheets, formula columns clean the data, and the output feeds outreach platforms - [Apollo](/tools/apollo/), [Instantly AI](/tools/instantly-ai/), [Clay](/tools/clay/). Selling verified, niche-specific lead lists (or charging per campaign) is the oldest data business on the internet; Browse AI makes the supply side a weekend project instead of an engineering one.\n\n**3. Arbitrage alerts for resellers.** Robots watching eBay, Facebook Marketplace, and clearance pages flag underpriced items minutes after posting - the edge that separates professional resellers from casual ones. Pair the alerts with selling the finds on [Etsy](/tools/etsy/) or your own store channel.\n\n**4. Your own content and SEO ops.** Track SERP positions, competitor content calendars, and price drops that become article fodder - feeding sites monetized with [Google AdSense](/tools/google-adsense/) or affiliate links via [Amazon Associates](/tools/amazon-associates/).\n\n## What It Really Costs\n\n| Plan | Annual price | Credits | Domains | Users |\n|---|---|---|---|---|\n| Free | $0 | 50/month | 2 | 3 |\n| Personal | $19/mo ($228/yr upfront) | 12,000/year | 5 | 3 |\n| Professional | $69/mo ($828/yr upfront) | 60,000/year | 10 | 10 |\n| Premium | from $500/mo (annual contract) | custom, ~$0.01/credit | custom | custom |\n\nMonthly billing exists but costs roughly 2.5x per credit (Personal: $48/mo for 2,000 credits vs 12,000/year on annual). Credit math: 1 credit = 10 rows OR 1 standard page OR 1 screenshot, whichever is larger; a 50-item list page costs 5 credits, following each item's detail page costs 50 more. Premium sites (Amazon, eBay) cost 2-10 credits per run. Extra domains run $2.40-$4/month, credit top-ups $0.013-$0.024 each with a 1,000 minimum, and credits never roll over. Paid plans carry a 60-day refund guarantee, and the Professional tier offers done-for-you robot setup from $399.\n\n## The Honest Cons\n\nThe credit system punishes the exact thing the product is best at. Monitoring is the killer feature and also the treadmill: the vendor's own FAQ example - 50 detail pages checked every 3 days - consumes about 500 credits a month, and doubling frequency doubles the burn. Credits not rolling over means an unused December is money gone. Domain caps push multi-client agencies up-tier faster than the pricing page suggests, and the annual-first pricing means testing Browse AI properly costs $228, not $19. Serious volume (millions of rows) belongs on Apify or self-managed infrastructure, not a per-credit SaaS. None of this is hidden - the dashboard shows every run's cost before it executes - but budget from your real monitoring frequency, not the tier minimums.\n\n## Browse AI vs The Field\n\n| | Browse AI | [Apify](/tools/apify/) | [Bardeen](/tools/bardeen/) |\n|---|---|---|---|\n| Core user | Non-technical operators | Developers, data teams | Browser users automating tabs |\n| Setup | Point-and-click recording | Code or actor templates | Browser extension workflows |\n| Monitoring | First-class, alert-driven | Possible, more setup | Real-time, in-browser |\n| Pricing model | Credits by plan | Actor compute units | Free tier + paid plans |\n| Best money play | Monitoring retainers, lead lists | Selling scrapers on the actor store | Personal workflow automation |\n\nIf you can code, Apify is more flexible and its marketplace lets you sell scrapers directly. If your deliverable is \"a live spreadsheet that updates itself\" for a business client, Browse AI ships in an afternoon. The full field - Octoparse, ScrapingBee and more - is in [our web scraping tools comparison](/articles/best-ai-web-scraping-tools-2026-browse-ai-vs-octoparse-vs-apify-vs-scrapingbee/).\n\n## Bottom Line\n\nBrowse AI is the fastest route from \"I can use a browser\" to \"I sell live web data as a service.\" The robots are genuinely no-code, the monitoring alerts are the product clients actually renew, and the credit math is predictable once you budget from real check frequencies. Start on Free with one real job, confirm the data quality your client needs, then buy the annual Personal tier only when a paying retainer is attached to it."
+  },
+  {
+    "name": "Pinterest",
+    "slug": "pinterest",
+    "color": "#E60023",
+    "description": "Visual search engine with 640M monthly users and the lowest monetization gate in creator media: free business account, affiliate links allowed from day one, no follower minimum, and pins that keep earning for months.",
+    "category": "AI Income",
+    "tags": [
+      {
+        "text": "Affiliate Marketing"
+      },
+      {
+        "text": "Visual Search"
+      },
+      {
+        "text": "Free Traffic"
+      },
+      {
+        "text": "Digital Products"
+      }
+    ],
+    "rating": "4.3",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "url": "https://www.pinterest.com/",
+    "price": "Free to post · paid via affiliates",
+    "pricing_details": "A Pinterest business account is free, with no paid tier required to access creator tools, Pin stats, the paid partnership label, or affiliate links. Pinterest itself pays creators nothing - the Creator Rewards program was shut down November 30, 2022, and the platform states it does not facilitate payments for monetization programs. All income flows through external channels: affiliate commissions set by merchants (Amazon Associates 1-10%, LTK 5-20%, ShareASale 5-30%, Impact 10-50%, finance offers $50-$300 per signup), brand partnership fees negotiated directly with brands, product tag sales, or revenue from your own site (ads, email, products). Affiliate policy: one authentic account, original value-adding pins, transparent disclosure (#ad / #affiliate), no bulk or repetitive posting, no fake accounts or traded saves, no deceptive redirects. AI-generated images are auto-labeled 'AI modified' and may lose reach in categories where users opt out of AI content. Figures per Pinterest creator pages and Q2 2026 earnings reports (October 2026).",
+    "platform": "Web + iOS/Android apps (Creator Hub mobile-only) + Pin stats analytics + paid partnership label tool",
+    "published": true,
+    "pros": [
+      "Zero follower threshold: a brand-new business account can pin affiliate links from day one - no 1,000-subscriber gate, no watch-hour audit, no eligibility paperwork",
+      "Pins behave like search results, not feed posts - a good pin keeps sending outbound clicks for months or years, while a TikTok dies in 48 hours",
+      "Four official monetization routes (affiliate links, product tags, brand partnerships, traffic to your own site) are documented by Pinterest itself, with affiliate links explicitly allowed since 2017",
+      "640 million monthly users (Q2 2026, an all-time high and 11 straight quarters of double-digit growth) with buyer intent - people arrive planning purchases, weddings, and room makeovers",
+      "High-intent niches pay properly: personal-finance pins earn $50-$300 per credit-card signup, and home/fashion pins route to $500+ shopping carts"
+    ],
+    "cons": [
+      "Pinterest pays you nothing directly - Creator Rewards shut down November 2022, and anyone promising per-view income is describing a program that no longer exists",
+      "Affiliate income is 100% dependent on external programs (Amazon, LTK, ShareASale) whose rates and approval criteria can change without warning",
+      "AI-generated pin images get an 'AI modified' label from Pinterest's classifiers, and users who opt out of AI content in some categories will never see them - original photos and real screenshots outperform",
+      "Bulk-pinning affiliate content is explicitly banned; spam accounts get limited or suspended, and the line between 'consistent' and 'repetitive' is judged by their algorithms",
+      "Traffic quality depends on your landing page - direct affiliate pins convert worse than pins routed through a helpful blog post or comparison page"
+    ],
+    "features": [
+      "Free business account with Pin stats: saves, impressions, pin clicks, and outbound clicks tracked per pin - the data you need to see which pins earn",
+      "Affiliate links on any pin: paste a tracked affiliate URL as the destination link on any image or video pin",
+      "Product tagging with product stickers for shoppable pins, connected by keyword search or product link",
+      "Paid partnership label tool: tag a brand partner in the app (brand must approve; label cannot be added after publishing)",
+      "One unified pin format since the 2023 Idea Pins merge - every pin, including video, can carry a destination link",
+      "Creator Hub (mobile app) with learning resources, plus paid promotion options when you want to push winners"
+    ],
+    "faq": [
+      {
+        "question": "Does Pinterest pay you directly for views?",
+        "answer": "No. Pinterest shut down its Creator Rewards program on November 30, 2022, and its current creator pages list four ways to earn - affiliate links, product tags, brand partnerships, and traffic to your own site - with no platform payouts and no published earnings figures. Every dollar comes from an affiliate program, a brand deal, or what you sell on the other side of the click."
+      },
+      {
+        "question": "Can I use affiliate links without a website?",
+        "answer": "Yes - direct affiliate pins have been allowed since 2017 and need no blog. Join a program first (Amazon Associates is the easiest approval; LTK dominates fashion and home), paste the tracked link as the pin's destination, and disclose it with #ad or #affiliate in the description. The honest trade-off: direct pins launch fast but convert worse than pins pointing to a helpful blog post, and a blog captures emails and ad revenue on top of commissions."
+      },
+      {
+        "question": "How long before Pinterest money actually arrives?",
+        "answer": "Third-party income tracking of affiliate pinners puts realistic months 0-3 at $0-$200/month, months 3-6 at $200-$2,000, and only year-one-plus accounts at $5,000-$30,000. Pins compound - each one keeps working for months - but volume matters early: successful operators pin daily (mostly original value-adding content, minority affiliate) for 3-6 months before commissions look like income."
+      }
+    ],
+    "content": "## What Pinterest Actually Is\n\nPinterest is a visual search engine wearing a social network's clothes, and the distinction decides where the money is. Users do not scroll a feed of friends; they search \"small kitchen ideas\" or \"capsule wardrobe,\" save pins to boards, and click out to buy things. In Q2 2026 the platform hit 640 million monthly users - an all-time high, its eleventh straight quarter of double-digit growth - and the people arrive with purchase intent instead of boredom.\n\nFor creators, the deal is blunt: Pinterest pays nothing directly. Creator Rewards died in November 2022. What remains are four official routes - affiliate links on pins, product tags, brand partnerships, and outbound traffic to your own site - and unlike YouTube or TikTok, there is no follower gate in front of any of them. A new business account can pin affiliate links today.\n\n## The Money Angle\n\n**1. Direct affiliate pins, the zero-website start.** Join an affiliate program (Amazon Associates, LTK, ShareASale, Impact - rates run 1-50% depending on niche), paste the tracked link as the pin's destination, disclose with #affiliate, done. Finance pins earn $50-$300 per approved signup; home and fashion pins route shoppers into $500+ carts. The constraint is the policy: original pins only, no bulk spam, one authentic account. For the program rundown, see [Amazon Associates](/tools/amazon-associates/).\n\n**2. The blog funnel, the durable version.** The highest-earning operators route pins to their own articles - a \"10 best espresso machines under $200\" pin clicks through to a comparison post carrying affiliate links, display ads ([Google AdSense](/tools/google-adsense/)), and an email capture. The pin earns twice: once on click, once when the article converts. Pinterest traffic to blogs is the classic solo-media business model, and pins keep feeding it for months.\n\n**3. Sell your own products.** Printable planners, wall art, templates - pins route to [Etsy](/tools/etsy/) or [Gumroad](/tools/gumroad/) listings. Design-heavy niches (wedding invites, budget spreadsheets, wall calendars) are native Pinterest demand, and AI design tools like [Canva](/tools/canva-ai/) make producing pin-plus-product pairs fast. POD sellers on [Printify](/tools/printify/) use the same route.\n\n**4. Brand partnerships and pin management.** The paid-partnership label tool lets brands sponsor your pins (they approve the tag; payment is arranged directly - Pinterest stays out of the money flow). And a quieter service business: small brands pay $500-$1,500/month for someone to run their Pinterest presence - scheduling, keyword research, fresh pins. Every skill you build monetizing your own account is a retainer you can sell to a client.\n\n## What It Really Costs\n\nEverything above runs on a free business account. The real costs are time and constraints:\n\n- **Volume discipline**: winning operators pin daily for months before commissions matter; expect $0-$200/month in the first quarter per third-party income tracking, not the screenshots on sales pages\n- **The AI label**: Pinterest auto-detects AI-generated images and labels them \"AI modified,\" and users can suppress AI pins in some categories - original photos, screenshots, and heavily human-edited designs keep reach\n- **The spam line**: bulk-posting affiliate pins, fake accounts, or traded saves get accounts limited; the workable rhythm most guides converge on is 20-50% affiliate pins within a broader original-content mix\n- **External dependency**: your commission rates live on Amazon's or LTK's terms, not Pinterest's - the 2017 history of Amazon cutting commission rates overnight is the standing warning\n\n## The Honest Cons\n\nPinterest is the slowest-pay platform in the creator stack and simultaneously the one with the longest asset life. A pin is not a post - it is a search listing that works for years - but the first three months of pinning pay roughly nothing, and creators used to TikTok's fast feedback quit before the compounding starts. There is no platform safety net: no creator fund, no payout floor, nothing if your affiliate program cuts rates. And the 2026 AI-label reality means the \"generate 100 pins with Midjourney\" playbook now carries a reach penalty. The account that wins is boring: one niche, daily original pins, honest disclosure, a landing page that captures the click.\n\n## Pinterest vs The Field\n\n| | Pinterest | [TikTok](/tools/tiktok/) | [YouTube](/tools/youtube/) | [X Creator Rewards](/tools/x-creator-rewards/) |\n|---|---|---|---|---|\n| Platform pays you | No | Yes (~$0.40-$1.00/1k views) | Yes (55% ad share) | Yes (per qualified view) |\n| Entry gate | None | 10k followers + 100k views | 1k subs + 4,000 hrs | 500 premium followers + 500k impressions |\n| Content lifespan | Months to years | ~48 hours | Years (search) | Hours to days |\n| Buyer intent | Highest | Low | Medium | Low |\n| Affiliate links | Officially allowed | Restricted | Allowed | Discouraged |\n\nThe honest read: Pinterest trades platform payouts for the lowest entry gate and the longest content lifespan in the industry. For the full earning map, see [the AI money tools guide](/articles/ai-tools-that-make-money-2026/) and [how to make money online with AI](/articles/how-to-use-ai-to-make-money-online-2026/).\n\n## Bottom Line\n\nPinterest is the best zero-audience entry point in creator monetization: free account, affiliate links allowed from pin one, buyer-intent traffic, and pins that keep working after you stop. It is also the platform that pays latest - budget three to six months of daily pinning before commissions matter, keep images original to dodge the AI label, and route traffic to something you own (a blog, an Etsy shop, an email list) so every click builds an asset instead of renting one."
   }
 ]
