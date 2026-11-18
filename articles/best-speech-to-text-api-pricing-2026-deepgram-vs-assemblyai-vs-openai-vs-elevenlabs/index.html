@@ -21,7 +21,7 @@
     <meta name="twitter:title" content="Speech-to-Text API Pricing in 2026: Deepgram vs AssemblyAI vs OpenAI vs ElevenLabs Compared - AI Tool Lab">
     <meta name="twitter:description" content="Deepgram, AssemblyAI, OpenAI and ElevenLabs rate cards, worked bills from 10 to 10,000 hours, and the session-time and credit traps behind the real bill.">
     <meta name="twitter:image" content="https://www.aitoolbox.hk/images/og/best-speech-to-text-api-pricing-2026-deepgram-vs-assemblyai-vs-openai-vs-elevenlabs-en-og.png">
-    <link rel="stylesheet" href="/css/style.css?v=20261118082215">
+    <link rel="stylesheet" href="/css/style.css?v=20261118084855">
     <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -154,7 +154,7 @@
 
 <table><thead><tr><th>Provider and model</th><th>Pre-recorded</th><th>Streaming</th><th>What the meter runs on</th><th>Free tier</th></tr></thead><tbody><tr><td>AssemblyAI Universal-2</td><td>$0.15/hr</td><td>$0.15/hr (Universal-Streaming)</td><td>seconds of audio (batch) / session duration (streaming)</td><td>185 hrs batch + 333 hrs streaming</td></tr><tr><td>AssemblyAI STT-3.7</td><td>$0.21/hr</td><td>$0.30/hr ($0.45 agent tier)</td><td>audio duration / session duration</td><td>same pool</td></tr><tr><td>Deepgram Nova-3 (promo rates)</td><td>$0.252/hr</td><td>$0.288/hr</td><td>every second, no block rounding</td><td>$200 credit, no expiry</td></tr><tr><td>OpenAI gpt-4o-mini-transcribe</td><td>$0.18/hr</td><td>$1.02/hr (live models)</td><td>per-minute estimate on token billing</td><td>none for transcription</td></tr><tr><td>OpenAI gpt-4o-transcribe-diarize</td><td>$0.36/hr</td><td>—</td><td>per-minute estimate</td><td>none</td></tr><tr><td>ElevenLabs Scribe v3 / v3 Live</td><td>$0.20/hr</td><td>$0.22/hr</td><td>every second of audio sent, silence included</td><td>~12 min/mo on the Free plan</td></tr></tbody></table>
 
-<p>If you want the consumer side of this market — meeting note-takers with apps and per-seat pricing — that is a different product with a different price curve, covered in the <a href="/articles/best-ai-transcription-tools-2026-fireflies-vs-otter-vs-krisp-vs-fathom-vs-tldv">transcription tools roundup</a>. Everything below is the raw developer API.
+<p>If you want the consumer side of this market — meeting note-takers with apps and per-seat pricing — that is a different product with a different price curve, covered in the <a href="/articles/best-ai-transcription-tools-2026-fireflies-vs-otter-vs-krisp-vs-fathom-vs-tldv/">transcription tools roundup</a>. Everything below is the raw developer API.
 </p>
 
 <h2 id="deepgram-pricing-per-second-meters-and-a-200-head-start">Deepgram Pricing: Per-Second Meters and a $200 Head Start</h2>
@@ -162,7 +162,7 @@
 <p>Deepgram's card, as published on November 18, 2026, runs promo rates: Nova-3 monolingual transcribes pre-recorded audio at $0.0042 per minute (marked "was $0.0065") and streams at $0.0048 per minute (was $0.0077). Multilingual Nova-3 sits at $0.0050 pre-recorded and $0.0058 streaming. Flux, the streaming model built for voice agents, runs $0.0065 per minute in English and $0.0078 multilingual. Converted to hours: $0.252 pre-recorded, $0.288 streaming, $0.39 on Flux.
 </p>
 
-<p>Deepgram Nova-3 pricing therefore lands between OpenAI's two mid-tier transcribers — cheaper per hour than gpt-transcribe ($0.27), dearer than gpt-4o-mini-transcribe ($0.18) — with two things no rival matches. First, billing runs per second with no block rounding, so a 14-second clip bills as 14 seconds. Second, the free tier is a $200 credit with no expiry and no card required; Deepgram's own FAQ estimates that at roughly 43,000 minutes, over 700 hours, of Nova-3 transcription. That is the largest dollar-value free tier of the four. The <a href="/tools/deepgram">Deepgram tool page</a> carries the snapshot.
+<p>Deepgram Nova-3 pricing therefore lands between OpenAI's two mid-tier transcribers — cheaper per hour than gpt-transcribe ($0.27), dearer than gpt-4o-mini-transcribe ($0.18) — with two things no rival matches. First, billing runs per second with no block rounding, so a 14-second clip bills as 14 seconds. Second, the free tier is a $200 credit with no expiry and no card required; Deepgram's own FAQ estimates that at roughly 43,000 minutes, over 700 hours, of Nova-3 transcription. That is the largest dollar-value free tier of the four. The <a href="/tools/deepgram/">Deepgram tool page</a> carries the snapshot.
 </p>
 
 <p>Note: Deepgram's FAQ page still states that monolingual streaming costs "$0.46 an hour" — which matches the pre-promo $0.0077/min rate, not the $0.288 the rate table shows. Assume the table; if the promo expires, legacy rates return.
@@ -210,7 +210,7 @@
 <p>Add-ons: keyterm prompting costs +$0.05/hr, transcript editing +$0.07/hr. Silence is not discounted — the docs state billing covers "every second of audio you send, including pauses and silent stretches."
 </p>
 
-<p>The trap is the credit system. Inside the ElevenLabs app, speech-to-text consumes 330 credits per minute — about 19,800 per hour — drawn from the same pool as voices, music, and dubbing. The plan table confirms the arithmetic: Starter's 30k credits buy 1 hour 31 minutes of transcription, Creator's 121k buy 6 hours 7 minutes, Pro's 600k buy 30 hours 18 minutes. Per hour, Creator works out to roughly $3.60, Pro to $3.27 — 16 to 18 times the API rate. ElevenLabs Scribe pricing through the API meter is a sharp deal; through the credit pool it is the most expensive transcription on this page. The <a href="/tools/elevenlabs">ElevenLabs tool page</a> links both surfaces.
+<p>The trap is the credit system. Inside the ElevenLabs app, speech-to-text consumes 330 credits per minute — about 19,800 per hour — drawn from the same pool as voices, music, and dubbing. The plan table confirms the arithmetic: Starter's 30k credits buy 1 hour 31 minutes of transcription, Creator's 121k buy 6 hours 7 minutes, Pro's 600k buy 30 hours 18 minutes. Per hour, Creator works out to roughly $3.60, Pro to $3.27 — 16 to 18 times the API rate. ElevenLabs Scribe pricing through the API meter is a sharp deal; through the credit pool it is the most expensive transcription on this page. The <a href="/tools/elevenlabs/">ElevenLabs tool page</a> links both surfaces.
 </p>
 
 <p>The Free plan includes 10k credits, which the plan table meters as about 12 minutes of transcription a month — enough to test accuracy, not to ship on. Enterprise contracts add EU, India, and Singapore data residency and a HIPAA BAA.
@@ -239,7 +239,7 @@
 <p>Add-ons stack harder in streaming, too. A realistic AssemblyAI voice-agent configuration — STT-3.7-Realtime with diarization (+$0.12) and Voice Focus (+$0.10) — lands at $0.52 per session hour, 73% above its own $0.30 base and two and a half times the batch flagship rate. Deepgram's diarization adds the same +$0.12/hr on its streaming surface.
 </p>
 
-<p>There is a third path: single-meter voice stacks. AssemblyAI's Voice Agent API bills a flat $4.50/hr for STT, a managed LLM, and TTS in one WebSocket; Deepgram sells the same bundle per minute of connection, cheaper if you bring your own model or voice. Whether the bundle beats wiring three vendors yourself depends on how much of the session the model and the voice spend talking — the LLM half of that stack is priced in the <a href="/articles/best-llm-inference-pricing-2026-groq-vs-together-vs-fireworks-vs-replicate">LLM inference pricing breakdown</a>, and the platform-level tradeoffs are compared in the <a href="/articles/best-ai-voice-agents-2026-vapi-vs-retell-vs-bland-vs-twilio">voice agent platforms roundup</a>. At $4.50/hr you are paying a visible premium for one meter instead of three; for many teams that is still the right call.
+<p>There is a third path: single-meter voice stacks. AssemblyAI's Voice Agent API bills a flat $4.50/hr for STT, a managed LLM, and TTS in one WebSocket; Deepgram sells the same bundle per minute of connection, cheaper if you bring your own model or voice. Whether the bundle beats wiring three vendors yourself depends on how much of the session the model and the voice spend talking — the LLM half of that stack is priced in the <a href="/articles/best-llm-inference-pricing-2026-groq-vs-together-vs-fireworks-vs-replicate/">LLM inference pricing breakdown</a>, and the platform-level tradeoffs are compared in the <a href="/articles/best-ai-voice-agents-2026-vapi-vs-retell-vs-bland-vs-twilio/">voice agent platforms roundup</a>. At $4.50/hr you are paying a visible premium for one meter instead of three; for many teams that is still the right call.
 </p>
 
 <h2 id="free-tiers-and-the-cheapest-start">Free Tiers and the Cheapest Start</h2>

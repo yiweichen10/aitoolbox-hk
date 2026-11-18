@@ -50,6 +50,17 @@ def _load_slugs():
     return tool_slugs, art_slugs
 
 
+# 2026-11-18 治本：链接不只在 content 里，还藏在结构化字段（faq[].answer、
+# pros/cons/features 列表、pricing_details）——pika 的 2 处裸 slug 就在 faq 里，
+# 旧校验只查 content，漏网。这里定义哪些字段承载正文文本、需要校验。
+TOOL_TEXT_FIELDS = ("content", "pricing_details")
+ARTICLE_TEXT_FIELDS = ("content", "description")
+# 递归跳过的纯值字段（永不包含链接）
+SKIP_KEYS = {"url", "slug", "name", "color", "visits", "badge", "price",
+             "date", "dateFull", "keywords", "aeo_geo_updated", "verified_price",
+             "last_verified", "platform", "category", "title"}
+
+
 def _page_exists(kind, slug):
     """Check the built page exists on disk (stronger than slug-in-json)."""
     p = BASE_DIR / kind / slug / "index.html"
@@ -72,6 +83,10 @@ def validate_text(text, tool_slugs=None, art_slugs=None):
             continue
         first = parts[0]
         if first in SECTIONS:
+            # 内部栏目链接强制尾斜杠（CF Pages 会 308，但统一格式利于一致性抓取）
+            if first in ("tools", "articles", "category") and not href.endswith("/"):
+                errs.append({"kind": "format", "href": href, "label": label,
+                             "reason": "internal link missing trailing slash"})
             # known section: validate target for tools/articles/category
             if first == "tools" and len(parts) >= 2:
                 slug = parts[1]
@@ -120,19 +135,48 @@ def validate_text(text, tool_slugs=None, art_slugs=None):
     return errs
 
 
+def _iter_text_fields(obj, path="", skip_top=None):
+    """Yield (path, text) for every string that may carry prose links."""
+    if skip_top and path == "":
+        for k in skip_top:
+            if k in obj:
+                obj = {key: v for key, v in obj.items() if key != k}
+    if isinstance(obj, str):
+        yield path, obj
+    elif isinstance(obj, list):
+        for i, v in enumerate(obj):
+            yield from _iter_text_fields(v, f"{path}[{i}]")
+    elif isinstance(obj, dict):
+        for k, v in obj.items():
+            if k in SKIP_KEYS:
+                continue
+            yield from _iter_text_fields(v, f"{path}.{k}" if path else k)
+
+
 def validate_all(tool_slugs=None, art_slugs=None):
-    """Validate whole catalog. Returns (error_count, sample_errors)."""
+    """Validate the WHOLE catalog: content + every structured text field.
+
+    2026-11-18: 递归覆盖 faq/pros/cons/features/pricing_details 等所有可能
+    携带正文的字段（pika faq 裸 slug 教训），并强制内部链接带尾斜杠。
+    Returns (error_count, [(owner, err), ...]).
+    """
     if tool_slugs is None or art_slugs is None:
         tool_slugs, art_slugs = _load_slugs()
     all_errs = []
     tools = json.load(open(TOOLS_FILE, encoding="utf-8"))
     arts = json.load(open(ARTICLES_FILE, encoding="utf-8"))
     for t in tools:
-        for e in validate_text(t.get("content", ""), tool_slugs, art_slugs):
-            all_errs.append(("tool:" + t["slug"], e))
+        for path, text in _iter_text_fields(t):
+            for e in validate_text(text, tool_slugs, art_slugs):
+                e = dict(e)
+                e["field"] = path
+                all_errs.append(("tool:" + t["slug"], e))
     for a in arts:
-        for e in validate_text(a.get("content", ""), tool_slugs, art_slugs):
-            all_errs.append(("article:" + a["slug"], e))
+        for path, text in _iter_text_fields(a):
+            for e in validate_text(text, tool_slugs, art_slugs):
+                e = dict(e)
+                e["field"] = path
+                all_errs.append(("article:" + a["slug"], e))
     return len(all_errs), all_errs
 
 

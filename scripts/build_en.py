@@ -22,6 +22,13 @@ SITE_DOMAIN_CN = "https://www.aitoollab.cn"
 SITE_LOGO    = f"{SITE_DOMAIN}/images/logo.png"
 CSS_VERSION  = f"v={datetime.now().strftime('%Y%m%d%H%M%S')}"  # cache busting (with seconds)
 
+# ─── Article category pages (2026-11-18 治本 421 处面包屑 404) ────────────────
+# 文章分类达到该数量才生成 /category/<slug>/ 页面；不足的面包屑降级纯文本。
+MIN_ARTICLES_FOR_CATEGORY_PAGE = 3
+# build_all_en 开头预计算（工具分类 ∪ 达标文章分类）；模块级默认空集保证
+# 单测/导入安全。
+ARTICLE_CATEGORY_PAGES = set()
+
 # ─── Affiliate links ──────────────────────────────────────────────────────────
 # Load affiliate_links.json from the Chinese site's data directory (shared file)
 _AFFILIATE_LINKS = {}
@@ -960,6 +967,15 @@ def build_article_page_en(article: dict, all_articles: list, all_tools: list = N
     cat_slug = get_category_slug_en(cat)
     date_str = article.get('date','')
 
+    # 2026-11-18: 面包屑/kicker 的分类链接只在分类页真实存在时输出（"有才互链"）。
+    # ARTICLE_CATEGORY_PAGES 由 build_all_en 在生成任何页面之前预计算
+    # （工具分类 ∪ 文章数>=阈值的文章分类）；小分类降级为纯文本，消灭 404。
+    linkable = cat_slug in ARTICLE_CATEGORY_PAGES
+    cat_crumbs = (f'<a href="/category/{cat_slug}/">{escape_html(cat)}</a>' if linkable
+                  else f'<span>{escape_html(cat)}</span>')
+    cat_kicker = (f'<a class="article-kicker" href="/category/{cat_slug}/">{escape_html(cat)}</a>'
+                  if linkable else f'<span class="article-kicker">{escape_html(cat)}</span>')
+
     # Parse date to ISO for schema
     article_date = article.get('dateFull', article.get('date', datetime.now().strftime('%Y-%m-%d')))
 
@@ -1001,12 +1017,18 @@ def build_article_page_en(article: dict, all_articles: list, all_tools: list = N
         </div>'''
 
     # Structured data
+    # 分类页不存在时，面包屑第2项不给 URL（Schema 允许 name-only 的 ListItem），
+    # 避免 JSON-LD 声明 404 目标。
+    if linkable:
+        cat_li = {"@type":"ListItem","position":2,"name":cat,"item":f"{SITE_DOMAIN}/category/{cat_slug}/"}
+    else:
+        cat_li = {"@type":"ListItem","position":2,"name":cat}
     breadcrumb_data = {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         "itemListElement": [
             {"@type":"ListItem","position":1,"name":"Home","item":f"{SITE_DOMAIN}/"},
-            {"@type":"ListItem","position":2,"name":cat,"item":f"{SITE_DOMAIN}/category/{cat_slug}/"},
+            cat_li,
             {"@type":"ListItem","position":3,"name":title,"item":f"{SITE_DOMAIN}/articles/{slug}/"},
         ]
     }
@@ -1196,12 +1218,12 @@ def build_article_page_en(article: dict, all_articles: list, all_tools: list = N
 {header_html()}
 
     <nav class="breadcrumb" aria-label="Breadcrumb">
-        <a href="/">Home</a> &gt; <a href="/category/{cat_slug}/">{escape_html(cat)}</a> &gt; <span>{escape_html(title)[:30]}...</span>
+        <a href="/">Home</a> &gt; {cat_crumbs} &gt; <span>{escape_html(title)[:30]}...</span>
     </nav>
 
     <main class="article-container article-container-wide">
         <header class="article-header">
-            <a class="article-kicker" href="/category/{cat_slug}/">{escape_html(cat)}</a>
+            {cat_kicker}
             <h1 class="article-title">{escape_html(title)}</h1>
             <div class="article-meta-row">
                 <span>{date_str}</span>
@@ -1446,6 +1468,78 @@ def _nice_date(value: str) -> str:
         return value
 
 
+def build_article_category_page_en(cat_name: str, cat_articles: list) -> str:
+    """Article-type category page (Home > <Category> > N guides).
+
+    2026-11-18 治本：文章的 category 值（AI Infrastructure / AI Photo / AI Tools 等）
+    历史上从未生成过页面，文章页面包屑与 kicker 链接 404 达 421 处。
+    为文章数 >= MIN_ARTICLES_FOR_CATEGORY_PAGE 的分类生成真实导航页；
+    小于阈值的分类在面包屑中降级为纯文本（见 build_article_page_en）。
+    """
+    cat_slug = get_category_slug_en(cat_name)
+    n = len(cat_articles)
+    hreflang = hreflang_tags(f'/category/{cat_slug}/', f'/category/{cat_slug}/')
+    cards = ''
+    for a in cat_articles:
+        url = f'/articles/{a["slug"]}/'
+        raw_date = a.get('date', '')
+        read_min = max(1, (len(a.get('content', '').split()) + 219) // 220)
+        cards += f'''<article class="al-card">
+            <a class="al-card-link" href="{url}">
+                <div class="al-top">
+                    <span class="al-chip">{escape_html(a.get('category',''))}</span>
+                    <time class="al-date" datetime="{raw_date}">{_nice_date(raw_date)}</time>
+                </div>
+                <h2 class="al-title">{escape_html(a['title'])}</h2>
+                <p class="al-summary">{escape_html(a.get('description',''))}</p>
+                <div class="al-foot">
+                    <span class="al-read">{read_min} min read</span>
+                    <span class="al-arrow" aria-hidden="true">&rarr;</span>
+                </div>
+            </a>
+        </article>\n'''
+
+    breadcrumb = f'''{"{"}"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+        {{"@type": "ListItem", "position": 1, "name": "Home", "item": "{SITE_DOMAIN}/"}},
+        {{"@type": "ListItem", "position": 2, "name": "{escape_html(cat_name)}", "item": "{SITE_DOMAIN}/category/{cat_slug}/"}}
+    ]{"}"}'''
+    return f'''<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{escape_html(cat_name)} Guides & Reviews 2026 - {SITE_NAME}</title>
+    <meta name="description" content="All {n} in-depth {escape_html(cat_name)} guides and reviews on {SITE_NAME}: hands-on testing, pricing analysis and verdicts, updated as the market changes.">
+    <link rel="canonical" href="{SITE_DOMAIN}/category/{cat_slug}/">
+{hreflang}    <link rel="stylesheet" href="/css/style.css?{CSS_VERSION}">
+    <script type="application/ld+json">{breadcrumb}</script>
+    <script type="application/ld+json">{{
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "{escape_html(cat_name)} guides",
+        "url": "{SITE_DOMAIN}/category/{cat_slug}/",
+        "mainEntity": {{"@type": "ItemList", "numberOfItems": {n}}}
+    }}</script>
+</head>
+<body>
+{header_html()}
+
+    <main class="article-list-container">
+        <nav class="crumbs" aria-label="Breadcrumb">
+            <a href="/">Home</a> &gt; <span>{escape_html(cat_name)}</span>
+        </nav>
+        <h1 class="page-title">{escape_html(cat_name)}</h1>
+        <p class="page-sub">{n} in-depth guides and reviews, all based on paid long-term testing.</p>
+        <div class="articles-list">
+{cards}        </div>
+    </main>
+
+{footer_html()}
+</body>
+</html>'''
+
+
 def build_article_list_en(articles: list, current_page: int = 1, total_pages: int = 1) -> str:
     cards = ''
     for a in articles:
@@ -1619,6 +1713,32 @@ def build_category_index_en(tools_by_cat: dict) -> str:
                       f'<span class="cat-mini-meta">{n} tool{"s" if n != 1 else ""}</span>'
                       f'</a>\n')
 
+    # ── Guides by topic (2026-11-18): entry links to article category pages ──
+    # 文章分类页此前从未生成也无入口；本区块让面包屑目标页可达（有才互链）。
+    guides_block = ''
+    try:
+        from collections import Counter as _C
+        _arts = json.load(open(os.path.join(BASE_DIR, 'data', 'articles_en.json'), encoding='utf-8'))
+        _cnt = _C(a.get('category','') for a in _arts if a.get('category'))
+        _qualifying = sorted(
+            [(c, n, get_category_slug_en(c)) for c, n in _cnt.items()
+             if n >= MIN_ARTICLES_FOR_CATEGORY_PAGE
+             and get_category_slug_en(c) not in {get_category_slug_en(c2) for c2, _ in tools_by_cat.items()}],
+            key=lambda x: -x[1])
+        if _qualifying:
+            _items = ''.join(
+                f'<a class="cat-mini" href="/category/{s}/" title="{escape_html(c)} guides">'
+                f'<span class="cat-mini-name">{escape_html(c)}</span>'
+                f'<span class="cat-mini-meta">{n} guide{"s" if n != 1 else ""}</span>'
+                f'</a>\n' for c, n, s in _qualifying)
+            guides_block = ('<section class="cat-section" aria-label="Guides by topic">'
+                            '<h2>Guides by topic</h2>'
+                            '<p class="cat-intro">Topic hubs for our in-depth articles — pricing analyses, comparisons and step-by-step workflows.</p>'
+                            f'<div class="cat-mini-grid">{_items}</div>'
+                            '</section>')
+    except Exception:
+        guides_block = ''
+
     # ── FAQ: plain-text answers, rendered + FAQPage schema (GEO core) ──
     top5_txt = ', '.join(f"{data['display']} ({len(data['tools'])})" for _, data in cats[:5])
     all_cats_txt = ', '.join(data['display'] for _, data in cats)
@@ -1736,6 +1856,8 @@ def build_category_index_en(tools_by_cat: dict) -> str:
 {table_rows}                </tbody>
             </table></div>
         </section>
+
+{guides_block}
 
         <section class="cat-section" id="faq">
             <h2>Questions about AI tool categories</h2>
@@ -3104,6 +3226,25 @@ def build_all_en(target: str = 'all'):
         if cat:
             tools_by_cat.setdefault(cat, []).append(t)
 
+    # 2026-11-18: article-category page plan (single source of truth for
+    # "which /category/<slug>/ pages will exist after this build").
+    global ARTICLE_CATEGORY_PAGES
+    art_cats = {}
+    for a in articles:
+        c = a.get('category','')
+        if c:
+            art_cats.setdefault(c, []).append(a)
+    ARTICLE_CATEGORY_PAGES = {
+        get_category_slug_en(c) for c, lst in art_cats.items()
+        if len(lst) >= MIN_ARTICLES_FOR_CATEGORY_PAGE
+    }
+    tool_cat_slugs = {get_category_slug_en(c) for c in tools_by_cat}
+    ARTICLE_CATEGORY_PAGES |= tool_cat_slugs
+    _article_cats_map = {
+        get_category_slug_en(c): (c, lst) for c, lst in art_cats.items()
+        if len(lst) >= MIN_ARTICLES_FOR_CATEGORY_PAGE
+    }
+
     # ── Category pages ────────────────────────────────────────────────────────
     if target in ('all', 'index', 'tools'):
         for cat_name, tools_in_cat in tools_by_cat.items():
@@ -3122,6 +3263,19 @@ def build_all_en(target: str = 'all'):
         with open(os.path.join(dir_path, 'index.html'), 'w', encoding='utf-8') as f:
             f.write(html)
         print(f'[OK] en/category/index.html')
+
+    # ── Article category pages (2026-11-18: fix 421 breadcrumb 404s) ─────────
+    # Generated for article categories with >= MIN_ARTICLES_FOR_CATEGORY_PAGE
+    # articles. Slugs never collide with tool categories (union is precomputed
+    # above); both are listed on the category hub and in the sitemap.
+    if target in ('all', 'articles'):
+        for cat_slug_, (cat_name_, lst_) in sorted(_article_cats_map.items()):
+            dir_path = os.path.join(OUT_DIR, 'category', cat_slug_)
+            os.makedirs(dir_path, exist_ok=True)
+            html = build_article_category_page_en(cat_name_, lst_)
+            with open(os.path.join(dir_path, 'index.html'), 'w', encoding='utf-8') as f:
+                f.write(html)
+            print(f'[OK] en/category/{cat_slug_}/index.html (article guides, {len(lst_)})')
 
     # ── Tool pages ────────────────────────────────────────────────────────────
     if target in ('all', 'tools'):
@@ -3286,6 +3440,8 @@ def build_all_en(target: str = 'all'):
     all_urls += [f"{SITE_DOMAIN}/tools/{t['slug']}/" for t in published_tools]
     all_urls += [f"{SITE_DOMAIN}/articles/{a['slug']}/" for a in articles]
     all_urls += [f"{SITE_DOMAIN}/category/{get_category_slug_en(c)}/" for c in tools_by_cat]
+    all_urls += [f"{SITE_DOMAIN}/category/{s}/" for s in sorted(ARTICLE_CATEGORY_PAGES)
+                 if s not in {get_category_slug_en(c) for c in tools_by_cat}]
     all_urls += [f"{SITE_DOMAIN}/alternatives/{s}/" for s in alt_slugs]
     all_urls += vs_urls
 
