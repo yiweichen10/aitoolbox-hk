@@ -19,7 +19,7 @@
 - [Category Overview](https://www.aitoolbox.hk/category/): all 22 category pages with a quick-reference table
 - [Search](https://www.aitoolbox.hk/search/): instant search across all tools and articles
 - [Submit a tool](https://www.aitoolbox.hk/submit.html): free submissions, editor-tested before review; rankings cannot be bought
-- [Articles](https://www.aitoolbox.hk/articles/): original hands-on reviews, comparisons and guides (227 articles)
+- [Articles](https://www.aitoolbox.hk/articles/): original hands-on reviews, comparisons and guides (228 articles)
 
 ## Important Tool Pages (top 5 by rating per category, 266 tools total)
 
@@ -171,9 +171,10 @@
 ### AI API (1)
 - [OpenRouter](https://www.aitoolbox.hk/tools/open-router/): Unified API gateway that gives you access to 200+ AI models through a single endpoint. Monetization angle…
 
-## Important Article Pages (227 total, latest 16 by date)
+## Important Article Pages (228 total, latest 16 by date)
 
 - [Speech-to-Text API Pricing in 2026: Deepgram vs AssemblyAI vs OpenAI vs ElevenLabs Compared](https://www.aitoolbox.hk/articles/best-speech-to-text-api-pricing-2026-deepgram-vs-assemblyai-vs-openai-vs-elevenlabs/)
+- [AI Tool Free Tier Report 2026: What Free Actually Gets You](https://www.aitoolbox.hk/articles/ai-tool-free-tier-report-2026/)
 - [LLM Inference Pricing in 2026: Groq vs Together AI vs Fireworks vs Replicate Compared](https://www.aitoolbox.hk/articles/best-llm-inference-pricing-2026-groq-vs-together-vs-fireworks-vs-replicate/)
 - [AI Tool Pricing Index 2026: What 261 Tools Actually Cost](https://www.aitoolbox.hk/articles/ai-tool-pricing-index-2026/)
 - [How to Use AI at Work in 2026: A Step-by-Step Daily Workflow](https://www.aitoolbox.hk/articles/how-to-use-ai-at-work-2026/)
@@ -188,12 +189,11 @@
 - [Heroku Alternatives in 2026: Railway vs Render vs Fly.io Pricing Compared](https://www.aitoolbox.hk/articles/heroku-alternatives-2026-railway-vs-render-vs-flyio-pricing-compared/)
 - [Best Serverless Postgres Hosting in 2026: Neon vs Supabase vs PlanetScale vs Amazon RDS](https://www.aitoolbox.hk/articles/best-serverless-postgres-hosting-2026-neon-vs-supabase-vs-planetscale-vs-amazon-rds/)
 - [Best VPS Hosting in 2026: Hetzner vs DigitalOcean vs Vultr vs Linode](https://www.aitoolbox.hk/articles/best-vps-hosting-2026-hetzner-vs-digitalocean-vs-vultr-vs-linode/)
-- [Spacelift vs env0 vs Scalr vs Atlantis: Terraform Management Pricing in 2026](https://www.aitoolbox.hk/articles/best-terraform-automation-platforms-2026-spacelift-vs-env0-vs-scalr-vs-atlantis/)
 
 ## Update Frequency
 
 - Tool database: updated daily (266 tools listed)
-- Articles: new original reviews published regularly (227 total)
+- Articles: new original reviews published regularly (228 total)
 - Ratings/pricing: recalibrated continuously
 
 ## Sitemap
