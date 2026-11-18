@@ -1686,7 +1686,7 @@
     "slug": "dify",
     "color": "#155EEF",
     "description": "Open-source LLM app development platform with visual orchestration and RAG pipeline support.",
-    "category": "AI Dev",
+    "category": "AI Development",
     "tags": [
       {
         "text": "AI Dev"
@@ -1751,7 +1751,7 @@
     "slug": "zapier-ai",
     "color": "#FF4F00",
     "description": "The leading automation platform now featuring AI to build workflows, process data, and create persistent AI agents.",
-    "category": "Automation",
+    "category": "AI Automation",
     "tags": [
       {
         "text": "Automation"
@@ -1881,7 +1881,7 @@
     "slug": "opus-clip",
     "color": "#6366f1",
     "description": "AI-powered video repurposing tool that turns long-form videos into viral short-form clips for TikTok, Reels, and YouTube Shorts.",
-    "category": "Video AI",
+    "category": "AI Video",
     "tags": [
       {
         "text": "Video Clipping"
@@ -1947,7 +1947,7 @@
     "slug": "descript",
     "color": "#d97706",
     "description": "All-in-one video and podcast editor that lets you edit media by editing text, featuring AI voice cloning and studio-quality audio enhancement.",
-    "category": "Video AI",
+    "category": "AI Video",
     "tags": [
       {
         "text": "Text-based Editing"
@@ -2013,7 +2013,7 @@
     "slug": "capcut-ai",
     "color": "#000000",
     "description": "Powerful, easy-to-use video editor from ByteDance featuring AI-driven auto-captions, background removal, and a massive library of social media templates.",
-    "category": "Video AI",
+    "category": "AI Video",
     "tags": [
       {
         "text": "Social Media"
@@ -2212,7 +2212,7 @@
     "slug": "quillbot",
     "color": "#059669",
     "description": "The industry-leading AI paraphrasing and writing assistant. Features multiple rewriting modes, a summarizer, grammar checker, and citation generator to help writers refine their prose.",
-    "category": "Writing",
+    "category": "AI Writing",
     "tags": [
       {
         "text": "Writing"
@@ -2278,7 +2278,7 @@
     "slug": "writesonic",
     "color": "#ff4d4d",
     "description": "An all-in-one AI writing platform with Chatsonic for real-time web search and Botsonic for custom AI chatbots.",
-    "category": "Writing",
+    "category": "AI Writing",
     "tags": [
       {
         "text": "Writing"
@@ -2344,7 +2344,7 @@
     "slug": "remove.bg",
     "color": "#00a8ff",
     "description": "The industry standard for automatic background removal using AI, offering high precision for complex edges.",
-    "category": "Image",
+    "category": "AI Image",
     "tags": [
       {
         "text": "Image"
@@ -2410,7 +2410,7 @@
     "slug": "otter.ai",
     "color": "#6c5ce7",
     "description": "AI-powered meeting assistant that provides real-time transcription, automated summaries, and speaker identification.",
-    "category": "Productivity",
+    "category": "AI Productivity",
     "tags": [
       {
         "text": "Productivity"
@@ -4443,7 +4443,7 @@
     "slug": "lark-suite",
     "color": "#007AFF",
     "description": "Lark is an all-in-one productivity suite that replaces Slack, Google Workspace, and Notion. It features Bitable, a powerful no-code database perfect for building CRM and affiliate management systems for free.",
-    "category": "Productivity",
+    "category": "AI Productivity",
     "tags": [
       {
         "text": "Productivity"
@@ -4501,7 +4501,7 @@
     "slug": "beehiiv",
     "color": "#000000",
     "description": "Beehiiv is a growth-focused newsletter platform that combines advanced SEO, a native ad network, and a recommendation engine to help creators scale and monetize their audience faster.",
-    "category": "Marketing",
+    "category": "AI Marketing",
     "tags": [
       {
         "text": "Newsletter"
@@ -4681,7 +4681,7 @@
     "slug": "surfer-seo",
     "color": "#fb4b4e",
     "description": "Surfer SEO is the data-driven content optimization tool that analyzes top-ranking pages to tell you exactly how to write your content to rank on Google. In 2026, it features advanced NLP and GEO scoring for the AI era.",
-    "category": "SEO",
+    "category": "AI SEO",
     "tags": [
       {
         "text": "SEO"
@@ -4741,7 +4741,7 @@
     "slug": "stockimg-ai",
     "color": "#1c1c1c",
     "description": "StockImg AI is a specialized tool for generating high-quality commercial assets including stock photos, illustrations, logos, and UI designs. Unlike general generators, it focuses on high-utility outputs ready for marketing and business use.",
-    "category": "AI Images",
+    "category": "AI Image",
     "tags": [
       {
         "text": "AI Images"
@@ -8468,7 +8468,7 @@
     "slug": "webflow-ai",
     "color": "#146EF5",
     "description": "Webflow is a visual website builder that lets you design and launch sites without writing code. Their AI assistant — built directly into the editor — generates page layouts, writes copy, audits SEO, and suggests design improvements from natural language prompts. If you build websites for money, this is the tool that turns a 40-hour client project into a 15-hour one.",
-    "category": "AI Web Design",
+    "category": "AI Website Builder",
     "tags": [
       {
         "text": "No-Code Builder"

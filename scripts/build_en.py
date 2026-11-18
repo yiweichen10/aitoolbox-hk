@@ -1264,7 +1264,11 @@ def build_article_page_en(article: dict, all_articles: list, all_tools: list = N
 
 # ─── Category page ────────────────────────────────────────────────────────────
 
-def build_category_page_en(cat_name: str, tools: list) -> str:
+def build_category_page_en(cat_name: str, tools: list, cat_articles: list = None) -> str:
+    """工具分类页。2026-11-18 修复覆盖 bug：文章分类 slug 与工具分类冲突时
+    （ai-image/ai-video/ai-development 等 10 个），本页被文章列表页整体覆盖、
+    工具网格丢失。现在冲突时在同一页合并渲染：工具网格 + 指南文章区块，
+    两类内容都有入口，不再相互覆盖。"""
     cat_slug = get_category_slug_en(cat_name)
     # Client-side filter/sort — bucket each card once at build time
     type_counts = {'free': 0, 'freemium': 0, 'paid': 0}
@@ -1292,6 +1296,35 @@ def build_category_page_en(cat_name: str, tools: list) -> str:
             {"@type":"ListItem","position":2,"name":cat_name,"item":f"{SITE_DOMAIN}/category/{cat_slug}/"},
         ]
     }
+
+    # 2026-11-18: 冲突合并——该分类的文章指南区块（与文章分类页同一 al-card 样式）
+    guides_block = ''
+    if cat_articles:
+        g_cards = ''
+        for ga in cat_articles:
+            g_url = f'/articles/{ga["slug"]}/'
+            g_date = ga.get('date', '')
+            g_read = max(1, (len(ga.get('content', '').split()) + 219) // 220)
+            g_cards += f'''<article class="al-card">
+                <a class="al-card-link" href="{g_url}">
+                    <div class="al-top">
+                        <span class="al-chip">{escape_html(ga.get('category',''))}</span>
+                        <time class="al-date" datetime="{g_date}">{_nice_date(g_date)}</time>
+                    </div>
+                    <h2 class="al-title">{escape_html(ga['title'])}</h2>
+                    <p class="al-summary">{escape_html(ga.get('description',''))}</p>
+                    <div class="al-foot">
+                        <span class="al-read">{g_read} min read</span>
+                        <span class="al-arrow" aria-hidden="true">&rarr;</span>
+                    </div>
+                </a>
+            </article>\n'''
+        guides_block = (f'<section class="cat-section" aria-label="Guides and comparisons">'
+                        f'<h2>{escape_html(cat_name)} guides &amp; comparisons</h2>'
+                        f'<p class="cat-intro">In-depth articles from our editorial testing: pricing breakdowns, '
+                        f'head-to-head comparisons and step-by-step workflows.</p>'
+                        f'<div class="articles-list">{g_cards}</div>'
+                        f'</section>')
     breadcrumb_json = json.dumps(breadcrumb_data, ensure_ascii=False, indent=2)
 
     # CollectionPage schema (GEO — entity relationship for AI engines)
@@ -1383,6 +1416,7 @@ def build_category_page_en(cat_name: str, tools: list) -> str:
         <div class="tool-grid" id="catGrid">
             {tool_cards}
         </div>
+{guides_block}
     </main>
 
 {footer_html()}
@@ -3257,14 +3291,35 @@ def build_all_en(target: str = 'all'):
 
     # ── Category pages ────────────────────────────────────────────────────────
     if target in ('all', 'index', 'tools'):
+        # 2026-11-18: 分类 slug → 该分类文章 的映射（冲突合并渲染用）
+        articles_by_cat_slug = {}
+        for _a in articles:
+            _s = get_category_slug_en(_a.get('category', ''))
+            if _s:
+                articles_by_cat_slug.setdefault(_s, []).append(_a)
         for cat_name, tools_in_cat in tools_by_cat.items():
             cat_slug = get_category_slug_en(cat_name)
             dir_path = os.path.join(OUT_DIR, 'category', cat_slug)
             os.makedirs(dir_path, exist_ok=True)
-            html = build_category_page_en(cat_name, tools_in_cat)
+            html = build_category_page_en(cat_name, tools_in_cat,
+                                          cat_articles=articles_by_cat_slug.get(cat_slug))
             with open(os.path.join(dir_path, 'index.html'), 'w', encoding='utf-8') as f:
                 f.write(html)
             print(f'[OK] en/category/{cat_slug}/index.html')
+
+        # 2026-11-18: 清理孤儿分类目录（分类收敛/改名后旧 slug 页面残留会
+        # 造成 sitemap↔目录漂移）。有效集合 = 工具分类 ∪ 达标文章分类。
+        valid_cat_dirs = (tool_cat_slugs
+                          | {s for s, (c, l) in _article_cats_map.items()})
+        for d in os.listdir(os.path.join(OUT_DIR, 'category')):
+            if d == 'index.html':
+                continue
+            if d not in valid_cat_dirs:
+                victim = os.path.join(OUT_DIR, 'category', d)
+                if os.path.isdir(victim):
+                    import shutil as _sh
+                    _sh.rmtree(victim)
+                    print(f'[CLEAN] removed orphan category dir: {d}/')
 
         # Category index
         dir_path = os.path.join(OUT_DIR, 'category')
@@ -3279,7 +3334,11 @@ def build_all_en(target: str = 'all'):
     # articles. Slugs never collide with tool categories (union is precomputed
     # above); both are listed on the category hub and in the sitemap.
     if target in ('all', 'articles'):
+        # 2026-11-18: 跳过与工具分类冲突的 slug——它们已在工具分类页合并渲染
+        # （此前这里后写覆盖前写，10 个工具分类页丢失工具网格）。
         for cat_slug_, (cat_name_, lst_) in sorted(_article_cats_map.items()):
+            if cat_slug_ in tool_cat_slugs:
+                continue
             dir_path = os.path.join(OUT_DIR, 'category', cat_slug_)
             os.makedirs(dir_path, exist_ok=True)
             html = build_article_category_page_en(cat_name_, lst_)
