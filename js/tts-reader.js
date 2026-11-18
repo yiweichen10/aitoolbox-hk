@@ -30,13 +30,30 @@
     setTimeout(function () { waitVoices(cb, tries + 1); }, 250);
   }
 
+  // 这些块位于 [data-tts] 容器内，但不是文章正文：
+  // TL;DR 是摘要，author-note 是文末作者/数据声明模板，tts-bar 是控件本身。
+  // 统一排除：既不作为朗读起点，也不进入朗读队列。
+  var SKIP_SELECTOR = '.tldr-box, .author-note, .tts-bar';
+
+  function isSkippable(el) {
+    return !!(el && el.closest && el.closest(SKIP_SELECTOR));
+  }
+
+  function firstEligible(container, selector) {
+    var nodes = container.querySelectorAll(selector);
+    for (var i = 0; i < nodes.length; i++) {
+      if (!isSkippable(nodes[i])) return nodes[i];
+    }
+    return null;
+  }
+
   function getBlocks(container) {
     var sel = 'p,li,h2,h3,h4,blockquote,td,pre';
     var nodes = container.querySelectorAll(sel);
     var list = [];
     for (var i = 0; i < nodes.length; i++) {
       var n = nodes[i];
-      if (n.closest && n.closest('.tts-bar')) continue;
+      if (isSkippable(n)) continue;
       var text;
       if (n.querySelector && n.querySelector('.tts-bar')) {
         // 标题里嵌了朗读按钮——克隆后移除按钮再取纯文本，避免读出"朗读全文"
@@ -69,11 +86,11 @@
     bar.appendChild(stop);
     // 优先塞进第一个 P 段落开头（与朗读起点对齐，行内不占独立行）；
     // 没有 P 时回退 H3 → H2（兼容无段落工具页），都没有才回退容器顶部独立成行
-    var firstP = container.querySelector('p');
+    var firstP = firstEligible(container, 'p');
     if (firstP) {
       firstP.insertBefore(bar, firstP.firstChild);
     } else {
-      var fb = container.querySelector('h3') || container.querySelector('h2');
+      var fb = firstEligible(container, 'h3') || firstEligible(container, 'h2');
       if (fb) fb.appendChild(bar);
       else container.insertBefore(bar, container.firstChild);
     }
