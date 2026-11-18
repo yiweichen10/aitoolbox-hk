@@ -1,4 +1,4 @@
-# AI Engine Crawlers - Explicitly Allowed (AEO/GEO Optimization 2026-06-23)
+# AI Engine Crawlers - Explicitly Allowed (AEO/GEO Optimization 2026-11-18)
 # These crawlers are critical for AI engines to reference your content
 User-agent: GPTBot
 Allow: /
@@ -24,6 +24,15 @@ Allow: /
 User-agent: Claude-Web
 Allow: /
 
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-Runner
+Allow: /
+
 User-agent: anthropic-ai
 Allow: /
 
@@ -34,6 +43,12 @@ User-agent: FacebookBot
 Allow: /
 
 User-agent: meta-externalagent
+Allow: /
+
+User-agent: meta-externalfetcher
+Allow: /
+
+User-agent: MistralAI-User
 Allow: /
 
 User-agent: Amazonbot
