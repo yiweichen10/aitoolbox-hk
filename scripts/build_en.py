@@ -415,12 +415,20 @@ def escape_html(text: str) -> str:
                 .replace('>', '&gt;')
                 .replace('"', '&quot;'))
 
+def _serp_desc(text: str, limit: int = 155) -> str:
+    """Truncate a meta description to the SERP budget (~155 chars), cutting at
+    a word boundary. 2026-11-19: 514/667 pages shipped descriptions of 183-191
+    chars (tools template + raw data strings), which Google truncates mid-word.
+    All four page templates now route through this helper."""
+    text = re.sub(r'\s+', ' ', str(text or '')).strip()
+    if len(text) <= limit:
+        return text
+    cut = text[:limit].rsplit(' ', 1)[0].rstrip(' ,.;:-–—')
+    return cut
+
+
 def plain_text_for_schema(text: str) -> str:
     """Strip Markdown/HTML so JSON-LD schema text stays clean prose.
-
-    JSON-LD `text` fields must be plain text. FAQ answers may contain Markdown
-    links (internal linking) and bold markers, which render fine in HTML but
-    would leak raw syntax like "[ChatGPT](/tools/chatgpt/)" into structured data.
     """
     if not text:
         return ''
@@ -862,7 +870,7 @@ def build_tool_page_en(tool: dict, all_tools: list, all_articles: list = None, a
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{escape_html(name)} Review 2026: Pricing &amp; Alternatives</title>
-    <meta name="description" content="{escape_html(name)} full review 2026: {escape_html(tool['description'][:120])} Pricing, pros, cons, and alternatives.">
+    <meta name="description" content="{escape_html(_serp_desc(f"{name} full review 2026: {tool['description']} Pricing, pros, cons, and alternatives."))}">
     <meta name="keywords" content="{escape_html(name)},{escape_html(name)} review,{escape_html(name)} pricing,{escape_html(cat)},AI tools 2026">
     <link rel="canonical" href="{SITE_DOMAIN}/tools/{slug}/">
 {hreflang}    <meta property="og:type" content="article">
@@ -1230,7 +1238,7 @@ def build_article_page_en(article: dict, all_articles: list, all_tools: list = N
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{escape_html(serp_title)}</title>
-    <meta name="description" content="{escape_html(article.get('description',''))}">
+    <meta name="description" content="{escape_html(_serp_desc(article.get('description','')))}">
     <meta name="keywords" content="{escape_html(article.get('keywords',''))}">
     <link rel="canonical" href="{SITE_DOMAIN}/articles/{slug}/">
 {hreflang}    <meta property="og:type" content="article">
@@ -1410,6 +1418,7 @@ def build_category_page_en(cat_name: str, tools: list, cat_articles: list = None
     <meta name="description" content="Best {escape_html(cat_name)} AI tools in 2026. We reviewed {len(tools)} tools and ranked them by features, pricing, and real-world performance.">
     <meta name="keywords" content="{escape_html(cat_name)},best {escape_html(cat_name)} tools,AI tools 2026">
     <link rel="canonical" href="{SITE_DOMAIN}/category/{cat_slug}/">
+    <meta property="og:image" content="{SITE_DOMAIN}/images/logo.png">
 {hreflang}    <link rel="stylesheet" href="/css/style.css?{CSS_VERSION}">
     <script type="application/ld+json">{breadcrumb_json}</script>
     <script type="application/ld+json">{collection_json}</script>{cat_faq_json}
@@ -1580,6 +1589,7 @@ def build_article_category_page_en(cat_name: str, cat_articles: list) -> str:
     <title>{escape_html(cat_name)} Guides & Reviews 2026 - {SITE_NAME}</title>
     <meta name="description" content="All {n} in-depth {escape_html(cat_name)} guides and reviews on {SITE_NAME}: hands-on testing, pricing analysis and verdicts, updated as the market changes.">
     <link rel="canonical" href="{SITE_DOMAIN}/category/{cat_slug}/">
+    <meta property="og:image" content="{SITE_DOMAIN}/images/logo.png">
 {hreflang}    <link rel="stylesheet" href="/css/style.css?{CSS_VERSION}">
     <script type="application/ld+json">{breadcrumb}</script>
     <script type="application/ld+json">{{
@@ -1883,12 +1893,13 @@ def build_category_index_en(tools_by_cat: dict) -> str:
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{escape_html(page_title)} - {SITE_NAME}</title>
-    <meta name="description" content="{escape_html(meta_desc)}">
+    <meta name="description" content="{escape_html(_serp_desc(meta_desc))}">
     <link rel="canonical" href="{SITE_DOMAIN}/category/">
 {hreflang}    <meta property="og:type" content="website">
     <meta property="og:title" content="{escape_html(page_title)}">
-    <meta property="og:description" content="{escape_html(meta_desc)}">
+    <meta property="og:description" content="{escape_html(_serp_desc(meta_desc))}">
     <meta property="og:url" content="{SITE_DOMAIN}/category/">
+    <meta property="og:image" content="{SITE_DOMAIN}/images/logo.png">
     <meta property="og:site_name" content="{SITE_NAME}">
     <link rel="stylesheet" href="/css/style.css?{CSS_VERSION}">
     <script type="application/ld+json">{faq_json}</script>
@@ -2888,6 +2899,7 @@ def build_alternatives_page_en(tool: dict, candidates: list) -> str:
     slug = tool.get('slug', '')
     cat = tool.get('category', 'AI Tools')
     cat_slug = get_category_slug_en(cat)
+    alt_og_img = get_og_image_url(slug) or f'{SITE_DOMAIN}/images/logo.png'
     n = len(candidates)
     today_iso = datetime.now().strftime('%Y-%m-%d')
     rating = re.sub(r'[^\d.]', '', str(tool.get('rating', '')))
@@ -2985,11 +2997,12 @@ def build_alternatives_page_en(tool: dict, candidates: list) -> str:
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{escape_html(title)}</title>
-    <meta name="description" content="{escape_html(meta_desc)}">
+    <meta name="description" content="{escape_html(_serp_desc(meta_desc))}">
     <link rel="canonical" href="{SITE_DOMAIN}/alternatives/{slug}/">
     <meta property="og:type" content="article">
+    <meta property="og:image" content="{alt_og_img}">
     <meta property="og:title" content="{escape_html(title)}">
-    <meta property="og:description" content="{escape_html(meta_desc)}">
+    <meta property="og:description" content="{escape_html(_serp_desc(meta_desc))}">
     <meta property="og:url" content="{SITE_DOMAIN}/alternatives/{slug}/">
     <meta property="og:site_name" content="{SITE_NAME}">
     <link rel="stylesheet" href="/css/style.css?{CSS_VERSION}">
@@ -3199,6 +3212,7 @@ def build_vs_page_en(a: dict, b: dict) -> str:
     ca, cb = a.get('category', ''), b.get('category', '')
     cat_slug = get_category_slug_en(ca)
     today_iso = datetime.now().strftime('%Y-%m-%d')
+    og_img = get_og_image_url(slug_a := a.get('slug', '')) or f'{SITE_DOMAIN}/images/logo.png'
     higher_name = na if rating_num(a) >= rating_num(b) else nb
     free_side = ''
     ta, tb = price_type(pa), price_type(pb)
@@ -3286,11 +3300,12 @@ def build_vs_page_en(a: dict, b: dict) -> str:
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{escape_html(serp_title)} - {SITE_NAME}</title>
-    <meta name="description" content="{escape_html(meta_desc)}">
+    <meta name="description" content="{escape_html(_serp_desc(meta_desc))}">
     <link rel="canonical" href="{SITE_DOMAIN}/vs/{slug_a}-vs-{slug_b}/">
     <meta property="og:type" content="article">
+    <meta property="og:image" content="{og_img}">
     <meta property="og:title" content="{escape_html(serp_title)}">
-    <meta property="og:description" content="{escape_html(meta_desc)}">
+    <meta property="og:description" content="{escape_html(_serp_desc(meta_desc))}">
     <meta property="og:url" content="{SITE_DOMAIN}/vs/{slug_a}-vs-{slug_b}/">
     <meta property="og:site_name" content="{SITE_NAME}">
     <link rel="stylesheet" href="/css/style.css?{CSS_VERSION}">
