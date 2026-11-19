@@ -2364,6 +2364,40 @@ def inject_global_nav_en():
 
 # ─── Main build ───────────────────────────────────────────────────────────────
 
+def refresh_about_author_counts(n_tools: int, n_arts: int, n_cats: int):
+    """Keep about.html + author/index.html counts/dates in sync with data
+    (2026-10-13 audit P1: static pages drifted to '110+ tools / 70+ articles /
+    14 categories / June 2026' while the site had moved on — conflicting
+    trust signals for AI engines). Token replacement, no prose rewrite.
+    Raises nothing: prints a warning if any stale marker survives."""
+    from datetime import datetime as _dt
+    today = _dt.now().strftime('%Y-%m-%d')
+    month_year = _dt.now().strftime('%B %Y')
+    files = ['about.html', os.path.join('author', 'index.html')]
+    subs = [
+        (r'110\+ tested tools', f'{n_tools} tested tools'),
+        (r'110\+ AI tools', f'{n_tools} AI tools'),
+        (r'110\+ tools reviewed', f'{n_tools} tools reviewed'),
+        (r'110\+ \(and growing\)', f'{n_tools} (and growing)'),
+        (r'70\+ in-depth comparison articles', f'{n_arts} in-depth comparison articles'),
+        (r'70\+ articles', f'{n_arts} articles'),
+        (r'>14 \(chat[^<]*', f'>{n_cats} categories (full list at <a href="/category/">/category/</a>)'),
+        (r'As of June 2026', f'As of {month_year}'),
+        (r'as of June 2026', f'as of {month_year}'),
+        (r'"dateModified": "2026-06-23"', f'"dateModified": "{today}"'),
+        (r'Last updated: 2026-06-23', f'Last updated: {today}'),
+    ]
+    for fp in files:
+        text = open(fp, encoding='utf-8').read()
+        for pat, repl in subs:
+            text, n = re.subn(pat, repl, text)
+        # residual drift guard: stale markers that no pattern above caught
+        residuals = re.findall(r'110\+|70\+|June 2026|2026-06-23', text)
+        open(fp, 'w', encoding='utf-8').write(text)
+        status = f'WARNING residual markers: {residuals}' if residuals else 'clean'
+        print(f'[OK] refresh trust-info tokens in {fp} ({status})')
+
+
 def generate_llms_txt_en(tools: list, articles: list, alt_slugs: list = None,
                          vs_pairs=None) -> str:
     """llms.txt (llmstxt.org) — machine-readable site brief for AI models.
@@ -3583,6 +3617,10 @@ def build_all_en(target: str = 'all'):
     with open(os.path.join(OUT_DIR, 'llms-full.txt'), 'w', encoding='utf-8') as f:
         f.write(llms_full)
     print(f'[OK] en/llms-full.txt ({len(published_tools)} tools / {len(articles)} articles, {len(llms_full)//1024} KB)')
+
+    # ── About/Author trust-info count refresh (audit 2026-10-13 P1 fix) ───────
+    _n_cats = len({get_category_slug_en(t.get('category', '')) for t in published_tools})
+    refresh_about_author_counts(len(published_tools), len(articles), _n_cats)
 
     # ── RSS feed (latest 30 dated articles; tools have no honest dates) ───────
     with open(os.path.join(OUT_DIR, 'rss.xml'), 'w', encoding='utf-8') as f:
