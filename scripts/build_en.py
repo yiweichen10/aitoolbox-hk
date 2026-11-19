@@ -2382,6 +2382,8 @@ def refresh_about_author_counts(n_tools: int, n_arts: int, n_cats: int):
         (r'70\+ in-depth comparison articles', f'{n_arts} in-depth comparison articles'),
         (r'70\+ articles', f'{n_arts} articles'),
         (r'>14 \(chat[^<]*', f'>{n_cats} categories (full list at <a href="/category/">/category/</a>)'),
+        (r'\b14 categories\b', f'{n_cats} categories'),
+        (r'and 14 categories', f'and {n_cats} categories'),
         (r'As of June 2026', f'As of {month_year}'),
         (r'as of June 2026', f'as of {month_year}'),
         (r'"dateModified": "2026-06-23"', f'"dateModified": "{today}"'),
@@ -2392,7 +2394,7 @@ def refresh_about_author_counts(n_tools: int, n_arts: int, n_cats: int):
         for pat, repl in subs:
             text, n = re.subn(pat, repl, text)
         # residual drift guard: stale markers that no pattern above caught
-        residuals = re.findall(r'110\+|70\+|June 2026|2026-06-23', text)
+        residuals = re.findall(r'110\+|70\+|\b14 categor|June 2026|2026-06-23', text)
         open(fp, 'w', encoding='utf-8').write(text)
         status = f'WARNING residual markers: {residuals}' if residuals else 'clean'
         print(f'[OK] refresh trust-info tokens in {fp} ({status})')
