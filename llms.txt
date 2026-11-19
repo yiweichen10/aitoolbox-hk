@@ -19,7 +19,7 @@
 - [Category Overview](https://www.aitoolbox.hk/category/): all 22 category pages with a quick-reference table
 - [Search](https://www.aitoolbox.hk/search/): instant search across all tools and articles
 - [Submit a tool](https://www.aitoolbox.hk/submit.html): free submissions, editor-tested before review; rankings cannot be bought
-- [Articles](https://www.aitoolbox.hk/articles/): original hands-on reviews, comparisons and guides (228 articles)
+- [Articles](https://www.aitoolbox.hk/articles/): original hands-on reviews, comparisons and guides (229 articles)
 - [Full content for AI models](https://www.aitoolbox.hk/llms-full.txt): llms-full.txt — every tool and article in one plain-text file
 
 ## Important Tool Pages (top 5 by rating per category, 266 tools total)
@@ -266,8 +266,9 @@
 - [Surfer SEO vs Vryse AI](https://www.aitoolbox.hk/vs/surfer-seo-vs-vryse-ai/): pricing and feature comparison
 - [Wordtune vs Writesonic](https://www.aitoolbox.hk/vs/wordtune-vs-writesonic/): pricing and feature comparison
 
-## Important Article Pages (228 total, latest 16 by date)
+## Important Article Pages (229 total, latest 16 by date)
 
+- [Best Video Streaming Pricing 2026: Mux vs Cloudflare Stream vs Bunny Stream vs api.video](https://www.aitoolbox.hk/articles/best-video-streaming-pricing-2026-mux-vs-cloudflare-stream-vs-bunny-stream-vs-apivideo/): The same 20,000-minute course library watched 200,000 minutes a month costs $35 a month on Bunny Stream, $160…
 - [Speech-to-Text API Pricing in 2026: Deepgram vs AssemblyAI vs OpenAI vs ElevenLabs Compared](https://www.aitoolbox.hk/articles/best-speech-to-text-api-pricing-2026-deepgram-vs-assemblyai-vs-openai-vs-elevenlabs/): Deepgram, AssemblyAI, OpenAI and ElevenLabs rate cards, worked bills from 10 to 10,000 hours, and the…
 - [AI Tool Free Tier Report 2026: What Free Actually Gets You](https://www.aitoolbox.hk/articles/ai-tool-free-tier-report-2026/): 228 of 266 AI tools advertise free access — but 'free' means five different things. Freemium (100), credits…
 - [LLM Inference Pricing in 2026: Groq vs Together AI vs Fireworks vs Replicate Compared](https://www.aitoolbox.hk/articles/best-llm-inference-pricing-2026-groq-vs-together-vs-fireworks-vs-replicate/): Groq, Together AI, Fireworks and Replicate rate cards for open-weight models, worked token bills at four…
@@ -283,12 +284,11 @@
 - [Best Managed Redis Hosting in 2026: Upstash vs Redis Cloud vs Dragonfly vs ElastiCache](https://www.aitoolbox.hk/articles/best-managed-redis-hosting-2026-upstash-vs-redis-cloud-vs-dragonfly-vs-elasticache/): Upstash vs Redis Cloud vs Dragonfly Cloud vs ElastiCache on November 2026 pricing: per-command billing, the…
 - [Heroku Alternatives in 2026: Railway vs Render vs Fly.io Pricing Compared](https://www.aitoolbox.hk/articles/heroku-alternatives-2026-railway-vs-render-vs-flyio-pricing-compared/): Railway vs Render vs Fly.io vs Heroku on real November 2026 pricing: per-second billing, the $25 workspace…
 - [Best Serverless Postgres Hosting in 2026: Neon vs Supabase vs PlanetScale vs Amazon RDS](https://www.aitoolbox.hk/articles/best-serverless-postgres-hosting-2026-neon-vs-supabase-vs-planetscale-vs-amazon-rds/): Neon vs Supabase vs PlanetScale vs Amazon RDS on real November 2026 pricing: CU-hour metering, the…
-- [Best VPS Hosting in 2026: Hetzner vs DigitalOcean vs Vultr vs Linode](https://www.aitoolbox.hk/articles/best-vps-hosting-2026-hetzner-vs-digitalocean-vs-vultr-vs-linode/): Hetzner vs DigitalOcean vs Vultr vs Linode on real 2026 pricing: entry-tier specs, egress overage math…
 
 ## Update Frequency
 
 - Tool database: updated daily (266 tools listed)
-- Articles: new original reviews published regularly (228 total)
+- Articles: new original reviews published regularly (229 total)
 - Ratings/pricing: recalibrated continuously
 
 ## Sitemap
