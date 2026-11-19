@@ -19391,5 +19391,360 @@
       }
     ],
     "content": "## What Pinterest Actually Is\n\nPinterest is a visual search engine wearing a social network's clothes, and the distinction decides where the money is. Users do not scroll a feed of friends; they search \"small kitchen ideas\" or \"capsule wardrobe,\" save pins to boards, and click out to buy things. In Q2 2026 the platform hit 640 million monthly users - an all-time high, its eleventh straight quarter of double-digit growth - and the people arrive with purchase intent instead of boredom.\n\nFor creators, the deal is blunt: Pinterest pays nothing directly. Creator Rewards died in November 2022. What remains are four official routes - affiliate links on pins, product tags, brand partnerships, and outbound traffic to your own site - and unlike YouTube or TikTok, there is no follower gate in front of any of them. A new business account can pin affiliate links today.\n\n## The Money Angle\n\n**1. Direct affiliate pins, the zero-website start.** Join an affiliate program (Amazon Associates, LTK, ShareASale, Impact - rates run 1-50% depending on niche), paste the tracked link as the pin's destination, disclose with #affiliate, done. Finance pins earn $50-$300 per approved signup; home and fashion pins route shoppers into $500+ carts. The constraint is the policy: original pins only, no bulk spam, one authentic account. For the program rundown, see [Amazon Associates](/tools/amazon-associates/).\n\n**2. The blog funnel, the durable version.** The highest-earning operators route pins to their own articles - a \"10 best espresso machines under $200\" pin clicks through to a comparison post carrying affiliate links, display ads ([Google AdSense](/tools/google-adsense/)), and an email capture. The pin earns twice: once on click, once when the article converts. Pinterest traffic to blogs is the classic solo-media business model, and pins keep feeding it for months.\n\n**3. Sell your own products.** Printable planners, wall art, templates - pins route to [Etsy](/tools/etsy/) or [Gumroad](/tools/gumroad/) listings. Design-heavy niches (wedding invites, budget spreadsheets, wall calendars) are native Pinterest demand, and AI design tools like [Canva](/tools/canva-ai/) make producing pin-plus-product pairs fast. POD sellers on [Printify](/tools/printify/) use the same route.\n\n**4. Brand partnerships and pin management.** The paid-partnership label tool lets brands sponsor your pins (they approve the tag; payment is arranged directly - Pinterest stays out of the money flow). And a quieter service business: small brands pay $500-$1,500/month for someone to run their Pinterest presence - scheduling, keyword research, fresh pins. Every skill you build monetizing your own account is a retainer you can sell to a client.\n\n## What It Really Costs\n\nEverything above runs on a free business account. The real costs are time and constraints:\n\n- **Volume discipline**: winning operators pin daily for months before commissions matter; expect $0-$200/month in the first quarter per third-party income tracking, not the screenshots on sales pages\n- **The AI label**: Pinterest auto-detects AI-generated images and labels them \"AI modified,\" and users can suppress AI pins in some categories - original photos, screenshots, and heavily human-edited designs keep reach\n- **The spam line**: bulk-posting affiliate pins, fake accounts, or traded saves get accounts limited; the workable rhythm most guides converge on is 20-50% affiliate pins within a broader original-content mix\n- **External dependency**: your commission rates live on Amazon's or LTK's terms, not Pinterest's - the 2017 history of Amazon cutting commission rates overnight is the standing warning\n\n## The Honest Cons\n\nPinterest is the slowest-pay platform in the creator stack and simultaneously the one with the longest asset life. A pin is not a post - it is a search listing that works for years - but the first three months of pinning pay roughly nothing, and creators used to TikTok's fast feedback quit before the compounding starts. There is no platform safety net: no creator fund, no payout floor, nothing if your affiliate program cuts rates. And the 2026 AI-label reality means the \"generate 100 pins with Midjourney\" playbook now carries a reach penalty. The account that wins is boring: one niche, daily original pins, honest disclosure, a landing page that captures the click.\n\n## Pinterest vs The Field\n\n| | Pinterest | [TikTok](/tools/tiktok/) | [YouTube](/tools/youtube/) | [X Creator Rewards](/tools/x-creator-rewards/) |\n|---|---|---|---|---|\n| Platform pays you | No | Yes (~$0.40-$1.00/1k views) | Yes (55% ad share) | Yes (per qualified view) |\n| Entry gate | None | 10k followers + 100k views | 1k subs + 4,000 hrs | 500 premium followers + 500k impressions |\n| Content lifespan | Months to years | ~48 hours | Years (search) | Hours to days |\n| Buyer intent | Highest | Low | Medium | Low |\n| Affiliate links | Officially allowed | Restricted | Allowed | Discouraged |\n\nThe honest read: Pinterest trades platform payouts for the lowest entry gate and the longest content lifespan in the industry. For the full earning map, see [the AI money tools guide](/articles/ai-tools-that-make-money-2026/) and [how to make money online with AI](/articles/how-to-use-ai-to-make-money-online-2026/).\n\n## Bottom Line\n\nPinterest is the best zero-audience entry point in creator monetization: free account, affiliate links allowed from pin one, buyer-intent traffic, and pins that keep working after you stop. It is also the platform that pays latest - budget three to six months of daily pinning before commissions matter, keep images original to dodge the AI label, and route traffic to something you own (a blog, an Etsy shop, an email list) so every click builds an asset instead of renting one."
+  },
+  {
+    "name": "fal",
+    "slug": "fal-ai",
+    "color": "#1E293B",
+    "category": "AI API",
+    "url": "https://fal.ai/",
+    "price": "Pay per use · images from $0.003",
+    "last_verified": "2026-11-19",
+    "description": "Pay-per-use API for 1,000+ generative media models - one key, one bill, and no monthly minimum, so the gap between what a model run costs and what your product charges is your margin.",
+    "tags": [
+      {
+        "text": "Generative Media API"
+      },
+      {
+        "text": "Developer Tool"
+      },
+      {
+        "text": "Video Generation"
+      },
+      {
+        "text": "Image Generation"
+      }
+    ],
+    "rating": "4.6",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "platform": "REST API + Python/JS/TS/Swift/Java/Kotlin/Dart clients + Playground & Sandbox UI + fal Agent (Early Access) + MCP server",
+    "published": true,
+    "pricing_details": "No subscription required for the core Model APIs: prepaid credits, pay-as-you-go, billed only on successful outputs (server errors and queue time are free). Representative rates from the official pricing pages, checked 2026-11-19: FLUX.1 schnell $0.003/megapixel, Z Image Turbo $0.005/MP, FLUX.1 dev $0.025/MP, Nano Banana $0.0398/image, Nano Banana 2 $0.08/image, Nano Banana Pro $0.15/image; video from $0.015/second (MiniMax H3 Max Turbo) to $0.14/second (Kling v3 Pro), Veo 3.1 at 1080p with audio $0.40/second ($2.00 per 5-second clip); ElevenLabs TTS via fal $0.10 per 1,000 characters, xAI TTS $0.015. Purchased credits expire after 365 days; granted/coupon credits expire in 1 week to 1 year. New accounts start at 2 concurrent requests, rising to 40 with purchases. Optional fal Agent plans (Early Access): Starter $50/mo with $50 in credits, Pro $200/mo plus 5% off usage inside fal's own UI, Max $1,000/mo plus 10% - plan credits work across all fal products and unused credits roll over. Serverless GPU for your own models: H100 $4.50/hr list ($2.49 as-low-as), B300 $12.99 ($5.99). Enterprise adds volume discounts, invoicing, concurrency above 40, private deployments.",
+    "pros": [
+      "True pay-per-use with no seat, no monthly minimum, and no charge for failed runs or queue time - a $5 test balance is enough to price a whole feature",
+      "One API key and one client cover 1,000+ models across image, video, audio and 3D - swapping models means changing an endpoint string, not rewriting your integration",
+      "Unit economics are public and per-model, so you can quote a job's cost before you run it and defend your SaaS margin math",
+      "Queue, webhooks, streaming and real-time endpoints are built in - you do not assemble the plumbing yourself",
+      "Official clients for seven languages auto-retry concurrency errors, and a hosted MCP server plugs the same models into Claude or any agent stack"
+    ],
+    "cons": [
+      "Costs scale with usage, so a viral week on your app is a bigger fal bill - there is no flat-cost ceiling unless you negotiate Enterprise",
+      "Purchased credits expire after 365 days; granted credits can die in as little as a week, so gift credits are for testing, not budgeting",
+      "Video seconds burn credit far faster than image megapixels - the same $10 that buys 250 Nano Banana images buys roughly 70 seconds of Veo 3.1",
+      "fal Agent is Early Access: its free reasoning and tooling are 'for now', and plan discounts apply only inside fal's own interfaces, not direct API calls",
+      "No self-hosted index or model hosting - if you need data residency or a private deployment, you are into custom Enterprise territory"
+    ],
+    "features": [
+      "1,000+ model endpoints under a single FAL_KEY with a pricing API that returns unit and unit price for any endpoint before you call it",
+      "Sandbox and Playground that run one prompt across several models and list generation time and exact cost per result",
+      "fal Agent (Early Access): browser chat that picks models, keeps characters consistent across stills and video, and edits on a timeline",
+      "FLUX LoRA fast training at $2 per run, then call your trained style like any other endpoint",
+      "Workflows that chain models into one endpoint with a streamed event per step",
+      "fal Serverless for deploying your own Python models, billed per second while runners are alive",
+      "Hosted MCP server plus official Python, JavaScript/TypeScript, Swift, Java, Kotlin and Dart clients",
+      "Concurrency that scales from 2 requests on a new account to 40 as you spend"
+    ],
+    "faq": [
+      {
+        "question": "How much does one AI video actually cost on fal?",
+        "answer": "It depends on the model and resolution. As of November 2026, MiniMax H3 Max Turbo runs $0.015 per second of output, Kling v3 Pro is $0.14 per second, and Veo 3.1 at 1080p with audio is $0.40 per second - so a 5-second clip costs between $0.08 and $2.00. Official walkthroughs put a full 63-second, 4-ad product campaign at $13.54 in 480p drafts and about $29 in 720p finals. You are billed only for successful output; queue time and server errors are free."
+      },
+      {
+        "question": "Do fal credits expire?",
+        "answer": "Credits you purchase last 365 days from purchase. Free or coupon credits expire much faster - anywhere from 1 week to 1 year depending on the grant - so treat gift credits as a testing budget, not a runway. Credits also cannot be refunded once spent on successful runs."
+      },
+      {
+        "question": "Is fal a good foundation for a paid SaaS or agency service?",
+        "answer": "That is its strongest use case. Because every model publishes its per-unit price through a pricing API, you can compute the exact cost of a user action before you invoice for it - the spread between a $0.04 image run and what your product charges is your gross margin. The caveats: usage-based cost means your bill follows your success, so put budget caps and caching in your app before launch, and remember fal Agent discounts apply only inside fal's own UI, not to API calls from your product."
+      }
+    ],
+    "content": "## What fal Actually Is\n\nfal is the billing layer between your product and roughly a thousand generative media models. One API key - FAL_KEY - calls FLUX, Nano Banana, Veo, Kling, MiniMax, ElevenLabs TTS, upscalers, background removers, 3D generators and more, each as an endpoint you invoke with the same client. There is no seat count and no required subscription: you load prepaid credits, each model bills in its own unit (per image, per megapixel, per second of video, per 1,000 characters), and you are charged only for successful output - server errors and time spent in the queue cost nothing. Official client libraries ship for Python, JavaScript/TypeScript, Swift, Java, Kotlin and Dart, and a hosted MCP server exposes the same models to Claude or any other agent stack.\n\nThe reason this page sits in the money-tools row of the site: fal is what you build AI products on. The margin story is the whole pitch - [OpenRouter](/tools/open-router/) does this for text models, fal does it for pixels.\n\n## The Money Angle\n\n**Sell the output, not the tokens.** An image run on Nano Banana costs $0.0398; a finished product shot, ad creative or blog illustration is worth $1-20 to the person receiving it. Whether you sell that output as a product (a thumbnail generator, an ad-creative tool, a virtual-staging app) or as a service (fiverr-style gigs for product photography), the per-unit cost is small enough that pricing is your choice, not the vendor's. The official walkthroughs are a cost menu you can copy: four finished video ads totalling 63 seconds came to $13.54 in 480p drafts and about $29 in 720p finals - the kind of job a client pays $300-800 for.\n\n**The agency math is real.** Charging a client a monthly retainer for \"AI creative production\" while your fal bill is itemized per run means every invoice is defensible. Quote the job in the Sandbox first - it lists generation time and exact cost per result - then add your fee on top.\n\n**Watch the burn direction.** Video is where margins die quietly: at Veo 3.1's $0.40/second, a careless retry loop on 30-second generations costs $12 per attempt. Cache results, ship the cheap draft tier (480p H3 Max at $0.05/second) for iteration, and reserve the expensive models for finals. The [LLM inference pricing comparison](/articles/best-llm-inference-pricing-2026-groq-vs-together-vs-fireworks-vs-replicate/) makes the same point for text - usage-priced infrastructure rewards products that meter their users.\n\n## What It Really Costs\n\n| Item | Price (checked 2026-11-19) | Notes |\n|---|---|---|\n| FLUX.1 schnell | $0.003 / megapixel | Cheapest usable image model |\n| Nano Banana | $0.0398 / image | Google's everyday editor |\n| Nano Banana Pro | $0.15 / image | Text-heavy, 2K/4K output |\n| MiniMax H3 Max Turbo | $0.015 / second | Draft-tier video |\n| Kling v3 Pro | $0.14 / second | Premium motion |\n| Veo 3.1 (1080p + audio) | $0.40 / second | $2.00 per 5-second clip |\n| ElevenLabs TTS via fal | $0.10 / 1,000 chars | [ElevenLabs](/tools/elevenlabs/) direct also exists |\n| FLUX LoRA fast training | $2.00 / run | Your own style, callable after |\n| fal Agent Starter | $50/mo (incl. $50 credits) | Early Access, optional |\n| fal Agent Pro / Max | $200 / $1,000 per mo | 5% / 10% off inside fal UI only |\n| Your own model on Serverless | H100 $2.49-4.50/hr | Per-second while runners live |\n\nPurchased credits expire after 365 days; free or coupon credits can die in a week. New accounts run 2 requests at once; purchases raise the cap to 40.\n\n## The Honest Cons\n\nUsage pricing has no ceiling. A viral week is a bigger bill, and there is no self-serve budget hard-stop - you need your own spend caps in code before launch, or the Enterprise conversation with sales. Credit expiry is a real tax on stockpilers: buy what you will burn in a year, not a \"deal\" balance. And the fal Agent plan perks (5-10% off, free reasoning) apply inside fal's own interfaces only - if your product calls the API directly, plan tiers buy you almost nothing. Model availability also mirrors the vendor relationships fal negotiates; the model you built on can be deprecated or repriced, so pin versions and keep a fallback endpoint.\n\nIf you need your own GPU boxes rather than shared endpoints, the [GPU cloud comparison](/articles/best-gpu-cloud-providers-2026-runpod-vs-lambda-vs-vast-ai-vs-coreweave/) covers where rented H100s actually land per hour.\n\n## fal vs The Field\n\n| | fal | [Replicate](/tools/replicate/) | [OpenRouter](/tools/open-router/) |\n|---|---|---|---|\n| Coverage | 1,000+ image/video/audio/3D models | Curated open-source + some closed models | Text/LLM models only |\n| Billing | Per-model unit, success-only | Per-second compute behind the scenes, per-run pricing | Per-token |\n| Monthly minimum | None | None | None |\n| Agent product | fal Agent (Early Access) | None | Chat room on every model |\n| Best for | Media-generation products | Running open models, fine-tunes | Text apps |\n\n fal and Replicate overlap most; fal's edge is media breadth, the Sandbox cost preview and the Agent timeline editor. Replicate's is Cog-native fine-tuning depth.\n\n## Bottom Line\n\nfal is the default place to start when a product idea involves generating images, video or audio at scale: the cost of one unit of output is public, the tooling to price a job before you build it is free, and the integration is one key. The discipline it demands is yours - meter your users, cache aggressively, keep drafts cheap and finals expensive. Do that, and the spread between a few cents of compute and a $50 deliverable is a business.\n\nFor how this fits a broader stack, see [our guide to the major AI API platforms](/articles/best-ai-api-platforms-2026-openai-vs-anthropic-vs-gemini-vs-deepseek/) and the practical playbook on [making money with AI tools](/articles/how-to-use-ai-to-make-money-online-2026/)."
+  },
+  {
+    "name": "Rask AI",
+    "slug": "rask-ai",
+    "color": "#F97316",
+    "category": "AI Translation",
+    "url": "https://www.rask.ai/",
+    "price": "From $39/mo · per-minute billing",
+    "last_verified": "2026-11-19",
+    "description": "AI video dubbing into 135+ languages with voice cloning, multi-speaker lip-sync and an approval-before-dubbing editor - the tool that turns one proven video into a multi-market content library.",
+    "tags": [
+      {
+        "text": "Video Dubbing"
+      },
+      {
+        "text": "Voice Cloning"
+      },
+      {
+        "text": "Localization"
+      },
+      {
+        "text": "Content Repurposing"
+      }
+    ],
+    "rating": "4.3",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "platform": "Web app + Chrome extension; accepts uploads, YouTube and Google Drive links; SRT import/export on Creator Pro+; API access on Creator Pro and above",
+    "published": true,
+    "pricing_details": "Every plan is a monthly or annual subscription that buys minutes; there is no pay-per-video option and no permanent free tier (one-time trial with 3 minutes, no card required). Official rates from the help center, checked 2026-11-19: Creator $39/mo for 25 minutes ($329/yr for 300 minutes, shown as $28/mo); Creator Pro $99/mo for 100 minutes ($799/yr for 1,200 minutes, $67/mo) adding lip-sync, 3 saved custom voice clones, SRT upload, a personal translation dictionary, a 3-member teamspace, API access, and extra minutes at $3 each; Business $249/mo for 250 minutes ($1,999/yr for 3,000 minutes, $167/mo) adding on-screen text translation, brand glossary, multi-video/multi-language batches, a 5-member teamspace, and $3 extra minutes; Enterprise is custom. Billing multipliers matter: dubbing is 1 minute per minute of video per language; lip-sync adds 3 minutes per video minute; on-screen text translation adds 3; anything under a minute rounds up to 1. Monthly plans refresh and do NOT roll over; annual plans deliver all minutes upfront and roll over while the subscription stays active. Failed dubs on Rask's side return minutes automatically. Boosters let you buy a single higher-plan feature without upgrading. Higher volumes: annual billing works out to about $0.67 per included minute on Creator Pro and Business.",
+    "pros": [
+      "Voice cloning keeps your actual voice across markets - the dub still sounds like you, which generic TTS cannot do",
+      "The transcript-approval step is free: you fix the script before any minutes are spent, then re-dubbing edited segments costs nothing",
+      "135+ dubbing languages with automatic separation of 20+ speakers, each keeping their own voice",
+      "SOC 2 Type II and GDPR compliance plus C2PA membership - enough paperwork for agency and enterprise clients",
+      "Annual plans roll over unused minutes, so a slow month does not burn your budget"
+    ],
+    "cons": [
+      "No permanent free tier - after the one-time 3-minute trial, every test costs subscription money",
+      "The multiplier stack surprises people: lip-sync triples the meter and a 10-minute video in 3 languages eats 120 minutes once lip-sync is on",
+      "Monthly minutes do not roll over - they reset and vanish each cycle",
+      "Voice cloning covers fewer languages than dubbing (officially 57), so long-tail markets fall back to generic AI voices",
+      "On the $39 Creator plan you cannot buy extra minutes at all - you must upgrade, which forces the decision early"
+    ],
+    "features": [
+      "AI dubbing into 135+ languages and dialects with transcript editing before rendering",
+      "Voice cloning (57 languages per the official help center) plus AI voice presets for markets your voice does not cover",
+      "Multi-speaker lip-sync on Creator Pro and above for videos with several people on screen",
+      "Line-by-line timeline editor that flags segments needing a human look",
+      "Translation dictionary and prompting to lock brand terms, tone and formality across languages",
+      "Batch translation of multiple videos into multiple languages on Business",
+      "SRT upload/download and on-screen text translation for burned-in captions and slides",
+      "Teamspaces (3 members on Pro, 5 on Business) with guest reviewers for agency workflows"
+    ],
+    "faq": [
+      {
+        "question": "Is Rask AI free to try?",
+        "answer": "There is no permanent free plan. You get a one-time trial with 3 minutes of dubbing, voice cloning and the editor, no credit card required. After that, every plan is a paid subscription - the cheapest is Creator at $39/month for 25 minutes."
+      },
+      {
+        "question": "Why did my minutes disappear so quickly?",
+        "answer": "Minutes multiply fast. One minute of video in one language is 1 minute; but lip-sync adds 3 minutes per video minute, on-screen text translation adds 3 more, and each additional language multiplies the total. A 1-minute video dubbed into 2 languages with lip-sync costs 8 minutes (2 dubbing + 6 lip-sync). Plan your language count and whether you actually need lip-sync before rendering."
+      },
+      {
+        "question": "Can you actually make money with Rask AI?",
+        "answer": "Three routes hold up in practice. First, republishing: a video that already works in English gets dubbed into 3-5 languages, and the new markets' ad revenue, affiliate clicks or course sales come almost free after the minute cost. Second, services: businesses pay per-finished-minute or per-project rates for localization that far exceed the $0.67-1.10 per included minute you pay - freelancers on [Fiverr](/tools/fiverr/) sell exactly this. Third, course expansion: translating a course for [Udemy](/tools/udemy/) or [Kajabi](/tools/kajabi/) into 2-3 languages multiplies the audience on content you already recorded. The tool localizes; the market research and the pricing are still your job."
+      }
+    ],
+    "content": "## What Rask AI Actually Is\n\nRask AI is a browser-based dubbing studio. Upload a video (or paste a YouTube or Google Drive link), and it transcribes, translates, clones the speakers' voices, re-renders the audio in 135+ languages, and can match lip movement to the new audio. Up to 20+ speakers are separated automatically, each keeping their own cloned voice, and an editable transcript lets you approve or fix every line before a single minute is billed. SOC 2 Type II, GDPR and C2PA membership put it in the compliance tier that agencies and corporate clients ask for.\n\nThe positioning that matters for this site: Rask does not create content - it multiplies content you have already validated. That makes it one of the highest-return spend lines in a creator's budget, and also one of the easiest to misjudge, because the pricing multiplies faster than the marketing suggests.\n\n## The Money Angle\n\n**Republish what already works.** The cheapest audience you will ever buy is one that wants content you already have, in a language you have not published in. The sequence that works: find your best-performing video (not your favorite - the one the numbers picked), dub it into 2-3 languages with voice cloning, and measure outbound performance before touching the rest of the library. A [YouTube](/tools/youtube/) back catalogue dubbed into Spanish, Portuguese and Hindi reaches markets where your English channel simply does not exist.\n\n**Sell localization as a service.** Businesses pay project rates for video localization that make the tool cost look small: a 10-minute corporate training video dubbed into 4 languages can bill at $500-1,500 while consuming roughly 40-120 minutes of your plan (about $30-90 of included-minute cost on annual billing). The transcript-approval workflow is what makes this sellable - you deliver a reviewed script, not a black box. Listings on [Fiverr](/tools/fiverr/) or [Upwork](/tools/upwork/) for \"AI video localization with human review\" price exactly this workflow.\n\n**Course and product expansion.** A course that sells in English can be reissued in 2-3 languages on [Udemy](/tools/udemy/) or your own [Kajabi](/tools/kajabi/) site, and dubs of product demos serve export markets. The rule: only translate content that already earns - Rask multiplies winners and losers alike.\n\n## What It Really Costs\n\n| Plan | Monthly | Annual | Minutes | What it adds |\n|---|---|---|---|---|\n| Creator | $39/mo | $329/yr (300 min) | 25/mo | Dubbing 135+ languages, voice cloning, editor |\n| Creator Pro | $99/mo | $799/yr (1,200 min) | 100/mo | + lip-sync, 3 custom clones, SRT, dictionary, API, 3 seats |\n| Business | $249/mo | $1,999/yr (3,000 min) | 250/mo | + on-screen text, batches, brand glossary, 5 seats |\n| Enterprise | Custom | Custom | Custom | Managed QA, SLA, custom voice library, integrations |\n\nThe billing multipliers are the real price list: dubbing is 1 minute per minute per language; lip-sync adds 3 minutes per video minute; on-screen text adds 3. A 1-minute video, 2 languages, lip-synced = 8 minutes. Extra minutes cost $3 each on Pro and Business and are not purchasable at all on Creator. Monthly minutes reset (no rollover); annual minutes arrive upfront and roll over while you subscribe. Annual billing works out near $0.67 per included minute on the upper tiers - a decent anchor when you quote client work.\n\n## The Honest Cons\n\nThe multiplier math punishes the exact content people buy the tool for. Talking-head videos want lip-sync, lip-sync triples the meter, and a modest backlog plus three languages can blow through Creator Pro's 100 minutes in one afternoon. Monthly plans are strictly worse for uneven workloads because minutes vanish at each cycle. Voice cloning's language list (57) is much shorter than the dubbing list (135+), so your smaller target markets get a generic voice that sounds noticeably less like you. And Rask only localizes - it will not fix a video that never resonated in its original language, so testing in one language first is not optional, it is the entire cost-control strategy.\n\n## Rask AI vs The Field\n\n| | Rask AI | [HeyGen](/tools/heygen/) | [ElevenLabs](/tools/elevenlabs/) |\n|---|---|---|---|\n| Core job | Dub existing multi-speaker video into 135+ languages | AI avatars & video translation | Best-in-class voice cloning & TTS |\n| Pricing shape | Minutes, with 3x multipliers | Credits, avatar tiers | Character/credit tiers |\n| Lip-sync | Multi-speaker, Creator Pro+ | Strong, avatar-centric | Not a video product |\n| Editor workflow | Approve transcript pre-dub, free edits | Template-driven | API-first |\n| Compliance | SOC 2, GDPR, C2PA | SOC 2, GDPR | SOC 2 |\n\nRask wins when the source video already exists and has real people in it. For avatar-generated content, [HeyGen](/tools/heygen/) is the stronger fit, and for pure audio (podcasts, audiobooks), ElevenLabs does the job without video overhead. The full head-to-head lives in [our video dubbing comparison](/articles/best-ai-video-dubbing-tools-2026-rask-ai-vs-heygen-vs-elevenlabs-vs-papercup/), and the text-side options are ranked in [the AI translation tools guide](/articles/best-ai-translation-tools-2026/).\n\n## Bottom Line\n\nRask AI is the shortest path from one validated video to five markets, and the per-minute pricing is honest once you do the math: count your languages, decide whether lip-sync is worth tripling the meter, and buy annual minutes only when the backlog justifies them. Start with your single best performer, measure the new market, and expand the library only for videos that earned it. Creators who treat it as a multiplier for proven content get their money's worth; everyone else funds an experiment the audience never asked for."
+  },
+  {
+    "name": "Otterly.AI",
+    "slug": "otterly-ai",
+    "color": "#2563EB",
+    "category": "AI SEO",
+    "url": "https://otterly.ai/",
+    "price": "From $29/mo · 7-day free trial",
+    "last_verified": "2026-11-19",
+    "description": "Daily brand-visibility tracking across ChatGPT, Google AI Overviews, AI Mode, Gemini, Perplexity, Copilot and Claude - the lowest-priced credible entry point for selling GEO services to clients.",
+    "tags": [
+      {
+        "text": "AI Search Visibility"
+      },
+      {
+        "text": "GEO / AEO"
+      },
+      {
+        "text": "Brand Monitoring"
+      },
+      {
+        "text": "Agency Reporting"
+      }
+    ],
+    "rating": "4.4",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "platform": "Web app + public API and MCP (Standard+) + Looker Studio connector (Standard+) + bulk prompt import; hosted on AWS EU-central-1",
+    "published": true,
+    "pricing_details": "Official plans, checked 2026-11-19 from the Otterly.AI help center and the pricing-update blog (the 2026-11-10 restructure kept prices but changed packaging): Lite $29/mo, Standard $189/mo, Premium $489/mo, Enterprise custom from 1,000 prompts; annual billing saves 15%. Each subscription lets you pick at least 3 AI engines per workspace from ChatGPT, Google AI Overviews, Google AI Mode, Gemini, Perplexity, Copilot and Claude. Prompt capacity depends on engine count: with 3 engines Lite tracks 20 prompts, Standard 160, Premium 535; with 4 engines it is 16/120/400. Under the hood every plan carries a monthly credit balance (Lite 2,000, Standard 15,000, Premium 50,000); one credit = one prompt checked once on one engine, Claude costs 3 credits per check, and daily tracking means 31 checks a month per prompt-engine pair. Credits do not carry over. API and MCP requests have separate monthly limits (2,000/mo on Standard, 5,000/mo on Premium) and do not consume credits. Included on every plan: unlimited brands, competitors, team members, countries, languages and GEO audits; AI Prompt Research; Keywords-to-Prompts; brand visibility, sentiment, Share of Voice and citation/source tracking; ChatGPT Ads tracking; reports and exports. No credit card for the 7-day trial; no permanent free plan.",
+    "pros": [
+      "The cheapest credible entry into AI-search visibility tracking at $29/month - competitors at this tier of rigor start around $85-99 (Peec AI) or enterprise-only",
+      "You choose which engines each workspace tracks (at least 3) - a German retail client can get AI Overviews + AI Mode + Gemini while a US B2B client gets ChatGPT + Perplexity + Claude",
+      "Unlimited workspaces, brands, competitors, team members and countries even on Lite - agency reporting is not artificially gated",
+      "API and MCP access on Standard means you can pipe visibility data into client dashboards instead of screenshotting PDFs",
+      "Tracks ChatGPT Ads and offers GEO URL audits without an upsell tier"
+    ],
+    "cons": [
+      "No permanent free plan - the 7-day trial is the only way to test before paying",
+      "Claude checks cost 3 credits each, so teams that care most about Claude citations burn budget three times faster",
+      "Prompt counts are small at the entry tier: 16-20 prompts on Lite is fine for one brand and thin for two",
+      "Credits do not roll over, and credit packs start at Standard - Lite users who hit the wall can only upgrade",
+      "It measures and reports; it does not write or fix content - you still need a content tool for the actual optimization work"
+    ],
+    "features": [
+      "Daily prompt tracking across 7 AI search engines with per-workspace engine selection",
+      "Brand visibility, sentiment and Share of Voice scoring per prompt and per engine",
+      "Citation and source tracking - which URLs the AI answers actually cite",
+      "GEO URL audits with no usage limit on every plan",
+      "AI Prompt Research and Keywords-to-Prompts to build the monitoring set from real queries",
+      "Query Fan-Out analysis and bulk prompt import with tags",
+      "ChatGPT Ads tracking alongside organic visibility",
+      "Looker Studio connector, API and MCP on Standard and above"
+    ],
+    "faq": [
+      {
+        "question": "Does Otterly.AI have a free plan?",
+        "answer": "No permanent free plan. There is a 7-day free trial that requires no credit card, and after it ends you pick a paid plan - Lite at $29/month is the entry point. Annual billing on any plan saves 15%."
+      },
+      {
+        "question": "What exactly is one credit?",
+        "answer": "One credit is one prompt checked once on one engine. Claude costs 3 credits per check; every other engine costs 1. Daily tracking means each prompt-engine pair is checked 31 times a month, so one prompt tracked daily across 4 engines uses 124 credits per month. Your plan's credit balance (2,000 on Lite up to 50,000 on Premium) sets how many prompt-engine combinations you can sustain; credits do not carry over month to month."
+      },
+      {
+        "question": "Can an agency track multiple clients on one subscription?",
+        "answer": "Yes - every paid plan includes unlimited workspaces, brands, competitors, team members and countries, and engines are configured per workspace. The practical limit is the prompt count, not the org structure: Lite handles one or two small clients, Standard's 120-160 daily prompts covers a handful of accounts, and agencies running 10+ client workspaces usually land on Premium. For client-facing data delivery, Standard's API and Looker Studio connector feed dashboards directly."
+      }
+    ],
+    "content": "## What Otterly.AI Actually Is\n\nOtterly.AI is a monitoring tool for a question that did not exist two years ago: when someone asks ChatGPT, Gemini, Perplexity, Google's AI Overviews, AI Mode, Copilot or Claude about something you sell, does your brand come up, what does the answer say about you, and which sources does the model cite? You build a prompt set (or generate one with the built-in Prompt Research and Keywords-to-Prompts tools), Otterly checks those prompts daily against the engines you picked, and it scores visibility, sentiment and Share of Voice while logging every citation.\n\nIt is measurement, not construction - the same honest boundary that applies to [Peec AI](/tools/peec-ai/) and every other tool in [our AI search visibility comparison](/articles/ai-search-visibility-tools-2026-profound-vs-peec-vs-scrunch-vs-otterly/). What it changes is who can afford to answer the question: at $29/month it is the floor of a market where comparable rigor starts near $85-99.\n\n## The Money Angle\n\n**GEO retainers are the service of 2026.** Businesses watched their traffic charts bend and now ask agencies two questions: \"are we visible in AI answers?\" and \"why not?\" A defensible retainer workflow is: set 15-30 prompts per client, track daily, report visibility/sentiment/citations monthly, then pair the findings with content work in [Surfer SEO](/tools/surfer-seo/) or [NeuronWriter](/tools/neuronwriter/) to actually fix the gaps. Otterly's cost per client sits between $29 (Lite, one small brand) and a slice of $189 (Standard, several clients); GEO retainers in this space are commonly quoted at $500-2,000/month. The tool is not the service - the reporting cadence and the fixes are - but the $29 floor is what makes the margin work at small-client scale.\n\n**The audit door-opener.** Every plan includes unlimited GEO URL audits. A free-looking audit (\"here's what ChatGPT says about your category, and it cites your competitor\") is the cheapest discovery call material in the SEO world right now. Run the audit, show the citation gap, sell the retainer.\n\n**Where the retainer math breaks.** Do not sell \"we'll get you into ChatGPT\" as a guarantee. These tools report positions in a probabilistic, personalizing system; honest contracts sell measurement plus optimization effort, not ranks. Agencies that promise outcomes get churned clients.\n\n## What It Really Costs\n\n| Plan | Price | Credits/mo | Daily prompts (3 engines / 4 engines) | Standouts |\n|---|---|---|---|---|\n| Lite | $29/mo | 2,000 | 20 / 16 | 1 workspace, everything unlimited except prompts |\n| Standard | $189/mo | 15,000 | 160 / 120 | Unlimited workspaces, API + MCP 2,000/mo, Looker |\n| Premium | $489/mo | 50,000 | 535 / 400 | API + MCP 5,000/mo, weekly/daily choice |\n| Enterprise | Custom | Custom | From 1,000 prompts | SSO, custom terms, success manager |\n\nAnnual billing saves 15%. One credit = one prompt-engine check; Claude costs 3 credits per check; daily tracking runs 31 checks per prompt-engine pair per month. Credits reset monthly and never carry over. Every plan already includes unlimited brands, competitors, team members, countries, languages, GEO audits, sentiment, Share of Voice, citation tracking and ChatGPT Ads tracking - the tiers mainly buy monitoring volume and API limits.\n\nThe 2026-11-10 restructure is worth noting in pricing conversations: same prices, but engines became selectable (at least 3 per workspace) and prompt counts rose at 3-engine configurations. Old reviews citing \"15 prompts on Lite\" or \"4 fixed engines\" are describing the previous packaging.\n\n## The Honest Cons\n\nThe entry tier is a single-brand tool wearing an agency badge: 16-20 daily prompts cannot meaningfully cover two competitive niches, and credit packs start at Standard, so a Lite user who needs more can only jump five tiers in price. Claude's 3-credit pricing quietly triples the cost of the one engine where citation behavior differs most. And the deepest limitation is categorical: Otterly tells you where you stand and which sources get cited, but it will not write the pages, fix the schema, or negotiate the placement - expect to pair it with content and technical work, and budget for that honestly in any retainer quote.\n\n## Otterly.AI vs The Field\n\n| | Otterly.AI | [Peec AI](/tools/peec-ai/) | [Surfer SEO](/tools/surfer-seo/) |\n|---|---|---|---|\n| Core job | AI-answer visibility monitoring | AI-search visibility + team workflows | Content optimization & briefs |\n| Entry price | $29/mo | ~€85-95/mo | ~$79-99/mo |\n| Engines | 7, you pick ≥3 per workspace | Multi-engine set | n/a (Google-focused) |\n| Agency structure | Unlimited workspaces & members | Seat-based | Seat-based |\n| Fixes content | No - reports only | No - reports only | Yes - editor & briefs |\n\nOtterly is the measurement floor; Peec competes on workflow depth for teams; Surfer and its category fix what the measurement reveals. For traditional-rank tracking alongside AI visibility, [Ahrefs](/tools/ahrefs/) and [Semrush](/tools/semrush/) both bolt on their own AI-visibility modules - worth checking before paying for two platforms.\n\n## Bottom Line\n\nOtterly.AI is the tool to learn GEO reporting on and the tool to run small-client GEO retainers on: $29 buys real daily data across the engines that matter, unlimited reporting structure, and audits you can sell with. Its ceiling is honest - it measures, it does not fix - so the money is in pairing it with content work and billing for the whole loop, not the dashboard. Start on Lite with one brand, prove the reporting rhythm, and upgrade only when prompt volume, not ambition, forces it."
+  },
+  {
+    "name": "Sell The Trend",
+    "slug": "sell-the-trend",
+    "color": "#0EA5E9",
+    "category": "AI E-commerce",
+    "url": "https://www.sellthetrend.com/",
+    "price": "From $29.97/mo · 14-day trial",
+    "last_verified": "2026-11-19",
+    "description": "All-in-one dropshipping intelligence: the NEXUS AI engine aggregates demand signals from TikTok, Facebook, Amazon and Shopify, scores saturation, and pushes winners to your store in one click.",
+    "tags": [
+      {
+        "text": "Product Research"
+      },
+      {
+        "text": "Dropshipping"
+      },
+      {
+        "text": "Ad Intelligence"
+      },
+      {
+        "text": "Store Automation"
+      }
+    ],
+    "rating": "4.2",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "platform": "Web app + Chrome extension; 1-click push to Shopify, SellShop, TikTok Shop, Wix, eBay, Amazon, WooCommerce; automated order fulfillment",
+    "published": true,
+    "pricing_details": "Three self-serve plans plus a top tier, checked 2026-11-19 against the official pricing page (verified 2026-11-05 snapshot): Lite $29.97/mo monthly or $19.97/mo billed yearly ($239.64/yr) - NEXUS AI research 10 uses/day, Facebook Ads Finder 5/day, Store Intelligence 5/day, Niche Spy 10/day, 1-Click Push for 25 products, 1 connected store, 6 AI credits. Essential $49.97/mo or $32.97/mo yearly ($395.64/yr) - unlimited NEXUS, Facebook Ads Finder, Store Intelligence and Niche Spy; one handpicked winning product daily; 500 product imports; 1 store + 1 free SellShop store; 20 AI credits. Pro $99.97/mo or $66.64/mo yearly ($799.68/yr) - everything in Essential plus TikTok Viral Ads Finder, TikTok Shop Products Finder, 1,000 imports, up to 3 stores + 2 free SellShop stores, 40 AI credits. A Pro+ tier at $299.97/mo ($199.97/mo yearly) is reported by third-party trackers: 5 stores, 5,000 imports, 5 staff accounts, priority support. Annual billing saves about 33%. A 14-day free trial covers every plan; a payment method is required at signup and the trial converts to a paid subscription unless cancelled.",
+    "pros": [
+      "NEXUS collapses hours of manual research into scored product pages with cost, suggested price, profit margin, break-even CPA and a saturation meter on one screen",
+      "The ads finders show the exact creatives top sellers run - you model your first campaign on proven footage instead of guessing",
+      "One-click push to Shopify, TikTok Shop, Amazon, eBay and more, with automated fulfillment and inventory sync on connected suppliers",
+      "The AI Store Creator stocks a starter store in minutes, which is enough to validate a niche before you invest in design",
+      "Daily handpicked winners give non-researchers a starting shortlist instead of a blank screen"
+    ],
+    "cons": [
+      "The Lite plan's daily caps (10 NEXUS, 5 ad-finder uses) are hit within an hour of real work - the cheap tier is a demo, not a workflow",
+      "This is a subscription you pay for whether or not you sell anything - $360-960 a year is real money against an unvalidated side project",
+      "All metrics are estimates built from platform signals; the saturation meter can be wrong, and every 'proven winner' still needs your own ad testing",
+      "AI credits are thin (6-40 per month) - the AI store builder and video-ad features exhaust them quickly",
+      "Dropshipping's structural problems - shipping times, refunds, ad-account bans - are not the tool's to fix, and no dashboard makes them go away"
+    ],
+    "features": [
+      "NEXUS AI product discovery aggregating order data, saturation, margins and shipping from TikTok, Facebook, Amazon and Shopify signals",
+      "Facebook Winning Ads Finder and TikTok Viral Ads Finder with ad-level analytics (Pro for TikTok)",
+      "Store Intelligence - see competitors' best-sellers and their order momentum",
+      "Niche Spy for category-level trend spotting",
+      "Saturation meter and break-even CPA calculator on every product page",
+      "1-Click Push To Store across 7 platforms with supplier connection and automated order fulfillment",
+      "AI Store Creator that builds a stocked Shopify or SellShop store",
+      "Daily handpicked winning products and weekly market-insight reports"
+    ],
+    "faq": [
+      {
+        "question": "Can you actually make money using Sell The Trend?",
+        "answer": "The tool finds and scores candidates - the money still comes from ads, margins and operations. What it genuinely improves: you start from products with visible demand instead of blind guesses, you see cost-versus-price math (many listings show 70-90% gross margins on sub-$10 sourcing costs), and the ad finders let you model creatives that already worked. Treat every metric as an estimate, budget $200-500 for ad testing beyond the subscription, and treat the tool as the research stage of a business, not the business itself."
+      },
+      {
+        "question": "What is NEXUS?",
+        "answer": "NEXUS is Sell The Trend's AI engine that aggregates demand signals across TikTok, Facebook, Amazon and Shopify - order volumes, momentum, saturation, supplier data - into a scored product page with sourcing cost, suggested retail price, profit per sale and break-even CPA. On Lite it runs 10 searches a day; Essential and above are unlimited."
+      },
+      {
+        "question": "Is the 14-day trial really free?",
+        "answer": "Yes, but a payment method is required at signup (the company states this is to prevent spam accounts), and the trial converts to a paid subscription automatically unless you cancel before day 14. Calendar the cancellation date if you are only evaluating. There are no contracts and cancellation is one click."
+      }
+    ],
+    "content": "## What Sell The Trend Actually Is\n\nSell The Trend bundles the dropshipping research stack into one subscription: a product-discovery engine (NEXUS), ad spying for Facebook and TikTok, competitor store analysis, supplier connection, one-click product import, and automated order fulfillment. The NEXUS engine watches order momentum across TikTok, Facebook, Amazon and Shopify, then scores each product with the numbers that actually decide whether to test it - sourcing cost, suggested price, profit per sale, break-even CPA, and a saturation meter showing how many stores are already selling it. The company's own public reports pages show the current shape of the data: products at $1-11 sourcing cost selling at $30-50 with 70-90% margins and low single-digit saturation.\n\nIt is the middle path between a bare [Shopify](/tools/shopify/) store with no research tooling and enterprise e-commerce suites. For the surrounding toolset, see [our e-commerce AI tools comparison](/articles/best-ai-ecommerce-tools-2026-shopify-magic-vs-salesforce-vs-bigcommerce-vs-wix/).\n\n## The Money Angle\n\n**The research stage is where most stores die - this compresses it.** The dropshipping funnel is: pick a product, build a store page, buy ads, analyze, iterate. Beginners lose first at picking (saturated products, no margin) and second at ad creative. NEXUS attacks the first failure directly with saturation and margin data, and the Facebook/TikTok ad finders attack the second by showing what proven sellers run. Neither guarantees profit; both cut the cost of being wrong, which is what a research tool is for.\n\n**The realistic test budget.** A month of Essential ($49.97) plus $200-300 of ad spend is the honest cost of finding out whether this business suits you. The tool's break-even CPA calculation tells you the ceiling you can pay per customer before a product loses money - respect that number and most bad products reject themselves in testing instead of in month three.\n\n**Angle for existing sellers.** If you already sell on Amazon or Etsy - say through [Helium 10](/tools/helium-10/) for Amazon keyword work or [Printify](/tools/printify/) for POD - Store Intelligence doubles as competitive research: seeing what sells in adjacent stores is useful even if you never dropship. And affiliate sellers running [Amazon Associates](/tools/amazon-associates/) sites can use TikTok Shop and viral-ad data to spot products before the content wave, then build pages around them.\n\n## What It Really Costs\n\n| Plan | Monthly | Annual (per mo) | Daily limits | Stores | AI credits |\n|---|---|---|---|---|---|\n| Lite | $29.97 | $19.97 ($239.64/yr) | 10 NEXUS · 5 FB Ads · 5 Store Intel · 10 Niche Spy | 1 | 6 |\n| Essential | $49.97 | $32.97 ($395.64/yr) | Unlimited research | 1 + 1 SellShop | 20 |\n| Pro | $99.97 | $66.64 ($799.68/yr) | Unlimited research + TikTok finders | 3 + 2 SellShop | 40 |\n| Pro+ (reported) | $299.97 | $199.97 | Unlimited | 5 | higher |\n\nAnnual billing saves about 33%. Every plan starts with a 14-day free trial; a card is required and the trial auto-converts unless cancelled. Lite's daily caps are the fine print that matters: 10 NEXUS searches and 5 ad-finder uses a day run out inside an hour of real research, so Lite is for evaluating, not for working - plan to be on Essential ($395.64/yr) if you commit.\n\n## The Honest Cons\n\nYou are paying a fixed subscription for a variable-outcome business - the $400-800 a year due regardless of sales is the first line in your loss column, and no research score changes that. Second, the data is estimation: saturation meters and projected revenue are models of platform signals, not guarantees, and by the time a product surfaces with \"low saturation,\" other subscribers are seeing it too - speed to market is still the differentiator, and the tool does not provide speed. Third, the AI credits are marketing numbers more than capability: 6-20 credits a month covers a store build and a couple of video-ad drafts, then you are back to doing the work. Finally, the tool cannot fix dropshipping's real liabilities - 5-12 day shipping windows, refund rates, ad-account bans - and subscribers who blame the dashboard for those will churn regardless of plan.\n\n## Sell The Trend vs The Field\n\n| | Sell The Trend | [Helium 10](/tools/helium-10/) | Ad spy single tools |\n|---|---|---|---|\n| Core job | Dropshipping research + fulfillment in one | Amazon seller suite (keywords, listings, ops) | Ad libraries only |\n| Entry price | $29.97/mo | ~$39/mo | $50-250/mo |\n| Platform focus | Multi-platform (TikTok Shop, Shopify, Amazon, eBay) | Amazon-first | TikTok or Facebook |\n| Fulfillment | Built-in automated | No | No |\n| Best for | Solo dropshippers testing fast | Amazon brand builders | Media buyers with a product |\n\nSell The Trend wins on breadth-per-dollar for the dropshipping workflow. Helium 10 is the better buy once you are serious about Amazon specifically. Full-context comparisons live in [best-ai-tools-for-ecommerce-2026](/articles/best-ai-tools-for-ecommerce-2026/) and [our ad spy tools guide](/articles/best-ai-ad-spy-tools-2026-bigspy-vs-adspy-vs-poweradspy-vs-anstrex/).\n\n## Bottom Line\n\nSell The Trend is a sound buy at exactly one moment: when you are committed to testing dropshipping this quarter and will actually use the research, the ad finders and the fulfillment loop together - Essential on annual billing is the right tier and Lite is not a working plan. It is a poor buy for the merely curious, and a poor substitute for the willingness to spend money on ads and read the numbers. The tool compresses research from hours to minutes; the business still starts where the research ends."
+  },
+  {
+    "name": "Tavily",
+    "slug": "tavily",
+    "color": "#10B981",
+    "category": "AI Search",
+    "url": "https://www.tavily.com/",
+    "price": "Free 1,000 credits/mo · PAYG $0.008",
+    "last_verified": "2026-11-19",
+    "description": "The search API that AI agents call to reach the live web: LLM-ready results, page extraction, crawling and cited research reports, with 1,000 free credits every month and no card required.",
+    "tags": [
+      {
+        "text": "Search API"
+      },
+      {
+        "text": "AI Agents"
+      },
+      {
+        "text": "RAG"
+      },
+      {
+        "text": "Developer Tool"
+      }
+    ],
+    "rating": "4.6",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "platform": "REST API + Python/JS SDKs + CLI + hosted MCP server; native integrations with LangChain, LlamaIndex, CrewAI, AutoGen, Pydantic AI",
+    "published": true,
+    "pricing_details": "Official credit structure, checked 2026-11-19 across Tavily's published pricing documentation: Researcher plan $0 with 1,000 API credits per month (renewing, not a one-time pot; no credit card required). Credit costs: Basic Search 1 credit per request, Advanced Search 2 credits, Extract 1 credit per 5 successful URLs at basic depth (2 at advanced; failed extractions are not billed), Map 1 credit per 10 successful pages, Crawl and Research priced dynamically per task - deep research runs can consume up to 250 credits in a single request. Paid plans buy more credits at lower unit cost: Project $30/mo for 4,000 credits ($0.0075 each), Bootstrap $100/mo for 15,000 ($0.0067), Startup $220/mo for 38,000 ($0.0058), Growth $500/mo for 100,000 ($0.005). Pay-as-you-go runs $0.008 per credit with no monthly commitment. Enterprise is custom (committed volume, security review, SLAs). All plans expose the same API surface - paid tiers change volume and unit price, not features. Tavily was acquired by Nebius (2025); a hosted MCP server and official SDKs ship alongside the REST API.",
+    "pros": [
+      "Returns cleaned, LLM-ready content instead of raw HTML - the difference between an agent that cites real sources and one that hallucinates",
+      "The free 1,000 credits renew monthly, no card required - a personal agent or RAG prototype can run indefinitely at $0",
+      "Failed extractions are not billed, and pricing per endpoint is published, so cost per agent action is predictable",
+      "One key covers Search, Extract, Map, Crawl and Research - you do not stitch together four vendors",
+      "Drop-in integrations with LangChain, LlamaIndex, CrewAI and AutoGen, plus a hosted MCP server for Claude and other agent stacks"
+    ],
+    "cons": [
+      "Research tasks are priced dynamically and can burn up to 250 credits in one run - an unattended agent on a research loop can empty a month's allowance in minutes",
+      "The privacy default deserves attention: query data may be used to improve responses unless configured otherwise, and queries can be shared with third-party search indexes when content cannot be retrieved directly",
+      "No self-hosted option or open index - if data residency or a private index is a requirement, Tavily cannot provide it",
+      "No consumer search interface - if you want a search engine for yourself, this is not it; it is plumbing for software",
+      "Index quality is proprietary and opaque; results can be weaker on specialized verticals than a purpose-built industry API"
+    ],
+    "features": [
+      "Search API tuned for LLMs with basic (1 credit) and advanced (2 credits) depths, domain filters, time ranges and topic filtering",
+      "Extract endpoint returning readable page content (1 credit per 5 URLs, failed extractions free)",
+      "Map for site structure discovery and Crawl for map-plus-extract across a domain",
+      "Research endpoint producing multi-step cited reports (dynamic pricing, up to 250 credits per deep run)",
+      "Hosted MCP server plus Python and JavaScript SDKs and a CLI",
+      "Native LangChain, LlamaIndex, CrewAI, AutoGen and Pydantic AI integrations",
+      "include_domains parameter to restrict results to approved sources (docs sites, your own properties)",
+      "Monthly-renewing free tier identical in features to paid plans"
+    ],
+    "faq": [
+      {
+        "question": "Is Tavily actually free?",
+        "answer": "Yes, on the Researcher plan: 1,000 API credits every month, no credit card, and the same API surface as paid tiers. 1,000 credits is 1,000 basic searches or 500 advanced searches per month. Paid plans start at $30/month for 4,000 credits; pay-as-you-go is $0.008 per credit."
+      },
+      {
+        "question": "How many credits does one operation cost?",
+        "answer": "Basic Search: 1 credit. Advanced Search: 2. Extract: 1 credit per 5 successful URLs (failed ones are free). Map: 1 credit per 10 pages. Research: dynamic - a deep research run can cost up to 250 credits, so guard it behind explicit user actions rather than agent autonomy until you have measured your workload."
+      },
+      {
+        "question": "Tavily or Exa - which should I build on?",
+        "answer": "Both sell web retrieval for AI systems and both have free tiers. Tavily bundles search, extraction, crawling, mapping and research behind one credit pool with a flat monthly free allowance - the pragmatic pick when you want one integrated workflow. Exa centers on semantic search quality and neural ranking, with a $10/month free credit refresh. Many production stacks run both: semantic discovery on Exa, deterministic retrieval and crawling on Tavily. The full cost math is in [our search API pricing comparison](/articles/ai-search-api-pricing-2026-tavily-vs-exa-vs-brave-vs-serpapi/)."
+      }
+    ],
+    "content": "## What Tavily Actually Is\n\nTavily is the web-access layer for AI agents. A search engine shows a human ten blue links; Tavily returns cleaned, LLM-ready content that software can read, cite and reason over. One API key covers five jobs - Search (results tuned for models, at basic or advanced depth), Extract (readable content from URLs you already have), Map (a site's structure), Crawl (map plus extract across a domain) and Research (multi-step investigations that come back as cited reports). Official SDKs ship for Python and JavaScript alongside a CLI and a hosted MCP server, and the integrations list reads like the agent-framework index: LangChain, LlamaIndex, CrewAI, AutoGen, Pydantic AI. The company was acquired by Nebius in 2025, which put real infrastructure money behind what started as a researcher's tool.\n\nFor builders, this is infrastructure in the same sense [OpenRouter](/tools/open-router/) is infrastructure for text models: invisible to end users, and the reason their answers have sources.\n\n## The Money Angle\n\n**Agent-building services run on it.** The most direct path from this API to income is building automation for businesses that need current information: monitoring agents, lead-research pipelines, competitive watch, internal RAG over live sources. Your Tavily cost is cents per task - a monitoring agent checking 20 queries a day at 1-2 credits each burns roughly 600-1,200 credits a month, i.e. inside the free tier or one $30 Project plan - while clients pay hundreds per month for the outcome. For the surrounding stack, see [our workflow automation comparison](/articles/nocode-ai-automation-n8n-vs-zapier-vs-make-2026/) and [the agent frameworks guide](/articles/ai-agent-frameworks-2026-langgraph-vs-crewai-vs-microsoft-vs-openai/) covering [Crew AI](/tools/crew-ai/) and friends.\n\n**The free tier is a business plan, not a demo.** 1,000 renewing credits per month with no card is enough to prototype, demo to clients, and in some cases run a small production workload forever. Failed extractions cost nothing, and per-endpoint pricing is published - you can quote a per-task cost to a client before you write the code, then set margin on top. That is a healthier starting position than most \"AI agency\" tool stacks, where the unit economics are guesswork.\n\n**Content operations.** Research-heavy publishing - comparisons, market summaries, cited newsletters - gets a fact-checking layer that runs for pennies. The honesty caveat: Tavily retrieves what is published; editorial judgment about what is true stays human.\n\n## What It Really Costs\n\n| Plan | Price | Credits/mo | Unit cost | Fits |\n|---|---|---|---|---|\n| Researcher | $0 | 1,000 | free | Prototypes, personal agents, small monitors |\n| Project | $30/mo | 4,000 | $0.0075 | Single production workload |\n| Bootstrap | $100/mo | 15,000 | $0.0067 | Small team, several agents |\n| Startup | $220/mo | 38,000 | $0.0058 | Growing traffic |\n| Growth | $500/mo | 100,000 | $0.005 | Stable production volume |\n| Pay-as-you-go | usage | - | $0.008 | Spiky or seasonal workloads |\n| Enterprise | custom | custom | custom | Security review, SLAs, committed volume |\n\nCredit costs per operation: Basic Search 1, Advanced Search 2, Extract 1 per 5 URLs (failures free), Map 1 per 10 pages, Crawl and Research dynamic - deep research runs reach 250 credits. Daily discipline for a free-tier agent: default to basic depth, cache results, and cap research calls per day, because a runaway loop is the only realistic way to hit $0-tier exhaustion in an afternoon.\n\n## The Honest Cons\n\nThe free tier rewards discipline and punishes autonomy: an agent left alone with the Research endpoint can spend a month's credits in a few deep runs, so budget guardrails are your code's job, not the API's. The privacy posture requires a read: Tavily's policy allows portions of query data to improve responses unless you configure otherwise, and queries can be shared with third-party indexes when direct retrieval fails - for client-confidential workloads, that is a contract conversation, not a settings checkbox. There is no self-hosting and no visibility into the proprietary index, so regulated industries will want the Enterprise tier's terms. And it is plumbing: there is no UI to browse, no answer page to show stakeholders - demos still need your own interface in front of it.\n\n## Tavily vs The Field\n\n| | Tavily | [Exa](/tools/exa-ai/) | [Browse AI](/tools/browse-ai/) |\n|---|---|---|---|\n| Core job | LLM-ready web search + extract + crawl | Semantic/neural search + contents | No-code site monitoring by non-devs |\n| Free tier | 1,000 credits/mo, renewing | $10 credits/mo, renewing | 50 credits/mo |\n| Unit cost | $0.005-0.008/credit | $4-7 per 1,000 requests | ~$0.10-1.00 per run |\n| Agents | MCP + frameworks native | MCP + SDKs | Robots, not code agents |\n| Best for | Agent/RAG retrieval layer | Semantic discovery | Watched pages for ops teams |\n\nTavily and Exa overlap and many stacks run both. [Apify](/tools/apify/) and Browse AI cover the scraping side where you need UI-level interaction rather than clean retrieval; [Lindy](/tools/lindy/) and [n8n](/tools/n8n/) are where an agent built on Tavily gets deployed for clients.\n\n## Bottom Line\n\nTavily is the default answer to \"how does my agent reach the web\" - free enough to build on indefinitely, cheap enough that the API cost never threatens your margin, and integrated with every framework your stack will touch. Its limits are equally clear: mind the privacy terms on client data, cap your research loops in code, and remember that retrieval quality is only as good as the sources behind it. For the cost comparisons that decide between it and its rivals, start with [our search API pricing breakdown](/articles/ai-search-api-pricing-2026-tavily-vs-exa-vs-brave-vs-serpapi/)."
   }
 ]
