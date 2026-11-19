@@ -537,8 +537,26 @@ def footer_html() -> str:
         <p class="footer-meta">Copyright {datetime.now().year} {SITE_NAME} &middot; Updated daily</p>
     </footer>'''
 
+_ZH_SITE_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), '..', 'seo-site')
+
 def hreflang_tags(zh_path: str, en_path: str) -> str:
-    """Generate hreflang link tags for zh/en pair. CN site at aitoollab.cn."""
+    """Generate hreflang link tags for zh/en pair. CN site at aitoollab.cn.
+
+    2026-11-19 治本（用户规则：只有双方都有才互链，没有的别乱加）：
+    此前无条件输出 zh-CN 标签——英文站 534 条声明中 363 条指向中文站不存在
+    的页面（英文独有工具 114 + 全部文章 slug 不对应 228 + 分类 slug 体系不同 21）。
+    现以"中文站磁盘上对应页面是否真实构建"为唯一判据：不存在 → 整组不输出
+    （纯英文页无需声明自引用组）；存在 → 输出三行。与中文站注入器的
+    en_page_exists 判据互为镜像，双向闭环。
+    """
+    clean = zh_path.lstrip('/')
+    zh_file = os.path.join(_ZH_SITE_DIR, clean)
+    exists = (
+        os.path.isfile(zh_file)
+        or os.path.isfile(os.path.join(zh_file, 'index.html'))
+    )
+    if not exists:
+        return ''
     return (
         f'    <link rel="alternate" hreflang="zh-CN" href="{SITE_DOMAIN_CN}{zh_path}">\n'
         f'    <link rel="alternate" hreflang="en"    href="{SITE_DOMAIN}{en_path}">\n'
