@@ -19746,5 +19746,379 @@
       }
     ],
     "content": "## What Tavily Actually Is\n\nTavily is the web-access layer for AI agents. A search engine shows a human ten blue links; Tavily returns cleaned, LLM-ready content that software can read, cite and reason over. One API key covers five jobs - Search (results tuned for models, at basic or advanced depth), Extract (readable content from URLs you already have), Map (a site's structure), Crawl (map plus extract across a domain) and Research (multi-step investigations that come back as cited reports). Official SDKs ship for Python and JavaScript alongside a CLI and a hosted MCP server, and the integrations list reads like the agent-framework index: LangChain, LlamaIndex, CrewAI, AutoGen, Pydantic AI. The company was acquired by Nebius in 2025, which put real infrastructure money behind what started as a researcher's tool.\n\nFor builders, this is infrastructure in the same sense [OpenRouter](/tools/open-router/) is infrastructure for text models: invisible to end users, and the reason their answers have sources.\n\n## The Money Angle\n\n**Agent-building services run on it.** The most direct path from this API to income is building automation for businesses that need current information: monitoring agents, lead-research pipelines, competitive watch, internal RAG over live sources. Your Tavily cost is cents per task - a monitoring agent checking 20 queries a day at 1-2 credits each burns roughly 600-1,200 credits a month, i.e. inside the free tier or one $30 Project plan - while clients pay hundreds per month for the outcome. For the surrounding stack, see [our workflow automation comparison](/articles/nocode-ai-automation-n8n-vs-zapier-vs-make-2026/) and [the agent frameworks guide](/articles/ai-agent-frameworks-2026-langgraph-vs-crewai-vs-microsoft-vs-openai/) covering [Crew AI](/tools/crew-ai/) and friends.\n\n**The free tier is a business plan, not a demo.** 1,000 renewing credits per month with no card is enough to prototype, demo to clients, and in some cases run a small production workload forever. Failed extractions cost nothing, and per-endpoint pricing is published - you can quote a per-task cost to a client before you write the code, then set margin on top. That is a healthier starting position than most \"AI agency\" tool stacks, where the unit economics are guesswork.\n\n**Content operations.** Research-heavy publishing - comparisons, market summaries, cited newsletters - gets a fact-checking layer that runs for pennies. The honesty caveat: Tavily retrieves what is published; editorial judgment about what is true stays human.\n\n## What It Really Costs\n\n| Plan | Price | Credits/mo | Unit cost | Fits |\n|---|---|---|---|---|\n| Researcher | $0 | 1,000 | free | Prototypes, personal agents, small monitors |\n| Project | $30/mo | 4,000 | $0.0075 | Single production workload |\n| Bootstrap | $100/mo | 15,000 | $0.0067 | Small team, several agents |\n| Startup | $220/mo | 38,000 | $0.0058 | Growing traffic |\n| Growth | $500/mo | 100,000 | $0.005 | Stable production volume |\n| Pay-as-you-go | usage | - | $0.008 | Spiky or seasonal workloads |\n| Enterprise | custom | custom | custom | Security review, SLAs, committed volume |\n\nCredit costs per operation: Basic Search 1, Advanced Search 2, Extract 1 per 5 URLs (failures free), Map 1 per 10 pages, Crawl and Research dynamic - deep research runs reach 250 credits. Daily discipline for a free-tier agent: default to basic depth, cache results, and cap research calls per day, because a runaway loop is the only realistic way to hit $0-tier exhaustion in an afternoon.\n\n## The Honest Cons\n\nThe free tier rewards discipline and punishes autonomy: an agent left alone with the Research endpoint can spend a month's credits in a few deep runs, so budget guardrails are your code's job, not the API's. The privacy posture requires a read: Tavily's policy allows portions of query data to improve responses unless you configure otherwise, and queries can be shared with third-party indexes when direct retrieval fails - for client-confidential workloads, that is a contract conversation, not a settings checkbox. There is no self-hosting and no visibility into the proprietary index, so regulated industries will want the Enterprise tier's terms. And it is plumbing: there is no UI to browse, no answer page to show stakeholders - demos still need your own interface in front of it.\n\n## Tavily vs The Field\n\n| | Tavily | [Exa](/tools/exa-ai/) | [Browse AI](/tools/browse-ai/) |\n|---|---|---|---|\n| Core job | LLM-ready web search + extract + crawl | Semantic/neural search + contents | No-code site monitoring by non-devs |\n| Free tier | 1,000 credits/mo, renewing | $10 credits/mo, renewing | 50 credits/mo |\n| Unit cost | $0.005-0.008/credit | $4-7 per 1,000 requests | ~$0.10-1.00 per run |\n| Agents | MCP + frameworks native | MCP + SDKs | Robots, not code agents |\n| Best for | Agent/RAG retrieval layer | Semantic discovery | Watched pages for ops teams |\n\nTavily and Exa overlap and many stacks run both. [Apify](/tools/apify/) and Browse AI cover the scraping side where you need UI-level interaction rather than clean retrieval; [Lindy](/tools/lindy/) and [n8n](/tools/n8n/) are where an agent built on Tavily gets deployed for clients.\n\n## Bottom Line\n\nTavily is the default answer to \"how does my agent reach the web\" - free enough to build on indefinitely, cheap enough that the API cost never threatens your margin, and integrated with every framework your stack will touch. Its limits are equally clear: mind the privacy terms on client data, cap your research loops in code, and remember that retrieval quality is only as good as the sources behind it. For the cost comparisons that decide between it and its rivals, start with [our search API pricing breakdown](/articles/ai-search-api-pricing-2026-tavily-vs-exa-vs-brave-vs-serpapi/)."
+  },
+  {
+    "name": "AppSumo",
+    "slug": "appsumo",
+    "color": "#F26B3A",
+    "category": "AI Income",
+    "url": "https://appsumo.com/",
+    "price": "Free to list · keep 70-95%",
+    "last_verified": "2026-11-20",
+    "rating": "4.1",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "description": "The launch marketplace where AI founders sell to 1.5M deal-hunting entrepreneurs: AppSumo runs the emails, ads and affiliates, you keep 95% of buyers you bring and 70% of theirs - no upfront fees, about 10% of applicants accepted.",
+    "tags": [
+      {
+        "text": "Marketplace"
+      },
+      {
+        "text": "Sell SaaS"
+      },
+      {
+        "text": "Lifetime Deals"
+      },
+      {
+        "text": "AI Founders"
+      },
+      {
+        "text": "Distribution"
+      }
+    ],
+    "platform": "Web marketplace; AppSumo handles checkout and code redemption; partner payouts by bank transfer after the 60-day window",
+    "pricing_details": "Official seller terms, checked 2026-11-20 on sell.appsumo.com: no upfront or listing fees - AppSumo earns only on revenue share. You keep 95% of each sale from buyers new to AppSumo and 70% from returning customers (existing Sumo-lings), with exact rates negotiable by product category and expected performance. Payouts arrive 60 days after each month ends, aligned to a 60-day refund window. Campaigns run about 60 days with email to the 1.5M+ subscriber list, paid Google/Meta campaigns (up to $25K spend contributed for top performers) and promotion by 20K affiliates. About 10% of applicants are accepted; vetting covers functionality, stability, market fit and support capacity. Not exclusively lifetime deals anymore - annual and other structures are negotiable per the official seller page. Company-stated totals: $113M+ paid to partners, 1.5M entrepreneurs on the list, $17B raised by partners post-launch. A self-serve marketplace route (sell.appsumo.com/now, 580+ products listed) offers the same baseline split with lighter marketing support.",
+    "pros": [
+      "You keep 95% of every sale from new buyers and 70% from returning customers, with zero upfront cost - AppSumo only earns when you do",
+      "The audience is pre-built: 1.5M entrepreneurs, roughly 40% of partner revenue comes from AppSumo emails, plus ads and 20K affiliates you do not recruit yourself",
+      "Explicitly welcomes small AI tools and vibe-coded apps (Lovable, Bolt, Cursor, Replit builds) as long as the product works and you will support it",
+      "A 60-day campaign doubles as market validation - real sales volume, blunt reviews and case studies partners cite when raising money",
+      "You keep every customer relationship, review and signup after the campaign ends"
+    ],
+    "cons": [
+      "About 90% of applications get rejected - a working product, stable team and support capacity are vetted before you ever reach the email list",
+      "The 60-day payout delay ties up cash while refunds still run, which hurts exactly the small founders who launched for cash flow",
+      "A lifetime deal permanently caps what your earliest fans pay - price it carelessly and your best users paid less than one year of subscription",
+      "AppSumo buyers are deal hunters: expect aggressive pricing pressure, blunt public reviews and support spikes that have buried solo founders",
+      "Most AppSumo volume comes from returning customers, so the 70% share - not 95% - applies to the bulk of real sales"
+    ],
+    "features": [
+      "Revenue-share listing with no upfront fees (95% new buyers / 70% returning buyers as the published baseline, negotiable)",
+      "Campaign email to 1.5M+ subscribers plus Google and Meta ad campaigns - up to $25K of spend contributed for top performers",
+      "20K affiliates (YouTubers, bloggers, newsletter creators) promoting launches",
+      "Public reviews and Q&A on every listing that feed product feedback",
+      "Not LTD-only: annual deals and custom structures negotiable",
+      "Select badge program for top performers with priority placement and bigger marketing investment",
+      "Self-serve marketplace route for smaller products (580+ products listed)"
+    ],
+    "faq": [
+      {
+        "question": "Does AppSumo cost anything to list?",
+        "answer": "No. There are no upfront or listing fees on either the curated launch route or the self-serve marketplace; AppSumo takes its cut only from sales - 30% of returning-customer sales and 5% of new-buyer sales under the published baseline split (you keep 70% and 95% respectively). Rates are negotiable by category."
+      },
+      {
+        "question": "How much can you actually make on AppSumo?",
+        "answer": "AppSumo states $113M+ paid to partners in total and that about 40% of partner revenue comes from its emails. Its own earnings claims are based on the top 50% of partners per category over 12 months, so treat case studies as the ceiling, not the median. A well-priced tool with real utility to small-business owners converts the list; a niche B2B product with no support plan often stalls after the first email sends."
+      },
+      {
+        "question": "Is AppSumo still lifetime deals in 2026?",
+        "answer": "Not exclusively. The official seller page states AppSumo also works with annual pricing and other structures, negotiated per product. Lifetime deals remain the dominant format, but you can propose alternatives during the deal-terms step."
+      },
+      {
+        "question": "Can I sell an app I built with Lovable or Bolt?",
+        "answer": "Yes - the official sell page explicitly names Lovable, Bolt, Cursor and Replit builds as acceptable, provided the product is working and you will support it. Pre-launch or vaporware products are rejected."
+      }
+    ],
+    "content": "## What AppSumo Actually Is\n\nAppSumo is a launch marketplace for software and digital products. You apply; if accepted, your product goes in front of the company's 1.5M-subscriber email list with paid ads and 20,000 affiliates behind it. The economics are revenue share, not listing fees: you keep 95% of every sale from new AppSumo buyers and 70% from returning ones, and AppSumo keeps the rest. Campaigns run about 60 days. It is no longer purely a lifetime-deal shop - the official seller page states annual and other deal structures are negotiable.\n\nThe acceptance gate matters more than the fee table. About 10% of applicants get in, and the vetting criteria are blunt: a working product (not a roadmap), a team that will still exist in a year, and evidence you will handle support. The seller page explicitly welcomes AI tools and vibe-coded apps - \"Built with Lovable, Bolt, Cursor or Replit? Fine, if it works and you'll support it\" - which makes this one of the few credible distribution doors for a weekend-built [Lovable](/tools/lovable/) or [Bolt.new](/tools/bolt.new/) project that already has real users.\n\n## The Money Angle\n\n**Who actually makes money here:** founders with a working SaaS or AI tool who need distribution more than margin. The official pitch: $113M+ paid to partners, roughly 40% of partner revenue comes from AppSumo emails, top performers get up to $25K of Google/Meta ad spend from AppSumo's pocket, and partners have raised $17B after launches - a launch as demand proof for investors.\n\n**The math to run before applying.** A lifetime deal trades recurring revenue for a cash spike plus an audience. If your tool is $29/mo, one subscriber is worth $348/year; an AppSumo buyer paying $79 once is worth $79 - unless you convert them to a paid plan later. Founders who do well treat the launch as four assets at once: upfront cash for runway, a few thousand real users stress-testing the product, public reviews and case studies, and an email list of their own for upsells (AppSumo hands you the customer relationship, not just a payout). Founders who regret it are the ones whose entire model depended on month-4 recurring revenue with no upsell path.\n\n**Two doors, different muscle.** The curated launch route (sell.appsumo.com) carries the full marketing machine described above. There is also a self-serve marketplace route (580+ products listed) with the same baseline split but lighter promotion - faster to get listed, quieter when it does.\n\n## What It Really Costs\n\n| Item | Number |\n|---|---|\n| Listing / upfront fees | $0 |\n| Your share - buyers new to AppSumo | 95% |\n| Your share - returning AppSumo customers | 70% |\n| Acceptance rate | ~10% of applicants |\n| Campaign length | ~60 days |\n| Payout timing | 60 days after each month ends |\n| Refund window | 60 days |\n| Ad spend AppSumo contributes (top performers) | up to $25K |\n\nThe payout timing is the number people miss: you carry refund exposure for two months after a sale before the money is yours. Fine for a side project, painful if the launch is your only cash source.\n\n## The Honest Cons\n\nFirst, rejection - roughly 90% of applications fail, and the \"working product with support capacity\" bar screens out exactly the pre-revenue projects that most want exposure. Second, the audience is deal-driven: Sumo-lings expect aggressive pricing, leave blunt reviews in public, and file support tickets at volumes that have overwhelmed solo maintainers. Third, a lifetime deal caps your earliest and most loyal users' payments forever - if your annual plan is $99 and your LTD is $79, your biggest fans paid you less than one year of subscription. Fourth, most AppSumo traffic is returning customers, so the 70% share, not the 95%, applies to the bulk of real volume. Fifth, the earnings claims on the sell page are based on the top 50% of partners per category; the median launch does not look like the case studies.\n\n## AppSumo vs Selling Direct\n\n| | AppSumo | [Gumroad](/tools/gumroad/) | [Lemon Squeezy](/tools/lemon-squeezy/) | [Whop](/tools/whop/) |\n|---|---|---|---|---|\n| Audience | 1.5M-list emails + affiliates | your traffic | your traffic | your traffic + marketplace |\n| Fees | 5-30% revenue share | 10% + $0.50 per sale | 5% + $0.50 per sale | 3% direct / 30% marketplace |\n| Price control | negotiated deal terms | full | full | full |\n| Recurring revenue | LTDs, annual deals | yes | yes (SaaS mode) | yes |\n| Discovery | built-in and large | minimal | minimal | some |\n\nSelling direct through Gumroad or Lemon Squeezy keeps margin and pricing power but supplies zero audience - every buyer is one you brought yourself. AppSumo trades 5-30% of revenue plus deal-term control for a distribution engine you could not buy at retail. If you already have an audience, sell direct. If you do not, AppSumo is one of the few places an unknown tool gets real traffic on day one.\n\n## Bottom Line\n\nAppSumo in 2026 is a distribution channel, not a business model. It fits when your product works, support will not break you, and you need users, reviews and runway cash more than you need recurring-revenue purity. It fails when your economics depend on subscription income you are about to sell at $79 for life. Apply with a working product, price the deal against your annual plan, and build an upsell path before launch day - the 95% share is real, and so are the 60-day wait and the 10% acceptance rate. For the wider map of routes from \"built a thing\" to \"paid for a thing\", see [how to make money with AI tools](/articles/how-to-use-ai-to-make-money-online-2026/) and [our income-tools index](/articles/ai-tools-that-make-money-2026/).",
+    "published": true
+  },
+  {
+    "name": "Teachable",
+    "slug": "teachable",
+    "color": "#12A190",
+    "category": "AI Income",
+    "url": "https://teachable.com/",
+    "price": "Free + paid from $39/mo",
+    "last_verified": "2026-11-20",
+    "rating": "4.2",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "description": "Course platform built around a real free plan: publish and sell one course at $1 + 10% per sale, then climb the fee ladder to 0% at Pro ($119/mo annual). Course delivery done well, without Kajabi's all-in-one price tag.",
+    "tags": [
+      {
+        "text": "Online Courses"
+      },
+      {
+        "text": "Course Platform"
+      },
+      {
+        "text": "Digital Products"
+      },
+      {
+        "text": "Creators"
+      },
+      {
+        "text": "Free Plan"
+      }
+    ],
+    "platform": "Web + iOS/Android student apps; Teachable Payments (Stripe-powered) in 130+ countries; PayPal supported",
+    "pricing_details": "Plan structure cross-checked 2026-11-20 across Teachable's pricing page and 2026 fee trackers (the official page renders plan tables in JavaScript and was running Black Friday discounts at verification time; annual/monthly figures reconciled from multiple consistent sources): Free $0 - 1 published course, unlimited students, $1 + 10% per sale; Basic $39/mo billed annually ($59 monthly) - 5 courses, 5% transaction fee (sources differ on whether it applies to all sales or only non-native checkout such as PayPal), custom domain, coupons, drip; Pro $119/mo annually ($159 monthly) - unlimited courses, 0% transaction fees, affiliate program, certificates, live lessons, graded quizzes, advanced reports; Pro+ $199/mo annually ($249 monthly); Business $499/mo annually ($665 monthly) - bulk enrollments, API, custom user roles. Stripe processing (~2.9% + $0.30) applies on every plan. Fee-tracker break-evens: free-to-Basic pays off around $780/month in course revenue; Basic-to-Pro around $2,380/month. Teachable Payments handles payouts in 130+ countries.",
+    "pros": [
+      "The free plan is a real store: 1 published course, unlimited students, built-in checkout - no monthly fee while you validate demand",
+      "The fee ladder is transparent: $1 + 10% on Free, 5% on Basic, 0% from Pro up - you can do the math before committing",
+      "The course player and student experience are among the cleanest in the category, with iOS/Android apps students actually use",
+      "Teachable Payments covers 130+ countries, so non-US creators get paid without payment-workaround hacks",
+      "One-time payments, payment plans, subscriptions, bundles and coupons are all native - no add-on stack needed to price flexibly"
+    ],
+    "cons": [
+      "The free plan's $1 + 10% is the worst deal in the category once you sell real volume - Thinkific's free plan charges 0%",
+      "No email marketing, no community space, no real landing page builder - a serious Teachable business pairs it with an email tool and page builder",
+      "Pro is the first plan with 0% fees, and $119/mo annual is not cheap while you are still validating",
+      "Certificates, the affiliate program and graded quizzes only arrive at Pro",
+      "The free plan caps you at 1 published course, which blocks multi-product testing"
+    ],
+    "features": [
+      "Unlimited courses and students on paid tiers; 1 published course on Free",
+      "Course builder with video, audio, text and PDF lessons, quizzes and drip scheduling",
+      "Checkout with one-time payments, payment plans, subscriptions, bundles, coupons and order bumps",
+      "Teachable Payments (Stripe-powered) in 130+ countries plus PayPal",
+      "iOS and Android student apps with progress tracking",
+      "Affiliate program management from Pro",
+      "Course completion certificates and graded quizzes from Pro",
+      "Sales analytics on all plans; advanced reports and user analytics from Pro"
+    ],
+    "faq": [
+      {
+        "question": "Is Teachable's free plan actually usable?",
+        "answer": "Yes, with one course and unlimited students - a real way to validate demand at $0 monthly. The catch is per-sale: a $97 course sale costs $10.70 to Teachable plus about $3.20 in Stripe fees, so you keep roughly $83. That is acceptable while testing and expensive at volume; fee trackers put the break-even for upgrading to Basic (5% fee, $39/mo annual) around $780/month in sales."
+      },
+      {
+        "question": "How does Teachable compare to Kajabi?",
+        "answer": "Kajabi bundles email marketing, funnels, community and a website builder into one subscription at a higher price (see [our Kajabi review](/tools/kajabi/)); Teachable focuses on course delivery at a lower cost and expects you to bring your own email tool such as [Kit](/tools/kit/) or [beehiiv](/tools/beehiiv/). If you will actually use Kajabi's bundled features, the price gap narrows; if you just need to sell a course well, Teachable is cheaper. The full three-way comparison is in [our course platform guide](/articles/best-ai-course-platform-2026-kajabi-vs-thinkific-vs-teachable-vs-learnworlds/)."
+      },
+      {
+        "question": "What does Teachable take from a $100 sale?",
+        "answer": "Free plan: $11.00 to Teachable + about $3.20 Stripe = you keep roughly $85.80. Basic: $5.00 + $3.20 = about $91.80. Pro and up: $0 platform fee + $3.20 = about $96.80. The plan you should be on is the one where the subscription costs less than the fees it removes."
+      }
+    ],
+    "content": "## What Teachable Actually Is\n\nTeachable is a dedicated course platform: hosting, checkout, student management and a clean course player, with a free plan that lets you publish one real course and sell it before you pay Teachable anything. The trade is the fee ladder: the free plan takes $1 + 10% of every sale, Basic takes 5%, and Pro takes 0%. Where [Kajabi](/tools/kajabi/) bundles email, funnels, community and a website into a higher-priced suite, Teachable does course delivery well and stops there - you bring your own email tool ([Kit](/tools/kit/) or [beehiiv](/tools/beehiiv/)), your own pages and your own community.\n\nIt sits in the middle of the field this site tracks: marketplaces like [Udemy](/tools/udemy/) bring students but take pricing control and pay 37% on market sales; subscription pools like [Skillshare](/tools/skillshare/) pay by watch minutes; Gumroad sells files with no course structure. Teachable is for people who own their audience and want a storefront they control at a mid-market price.\n\n## The Money Angle\n\n**Step 1 - validate on free.** Publish one course, connect Teachable Payments (Stripe-powered, 130+ countries), price it as a one-time payment or payment plan. The $1 + 10% fee stings but costs nothing monthly: a $97 sale nets you about $83 while you find out whether anyone buys.\n\n**Step 2 - upgrade on data, not hope.** The fee math: free-to-Basic pays for itself around $780/month in course revenue; Basic-to-Pro around $2,380/month. Below those lines, stay put and spend the difference on audience building.\n\n**Step 3 - raise average order value.** Bundles, order bumps and payment plans are native. A $47 course with a $97 bundle option routinely out-earns two separate courses, and payment plans convert buyers who cannot justify the lump sum.\n\n**Step 4 - affiliates at Pro.** The affiliate program (Pro and up) lets students and partners promote for a cut. This is how course businesses grow past their own email list - and why the Pro tier is the first one that behaves like a business plan rather than a store.\n\n**The honest part:** Teachable is a delivery engine, not a traffic source. People making real money here already have an audience from YouTube, a newsletter, SEO or social. If you do not, build that first - see [how to make money with AI tools](/articles/how-to-use-ai-to-make-money-online-2026/).\n\n## What It Really Costs\n\n| Plan | Annual (per mo) | Monthly | Transaction fee | Courses |\n|---|---|---|---|---|\n| Free | $0 | $0 | $1 + 10% | 1 published |\n| Basic | $39 | $59 | 5% | 5 |\n| Pro | $119 | $159 | 0% | Unlimited |\n| Pro+ | $199 | $249 | 0% | Unlimited + advanced roles |\n| Business | $499 | $665 | 0% | Unlimited + API, bulk actions |\n\nStripe processing (~2.9% + $0.30) applies on every plan. Teachable's pricing page was running Black Friday discounts when we verified (late November 2026), so check the live page before comparing. One nuance from fee trackers: some report Basic's 5% applying only to non-native checkout such as PayPal; most sellers on Teachable Payments see it on all sales - read the checkout terms at signup. The full platform comparison lives in [our course platform guide](/articles/best-ai-course-platform-2026-kajabi-vs-thinkific-vs-teachable-vs-learnworlds/).\n\n## What a $100 Sale Actually Pays\n\n| Plan | Teachable cut | Stripe (est.) | You keep |\n|---|---|---|---|\n| Free | $11.00 | ~$3.20 | ~$85.80 |\n| Basic | $5.00 | ~$3.20 | ~$91.80 |\n| Pro | $0 | ~$3.20 | ~$96.80 |\n\n## The Honest Cons\n\nThe free plan's $1 + 10% is the worst deal in the category at volume - Thinkific's free plan charges 0% on its one course. There is no email marketing, no community space and no real landing page builder, so every serious Teachable business pairs it with an email tool ([Kit](/tools/kit/) is the common pick; see [our email marketing comparison](/articles/best-ai-email-marketing-tools-2026-mailchimp-vs-hubspot-vs-activecampaign-vs-brevo/)) - which narrows the price gap to Kajabi once you add the second subscription. Certificates, affiliates and graded quizzes only arrive at Pro. And the free plan's single-course cap blocks multi-product testers.\n\n## Teachable vs The Field\n\n| | Teachable | [Udemy](/tools/udemy/) | [Skillshare](/tools/skillshare/) | [Kajabi](/tools/kajabi/) |\n|---|---|---|---|---|\n| Model | own storefront | marketplace | subscription pool | all-in-one suite |\n| Traffic | you bring it | they bring it | they bring it | you bring it |\n| Your cut | 90-100% minus fees | 37% market / 97% own links | watch-minute pool | 100% minus subscription |\n| Cost to start | $0 + per-sale fees | free to teach | free to teach | paid plans only |\n| Email/community | separate tools | no | no | included |\n\n## Bottom Line\n\nTeachable is the right pick when you have an audience, want the lowest-risk way to sell a real course, and accept that email and community live elsewhere. Validate on free, move to Basic when the 10% bleed exceeds $39/month, and go Pro when affiliates and certificates matter. If you want everything in one box and will actually use it, compare Kajabi; if you want marketplace traffic with no list-building, compare Udemy. Pair the course with an AI content stack - see [our creators' toolkit](/articles/ai-tools-that-make-money-2026/) - and the platform itself becomes the smallest line in your budget.",
+    "published": true
+  },
+  {
+    "name": "SciSpace",
+    "slug": "scispace",
+    "color": "#6366F1",
+    "category": "AI Research",
+    "url": "https://scispace.com/",
+    "price": "Free 100 credits/mo · $12/mo annual",
+    "last_verified": "2026-11-20",
+    "rating": "4.4",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "description": "AI research agent over a 280M+ paper corpus: chat with PDFs, run literature reviews and systematic reviews, extract findings into comparison tables, and draft with citations intact - one workspace where Elicit stops at discovery.",
+    "tags": [
+      {
+        "text": "Literature Review"
+      },
+      {
+        "text": "Research Assistant"
+      },
+      {
+        "text": "PDF Chat"
+      },
+      {
+        "text": "Systematic Review"
+      },
+      {
+        "text": "Citations"
+      }
+    ],
+    "platform": "Web app + SciSpace Copilot browser extension; exports to RIS/BIB/CSV/Excel; institutional login for full texts",
+    "pricing_details": "Official pricing, checked 2026-11-20 on scispace.com/pricing: Free - 100 monthly credits, Lite model only, literature review search included. Premium $20/mo monthly or $12/mo billed annually ($144/yr) - 1,200 credits/mo, 4 parallel agent queries, Deep Research, systematic review (SLR) workflows, Pro model access. Advanced $90/mo monthly or $70/mo annually ($840/yr) - 10,000 credits/mo, 8 parallel queries, Expert model access. Max $200/mo monthly or $160/mo annually ($1,920/yr) - 40,000 credits/mo, 16 parallel queries, priority support. Enterprise custom (SSO/SCIM, shared credit pools, consolidated billing). Credits reset monthly with no rollover; all plans carry a 24-hour money-back guarantee. SciSpace also sells a separate Editor product for manuscript formatting (dual pricing surfaces that confuse buyers). Flash sales periodically discount annual plans further. Company claims: 280M+ papers, 10M+ researchers.",
+    "pros": [
+      "One workspace covers the whole loop: search, PDF chat, extraction into comparison tables, systematic review and cited drafting",
+      "Answers arrive with inline citations you can click, drawn from a 280M+ paper corpus - the trail is verifiable, not decorative",
+      "Premium at $12/mo annual undercuts most research-assistant subscriptions while adding writing tools Elicit does not include",
+      "Parallel agent queries (4-16 by tier) let long review jobs actually finish in an afternoon",
+      "The free tier plus the Copilot browser extension give students a real no-cost entry point"
+    ],
+    "cons": [
+      "Credits expire monthly with no rollover - a heavy agent month burns the pool, and unused credits are simply gone",
+      "Dual pricing (Agent plans vs a separate Editor product) confuses buyers; related functions can mean paying twice",
+      "Like every AI research tool it can misread or overstate findings - outputs need verification against the actual papers",
+      "Advanced and Max tiers ($70-160/mo annual) are priced for teams, not individual students",
+      "The free tier's 100 credits with the Lite model only is enough to evaluate, not to work"
+    ],
+    "features": [
+      "Chat with PDF with inline citations pointing to the source text",
+      "Literature review across 280M+ papers with multi-column exports (up to 50 columns)",
+      "Deep Review and systematic literature review (SLR) agent workflows",
+      "Data extraction into comparison tables across many papers",
+      "AI Writer that drafts with citations from the corpus; Paraphraser in 75+ languages that preserves citations",
+      "Citation generator with 40,000+ journal formatting templates",
+      "Copilot browser extension that explains papers on any site",
+      "100-40,000 monthly agent credits and 1-16 parallel queries by tier"
+    ],
+    "faq": [
+      {
+        "question": "Is SciSpace free?",
+        "answer": "There is a free tier: 100 credits per month on the Lite model, with literature review search and basic PDF chat. It is a real but small allowance - enough to test one end-to-end task, not to run a review project. Premium at $12/mo billed annually (or $20 monthly) raises the pool to 1,200 credits and adds Deep Research and SLR workflows."
+      },
+      {
+        "question": "SciSpace or Elicit - which one?",
+        "answer": "Elicit is the focused pick for paper discovery and screening, with a Pro tier at $49/user/mo aimed at systematic review teams. SciSpace covers more of the workflow in one place - PDF chat, extraction tables, drafting with citations - at a lower entry price. Many researchers run both: Elicit for finding and screening, SciSpace for reading and writing. The full comparison is in [our literature review tools guide](/articles/best-ai-literature-review-tools-2026-elicit-vs-scite-vs-researchrabbit-vs-litmaps/)."
+      },
+      {
+        "question": "Can SciSpace write my paper?",
+        "answer": "It drafts text with citations inserted from the corpus, which is drafting support rather than authorship. Every claim needs verification against the source paper - AI research tools misread methods sections and overstate findings often enough that unverified output is a real reputational risk. Journals also require AI-use disclosure under their policies. Use it to compress reading and structuring, not to bypass the scholarship."
+      }
+    ],
+    "content": "## What SciSpace Actually Is\n\nSciSpace (formerly Typeset) is an AI research agent built on a corpus of 280M+ papers. The core loop: ask a question and get an answer with inline citations you can click; upload PDFs and chat with them; run a literature review and extract findings into comparison tables; run a systematic review (SLR) workflow; then draft text with citations inserted from the corpus. A browser extension (Copilot) explains papers as you read them anywhere on the web. It is the tool in this category that tries to cover reading, extraction and writing in one workspace - where [Elicit](/tools/elicit/) stays focused on paper discovery and screening and [Consensus](/tools/consensus/) stays focused on evidence-based yes/no questions.\n\n## Who Actually Makes Money With It\n\nBe honest with yourself here: SciSpace is a work-acceleration tool, not an income source. Four groups do make money with it. Consultants and agencies produce evidence-backed reports, competitive-intelligence dossiers and literature-grounded white papers - the SLR agent and comparison-table extraction compress a two-week review into days, and clients pay for the verified output, not the speed. Content creators in technical niches (health, AI, finance) use it to keep claims citable so their articles survive editor scrutiny and rank. Graduate students and researchers run paid tutoring, thesis-support and research-assistant work faster. R&D teams use Deep Review for internal science and market scans.\n\nThe unifying rule: the money comes from selling the finished, verified work - never from reselling the AI's raw output. Every claim still needs checking against the actual paper, because a single fabricated citation can end a client relationship.\n\n## What It Really Costs\n\n| Plan | Monthly | Annual (per mo) | Credits/mo | Parallel agent queries |\n|---|---|---|---|---|\n| Free | $0 | $0 | 100 | 1 (Lite model) |\n| Premium | $20 | $12 ($144/yr) | 1,200 | 4 |\n| Advanced | $90 | $70 ($840/yr) | 10,000 | 8 |\n| Max | $200 | $160 ($1,920/yr) | 40,000 | 16 |\n| Enterprise | custom | custom | shared pools | admin-managed |\n\nCredits reset monthly with no rollover, and every plan carries a 24-hour money-back guarantee. SciSpace also sells a separate \"Editor\" product for manuscript formatting - a second pricing surface that has confused more than one buyer; if you only need formatting, you do not need an Agent plan. Flash sales periodically cut annual prices further.\n\n## The Credit Reality\n\nThe credit pool is the pricing mechanism that matters. Light PDF-chat use barely dents the free 100 credits; agent workflows - Deep Review, SLR, multi-paper extraction - consume them quickly, and a heavy month does not borrow from next month. Practical guidance: measure one real task end-to-end on the free tier, multiply by your monthly workload, then pick the tier. Most individual researchers land on Premium ($144/yr); most teams on Advanced ($840/yr).\n\n## vs The Field\n\n| | SciSpace | [Elicit](/tools/elicit/) | [Consensus](/tools/consensus/) | [Scite](/tools/scite/) |\n|---|---|---|---|---|\n| Core strength | full loop: read, extract, draft | discovery + screening | evidence Q&A | citation context |\n| PDF chat | yes | limited | no | no |\n| Systematic reviews | yes (SLR agent) | partial (Pro) | no | no |\n| Writing with citations | yes | limited | no | no |\n| Entry price | free 100 credits | free tier | free tier | free tier |\n\nFor where ResearchRabbit and Litmaps fit alongside these, see [our literature review tools comparison](/articles/best-ai-literature-review-tools-2026-elicit-vs-scite-vs-researchrabbit-vs-litmaps/).\n\n## The Honest Cons\n\nOutput quality is strong but not trustworthy by default: AI research assistants misread methods sections and overstate findings, and SciSpace is no exception - verification against source papers is part of the job, not an optional extra. The dual Agent/Editor pricing surfaces confuse buyers, and the advanced tiers are priced for teams rather than individuals. Credits expire monthly with no banking, which punishes bursty workloads. And the free tier's 100 credits on the Lite model only is an evaluation allowance, not a working one.\n\n## Bottom Line\n\nIf your work - paid or academic - involves reading more papers than hours allow, SciSpace is this category's best all-in-one: the citation trail is real, the extraction tables save the most time, and Premium at $12/mo annual is cheap relative to the hours it returns. Buy the tier that matches measured usage, verify everything you publish, and treat the writing features as drafting support rather than a ghostwriter. When you just need quick evidence checks instead of deep review work, [Consensus](/tools/consensus/) or [Perplexity](/tools/perplexity/) are lighter companions.",
+    "published": true
+  },
+  {
+    "name": "Jungle Scout",
+    "slug": "jungle-scout",
+    "color": "#16A34A",
+    "category": "AI E-commerce",
+    "url": "https://www.junglescout.com/",
+    "price": "From $29/mo annual · no free plan",
+    "last_verified": "2026-11-20",
+    "rating": "4.5",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "description": "Amazon product research platform used by 1M+ sellers: product database, Keyword Scout, AccuSales sales estimates, supplier database and AI-assisted listing tools - the data layer that decides what you sell on Amazon before inventory spend.",
+    "tags": [
+      {
+        "text": "Amazon FBA"
+      },
+      {
+        "text": "Product Research"
+      },
+      {
+        "text": "Keyword Research"
+      },
+      {
+        "text": "E-commerce"
+      },
+      {
+        "text": "Sales Estimates"
+      }
+    ],
+    "platform": "Web app + Chrome/Firefox extension; mobile companion apps; 7-day money-back guarantee instead of a free trial",
+    "pricing_details": "Official pricing, checked 2026-11-20 on junglescout.com: three plans, monthly or annual (annual saves up to 40%). Starter $49/mo monthly or $29/mo billed annually ($348/yr) - product database 100 searches/mo, Keyword Scout 50/mo, browser extension, 50 tracked products, 500 sales estimates/mo, 1 month keyword history, 1 seat. Growth Accelerator $79/mo monthly or $49/mo annually ($588/yr) - 150 tracked products, 1,000 estimates/mo, 1 year keyword history, AI Assist automation, review automation, listing tools, extra seats $49. Brand Owner + Competitive Intelligence $399/mo monthly or $299/mo annually ($3,588/yr) - the new 2026 Competitive Intelligence suite (automated segments, market overview, keyword insights), 2,000 tracked products, 2-year history, 10 seats included, priority onboarding. Cobalt enterprise tier custom. No free plan and no free trial - a 7-day money-back guarantee substitutes. Legacy pages still circulate with Suite/Professional names ($49-$149/mo); the 2026 lineup replaced them.",
+    "pros": [
+      "The most trusted Amazon dataset in the category: AccuSales estimates lean on Amazon first-party data, with 1M+ sellers on record",
+      "Complete loop in one subscription: find products, validate keywords, source suppliers, track inventory, automate reviews",
+      "AI Assist (Growth Accelerator and up) automates repetitive seller work - review requests, listing drafts - that consumes hours weekly",
+      "Competitive Intelligence (2026) tracks competitor revenue, share of market and keyword moves - territory Helium 10 previously owned",
+      "Jungle Scout Academy and structured onboarding shorten the first-year learning curve for new sellers"
+    ],
+    "cons": [
+      "No free plan and no free trial - just a 7-day money-back guarantee, so you pay before you validate anything",
+      "Every number is an estimate; AccuSales still deviates from real sales, and beginners build inventory orders on noisy data",
+      "Starter is usage-capped (100 database searches, 50 keyword searches, 500 estimates a month) - heavy researchers hit the wall in a week",
+      "The Brand Owner + CI tier jumps from $79 to $399 monthly, putting the differentiating CI features behind a $3,588/yr annual wall",
+      "Amazon-only focus - multi-channel sellers on Walmart, TikTok Shop or Etsy need additional tools"
+    ],
+    "features": [
+      "Product Database with opportunity filters (price, revenue, review count, weight, seasonality)",
+      "Keyword Scout with search volume and historical trends (1 month to 2 years by tier)",
+      "Product Tracker monitoring 50/150/2,000 products by plan",
+      "AccuSales sales estimator (500/1,000/5,000 estimates per month by tier)",
+      "Supplier Database linked to the actual sellers behind Amazon products",
+      "Listing Builder with AI assistance plus Listing Grader quality scoring",
+      "Review Automation for compliant review-request campaigns",
+      "AI Assist task automation (Growth Accelerator and up)",
+      "Competitive Intelligence with automated segments, market overviews and keyword insights (Brand Owner tier)"
+    ],
+    "faq": [
+      {
+        "question": "Is Jungle Scout worth it for a beginner?",
+        "answer": "If you are committed to selling your own product on Amazon, yes - Starter at $29/mo annual is a rational cost against a first inventory order, and the Academy shortens the learning curve. If you are still deciding whether Amazon selling is for you, the lack of a free plan is a real friction: use the 7-day money-back guarantee as your trial and decide inside it."
+      },
+      {
+        "question": "Jungle Scout vs Helium 10 - which should I buy?",
+        "answer": "[Helium 10](/tools/helium-10/) has a genuinely usable free plan and a lower entry price, with a broad toolset (Black Box, Cerebro, Xray) that many sellers prefer. Jungle Scout's edge is data trust (AccuSales), a cleaner workflow for beginners and the new Competitive Intelligence suite. Committed FBA sellers tend to land on Jungle Scout; testers and multi-marketplace sellers start with Helium 10."
+      },
+      {
+        "question": "Do the sales estimates match reality?",
+        "answer": "They are models, not meters. AccuSales is the category's most trusted estimator because it leans on Amazon first-party data feeds, but it still deviates from actual sales - especially on low-volume or seasonal products. Cross-check a candidate with a second source before ordering stock, and treat the Opportunity Score as a shortlist generator rather than a verdict."
+      }
+    ],
+    "content": "## What Jungle Scout Actually Is\n\nJungle Scout is the Amazon seller's research desk: a product database with opportunity filters, Keyword Scout for search demand, a sales-estimation engine (AccuSales) built on Amazon data feeds, a supplier database, product tracking, and listing and review automation - with a Chrome/Firefox extension that overlays estimates on Amazon itself. The company says over a million sellers and brands use it. In 2026 the lineup was rebuilt around three plans and a new Competitive Intelligence suite, replacing the old Starter/Suite/Professional names you will still find on outdated review pages.\n\n## The Money Angle\n\n**The decision it exists for:** what to sell on Amazon before you spend on inventory. Product research is the decision with the largest money impact in an FBA business - a good pick earns for years, a bad one eats inventory cash and storage fees. Jungle Scout's job is putting numbers (demand, competition, margin, seasonality) on that decision.\n\n**Three ways people pay for it:**\n1. Private-label sellers validating a niche before ordering samples - Product Database filters plus Keyword Scout's historical trends answer \"is demand real and stable\" before $5K of inventory does.\n2. Existing sellers defending share - the 2026 Competitive Intelligence suite (Brand Owner tier) tracks competitor revenue, share of market and keyword movement in your category.\n3. Service providers - product-research-as-a-service for FBA clients, or agencies running [Shopify](/tools/shopify/) and Amazon stores who need defensible client reporting. For adjacent plays, see [Sell The Trend](/tools/sell-the-trend/) (dropshipping research) and [our e-commerce tools comparison](/articles/best-ai-tools-for-ecommerce-2026/).\n\n**AI Assist** (Growth Accelerator and up) automates review requests and listing work - real time savings, but the money still comes from the product pick, not the automation.\n\n## What It Really Costs\n\n| Plan | Monthly | Annual (per mo) | Tracker | Estimates/mo | Keyword history | Seats |\n|---|---|---|---|---|---|---|\n| Starter | $49 | $29 ($348/yr) | 50 products | 500 | 1 month | 1 |\n| Growth Accelerator | $79 | $49 ($588/yr) | 150 | 1,000 | 1 year | 1 + paid seats |\n| Brand Owner + CI | $399 | $299 ($3,588/yr) | 2,000 | 5,000 | 2 years | 10 included |\n\nNo free plan and no free trial - a 7-day money-back guarantee is the trial. Extra seats cost $49 on Growth Accelerator. Legacy pricing pages still show Suite at $49-69/mo and Professional at $129/mo; those names are retired in the 2026 lineup.\n\n## The Estimate Problem\n\nEvery number Jungle Scout shows is a model, not a meter. AccuSales estimates are the category's most trusted because they lean on Amazon first-party data, but they still deviate from real sales, and beginners routinely build inventory orders on top of noisy numbers. Two mitigations: cross-check a candidate product with a second source before ordering stock, and treat the Opportunity Score as a shortlist generator rather than a verdict. The sellers who lose money with this tool are the ones who treat 3,000 estimated monthly sales as a contract.\n\n## vs The Field\n\n| | Jungle Scout | [Helium 10](/tools/helium-10/) | [Sell The Trend](/tools/sell-the-trend/) |\n|---|---|---|---|\n| Focus | Amazon FBA / private label | Amazon-first, broader toolset | dropshipping products |\n| Free plan | no (7-day guarantee) | yes (limited) | trial only |\n| Entry price | $29/mo annual | free tier, paid from $29/mo annual | $19.97/mo annual |\n| Data depth | deepest legacy Amazon dataset | broad (Black Box, Cerebro, Xray) | social-signal based |\n| Best for | committed FBA sellers | testers and multi-market sellers | dropshippers testing fast |\n\n## The Honest Cons\n\nStarter's caps (100 database searches, 50 keyword searches, 500 estimates a month) run dry inside a week of real research. The Brand Owner + CI tier's jump from $79 to $399 monthly places the genuinely differentiating CI features behind a $3,588/yr wall - most solo sellers will not cross it, which is a pricing statement about who the plan is for. The focus is Amazon-only, so multi-channel sellers layer other tools on top. And the Academy content, while genuinely useful, is included because subscriptions are the business model - it keeps you paying while you learn.\n\n## Bottom Line\n\nIf you are serious about selling on Amazon - your own product, real inventory, the long game - Jungle Scout is the safest first research subscription: the dataset is the category's most trusted, the Academy shortens year one, and Starter at $348/yr is a rational cost against a first inventory order. Use the 7-day guarantee as your trial, cross-check estimates before ordering stock, and only move up tiers when your tracked products actually hit the caps. Casual sellers and dropshippers should compare [Helium 10](/tools/helium-10/)'s free tier or [Sell The Trend](/tools/sell-the-trend/) first, and [Etsy](/tools/etsy/) or [Printify](/tools/printify/) sellers without inventory exposure need none of this.",
+    "published": true
+  },
+  {
+    "name": "Riverside",
+    "slug": "riverside",
+    "color": "#E4573D",
+    "category": "AI Audio",
+    "url": "https://riverside.fm/",
+    "price": "Free plan · Pro from $24/mo annual",
+    "last_verified": "2026-11-20",
+    "rating": "4.3",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "description": "Browser studio that records every guest locally in up to 4K/48kHz - connection stutter never reaches your files - then edits by text, cuts Magic Clips and drafts show notes with AI. The recording layer behind most professional podcasts.",
+    "tags": [
+      {
+        "text": "Podcast Recording"
+      },
+      {
+        "text": "Remote Interviews"
+      },
+      {
+        "text": "AI Editing"
+      },
+      {
+        "text": "Video Podcasts"
+      },
+      {
+        "text": "Magic Clips"
+      }
+    ],
+    "platform": "Web studio (host on desktop browser); guests join via link on any device; iOS/Android apps; progressive cloud upload",
+    "pricing_details": "Official pricing, checked 2026-11-20 on riverside.fm/price: Free $0 - limited multi-track recording (about 2 hrs/mo, 720p, watermark on exports per the plan comparison). Pro $29/mo monthly or $24/mo billed annually ($288/yr) - up to 4K video and 48kHz audio, no watermark, text-based editing, AI editing/repurposing agent, Magic Clips, unlimited transcriptions, AI show notes, 15 hrs separate-track downloads, 1 studio, podcast hosting and publishing to YouTube/Spotify/Apple and more. Grow $39/mo monthly or $34/mo annually ($408/yr) - adds social media scheduling, newsletter, creator website, hosting for 2 shows, 1080p live streaming with unlimited multistream and custom RTMP, 20 hrs separate-track downloads, 2 studios, Riverside MCP. Webinar $99/mo monthly or $79/mo annually ($948/yr) - webinars up to 100 registrants, pre-record-as-live, recurring webinars, lead capture, HubSpot sync, 25 hrs downloads, 3 studios. Business custom - unlimited studios and downloads, API, SSO, producer tools. 14-day free trial on paid plans. Note: Riverside's own blog and several 2026 reviews still describe an older Standard/Pro lineup without a free plan; the current pricing page lists a free tier again.",
+    "pros": [
+      "Local recording on every guest's device: files stay 4K/48kHz pristine even when the call freezes - the single biggest differentiator vs Zoom or Meet recordings",
+      "Text-based editing makes cutting an episode as easy as editing a document; the AI agent performs full edits, removes silences and filler words",
+      "Magic Clips auto-generates social-ready clips from long episodes - the repurposing chore that kills most new podcasts' consistency",
+      "Podcast hosting and push-to-Spotify/Apple/YouTube are included from Pro, with AI-drafted show notes",
+      "Guests need only a browser link - no accounts, no installs - which protects your booking rate with busy guests"
+    ],
+    "cons": [
+      "The free tier is a teaser: about 2 hrs/mo, 720p and watermarked exports push serious shows to Pro almost immediately",
+      "Separate-track download caps (15/20/25 hrs by tier) punish interview-heavy shows that polish in outside editors",
+      "The host must run a desktop browser - no real host mobile app, which is awkward for on-the-road recording",
+      "AI show notes read generic until you rewrite them - treat them as a first draft, not a deliverable",
+      "Live streaming (Grow and up) is capable but not a broadcast-desk replacement for produced live shows"
+    ],
+    "features": [
+      "Local multi-track recording per participant (up to 10 guests) with progressive cloud upload",
+      "Up to 4K video and 48kHz WAV audio with separate tracks for every speaker",
+      "Text-based editor plus an AI editing agent for trims, captions, music and full-episode assembly",
+      "Magic Clips, AI show notes and animated captions in 100+ languages",
+      "Teleprompter, media board with live sound effects, custom backgrounds and brand kit",
+      "Podcast hosting and analytics with publishing to YouTube, Spotify, Apple and more",
+      "1080p live streaming with unlimited multistream destinations and custom RTMP (Grow and up)",
+      "Riverside MCP (Grow and up) for connecting recordings to AI workflows"
+    ],
+    "faq": [
+      {
+        "question": "Is Riverside free?",
+        "answer": "The current official pricing page (checked 2026-11-20) lists a Free plan at $0 with limited multi-track recording - about 2 hours a month, 720p and watermarked exports - plus 14-day trials of the paid plans. Be aware that some of Riverside's own blog posts and older reviews say the free plan was discontinued; the pricing page is the source of truth."
+      },
+      {
+        "question": "Riverside vs Descript - which one do I need?",
+        "answer": "Riverside is recording-first: pristine local tracks and a guest-link workflow, with editing included. [Descript](/tools/descript/) is editing-first - stronger text-based production and studio sound tools, weaker recording. Many shows record in Riverside and do heavy post in Descript; if you record interviews with remote guests, start with Riverside and see if you ever need the second subscription."
+      },
+      {
+        "question": "What do you actually need to launch a podcast that earns?",
+        "answer": "Pro at $24/mo annual is the practical floor - no watermark, 4K tracks, Magic Clips and hosting. The money then comes from sponsorships, affiliates and funnels to your own products, and distribution/monetization live in [Spotify for Creators](/tools/spotify-for-creators/) and [YouTube](/tools/youtube/), not in the recorder. Consistency and a sponsorable niche matter more than gear; the recorder's job is making you sound worth sponsoring."
+      }
+    ],
+    "content": "## What Riverside Actually Is\n\nRiverside is a browser-based recording studio for podcasts and video interviews. Its defining feature is local recording: every participant's audio and video is captured on their own device in up to 4K video and 48kHz audio, then uploaded progressively to the cloud. When a guest's connection stutters, the call looks bad but your files stay pristine - the reason it replaced Zoom recordings on most professional shows. Around that core: a text-based editor (cut audio by deleting words from the transcript), an AI editing agent, Magic Clips for social repurposing, AI show notes, a teleprompter, and podcast hosting with publishing to Spotify, Apple and YouTube.\n\nIt is the recording-first tool in its field: [Descript](/tools/descript/) is editing-first with weaker recording, [Wondercraft](/tools/wondercraft-ai/) is production-first for scripted and audio-only shows, and [Opus Clip](/tools/opus-clip/) handles only the clipping stage.\n\n## The Money Angle\n\nPodcast money comes from three places, and Riverside touches all of them:\n\n1. **Sponsorships** - the classic path: consistent episodes, then ad slots. Transcripts and AI show notes make sponsor packets and attribution easier to produce. Distribution and monetization live elsewhere: [Spotify for Creators](/tools/spotify-for-creators/) for podcast monetization and [YouTube](/tools/youtube/) for video revenue.\n2. **Audience growth** - Magic Clips converts one interview into a week of shorts for TikTok and Shorts. Consistent clipping is the highest-impact growth habit for shows under 1,000 listeners, and it is the feature most likely to earn its keep.\n3. **Selling the production itself** - agencies and freelancers run client podcasts through Riverside: the guest-link workflow (no accounts, no installs) is why production shops book it, and a $24/mo Pro seat against a monthly podcast-management retainer is one of the better margins in content services. See [our freelancer toolkit](/articles/best-ai-tools-for-freelancers-2026/).\n\nBe honest about the ceiling: a recorder does not create demand. Shows that earn started with an audience or a niche worth sponsoring; Riverside's job is making you sound worth sponsoring.\n\n## What It Really Costs\n\n| Plan | Monthly | Annual (per mo) | Separate-track downloads | Studios | Notable |\n|---|---|---|---|---|---|\n| Free | $0 | $0 | limited (~2 hrs/mo) | - | 720p, watermark |\n| Pro | $29 | $24 ($288/yr) | 15 hrs | 1 | 4K/48kHz, no watermark, AI editing, hosting |\n| Grow | $39 | $34 ($408/yr) | 20 hrs | 2 | + scheduling, newsletter, website, 1080p multistream, MCP |\n| Webinar | $99 | $79 ($948/yr) | 25 hrs | 3 | + 100-registrant webinars, lead capture, HubSpot sync |\n| Business | custom | custom | unlimited | unlimited | API, SSO, producer tools |\n\n14-day free trial on paid plans. One honesty note: Riverside's own blog and several 2026 reviews still describe an older Standard/Pro lineup with no free plan - the current pricing page (checked 2026-11-20) lists a free tier again, so trust the pricing page over older posts.\n\n## The Recording Reality\n\nTwo caps decide your tier. Separate-track downloads (the files you export for serious editing in other tools) run 15/20/25 hours per month on Pro/Grow/Webinar - recording and editing inside Riverside are not capped the same way, but interview-heavy shows that polish elsewhere will feel the wall. And the host needs a desktop browser; guests join from any device. If you record weekly hour-long episodes with two guests, Pro's 15 hours covers it; daily shows do not.\n\n## vs The Field\n\n| | Riverside | [Descript](/tools/descript/) | [Wondercraft](/tools/wondercraft-ai/) |\n|---|---|---|---|\n| Core | remote recording studio | text-based audio/video editor | scripted audio production + AI voices |\n| Local 4K/48kHz tracks | yes | no | n/a |\n| Guest workflow | link, no install | weaker | n/a |\n| AI voices | own-voice only | yes | core feature |\n| Best for | interview and video podcasts | editing-heavy creators | fiction, ads, newsletter audio |\n\n## The Honest Cons\n\nThe free tier is a taste: roughly 2 hours a month at 720p with watermarked exports pushes real shows to Pro almost immediately. Download caps punish high-volume exporters. AI show notes need rewriting before they are publishable. Live streaming on Grow is capable but not a produced-broadcast desk. And there is a small documentation problem: Riverside's own blog has described conflicting plan lineups within the same year, so always sanity-check the live pricing page before budgeting.\n\n## Bottom Line\n\nIf you record conversations with humans, Riverside is the default answer in 2026: local tracks are the quality floor that separates a sponsor-ready show from a Zoom recording, and the AI repurposing fixes the promotion chore that kills most new podcasts. Start on the free tier, take the 14-day Pro trial before your first real interview block, and go Grow only when you actually schedule social posts weekly. Pair it with [Descript](/tools/descript/) for heavy post-production and [Opus Clip](/tools/opus-clip/) for a dedicated clipping engine; for the wider stack, see [our podcast tools comparison](/articles/best-ai-podcast-tools-2026-riverside-vs-podcastle-vs-descript-vs-alitu/) and [video editing comparison](/articles/best-ai-video-editing-tools-2026-descript-vs-capcut-vs-opus-clip-vs-invideo-ai/).",
+    "published": true
   }
 ]
