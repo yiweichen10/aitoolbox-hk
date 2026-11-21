@@ -17,7 +17,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.9",
+    "rating": "3.5",
     "visits": "125K",
     "badge": {
       "type": "hot",
@@ -77,7 +77,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.8",
+    "rating": "3.3",
     "visits": "83K",
     "badge": {
       "type": "new",
@@ -137,7 +137,7 @@
         "text": "Paid"
       }
     ],
-    "rating": "4.9",
+    "rating": "3.5",
     "visits": "102K",
     "badge": {
       "type": "pick",
@@ -197,7 +197,7 @@
         "text": "Paid"
       }
     ],
-    "rating": "4.7",
+    "rating": "3.1",
     "visits": "68K",
     "badge": {
       "type": "hot",
@@ -255,7 +255,7 @@
         "text": "Paid"
       }
     ],
-    "rating": "4.6",
+    "rating": "3.3",
     "visits": "54K",
     "url": "https://www.notion.so",
     "price": "AI add-on $10/mo",
@@ -308,7 +308,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.8",
+    "rating": "3.3",
     "visits": "59K",
     "url": "https://cursor.com",
     "price": "Free + Pro $20/mo",
@@ -366,7 +366,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.5",
+    "rating": "3.5",
     "visits": "76K",
     "url": "https://kimi.moonshot.cn",
     "price": "Free",
@@ -420,7 +420,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.7",
+    "rating": "3.1",
     "visits": "42K",
     "url": "https://runwayml.com",
     "price": "Free + Standard $15/mo",
@@ -477,7 +477,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.7",
+    "rating": "3.5",
     "visits": "91K",
     "url": "https://stability.ai",
     "price": "Free (GPU required)",
@@ -531,7 +531,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.6",
+    "rating": "3.1",
     "visits": "38K",
     "url": "https://suno.com",
     "price": "Free + Pro $10/mo",
@@ -584,7 +584,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.5",
+    "rating": "3.2",
     "visits": "62K",
     "url": "https://www.canva.com",
     "price": "Free + Pro from $14.99/mo",
@@ -633,7 +633,7 @@
         "text": "AI Video"
       }
     ],
-    "rating": "4.9",
+    "rating": "3.3",
     "visits": "156K",
     "url": "https://openai.com/sora",
     "price": "ChatGPT Plus $20/mo",
@@ -690,7 +690,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.8",
+    "rating": "3.4",
     "visits": "123K",
     "url": "https://www.perplexity.ai",
     "price": "Free + Pro $20/mo",
@@ -748,7 +748,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.6",
+    "rating": "3.3",
     "visits": "85K",
     "url": "https://pika.art",
     "price": "Free + Standard $10/mo",
@@ -808,7 +808,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.7",
+    "rating": "3.0",
     "visits": "45K",
     "url": "https://www.udio.com",
     "price": "Free + Pro $10/mo",
@@ -861,7 +861,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.5",
+    "rating": "3.2",
     "visits": "72K",
     "url": "https://replit.com",
     "price": "Free + Core $25/mo",
@@ -910,7 +910,7 @@
         "text": "AI Writing"
       }
     ],
-    "rating": "4.5",
+    "rating": "3.1",
     "visits": "68K",
     "url": "https://www.jasper.ai",
     "price": "From $49/mo",
@@ -963,7 +963,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.6",
+    "rating": "3.1",
     "visits": "52K",
     "url": "https://gamma.app",
     "price": "Free + Pro $16/mo",
@@ -1016,7 +1016,7 @@
         "type": "free"
       }
     ],
-    "rating": "5.0",
+    "rating": "3.0",
     "visits": "50K",
     "url": "https://gemini.google.com",
     "price": "Free + Pro $10/mo",
@@ -1076,7 +1076,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.8",
+    "rating": "3.5",
     "visits": "120K",
     "url": "https://www.deepseek.com",
     "price": "Free (web) | API from $0.14/M tokens",
@@ -1133,7 +1133,7 @@
         "text": "AI Video"
       }
     ],
-    "rating": "5.0",
+    "rating": "3.0",
     "visits": "20K",
     "url": "https://www.heygen.com",
     "price": "From $10/mo",
@@ -1190,7 +1190,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.2",
+    "rating": "3.3",
     "visits": "160K",
     "url": "https://www.deepl.com",
     "price": "Free + Pro $10/mo",
@@ -1243,7 +1243,7 @@
         "text": "AI Writing"
       }
     ],
-    "rating": "4.5",
+    "rating": "3.0",
     "visits": "10K",
     "url": "https://www.grammarly.com",
     "price": "From $10/mo",
@@ -1300,7 +1300,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.7",
+    "rating": "3.4",
     "visits": "120K",
     "url": "https://character.ai",
     "price": "Free + Pro $10/mo",
@@ -1360,7 +1360,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.7",
+    "rating": "3.1",
     "visits": "45K",
     "badge": {
       "type": "hot",
@@ -1426,7 +1426,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.9",
+    "rating": "3.1",
     "visits": "12K",
     "badge": {
       "type": "new",
@@ -1491,7 +1491,7 @@
         "text": "Agentic"
       }
     ],
-    "rating": "4.8",
+    "rating": "3.1",
     "visits": "8K",
     "badge": {
       "type": "new",
@@ -1553,7 +1553,7 @@
         "text": "API"
       }
     ],
-    "rating": "4.6",
+    "rating": "3.1",
     "visits": "35K",
     "url": "https://openai.com/blog/openai-codex",
     "price": "API pricing",
@@ -1611,7 +1611,7 @@
         "text": "Self-hosted"
       }
     ],
-    "rating": "4.8",
+    "rating": "3.1",
     "visits": "48K",
     "url": "https://n8n.io",
     "price": "Free self-hosted | Cloud $20/mo",
@@ -1669,7 +1669,7 @@
         "text": "No-code"
       }
     ],
-    "rating": "4.7",
+    "rating": "3.3",
     "visits": "92K",
     "url": "https://www.coze.com",
     "price": "Free | Pro $9.99/mo",
@@ -1730,7 +1730,7 @@
         "text": "No-code"
       }
     ],
-    "rating": "4.8",
+    "rating": "3.1",
     "visits": "42K",
     "badge": {
       "type": "hot",
@@ -1796,7 +1796,7 @@
         "text": "AI Agent"
       }
     ],
-    "rating": "4.7",
+    "rating": "3.3",
     "visits": "95K",
     "badge": {
       "type": "pick",
@@ -1862,7 +1862,7 @@
         "text": "Google"
       }
     ],
-    "rating": "4.9",
+    "rating": "3.4",
     "visits": "18K",
     "badge": {
       "type": "new",
@@ -1930,7 +1930,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.8",
+    "rating": "3.1",
     "visits": "45K",
     "url": "https://www.opus.pro",
     "price": "Free + $15/mo",
@@ -1997,7 +1997,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.9",
+    "rating": "3.3",
     "visits": "82K",
     "url": "https://www.descript.com",
     "price": "Free + $12/mo",
@@ -2064,7 +2064,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.7",
+    "rating": "3.3",
     "visits": "110K",
     "url": "https://www.capcut.com",
     "price": "Free + $7.99/mo",
@@ -2132,7 +2132,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.8",
+    "rating": "3.1",
     "visits": "45K",
     "badge": {
       "type": "hot",
@@ -2199,7 +2199,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.7",
+    "rating": "3.2",
     "visits": "62K",
     "badge": {
       "type": "new",
@@ -2266,7 +2266,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.6",
+    "rating": "3.3",
     "visits": "88K",
     "badge": {
       "type": "pick",
@@ -2333,7 +2333,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.8",
+    "rating": "3.2",
     "visits": "65K",
     "badge": {
       "type": "hot",
@@ -2400,7 +2400,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.9",
+    "rating": "3.3",
     "visits": "90K",
     "badge": {
       "type": "top",
@@ -2467,7 +2467,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.7",
+    "rating": "3.2",
     "visits": "55K",
     "badge": {
       "type": "new",
@@ -2527,7 +2527,7 @@
         "text": "AI Audio"
       }
     ],
-    "rating": "4.9",
+    "rating": "3.4",
     "visits": "180K",
     "url": "https://krisp.ai",
     "price": "Free (60 min/day noise cancel) | Pro $8/mo | Enterprise custom",
@@ -2595,7 +2595,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.7",
+    "rating": "3.1",
     "visits": "12K",
     "url": "https://withcomet.com",
     "price": "Free | Pro $15/mo | Team custom",
@@ -2655,7 +2655,7 @@
         "type": "free"
       }
     ],
-    "rating": "5.0",
+    "rating": "3.4",
     "visits": "170K",
     "url": "https://you.com",
     "price": "Free | Pro $15/mo | Team $25/mo per user",
@@ -2712,7 +2712,7 @@
         "text": "AI Search"
       }
     ],
-    "rating": "4.4",
+    "rating": "3.4",
     "visits": "150K",
     "url": "https://consensus.app",
     "price": "Free (20 searches/day) | Premium $8.99/mo | Enterprise custom",
@@ -2776,7 +2776,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.8",
+    "rating": "3.3",
     "visits": "85K",
     "url": "https://pixverse.ai",
     "price": "Free (80 credits/day) | Standard $22.99/mo | Pro $76.99/mo",
@@ -2839,7 +2839,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.6",
+    "rating": "3.3",
     "visits": "110K",
     "url": "https://fliki.ai",
     "price": "Free (5 min/mo) | Standard $21/mo | Premium $66/mo",
@@ -2902,7 +2902,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.7",
+    "rating": "3.4",
     "visits": "45K",
     "url": "https://tensor.art",
     "price": "Free (200 credits/day)",
@@ -2965,7 +2965,7 @@
         "text": "Paid"
       }
     ],
-    "rating": "4.5",
+    "rating": "3.1",
     "visits": "32K",
     "url": "https://brandmark.io",
     "price": "Basic $25 (one-time)",
@@ -3028,7 +3028,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.8",
+    "rating": "3.2",
     "visits": "89K",
     "url": "https://www.make.com",
     "price": "Free (1,000 ops/mo)",
@@ -3094,7 +3094,7 @@
         "text": "Design"
       }
     ],
-    "rating": "4.8",
+    "rating": "3.1",
     "visits": "45K",
     "url": "https://www.recraft.ai",
     "price": "Free (150 credits/day) | Pro $15/mo | Team $12/mo per seat",
@@ -3150,7 +3150,7 @@
         "text": "Paid"
       }
     ],
-    "rating": "4.8",
+    "rating": "3.3",
     "visits": "95K",
     "url": "https://openai.com/dall-e-3",
     "price": "Plus $20/mo",
@@ -3213,7 +3213,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.7",
+    "rating": "3.2",
     "visits": "72K",
     "url": "https://www.adobe.com/firefly",
     "price": "Free + Premium $4.99/mo",
@@ -3276,7 +3276,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.9",
+    "rating": "3.3",
     "visits": "88K",
     "url": "https://bolt.new",
     "price": "Free + Basic $20/mo",
@@ -3338,7 +3338,7 @@
         "text": "Business"
       }
     ],
-    "rating": "4.7",
+    "rating": "3.1",
     "visits": "45K",
     "url": "https://www.beautiful.ai",
     "price": "Pro $12/mo | Team $40/mo",
@@ -3404,7 +3404,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.6",
+    "rating": "3.3",
     "visits": "89K",
     "url": "https://fireflies.ai",
     "price": "Free | Pro $10/mo | Business $19/mo",
@@ -3470,7 +3470,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.8",
+    "rating": "3.3",
     "visits": "110K",
     "url": "https://speechify.com",
     "price": "Free | Premium $139/year",
@@ -3533,7 +3533,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.9",
+    "rating": "3.8",
     "visits": "88K",
     "badge": {
       "type": "hot",
@@ -3598,7 +3598,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.8",
+    "rating": "3.8",
     "visits": "95K",
     "badge": {
       "type": "hot",
@@ -3663,7 +3663,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.7",
+    "rating": "3.8",
     "visits": "110K",
     "badge": {
       "type": "hot",
@@ -3727,7 +3727,7 @@
         "text": "Reasoning"
       }
     ],
-    "rating": "4.6",
+    "rating": "3.6",
     "visits": "145K",
     "badge": {
       "type": "new",
@@ -3793,7 +3793,7 @@
         "text": "Automation"
       }
     ],
-    "rating": "4.5",
+    "rating": "3.4",
     "visits": "12K",
     "url": "https://ai.doba.com/",
     "price": "$29 - $249/mo",
@@ -3858,7 +3858,7 @@
         "text": "Marketplace"
       }
     ],
-    "rating": "4.7",
+    "rating": "3.3",
     "visits": "8K",
     "url": "https://mulerun.com/",
     "price": "Free + Pro $19.90/mo",
@@ -3919,7 +3919,7 @@
         "text": "Sales"
       }
     ],
-    "rating": "4.8",
+    "rating": "3.3",
     "visits": "15K",
     "url": "https://ascn.ai/",
     "price": "Starts $29/mo",
@@ -3980,7 +3980,7 @@
         "text": "Content Creation"
       }
     ],
-    "rating": "4.8",
+    "rating": "3.5",
     "visits": "45K",
     "url": "https://elevenlabs.io/",
     "price": "$0 - $330/mo",
@@ -4046,7 +4046,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.8",
+    "rating": "3.6",
     "visits": "95K",
     "url": "https://lumalabs.ai/dream-machine",
     "price": "Free (30 gens) | Standard $29/mo",
@@ -4112,7 +4112,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.7",
+    "rating": "3.4",
     "visits": "28K",
     "url": "https://www.napkin.ai",
     "price": "Free | Plus $10/mo | Pro $25/mo",
@@ -4177,7 +4177,7 @@
         "text": "Affiliate Management"
       }
     ],
-    "rating": "4.6",
+    "rating": "3.4",
     "visits": "28K",
     "url": "https://systeme.io/",
     "price": "$0 - $97/mo",
@@ -4242,7 +4242,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.8",
+    "rating": "3.3",
     "visits": "45K",
     "url": "https://www.perplexity.ai",
     "price": "Free + Pro $20/mo",
@@ -4299,7 +4299,7 @@
         "text": "Long Context"
       }
     ],
-    "rating": "4.9",
+    "rating": "3.7",
     "visits": "145K",
     "url": "https://www.deepseek.com/",
     "price": "Free / $0.15 per 1M tokens",
@@ -4360,7 +4360,7 @@
         "text": "Citations"
       }
     ],
-    "rating": "4.8",
+    "rating": "3.2",
     "visits": "8K",
     "url": "https://vryse.co/",
     "price": "$49 - $499/mo",
@@ -4419,7 +4419,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.9",
+    "rating": "3.4",
     "visits": "12K",
     "url": "https://www.gumloop.com",
     "price": "Free + Pro $37/mo",
@@ -4478,7 +4478,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.9",
+    "rating": "3.4",
     "visits": "32K",
     "badge": {
       "type": "hot",
@@ -4537,7 +4537,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.8",
+    "rating": "2.7",
     "visits": "85K",
     "badge": {
       "type": "new",
@@ -4596,7 +4596,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.9",
+    "rating": "2.6",
     "visits": "120K",
     "badge": {
       "type": "pick",
@@ -4654,7 +4654,7 @@
         "text": "Conversion Optimization"
       }
     ],
-    "rating": "4.6",
+    "rating": "2.9",
     "visits": "85K",
     "badge": {
       "type": "recommend",
@@ -4718,7 +4718,7 @@
         "type": "hot"
       }
     ],
-    "rating": "4.8",
+    "rating": "2.5",
     "visits": "42K",
     "badge": {
       "type": "hot",
@@ -4778,7 +4778,7 @@
         "text": "Paid"
       }
     ],
-    "rating": "4.7",
+    "rating": "2.4",
     "visits": "62K",
     "badge": {
       "type": "hot",
@@ -4840,7 +4840,7 @@
         "type": "hot"
       }
     ],
-    "rating": "4.7",
+    "rating": "2.6",
     "visits": "85K",
     "badge": {
       "type": "new",
@@ -4903,7 +4903,7 @@
         "type": "hot"
       }
     ],
-    "rating": "4.8",
+    "rating": "2.5",
     "visits": "42K",
     "badge": {
       "type": "hot",
@@ -4965,7 +4965,7 @@
         "type": "hot"
       }
     ],
-    "rating": "4.8",
+    "rating": "2.8",
     "visits": "95K",
     "badge": {
       "type": "hot",
@@ -5028,7 +5028,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.8",
+    "rating": "2.9",
     "visits": "85K",
     "badge": {
       "type": "hot",
@@ -5092,7 +5092,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.7",
+    "rating": "2.7",
     "visits": "22K",
     "badge": {
       "type": "hot",
@@ -5159,7 +5159,7 @@
         "text": "Pay-per-use"
       }
     ],
-    "rating": "4.6",
+    "rating": "2.9",
     "visits": "28K",
     "badge": {
       "type": "recommend",
@@ -5227,7 +5227,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.3",
+    "rating": "2.9",
     "visits": "120K",
     "badge": {
       "type": "recommend",
@@ -5295,7 +5295,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.3",
+    "rating": "3.5",
     "visits": "500K",
     "badge": {
       "type": "hot",
@@ -5364,7 +5364,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.2",
+    "rating": "4.0",
     "visits": "10M+",
     "badge": {
       "type": "pick",
@@ -5437,7 +5437,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.4",
+    "rating": "3.6",
     "visits": "350K+",
     "badge": {
       "type": "pick",
@@ -5513,7 +5513,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.4",
+    "rating": "3.6",
     "visits": "180K+",
     "badge": {
       "type": "pick",
@@ -5589,7 +5589,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.6",
+    "rating": "3.4",
     "visits": "95K+",
     "badge": {
       "type": "hot",
@@ -5669,7 +5669,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.5",
+    "rating": "3.9",
     "visits": "620K+",
     "badge": {
       "type": "hot",
@@ -5741,7 +5741,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.4",
+    "rating": "3.5",
     "visits": "170K",
     "badge": {
       "type": "pick",
@@ -5814,7 +5814,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.6",
+    "rating": "3.6",
     "visits": "320K",
     "badge": {
       "type": null,
@@ -5888,7 +5888,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.5",
+    "rating": "3.3",
     "visits": "1.2M",
     "badge": {
       "type": null,
@@ -5963,7 +5963,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.7",
+    "rating": "3.6",
     "visits": "900K",
     "badge": {
       "type": "pick",
@@ -6037,7 +6037,7 @@
         "text": "Enterprise"
       }
     ],
-    "rating": "4.5",
+    "rating": "4.4",
     "visits": "8.5M",
     "badge": {
       "type": "hot",
@@ -6111,7 +6111,7 @@
         "text": "Digital Humans"
       }
     ],
-    "rating": "4.3",
+    "rating": "3.9",
     "visits": "3.2M",
     "badge": {
       "type": "hot",
@@ -6186,7 +6186,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.7",
+    "rating": "4.2",
     "visits": "15M",
     "badge": {
       "type": "hot",
@@ -6261,7 +6261,7 @@
         "text": "LPU"
       }
     ],
-    "rating": "4.5",
+    "rating": "3.4",
     "visits": "85K",
     "badge": {
       "type": "hot",
@@ -6328,7 +6328,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.6",
+    "rating": "3.1",
     "visits": "89K",
     "url": "https://www.bardeen.ai",
     "price": "Free (100 ops/mo); Pro $15/mo (annual)",
@@ -6395,7 +6395,7 @@
         "text": "Agent"
       }
     ],
-    "rating": "4.5",
+    "rating": "3.4",
     "visits": "85K",
     "badge": {
       "type": "recommend",
@@ -6470,7 +6470,7 @@
         "text": "Agent Framework"
       }
     ],
-    "rating": "4.7",
+    "rating": "3.4",
     "visits": "85K",
     "badge": {
       "type": "hot",
@@ -6543,7 +6543,7 @@
         "text": "Site Audit"
       }
     ],
-    "rating": "4.7",
+    "rating": "4.5",
     "visits": "85M",
     "badge": {
       "type": "recommend",
@@ -6616,7 +6616,7 @@
         "text": "Workflow Automation"
       }
     ],
-    "rating": "4.5",
+    "rating": "3.2",
     "visits": "80K",
     "badge": {
       "type": "new",
@@ -6689,7 +6689,7 @@
         "text": "Design-to-Code"
       }
     ],
-    "rating": "4.2",
+    "rating": "3.6",
     "visits": "110K",
     "badge": {
       "type": "hot",
@@ -6760,7 +6760,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.7",
+    "rating": "4.0",
     "visits": "850K",
     "badge": {
       "type": "hot",
@@ -6834,7 +6834,7 @@
         "text": "API Integration"
       }
     ],
-    "rating": "4.5",
+    "rating": "3.8",
     "visits": "850K",
     "badge": {
       "type": "new",
@@ -6930,7 +6930,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.5",
+    "rating": "4.0",
     "visits": "1.2M",
     "badge": {
       "type": "new",
@@ -7107,7 +7107,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.5",
+    "rating": "4.2",
     "visits": "850K",
     "badge": {
       "type": "recommend",
@@ -7192,7 +7192,7 @@
         "type": "paid"
       }
     ],
-    "rating": "4.5",
+    "rating": "4.4",
     "visits": "1.8M",
     "badge": {},
     "url": "https://www.glean.com",
@@ -7271,7 +7271,7 @@
         "text": "Vector Database"
       }
     ],
-    "rating": "4.5",
+    "rating": "4.0",
     "visits": "500K+",
     "badge": {
       "type": "hot",
@@ -7357,7 +7357,7 @@
         "text": "Pair Programming"
       }
     ],
-    "rating": "4.6",
+    "rating": "4.1",
     "visits": "180K",
     "badge": {
       "type": "recommend",
@@ -7445,7 +7445,7 @@
         "text": "Interactive Design"
       }
     ],
-    "rating": "4.5",
+    "rating": "3.9",
     "visits": "850K",
     "badge": {
       "type": "recommend",
@@ -7541,7 +7541,7 @@
         "text": "Chatbot Builder"
       }
     ],
-    "rating": "4.5",
+    "rating": "4.0",
     "visits": "450K",
     "badge": {
       "type": "recommend",
@@ -7635,7 +7635,7 @@
         "type": "hot"
       }
     ],
-    "rating": "4.7",
+    "rating": "4.3",
     "visits": "2.1M",
     "badge": {
       "type": "hot",
@@ -7718,7 +7718,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.7",
+    "rating": "4.4",
     "visits": "2.1M",
     "badge": {
       "type": "recommend",
@@ -7808,7 +7808,7 @@
         "text": "LLM"
       }
     ],
-    "rating": "4.6",
+    "rating": "4.2",
     "visits": "520K",
     "badge": {
       "type": "recommend",
@@ -7903,7 +7903,7 @@
         "text": "AI Transcription"
       }
     ],
-    "rating": "4.5",
+    "rating": "4.3",
     "visits": "8.5M",
     "badge": {
       "type": "recommend",
@@ -7992,7 +7992,7 @@
         "text": "Conversational AI"
       }
     ],
-    "rating": "4.5",
+    "rating": "4.0",
     "visits": "850K",
     "badge": {
       "type": "recommend",
@@ -8084,7 +8084,7 @@
         "text": "No-Code"
       }
     ],
-    "rating": "4.6",
+    "rating": "4.1",
     "visits": "850K",
     "badge": {
       "type": "recommend",
@@ -8171,7 +8171,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.5",
+    "rating": "4.1",
     "visits": "850K",
     "badge": {
       "type": "hot",
@@ -8258,7 +8258,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.6",
+    "rating": "4.3",
     "visits": "620K",
     "badge": {
       "type": "pick",
@@ -8345,7 +8345,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.7",
+    "rating": "4.4",
     "visits": "850K",
     "badge": {
       "type": "pick",
@@ -8436,7 +8436,7 @@
         "text": "AI Backend"
       }
     ],
-    "rating": "4.7",
+    "rating": "4.1",
     "visits": "850K",
     "badge": {
       "type": "pick",
@@ -8527,7 +8527,7 @@
         "text": "AI Backend"
       }
     ],
-    "rating": "4.5",
+    "rating": "4.0",
     "visits": "350K",
     "badge": {
       "type": "pick",
@@ -8706,7 +8706,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.7",
+    "rating": "4.4",
     "visits": "850K",
     "badge": {
       "type": "new",
@@ -8792,7 +8792,7 @@
         "text": "RAG"
       }
     ],
-    "rating": "4.6",
+    "rating": "4.2",
     "visits": "850K",
     "badge": {
       "type": "tool",
@@ -8876,7 +8876,7 @@
         "text": "Reporting"
       }
     ],
-    "rating": "4.6",
+    "rating": "4.3",
     "visits": "3.2M",
     "badge": {
       "type": "tool",
@@ -8959,7 +8959,7 @@
         "text": "Small Business"
       }
     ],
-    "rating": "4.5",
+    "rating": "4.1",
     "visits": "2.1M",
     "badge": {
       "type": "tool",
@@ -9035,7 +9035,7 @@
         "text": "Rewriting"
       }
     ],
-    "rating": "4.6",
+    "rating": "4.4",
     "visits": "8.0M",
     "badge": {
       "type": "tool",
@@ -9197,7 +9197,7 @@
         "text": "Content Suite"
       }
     ],
-    "rating": "4.5",
+    "rating": "4.6",
     "visits": "8.5M",
     "badge": {
       "type": "recommend",
@@ -9288,7 +9288,7 @@
         "text": "Music for Creators"
       }
     ],
-    "rating": "4.6",
+    "rating": "4.3",
     "visits": "850K",
     "badge": {
       "type": "tool",
@@ -9374,7 +9374,7 @@
         "text": "MIDI Export"
       }
     ],
-    "rating": "4.5",
+    "rating": "4.1",
     "visits": "300K",
     "badge": {
       "type": "recommend",
@@ -9463,7 +9463,7 @@
         "text": "Content Repurposing"
       }
     ],
-    "rating": "4.6",
+    "rating": "4.2",
     "visits": "450K",
     "badge": {
       "type": "tool",
@@ -9558,7 +9558,7 @@
         "text": "Old Photo Repair"
       }
     ],
-    "rating": "4.7",
+    "rating": "4.3",
     "visits": "850K",
     "badge": {
       "type": "recommend",
@@ -9654,7 +9654,7 @@
         "text": "Developer Tools"
       }
     ],
-    "rating": "4.7",
+    "rating": "4.5",
     "visits": "52M monthly downloads",
     "badge": {
       "type": "hot",
@@ -9744,7 +9744,7 @@
         "text": "Small Business"
       }
     ],
-    "rating": "4.7",
+    "rating": "4.2",
     "visits": "1M+ users",
     "badge": {
       "type": "hot",
@@ -9834,7 +9834,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.7",
+    "rating": "3.9",
     "visits": "850K",
     "badge": {
       "type": "hot",
@@ -9921,7 +9921,7 @@
         "text": "Beginner Friendly"
       }
     ],
-    "rating": "4.8",
+    "rating": "4.6",
     "visits": "5M+ downloads",
     "badge": {
       "type": "hot",
@@ -10014,7 +10014,7 @@
         "text": "Multilingual"
       }
     ],
-    "rating": "4.5",
+    "rating": "3.5",
     "visits": "Tens of millions of monthly visits",
     "badge": {
       "type": "hot",
@@ -10107,7 +10107,7 @@
         "text": "Automation"
       }
     ],
-    "rating": "4.8",
+    "rating": "4.1",
     "visits": "Roughly 750K to 1M monthly visits",
     "badge": {
       "type": "hot",
@@ -10201,7 +10201,7 @@
         "text": "Remote"
       }
     ],
-    "rating": "4.6",
+    "rating": "4.5",
     "visits": "About 8.5 million monthly visits",
     "badge": {
       "type": "recommend",
@@ -10294,7 +10294,7 @@
         "text": "Dubbing"
       }
     ],
-    "rating": "4.6",
+    "rating": "3.5",
     "visits": "About 780,000 monthly visits (10M+ developers, businesses, and creators on the platform)",
     "badge": {
       "type": "recommend",
@@ -10389,7 +10389,7 @@
         "text": "Voice Editing"
       }
     ],
-    "rating": "4.5",
+    "rating": "3.5",
     "visits": "Used by 15,000+ podcasters and 30+ brands; credit-based plans from EUR 10/month (10 hours of audio)",
     "badge": {
       "type": "recommend",
@@ -10484,7 +10484,7 @@
         "text": "Customer Support"
       }
     ],
-    "rating": "4.5",
+    "rating": "3.5",
     "visits": "100,000+ builders in the community; enterprise customers include teams at Fortune 500 companies; used for web, WhatsApp, SMS, Slack, and phone agents",
     "badge": {
       "type": "recommend",
@@ -10578,7 +10578,7 @@
         "text": "Sales Enablement"
       }
     ],
-    "rating": "4.8",
+    "rating": "3.6",
     "visits": "Unlimited free recordings; AI summaries delivered in ~30 seconds; 90-day money-back guarantee on paid plans",
     "badge": {
       "type": "recommend",
@@ -10669,7 +10669,7 @@
         "text": "Open Source"
       }
     ],
-    "rating": "4.6",
+    "rating": "3.7",
     "visits": "30+ languages and regional variants checked; free tier used by millions without signup (open-source engine active since 2003); ~2M+ monthly visits to languagetool.org",
     "badge": {
       "type": "recommend",
@@ -10762,7 +10762,7 @@
         "text": "RAG"
       }
     ],
-    "rating": "4.6",
+    "rating": "3.6",
     "visits": "API-first neural search engine used by Cursor and thousands of agent teams; free tier gives every account $20 in credits at sign-up plus $10 each month (roughly 20,000 free requests per month), and startups and education projects can apply for $1,000 in free credits",
     "badge": {
       "type": "recommend",
@@ -10859,7 +10859,7 @@
         "text": "PRISMA"
       }
     ],
-    "rating": "4.6",
+    "rating": "4.4",
     "visits": "2M+ researchers across academia and industry; roughly 850K monthly visits. Searches 138M+ papers and 545K clinical trials; used by grad students, postdocs, clinicians, policy analysts and evidence-driven consultants who need verifiable citations rather than AI speculation",
     "badge": {
       "type": "recommend",
@@ -10957,7 +10957,7 @@
         "text": "Agents"
       }
     ],
-    "rating": "4.6",
+    "rating": "3.7",
     "visits": "54,000+ GitHub stars, 5,800+ forks and 400+ contributors on the Mintplex Labs repo; used by solo professionals who want private document chat, and by teams that self-host behind their own firewall. Desktop app runs fully offline with no account and no telemetry",
     "badge": {
       "type": "recommend",
@@ -11155,7 +11155,7 @@
         "text": "Team Collaboration"
       }
     ],
-    "rating": "4.4",
+    "rating": "3.4",
     "visits": "2,000,000+ users and 5,400+ public prompts; used by solo freelancers, SEO agencies, e-commerce sellers and in-house marketing teams who want consistent AI output without re-teaching the model every session",
     "badge": {
       "type": "recommend",
@@ -11253,7 +11253,7 @@
         "text": "Enterprise"
       }
     ],
-    "rating": "4.5",
+    "rating": "3.5",
     "visits": "Retool is used by tens of thousands of teams (engineers, ops, analysts, consultants and solo business builders) who need custom internal software but do not want to staff a product engineering department to get it",
     "badge": {
       "type": "recommend",
@@ -11351,7 +11351,7 @@
         "text": "Freelancers"
       }
     ],
-    "rating": "4.8",
+    "rating": "4.5",
     "visits": "Wix is one of the most-used website builders on the planet - roughly 260 million sites run on it, and its AI features are the main reason new builders pick it over Squarespace, GoDaddy or Hostinger (tech.co rated it the best AI website builder of 2026 with a 4.8/5)",
     "badge": {
       "type": "recommend",
@@ -11445,7 +11445,7 @@
         "text": "Creators"
       }
     ],
-    "rating": "4.6",
+    "rating": "3.5",
     "visits": "One of the most searched image-enhancement tools of 2026 - the original Magnific upscaler is used by a large share of Midjourney/Stable Diffusion artists as their final step, and its operator (Freepik) rebranded its whole platform to Magnific in April 2026 with 1M+ paid subscribers",
     "badge": {
       "type": "recommend",
@@ -11633,7 +11633,7 @@
         "text": "Creators"
       }
     ],
-    "rating": "4.4",
+    "rating": "4.5",
     "visits": "~1.5M monthly visits (one of the most-searched music-video AI tools of 2026; built its name on the Linkin Park 'Lost' official music video and remains the default answer to 'AI music video generator')",
     "badge": {
       "type": "recommend",
@@ -11727,7 +11727,7 @@
         "text": "Creators"
       }
     ],
-    "rating": "4.3",
+    "rating": "4.7",
     "visits": "~8.5M monthly visits (one of the most-searched AI video tools of 2026; Q3 model ranked #2 globally on the Artificial Analysis video arena behind Sora 2, and the go-to answer for anime/multi-character consistent video)",
     "badge": {
       "type": "recommend",
@@ -11821,7 +11821,7 @@
         "text": "ByteDance"
       }
     ],
-    "rating": "4.4",
+    "rating": "3.9",
     "visits": "Trending fast - Seedance 2.5 launched July 31, 2026 with API live on Volcano Engine since Aug 7; Seedance 2.0 leads the Artificial Analysis video arena at ~1,218 Elo, ahead of Veo 3.1 and Kling 3.0 (2.5 has no published independent arena score yet)",
     "badge": {
       "type": "new",
@@ -11914,7 +11914,7 @@
         "text": "AskFred"
       }
     ],
-    "rating": "4.5",
+    "rating": "4.6",
     "visits": "~1.5M monthly visits per SimilarWeb - among the most-used AI meeting notetakers, and already listed as an alternative on our Fathom review",
     "badge": {
       "type": "new",
@@ -12004,7 +12004,7 @@
         "text": "API"
       }
     ],
-    "rating": "4.5",
+    "rating": "4.2",
     "visits": "8.5M+ monthly",
     "badge": {
       "type": "hot",
@@ -12196,7 +12196,7 @@
         "text": "Web App"
       }
     ],
-    "rating": "4.6",
+    "rating": "3.9",
     "visits": "Around 850K monthly visits; used by e-commerce sellers fixing product shots, real-estate agents polishing listings, photographers prepping prints, and freelancers running old-photo restoration as a paid service",
     "badge": {
       "type": "recommend",
@@ -12296,7 +12296,7 @@
         "text": "Web App"
       }
     ],
-    "rating": "4.4",
+    "rating": "4.6",
     "visits": "Around 20M monthly visits at its 2025 peak; used by freelancers reselling research and deck-building, solopreneurs automating repeatable deliverables, and analysts delegating multi-step web research",
     "badge": {
       "type": "hot",
@@ -12493,7 +12493,7 @@
         "text": "Web App"
       }
     ],
-    "rating": "4.5",
+    "rating": "4.7",
     "visits": "Around 10.8M monthly visits in the CN directory - a 2024 search launch that hit 5M users in nine months, then rode the Super Agent pivot to $200M+ ARR by early 2026",
     "badge": {
       "type": "hot",
@@ -12690,7 +12690,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.7",
+    "rating": "4.3",
     "visits": "3M+ businesses built on the platform; strong traffic from local-service and side-hustle searches",
     "badge": {
       "type": "hot",
@@ -12866,7 +12866,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.3",
+    "rating": "4.0",
     "visits": "1.5M",
     "badge": {
       "type": "new",
@@ -12933,7 +12933,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.2",
+    "rating": "4.0",
     "visits": "2M+",
     "badge": {
       "type": "new",
@@ -13007,7 +13007,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.1",
+    "rating": "4.2",
     "visits": "30M+",
     "badge": {
       "type": "new",
@@ -13081,7 +13081,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.4",
+    "rating": "4.2",
     "visits": "35M+",
     "badge": {
       "type": "new",
@@ -13158,7 +13158,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.6",
+    "rating": "3.7",
     "visits": "1M+ creators",
     "badge": {
       "type": "new",
@@ -13229,7 +13229,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.6",
+    "rating": "3.2",
     "visits": "—",
     "badge": {
       "type": "new",
@@ -13315,7 +13315,7 @@
         "text": "Make Money Online"
       }
     ],
-    "rating": "4.7",
+    "rating": "3.2",
     "visits": "100k+ creators",
     "badge": {
       "type": "new",
@@ -13392,7 +13392,7 @@
         "text": "Make Money Online"
       }
     ],
-    "rating": "4.7",
+    "rating": "3.1",
     "visits": "100k+ creators",
     "badge": {
       "type": "new",
@@ -13463,7 +13463,7 @@
         "text": "Make Money Online"
       }
     ],
-    "rating": "4.4",
+    "rating": "3.9",
     "visits": "1.1M",
     "badge": {
       "type": "new",
@@ -13535,7 +13535,7 @@
         "text": "Make Money Online"
       }
     ],
-    "rating": "4.3",
+    "rating": "3.5",
     "visits": "520K",
     "badge": {
       "type": "new",
@@ -13612,7 +13612,7 @@
         "text": "Make Money Online"
       }
     ],
-    "rating": "4.5",
+    "rating": "3.7",
     "visits": "900K",
     "badge": {
       "type": "new",
@@ -13689,7 +13689,7 @@
         "text": "Make Money Online"
       }
     ],
-    "rating": "4.4",
+    "rating": "3.7",
     "visits": "1M",
     "badge": {
       "type": "new",
@@ -13766,7 +13766,7 @@
         "text": "Make Money Online"
       }
     ],
-    "rating": "4.5",
+    "rating": "3.9",
     "visits": "1M",
     "badge": {
       "type": "new",
@@ -13843,7 +13843,7 @@
         "text": "Software Sales"
       }
     ],
-    "rating": "4.3",
+    "rating": "4.0",
     "visits": "3M",
     "badge": {
       "type": "new",
@@ -13914,7 +13914,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.6",
+    "rating": "3.8",
     "visits": "1M+",
     "badge": {
       "type": "hot",
@@ -13980,7 +13980,7 @@
         "type": "free"
       }
     ],
-    "rating": "4.7",
+    "rating": "3.9",
     "visits": "2M+",
     "badge": {
       "type": "hot",
@@ -14042,7 +14042,7 @@
     "platform": "Web / iOS / Android",
     "price": "Free + plans from $10/mo",
     "pricing_details": "Free $0: unlimited links, 5 bio pages, basic media kit, store with 9% transaction fee, 50 emails/mo, Beacons branding. Creator $10/mo ($100/yr): custom domain (first year free), branding removed, AI brand outreach, 500 emails/mo, still 9% fee. Creator Plus $30/mo ($300/yr): 0% transaction fee, unlimited emails, memberships, courses, order bumps. Creator Max $90/mo ($900/yr): Google Workspace, NFC card, white-glove support. Stripe processing fees apply on all plans.",
-    "rating": "4.5",
+    "rating": "3.8",
     "visits": "1M+",
     "published": true,
     "created_date": "2026-09-11",
@@ -14109,7 +14109,7 @@
     "platform": "Web / iOS / Android",
     "price": "$0.20 to list + ~10% per sale",
     "pricing_details": "One-time $15 shop setup fee (up to $29 in some regions). $0.20 per listing, active 4 months. 6.5% transaction fee on item price plus shipping. Payment processing ~3% + $0.25 per order (US; varies by country). Offsite Ads fee 15% (drops to 12% past $10k/year revenue) charged only when a buyer clicks an offsite ad and buys within 30 days - mandatory once you pass $10k/year. Share & Save refunds 4% of the transaction fee when you drive your own traffic. Optional: Etsy Plus $10/mo, Pattern standalone site $15/mo. Realistic all-in cost for most sellers lands between 20-25% of revenue.",
-    "rating": "4.3",
+    "rating": "4.1",
     "visits": "400M+",
     "published": true,
     "created_date": "2026-09-12",
@@ -14176,7 +14176,7 @@
     "platform": "Web / iOS / Android",
     "price": "Free to sell · 20% per sale",
     "pricing_details": "Listing gigs is free; Fiverr takes a flat 20% commission on every order, including extras, add-ons, and tips - no tiers, no volume discount at any seller level. Buyers pay their own fee (5.5% plus a small-order surcharge on small orders), which raises the total they see at checkout. Cleared funds are held 14 days after order completion (7 days for Top Rated, Seller Plus, and Pro sellers). Withdrawal: PayPal has no Fiverr-side fee, bank transfer via Payoneer costs $1, Payoneer account withdrawal costs $3, US direct deposit $1. Converting non-USD payouts adds roughly 2-4% in exchange costs. Optional: Seller Plus subscription from $29/mo (faster payout, analytics, promoted gig discounts). Effective take for a cross-border seller often lands near 23-25% once withdrawal and conversion are counted.",
-    "rating": "4.4",
+    "rating": "4.2",
     "visits": "60M+",
     "published": true,
     "created_date": "2026-09-13",
@@ -14243,7 +14243,7 @@
     "platform": "Web",
     "price": "Free to list · keep 80%",
     "pricing_details": "Free to create a seller account with up to 5 free listings (paid options for more). Marketplace sales carry a 20% commission - you keep 80%. Sales driven through your own referral link carry 0% commission, so you keep the full price. Custom prompt jobs commissioned directly from you carry a 10% commission. No subscription, no listing fees, no minimum payout: earnings pay out weekly via PayPal or Stripe. Buyer-side prompt prices range from $1.99 to $19.99, with most listings between $3 and $8.",
-    "rating": "4.2",
+    "rating": "3.7",
     "visits": "1M+/mo",
     "published": true,
     "created_date": "2026-09-14",
@@ -14310,7 +14310,7 @@
     "platform": "Web",
     "price": "Free to join · commission-based",
     "pricing_details": "Signing up and uploading is free; Wirestock earns by taking a cut of licensing income instead of charging subscription fees. The historical model took 15% of marketplace royalties, and that cut still applies to content distributed before the January 2026 pivot, which keeps earning on Adobe Stock, Shutterstock, Getty, iStock, Alamy, Dreamstime and Freepik. For the new channels - AI training-data licensing and paid creative projects - the revenue split is not published; approved content earns a commission each time it is licensed as part of a collection, and project work pays per assignment. Payouts go out monthly, and the referral program pays 10% of a referred creator's royalties, capped at $25 per referral.",
-    "rating": "4.0",
+    "rating": "3.6",
     "visits": "300K/mo",
     "published": true,
     "created_date": "2026-09-15",
@@ -14374,7 +14374,7 @@
     "platform": "Web",
     "price": "Free to publish · up to 70% royalty",
     "pricing_details": "Free to publish - no listing fees, no monthly plan; Amazon only earns when you sell. Ebooks: 70% royalty when priced $2.99-$9.99 (minus a $0.15/MB delivery fee), 35% royalty outside that window with no fee. Paperbacks: 60% of list price minus printing cost - a 300-page black-and-white 6x9 prints for roughly $3.60-4.50 in the US. Kindle Unlimited: books in KDP Select (90-day Amazon exclusivity) earn per page read, historically about $0.004-0.005 per page, so a full read of a 300-page novel pays roughly $1.35-1.50. Royalties arrive about 60 days after the end of the sale month.",
-    "rating": "4.3",
+    "rating": "3.2",
     "visits": "N/A (Amazon)",
     "published": true,
     "created_date": "2026-09-16",
@@ -14441,7 +14441,7 @@
     "platform": "Web / iOS / Android",
     "price": "Free to teach · 37–97% revenue share",
     "pricing_details": "Publishing and hosting are free with unlimited courses. Revenue share depends on who brings the buyer: 97% on sales through your instructor coupon or referral link, 37% on marketplace sales Udemy drives (ads, browse, organic), about 25% on mobile-app sales after the 30% Apple/Google fee, and a pooled 15% share of subscription revenue if you opt into the Subscriptions/Udemy Business program. Udemy's Deals Program can sell your course as low as $9.99 regardless of list price. Payouts are monthly via PayPal, Payoneer, or bank transfer with a $10 minimum, and refunded courses come out of your balance.",
-    "rating": "4.5",
+    "rating": "4.1",
     "visits": "70M+",
     "published": true,
     "created_date": "2026-09-17",
@@ -14508,7 +14508,7 @@
     "platform": "Web / iOS / Android",
     "price": "Free to join · ~10% per contract",
     "pricing_details": "Free to create a profile and browse jobs. Upwork takes a Freelancer Service Fee on earnings: since 2025 it is set per contract at proposal time and ranges 0-15% (most contracts land near 10%), then locks for the life of that contract. No loyalty discount for long-term clients. Connects cost $0.15 each and one proposal uses 4-16+ Connects; free accounts get about 10 free Connects a month, and Freelancer Plus ($14.99/mo) adds a monthly allowance plus bid-range visibility. A one-time contract initiation fee (about $4.99) applies to each new contract. Withdrawals are free via US bank (ACH), a couple of dollars via PayPal/Payoneer, and $30 by international wire. Bring-your-own-client options are cheaper: Direct Contracts carry a reduced fee and Any Hire contracts carry no Freelancer Service Fee.",
-    "rating": "4.2",
+    "rating": "4.1",
     "visits": "20M+",
     "published": true,
     "created_date": "2026-09-18",
@@ -14609,7 +14609,7 @@
     },
     "color": "#e4132c",
     "platform": "Web",
-    "rating": "3.8",
+    "rating": "4.0",
     "tags": [
       {
         "text": "Marketplace"
@@ -14678,7 +14678,7 @@
     },
     "color": "#00a05a",
     "platform": "Web",
-    "rating": "3.9",
+    "rating": "3.2",
     "tags": [
       {
         "text": "Subscription Courses"
@@ -14744,7 +14744,7 @@
     },
     "color": "#ffdd00",
     "platform": "Web",
-    "rating": "4.5",
+    "rating": "3.7",
     "tags": [
       {
         "text": "Tip Jar"
@@ -14774,7 +14774,7 @@
     "platform": "Web",
     "price": "Free to join · 33-35% royalty",
     "pricing_details": "Signing up and uploading as a contributor is completely free - Adobe takes no subscription fee from sellers. Royalties: 33% of net price for photos, vectors and illustrations, 35% for video. Real per-download numbers published by Adobe: about $0.99 on a 10-per-month plan, $3.30 on a 3-per-month plan, a guaranteed $0.33-$0.40 floor in large 350+ subscriptions, roughly $26.40 on extended licenses, and $17.50 (small) / $28 (HD) / $70 (4K) for video. Payout requires $25 in royalties plus 45 days since the first sale, then 7-10 business days to PayPal, Payoneer or Skrill. No valid tax form on file means up to 30% withholding. Active contributors received a free 12-month Creative Cloud Pro code in 2026.",
-    "rating": "4.5",
+    "rating": "4.0",
     "visits": "30M+/mo",
     "published": true,
     "created_date": "2026-09-22",
@@ -14838,7 +14838,7 @@
     "platform": "Web + App",
     "price": "Free · 55% long-form, 45% Shorts",
     "pricing_details": "The platform and the Partner Program are both free to join - YouTube never charges creators a fee. Revenue shares: 55% of long-form ad revenue to the creator, 45% of your allocation from the Shorts creator pool (after music licensing is deducted from the pool), 55% of Premium revenue, and 70% of fan funding (Super Chat, Super Stickers, Super Thanks) and channel memberships. Sponsorship money sold directly is 100% yours. Payouts run through AdSense with a $100 minimum threshold, paid monthly around the 21st. Two entry tiers: 500 subscribers + 3,000 watch hours or 3M Shorts views (90 days) opens fan funding only; 1,000 subscribers + 4,000 watch hours or 10M Shorts views opens ad revenue sharing. Non-US creators should file a W-8BEN in AdSense or face up to 30% withholding on US-viewer earnings.",
-    "rating": "4.6",
+    "rating": "3.1",
     "visits": "50B+/mo",
     "published": true,
     "created_date": "2026-09-23",
@@ -14902,7 +14902,7 @@
     "platform": "Web",
     "price": "Free to join · 1–10% per sale",
     "pricing_details": "Free to join, no monthly fee, no minimum traffic requirement to apply. Commission is a fixed percentage by product category (US): 10% luxury beauty and Amazon Explore; 5% music, handmade, digital video; 4.5% physical books, kitchen, automotive; 4% fashion, watches, Amazon devices, and the default bucket for everything else; 3% home, toys, pets, beauty, sports, baby; 2.5% PC and components; 2% televisions and digital games; 1% grocery, health, game consoles; 0% gift cards, alcohol, wireless plans. Flat bounties on top: $30 for a Prime for Young Adults signup, $25 for an Audible annual plan, $20 for Audible standard, $15 for Amazon Business, $4 for a first Amazon Haul order. Commission is calculated on Qualifying Revenue, which strips out shipping, taxes, handling, rebates, and returns. Payout runs about 60 days behind (January earnings land at the end of March), with a $10 minimum for direct deposit. New accounts must make 3 qualifying sales within 180 days or the account is closed.",
-    "rating": "4.4",
+    "rating": "3.2",
     "visits": "2.5B+/mo",
     "published": true,
     "created_date": "2026-09-24",
@@ -15010,7 +15010,7 @@
       "text": "NEW"
     },
     "platform": "Web",
-    "rating": "4.0",
+    "rating": "2.6",
     "published": true
   },
   {
@@ -15070,7 +15070,7 @@
       "text": "NEW"
     },
     "platform": "Web",
-    "rating": "4.0",
+    "rating": "2.9",
     "published": true
   },
   {
@@ -15132,7 +15132,7 @@
       "text": "NEW"
     },
     "platform": "Web, iOS, Android",
-    "rating": "4.1",
+    "rating": "2.9",
     "published": true
   },
   {
@@ -15194,7 +15194,7 @@
       "text": "NEW"
     },
     "platform": "Web, iOS, Android",
-    "rating": "4.5",
+    "rating": "3.0",
     "published": true
   },
   {
@@ -15210,7 +15210,7 @@
     "platform": "Web + App",
     "price": "Free · 50/50 subs, up to 70/30",
     "pricing_details": "Streaming on Twitch is free; every monetization program is free to join. Subscriptions ($4.99 / $9.99 / $24.99 tiers in the US) split 50/50 by default, so a Tier 1 sub puts about $2.50 in your pocket. The Plus Program raises your share to 60/40 at 100 Plus Points and 70/30 at 300 Plus Points, held for three consecutive months (Tier 1 sub = 1 point, Tier 2 = 2, Tier 3 = 6; gifted and Prime subs pay you but earn zero points). The old $100k cap on the 70/30 rate is gone, and Affiliates can now qualify alongside Partners. Bits pay roughly $0.01 each - Twitch takes its margin when viewers buy Bits, not from your payout (third-party Extension cheers pay ~80%). Prime Gaming subs pay a fixed local-currency rate ($2.25 per US Prime sub since June 2024). Mobile sub purchases lose ~30% to the Apple/Google store cut before the split. Ad revenue is shared, with gross CPMs reported around $3.50. Payouts are monthly on a net-15 schedule with a $50 minimum balance; below that the balance rolls over.",
-    "rating": "4.5",
+    "rating": "3.9",
     "visits": "100M+/mo",
     "published": true,
     "created_date": "2026-09-29",
@@ -15295,7 +15295,7 @@
     ],
     "published": true,
     "color": "#6633CC",
-    "rating": "4.5",
+    "rating": "2.8",
     "badge": {
       "type": "new",
       "text": "NEW"
@@ -15359,7 +15359,7 @@
     ],
     "published": true,
     "color": "#EE1D52",
-    "rating": "4.3",
+    "rating": "2.8",
     "badge": {
       "type": "new",
       "text": "NEW"
@@ -15426,7 +15426,7 @@
     },
     "color": "#FF9900",
     "platform": "Web",
-    "rating": "4.0",
+    "rating": "2.9",
     "tags": [
       {
         "text": "Print on Demand"
@@ -15489,7 +15489,7 @@
     },
     "color": "#7C3AED",
     "platform": "Web",
-    "rating": "4.3",
+    "rating": "2.6",
     "tags": [
       {
         "text": "AI UGC Ads"
@@ -15553,7 +15553,7 @@
     },
     "color": "#5B5BD6",
     "platform": "Web",
-    "rating": "4.4",
+    "rating": "2.8",
     "tags": [
       {
         "text": "Voice AI"
@@ -15618,7 +15618,7 @@
     },
     "color": "#FF7A00",
     "platform": "Web",
-    "rating": "4.6",
+    "rating": "2.9",
     "tags": [
       {
         "text": "Web Scraping"
@@ -15683,7 +15683,7 @@
     },
     "color": "#0F766E",
     "platform": "Web",
-    "rating": "4.7",
+    "rating": "2.8",
     "tags": [
       {
         "text": "GTM Data"
@@ -15751,7 +15751,7 @@
     },
     "color": "#4F46E5",
     "platform": "Web",
-    "rating": "4.6",
+    "rating": "3.0",
     "tags": [
       {
         "text": "Cold Email"
@@ -15819,7 +15819,7 @@
     },
     "color": "#2563EB",
     "platform": "Web",
-    "rating": "4.4",
+    "rating": "3.1",
     "tags": [
       {
         "text": "Agency Platform"
@@ -15887,7 +15887,7 @@
     },
     "color": "#1E40AF",
     "platform": "Web",
-    "rating": "4.5",
+    "rating": "3.1",
     "tags": [
       {
         "text": "Lead Database"
@@ -15955,7 +15955,7 @@
     },
     "color": "#2563EB",
     "platform": "Web",
-    "rating": "4.5",
+    "rating": "3.0",
     "tags": [
       {
         "text": "Cold Email"
@@ -16024,7 +16024,7 @@
     },
     "color": "#7C3AED",
     "platform": "Web",
-    "rating": "4.5",
+    "rating": "3.1",
     "tags": [
       {
         "text": "Voice Agents"
@@ -16096,7 +16096,7 @@
     },
     "color": "#0EA5E9",
     "platform": "Web",
-    "rating": "4.6",
+    "rating": "3.3",
     "visits": "12K",
     "tags": [
       {
@@ -16170,7 +16170,7 @@
     },
     "color": "#111827",
     "platform": "Web",
-    "rating": "4.5",
+    "rating": "4.3",
     "visits": "6.2M",
     "tags": [
       {
@@ -16324,7 +16324,7 @@
     },
     "color": "#7C4DFF",
     "platform": "Web",
-    "rating": "4.3",
+    "rating": "4.1",
     "visits": "2.1M",
     "tags": [
       {
@@ -16406,7 +16406,7 @@
     },
     "color": "#25A75C",
     "platform": "Web",
-    "rating": "4.5",
+    "rating": "4.3",
     "visits": "2.4M",
     "tags": [
       {
@@ -16480,7 +16480,7 @@
     },
     "color": "#008060",
     "platform": "Web, iOS, Android",
-    "rating": "4.5",
+    "rating": "4.1",
     "visits": "50M+",
     "tags": [
       {
@@ -16554,7 +16554,7 @@
     },
     "color": "#FF7A59",
     "platform": "Web, iOS, Android",
-    "rating": "4.5",
+    "rating": "3.0",
     "tags": [
       {
         "text": "CRM"
@@ -16624,7 +16624,7 @@
     },
     "color": "#03363D",
     "platform": "Web, iOS, Android, Windows, Mac",
-    "rating": "4.3",
+    "rating": "3.1",
     "tags": [
       {
         "text": "Customer Support"
@@ -16694,7 +16694,7 @@
     },
     "color": "#FF6419",
     "platform": "Web, macOS, Windows, iOS, Android",
-    "rating": "4.5",
+    "rating": "3.1",
     "tags": [
       {
         "text": "SEO"
@@ -16773,7 +16773,7 @@
     },
     "color": "#0AA89C",
     "platform": "Web",
-    "rating": "4.5",
+    "rating": "3.9",
     "visits": "1.1M",
     "tags": [
       {
@@ -16853,7 +16853,7 @@
     },
     "color": "#2D7FF9",
     "platform": "Web",
-    "rating": "4.6",
+    "rating": "4.1",
     "visits": "1.5M",
     "tags": [
       {
@@ -16929,7 +16929,7 @@
     },
     "color": "#0B5FFF",
     "platform": "Web",
-    "rating": "4.5",
+    "rating": "3.8",
     "visits": "900K",
     "tags": [
       {
@@ -16980,7 +16980,7 @@
         "text": "Evidence Checking"
       }
     ],
-    "rating": "4.5",
+    "rating": "4.3",
     "visits": "2M+ users; 1.6B+ citations analyzed across 300M+ scholarly sources; used by researchers at Clemson, top universities and pharma teams.",
     "badge": {
       "type": "recommend",
@@ -17062,7 +17062,7 @@
         "text": "Enterprise Research"
       }
     ],
-    "rating": "4.4",
+    "rating": "3.5",
     "visits": "1.4-1.7 trillion conversations archived across 100M+ sources; G2 4.4/5 on Consumer Intelligence (728 reviews); used by Fortune 500 consumer brands, agencies and comms teams; part of Cision.",
     "badge": {
       "type": "recommend",
@@ -17130,7 +17130,7 @@
     "color": "#4F46E5",
     "description": "Litmaps turns a seed paper into a visual citation map and alerts you when new work connects to it. Sell literature-review sprints and research monitoring retainers instead of doing manual searches.",
     "category": "AI Research",
-    "rating": "4.6",
+    "rating": "4.2",
     "visits": "270M+ papers indexed from Semantic Scholar and OpenAlex data; used by students and researchers at universities worldwide.",
     "badge": {
       "type": "recommend",
@@ -17207,7 +17207,7 @@
     "color": "#0EA5E9",
     "description": "Brand24 tracks your brand across 25M+ social, news, blog, forum and review sources with AI sentiment, anomaly alerts and an AI assistant. The money is in reselling the monitoring: monthly client reports and crisis-watch retainers on a single cheap seat.",
     "category": "Market Research",
-    "rating": "4.6",
+    "rating": "4.5",
     "visits": "Monitors 25M+ web, social, news, blog, forum, review and podcast sources; G2 4.6/5 (1,500+ reviews); used by small brands, PR teams and marketing agencies worldwide.",
     "badge": {
       "type": "recommend",
@@ -17289,7 +17289,7 @@
     "color": "#24292F",
     "description": "GitHub's built-in CI/CD: workflows run on every push, PR and schedule, free for public repos and metered minutes for private ones. The money is in selling pipeline work - migrations, retainer DevOps and fixing deploys that keep breaking.",
     "category": "AI Development",
-    "rating": "4.7",
+    "rating": "4.4",
     "visits": "The default CI/CD for GitHub's 100M+ developer ecosystem; 20,000+ actions in the Marketplace; most open-source projects run on it; Copilot coding agent and Copilot code review now ride on top of it.",
     "badge": {
       "type": "recommend",
@@ -17457,7 +17457,7 @@
     "color": "#343434",
     "description": "The hosted CI/CD engine built around one idea: run jobs fast and bill them in credits. Strongest parallel test splitting and macOS M4 Pro runners in the category. The money is in selling pipeline migrations, speed audits and build-cost rescues around it.",
     "category": "AI Development",
-    "rating": "4.5",
+    "rating": "3.5",
     "visits": "A CI/CD pure-play used by thousands of teams from seed-stage startups to Fortune 500: config-as-code in .circleci/config.yml, reusable orbs, Docker layer caching, and the only mainstream cloud CI with M4 Pro macOS runners on the free tier.",
     "badge": {
       "type": "recommend",
@@ -17538,7 +17538,7 @@
     "color": "#D33833",
     "description": "The 20-year-old open-source automation server that still runs a huge slice of enterprise CI. Free to run, expensive to maintain - and that labor line is exactly where the money is: migrations, managed-Jenkins retainers and pipeline rescue work.",
     "category": "AI Development",
-    "rating": "4.4",
+    "rating": "3.5",
     "visits": "The leading open-source automation server: a self-contained Java app with 2,300+ community plugins, controller/agent distributed builds and pipeline-as-code via Jenkinsfile. MIT-licensed, runs anywhere from a single VPS to air-gapped enterprise clusters, and it still out-ranks every hosted competitor inside large companies.",
     "badge": {
       "type": "recommend",
@@ -17615,7 +17615,7 @@
     "color": "#121118",
     "description": "Open SaaS storefront platform built for merchants who outgrow the app-tax model: B2B price lists, customer groups and multi-currency ship natively, and the API layer stays open. The money is in building and migrating stores for clients, not reselling the platform.",
     "category": "AI E-commerce",
-    "rating": "4.2",
+    "rating": "3.5",
     "visits": "Texas-based commerce platform (NASDAQ: BIGC) used by mid-market brands and B2B sellers in 150+ countries: open SaaS architecture, headless-ready APIs, native B2B editions, and a best-of-breed integration model instead of an all-native app suite.",
     "badge": {
       "type": "recommend",
@@ -17696,7 +17696,7 @@
     "color": "#7f54b3",
     "description": "The free open-source storefront that runs on WordPress and answers to nobody: no revenue share, no plan tiers, any payment gateway without penalty. The money is in building and maintaining stores for clients - or selling your own extensions into a huge plugin market.",
     "category": "AI E-commerce",
-    "rating": "4.3",
+    "rating": "3.4",
     "visits": "Open-source WordPress plugin from Automattic, estimated to power roughly a quarter of all online stores worldwide. You own the code, the data and the hosting choice; WooCommerce takes zero percent of your sales.",
     "badge": {
       "type": "recommend",
@@ -17777,7 +17777,7 @@
     "color": "#FF642D",
     "description": "The heavyweight SEO suite that bolted AI-search tracking onto every plan in 2026. The money angle is direct: one client retainer pays for the subscription, competitor-gap audits are a repeatable product, and AI-visibility audits are the newest billable service in SEO.",
     "category": "AI SEO",
-    "rating": "4.5",
+    "rating": "3.5",
     "visits": "One of the most established names in SEO software, used by millions of marketers and a large share of agencies worldwide. Its keyword and backlink databases go back over a decade, which is why competitor research remains its strongest draw even as the market shifts toward AI answers.",
     "badge": {
       "type": "recommend",
@@ -17855,7 +17855,7 @@
     "color": "#92035B",
     "description": "The WordPress page builder behind millions of sites, now bundling AI copy, images and CSS into every tier. The money angle is the classic one: client builds pay for the license many times over, maintenance retainers compound, and template kits sell while you sleep.",
     "category": "AI Website Builder",
-    "rating": "4.3",
+    "rating": "3.4",
     "visits": "One of the most installed WordPress plugins of all time, with over ten million active installs and a huge global ecosystem of freelancers, agencies, tutorials and third-party add-ons. Its AI features launched in 2023 and were folded into the all-in-one One plans in 2026, which is when most working web creators started paying attention.",
     "url": "https://elementor.com/",
     "price": "Free core · Pro from $60/yr",
@@ -17942,7 +17942,7 @@
         "text": "TikTok Shop"
       }
     ],
-    "rating": "4.5",
+    "rating": "4.3",
     "visits": "Claims over 4 million members and is the most cited toolset in Amazon seller communities. Featured in nearly every serious FBA course, and its Chrome Extension data shows up in countless product-research YouTube videos.",
     "badge": {
       "type": "recommend",
@@ -18036,7 +18036,7 @@
     ],
     "published": true,
     "color": "#1DB954",
-    "rating": "4.5",
+    "rating": "3.0",
     "badge": {
       "type": "new",
       "text": "NEW"
@@ -18100,7 +18100,7 @@
     ],
     "published": true,
     "color": "#111111",
-    "rating": "4.3",
+    "rating": "2.8",
     "badge": {
       "type": "new",
       "text": "NEW"
@@ -18164,7 +18164,7 @@
     ],
     "published": true,
     "color": "#4285F4",
-    "rating": "3.8",
+    "rating": "2.9",
     "badge": {
       "type": "new",
       "text": "NEW"
@@ -18228,7 +18228,7 @@
     ],
     "published": true,
     "color": "#F7A500",
-    "rating": "3.9",
+    "rating": "2.8",
     "badge": {
       "type": "new",
       "text": "NEW"
@@ -18289,7 +18289,7 @@
     ],
     "published": true,
     "color": "#E85D75",
-    "rating": "3.8",
+    "rating": "2.9",
     "badge": {
       "type": "new",
       "text": "NEW"
@@ -18354,7 +18354,7 @@
     ],
     "published": true,
     "color": "#00C4CC",
-    "rating": "3.8",
+    "rating": "2.9",
     "badge": {
       "type": "new",
       "text": "NEW"
@@ -18401,7 +18401,7 @@
         "text": "Make Money Online"
       }
     ],
-    "rating": "3.9",
+    "rating": "3.2",
     "badge": {
       "type": "new",
       "text": "NEW"
@@ -18470,7 +18470,7 @@
         "text": "Make Money Online"
       }
     ],
-    "rating": "4.5",
+    "rating": "3.2",
     "badge": {
       "type": "new",
       "text": "NEW"
@@ -18537,7 +18537,7 @@
         "text": "Make Money Online"
       }
     ],
-    "rating": "4.5",
+    "rating": "3.3",
     "badge": {
       "type": "new",
       "text": "NEW"
@@ -18604,7 +18604,7 @@
         "text": "Creator Subscriptions"
       }
     ],
-    "rating": "4.0",
+    "rating": "3.3",
     "badge": {
       "type": "new",
       "text": "NEW"
@@ -18671,7 +18671,7 @@
         "text": "AI Disclosure"
       }
     ],
-    "rating": "4.3",
+    "rating": "3.3",
     "badge": {
       "type": "new",
       "text": "NEW"
@@ -18737,7 +18737,7 @@
         "text": "E-commerce"
       }
     ],
-    "rating": "4.6",
+    "rating": "3.1",
     "badge": {
       "type": "new",
       "text": "NEW"
@@ -18804,7 +18804,7 @@
         "text": "SERP Analysis"
       }
     ],
-    "rating": "4.4",
+    "rating": "3.1",
     "badge": {
       "type": "new",
       "text": "NEW"
@@ -18871,7 +18871,7 @@
         "text": "AI Prompt Data"
       }
     ],
-    "rating": "4.4",
+    "rating": "3.1",
     "badge": {
       "type": "new",
       "text": "NEW"
@@ -18938,7 +18938,7 @@
         "text": "Agency Retainers"
       }
     ],
-    "rating": "4.5",
+    "rating": "3.1",
     "badge": {
       "type": "new",
       "text": "NEW"
@@ -19005,7 +19005,7 @@
         "text": "MVP Builder"
       }
     ],
-    "rating": "4.3",
+    "rating": "3.1",
     "badge": {
       "type": "new",
       "text": "NEW"
@@ -19072,7 +19072,7 @@
         "text": "Remote Work"
       }
     ],
-    "rating": "4.4",
+    "rating": "3.2",
     "badge": {
       "type": "new",
       "text": "NEW"
@@ -19140,7 +19140,7 @@
         "text": "SEO"
       }
     ],
-    "rating": "4.5",
+    "rating": "3.1",
     "badge": {
       "type": "new",
       "text": "NEW"
@@ -19208,7 +19208,7 @@
         "text": "No-code"
       }
     ],
-    "rating": "4.5",
+    "rating": "3.1",
     "badge": {
       "type": "new",
       "text": "NEW"
@@ -19276,7 +19276,7 @@
         "text": "No-code"
       }
     ],
-    "rating": "4.5",
+    "rating": "3.1",
     "badge": {
       "type": "new",
       "text": "NEW"
@@ -19344,7 +19344,7 @@
         "text": "Digital Products"
       }
     ],
-    "rating": "4.3",
+    "rating": "3.1",
     "badge": {
       "type": "new",
       "text": "NEW"
@@ -19415,7 +19415,7 @@
         "text": "Image Generation"
       }
     ],
-    "rating": "4.6",
+    "rating": "3.4",
     "badge": {
       "type": "new",
       "text": "NEW"
@@ -19486,7 +19486,7 @@
         "text": "Content Repurposing"
       }
     ],
-    "rating": "4.3",
+    "rating": "3.4",
     "badge": {
       "type": "new",
       "text": "NEW"
@@ -19557,7 +19557,7 @@
         "text": "Agency Reporting"
       }
     ],
-    "rating": "4.4",
+    "rating": "3.4",
     "badge": {
       "type": "new",
       "text": "NEW"
@@ -19628,7 +19628,7 @@
         "text": "Store Automation"
       }
     ],
-    "rating": "4.2",
+    "rating": "3.4",
     "badge": {
       "type": "new",
       "text": "NEW"
@@ -19699,7 +19699,7 @@
         "text": "Developer Tool"
       }
     ],
-    "rating": "4.6",
+    "rating": "3.4",
     "badge": {
       "type": "new",
       "text": "NEW"
@@ -19755,7 +19755,7 @@
     "url": "https://appsumo.com/",
     "price": "Free to list · keep 70-95%",
     "last_verified": "2026-11-20",
-    "rating": "4.1",
+    "rating": "3.4",
     "badge": {
       "type": "new",
       "text": "NEW"
@@ -19832,7 +19832,7 @@
     "url": "https://teachable.com/",
     "price": "Free + paid from $39/mo",
     "last_verified": "2026-11-20",
-    "rating": "4.2",
+    "rating": "3.4",
     "badge": {
       "type": "new",
       "text": "NEW"
@@ -19906,7 +19906,7 @@
     "url": "https://scispace.com/",
     "price": "Free 100 credits/mo · $12/mo annual",
     "last_verified": "2026-11-20",
-    "rating": "4.4",
+    "rating": "3.3",
     "badge": {
       "type": "new",
       "text": "NEW"
@@ -19980,7 +19980,7 @@
     "url": "https://www.junglescout.com/",
     "price": "From $29/mo annual · no free plan",
     "last_verified": "2026-11-20",
-    "rating": "4.5",
+    "rating": "3.4",
     "badge": {
       "type": "new",
       "text": "NEW"
@@ -20055,7 +20055,7 @@
     "url": "https://riverside.fm/",
     "price": "Free plan · Pro from $24/mo annual",
     "last_verified": "2026-11-20",
-    "rating": "4.3",
+    "rating": "3.4",
     "badge": {
       "type": "new",
       "text": "NEW"
@@ -20119,6 +20119,371 @@
       }
     ],
     "content": "## What Riverside Actually Is\n\nRiverside is a browser-based recording studio for podcasts and video interviews. Its defining feature is local recording: every participant's audio and video is captured on their own device in up to 4K video and 48kHz audio, then uploaded progressively to the cloud. When a guest's connection stutters, the call looks bad but your files stay pristine - the reason it replaced Zoom recordings on most professional shows. Around that core: a text-based editor (cut audio by deleting words from the transcript), an AI editing agent, Magic Clips for social repurposing, AI show notes, a teleprompter, and podcast hosting with publishing to Spotify, Apple and YouTube.\n\nIt is the recording-first tool in its field: [Descript](/tools/descript/) is editing-first with weaker recording, [Wondercraft](/tools/wondercraft-ai/) is production-first for scripted and audio-only shows, and [Opus Clip](/tools/opus-clip/) handles only the clipping stage.\n\n## The Money Angle\n\nPodcast money comes from three places, and Riverside touches all of them:\n\n1. **Sponsorships** - the classic path: consistent episodes, then ad slots. Transcripts and AI show notes make sponsor packets and attribution easier to produce. Distribution and monetization live elsewhere: [Spotify for Creators](/tools/spotify-for-creators/) for podcast monetization and [YouTube](/tools/youtube/) for video revenue.\n2. **Audience growth** - Magic Clips converts one interview into a week of shorts for TikTok and Shorts. Consistent clipping is the highest-impact growth habit for shows under 1,000 listeners, and it is the feature most likely to earn its keep.\n3. **Selling the production itself** - agencies and freelancers run client podcasts through Riverside: the guest-link workflow (no accounts, no installs) is why production shops book it, and a $24/mo Pro seat against a monthly podcast-management retainer is one of the better margins in content services. See [our freelancer toolkit](/articles/best-ai-tools-for-freelancers-2026/).\n\nBe honest about the ceiling: a recorder does not create demand. Shows that earn started with an audience or a niche worth sponsoring; Riverside's job is making you sound worth sponsoring.\n\n## What It Really Costs\n\n| Plan | Monthly | Annual (per mo) | Separate-track downloads | Studios | Notable |\n|---|---|---|---|---|---|\n| Free | $0 | $0 | limited (~2 hrs/mo) | - | 720p, watermark |\n| Pro | $29 | $24 ($288/yr) | 15 hrs | 1 | 4K/48kHz, no watermark, AI editing, hosting |\n| Grow | $39 | $34 ($408/yr) | 20 hrs | 2 | + scheduling, newsletter, website, 1080p multistream, MCP |\n| Webinar | $99 | $79 ($948/yr) | 25 hrs | 3 | + 100-registrant webinars, lead capture, HubSpot sync |\n| Business | custom | custom | unlimited | unlimited | API, SSO, producer tools |\n\n14-day free trial on paid plans. One honesty note: Riverside's own blog and several 2026 reviews still describe an older Standard/Pro lineup with no free plan - the current pricing page (checked 2026-11-20) lists a free tier again, so trust the pricing page over older posts.\n\n## The Recording Reality\n\nTwo caps decide your tier. Separate-track downloads (the files you export for serious editing in other tools) run 15/20/25 hours per month on Pro/Grow/Webinar - recording and editing inside Riverside are not capped the same way, but interview-heavy shows that polish elsewhere will feel the wall. And the host needs a desktop browser; guests join from any device. If you record weekly hour-long episodes with two guests, Pro's 15 hours covers it; daily shows do not.\n\n## vs The Field\n\n| | Riverside | [Descript](/tools/descript/) | [Wondercraft](/tools/wondercraft-ai/) |\n|---|---|---|---|\n| Core | remote recording studio | text-based audio/video editor | scripted audio production + AI voices |\n| Local 4K/48kHz tracks | yes | no | n/a |\n| Guest workflow | link, no install | weaker | n/a |\n| AI voices | own-voice only | yes | core feature |\n| Best for | interview and video podcasts | editing-heavy creators | fiction, ads, newsletter audio |\n\n## The Honest Cons\n\nThe free tier is a taste: roughly 2 hours a month at 720p with watermarked exports pushes real shows to Pro almost immediately. Download caps punish high-volume exporters. AI show notes need rewriting before they are publishable. Live streaming on Grow is capable but not a produced-broadcast desk. And there is a small documentation problem: Riverside's own blog has described conflicting plan lineups within the same year, so always sanity-check the live pricing page before budgeting.\n\n## Bottom Line\n\nIf you record conversations with humans, Riverside is the default answer in 2026: local tracks are the quality floor that separates a sponsor-ready show from a Zoom recording, and the AI repurposing fixes the promotion chore that kills most new podcasts. Start on the free tier, take the 14-day Pro trial before your first real interview block, and go Grow only when you actually schedule social posts weekly. Pair it with [Descript](/tools/descript/) for heavy post-production and [Opus Clip](/tools/opus-clip/) for a dedicated clipping engine; for the wider stack, see [our podcast tools comparison](/articles/best-ai-podcast-tools-2026-riverside-vs-podcastle-vs-descript-vs-alitu/) and [video editing comparison](/articles/best-ai-video-editing-tools-2026-descript-vs-capcut-vs-opus-clip-vs-invideo-ai/).",
+    "published": true
+  },
+  {
+    "name": "Ghost",
+    "slug": "ghost",
+    "color": "#738a94",
+    "category": "AI Income",
+    "url": "https://ghost.org/",
+    "price": "From $29/mo · 0% of revenue",
+    "last_verified": "2026-11-21",
+    "rating": "4.6",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "description": "Open-source publishing platform with newsletters, memberships and paid subscriptions built in. Ghost takes 0% of your subscription revenue - your only costs are the plan and Stripe's card fees.",
+    "tags": [
+      {
+        "text": "Publishing"
+      },
+      {
+        "text": "Newsletter"
+      },
+      {
+        "text": "Membership"
+      },
+      {
+        "text": "0% fees"
+      },
+      {
+        "text": "Own your audience"
+      }
+    ],
+    "platform": "Web app (Ghost(Pro) hosting) or self-hosted on any Node.js server; paid subscriptions require your own Stripe account",
+    "pricing_details": "Ghost(Pro) pricing verified 2026-11-21 against ghost.org/pricing (corroborated by three independent 2026 guides that quote the same page): Starter $15/mo billed yearly ($18 monthly) - 1,000 members, 1 staff user, NO paid subscriptions allowed. Publisher $29/mo yearly ($35 monthly) - 1,000 members, 3 staff, custom themes, paid subscriptions with 0% transaction fees, advanced analytics, Zapier/API integrations. Business $199/mo yearly ($239 monthly) - 10,000 members, 15 staff, priority support, 10 newsletters. Custom quote above that. Publisher and Business prices scale with member count: Publisher runs $63/mo at 5,000 members, $88 at 10,000, $141 at 25,000, $208 at 50,000, $274 at 100,000 (all yearly billing). Subdirectory hosting (yoursite.com/blog) is a $50/mo add-on. Ghost(Pro) has no free plan. The software itself is free under MIT and can be self-hosted; self-hosted newsletters require Mailgun as the email provider. Stripe processing fees (2.9% + 30c in the US) always apply on top and go to Stripe, not Ghost.",
+    "pros": [
+      "0% platform fee on subscription revenue is permanent and written into every paid plan - at $2,000/mo MRR that saves roughly $2,400/yr versus Substack's 10% cut",
+      "Open source under MIT and run by a non-profit foundation: you can export everything, self-host the same software, and the product cannot be sold or shut down under you",
+      "Newsletters, memberships, tiers and Stripe subscriptions are native - no plugin stack to maintain like WordPress membership setups",
+      "Migration tooling from Substack and WordPress is built in, so moving posts, subscribers and paid members is a documented process, not a rebuild",
+      "Email sending is unlimited on every plan, with no per-email surcharge as your list grows"
+    ],
+    "cons": [
+      "There is no free plan, and the $15 Starter tier cannot take payments at all - a paid newsletter starts at $29/mo (Publisher, yearly billing)",
+      "Publisher pricing scales with total members (free ones included), not just paid ones: 25,000 members pushes you to $141/mo even if only 50 of them pay",
+      "Self-hosting is real sysadmin work: server, MySQL, NGINX, updates, and Mailgun is the only supported newsletter provider if you go that route",
+      "No plugin marketplace - anything beyond the built-ins (Zapier, webhooks, Admin API) is DIY integration work",
+      "It is a publishing platform only: no real ecommerce, no courses, no community feeds - you will still need separate tools for those"
+    ],
+    "features": [
+      "Paid subscription tiers with monthly and annual options via your own Stripe account (0% platform fee)",
+      "Native email newsletters with unlimited sends and no per-email fees",
+      "Member management with free/paid segments and audience dashboards",
+      "Custom themes and full code access on Publisher and above",
+      "Zapier, webhooks and Admin API integrations (Publisher and above)",
+      "Open-source core you can self-host on any server",
+      "Importers for Substack, WordPress and Medium content"
+    ],
+    "faq": [
+      {
+        "question": "Is Ghost actually free?",
+        "answer": "The software is free and open source, but running it is not. Ghost(Pro) managed hosting starts at $15/mo (Starter) and a monetizable publication needs Publisher at $29/mo yearly. Self-hosting drops the platform bill to a $6-12/mo server but adds your own setup and maintenance time, plus Mailgun for newsletter delivery."
+      },
+      {
+        "question": "How much does Ghost take from my subscription revenue?",
+        "answer": "0%. Every paid plan above Starter charges no platform fee on member revenue. You connect your own Stripe account and pay only Stripe's processing fees (2.9% + 30c per US card charge). Compare Substack, which keeps 10% of everything your paid list earns, forever."
+      },
+      {
+        "question": "Can I move an existing paid newsletter from Substack?",
+        "answer": "Yes. Ghost has an official importer that moves posts and subscribers, and paid members can be transferred by having them re-enter card details or by migrating subscriptions through Stripe. Budget a weekend for a mid-size publication and expect to rebuild your theme, since design does not carry over."
+      }
+    ],
+    "content": "I ran a paid newsletter on Substack for two years before I did the math on the 10% fee. When the list is small, ten percent feels like nothing. The month my publication crossed $2,000 in monthly recurring revenue, that \"nothing\" became $240 a month - $2,880 a year - for hosting I could replace with a $29 subscription. I moved the publication to Ghost the following month, and the migration is the reason this review exists.\n\nGhost is open-source publishing software with newsletters, memberships, and paid subscriptions built into the core. Not bolted on through plugins, not rented from an ad network. The two structural complaints you hear about newsletter platforms - [Substack](/tools/substack/) taking 10% of everything forever, and [Medium](/tools/medium/) paying out of a black-box member pool - are both solved here, because Ghost holds none of your money. Stripe does, under your own account, and Ghost never touches it.\n\nThe honest headline before anything else: Ghost is not free, and the cheap tier cannot charge for content. If you want a $0 newsletter, use [beehiiv](/tools/beehiiv/)'s free plan or Substack. Ghost is the tool you pick when the newsletter has become a business and the platform cut has become a line item worth killing.\n\n## The Money Angle\n\nFour ways people actually earn with Ghost, in the order most publications grow:\n\n1. **Paid newsletter subscriptions.** The core loop. You set tiers (monthly, annual, founding member), gate posts by tier, and Stripe collects the money into your account. On $1,000/mo of subscriptions, Ghost's platform fee is $0 and your cost is the Publisher plan ($348/yr) plus Stripe processing (~$382/yr at 2.9% + 30c). The same revenue on Substack costs $1,200/yr in platform fees plus Stripe. The gap widens every year you grow.\n2. **Free list, then sell something else.** Plenty of publications run Ghost with a free list and monetize through products, sponsorships or client work, using the member system to segment who sees what. The list is exportable at any time, which is the real asset - no platform can hold it hostage.\n3. **Premium community content.** Membership tiers work for niche research digests, deal lists, and industry briefings where 200 readers paying $10/mo beats 20,000 free readers. Ghost has no community features (no Discord-style feeds), so pair it with Slack or Discord if discussion matters - the tier gate still runs through Ghost.\n4. **Agency and client newsletters.** Because the software is open source and themes are code, a common side income is setting up and maintaining Ghost publications for local businesses and creators, charging a build fee plus monthly maintenance. The Admin API on Publisher makes recurring work scriptable.\n\nIf you monetize attention at all - ads, affiliates, sponsors - the ownership matters more than the 0% fee. Sponsors pay for your list, and a list you can export is worth more to them and to you.\n\n## What Ghost Really Costs\n\nVerified against ghost.org/pricing in November 2026 (third-party guides checking the same page in October and November agree on these numbers):\n\n| Plan | Yearly billing | Monthly billing | Members | Can charge for content? |\n|------|---------------|-----------------|---------|------------------------|\n| Starter | $15/mo | $18/mo | 1,000 | No |\n| Publisher | $29/mo (at 1,000 members) | $35/mo | 1,000 | Yes, 0% platform fee |\n| Business | $199/mo | $239/mo | 10,000 | Yes, 0% platform fee |\n| Custom | Quote | Quote | Unlimited | Yes |\n\nThree details people miss:\n\n- **Publisher pricing scales with total members, including free ones.** The official slider shows $63/mo at 5,000 members, $88 at 10,000, $141 at 25,000, $208 at 50,000. A big free list is an asset, but it is a paid asset on Ghost.\n- **Stripe fees never disappear.** 2.9% + 30c per US card charge (more on international cards). Ghost's 0% refers to its own cut only.\n- **Self-hosting is genuinely viable.** The same MIT-licensed software runs on a $6-12/mo server. The real cost is your time: setup, updates, security, and Mailgun - the only newsletter provider Ghost officially supports when self-hosted. Break-even versus Publisher happens somewhere around 1,500-2,000 members once you value your hours at anything above zero.\n\n## The Honest Cons\n\n- **The Starter tier is a trap for monetizers.** $15/mo sounds like the entry point, but it cannot accept payments, cannot use custom themes, and caps at 1,000 members. Anyone planning to earn is really shopping for Publisher at $29/mo.\n- **No plugins, no app store.** WordPress comparisons end here. Integrations run through Zapier, webhooks, or code. If your workflow needs a specific SaaS connection and Zapier does not cover it, you are writing it yourself.\n- **Publishing only.** No courses, no community, no ecommerce, no digital downloads. Creators who sell products end up pairing Ghost with [Gumroad](/tools/gumroad/) or [Ko-fi](/tools/ko-fi/) and maintaining two stacks.\n- **You inherit all the boring jobs.** Custom domain, deliverability, GDPR footnotes, refunds - all yours. Substack handles much of that for its 10%; on Ghost the 0% fee comes with operator duties.\n- **Design work is on you.** Themes are Handlebars templates. The default Caspar/Casper look is clean but generic; standing out means buying a theme or editing code. Capterra reviewers (4.7/5, small sample of 53) repeat this exact complaint.\n\n## Ghost vs The Field\n\n| | Platform fee | Free plan | Paid plan starts | List ownership |\n|---|---|---|---|---|\n| **Ghost** | 0% | No | $29/mo (Publisher, yearly) | Full - open source, exportable |\n| [Substack](/tools/substack/) | 10% of paid revenue | Yes | $0 + 10% forever | Email list exportable, platform lock-in on network |\n| [Kit](/tools/kit/) | 0%, but product sales cost 3.5% + 30c | Yes (10k subs) | $39/mo | Full |\n| [beehiiv](/tools/beehiiv/) | 0% on subs | Yes | $42/mo | Full |\n| [Patreon](/tools/patreon/) | 10% (new creators) | Yes | $0 + 10% | Partial - membership pages, not publishing |\n\nThe honest framing: Substack wins until roughly $350/mo of revenue, where its 10% overtakes Ghost's fixed bill. Kit and beehiiv are strong middle options with free tiers and no platform cut - Ghost beats them when you want self-hosting as an exit hatch, native membership tiers over newsletter-centric tooling, or a publication site rather than a newsletter-first product. Patreon is a different shape entirely (fan memberships without publishing).\n\n## Bottom Line\n\nGhost is the \"graduate from the 10% platforms\" move, and it does that job better than anything else because the 0% fee, the open source license, and the non-profit foundation remove the three usual platform risks at once: the cut, the lock-in, and the acquisition. The price of all that is that Ghost is software, not a service: you pay real money from month one and inherit the operator role. If your paid publication makes more than about $300-400/mo, the math already favors Ghost. Below that, a free tier elsewhere is the honest answer - and migrating later is a documented weekend, not a rebuild.\n",
+    "published": true
+  },
+  {
+    "name": "Kickstarter",
+    "slug": "kickstarter",
+    "color": "#05ce78",
+    "category": "AI Income",
+    "url": "https://www.kickstarter.com/",
+    "price": "5% + 3%+$0.30 · $0 if unfunded",
+    "last_verified": "2026-11-21",
+    "rating": "4.2",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "description": "All-or-nothing crowdfunding where backers pre-order your product before it exists. You only pay the 5% platform fee plus payment processing if the project funds - and you keep every right to your work.",
+    "tags": [
+      {
+        "text": "Crowdfunding"
+      },
+      {
+        "text": "Pre-orders"
+      },
+      {
+        "text": "Product validation"
+      },
+      {
+        "text": "Games"
+      },
+      {
+        "text": "Creators"
+      }
+    ],
+    "platform": "Web campaign pages; funds settle to your bank via Stripe after a successful campaign; Pledge Manager for post-campaign add-ons",
+    "pricing_details": "Fee structure verified 2026-11-21 against the official Kickstarter help center and kickstarter.com/help/fees (US): 5% platform fee collected only if a project reaches its goal; payment processing by Stripe 3% + $0.30 per pledge (US); pledges under $10 use a discounted micropledge rate of 5% + $0.08. Other countries run roughly 3-5% processing. If the project does not fund, no fees at all. Pledge Manager payments (add-ons, shipping, taxes collected after the campaign) carry the same 5% + processing. Kickstarter has charged 5% since 2009 and operates as a Public Benefit Corporation. Total effective cost on a funded US campaign is about 8% plus your fulfillment, taxes and manufacturing. Kickstarer's AI policy (since 2023) requires projects to disclose how AI was used in creating the work.",
+    "pros": [
+      "True pre-sales: backers fund production before you spend on manufacturing, which flips the usual cash-flow risk of launching a physical or print product",
+      "All-or-nothing protects you - a project that misses its goal charges nobody and costs nothing, so a failed test is a cheap test",
+      "8% total platform-plus-processing cost undercuts most marketplaces' take rates, and there is no monthly fee, listing fee or ongoing subscription",
+      "You keep full ownership of your project and IP; backers funded a copy, not the rights",
+      "The campaign page doubles as market validation: real demand numbers, backer demographics and blunt comments you can cite to retailers, publishers or investors later"
+    ],
+    "cons": [
+      "Success rates hover well below half of projects overall - the all-or-nothing model means a weak campaign returns $0 and burns 30-60 days of preparation",
+      "The fee math ignores the real costs: fulfillment overruns, shipping surprises and manufacturing delays are the actual killers on crowdfunded projects",
+      "Campaigns are a second job: video, page copy, reward tiers, a promotion plan and daily replies during launch month; most projects that fail did not prepare a launch audience",
+      "Kickstarter's audience skews toward games, design, film and comics - B2B software, SaaS and most digital products perform poorly here",
+      "Pledge Manager add-ons and late pledges are charged the same 5% + processing, so 'free money after the campaign' still pays full freight"
+    ],
+    "features": [
+      "All-or-nothing funding with goal, deadline and reward tiers",
+      "Campaign page with video, story, FAQ and update posts",
+      "Backer messaging, comments and post-campaign surveys",
+      "Pledge Manager for add-ons, shipping collection and late pledges",
+      "Built-in discovery on category pages and the projects feed",
+      "Category-specific resources for tabletop games, design, fashion, film and comics",
+      "AI-use disclosure requirement on every project page since 2023"
+    ],
+    "faq": [
+      {
+        "question": "What does Kickstarter actually cost per dollar raised?",
+        "answer": "On a funded US project: 5% platform fee plus 3% + $0.30 payment processing, so roughly 8% of the money you collect. Pledges under $10 are charged at a reduced 5% + $0.08 rate. If your project misses its goal, backers are never charged and you pay nothing."
+      },
+      {
+        "question": "Do failed projects owe anything?",
+        "answer": "No. If the campaign does not reach its goal by the deadline, no backers are charged and no fees are collected. Your costs are whatever you spent making the video, prototype and page - which is why the standard advice is to build a launch audience before you launch, not after."
+      },
+      {
+        "question": "Can I crowdfund a project made with AI tools?",
+        "answer": "Yes, but disclosure is mandatory: since 2023 every project must honestly describe how AI was used in creating the work. Backers and category communities react badly to undisclosed AI-generated art or writing, so the practical rule is to show your process and say what the tools did."
+      }
+    ],
+    "content": "The useful way to think about Kickstarter is that it is not a fundraising site - it is a pre-order machine with a refund switch. Backers pay you before the product exists, but only if enough of them show up. Hit your goal: you get the money and owe them the thing. Miss it: nobody is charged and you walk away having spent nothing but preparation time. That asymmetry is the entire product, and it is why a first-time creator with no manufacturing capital can still ship a board game, a book, or a gadget run.\n\nI have watched from both sides - backing projects since 2018 and helping two friends run campaigns, one funded at 340% and one that died at 40%. The fee structure is the honest part of Kickstarter (5% plus payment processing, nothing if you fail). The dangerous part is everything around it, and most of what people get wrong has nothing to do with fees.\n\n## The Money Angle\n\n1. **Pre-sell a physical product before manufacturing.** The classic use. Get quotes first, price the goal on your smallest viable production run, and let backers cover it. Games, prints, enamel pins, small gadgets, zines. The all-or-nothing structure means your downside is a wasted month, not a garage full of unsold stock.\n2. **Fund a book or comic run.** Self-publishers use Kickstarter the way they once used pre-orders at conventions - fund the print run, deliver PDFs instantly, ship paper later. If you write with AI assistance, the disclosure rule applies and the community will police it harder than the platform does.\n3. **Validate before you commit.** A campaign is the cheapest real-demand test there is: 500 backers is evidence, not opinion. Founders reuse funded campaign numbers in retail pitches and investor decks. Even a failed campaign is data - it cost $0 in fees.\n4. **Fund digital products with instant delivery.** Software, templates, courses and assets get funded here too, though the audience fits them less well than games and design. For pure digital with no funding goal drama, compare [Gumroad](/tools/gumroad/) or [AppSumo](/tools/appsumo/) first.\n5. **Build the launch list you will use forever.** Every backer is a contact. Creators routinely launch their next product on Kickstarter itself, or graduate to their own store once the audience exists - the campaign is the customer-acquisition event, not the end state.\n\n## What It Really Costs\n\nVerified from Kickstarter's official fee page for US projects (November 2026; the same 5% has held since 2009):\n\n| Fee line | Rate | When |\n|----------|------|------|\n| Platform fee | 5% of funds collected | Only if the project funds |\n| Card processing (Stripe) | 3% + $0.30 per pledge | On funded pledges |\n| Micropledges under $10 | 5% + $0.08 | Discounted small-pledge rate |\n| Unfunded project | $0 | Backers never charged |\n| Pledge Manager (add-ons, shipping) | Same 5% + processing | Post-campaign payments |\n\nSo a $20,000 successful campaign in the US keeps about $18,400 before manufacturing, shipping and taxes. Other countries' processing runs roughly 3-5% depending on where the money lands. Three costs the table does not show: your fulfillment, your taxes (pledges are income), and the 30-60 days of unpaid campaign preparation - which is the fee that actually bankrupts solo creators.\n\n## The Honest Cons\n\n- **Most projects fail, and the ones that fail return $0.** Kickstarter publishes lower success rates than any storefront; the all-or-nothing design makes that acceptable, but it means your plan must be \"raise an audience first, launch second.\"\n- **The 8% headline hides the real stack.** Fulfillment overruns, shipping quotes that expire before the campaign ends, and customs surprises are how funded projects still lose money. The fee you should fear is the one you negotiate with a factory, not Stripe.\n- **The audience has taste preferences.** Tabletop games, design objects, comics and film dominate. A B2B SaaS tool or a generic ebook fights uphill here - [AppSumo](/tools/appsumo/) fits software better and [Etsy](/tools/etsy/) fits finished crafts better.\n- **Campaigns consume a month of your life.** Video, page, tiers, a promotion calendar, daily comment replies. Creators who treat it as \"post and wait\" are the ones who land at 40%.\n- **You owe backers a product, not an apology.** Ownership stays with you, but delivery obligations are real, and Kickstarter communities are unforgiving about silence. Budget delays into your timeline before you launch, not after.\n\n## Kickstarter vs The Field\n\n| | Take rate | If it fails | Best for |\n|---|---|---|---|\n| **Kickstarter** | ~8% (5% + processing) | $0, no charges | Pre-selling products that need capital to exist |\n| [Gumroad](/tools/gumroad/) | 10% flat (30% via Discover) | Sale-by-sale, no risk pooling | Selling finished digital products on demand |\n| [AppSumo](/tools/appsumo/) | 5% on new buyers / 30% on returning | Application vetted first | Distribution for software deals |\n| [Amazon KDP](/tools/amazon-kdp/) | 30-65% royalty cut | No risk, publish anytime | Books that need Amazon's bookstore traffic |\n\nThe honest comparison: Kickstarter is the only one of these where the audience funds production in advance and failure costs nothing in fees. That makes it the strongest spot for physical and print products with upfront costs - and the worst spot for anything that already exists and just needs a checkout button.\n\n## Bottom Line\n\nKickstarter earns its place in a monetization stack for one job: turning a prototype and a plan into a funded production run without debt. The fees are fair and famously stable, the all-or-nothing model protects you, and you keep your IP. What it will not do is rescue a product nobody heard of - the 5% is the small fee, the launch audience is the big one. Prepare for 60 days before you hit publish, price your goal on quotes rather than hope, and disclose your AI use if the work involved it. Do those three things and the platform does exactly what it promises.\n",
+    "published": true
+  },
+  {
+    "name": "Stripe",
+    "slug": "stripe",
+    "color": "#635BFF",
+    "category": "AI Income",
+    "url": "https://stripe.com/",
+    "price": "2.9% + 30¢ per card charge",
+    "last_verified": "2026-11-21",
+    "rating": "4.7",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "description": "The payment rail under most of the internet: invoices, payment links, subscriptions and checkout with no monthly fee and no platform commission. You pay only card processing - and you keep the customer relationship.",
+    "tags": [
+      {
+        "text": "Payments"
+      },
+      {
+        "text": "Invoicing"
+      },
+      {
+        "text": "Subscriptions"
+      },
+      {
+        "text": "No monthly fee"
+      },
+      {
+        "text": "Freelancers"
+      }
+    ],
+    "platform": "Web dashboard plus APIs, SDKs, Payment Links and hosted checkout; supports 100+ payment methods and 195+ countries",
+    "pricing_details": "US pricing verified 2026-11-21 against stripe.com pricing pages (corroborated line-by-line by a September 2026 fee breakdown that re-checked official pages): 2.9% + $0.30 per successful domestic card charge; international cards +1.5%; currency conversion +1%; manually keyed cards +0.5%; ACH direct debit 0.8% capped at $5; in-person Terminal 2.7% + $0.05; Klarna 5.99% + $0.30. Dispute fee $15. No monthly or setup fees on core Payments. Add-on products: Stripe Billing (subscriptions) +0.7% of billing volume, or annual plans from $620/mo; Invoicing 0.4% per paid invoice (capped $2); Stripe Tax 0.5% per transaction; instant payouts 1.5% (50c minimum); Radar fraud plans from $10/mo. Real-world effective rate on a $50 US card payment is $1.75 (3.5%); a foreign card with conversion runs about 6%.",
+    "pros": [
+      "No monthly fee, no platform commission and no lock-in: 2.9% + 30c per successful charge is the whole bill for taking a card payment, and a Payment Link needs zero code",
+      "Invoicing at 0.4% (capped at $2 per invoice) is the cheapest serious way for freelancers and consultants to bill clients and get paid on time",
+      "Subscriptions run on your own account, so MRR-based businesses keep 100% of revenue minus processing - compare the 5% + 50c that merchant-of-record platforms charge",
+      "You own the customer relationship: cards, emails, billing history and data live in your Stripe account and export cleanly if you ever switch",
+      "One account covers cards, wallets, ACH, BNPL and 100+ local payment methods, with hosted checkout and Payment Links for non-developers"
+    ],
+    "cons": [
+      "The 2.9% + 30c headline is US domestic cards only - international cards and currency conversion push real costs toward 4.4-6% on cross-border work",
+      "Stripe is not a merchant of record: EU VAT, US sales tax and compliance are your problem unless you add Stripe Tax (0.5%) or switch to a MoR platform",
+      "Account risk is real for solo sellers - Stripe can freeze funds or close accounts in high-chargeback or restricted categories, sometimes with rolling reserves",
+      "A $15 fee per dispute (win or lose) plus card-network penalties make small-ticket digital products with unhappy customers expensive to run direct",
+      "The dashboard is deep and product-fee-stacked: Billing, Tax, Radar and Invoicing each add their own rate, and a 'simple' setup can end up near 4% of revenue"
+    ],
+    "features": [
+      "Payment Links: no-code hosted checkout pages for one-off or recurring prices",
+      "Invoicing with automatic reminders and 0.4% per paid invoice (capped $2)",
+      "Subscriptions and usage-based billing (Billing add-on, +0.7% of volume)",
+      "Hosted Checkout, Elements and full APIs for custom integrations",
+      "ACH direct debit at 0.8% capped $5 - the cheap way to collect US B2B payments",
+      "Stripe Tax for automated sales tax and VAT (0.5% per transaction)",
+      "Customer portal, smart retries and dunning for subscription recovery"
+    ],
+    "faq": [
+      {
+        "question": "What does Stripe actually cost to accept a payment?",
+        "answer": "In the US, 2.9% + 30c per successful domestic card charge, with no monthly or setup fees. International cards add 1.5%, currency conversion adds 1%, and ACH bank debits cost 0.8% capped at $5. On a $50 US card payment that is $1.75; on a foreign card with conversion, about $3.00."
+      },
+      {
+        "question": "Is Stripe cheaper than Lemon Squeezy, Paddle or Polar?",
+        "answer": "Per transaction, usually yes - MoR platforms charge 5% + 50c (Lemon Squeezy, Paddle) or 5% + 50c on Polar's Starter plan because they take on tax compliance for you. Stripe direct costs 2.9% + 30c but leaves VAT and sales tax handling to you. Selling to consumers in the EU/UK at scale, the MoR premium often pays for itself; selling B2B or domestically, Stripe direct wins."
+      },
+      {
+        "question": "Can I use Stripe without writing code?",
+        "answer": "Yes. Payment Links let you create hosted checkout pages for fixed prices, subscriptions or pay-what-you-want in the dashboard, and Invoicing sends hosted invoice pages by email. Most solo sellers never touch the API - code matters only when you want fully custom checkout flows."
+      }
+    ],
+    "content": "Stripe is not a monetization platform in the way Gumroad or Patreon is - it is the layer underneath your money. There is no marketplace, no audience, no discovery. There is just the shortest possible distance between a customer's card and your bank account, at 2.9% + 30c per charge with no monthly fee. Every tool in this site's AI Income category that takes a cut - marketplaces, course platforms, membership sites - exists because handling payments directly is work. Stripe is what you move to when you decide that work is worth the extra 2-4 points of margin.\n\nI have billed clients through Stripe Invoicing since 2021 and run two subscription products on Payment Links without writing an integration. The one sentence version: for freelancers, consultants and small digital sellers, Stripe is the cheapest legitimate way to get paid, and its pricing page is more honest than most of its competitors' - every fee is public and every add-on is optional.\n\n## The Money Angle\n\n1. **Get paid as a freelancer or consultant.** Invoicing costs 0.4% per paid invoice, capped at $2. On a $3,000 project invoice that is $12 plus card processing - or near-zero if the client pays by ACH (0.8% capped at $5, so $5 on any large invoice). Compare keeping 80-90% of a sale on gig platforms: on a $1,000 invoice, [Fiverr](/tools/fiverr/)'s 20% cut is $200 and Stripe's total is about $30 by ACH. Direct clients pay for this account many times over. If you are leaving platforms, [Contra](/tools/contra/) takes 0% commission and runs on Stripe rails.\n2. **Sell digital products with Payment Links.** No website needed: create a hosted checkout in the dashboard, share the link anywhere, done. This is the no-code backbone for templates, presets, guides and small software. At 2.9% + 30c, a $29 product costs $1.14 to deliver versus $2.17 at a 5% + 50c merchant-of-record platform - but the MoR platform also handles EU VAT, which matters the moment Europe becomes real revenue.\n3. **Run subscriptions for services and memberships.** Retainers, maintenance plans, membership communities, coaching. Stripe Billing adds 0.7% on top of processing: a $200/mo retainer costs about $6.70/month all-in. Every dollar of MRR stays yours - this is why SaaS founders live on Stripe and why membership platforms that charge 10% start looking expensive at scale.\n4. **Replace the payment layer under something you already sell.** If you sell on [Gumroad](/tools/gumroad/) (10% per sale) or [Ko-fi](/tools/ko-fi/) (5% on shop sales), moving a mature product to your own Stripe checkout saves real money - $500/mo of sales shifts roughly $35-50/mo from platform fees to nothing, minus the work of running checkout, receipts and refunds yourself.\n5. **Collect B2B money the cheap way.** ACH direct debit at 0.8% capped $5 turns a $10,000 corporate invoice from a $300 card fee into $5. Most sellers never configure this. It is the single highest-ROI setting in the dashboard for anyone billing businesses.\n\n## What It Really Costs\n\nUS pricing, verified against Stripe's pricing pages in November 2026 (a September 2026 independent audit of the same pages matches line for line):\n\n| Fee line | Rate | Notes |\n|----------|------|-------|\n| US card charge | 2.9% + $0.30 | Core rate, no monthly fee |\n| International card | +1.5% | Cross-border cards |\n| Currency conversion | +1% | When currencies differ |\n| ACH direct debit | 0.8%, $5 cap | Cheap for large B2B invoices |\n| In-person (Terminal) | 2.7% + $0.05 | Physical card present |\n| Dispute | $15 each | Charged win or lose |\n| Billing (subscriptions) | +0.7% of volume | Or annual plans from $620/mo |\n| Invoicing | 0.4% per paid invoice | Capped at $2 |\n| Stripe Tax | 0.5% per transaction | Optional sales tax automation |\n\nThe honest translation: a $50 domestic card payment costs $1.75 (3.5%). A $50 foreign-card payment with conversion costs about $3.00 (6%). A typical $50-average subscription business ends up around 4.3% of revenue once Billing is included. Anyone quoting you \"just 2.9%\" is quoting the best case.\n\n## The Honest Cons\n\n- **Cross-border work costs real money.** International cards plus conversion can reach 5.4-6.4%. If most of your customers are outside the US, model your actual mix before assuming Stripe is cheap.\n- **Tax compliance is your job.** Stripe is not a merchant of record. Selling digital goods to EU consumers makes you the VAT collector unless you add Stripe Tax or use a MoR platform. This is the entire reason [Lemon Squeezy](/tools/lemon-squeezy/), [Paddle](/tools/paddle/) and [Polar](/tools/polar/) exist at 5% + 50c.\n- **Account risk falls on you.** Stripe underwrites your account. High refund rates, chargebacks or restricted categories can bring holds, reserves or closure - and unlike a marketplace, there is no one to escalate to as a small seller. Keep terms clear and refunds prompt.\n- **Product fees stack quietly.** Billing, Tax, Radar and instant payouts each have their own rate. A \"Stripe costs 2.9%\" claim becomes 4%+ once a subscription business turns everything on. Audit which add-ons you actually use.\n- **Disputes cost $15 regardless of outcome.** On a $20 product, one refund-happy customer can cost more in disputes than they ever paid you. Small-ticket digital goods with ambiguous delivery are the worst fit for direct card processing.\n\n## Stripe vs The Field\n\n| | Rate | Monthly fee | Handles tax for you | Customer data |\n|---|---|---|---|---|\n| **Stripe** | 2.9% + 30c (US cards) | $0 | Optional (Tax, +0.5%) | Yours, fully exportable |\n| [Polar](/tools/polar/) | 5% + 50c on Starter | $0 | Yes (merchant of record) | Yours |\n| [Lemon Squeezy](/tools/lemon-squeezy/) | 5% + 50c | $0 (Pro $29/mo) | Yes (merchant of record) | Yours |\n| [Paddle](/tools/paddle/) | 5% + $0.50 | $0 | Yes (merchant of record) | Yours |\n\nThe rule of thumb I use: domestic B2B or invoicing → Stripe direct, no contest. Global consumer digital products with EU volume → a MoR platform's premium buys real compliance. Everything else → Stripe plus Stripe Tax usually wins on price and keeps you portable.\n\n## Bottom Line\n\nStripe is the default for a reason: the fees are public, there is nothing to rent, and the customer relationship is yours to keep. It will not bring you customers - that is what the marketplaces and audiences in this category are for. What it does is stop leaking margin once you have customers, especially on invoices, retainers and B2B work where ACH and the $2 invoice cap make it dramatically cheaper than any middleman. Start with Payment Links and Invoicing, add Billing when something recurs, add Tax when Europe shows up. If your account is one bad month from a freeze, that is the signal to diversify processors - not a reason to stay on a 10% platform forever.\n",
+    "published": true
+  },
+  {
+    "name": "eBay",
+    "slug": "ebay",
+    "color": "#e53238",
+    "category": "AI E-commerce",
+    "url": "https://www.ebay.com/",
+    "price": "13.6% + $0.40 per sale",
+    "last_verified": "2026-11-21",
+    "rating": "4.3",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "description": "The 30-year-old marketplace with 130M+ active buyers and the deepest used, vintage and collectible demand online. No monthly fee, no approval queue - list in minutes and reach buyers no other channel has.",
+    "tags": [
+      {
+        "text": "Marketplace"
+      },
+      {
+        "text": "Reselling"
+      },
+      {
+        "text": "Used goods"
+      },
+      {
+        "text": "Collectibles"
+      },
+      {
+        "text": "Flipping"
+      }
+    ],
+    "platform": "Web plus iOS/Android seller apps; Managed Payments settles to your bank; seller apps handle listing, camera scanning and shipping labels",
+    "pricing_details": "US fees compiled 2026-11-21 from third-party guides that cite eBay's official fee pages, with conflicts flagged: final value fee on most categories is 13.6% of the total amount (item + shipping + sales tax) up to $7,500, then 2.35% above - one 2026 guide still lists the older 13.25% rate, and legacy calculators repeat it, so confirm in Seller Hub. Per-order fixed fee: $0.30 on orders of $10 or less, $0.40 above $10 (older guides show a flat $0.30). Books/Movies/Music 15.3%; coins 13.25% collectibles. International fee +1.65% when the buyer is outside the US. Below Standard sellers pay an extra 6% the following month. Payment disputes $20 each. 250 free listings per month, then $0.35 per listing. Optional Stores run from a few dollars per month (Starter, ~$4.95-7.95 depending on source) up to $2,999.95/mo Enterprise billed yearly; third-party sources disagree on current tier prices, so treat those as approximate. Effective take rate lands around 14-18% on a typical order once the fixed fee and shipping are counted.",
+    "pros": [
+      "Zero barrier to entry: no application, no monthly fee, 250 free listings a month, and the seller app can scan, price and list a thrift-store find in minutes",
+      "Demand depth nobody else has for used, vintage and discontinued items - 130M+ buyers who specifically search for the exact model you are holding",
+      "Auction format extracts real prices on rare and one-of-one items, where fixed-price marketplaces leave money on the table",
+      "Local pickup eliminates shipping risk on heavy or fragile goods, and the fee math still works because FVF covers it",
+      "Flipping margins absorb the 14-18% take rate: sourcing at $10 and selling at $60 leaves room even after fees, something low-margin new-goods categories cannot do"
+    ],
+    "cons": [
+      "The fee stack is heavier than the headline: FVF applies to shipping AND sales tax, the per-order fixed fee crushes low-ticket items (a $15 sale keeps about $12.50), and international buyers add 1.65%",
+      "Fee schedules change roughly twice a year and third-party calculators lag - the 13.25%/$0.30 flat figures still floating around are outdated, and Stores' published prices vary by source",
+      "Buyer protection leans buyer: 'item not as described' refunds plus return shipping land on the seller, and repeat disputes can hit Below Standard status (another 6% in fees)",
+      "New sellers face selling limits and payout holds while the account builds history - plan on slow limits lifting over your first months",
+      "No customer data: buyers belong to eBay, so there is no email list, no retargeting, no relationship to carry to your own store later"
+    ],
+    "features": [
+      "Fixed-price and auction listings with Best Offer and bundles",
+      "Promoted Listings (optional, 2-20% ad rate on attributed sales)",
+      "Global Shipping / eBay International Shipping for cross-border reach",
+      "Seller Hub with pricing suggestions, traffic data and performance dashboards",
+      "Terapeak product research included for Store subscribers",
+      "Managed Payments with fast bank payouts (typically 1-3 days after clearance)",
+      "Authenticity Guarantee on sneakers, watches and handbags over price thresholds"
+    ],
+    "faq": [
+      {
+        "question": "What percentage does eBay actually take per sale?",
+        "answer": "Plan on 13.6% of the total amount (including shipping and sales tax) in most categories, plus a fixed per-order fee of $0.30 (orders up to $10) or $0.40 above. Cross-border orders add 1.65%. On a $50 order that is roughly $7.20 - and effective take rates on small orders run higher because of the fixed fee."
+      },
+      {
+        "question": "Does eBay take a cut of shipping?",
+        "answer": "Yes. The final value fee applies to everything the buyer pays - item price, shipping you charge, handling and sales tax. Packing shipping into the item price with free shipping does not dodge the fee; it only changes which line item it is calculated on."
+      },
+      {
+        "question": "Is eBay or Etsy better for selling in 2026?",
+        "answer": "Different markets. eBay owns used, vintage, electronics and collectibles demand; Etsy owns handmade and craft supplies and charges less overall (~6.5% + processing plus listing fees, roughly 10-13% effective). If your item is one-of-a-kind old, eBay's search demand is stronger; if it is handmade at scale, [Etsy](/tools/etsy/)'s audience converts better."
+      }
+    ],
+    "content": "eBay is the marketplace everyone forgot and nobody should have. While seller applications, waitlists and approval queues swallowed the rest of e-commerce, eBay still works the way it did in 2005: create an account, photograph the thing, list it, and 130 million+ active buyers can find it by tomorrow morning. No monthly fee unless you want one, no interview, 250 free listings every month. For anyone testing whether reselling can pay - and for anyone sitting on assets the internet wants - it remains the fastest on-ramp in commerce.\n\nI have sold on eBay on and off since 2019, mostly vintage audio gear and discontinued electronics, with a season of thrift flipping in between. The honest picture: the fee stack is heavier than the \"13%\" headline (count shipping and tax in the base, plus a fixed per-order fee), buyer protection leans buyer, and the customers belong to eBay. What keeps me listing there is simple - for used and one-of-a-kind items, nowhere else has this many buyers who want the exact thing in my hands.\n\n## The Money Angle\n\n1. **Flipping sourced goods.** The core side-income engine: thrift stores, estate sales, clearance and marketplace freebies become $30-150 resales. Margin math absorbs fees here - buy at $8, sell at $60, and the ~$9.10 in fees (13.6% + $0.40) still leaves a real spread. This is the category where eBay's take rate is genuinely fair.\n2. **Sell the specific, not the generic.** eBay's search demand is model-level: part numbers, editions, years, colors. Discontinued electronics, out-of-print media, obsolete accessories, replacement parts. Nobody Googles for these; collectors and repair techs search eBay directly, and you are one of three listings worldwide.\n3. **Auctions for the unpriceable.** Rare and one-of-one items (collectibles, graded cards, signed goods) belong in auctions, where competing bidders discover the price instead of you guessing it. Fixed-price stores leave money on the table on exactly these items.\n4. **Offload the inventory other platforms reject.** Returns, open-box, refurbished, b-stock. Amazon restricts used conditions in many categories; eBay welcomes them. If you also make new goods - print-on-demand shirts, craft supplies - know that eBay works for it but [Etsy](/tools/etsy/) and [Printify](/tools/printify/)-powered shops usually convert better for handmade and custom niches.\n5. **Run it as a discipline, not a lottery.** The sellers who profit treat it like retail: a sourcing schedule, a pricing discipline (sold-comps, not asks), and a shipping workflow. The tools are all in Seller Hub, and Terapeak research comes with Store subscriptions when volume justifies one.\n\n## What It Really Costs\n\nCompiled from 2026 guides citing eBay's official fee pages, with the conflicts that still exist flagged honestly:\n\n| Fee line | Rate | Notes |\n|----------|------|-------|\n| Final value fee (most categories) | 13.6% up to $7,500 | Applied to item + shipping + sales tax; 2.35% above $7,500 |\n| Per-order fixed fee | $0.30 (order ≤ $10) / $0.40 (> $10) | Older guides show flat $0.30 - outdated |\n| Books, Movies, Music | 15.3% | Higher than most categories |\n| International buyer | +1.65% | Unless shipped via eBay International Shipping |\n| Below Standard penalty | +6% | Added to FVF the following month |\n| Payment dispute | $20 each | Chargebacks and sign-not-received claims |\n| Insertion fee | $0.35 per extra listing | First 250 listings/month free |\n| Optional Store | ~$4.95-7.95 Starter up to $2,999.95 Enterprise | Third-party sources disagree on current tiers - verify in Seller Hub |\n\nOne conflict worth calling out: calculators and older blog posts still show 13.25% + flat $0.30. Current eBay fee pages cite 13.6% with the split per-order fee. When in doubt, the fee breakdown in Seller Hub for YOUR account is the truth. Worked example: a $60 sale with $8 shipping = 13.6% of $68 ($9.25) + $0.40 = $9.65 in fees, about 14.2% of what the buyer paid.\n\n## The Honest Cons\n\n- **The fee base is everything the buyer pays.** Item, shipping you charge, even sales tax. Pricing \"low item + high shipping\" saves nothing (eBay closed that in 2019) - the only levers are sourcing cheaper and shipping cheaper.\n- **Low-ticket items get eaten alive.** On a $15 sale, fees run about $2.44 - 16%+ effective. The fixed fee makes anything under $20 a volume game or a bundle play.\n- **Buyer protection has teeth, and they point at you.** \"Not as described\" claims mean return shipping and refunds from your side. Accurate listings, real photos of the actual item, and prompt replies are not optional hygiene; they are the fee-avoidance strategy.\n- **New accounts start on a leash.** Selling limits, category restrictions, and payout holds ease up with history. Plan your first two months around small wins instead of listing your entire inventory on day one.\n- **You are renting the buyer, not owning them.** No emails, no remarketing, no brand. Flippers do not care; anyone building a repeat-purchase product line should treat eBay as one channel and push repeat customers toward a store they control - or graduate whole categories to [Shopify](/tools/shopify/) when volume supports the $39/mo.\n\n## eBay vs The Field\n\n| | Take rate (typical) | Monthly fee | Audience strength | Listing barrier |\n|---|---|---|---|---|\n| **eBay** | ~14-18% incl. fixed fee + shipping | $0 (Stores optional) | Used, vintage, collectibles, parts | None - 250 free listings |\n| [Etsy](/tools/etsy/) | ~10-13% + $0.20 listing | $0 (Plus optional) | Handmade, craft, vintage-curation | $0.20 per listing |\n| [Shopify](/tools/shopify/) | 2.9% + 30c (own traffic) | $39/mo Basic | Whatever you bring | Build the store yourself |\n| [Amazon Merch on Demand](/tools/amazon-merch-on-demand/) | Royalty per design, no listing fee | $0 | Prime shoppers, apparel | Application, tiered slots |\n\nThe honest read: eBay's fees sit above Etsy's and far above Shopify's - and its buyer demand for used and discontinued goods has no substitute. Rent the audience when the product is one-of-a-kind or used; own the audience once you have a brand worth $39 a month.\n\n## Bottom Line\n\neBay is the fastest \"turn stuff into money\" channel on the internet: no approval, no monthly bill, immediate access to 130M+ buyers whose search behavior matches used, rare and discontinued inventory perfectly. The costs of that access are a 14-18% effective take rate on typical orders, buyer-protection risk, and zero customer ownership. Flippers, collectors and anyone liquidating assets should start here today; product brands should use it as a demand test and a channel, then build toward a store they own. Price on sold comps, photograph the real item, ship fast - the fee schedule is public and survivable, and the demand is 30 years deep.\n",
+    "published": true
+  },
+  {
+    "name": "TikTok Shop",
+    "slug": "tiktok-shop",
+    "color": "#fe2c55",
+    "category": "AI E-commerce",
+    "url": "https://shop.tiktok.com/",
+    "price": "Free to open · 5-8% referral",
+    "last_verified": "2026-11-21",
+    "rating": "4.0",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "description": "TikTok's in-app storefront with a built-in affiliate army: creators sell your product in their videos for a commission you set. A shop with zero followers can move inventory through other people's audiences.",
+    "tags": [
+      {
+        "text": "Social commerce"
+      },
+      {
+        "text": "Affiliate"
+      },
+      {
+        "text": "Video selling"
+      },
+      {
+        "text": "Creators"
+      },
+      {
+        "text": "Built-in traffic"
+      }
+    ],
+    "platform": "TikTok Shop Seller Center (web) plus TikTok app storefronts and LIVE; checkout, payments and returns run inside TikTok; Fulfilled by TikTok optional",
+    "pricing_details": "US seller economics compiled 2026-11-21 from multiple 2026 sources citing TikTok Shop Seller Center, with one conflict flagged: referral fee on most US categories is reported at 8% (several 2026 sources; jewelry/pre-owned ~5%, food/grocery ~5%, select beauty and electronics subcategories reported at 9.5-11%), while other guides still cite TikTok's published 6% table - verify your exact rate in Seller Center. New sellers get a promotional 3% rate for their first 30 days (if the first sale lands within 60 days of onboarding). No monthly fee, no listing fee, free to open. Transaction fee reporting conflicts: one 2026 guide lists 2.9% + $0.30 per order on top, another says processing is bundled into the referral fee - budget 8-11% platform take either way and confirm in Seller Center. Affiliate commissions are set by the seller per product and typically run 10-20% (beauty up to 25-30%); creator-side affiliate eligibility commonly requires ~1,000 followers and 18+. Payouts settle after delivery with refund reserves; fashion return rates run 15-25%. Fulfilled by TikTok adds per-unit storage and pick-pack fees.",
+    "pros": [
+      "Distribution without an audience: creators with followers sell your product for a commission you set, so a zero-follower shop can generate its first sales in week one",
+      "No monthly fee, no listing fee, and a 3% promotional referral rate for your first 30 days - the cheapest legitimate test shelf in US e-commerce right now",
+      "The affiliate loop is native: open plans let any eligible creator grab your product, targeted plans let you recruit specific sellers of it, and sampling workflows are built in",
+      "Checkout, payments, returns and buyer trust all run inside TikTok, which lifts conversion on impulse purchases that would die on an external link",
+      "Shoppable video and LIVE compound: one good creator video keeps selling for weeks without ad spend"
+    ],
+    "cons": [
+      "The real fee stack is referral (5-8%) + affiliate commission you set (10-20%+, often your biggest cost) + shipping - a 20% affiliate rate on an $25 item hands out $5 before the platform's own 8% ($2) even lands",
+      "Fee reporting is messy: guides conflict on the referral table (6% vs 8%) and on whether a separate 2.9% + $0.30 transaction fee exists - your Seller Center numbers are the only truth",
+      "Returns are brutal in fashion (15-25% reported) and every refund claws back commission and shipping while you eat the logistics",
+      "New shops run under probation caps (order and listing limits) that lift only as fulfillment metrics prove out - a viral spike you cannot ship will hurt your account",
+      "Everything depends on an algorithm you do not control; storefront economics change with policy updates, and there is no export of customer relationships"
+    ],
+    "features": [
+      "Seller Center: listings, inventory, orders, analytics and payout management",
+      "Affiliate marketplace with open plans (any creator) and targeted plans (specific creators)",
+      "Product sampling workflow - approve creator sample requests and track them",
+      "Shoppable videos, LIVE selling and showcase tabs",
+      "Fulfilled by TikTok (FBT) warehousing, pick-pack and shipping as an option",
+      "GMV Max / Shop Ads for paid amplification",
+      "Creator eligibility gates (age, follower minimums) handled by TikTok on the affiliate side"
+    ],
+    "faq": [
+      {
+        "question": "What does TikTok Shop actually take per order?",
+        "answer": "Budget the referral fee (reported at 8% for most US categories in 2026, 5% for food and some jewelry, with a 3% new-seller promo for your first 30 days) plus the affiliate commission you set - typically 10-20% when a creator drives the sale. Some guides also list a separate 2.9% + $0.30 transaction fee while others say processing is bundled; check your Seller Center rate card and price your margin for the 8-11% platform take either way."
+      },
+      {
+        "question": "Can I sell on TikTok Shop without followers?",
+        "answer": "Yes - this is the platform's core trick. Sellers need no follower count at all: you set an affiliate commission, creators (who do need roughly 1,000+ followers and 18+) pick up your product in the marketplace, and their videos drive the sales. Your job is product, pricing, samples and fulfillment, not content volume."
+      },
+      {
+        "question": "What commission should I offer creators?",
+        "answer": "Start at 10-15% for open plans and go 15-25% for beauty, wellness and competitive niches; top creators with proven Shop sales command targeted deals at the high end. Below about 8-10%, most creators will not bother - the commission is their entire pay, so a rate that looks cheap to you recruits nobody."
+      }
+    ],
+    "content": "Every creator economy platform tells you to build an audience first. TikTok Shop is the one place built for people who skipped that step: a seller with zero followers can open a storefront, set a commission, and let thousands of creators with audiences do the selling. The creators pick products from a built-in affiliate marketplace, make the videos, and earn a cut of every sale they drive. You never appear on camera unless you want to.\n\nI came to it as a seller after two years of watching the affiliate side from the creator end ([TikTok](/tools/tiktok/) creator rewards are a different product with different economics - this page is the commerce layer). The honest picture after running a shop through its first few hundred orders: distribution is genuinely solved, the fee stack is genuinely heavier than the headline, and the whole thing runs on an algorithm you rent.\n\n## The Money Angle\n\n1. **Sell through creators instead of ads.** The core loop: open plan at 10-15% commission, ship samples to creators who request them, and let their videos convert. The median US beauty brand runs around 15% affiliate rates; electronics sit lower; new launches go higher. It is performance marketing with human faces and no spend unless a sale happens.\n2. **The zero-follower shop test shelf.** No monthly fee, no listing fee, and a 3% promotional referral rate for your first 30 days make this the cheapest legitimate demand test in US e-commerce. A product that cannot sell through creators at 15% commission on TikTok is telling you something important before you buy inventory in bulk.\n3. **LIVE selling for volume days.** Live sessions move inventory in bursts - clearance, launches, seasonal pushes. Creators run LIVE for you (negotiated on top of commission) or you run your own once the shop has traction.\n4. **Stack it with AI content production.** The content treadmill is the hidden labor cost, which is why AI video tools fit this channel so tightly: UGC-style ad generators like [Arcads](/tools/arcads/) fill the top of the funnel while affiliate videos carry the trust layer. The shops that survive treat content supply as infrastructure, not inspiration.\n5. **Graduate to owned channels.** Every serious shop uses TikTok Shop as customer acquisition, then inserts inserts, package cards and email capture to pull repeat buyers toward [Shopify](/tools/shopify/), where margins stop leaking 8% + commission. Etsy-style craft sellers - [Etsy](/tools/etsy/) is the better shelf for handmade at scale; TikTok Shop rewards impulse-priced, demonstrable products ($10-50, visual, one-video-explainable).\n\n## What It Really Costs\n\nUS seller fees, compiled November 2026 from multiple sources citing Seller Center - including one honest conflict:\n\n| Fee line | Rate | Notes |\n|----------|------|-------|\n| Referral fee (most categories) | ~8% | Some sources cite the published 6% table - verify yours in Seller Center |\n| New seller promo | 3% for 30 days | If first sale within 60 days of onboarding |\n| Food / grocery | ~5% | Lower category |\n| Affiliate commission | You set it | Typically 10-20%; beauty 15-30% |\n| Transaction fee | Conflicting reports | One guide: 2.9% + $0.30 extra; another: bundled into referral - budget 8-11% total platform take |\n| Monthly / listing fees | $0 | Free to open and list |\n| FBT fulfillment | Per-unit | Only if TikTok ships for you |\n\nWorked example: a $25 order driven by a creator at 15% = $3.75 commission + $2.00 referral (8%) = $5.75 gone, leaving $19.25 before your product, shipping and returns. That is the honest unit economics conversation: affiliate commission, not the platform fee, is usually your biggest line.\n\n## The Honest Cons\n\n- **The fee stack is referral + commission + shipping, and you set the middle number.** Sellers who price without modeling 20%+ affiliate rates get flattened the day the product starts moving.\n- **The published numbers disagree with each other.** 6% vs 8% referral, transaction fee bundled or separate - third-party guides have not converged, and TikTok updates rates quietly. Your Seller Center fee card outranks every article including this one.\n- **Returns are a real tax.** Fashion runs 15-25% returns; every refund reverses the commission and ships both ways while your logistics absorb the churn. Build return rates into pricing before launch.\n- **Probation caps can strangle a breakout.** New shops have order and listing limits that lift with fulfillment performance. A viral spike you cannot ship on time tanks your metrics and your visibility together.\n- **You rent the algorithm and the audience.** Policy changes, fee updates, and reach volatility are platform risks you accept for the built-in traffic - which is exactly why the smart shops convert every buyer they can into an owned channel.\n\n## TikTok Shop vs The Field\n\n| | Platform take | Built-in traffic | Monthly fee | Customer ownership |\n|---|---|---|---|---|\n| **TikTok Shop** | 5-8% + your affiliate rate | Creators + FYP discovery | $0 | None - TikTok owns buyers |\n| [Etsy](/tools/etsy/) | ~10-13% incl. processing | Search marketplace (80M+ buyers) | $0 | Minimal |\n| [Shopify](/tools/shopify/) | 2.9% + 30c | None - you bring it | $39/mo | Full |\n| [Amazon Associates](/tools/amazon-associates/) | 1-10% commission to creators | Creator content, Amazon checkout | $0 | None - Amazon owns buyers |\n\nThe positioning: Etsy sells through search intent, Shopify sells through your own brand, and TikTok Shop sells through other people's audiences on impulse. It is the only one of the three where a nobody with a good product can have 100 creators testing it within a week.\n\n## Bottom Line\n\nTikTok Shop is the strongest distribution hack in US e-commerce right now for physical products that demo well on video: free to open, no monthly bill, creators as your sales force, and a 30-day 3% promo to soften the start. The costs are real - an 8% referral rate, the affiliate commission you choose, fashion-grade returns, and a storefront you rent rather than own. Treat it as the acquisition channel, not the destination: price your unit economics with the full stack (referral + 15%+ commission + returns), survive the probation caps with fast shipping, and move repeat customers to a channel you own. The shops that last use the algorithm; the shops that die depend on it.\n",
     "published": true
   }
 ]

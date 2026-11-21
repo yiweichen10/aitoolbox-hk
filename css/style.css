@@ -2893,7 +2893,28 @@ body { font-family: var(--font-body); }
 }
 .footer p { margin: 6px 0; font-size: 13px; }
 .footer .footer-logo { font-size: 20px; color: #FFFFFF; margin-bottom: 10px; }
-.footer .footer-meta { font-size: 12px; color: #7A828D; margin-top: 14px; }
+.footer .footer-meta { font-size: 12px; color: #7A828D; margin-top: 18px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,.08); }
+
+/* 4-column footer — competitive standard (Explore / Participate / About / Legal) */
+.footer-cols {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr 1fr;
+  gap: 28px;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+.footer-col { display: flex; flex-direction: column; gap: 8px; }
+.footer-col-head {
+  font-size: 12px; font-weight: 700; letter-spacing: .06em;
+  text-transform: uppercase; color: #FFFFFF; margin: 0 0 4px;
+}
+.footer-col a { font-size: 13px; color: #A8ADB5; text-decoration: none; }
+.footer-col a:hover { color: #FFFFFF; text-decoration: underline; }
+.footer-brand .footer-tagline { font-size: 13px; color: #A8ADB5; max-width: 260px; line-height: 1.6; }
+@media (max-width: 860px) {
+  .footer-cols { grid-template-columns: 1fr 1fr; }
+  .footer-brand { grid-column: 1 / -1; }
+}
 .sidebar-tile {
   width: 28px; height: 28px; border-radius: 7px; flex-shrink: 0;
   display: inline-flex; align-items: center; justify-content: center;
@@ -3257,9 +3278,20 @@ img.tool-logo.ft-icon      { width: 56px; height: 56px; padding: 9px; border-rad
 }
 .td-identity .tool-icon-lg,
 .td-identity .tool-logo.tool-icon-lg {
-  width: 56px;
-  height: 56px;
+  width: 64px;
+  height: 64px;
   border-radius: 14px;
+  flex-shrink: 0;
+}
+.td-title-row {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  min-width: 0;
+}
+.td-title-row h1 {
+  min-width: 0;
+  overflow-wrap: break-word;
 }
 .td-identity h1 {
   font-family: var(--font-display);
@@ -3337,6 +3369,29 @@ img.tool-logo.ft-icon      { width: 56px; height: 56px; padding: 9px; border-rad
   transition: filter .15s ease;
 }
 .td-visit-btn:hover { filter: brightness(.94); color: #FFFFFF; }
+
+/* Tool like button (口碑信号) — small pill, shared by detail score card */
+.tool-like {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border: 1px solid var(--border-color, #e2e8f0);
+  border-radius: 999px;
+  background: var(--card-bg, #ffffff);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-main, #0f172a);
+  cursor: pointer;
+  user-select: none;
+  transition: transform .12s ease, border-color .12s ease, background .12s ease;
+}
+.tool-like:hover { border-color: var(--signal-orange, #f97316); transform: translateY(-1px); }
+.tool-like:focus-visible { outline: 2px solid var(--signal-orange, #f97316); outline-offset: 2px; }
+.tool-like.liked { background: #fff7ed; border-color: var(--signal-orange, #f97316); }
+.tool-like.liked b { color: var(--signal-orange, #f97316); }
+.tool-like .tool-like-count { font-weight: 700; }
+
 
 /* Review body — paper background, vertical rhythm 28px */
 .td-body {
@@ -3450,7 +3505,10 @@ img.tool-logo.ft-icon      { width: 56px; height: 56px; padding: 9px; border-rad
 }
 @media (max-width: 720px) {
   .td-proscons { grid-template-columns: 1fr; }
-  .td-identity h1 { font-size: 34px; }
+  .td-identity h1 { font-size: 30px; }
+  .td-title-row { gap: 12px; }
+  .td-title-row .tool-logo.tool-icon-lg,
+  .td-title-row .tool-icon-lg { width: 48px; height: 48px; }
 }
 
 /* Header on small screens — the v2 brand/nav markup needs its own squeeze

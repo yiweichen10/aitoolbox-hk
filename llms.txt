@@ -1,6 +1,6 @@
 # AI Tool Box (aitoolbox.hk)
 
-> A curated AI tool directory & review platform for Hong Kong and global English-speaking users. Currently lists 276 AI tools across 22 categories (AI Income, AI Video, AI Image, AI Development, AI Audio, AI Writing, AI Coding, AI Design, AI Marketing, AI Chat, AI Productivity, AI Automation, AI Agents, AI Search, AI E-commerce, AI SEO, AI Translation, AI Office, Market Research, AI Website Builder, AI Research, AI API), with editor-tested reviews covering features, pricing, pros/cons and use cases. The site is updated daily.
+> A curated AI tool directory & review platform for Hong Kong and global English-speaking users. Currently lists 281 AI tools across 22 categories (AI Income, AI Video, AI Image, AI Development, AI Audio, AI Writing, AI Coding, AI Design, AI Marketing, AI Chat, AI Productivity, AI Automation, AI E-commerce, AI Agents, AI Search, AI SEO, AI Translation, AI Office, Market Research, AI Website Builder, AI Research, AI API), with editor-tested reviews covering features, pricing, pros/cons and use cases. The site is updated daily.
 
 <!-- llms.txt — machine-readable site description for AI models -->
 <!-- Spec: https://llmstxt.org -->
@@ -22,9 +22,9 @@
 - [Articles](https://www.aitoolbox.hk/articles/): original hands-on reviews, comparisons and guides (231 articles)
 - [Full content for AI models](https://www.aitoolbox.hk/llms-full.txt): llms-full.txt — every tool and article in one plain-text file
 
-## Important Tool Pages (top 5 by rating per category, 276 tools total)
+## Important Tool Pages (top 5 by rating per category, 281 tools total)
 
-### AI Income (53)
+### AI Income (56)
 - [Substack](https://www.aitoolbox.hk/tools/substack/): Substack is a newsletter platform with billing built in - you write posts, they go out by email and live on…
 - [Patreon](https://www.aitoolbox.hk/tools/patreon/): Patreon is a membership billing system for creators - you set up tiers ($5 for bonus posts, $15 for a private…
 - [Fiverr](https://www.aitoolbox.hk/tools/fiverr/): The biggest fixed-price freelance marketplace where you sell services - AI automation builds, video editing…
@@ -108,6 +108,13 @@
 - [Gumloop](https://www.aitoolbox.hk/tools/gumloop/): Gumloop is a no-code agentic automation platform for building complex AI workflows. It allows users to chain…
 - [Zapier AI](https://www.aitoolbox.hk/tools/zapier-ai/): The leading automation platform now featuring AI to build workflows, process data, and create persistent AI…
 
+### AI E-commerce (10)
+- [Helium 10](https://www.aitoolbox.hk/tools/helium-10/): The all-in-one suite for Amazon (and now Walmart and TikTok Shop) sellers: product research, keyword data…
+- [Klaviyo](https://www.aitoolbox.hk/tools/klaviyo/): Klaviyo is the email and SMS platform most Shopify and DTC brands already run their retention on, which…
+- [Shopify](https://www.aitoolbox.hk/tools/shopify/): Shopify is the frame most online stores run on — hosting, checkout and an admin a non-developer can run, now…
+- [BigCommerce](https://www.aitoolbox.hk/tools/bigcommerce/): Open SaaS storefront platform built for merchants who outgrow the app-tax model: B2B price lists, customer…
+- [Sell The Trend](https://www.aitoolbox.hk/tools/sell-the-trend/): All-in-one dropshipping intelligence: the NEXUS AI engine aggregates demand signals from TikTok, Facebook…
+
 ### AI Agents (10)
 - [Manus](https://www.aitoolbox.hk/tools/manus/): Manus is an autonomous AI agent that takes a one-line brief and does the whole job while you go do something…
 - [MetaGPT](https://www.aitoolbox.hk/tools/metagpt/): MetaGPT is an open-source multi-agent framework that simulates a real software team inside your terminal…
@@ -121,13 +128,6 @@
 - [Exa AI](https://www.aitoolbox.hk/tools/exa-ai/): Exa AI (formerly Metaphor) is an API-first web search engine built for AI agents and LLMs - it matches…
 - [Tavily](https://www.aitoolbox.hk/tools/tavily/): The search API that AI agents call to reach the live web: LLM-ready results, page extraction, crawling and…
 - [Perplexity](https://www.aitoolbox.hk/tools/perplexity/): Perplexity is an AI-powered search engine that delivers real-time, cited answers. Smarter than traditional…
-
-### AI E-commerce (8)
-- [Helium 10](https://www.aitoolbox.hk/tools/helium-10/): The all-in-one suite for Amazon (and now Walmart and TikTok Shop) sellers: product research, keyword data…
-- [Klaviyo](https://www.aitoolbox.hk/tools/klaviyo/): Klaviyo is the email and SMS platform most Shopify and DTC brands already run their retention on, which…
-- [Shopify](https://www.aitoolbox.hk/tools/shopify/): Shopify is the frame most online stores run on — hosting, checkout and an admin a non-developer can run, now…
-- [BigCommerce](https://www.aitoolbox.hk/tools/bigcommerce/): Open SaaS storefront platform built for merchants who outgrow the app-tax model: B2B price lists, customer…
-- [Sell The Trend](https://www.aitoolbox.hk/tools/sell-the-trend/): All-in-one dropshipping intelligence: the NEXUS AI engine aggregates demand signals from TikTok, Facebook…
 
 ### AI SEO (7)
 - [Semrush](https://www.aitoolbox.hk/tools/semrush/): The heavyweight SEO suite that bolted AI-search tracking onto every plan in 2026. The money angle is direct…
@@ -222,6 +222,8 @@
 - [DeepSeek V4 vs Mistral AI](https://www.aitoolbox.hk/vs/deepseek-v4-vs-mistral-ai/): pricing and feature comparison
 - [Descript vs ElevenLabs](https://www.aitoolbox.hk/vs/descript-vs-elevenlabs/): pricing and feature comparison
 - [Durable vs Webflow AI](https://www.aitoolbox.hk/vs/durable-vs-webflow-ai/): pricing and feature comparison
+- [eBay vs Helium 10](https://www.aitoolbox.hk/vs/ebay-vs-helium-10/): pricing and feature comparison
+- [eBay vs Klaviyo](https://www.aitoolbox.hk/vs/ebay-vs-klaviyo/): pricing and feature comparison
 - [Elicit vs Litmaps](https://www.aitoolbox.hk/vs/elicit-vs-litmaps/): pricing and feature comparison
 - [Elicit vs Scite](https://www.aitoolbox.hk/vs/elicit-vs-scite/): pricing and feature comparison
 - [Exa AI vs Genspark](https://www.aitoolbox.hk/vs/exa-ai-vs-genspark/): pricing and feature comparison
@@ -229,13 +231,13 @@
 - [fal vs OpenRouter](https://www.aitoolbox.hk/vs/fal-ai-vs-open-router/): pricing and feature comparison
 - [Fireflies AI vs Julius AI](https://www.aitoolbox.hk/vs/fireflies-ai-vs-julius-ai/): pricing and feature comparison
 - [Fireflies AI vs Miro AI](https://www.aitoolbox.hk/vs/fireflies-ai-vs-miro-ai/): pricing and feature comparison
-- [Fiverr vs Patreon](https://www.aitoolbox.hk/vs/fiverr-vs-patreon/): pricing and feature comparison
-- [Fiverr vs Substack](https://www.aitoolbox.hk/vs/fiverr-vs-substack/): pricing and feature comparison
 - [Flowise vs Relevance AI](https://www.aitoolbox.hk/vs/flowise-vs-relevance-ai/): pricing and feature comparison
 - [Flux.1 vs Midjourney](https://www.aitoolbox.hk/vs/flux-1-vs-midjourney/): pricing and feature comparison
 - [Gamma vs Intercom](https://www.aitoolbox.hk/vs/gamma-vs-intercom/): pricing and feature comparison
 - [Gamma vs Notion AI](https://www.aitoolbox.hk/vs/gamma-vs-notion-ai/): pricing and feature comparison
 - [Genspark vs Glean](https://www.aitoolbox.hk/vs/genspark-vs-glean/): pricing and feature comparison
+- [Ghost vs Patreon](https://www.aitoolbox.hk/vs/ghost-vs-patreon/): pricing and feature comparison
+- [Ghost vs Stripe](https://www.aitoolbox.hk/vs/ghost-vs-stripe/): pricing and feature comparison
 - [GitLab vs LM Studio](https://www.aitoolbox.hk/vs/gitlab-vs-lm-studio/): pricing and feature comparison
 - [GitLab vs Ollama](https://www.aitoolbox.hk/vs/gitlab-vs-ollama/): pricing and feature comparison
 - [Goldfish vs GPTZero](https://www.aitoolbox.hk/vs/goldfish-vs-gptzero/): pricing and feature comparison
@@ -243,13 +245,11 @@
 - [GPTZero vs Jenni AI](https://www.aitoolbox.hk/vs/gptzero-vs-jenni-ai/): pricing and feature comparison
 - [Grok 4.20 vs Mistral AI](https://www.aitoolbox.hk/vs/grok-vs-mistral-ai/): pricing and feature comparison
 - [Helium 10 vs Klaviyo](https://www.aitoolbox.hk/vs/helium-10-vs-klaviyo/): pricing and feature comparison
-- [Helium 10 vs Shopify](https://www.aitoolbox.hk/vs/helium-10-vs-shopify/): pricing and feature comparison
 - [Intercom vs Notion AI](https://www.aitoolbox.hk/vs/intercom-vs-notion-ai/): pricing and feature comparison
 - [Julius AI vs Miro AI](https://www.aitoolbox.hk/vs/julius-ai-vs-miro-ai/): pricing and feature comparison
 - [Kaiber vs Kapwing](https://www.aitoolbox.hk/vs/kaiber-vs-kapwing/): pricing and feature comparison
 - [Kaiber vs Vidu AI](https://www.aitoolbox.hk/vs/kaiber-vs-vidu-ai/): pricing and feature comparison
 - [Kapwing vs Vidu AI](https://www.aitoolbox.hk/vs/kapwing-vs-vidu-ai/): pricing and feature comparison
-- [Klaviyo vs Shopify](https://www.aitoolbox.hk/vs/klaviyo-vs-shopify/): pricing and feature comparison
 - [Krea 2 vs Topaz Photo AI](https://www.aitoolbox.hk/vs/krea-2-vs-topaz-photo-ai/): pricing and feature comparison
 - [Leonardo AI vs Midjourney](https://www.aitoolbox.hk/vs/leonardo-ai-vs-midjourney/): pricing and feature comparison
 - [Litmaps vs Scite](https://www.aitoolbox.hk/vs/litmaps-vs-scite/): pricing and feature comparison
@@ -264,7 +264,7 @@
 - [n8n vs Zapier AI](https://www.aitoolbox.hk/vs/n8n-vs-zapier-ai/): pricing and feature comparison
 - [Otterly.AI vs Peec AI](https://www.aitoolbox.hk/vs/otterly-ai-vs-peec-ai/): pricing and feature comparison
 - [Otterly.AI vs Semrush](https://www.aitoolbox.hk/vs/otterly-ai-vs-semrush/): pricing and feature comparison
-- [Patreon vs Substack](https://www.aitoolbox.hk/vs/patreon-vs-substack/): pricing and feature comparison
+- [Patreon vs Stripe](https://www.aitoolbox.hk/vs/patreon-vs-stripe/): pricing and feature comparison
 - [Peec AI vs Semrush](https://www.aitoolbox.hk/vs/peec-ai-vs-semrush/): pricing and feature comparison
 - [Relume vs Wix AI](https://www.aitoolbox.hk/vs/relume-vs-wix-ai/): pricing and feature comparison
 - [Runway vs Sora](https://www.aitoolbox.hk/vs/runway-vs-sora/): pricing and feature comparison
@@ -293,7 +293,7 @@
 
 ## Update Frequency
 
-- Tool database: updated daily (276 tools listed)
+- Tool database: updated daily (281 tools listed)
 - Articles: new original reviews published regularly (231 total)
 - Ratings/pricing: recalibrated continuously
 

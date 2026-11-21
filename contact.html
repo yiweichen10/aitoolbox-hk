@@ -10,7 +10,7 @@
     <link rel="alternate" hreflang="zh-CN" href="https://www.aitoollab.cn/contact.html">
     <link rel="alternate" hreflang="en"    href="https://www.aitoolbox.hk/contact.html">
     <link rel="alternate" hreflang="x-default" href="https://www.aitoolbox.hk/contact.html">
-    <link rel="stylesheet" href="/css/style.css?v=20261120101439">
+    <link rel="stylesheet" href="/css/style.css?v=20261121090400">
     <meta name="yandex-verification" content="5ae78527ec9bcb4b" />
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-FKEXWVFYV0"></script>
@@ -57,7 +57,11 @@
             <div class="td-faq">
                 <div class="td-faq-item"><h3>Corrections to facts or pricing</h3>
                     <div class="td-faq-a"><p>Put the tool name and the wrong figure in the subject line.
-                        Factual errors are fixed within 48 hours — the same promise printed on every tool review.</p></div></div>
+                        Factual errors are fixed within 48 hours — the same promise printed on every tool review.</p>
+                        <div id="toolCorrectionBox" style="display:none;margin-top:12px;padding:14px 16px;border:1px solid #e2e8f0;border-radius:10px;background:#f8fafc;">
+                            <p id="toolCorrectionLabel" style="margin:0 0 8px;font-size:14px;color:#0f172a;"></p>
+                            <a id="toolCorrectionMail" class="btn btn-primary" style="display:inline-block;padding:8px 16px;border-radius:8px;background:#2563eb;color:#fff;text-decoration:none;font-size:14px;font-weight:600;" href="mailto:AIToolLabTeam@gmail.com">Report a correction for this tool</a>
+                        </div></div></div>
                 <div class="td-faq-divider"></div>
                 <div class="td-faq-item"><h3>Tool submissions</h3>
                     <div class="td-faq-a"><p>Use the <a href="/submit.html">submission page</a> so your entry carries
@@ -72,10 +76,53 @@
     </main>
 
     <footer class="footer">
-        <p class="footer-logo">AI Tool Lab</p>
-        <p>Independent AI tool reviews. No sponsored rankings. &middot; <a href="/about.html">Editorial policy</a> &middot; <a href="/rss.xml">RSS</a> &middot; <a href="https://www.aitoollab.cn/">中文版</a></p>
-        <p class="footer-meta">Copyright 2026 AI Tool Lab &middot; Updated daily</p>
+        <div class="footer-cols">
+            <div class="footer-col footer-brand">
+                <p class="footer-logo">AI Tool Lab</p>
+                <p class="footer-tagline">Independent AI tool reviews. Transparent scoring. Rankings cannot be bought.</p>
+            </div>
+            <div class="footer-col">
+                <p class="footer-col-head">Explore</p>
+                <a href="/category/">All AI Tools</a>
+                <a href="/articles/">Articles &amp; Guides</a>
+                <a href="/search/">Search</a>
+            </div>
+            <div class="footer-col">
+                <p class="footer-col-head">Participate</p>
+                <a href="/submit.html">Submit a Tool</a>
+                <a href="/contact.html">Contact &amp; Corrections</a>
+            </div>
+            <div class="footer-col">
+                <p class="footer-col-head">About</p>
+                <a href="/about.html">Methodology</a>
+                <a href="/author/">Editorial Team</a>
+                <a href="/rss.xml">RSS Feed</a>
+                <a href="https://www.aitoollab.cn/">中文版</a>
+            </div>
+            <div class="footer-col">
+                <p class="footer-col-head">Legal</p>
+                <a href="/privacy.html">Privacy Policy</a>
+                <a href="/terms.html">Terms of Use</a>
+            </div>
+        </div>
+        <p class="footer-meta">Copyright 2026 AI Tool Lab &middot; Updated daily &middot; Some outbound tool links may be affiliate links &mdash; commissions never influence scores or rankings.</p>
     </footer>
+    <script>
+    // Tool-page "report it" links carry ?tool=slug; prefill a correction mailto.
+    (function () {
+        var m = location.search.match(/[?&]tool=([^&]*)/);
+        if (!m) return;
+        var slug = decodeURIComponent(m[1].replace(/\+/g, ' '));
+        var box = document.getElementById('toolCorrectionBox');
+        var labelEl = document.getElementById('toolCorrectionLabel');
+        var mailEl = document.getElementById('toolCorrectionMail');
+        if (!box || !labelEl || !mailEl) return;
+        labelEl.innerHTML = 'Tool: <strong>' + slug.replace(/</g, '&lt;') + '</strong>';
+        mailEl.href = 'mailto:AIToolLabTeam@gmail.com?subject=' + encodeURIComponent('[Content Correction] ' + slug) +
+            '&body=' + encodeURIComponent('Tool: ' + slug + '\n\nWhat is wrong (figure, claim or pricing):\n');
+        box.style.display = 'block';
+    })();
+    </script>
     <button id="backToTop" aria-label="Back to top">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
          stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -85,7 +132,8 @@
 <script>
 document.addEventListener("DOMContentLoaded",function(){var b=document.getElementById("backToTop");if(!b)return;var s=function(){if(window.scrollY>400){b.classList.add("visible")}else{b.classList.remove("visible")}};window.addEventListener("scroll",s,{passive:true});s();b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"})});});
 </script>
-<script src="/js/tts-reader.js?v=20261118" defer></script><button id="darkModeToggle" class="dark-toggle-fab" aria-label="Toggle dark mode" title="Dark mode">◐</button>
+<script src="/js/tts-reader.js?v=20261118" defer></script>
+<script src="/js/likes.js?v=20261120" defer></script><button id="darkModeToggle" class="dark-toggle-fab" aria-label="Toggle dark mode" title="Dark mode">◐</button>
 <script>
 (function(){
     var btn = document.getElementById('darkModeToggle');
