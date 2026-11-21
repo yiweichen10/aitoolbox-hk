@@ -1,0 +1,116 @@
+OCR API Pricing 2026: Google Document AI vs AWS Textract vs Azure Document Intelligence vs Mistral OCR Compared
+
+Raw text OCR has collapsed into a commodity. AWS Textract, Google Document AI, and Azure Document Intelligence all charge exactly $1.50 per 1,000 pages for plain-text extraction — a three-way price match that none of the three advertises. The divergence starts the moment a pipeline needs more than a text dump: structured extraction on those same platforms quotes anywhere from $10 to $70 per 1,000 pages depending on the SKU, a 7x spread on identical input. The newest line in OCR API pricing is Mistral OCR 4.1, which skips the SKU menu entirely and bundles tables, bounding boxes, block classification, and confidence scores into a flat $4 per 1,000 pages — $2 on the Batch API. On a 50,000-page monthly archive, that is the difference between a $200 bill and a $1,500 one.
+
+This guide compares the four platforms developers actually shortlist, with rates verified from vendor pricing pages on November 22, 2026, four worked bills at realistic volumes, and the free-tier fine print that decides your first invoice. It extends the per-unit method we used for [speech-to-text API pricing](/articles/best-speech-to-text-api-pricing-2026-deepgram-vs-assemblyai-vs-openai-vs-elevenlabs/) and [open-weight inference hosting](/articles/best-llm-inference-pricing-2026-groq-vs-together-vs-fireworks-vs-replicate/): official rate cards first, third-party directories only where a vendor page is opaque, labeled as such.
+
+## OCR API Pricing at a Glance
+
+Every rate below is normalized to cost per 1,000 pages, the unit all four vendors eventually publish. One trap before the table: "OCR" names a different SKU on each platform. Google's $1.50 tier covers the Document OCR processor only; its Form Parser is a separate $30 SKU. Azure's $1.50 tier is Read only; its Layout model bills $10. AWS Detect Document Text is $1.50; every Analyze Document SKU starts at $15 or more. Mistral ocr pricing needs none of that disambiguation because there is one model and one page rate.
+
+| Vendor / SKU | Raw text (per 1K pages) | Structure (per 1K pages) | Free tier | Volume discount |
+|---|---|---|---|---|
+| Google Document OCR | $1.50 (1K–5M), $0.60 (5M+) | Form Parser $30 · Layout $10 · Invoice/receipt $10 | 1,000 pages/mo, ongoing | 1yr −10% · 3yr −20% |
+| AWS Textract Detect Text | $1.50 (≤1M), $0.60 (1M+) | Tables $15 · Forms $50 · T+Q $20 · F+T+Q $70 · Expense $10 | 1,000/mo, first 3 months only | Auto $0.60 past 1M |
+| Azure DI Read | $1.50 (≤1M), $0.60 (1M+) | All prebuilt incl. Layout & Invoice $10 · custom $30 · classification $3 | 500 pages/mo, ongoing | Commitment to $0.525/1K |
+| Mistral OCR 4.1 | $4 (batch $2) | Bounding boxes, block types, confidence included | None self-serve | Batch −50% · cached $0.40/1K |
+
+## Raw OCR Is Now a Three-Way Price Match
+
+Strip the branding and OCR pricing per 1000 pages is a fixed $1.50 on all three hyperscalers, falling to $0.60 once volume thresholds clear. The thresholds differ: AWS Textract pricing drops to $0.60 beyond 1 million monthly pages, Azure Document Intelligence pricing does the same at 1 million, while Google holds $1.50 all the way to 5 million. Between 1 million and 5 million pages a month — the band where most serious document pipelines live — Google is 2.5x the price of the other two for identical plain text.
+
+The free tiers are not interchangeable either:
+
+| Vendor | Free allowance | Resets | The catch |
+|---|---|---|---|
+| Google Document AI | 1,000 pages/mo | Monthly, no expiry | OCR processor only — Form Parser and invoice SKUs bill from page 1 |
+| Azure Document Intelligence | 500 pages/mo | Monthly, no expiry | Add-ons (high-res, fonts, formulas) excluded |
+| AWS Textract | 1,000/mo text · 100/mo Forms/Tables/Expense · 2,000/mo Lending | Monthly | New accounts only, dies after 3 months |
+| Mistral OCR | No per-page free tier | — | Chat-plan tokens do not cover OCR pages |
+
+Two operational details that show up on invoices: Google bills nothing for failed requests (4xx and 5xx responses are free), and its synchronous endpoint rejects documents over 10 pages, so anything longer must go through batch processing capped at 200 pages per document. Plan for the batch queue, not the sync API, on real-world PDFs.
+
+## Structured Extraction Is Where the Quotes Diverge
+
+Search "Document AI vs Textract" and most comparisons stop at the text dump. The bills diverge at structure. On AWS Textract pricing, tables cost $15 per 1,000 pages, forms (key-value pairs) $50, and the Forms + Tables + Queries bundle $70 — the most expensive structured SKU of the four vendors. Google Document AI pricing keeps its per-processor menu: Form Parser $30, Layout Parser $10, and specialized parsers (invoice, receipt, bank statement) billed as $0.10 per 10-page count, which works out to $10 per 1,000. Azure Document Intelligence pricing is the flattest: every prebuilt model — Layout, Invoice, Receipt, ID, W-2, contracts — bills one $10-per-1,000 band, with custom extraction at $30 and custom classification at $3.
+
+One quiet symmetry: Google's Layout Parser and Azure's Layout prebuilt both land at $10 per 1,000 pages, the only structured SKU the two hyperscalers price identically.
+
+Mistral breaks the menu model. OCR 4.1 returns bounding boxes, block types, and word-level confidence scores as part of the same $4 page rate. On structure-heavy workloads it undercuts the cheapest hyperscaler structured SKU (Azure's $10) by 2.5x, and AWS's Forms + Tables + Queries by 17.5x.
+
+Treat the benchmark claims with that context: Mistral's OCR 4 announcement quotes customer Rogo measuring "equivalent accuracy at roughly 8x lower cost and 17x lower latency" against leading agentic document parsers — a vendor-published figure, not an independent audit, though it is consistent with the rate-card math above.
+
+One alternative worth naming: frontier vision-language models token-bill per document, so cost per page swings with layout density and image-token pricing (see our [LLM API pricing](/articles/best-llm-api-pricing-2026-openai-gpt-6-vs-claude-opus-5-5-vs-gemini-4-vs-deepseek-compared/) breakdown). Dedicated OCR APIs bill per page, which makes document parsing API pricing the only predictable line item in an ingestion budget.
+
+## Worked Bills: OCR API Pricing at Four Sizes
+
+Four budgets at 2026 pipeline sizes, all per month, all at list rates with no commitments applied:
+
+| Scenario | Google Document AI | AWS Textract | Azure Document Intelligence | Mistral OCR 4.1 |
+|---|---|---|---|---|
+| 50K pages, raw text | $73.50 (1K free) | $75 | $75 | $200 ($100 batch) |
+| 50K pages, tables + key-value | $1,500 (Form Parser) | $1,000 (Tables + Queries) | $500 (Layout prebuilt) | $200 ($100 batch) |
+| 500K invoices, prebuilt schema | $5,000 (Invoice parser) | $5,000 (Expense) | $5,000 · $4,000 committed | $2,000 ($1,000 batch) |
+| 5M pages, raw text | $7,500 | $3,900 | $3,900 · $3,000 committed | $20,000 ($10,000 batch) |
+
+Scenario 1 is a coin flip: Google's ongoing 1,000 free pages shave the bill to $73.50 against $75 at AWS and Azure, a rounding error either way.
+
+Scenario 2 is the money chart. The same 50,000 pages quote $200 to $1,500 — a 7.5x spread — depending only on which SKU the pipeline calls. If reading order and tables are all you need, Google's Layout Parser and Azure's Layout prebuilt both cost $500. Key-value pairs push Google to Form Parser's $1,500, and AWS's Tables + Queries lands at $1,000. Mistral's bundled structure costs $200, or $100 on batch.
+
+Scenario 3: invoice pipelines on all three hyperscalers land at $5,000 a month for 500,000 pages. Azure's 500K-page prebuilt commitment tier cuts that to $4,000. Mistral publishes no prebuilt invoice schema — you define fields through prompt annotations — so its $2,000 assumes your team builds and maintains that schema layer.
+
+Scenario 4: past 1 million pages, AWS and Azure drop to $0.60 per 1,000 ($3,900 at 5M), while Google stays at $1.50 until page 5 million ($7,500). Azure's 2M-page commitment brings $3,000. Mistral's flat rate never discounts with volume — only the Batch API halving does — so 5M raw-text pages quote $20,000, 5x AWS.
+
+Google's own pricing page works a larger example: 6 million pages a month through Form Parser totals $130,000. Structure at scale is the budget killer; raw text is not.
+
+## Mistral OCR Pricing: One Flat Rate and a Batch Halving
+
+Mistral released OCR 4 on June 23, 2026 at $4 per 1,000 pages through the API and $2 per 1,000 through the Batch API, with the no-code Document AI surface in Mistral Studio priced at $5 per 1,000. OCR 4.1 followed on August 14, 2026, adding block-level confidence scores and 2,000 pages-per-minute throughput on a single GPU at the same rates, per the official release notes. The model handles 170 languages and accepts PDF, DOC, PPT, and OpenDocument inputs, returning clean Markdown — which is why it now shows up in most pdf to markdown api comparisons — plus per-word confidence scores you can route into human-review queues.
+
+The honest history: OCR 3, the 2025 model, billed $2 per 1,000 pages with annotations at $3 per 1,000. OCR 4 doubled the base rate to $4 and folded annotations into it. Teams that only need markdown text now pay 2.6x the hyperscaler rate for the same output; teams that need structure pay 60% less than Azure's cheapest structured SKU. A third-party price tracker (Flatkey, updated October 20, 2026) also lists cached pages at $0.40 per 1,000 — relevant when the same corpus is re-ingested daily — though Mistral's own pricing page does not spell that number out, so we label it third-party.
+
+Self-hosting changes the math again: OCR 4.1 ships as a single container for enterprise self-managed deployment with no per-page API billing — infrastructure costs only. Availability runs through [Mistral AI](/tools/mistral-ai/) La Plateforme, Amazon SageMaker, and Microsoft Foundry, with Foundry pricing potentially differing from Mistral's direct rates.
+
+## Commitment Tiers and the Quiet Discounts
+
+Azure Document Intelligence pricing rewards commitments more aggressively than any competitor. Read rates fall to $0.75 per 1,000 at the 500K-page tier ($375 per month), $0.60 at 2M ($1,200), and an effective $0.525 at 8M ($4,200), with overage inside each tier billed lower than pay-as-you-go. Prebuilt commitment tiers run $190 per 20,000 pages, $900 per 100,000, and $4,000 per 500,000.
+
+Google's Flexible Savings plan trims Document OCR to $1.35 per 1,000 on a one-year term and $1.20 on three years, with the 5M+ band falling to $0.54 and $0.48. Custom processors add a hosting fee from $0.05 per hour. AWS has no upfront tier for Textract — the discount is the automatic $0.60 per 1,000 beyond 1 million pages, plus the 3-month free tier for new accounts. Custom model training bills $3 per hour on Azure, and Google charges custom-processor hosting from $0.05 per hour — numbers that matter once pipelines drift into custom extraction territory.
+
+## Choosing by Workload
+
+| Workload | Pick | Why | Cost at 100K pages/mo |
+|---|---|---|---|
+| Plain text for search or RAG indexing | Azure Read or AWS Detect Text | $1.50/1K, ongoing free pages, $0.60 past 1M | ~$150 |
+| Reading order + tables for RAG chunks | Mistral OCR 4.1 or Azure Layout | Structure bundled at $4 vs $10–30 | $400 vs $1,000+ |
+| Key-value form extraction | Google Form Parser or Azure custom | Highest schema fidelity on hyperscalers | $1,500–3,000 |
+| Invoice and receipt pipelines | Azure Invoice / AWS Expense | Prebuilt schemas at the $10/1K band | $1,000 |
+| Sovereign or regulated data | Mistral self-host container | No per-page API billing; data stays in your network | Infra cost only |
+
+Two honest caveats on the matrix: Mistral's prebuilt-schema gap is real for invoice work — you trade the $10-per-1,000 prebuilt SKU for prompt-built extraction — and the Google-versus-Azure Layout pick at an identical $10 per 1,000 is an ecosystem decision, not a price one.
+
+## Frequently Asked Questions
+
+### What is the cheapest OCR API for high volume?
+
+For raw text above 1 million pages a month, Azure Document Intelligence and AWS Textract tie at $0.60 per 1,000 pages, and Azure's 8M-page commitment tier pushes the effective rate to $0.525 — the cheapest ocr api rate on the market for plain text. For structured output, Mistral OCR 4.1's Batch API at $2 per 1,000 pages is the cheapest rate-card number of the four vendors on any SKU.
+
+### How much does AWS Textract cost per 1,000 pages?
+
+Textract cost per 1000 pages runs $1.50 for Detect Document Text up to 1 million monthly pages and $0.60 beyond that. Structure costs more: $15 for tables, $50 for forms, $70 for the Forms + Tables + Queries bundle, $10 for Analyze Expense, and $25 for ID documents. The 3-month free tier covers 1,000 text pages plus 100 pages of most Analyze SKUs monthly, new accounts only.
+
+### Which OCR API has a free tier that never expires?
+
+Google Document AI includes 1,000 OCR pages monthly with no expiry, and Azure Document Intelligence includes 500 pages monthly on the S0 tier. AWS Textract's ocr api free tier is larger on paper but new-accounts-only and dies after three months. Mistral OCR has no self-serve free pages — La Plateforme's experiment tokens do not cover OCR billing.
+
+### Is Mistral OCR pricing competitive with the hyperscalers?
+
+It depends entirely on the output. For markdown-only extraction, no: $4 per 1,000 pages is 2.6x the hyperscaler $1.50 raw band. For structured output with bounding boxes and confidence scores, yes: the flat $4 undercuts Azure's $10 Layout band by 60% and AWS's $70 forms bundle by 94%, and the Batch API rate of $2 halves that again.
+
+### What does OCR cost per page for invoices and receipts?
+
+OCR cost per page on the specialized prebuilt SKUs is about $0.01 on all three hyperscalers — AWS Analyze Expense, Azure Invoice, and Google's invoice parser all work out to $10 per 1,000 pages (Google bills it as $0.10 per 10-page count). Mistral's batch rate implies roughly $0.002 per page, with the caveat that you build the invoice schema yourself rather than getting a prebuilt one.
+
+## Bottom Line
+
+OCR API pricing in 2026 splits into two markets with opposite winners. Plain text is a finished price war: $1.50 per 1,000 pages everywhere, $0.60 past the volume break, and the only real decision is whose free tier and commitment math fits your volume band — Azure and AWS past 1 million pages, Google everywhere below it. Structure is an open market: quotes run $10 to $70 per 1,000 depending on SKU, and Mistral's flat $4-with-structure rate undercuts every prebuilt menu by 60% or more, at the cost of building schema layers yourself. Feed either output into a [vector database](/articles/best-ai-vector-database-tools-2026-pinecone-vs-weaviate-vs-qdrant-vs-milvus/) and the OCR line item stays a rounding error next to model spend — until the day you push 5 million invoice pages through Form Parser and meet Google's $130,000 worked example.
