@@ -1,0 +1,10 @@
+# Cloudflare Pages 配置 — aitoolbox-hk（英文站）
+# deploy_cf.py 会 wrangler pages deploy _deploy_cf（cwd=项目根），
+# wrangler 读取本文件把 KV 绑定应用到 Pages 项目，functions/api/likes.js 可用。
+name = "aitoolbox-hk"
+pages_build_output_dir = "_deploy_cf"
+compatibility_date = "2026-01-01"
+
+[[kv_namespaces]]
+binding = "LIKES_KV"
+id = "c6f48ba7831a40e19c3312a73665fc05"

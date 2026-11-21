@@ -41,7 +41,10 @@ def main():
     log("=" * 55)
 
     # Step 1: Build static site
-    log("STEP 1: Rebuild static site")
+    log("STEP 1: Recompute 5-factor ranking scores")
+    run([sys.executable, os.path.join(SCRIPTS_DIR, 'score_tools_en.py')])
+
+    log("STEP 1b: Rebuild static site")
     run([sys.executable, os.path.join(SCRIPTS_DIR, 'build_en.py')])
 
     # Step 2: git commit & push（仅作版本备份，失败不中断后续部署）

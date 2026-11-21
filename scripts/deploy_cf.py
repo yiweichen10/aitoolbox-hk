@@ -26,7 +26,7 @@ PROJECT = "aitoolbox-hk"
 ROOT_FILES = [
     "index.html", "404.html", "about.html",
     "favicon.ico", "robots.txt", "sitemap.xml", "llms.txt", "llms-full.txt", "rss.xml",
-    "contact.html", "submit.html",
+    "contact.html", "submit.html", "privacy.html", "terms.html", "favorites.html",
     "_headers", "_redirects",
     "00859eedcd7c1f5e6a38204096fe2a57.txt",   # IndexNow key
     "google06ea2c88965e9881.html",             # Google 验证
@@ -34,7 +34,7 @@ ROOT_FILES = [
 ]
 
 # 需要整目录复制的站点资源
-DIRS = ["articles", "author", "category", "css", "images", "js", "tools", "assets", "search", "alternatives", "vs"]
+DIRS = ["articles", "author", "category", "css", "images", "js", "tools", "assets", "search", "alternatives", "vs", "functions"]
 
 
 def prepare() -> tuple[int, int]:

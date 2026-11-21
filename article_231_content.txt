@@ -1,0 +1,130 @@
+TTS API Pricing 2026: ElevenLabs vs Cartesia vs OpenAI vs Deepgram Compared
+A 50x price gap separates the cheapest and most expensive ways to turn the same million characters into speech: Google Cloud's Standard voices bill $4 per million characters, while an ElevenLabs Starter subscription works out to roughly $200 for the same output. That spread is the most important fact in TTS API pricing for 2026, because most teams shop on voice quality and only discover the billing model after they have integrated an SDK. The rates themselves moved sharply this year. ElevenLabs cut its list prices twice between August and October, Deepgram's Aura-2 held at $0.030 per 1,000 characters while Growth plans shaved another 10%, and OpenAI still charges $15 per million characters for tts-1, a rate unchanged since 2023. This guide compares the four platforms developers actually shortlist — [ElevenLabs](/tools/elevenlabs/), [Cartesia](/tools/cartesia/), OpenAI, and [Deepgram](/tools/deepgram/) — with rates verified from vendor pricing pages on November 21, 2026, three worked bills, and the free-tier traps that inflate invoices. Third-party directories fill gaps only where a vendor's page is opaque, labeled as such.
+
+## TTS API Pricing at a Glance
+
+Every rate below is normalized to cost per 1,000 characters, the only unit that compares cleanly across vendors; token- and credit-billed vendors get conversions in their own sections.
+
+| Vendor / Model | Per 1K chars | Per 1M chars | Free tier | Best for |
+| --- | --- | --- | --- | --- |
+| ElevenLabs v4 | $0.08 | $80.00 | ~10K chars/mo | Expressive narration, audiobooks |
+| ElevenLabs Flash / Turbo / v4 Turbo | $0.04 | $40.00 | ~20K chars/mo | Real-time agents on a budget |
+| Cartesia Sonic (Scale plan) | $0.0374 | $37.38 | $5 credit + monthly allowance | Sub-100ms voice agents |
+| OpenAI tts-1 | $0.015 | $15.00 | None | Developers already on OpenAI |
+| OpenAI gpt-4o-mini-tts | ~$0.015/min (token-billed) | ~$16.70/1M chars* | None | Steerable delivery via prompts |
+| Deepgram Aura-2 | $0.030 | $30.00 | $200 credit, no expiry | Enterprise TTS, self-host |
+| Deepgram Aura-1 | $0.015 | $15.00 | $200 credit, no expiry | Cheapest specialist character rate |
+| Google Cloud Standard | $0.004 | $4.00 | 4M chars/mo, ongoing | High-volume transactional audio |
+| Google Cloud Neural2 | $0.016 | $16.00 | 1M chars/mo, ongoing | Better quality, still cheap |
+
+*gpt-4o-mini-tts bills $0.60 per 1M text input tokens plus $12 per 1M audio output tokens — roughly $0.015 per minute of audio in OpenAI's own examples, or about $16.70 per 1M characters at 900 characters per minute.
+
+Two readings of this table. If voice quality is your product — audiobooks, character games, premium courses — ElevenLabs v4 at $80 per million is the going rate for the most expressive output available. If the audio is transactional — IVR prompts, confirmations, accessibility readouts — Google Standard at $4 per million is one-tenth of that, effectively free below the 4M monthly allowance. When you compare text-to-speech API cost per 1,000 characters, the model tier matters as much as the vendor: Deepgram's lineup alone spans $0.015 to $0.045 per 1K chars, a 3x spread inside one company.
+
+## How Text-to-Speech APIs Bill You
+
+Three billing units are in play, and mixing them is how teams end up with surprise invoices.
+
+**Per character.** ElevenLabs, Deepgram, OpenAI's tts-1 and tts-1-hd, Google, and Polly bill on input characters including spaces; you pay the same whether the voice reads fast or slow.
+
+**Per token.** OpenAI's gpt-4o-mini-tts is the outlier: $0.60 per 1M text input tokens plus $12 per 1M audio output tokens — roughly $0.015 per minute of generated audio.
+
+**Per credit.** Cartesia sells subscription credits at 1 credit per character; its documentation states one minute of Sonic audio consumes roughly 750-800 credits — not the 1,000 a naive conversion assumes — lowering its effective per-minute cost.
+
+The speech-rate assumption drives everything: a minute of English narration at 150 words per minute is roughly 900-1,000 characters, and ElevenLabs' own calculator equates 1,000 characters to one minute. Character-billed models get 10-20% cheaper per minute when the voice reads briskly; token-billed models stay flat. Non-Latin scripts break the math — Arabic, Chinese, and Japanese pack different amounts of speech into each character, so a character-billed vendor can cost far more or less per minute than the English rate implies.
+
+## ElevenLabs: The Expressiveness Premium
+
+ElevenLabs TTS pricing, verified from its API pricing page on November 21, 2026:
+
+- **v4** (newest, most emotive, 90+ languages): $0.08 per 1K chars, about $0.08 per minute
+- **v4 Turbo** (~100ms latency, agent-tuned): $0.04 per 1K chars
+- **v3** (dramatic delivery, 70+ languages): $0.08 per 1K chars, 5,000-char request limit
+- **v3 Conversational** (~280ms): $0.04 per 1K chars
+- **v2 Multilingual** (29 languages, stable long-form): $0.08 per 1K chars
+- **Flash / Turbo** (~75ms, 32 languages): $0.04 per 1K chars
+
+Subscriptions bundle characters at the same unit rate: Starter $6/mo for 30K characters, Creator $22/mo for 275K, Pro $99/mo for 1.238M, Scale $299/mo for 3.738M, Business $990/mo for 12.375M. The free tier renews about 10,000 v4 characters (20,000 on the Turbo models) monthly. Note that a plan buys concurrency and features, not a unit discount — $22 for 275K characters is exactly $0.08 per 1K, the same as pay-as-you-go v4.
+
+The repricing history matters if you read older posts. In August 2026, v3 cost $0.10 per 1K chars and Flash $0.05; by October both had dropped to $0.08 and $0.04, and Creator's included characters doubled from 121K to 275K. A launch promotion took v4 to $0.022 and v4 Turbo to $0.011 per 1K, but it ended October 12 — do not budget against it. At list prices, ElevenLabs costs 2x Deepgram Aura-2 and 20x Google Standard; whether that premium survives depends on whether a listener judges your product by the voice.
+
+## Cartesia Sonic Pricing: Credits, Not Rate Cards
+
+Cartesia publishes no clean pay-as-you-go rate card. It sells subscription plans, and the effective rates come from arithmetic on the published tiers:
+
+- **Free:** $5 in signup credits plus a monthly allowance (directories record 20,000-50,000 credits — verify at signup)
+- **Pro:** $5/mo for 100K credits — $50.00 per 1M characters
+- **Startup:** $49/mo for 1.25M credits — $39.20 per 1M characters
+- **Scale:** $299/mo for 8M credits — $37.38 per 1M characters
+
+Cartesia Sonic pricing therefore lands between Deepgram Aura-2 and ElevenLabs Flash at plan rates, and the 750-800 credits-per-minute ratio puts effective output near $0.028-$0.030 per minute on Scale. What the premium over OpenAI buys is latency and cloning: Sonic streams first audio in roughly 90-100ms, the fastest broadly available figure in this comparison, records at 44.1kHz, and clones a voice from a 5-second sample — why voice-agent platforms like Retell and Vapi build on it. Two cautions: Scale rose from $239 to $299 during 2026, and third-party records of its pay-as-you-go rate range from $0.038 (Deepgram's own April 2025 chart) to $0.075 per 1K chars (October 2026 directories). The numbers have moved more than once — confirm the current rate in the console before committing a budget.
+
+## OpenAI Text-to-Speech API Pricing: Flat Rates and a Token Curveball
+
+OpenAI's rate card is the shortest in the industry: tts-1 at $15 per 1M characters, tts-1-hd at $30, both unchanged since 2023. The newer gpt-4o-mini-tts bills by token — $0.60 per 1M text input tokens plus $12 per 1M audio output tokens, about $0.015 per minute — and replaces speed dials with an instructions field where you describe the delivery in plain language.
+
+Three limits before you build. No free tier: OpenAI is the only vendor here you cannot test without a card. Requests cap at 4,096 characters, so long-form means chunking and stitching audio yourself. The voice menu is thin — nine voices on tts-1 and tts-1-hd, thirteen on mini-tts — and there is no voice cloning; custom voices require a sales conversation. The Batch API halves tts-1 to $7.50 per 1M characters for non-latency-sensitive workloads, worth more than any negotiation at volume. For teams already paying an OpenAI invoice, TTS is one more endpoint on an existing key, and $0.015 per 1K characters undercuts every ElevenLabs model by at least 2.7x.
+
+## Deepgram Aura-2 Pricing: The Volume Ladder
+
+Deepgram's text-to-speech rates, verified from its pricing page on November 21, 2026, bill per 1,000 characters across three models:
+
+- **Aura-1:** $0.015 per 1K chars pay-as-you-go, $0.0135 on Growth
+- **Aura-2:** $0.030 per 1K chars pay-as-you-go, $0.027 on Growth
+- **Flux TTS** (agent-first, first audio from ~80ms): $0.045 per 1K chars pay-as-you-go, $0.0405 on Growth
+
+The Growth plan requires $4,000 or more per year in prepaid credits and takes about 10% off every TTS model — with a 10% overage premium beyond the credits, charged weekly. Aura-2 targets enterprise deployments with self-hosted options (your VPC or on-prem, NVIDIA GPUs required), pitched as 20-40% cheaper than comparable character rates. New accounts get $200 in free credits that never expire and require no card — Deepgram's FAQ frames that as roughly 43,000 minutes of Nova-3 transcription, but the credits draw down against TTS too, covering about 6.7M characters at Aura-2 rates. Through December 31, 2026, Flux TTS spend is matched 1:1 in credits up to $500, effectively halving it for early agent builds. If you need the mirror image — audio back into text — the rates and traps differ, as our [speech-to-text API pricing comparison](/articles/best-speech-to-text-api-pricing-2026-deepgram-vs-assemblyai-vs-openai-vs-elevenlabs/) covers in the same detail.
+
+## The Bench: Google, Polly, and the Rest
+
+The incumbent cloud rates are the market floor. Google Cloud TTS pricing spans a 40x range inside one product: Standard voices at $4 per 1M characters with 4 million free monthly and no expiry, Neural2 and Polyglot at $16 per 1M with 1 million free, Chirp 3: HD at $30 per 1M, and Studio voices at $160 per 1M. Amazon Polly splits similarly: Standard $4 per 1M, Neural $16, Generative $30, with a 1M-character monthly free tier that expires after 12 months — the classic cliff. Azure's Neural voices sit at $16 per 1M. These are commodity rates for commodity output; the trade-off is character, not capability. Studio-grade alternatives price differently: Murf's API runs about $0.030 per minute at its studio tier, and PlayHT gates API access behind its $34.99 Studio plan — the $9.99 Creator plan excludes the API entirely, the most common signup mistake directories flag. Our [PlayHT](/tools/play-ht/) and [Murf](/tools/murf-ai/) tool pages cover their plan structures in depth.
+
+## Worked Bills: What Real Projects Actually Cost
+
+Three volume profiles cover most teams. The table applies verified list rates; subscription plans are used where they beat pay-as-you-go.
+
+| Monthly characters | ElevenLabs (v4 / Flash) | OpenAI (tts-1 / hd) | Deepgram (Aura-1 / Aura-2) | Google (Std / Neural2) | Cartesia (best plan) |
+| --- | --- | --- | --- | --- | --- |
+| 50K | $4.00 / $2.00 | $0.75 / $1.50 | $0.75 / $1.50 | $0.20 / $0.80 | Pro $5.00 |
+| 100K | $8.00 / $4.00 | $1.50 / $3.00 | $1.50 / $3.00 | $0.40 / $1.60 | Pro $5.00 |
+| 900K | $72.00 / $36.00 | $13.50 / $27.00 | $13.50 / $27.00 | $3.60 / $14.40 | Startup $49.00 |
+| 1M | $80.00 / $40.00 | $15.00 / $30.00 | $15.00 / $30.00 | $4.00 / $16.00 | Startup $49.00 |
+| 10M | $800 / $400 | $150 / $300 | $150 / $300 | $40 / $160 | Scale $299* |
+
+*Scale includes 8M credits; beyond that you are negotiating an Enterprise contract.
+
+Reading the worked numbers is where TTS API pricing stops being abstract. A solo creator publishing 100 narrated videos a month (about 900K characters) pays $13.50 on tts-1, $27 on Aura-2, or $72 on ElevenLabs v4 — and $0 on Google Standard if the allowance covers it. An IVR system serving 100K characters costs almost nothing anywhere, so the vendor choice there should hinge on latency and reliability. The pattern: the dollar gap between cheapest and most expensive only becomes a line item past roughly 500K characters a month, but the free-tier differences are worth real money from day one. Teams that cache repeated prompts — confirmations, standard greetings — routinely cut invoices 30-60%, because a cache hit costs nothing on every provider here.
+
+## Free Tiers: The Forever Allowance vs the 12-Month Cliff
+
+The tts api free tier landscape splits into three shapes. Google offers the only meaningful ongoing allowance: 4 million Standard characters monthly, no expiry, enough to run a small product free indefinitely. Cartesia and ElevenLabs renew small monthly allowances (roughly 20K-50K credits and 10K-20K characters) suited to evaluation, not production. Deepgram's $200 credit never expires and needs no card — the most generous evaluation budget here. Polly's 1M-character allowance expires after 12 months, and OpenAI offers nothing. You can prototype free on four of six vendors, but only Google's allowance survives contact with real traffic.
+
+## Which Text-to-Speech API Should You Pick
+
+Match the vendor to the audio's job, not to the demo's polish. ElevenLabs is the defensible premium when listeners judge your product by the voice — audiobooks, character games, premium courses — and v4 Turbo at $0.04 per 1K chars closes most of the gap if you accept agent-tuned delivery. Cartesia earns its premium on latency, not expressiveness: where first audio must arrive under 150ms, its 90-100ms streaming and 5-second cloning have no cheaper equivalent, and our [voice-agent platform comparison](/articles/ai-voice-agent-platforms-2026-retell-vs-vapi-vs-bland-vs-synthflow/) shows how the full stack prices out. OpenAI wins on friction — flat rates, one SDK you already have, Batch at half price — provided you accept 13 voices, no cloning, and chunking past 4,096 characters. Deepgram wins the per-character rate among specialist vendors, especially on Growth plans, and one invoice across transcription and speech simplifies procurement. Start transactional audio on Google Standard and upgrade only when listener feedback says the voice is the problem. Before scaling spend, check unit economics against [large-model inference pricing](/articles/best-llm-api-pricing-2026-openai-gpt-6-vs-claude-opus-5-5-vs-gemini-4-vs-deepseek-compared/), where the same million tokens can swing 600x across providers — TTS at a 50x spread is almost calm by comparison.
+
+## Frequently Asked Questions
+
+### What is the cheapest text-to-speech API?
+
+Google Cloud Standard at $4 per million characters ($0.004 per 1K) is the cheapest published rate, free below its 4M-character monthly allowance. Among specialists, Deepgram Aura-1 and OpenAI tts-1 tie at $15 per million; OpenAI's Batch API halves that to $7.50 for non-urgent workloads.
+
+### How much does ElevenLabs cost per 1,000 characters?
+
+ElevenLabs pricing per character starts at $0.04 (Flash, Turbo, v4 Turbo, v3 Conversational) and tops out at $0.08 (v4, v3, v2 Multilingual). Subscriptions bundle the same unit rates — Creator at $22/month includes 275K characters — adding concurrency and features, not a per-unit discount.
+
+### How many characters equal one minute of audio?
+
+Roughly 900-1,000 English characters produce one minute of speech at a 150 words-per-minute pace. ElevenLabs' calculator equates 1,000 characters to one minute; Cartesia's documentation says its voices consume 750-800 credits per minute; OpenAI's token-billed mini-tts runs about $0.015 per minute regardless of text density.
+
+### Is there a free TTS API for production use?
+
+Google Cloud TTS is the only vendor with a production-grade ongoing free tier: 4 million Standard characters per month, no expiry. Deepgram's $200 credit is the best evaluation budget (no card, no expiry), ElevenLabs and Cartesia renew small monthly allowances, Polly's free year ends after 12 months, and OpenAI has no free tier at all.
+
+### ElevenLabs vs Cartesia: which is cheaper for voice agents?
+
+Per character, ElevenLabs Flash or v4 Turbo at $0.04 per 1K ($40 per million) edges Cartesia's Scale-plan effective $37.38 per million only above Scale volumes — below that, Cartesia's flat plans often win. Per minute, the math flips: at Cartesia's 750-800 credits per minute versus ElevenLabs' 1,000-character ratio, Sonic's effective cost drops to roughly $0.028-$0.030, below ElevenLabs Flash's $0.040. With rates that close, latency and cloning support should decide.
+
+## The Bottom Line
+
+Text-to-speech got cheaper in 2026 while getting harder to quote. ElevenLabs cut flagship rates 20-40% and doubled plan inclusions, yet still commands a 20x premium over commodity cloud voices; Deepgram undercuts it with a clean $0.015-$0.045 per 1K ladder; OpenAI froze 2023 prices and added a token-billed wildcard; Cartesia priced latency through credits that require arithmetic to compare. The lesson from every worked bill above: TTS API pricing is a units problem before it is a price problem. Normalize everything to cost per 1,000 characters, confirm the speech-rate assumption for your language, apply the free tiers where they cover production, and cache aggressively — teams that do these four things spend less than any rate-card negotiation would save.

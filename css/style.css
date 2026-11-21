@@ -2915,6 +2915,38 @@ body { font-family: var(--font-body); }
   .footer-cols { grid-template-columns: 1fr 1fr; }
   .footer-brand { grid-column: 1 / -1; }
 }
+
+/* Favorites page — personal localStorage list */
+.fav-toolbar { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; }
+.fav-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; }
+.fav-card {
+  display: flex; align-items: center; gap: 12px;
+  padding: 12px 14px; border: 1px solid var(--border-subtle, #e2e8f0);
+  border-radius: 12px; background: var(--surface-bg, #ffffff);
+  text-decoration: none; color: var(--text-main, #0f172a);
+  transition: border-color .12s ease, transform .12s ease;
+}
+.fav-card:hover { border-color: var(--signal-orange, #f97316); transform: translateY(-1px); }
+.fav-logo {
+  width: 44px; height: 44px; border-radius: 10px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 18px;
+}
+.fav-card-info { flex: 1; min-width: 0; }
+.fav-card-name { font-weight: 600; font-size: 14px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.fav-card-meta { font-size: 12px; color: var(--text-muted, #64748b); margin-top: 2px; }
+.fav-remove {
+  border: 1px solid var(--border-subtle, #e2e8f0); background: transparent;
+  color: var(--text-muted, #64748b); font-size: 12px; font-weight: 600;
+  padding: 5px 10px; border-radius: 8px; cursor: pointer; flex-shrink: 0;
+}
+.fav-remove:hover { color: #dc2626; border-color: #dc2626; }
+.fav-empty {
+  padding: 32px 20px; text-align: center; font-size: 14px;
+  color: var(--text-muted, #64748b);
+  border: 1px dashed var(--border-subtle, #e2e8f0); border-radius: 12px;
+}
+.fav-empty a { color: var(--primary-color, #1d4ed8); }
 .sidebar-tile {
   width: 28px; height: 28px; border-radius: 7px; flex-shrink: 0;
   display: inline-flex; align-items: center; justify-content: center;
