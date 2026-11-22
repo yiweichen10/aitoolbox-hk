@@ -545,10 +545,7 @@
 [OK] en/articles/gemma-4-review-open-source-google-ai-2026/index.html
 [OK] en/articles/deepseek-v4-review/index.html
 [OK] en/articles/perplexity-ai-review-2026/index.html
-[OK] en/articles/best-ai-tools-for-youtube-2026/index.html[OG] 291 tools, 232 articles
-
-[OG] Done — 0 generated, 523 skipped, 0 failed
-
+[OK] en/articles/best-ai-tools-for-youtube-2026/index.html
 [OK] en/articles/napkin-ai-review/index.html
 [OK] en/articles/luma-ai-review/index.html
 [OK] en/articles/elevenlabs-review/index.html
@@ -625,5 +622,7 @@
 [EN] Done! 291 tools + 232 articles built under /
 
 [BUILD] Generating OG images...
+[OG] 291 tools, 232 articles
+
+[OG] Done — 0 generated, 523 skipped, 0 failed
 [BUILD] OG images generation completed.
-exit=0
