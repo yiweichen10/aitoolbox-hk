@@ -15,7 +15,7 @@ Link rules (target existence is checked against CURRENT catalog + built pages):
 
 Usages:
   # validate one text (called by write scripts before persisting)
-  from check_internal_links import validate_text
+  from check_internal_links_en import validate_text
   errors = validate_text(content)
 
   # validate whole catalog (called by build + cron audit)

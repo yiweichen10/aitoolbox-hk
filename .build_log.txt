@@ -619,10 +619,11 @@
 [OK] en/alternatives/ (50 pages from top 50 tools)
 [OK] en/vs/ (80 head-to-head pages)
 [OK] en/contact.html + en/submit.html
-[OK] en/js/tools-data.js (291 tools) + en/favorites.html + en/best/ + en/new/
-[EN] IndexNow: no new URLs to push (709 total, all pushed)
+[OK] en/news/ (19 items)
+[EN] IndexNow: no new URLs to push (728 total, all pushed)
 
 [EN] Done! 291 tools + 232 articles built under /
 
 [BUILD] Generating OG images...
 [BUILD] OG images generation completed.
+exit=0

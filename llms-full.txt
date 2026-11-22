@@ -345,6 +345,11 @@ Summaries of every page: https://www.aitoolbox.hk/llms.txt · Sitemap: https://w
   Pros: Cinematic quality out of the box; Understands physical interactions well; Fast generation (under 120s)
   Cons: Strict 5-second limit per clip; Prompting can be sensitive; Subscription is expensive for casuals
 
+- [Hailuo AI](https://www.aitoolbox.hk/tools/hailuo-ai/) — Price: Freemium - daily free credits; paid for HD | Rating: 3.6/5 | Platform: Web + mobile app
+  MiniMax's AI video generator - text-to-video and image-to-video with a reputation for fluid human motion and strong prompt adherence, plus a generous free tier that made it a creator favorite.
+  Pros: Human motion quality is the standout - walking, dancing and action read naturally; Generous daily free credits on the web app; Image-to-video mode preserves subject likeness well
+  Cons: Queue times on the free tier can stretch during peak hours; Clip length caps trail enterprise competitors; Audio generation and editing tooling are thinner than the video core
+
 - [Pictory](https://www.aitoolbox.hk/tools/pictory/) — Price: Free trial (14 days) + Starter $25/mo (annual) | Rating: 3.5/5 | Platform: Web
   Turn blog posts and scripts into professional videos without touching a timeline. Pictory extracts key points from your text, matches them with stock footage, adds AI voiceover and captions automatically. The 2026 update brought AI avatars for talking-head videos. Practical for content repurposing, social media clips, and faceless YouTube channels.
   Pros: Drops a 2000-word blog post into a 5-minute video in about 15 minutes — real time saver for content repurposing; AI voiceover supports 70+ languages. The English voices sound natural, not like a robot reading a manual; Caption auto-generation is accurate enough for social media. You will still want to proofread names and technical terms
@@ -435,11 +440,6 @@ Summaries of every page: https://www.aitoolbox.hk/llms.txt · Sitemap: https://w
   Pros: Extremely accurate auto-captions in 48+ languages; One-click b-roll and emoji insertion to boost retention; Built-in viral caption styles used by top influencers
   Cons: Subscription cost is higher than some competitors; Styles can feel repetitive if not customized; Limited control over specific AI b-roll choices
 
-- [Hailuo AI](https://www.aitoolbox.hk/tools/hailuo-ai/) — Price: Freemium - daily free credits; paid for HD | Rating: 2.5/5 | Platform: Web + mobile app
-  MiniMax's AI video generator - text-to-video and image-to-video with a reputation for fluid human motion and strong prompt adherence, plus a generous free tier that made it a creator favorite.
-  Pros: Human motion quality is the standout - walking, dancing and action read naturally; Generous daily free credits on the web app; Image-to-video mode preserves subject likeness well
-  Cons: Queue times on the free tier can stretch during peak hours; Clip length caps trail enterprise competitors; Audio generation and editing tooling are thinner than the video core
-
 ### AI Image (22 tools)
 
 - [Krea 2](https://www.aitoolbox.hk/tools/krea-2/) — Price: Free + Basic from $9/mo | Rating: 4.6/5 | Platform: Web app (real-time canvas, enhancement, upscaling, LoRA training) plus a documen
@@ -471,6 +471,11 @@ Summaries of every page: https://www.aitoolbox.hk/llms.txt · Sitemap: https://w
   Flux.1 is a state-of-the-art open-weights image generation model from Black Forest Labs. It rivals Midjourney in realism and prompt adherence, offering Pro, Dev, and Schnell versions.
   Pros: Photorealistic output with exceptional skin textures; Perfect text rendering within images; Strong adherence to complex prompts
   Cons: High VRAM requirements for local Pro versions; Pro version is closed-source; Schnell version can lose some fine detail
+
+- [Nano Banana (Gemini Image)](https://www.aitoolbox.hk/tools/nano-banana/) — Price: Free in Gemini app - API from ~$0.04/img | Rating: 3.7/5 | Platform: Gemini web & mobile app + Gemini API
+  Google's viral image generation and editing model inside Gemini - the 'nano banana' nickname came from its internal codename. Best known for character-consistent edits: upload a photo, change anything, keep the person identical.
+  Pros: Character consistency is the killer feature - faces and products survive multi-step edits; Free access through the Gemini app, no separate subscription; Natural-language editing: describe the change, no mask or layer tools needed
+  Cons: Resolution and fine detail trail dedicated pro tools for print work; Content policy filters are stricter than specialist image models; The nickname-to-official-name mapping confuses searches and docs
 
 - [Krea AI](https://www.aitoolbox.hk/tools/krea-ai/) — Price: Free (limited) + Pro $10/mo | Rating: 3.6/5 | Platform: Web
   Real-time AI generation platform where images and videos render as you draw or type. The monetization angle is speed — clients watch you iterate live, which sells the value faster than generating alone. Practical for designers selling rapid prototyping, content creators needing instant visuals, and print-on-demand sellers who want to iterate product mockups in seconds instead of waiting for a batch job.
@@ -546,11 +551,6 @@ Summaries of every page: https://www.aitoolbox.hk/llms.txt · Sitemap: https://w
   StockImg AI is a specialized tool for generating high-quality commercial assets including stock photos, illustrations, logos, and UI designs. Unlike general generators, it focuses on high-utility outputs ready for marketing and business use.
   Pros: Specific models for stock photos, logos, and UI patterns; Clean, professional output that doesn't look like 'trippy' AI art; Built-in editor for quick cropping and upscaling
   Cons: Free credits are very limited and expire quickly; Complex human poses can still be a bit hit-or-miss; Customization depth is shallower compared to Midjourney
-
-- [Nano Banana (Gemini Image)](https://www.aitoolbox.hk/tools/nano-banana/) — Price: Free in Gemini app - API from ~$0.04/img | Rating: 2.6/5 | Platform: Gemini web & mobile app + Gemini API
-  Google's viral image generation and editing model inside Gemini - the 'nano banana' nickname came from its internal codename. Best known for character-consistent edits: upload a photo, change anything, keep the person identical.
-  Pros: Character consistency is the killer feature - faces and products survive multi-step edits; Free access through the Gemini app, no separate subscription; Natural-language editing: describe the change, no mask or layer tools needed
-  Cons: Resolution and fine detail trail dedicated pro tools for print work; Content policy filters are stricter than specialist image models; The nickname-to-official-name mapping confuses searches and docs
 
 ### AI Development (20 tools)
 
@@ -691,10 +691,25 @@ Summaries of every page: https://www.aitoolbox.hk/llms.txt · Sitemap: https://w
   Pros: Content brief generator saves hours — scan top 20 SERP results and get a data-backed outline in under a minute; Real-time content scoring as you write — the topic coverage heatmap makes it obvious what you are missing; Question research pulls from People Also Ask and Reddit, not just keyword tools, so you catch real user intent
   Cons: The AI writer still needs heavy editing — it gets topic coverage right but the prose often sounds like a Wikipedia entry, flat and impersonal; SERP data refresh is not real-time — I have seen rankings that are 2-3 weeks stale, which matters in fast-moving niches; Team plan at $114.99/mo is steep for small agencies — and they lock the best features (AI content analytics, custom templates) behind it
 
+- [Originality.ai](https://www.aitoolbox.hk/tools/originality-ai/) — Price: Paid - from ~$14.95/mo + PAYG credits | Rating: 3.8/5 | Platform: Web + Chrome extension + REST API
+  AI content detection built for publishers and agencies: AI detection, plagiarism checking, fact-checking assistance and readability scoring in one dashboard, with team management and a full API.
+  Pros: Built for publishing workflows: team seats, scan history and per-client reporting come standard; Combines AI detection with plagiarism and fact-check scoring in a single scan; Full REST API and Chrome extension, so checks can run inside editorial pipelines
+  Cons: No meaningful free tier - it is a paid professional tool from the first scan; Credits burn fast on long documents, which surprises occasional users; Like every detector, false positives on human-edited AI drafts remain a real risk
+
 - [LanguageTool](https://www.aitoolbox.hk/tools/languagetool/) — Price: Free + Premium from $24.90/mo | Rating: 3.7/5 | Platform: Web editor, browser extensions (Chrome/Firefox/Edge/Safari), Word & Google Docs
   LanguageTool is an open-source grammar, spelling, punctuation and style checker that covers 30-plus languages and regional variants, with a free tier that actually works (no account, no card) and a Premium plan at roughly half of Grammarly's price. I run an English proofreading side business for ESL founders on it - clients pay $30-$150 per document while the tool itself costs $0 on the free tier or about $5.83 a month on annual billing, so the margin is basically the invoice minus an hour of my time.
   Pros: It genuinely covers 30-plus languages at near-native level, including regional variants - no other mainstream checker can touch a German client writing English emails and German reports in one tool; The free tier is real: core grammar and spelling checks work with no account and no card, so a client can hear the value on their own text before anyone spends money; The open-source core means you can self-host the entire engine - that one feature wins privacy-sensitive clients (law firms, clinics, EU mid-caps) that no cloud-only tool can even pitch to
   Cons: English suggestions are less polished than Grammarly's - no tone detection, no full-document rewrite, and some style advice reads like a linguist's rulebook rather than a copywriter's ear; The free per-check character cap means long documents must be pasted in chunks, which is friction you have to manage or pay to remove; The AI paraphrasing is mediocre - it occasionally hands back a sentence that is grammatically fine and clearly worse, so it needs a human judgement pass
+
+- [Copyleaks](https://www.aitoolbox.hk/tools/copyleaks/) — Price: Freemium - paid from ~$10/mo | Rating: 3.7/5 | Platform: Web + Google Docs / Office add-ons + LMS integrations + API
+  Enterprise-grade AI content detection and plagiarism checking for education and business, with LMS integrations, source-code plagiarism detection and multilingual support across 30+ languages.
+  Pros: Deepest education-integration story: Canvas, Moodle, Blackboard and Google Docs add-ons; Unique source-code plagiarism detection, which no consumer detector offers; Strong multilingual coverage - 30+ languages, rare in this category
+  Cons: Pricing is per-page credit based, which gets confusing versus flat subscriptions; Interface is enterprise-heavy for someone who just wants a quick check; AI detection accuracy, like all competitors, degrades on heavily edited AI text
+
+- [ZeroGPT](https://www.aitoolbox.hk/tools/zerogpt/) — Price: Freemium - free scans; paid for bulk | Rating: 3.6/5 | Platform: Web
+  One of the most-used free web AI detectors: paste text, get an instant AI-percentage score. Zero-friction for quick checks, with paid tiers for longer documents, PDF support and batch scanning.
+  Pros: Zero sign-up friction - paste text and get a score in seconds; Free tier covers most quick personal checks; Simple percentage presentation that anyone can read at a glance
+  Cons: Accuracy claims are self-reported and contested; treat scores as weak signals; Free tier word limits force heavy users to upgrade or split documents; No team workflow, scan history or reporting layer for editorial use
 
 - [AIPRM](https://www.aitoolbox.hk/tools/aiprm/) — Price: Free + Plus from ~$10/mo | Rating: 3.4/5 | Platform: Chrome, Edge and Firefox extension; works inside ChatGPT, Claude and compatible
   AIPRM is a browser extension that drops 5,400+ community-built prompts straight into the ChatGPT and Claude sidebars, so you stop writing prompts from scratch and start picking from templates that already work. I use it daily for client work - SEO articles, ad copy, product descriptions, email sequences - and the honest take is that it does not make the AI smarter, it makes the person driving the AI faster and more consistent. Free tier is permanent and includes the whole public library; paid plans add private prompts, custom lists, tone control, team sharing and live web crawling. The money angle is simple: a freelancer or agency that bills by the deliverable can turn around the same volume of content in a third of the time, and the private prompt library becomes a real asset you keep and reuse across clients.
@@ -725,21 +740,6 @@ Summaries of every page: https://www.aitoolbox.hk/llms.txt · Sitemap: https://w
   AI writing tool built for marketing teams and freelancers. Generate ad copy, emails, blog posts, and social content at scale. Used by 200K+ businesses to cut writing time and grow pipeline faster. The workflow builder and brand voice profiles make it practical for agencies and solo operators alike.
   Pros: 100+ marketing-specific templates that actually save time — no generic blog post generators here; Workflow automation: chain inputs, AI actions, and outputs into repeatable content pipelines; Brand voice profiles keep tone consistent across emails, ads, and social posts
   Cons: Long-form content quality falls short — stick to short-form (ads, emails, social) which it handles well; Output still needs human editing. Do not copy-paste directly; the AI voice is detectable; Limited multilingual depth — non-English output can feel robotic compared to dedicated tools
-
-- [Originality.ai](https://www.aitoolbox.hk/tools/originality-ai/) — Price: Paid - from ~$14.95/mo + PAYG credits | Rating: 2.7/5 | Platform: Web + Chrome extension + REST API
-  AI content detection built for publishers and agencies: AI detection, plagiarism checking, fact-checking assistance and readability scoring in one dashboard, with team management and a full API.
-  Pros: Built for publishing workflows: team seats, scan history and per-client reporting come standard; Combines AI detection with plagiarism and fact-check scoring in a single scan; Full REST API and Chrome extension, so checks can run inside editorial pipelines
-  Cons: No meaningful free tier - it is a paid professional tool from the first scan; Credits burn fast on long documents, which surprises occasional users; Like every detector, false positives on human-edited AI drafts remain a real risk
-
-- [ZeroGPT](https://www.aitoolbox.hk/tools/zerogpt/) — Price: Freemium - free scans; paid for bulk | Rating: 2.5/5 | Platform: Web
-  One of the most-used free web AI detectors: paste text, get an instant AI-percentage score. Zero-friction for quick checks, with paid tiers for longer documents, PDF support and batch scanning.
-  Pros: Zero sign-up friction - paste text and get a score in seconds; Free tier covers most quick personal checks; Simple percentage presentation that anyone can read at a glance
-  Cons: Accuracy claims are self-reported and contested; treat scores as weak signals; Free tier word limits force heavy users to upgrade or split documents; No team workflow, scan history or reporting layer for editorial use
-
-- [Copyleaks](https://www.aitoolbox.hk/tools/copyleaks/) — Price: Freemium - paid from ~$10/mo | Rating: 2.5/5 | Platform: Web + Google Docs / Office add-ons + LMS integrations + API
-  Enterprise-grade AI content detection and plagiarism checking for education and business, with LMS integrations, source-code plagiarism detection and multilingual support across 30+ languages.
-  Pros: Deepest education-integration story: Canvas, Moodle, Blackboard and Google Docs add-ons; Unique source-code plagiarism detection, which no consumer detector offers; Strong multilingual coverage - 30+ languages, rare in this category
-  Cons: Pricing is per-page credit based, which gets confusing versus flat subscriptions; Interface is enterprise-heavy for someone who just wants a quick check; AI detection accuracy, like all competitors, degrades on heavily edited AI text
 
 ### AI Audio (14 tools)
 
@@ -1333,6 +1333,11 @@ Summaries of every page: https://www.aitoolbox.hk/llms.txt · Sitemap: https://w
   Pros: The cheapest credible entry into AI-search visibility tracking at $29/month - competitors at this tier of rigor start around $85-99 (Peec AI) or enterprise-only; You choose which engines each workspace tracks (at least 3) - a German retail client can get AI Overviews + AI Mode + Gemini while a US B2B client gets ChatGPT + Perplexity + Claude; Unlimited workspaces, brands, competitors, team members and countries even on Lite - agency reporting is not artificially gated
   Cons: No permanent free plan - the 7-day trial is the only way to test before paying; Claude checks cost 3 credits each, so teams that care most about Claude citations burn budget three times faster; Prompt counts are small at the entry tier: 16-20 prompts on Lite is fine for one brand and thin for two
 
+- [Surfer SEO](https://www.aitoolbox.hk/tools/surfer-seo/) — Price: Starts at $89/mo | Rating: 3.3/5 | Platform: Web
+  Surfer SEO is the data-driven content optimization tool that analyzes top-ranking pages to tell you exactly how to write your content to rank on Google. In 2026, it features advanced NLP and GEO scoring for the AI era.
+  Pros: Precise SERP-based data analysis; Excellent content editor UI; Addictive and effective scoring system
+  Cons: Getting quite expensive for small creators; AI writing features cost extra credits; Can lead to robotic writing if followed blindly
+
 - [Peec AI](https://www.aitoolbox.hk/tools/peec-ai/) — Price: From $95/mo · Pro $245/mo | Rating: 3.3/5 | Platform: Web
   Peec AI tracks how often your brand shows up in ChatGPT, Gemini, Copilot and Google AI Overviews, then shows which pages get cited instead. It is the tool SEO freelancers and agencies use to sell AI visibility audits and monthly GEO reporting retainers.
   Pros: Source and gap analysis shows the exact URL that stole your mention, so it turns into a work order; Unlimited users on every paid tier, which matters when clients want access; Crawler audit and AI-referral traffic connect the dashboard to something measurable
@@ -1352,11 +1357,6 @@ Summaries of every page: https://www.aitoolbox.hk/llms.txt · Sitemap: https://w
   A budget content optimizer that reads the SERP for you: NLP term coverage, a content score, AI drafting credits, and - new in 2026 - monitoring of whether your brand shows up in Google AI Overviews, ChatGPT, and Perplexity. Roughly a fifth of Surfer SEO's entry price.
   Pros: Best price-to-feature ratio in content optimization: entry pricing at $23/mo against Surfer's $99 and Clearscope's $129; AI credits ship with every plan, so drafting and optimization live in one subscription instead of two; The 2026 AI-visibility monitoring (AI Overviews, ChatGPT, Perplexity) arrives on tiers that cost a fraction of dedicated GEO trackers
   Cons: No rank tracking, no backlink data, no technical SEO - it is purely on-page content, so a full toolkit still needs a second subscription; WordPress and Search Console integrations only arrive from Gold ($69/mo); Bronze and Silver are copy-paste workflows; Monthly document caps on lower tiers (25 on Bronze) punish heavy publishers and content-refresh sprints
-
-- [Surfer SEO](https://www.aitoolbox.hk/tools/surfer-seo/) — Price: Starts at $89/mo | Rating: 2.4/5 | Platform: Web
-  Surfer SEO is the data-driven content optimization tool that analyzes top-ranking pages to tell you exactly how to write your content to rank on Google. In 2026, it features advanced NLP and GEO scoring for the AI era.
-  Pros: Precise SERP-based data analysis; Excellent content editor UI; Addictive and effective scoring system
-  Cons: Getting quite expensive for small creators; AI writing features cost extra credits; Can lead to robotic writing if followed blindly
 
 ### AI Translation (6 tools)
 

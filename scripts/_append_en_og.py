@@ -1,7 +1,7 @@
-"""Append English OG image functions to gen_seo_images.py"""
+"""Append English OG image functions to gen_seo_images_en.py"""
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-target = os.path.join(BASE_DIR, 'scripts', 'gen_seo_images.py')
+target = os.path.join(BASE_DIR, 'scripts', 'gen_seo_images_en.py')
 
 APPEND_CODE = r'''
 
@@ -247,4 +247,4 @@ if 'make_og_image_en' in existing:
 else:
     with open(target, 'a', encoding='utf-8') as f:
         f.write(APPEND_CODE)
-    print('Appended EN OG functions to gen_seo_images.py')
+    print('Appended EN OG functions to gen_seo_images_en.py')

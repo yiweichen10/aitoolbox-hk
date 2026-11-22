@@ -1,0 +1,82 @@
+{
+ "name": "Copyleaks",
+ "slug": "copyleaks",
+ "url": "https://copyleaks.com/",
+ "category": "AI Writing",
+ "color": "#0F766E",
+ "platform": "Web + Google Docs / Office add-ons + LMS integrations + API",
+ "published": true,
+ "price": "Freemium - paid from ~$10/mo",
+ "description": "Enterprise-grade AI content detection and plagiarism checking for education and business, with LMS integrations, source-code plagiarism detection and multilingual support across 30+ languages.",
+ "tags": [
+  {
+   "text": "AI Detection"
+  },
+  {
+   "text": "Plagiarism"
+  },
+  {
+   "text": "Education"
+  },
+  {
+   "text": "Enterprise"
+  },
+  {
+   "text": "LMS"
+  },
+  {
+   "text": "Multilingual"
+  }
+ ],
+ "badge": {
+  "type": "new",
+  "text": "NEW"
+ },
+ "pros": [
+  "Deepest education-integration story: Canvas, Moodle, Blackboard and Google Docs add-ons",
+  "Unique source-code plagiarism detection, which no consumer detector offers",
+  "Strong multilingual coverage - 30+ languages, rare in this category",
+  "Institutional controls: repository-wide cross-comparison and audit trails"
+ ],
+ "cons": [
+  "Pricing is per-page credit based, which gets confusing versus flat subscriptions",
+  "Interface is enterprise-heavy for someone who just wants a quick check",
+  "AI detection accuracy, like all competitors, degrades on heavily edited AI text"
+ ],
+ "features": [
+  "AI content detection across 30+ languages",
+  "Classic plagiarism checking with repository cross-comparison",
+  "Source-code plagiarism detection",
+  "LMS integrations (Canvas, Moodle, Blackboard) and Google Docs / Office add-ons",
+  "Paraphrase detection layer",
+  "API and institutional admin controls",
+  "Audit trail and shareable reports"
+ ],
+ "faq": [
+  {
+   "question": "Who is Copyleaks for?",
+   "answer": "Schools, universities and companies running originality programs at scale. The LMS integrations are the giveaway: if your institution runs assignments through Canvas or Moodle, Copyleaks plugs directly into the grading flow, which consumer tools cannot do."
+  },
+  {
+   "question": "Does it really detect plagiarized source code?",
+   "answer": "Yes - this is its most distinctive feature. It compares code structure and logic rather than just strings, which matters for computer-science courses and for companies auditing contractor-delivered codebases. Few competitors even attempt this."
+  },
+  {
+   "question": "How is it priced versus GPTZero or Originality.ai?",
+   "answer": "Copyleaks sells page-based credits on subscriptions, with institutional and business tiers quoted on contact. For individual writers it feels pricier and more bureaucratic; for institutions with hundreds of students it usually prices better than per-seat tools."
+  },
+  {
+   "question": "Can it handle non-English text?",
+   "answer": "That is one of its strongest cards - AI detection and plagiarism across 30+ languages, which matters for international universities and multilingual content teams. Most consumer detectors are effectively English-first."
+  }
+ ],
+ "pricing_details": "Free trial scans to test the interface; paid plans are page-credit based, with individual tiers starting around $10/mo (billed annually) and institutional/business pricing quoted per volume. LMS integration and API availability vary by tier. Confirm current numbers on the official pricing page.",
+ "content": "## The Institutional Contender\n\nIf GPTZero is the classroom detector and Originality.ai is the publishing detector, Copyleaks is the one your university IT department already evaluated. It has been in the originality business longer than the AI-detection wave - it built its name on plagiarism checking for education - and it added AI content detection as the category exploded. That heritage shows in the product: where consumer tools optimize for a single paste-and-scan, Copyleaks optimizes for thousands of submissions flowing through institutional systems every semester.\n\nWhat that means in practice is that the product is organized around administration rather than curiosity. There are admin controls, an audit trail and shareable reports - the unglamorous plumbing a department needs when a grade gets appealed and someone has to show what was scanned, when, and what the report said. Consumer detectors rarely bother with that paper trail, because their user is one person checking one document. Copyleaks assumes the user is an institution that has to answer for its decisions later.\n\nThe integration list is the moat. Canvas, Moodle and Blackboard plugins mean a teacher never leaves the grading flow. Google Docs and Office add-ons mean a corporate reviewer never leaves the document. For institutions, there is repository cross-comparison - every new submission is checked against everything previously scanned by the same account, which is how you catch the assignment-copied-from-last-semester problem that pure AI detectors miss entirely. That last point is the difference between a toy and a program: a stand-alone detector asks \"does this read like a machine?\", while a repository-backed system asks \"have we seen this before?\" The second question tends to catch more real misconduct with fewer arguments, because a match against a prior submission is a concrete artifact rather than a probabilistic score.\n\n## Two Capabilities Competitors Lack\n\nThe first is source-code plagiarism detection. Copyleaks compares code semantically - structure and logic, not just text lines - which makes it the default pick for computer-science departments and for companies auditing outsourced code. No consumer AI detector offers anything equivalent. If you have ever pushed a programming assignment through a prose-oriented detector, you know why this matters: those tools aren't built for it and the output is noise.\n\nThe second is serious multilingual coverage: AI detection across 30+ languages rather than English-with-asterisks. International universities and multilingual content agencies are underserved by English-first tools, and this is quietly a deciding factor in procurement decisions - a detector that only really works in English only really works for part of a campus, and committees notice when a tool excludes a third of their students. There's also a paraphrase detection layer, which sits in the awkward middle ground between plagiarism and AI detection; paraphrasing tools exist specifically to defeat string matching, so a system that looks past exact wording is doing the work the category actually requires.\n\n## A Realistic Hands-On Workflow\n\nHere's what using it actually looks like, based on the capabilities above rather than a demo script.\n\nThe institutional path is the one the product is designed around. A course is set up with the Canvas or Moodle plugin, students submit through the LMS as they normally would, and scans happen inside that flow - the instructor grades where they always grade. Nobody exports a file, nobody pastes text into a box, nobody remembers a second login. When something flags, the instructor opens the report and can share it with a department chair or an academic integrity officer. The audit trail is the point: the record exists whether or not anyone ever looks at it.\n\nThe ad-hoc path is the one most individuals will actually take. You sign up, use the free trial scans to test the interface, and paste or upload a document. This is where page-credit pricing makes itself felt - a page is roughly 250 words, so a long document consumes credits faster than you might model, and a reviewer working through a stack of reports will feel that. Run the trial scans on your real documents rather than a short sample, so you learn your actual burn rate before committing, and check what your tier includes: LMS integration and API availability vary by tier, so the cheap entry point and the institutional deployment are not the same product. The corporate path sits in between - a reviewer works in Google Docs or Office with the add-on, scans in place, and shares the report; companies auditing contractor-delivered code go through the source-code path. In all three paths the honest workflow ends the same way: a human reads the report and makes a judgment. The tool produces evidence, not verdicts.\n\n## The Trade-Offs\n\nThe credit system is page-based rather than word-based, which constantly surprises people arriving from GPTZero or ZeroGPT - a \"page\" is roughly 250 words, so long documents consume credits faster than you might model. The interface is built for administrators, not casual users; if you want a ten-second check, this is the wrong tool.\n\nAnd the accuracy caveat that applies to every detector applies here too: heavily edited AI text and template-driven human text both degrade scores, so institutional policies should treat detection reports as one input among several, never as automated verdicts. That matters more here than for a consumer tool, because institutional deployments are exactly where a bad score can turn into a disciplinary process. Any policy built on this needs a human appeal path, and the audit trail and shareable reports are what make that path workable.\n\n## Who Should Use This - And Who Shouldn't\n\nUse Copyleaks if you're running originality at scale and need it inside the tools people already use: schools and universities with assignments flowing through Canvas, Moodle or Blackboard; computer-science departments that need code comparison; international institutions that can't accept an English-only detector; companies that need an audit trail and shareable reports rather than a score in a browser tab.\n\nDon't use it if you're a solo writer who wants to paste a paragraph and get an answer in ten seconds. You'll pay for institutional machinery you'll never touch, you'll fight page credits on long documents, and the interface will feel like enterprise software because it is. Don't use it as an automated disciplinary system either - nothing in this category supports that.\n\nFor a fuller picture of the category, compare with our reviews of [GPTZero](/tools/gptzero/), [Originality.ai](/tools/originality-ai/) and the free-tier staple [ZeroGPT](/tools/zerogpt/). On the generation side of the arms race, [ChatGPT](/tools/chatgpt/) and [Claude](/tools/claude/) remain the dominant sources of the text being checked.\n\n## How It Stacks Up: A Positioning Guide\n\nI won't pretend I can rank these on identical benchmarks - they're built for different buyers. Compare by positioning instead.\n\n[GPTZero](/tools/gptzero/) is the classroom-first consumer detector: fast, approachable, aimed at a single teacher or student. Copyleaks is what that teacher's institution buys when the pilot becomes policy. If the need is \"check this one thing,\" GPTZero's shape fits better; if it's \"run this across a department with a record,\" Copyleaks is the one built for it.\n\n[Originality.ai](/tools/originality-ai/) is the publishing detector, oriented to content teams and publishing workflows. Both are professional tools, but the center of gravity differs: one is built around a writer shipping content, the other around an institution processing submissions - with the LMS plugins and repository cross-comparison that implies.\n\n[ZeroGPT](/tools/zerogpt/) is the free-tier staple: the tool you reach for when you need a quick signal and no procurement. Treating it as a Copyleaks substitute is a category error, because you lose the integrations, the repository, the code scanning, the multilingual coverage and the audit trail all at once.\n\n[ChatGPT](/tools/chatgpt/) and [Claude](/tools/claude/) aren't detectors at all - they're the generators on the other side of the arms race, and they belong in this comparison only because the volume of text they produce is why detectors exist. The relevant question isn't whether Copyleaks \"beats\" a generator; it's whether its reports give your institution something defensible to act on.\n\n## Mistakes People Make\n\n- **Modeling credits in words instead of pages.** A page is roughly 250 words. People budget by word count and then discover they've spent several times what they planned.\n- **Buying individual when they need institutional.** LMS integration and API availability vary by tier. If the integrations are why you picked Copyleaks, verify your tier has them before committing.\n- **Treating a score as a verdict.** Heavily edited AI text and template-driven human text both degrade scores. Your policy needs a human review step, stated out loud.\n- **Skipping the repository.** Cross-comparison against everything previously scanned by the same account is what separates this from a paste-and-scan tool. Not using it means paying for the wrong half of the product.\n- **Running code through a prose detector.** If code is what you're checking, use the source-code path - structure and logic is the only comparison that works there.\n- **Testing on a short sample.** Use the free trial scans on real documents so you learn your actual burn rate and workflow before subscribing.\n\n## The Bottom Line\n\nCopyleaks is the institutional pick in a category full of consumer tools, and it's priced and shaped accordingly. The LMS integrations, repository cross-comparison, source-code detection and 30+ language coverage aren't features you can bolt onto a paste-and-scan detector - they're the reason the product exists in this form. The cost is that an individual writer pays for machinery they'll never use, and page-based credits will surprise anyone arriving from a flat subscription; individual tiers start around $10/mo billed annually, with institutional and business pricing quoted per volume, so confirm current numbers on the official pricing page.\n\nIf you're running originality at scale inside Canvas, Moodle, Blackboard, Google Docs or Office and need an audit trail behind your decisions, this is the shortlist entry to beat. If you want a quick check on one paragraph, go elsewhere - and be honest about which of those two you actually are.",
+ "related": [
+  "gptzero",
+  "originality-ai",
+  "zerogpt",
+  "chatgpt"
+ ],
+ "rating": "2.5"
+}

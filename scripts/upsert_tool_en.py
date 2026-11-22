@@ -45,7 +45,7 @@ def validate(tool: dict) -> list:
     # 2026-11-18: 内链闭环——写入端拦截断链，杜绝 /chatgpt/ 之类裸 slug 再次入库
     try:
         sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-        from check_internal_links import validate_text, _iter_text_fields
+        from check_internal_links_en import validate_text, _iter_text_fields
         for path, text in _iter_text_fields(tool):
             for e in validate_text(text):
                 errs.append(f"{slug}: BAD LINK in {path} {e['href']} — {e['reason']}. "

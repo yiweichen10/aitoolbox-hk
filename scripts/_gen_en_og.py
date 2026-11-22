@@ -7,7 +7,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(BASE_DIR, 'data')
 OG_DIR   = os.path.join(BASE_DIR, 'images', 'og')
 
-from gen_seo_images import make_article_og_image, generate_image
+from gen_seo_images_en import make_article_og_image, generate_image
 
 articles = json.load(open(os.path.join(DATA_DIR, 'articles_en.json'), encoding='utf-8'))
 

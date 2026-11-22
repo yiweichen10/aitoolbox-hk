@@ -1,0 +1,1 @@
+C:\Users\27040\.workbuddy\binaries\python\versions\3.13.12\python.exe: can't open file 'C:\\Users\\27040\\WorkBuddy\\20260321092139\\seo-site-en\\scripts\\deploy_cf.py': [Errno 2] No such file or directory

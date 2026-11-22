@@ -28,7 +28,7 @@ through badges (Editor's Choice / Pick), not through inflated stars.
 Output: data/scores_en.json
   {"generated_at", "rubric", "likes_source", "scores": {slug: {...}}}
 
-Pipeline order: score_tools_en.py -> build_en.py -> deploy_cf.py.
+Pipeline order: score_tools_en.py -> build_en.py -> deploy_cf_en.py.
 """
 from __future__ import annotations
 

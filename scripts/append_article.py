@@ -68,7 +68,7 @@ def append_article(content_file: str, slug: str, category: str, date: str = None
     # 因此只需保证正文里引用的目标都已存在即可；本文章自身的链接不会被引用。
     try:
         sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-        from check_internal_links import validate_text
+        from check_internal_links_en import validate_text
         link_errs = validate_text(body)
         if link_errs:
             msgs = "\n".join(f"    - {e['href']}: {e['reason']}" for e in link_errs[:10])

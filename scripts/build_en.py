@@ -7,6 +7,7 @@ Outputs pages at site root (no / prefix).
 import json
 import os
 import re
+import time
 import argparse
 from datetime import datetime
 
@@ -471,8 +472,12 @@ def _safe_write(path, content, tries: int = 5, delay: float = 0.4):
     pass wrote them (ERROR_SHARING_VIOLATION -> PermissionError). 2026-11-22:
     builds started dying on random files (ko-fi, woocommerce, vryse-ai-review,
     each run a different one) whenever Windows Defender scanned the just-written
-    page while the next build pass rewrote it. Retries resolve the race."""
+    page while the next build pass rewrote it. Retries resolve the race.
+    2026-11-22 fix: _time_mod was referenced without ever being assigned —
+    the retry path crashed with NameError on the first PermissionError."""
     global _time_mod
+    if '_time_mod' not in globals():
+        _time_mod = time
     for attempt in range(tries):
         try:
             with open(path, 'w', encoding='utf-8') as f:
@@ -589,6 +594,9 @@ def header_html(title_text: str = "AI Tool Lab") -> str:
             </a>
             <nav class="header-nav">
                 <a href="/category/">Tools</a>
+                <a href="/best/">Top Rated</a>
+                <a href="/new/">New Tools</a>
+                <a href="/news/">News</a>
                 <a href="/articles/">Articles</a>
                 <a href="/category/ai-chat/">AI Chat</a>
                 <a href="/category/ai-image/">AI Image</a>
@@ -614,6 +622,7 @@ def footer_html() -> str:
                 <a href="/best/">Top Rated AI Tools</a>
                 <a href="/new/">Newly Added</a>
                 <a href="/articles/">Articles &amp; Guides</a>
+                <a href="/news/">AI News</a>
                 <a href="/search/">Search</a>
                 <a href="/favorites">My Favorites</a>
             </div>
@@ -1056,9 +1065,7 @@ def build_tool_page_en(tool: dict, all_tools: list, all_articles: list = None, a
                     <div class="kf-grid">
                         <div class="kf-item"><span class="kf-k">Price</span><span class="kf-v">{escape_html(tool.get('price', '—'))}</span></div>
                         <div class="kf-item"><span class="kf-k">Free tier</span><span class="kf-v">{'Yes' if 'free' in str(tool.get('price', '')).lower() else 'No'}</span></div>
-                        <div class="kf-item"><span class="kf-k">Category</span><span class="kf-v">{escape_html(cat)}</span></div>
                         <div class="kf-item"><span class="kf-k">Platforms</span><span class="kf-v">{escape_html(platform_short or tool.get('platform', 'Web'))}</span></div>
-                        <div class="kf-item"><span class="kf-k">Editor score</span><span class="kf-v">{escape_html(score_val)} / 5</span></div>
                         <div class="kf-item"><span class="kf-k">Last updated</span><span class="kf-v">{date_disp}</span></div>
                     </div>
                 </div>
@@ -2580,6 +2587,7 @@ def generate_sitemap_en(tools: list, articles: list, cat_slugs: list, alt_slugs:
         f'    <url><loc>{SITE_DOMAIN}/about</loc><lastmod>{today}</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>',
         f'    <url><loc>{SITE_DOMAIN}/contact</loc><lastmod>{today}</lastmod><changefreq>monthly</changefreq><priority>0.4</priority></url>',
         f'    <url><loc>{SITE_DOMAIN}/submit</loc><lastmod>{today}</lastmod><changefreq>monthly</changefreq><priority>0.4</priority></url>',
+        f'    <url><loc>{SITE_DOMAIN}/news/</loc><lastmod>{today}</lastmod><changefreq>hourly</changefreq><priority>0.8</priority></url>',
         f'    <url><loc>{SITE_DOMAIN}/best/</loc><lastmod>{today}</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>',
         f'    <url><loc>{SITE_DOMAIN}/new/</loc><lastmod>{today}</lastmod><changefreq>daily</changefreq><priority>0.6</priority></url>',
         f'    <url><loc>{SITE_DOMAIN}/privacy</loc><lastmod>{today}</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>',
@@ -2789,6 +2797,14 @@ def generate_llms_txt_en(tools: list, articles: list, alt_slugs: list = None,
     out.append(f'- Tool database: updated daily ({n_tools} tools listed)')
     out.append(f'- Articles: new original reviews published regularly ({n_arts} total)')
     out.append('- Ratings/pricing: recalibrated continuously')
+    out.append('')
+    out.append('## AI News (daily briefs with editorial analysis)')
+    out.append('')
+    out.append('News index: https://www.aitoolbox.hk/news/')
+    out.append('')
+    for _it in load_news_en()[:10]:
+        _d = _it.get('published_at', '')[:10]
+        out.append(f"- [{_it.get('title', '')}](https://www.aitoolbox.hk/news/{_it['slug']}/) ({_d}) - {_it.get('summary', '')[:140]}")
     out.append('')
     out.append('## Sitemap')
     out.append('')
@@ -3546,6 +3562,135 @@ def build_favorites_page_en() -> str:
 </html>'''
 
 
+NEWS_CATS = {
+    'models': ('Models', 'Model releases, benchmarks and capability jumps.'),
+    'products': ('Products', 'Tools, features and platform changes.'),
+    'industry': ('Industry', 'Funding, markets and policy moves.'),
+    'research': ('Research', 'Papers, benchmarks and safety findings.'),
+}
+
+
+def load_news_en():
+    path = os.path.join(BASE_DIR, 'data', 'news_en.json')
+    try:
+        items = json.load(open(path, encoding='utf-8'))
+    except Exception:
+        return []
+    return sorted(items, key=lambda x: x.get('published_at', ''), reverse=True)
+
+
+def _news_item_page(it, news_items):
+    cat_label, _ = NEWS_CATS.get(it.get('category', 'products'), ('Products', ''))
+    pub = it.get('published_at', '')[:10]
+    hreflang = hreflang_tags(f'/news/{it["slug"]}/', f'/news/{it["slug"]}/')
+    news_schema = json.dumps({
+        "@context": "https://schema.org",
+        "@type": "NewsArticle",
+        "headline": it.get('title', ''),
+        "datePublished": it.get('published_at', ''),
+        "description": it.get('summary', ''),
+        "publisher": {"@type": "Organization", "name": SITE_NAME},
+    }, ensure_ascii=False)
+    return f'''<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{escape_html(it.get('title', ''))} | {SITE_NAME} News</title>
+    <meta name="description" content="{escape_html(_serp_desc(it.get('summary', '')))}">
+    <link rel="canonical" href="{SITE_DOMAIN}/news/{it['slug']}/">
+{hreflang}    <meta property="og:type" content="article">
+    <meta property="og:title" content="{escape_html(it.get('title', ''))}">
+    <meta property="og:description" content="{escape_html(it.get('summary', '')[:150])}">
+    <link rel="stylesheet" href="/css/style.css?{CSS_VERSION}">
+{VERIFICATION_BLOCK}{GA_BLOCK}
+    <script type="application/ld+json">{news_schema}</script>
+</head>
+<body>
+{header_html()}
+
+    <nav class="breadcrumb td-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a><span class="sep">/</span><a href="/news/">News</a><span class="sep">/</span><span>{escape_html(cat_label)}</span>
+    </nav>
+
+    <main class="cat-hub">
+        <article style="max-width:760px;margin:0 auto;">
+            <div class="td-chips" style="margin-bottom:14px;">
+                <span class="td-chip td-chip-neutral">{escape_html(cat_label)}</span>
+                <span class="td-chip td-chip-neutral">{escape_html(pub)}</span>
+            </div>
+            <h1 class="page-title" style="text-align:left;font-size:34px;">{escape_html(it.get('title', ''))}</h1>
+            <p style="font-size:17px;line-height:1.7;color:var(--text-main,#0f172a);">{escape_html(it.get('summary', ''))}</p>
+
+            <section class="cat-section" style="margin-top:28px;">
+                <h2>Why it matters</h2>
+                <p style="line-height:1.8;">{escape_html(it.get('commentary', ''))}</p>
+            </section>
+
+            <p style="font-size:13px;color:var(--text-muted,#64748b);margin-top:24px;">
+                Source: <a href="{escape_html(it.get('source_url', ''))}" target="_blank" rel="nofollow noopener">{escape_html(it.get('source', ''))}</a>
+                &middot; <a href="/news/">&larr; All AI news</a>
+            </p>
+        </article>
+    </main>
+
+{footer_html()}
+    ''' + BACK_TO_TOP_BLOCK + DARK_MODE_BLOCK + '''
+</body>
+</html>'''
+
+
+def build_news_list_page_en(news_items) -> str:
+    hreflang = hreflang_tags('/news/', '/news/')
+    groups = {}
+    for it in news_items:
+        d = it.get('published_at', '')[:10]
+        groups.setdefault(d, []).append(it)
+    sections = ''
+    for d in sorted(groups.keys(), reverse=True):
+        rows = ''
+        for it in groups[d]:
+            cat_label, _ = NEWS_CATS.get(it.get('category', 'products'), ('Products', ''))
+            rows += (
+                f'<a class="new-card" href="/news/{it["slug"]}/">'
+                f'<div class="new-info"><div class="new-name">{escape_html(it.get("title", ""))}</div>'
+                f'<div class="new-meta">{escape_html(it.get("summary", ""))[:110]}&hellip;</div></div>'
+                f'<span class="td-chip td-chip-neutral">{escape_html(cat_label)}</span>'
+                f'</a>\n'
+            )
+        sections += f'<h2 style="margin:32px 0 14px;">{escape_html(d)}</h2>\n<div class="new-grid">\n{rows}</div>\n'
+    return f'''<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI News 2026 - Model Releases, Tools and Industry Moves | {SITE_NAME}</title>
+    <meta name="description" content="Daily AI news with editorial analysis: model releases, product launches, industry moves and research findings. Every item sourced and every briefing includes why it matters.">
+    <link rel="canonical" href="{SITE_DOMAIN}/news/">
+{hreflang}    <link rel="stylesheet" href="/css/style.css?{CSS_VERSION}">
+{VERIFICATION_BLOCK}{GA_BLOCK}
+</head>
+<body>
+{header_html()}
+
+    <main class="cat-hub">
+        <h1 class="page-title">AI News</h1>
+        <p class="cat-intro">Sourced daily briefs with editorial analysis &mdash; what happened, and why it matters. Updated daily.</p>
+
+        <section class="cat-section">
+            <div class="td-chips" style="margin-bottom:8px;">
+{''.join(f'<a class="td-chip td-chip-neutral" href="/news/?cat={k}">{v[0]}</a> ' for k, v in NEWS_CATS.items())}            </div>
+{sections}        </section>
+    </main>
+
+{footer_html()}
+    ''' + BACK_TO_TOP_BLOCK + DARK_MODE_BLOCK + '''
+</body>
+</html>'''
+
+
 def build_best_page_en(tools_list) -> str:
     """/best/ — Top Rated AI Tools (Top 50 by the public rubric). Targets
     'best ai tools 2026'-class queries; every ranking auditable via Score
@@ -4197,6 +4342,11 @@ def build_all_en(target: str = 'all'):
     # ── Sitemap ───────────────────────────────────────────────────────────────
     cat_slugs = [get_category_slug_en(c) for c in tools_by_cat.keys()]
     sitemap   = generate_sitemap_en(published_tools, articles, cat_slugs, alt_slugs, vs_urls)
+    _news_extra = ''.join(
+        f"    <url><loc>{SITE_DOMAIN}/news/{it['slug']}/</loc><lastmod>{it.get('published_at','')[:10]}</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>\n"
+        for it in load_news_en()
+    )
+    sitemap = sitemap.replace('</urlset>', _news_extra + '</urlset>')
     _safe_write(os.path.join(OUT_DIR, 'sitemap.xml'), sitemap)
     print(f'[OK] en/sitemap.xml ({len(published_tools)} tools + {len(articles)} articles)')
 
@@ -4308,7 +4458,17 @@ def build_all_en(target: str = 'all'):
     new_dir = os.path.join(OUT_DIR, 'new')
     os.makedirs(new_dir, exist_ok=True)
     _safe_write(os.path.join(new_dir, 'index.html'), build_new_page_en(published_tools))
-    print(f'[OK] en/js/tools-data.js ({len(tools_index)} tools) + en/favorites.html + en/best/ + en/new/')
+    news_items = load_news_en()
+    news_dir = os.path.join(OUT_DIR, 'news')
+    os.makedirs(news_dir, exist_ok=True)
+    with open(os.path.join(news_dir, 'index.html'), 'w', encoding='utf-8') as f:
+        f.write(build_news_list_page_en(news_items))
+    for it in news_items:
+        ipath = os.path.join(news_dir, it['slug'])
+        os.makedirs(ipath, exist_ok=True)
+        with open(os.path.join(ipath, 'index.html'), 'w', encoding='utf-8') as f:
+            f.write(_news_item_page(it, news_items))
+    print(f'[OK] en/news/ ({len(news_items)} items)')
 
     # ── IndexNow push ─────────────────────────────────────────────────────────
     cache_file = os.path.join(BASE_DIR, '.indexnow_en_pushed.json')
@@ -4320,6 +4480,7 @@ def build_all_en(target: str = 'all'):
     all_urls = [f"{SITE_DOMAIN}/"]
     all_urls += [f"{SITE_DOMAIN}/tools/{t['slug']}/" for t in published_tools]
     all_urls += [f"{SITE_DOMAIN}/articles/{a['slug']}/" for a in articles]
+    all_urls += [f"{SITE_DOMAIN}/news/{it['slug']}/" for it in load_news_en()]
     all_urls += [f"{SITE_DOMAIN}/category/{get_category_slug_en(c)}/" for c in tools_by_cat]
     all_urls += [f"{SITE_DOMAIN}/category/{s}/" for s in sorted(ARTICLE_CATEGORY_PAGES)
                  if s not in {get_category_slug_en(c) for c in tools_by_cat}]
@@ -4356,11 +4517,11 @@ def main():
     # Validate internal links before building (2026-06-25 original; 2026-11-18 hardened)
     # 旧版 validate_internal_links.py 只校验 /articles/ 一种形态，裸 slug (/chatgpt/)、
     # /en/ 多余前缀、/tool/ 单数等全部漏过 → 每天 build 假绿灯，404 累积到 972 处。
-    # 现统一走 check_internal_links.py：覆盖 tools/articles/category + 裸 slug + 前缀漂移，
+    # 现统一走 check_internal_links_en.py：覆盖 tools/articles/category + 裸 slug + 前缀漂移，
     # 且目标存在性以"当前 slug 集合 + 已构建页面"为准。失败即 exit 1，禁止静默跳过。
     if args.target in ('all', 'articles'):
         try:
-            from check_internal_links import validate_all
+            from check_internal_links_en import validate_all
             print("\n[VALIDATE] Checking internal links (all forms)...")
             n, errs = validate_all()
             if n:

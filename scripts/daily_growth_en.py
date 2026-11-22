@@ -44,6 +44,9 @@ def main():
     log("STEP 1: Recompute 5-factor ranking scores")
     run([sys.executable, os.path.join(SCRIPTS_DIR, 'score_tools_en.py')])
 
+    log("STEP 1a2: Translate CN news -> EN")
+    run([sys.executable, os.path.join(SCRIPTS_DIR, 'news_translate_from_cn.py')])
+
     log("STEP 1b: Rebuild static site")
     run([sys.executable, os.path.join(SCRIPTS_DIR, 'build_en.py')])
 
@@ -68,7 +71,7 @@ def main():
 
     # Step 3: 部署到 Cloudflare Pages（真正上线这一步）
     log("STEP 3: Deploy to Cloudflare Pages")
-    run([sys.executable, os.path.join(SCRIPTS_DIR, 'deploy_cf.py'), "--upload"])
+    run([sys.executable, os.path.join(SCRIPTS_DIR, 'deploy_cf_en.py'), "--upload"])
 
     log("=" * 55)
     log("Pipeline complete: built, pushed, deployed.")

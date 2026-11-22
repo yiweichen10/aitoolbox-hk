@@ -34,7 +34,7 @@ ROOT_FILES = [
 ]
 
 # 需要整目录复制的站点资源
-DIRS = ["articles", "author", "category", "css", "images", "js", "tools", "assets", "search", "alternatives", "vs", "best", "new", "functions"]
+DIRS = ["articles", "author", "category", "css", "images", "js", "tools", "assets", "search", "alternatives", "vs", "best", "new", "functions", "rankings", "news"]
 
 
 def prepare() -> tuple[int, int]:
@@ -103,8 +103,9 @@ def upload() -> int:
     # ConnectTimeout / HTTP 408）。部署失败即停会让自动化 19 当天不更新，
     # 因此这里对「瞬时网络错误」自动重试 3 次，间隔 20s。
     TRANSIENT = ("ECONNRESET", "ETIMEDOUT", "ConnectTimeoutError", "fetch failed",
-                 "timed out", "408", "Connection reset", "socket hang up")
-    attempts = 3
+                 "timed out", "408", "Connection reset", "socket hang up",
+                 "Failed to upload files")
+    attempts = 5
     for i in range(1, attempts + 1):
         proc = subprocess.run(cmd, cwd=str(ROOT), text=True,
                               encoding="utf-8", errors="replace",

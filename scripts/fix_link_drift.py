@@ -16,7 +16,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-from check_internal_links import _load_slugs, _page_exists, MD_RE, HTML_RE
+from check_internal_links_en import _load_slugs, _page_exists, MD_RE, HTML_RE
 
 ROOT = Path(__file__).resolve().parent.parent
 TOOLS_FILE = ROOT / "data" / "tools_en.json"

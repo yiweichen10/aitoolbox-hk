@@ -132,9 +132,9 @@
 ### AI SEO (7)
 - [Semrush](https://www.aitoolbox.hk/tools/semrush/): The heavyweight SEO suite that bolted AI-search tracking onto every plan in 2026. The money angle is direct…
 - [Otterly.AI](https://www.aitoolbox.hk/tools/otterly-ai/): Daily brand-visibility tracking across ChatGPT, Google AI Overviews, AI Mode, Gemini, Perplexity, Copilot and…
+- [Surfer SEO](https://www.aitoolbox.hk/tools/surfer-seo/): Surfer SEO is the data-driven content optimization tool that analyzes top-ranking pages to tell you exactly…
 - [Peec AI](https://www.aitoolbox.hk/tools/peec-ai/): Peec AI tracks how often your brand shows up in ChatGPT, Gemini, Copilot and Google AI Overviews, then shows…
 - [Vryse AI](https://www.aitoolbox.hk/tools/vryse-ai/): Vryse AI is the first dedicated Generative Engine Optimization (GEO) platform designed to help websites rank…
-- [Ahrefs](https://www.aitoolbox.hk/tools/ahrefs/): Ahrefs is the backlink and keyword database most SEO work starts from. The money is in the audits, the…
 
 ### AI Translation (6)
 - [Crowdin](https://www.aitoolbox.hk/tools/crowdin/): Crowdin is the localization platform small software teams move to once a spreadsheet stops working - upload…
@@ -263,12 +263,12 @@
 - [Manus vs Voiceflow](https://www.aitoolbox.hk/vs/manus-vs-voiceflow/): pricing and feature comparison
 - [MetaGPT vs Voiceflow](https://www.aitoolbox.hk/vs/metagpt-vs-voiceflow/): pricing and feature comparison
 - [n8n vs Zapier AI](https://www.aitoolbox.hk/vs/n8n-vs-zapier-ai/): pricing and feature comparison
-- [Otterly.AI vs Peec AI](https://www.aitoolbox.hk/vs/otterly-ai-vs-peec-ai/): pricing and feature comparison
 - [Otterly.AI vs Semrush](https://www.aitoolbox.hk/vs/otterly-ai-vs-semrush/): pricing and feature comparison
+- [Otterly.AI vs Surfer SEO](https://www.aitoolbox.hk/vs/otterly-ai-vs-surfer-seo/): pricing and feature comparison
 - [Patreon vs Substack](https://www.aitoolbox.hk/vs/patreon-vs-substack/): pricing and feature comparison
-- [Peec AI vs Semrush](https://www.aitoolbox.hk/vs/peec-ai-vs-semrush/): pricing and feature comparison
 - [Relume vs Wix AI](https://www.aitoolbox.hk/vs/relume-vs-wix-ai/): pricing and feature comparison
 - [Runway vs Veo](https://www.aitoolbox.hk/vs/runway-vs-veo/): pricing and feature comparison
+- [Semrush vs Surfer SEO](https://www.aitoolbox.hk/vs/semrush-vs-surfer-seo/): pricing and feature comparison
 - [Sora vs Veo](https://www.aitoolbox.hk/vs/sora-vs-veo/): pricing and feature comparison
 - [Soundraw vs Wondercraft AI](https://www.aitoolbox.hk/vs/soundraw-vs-wondercraft-ai/): pricing and feature comparison
 
@@ -296,6 +296,21 @@
 - Tool database: updated daily (291 tools listed)
 - Articles: new original reviews published regularly (232 total)
 - Ratings/pricing: recalibrated continuously
+
+## AI News (daily briefs with editorial analysis)
+
+News index: https://www.aitoolbox.hk/news/
+
+- [Nasdaq 100 Suffers Worst Week Since the Pandemic: Down 10.4%](https://www.aitoolbox.hk/news/2026-11-22-nasdaq-100-worst-week-since-pandemic/) (2026-11-21) - The Nasdaq 100 fell 5.6% on Friday, closing the week down 10.4% - a 20% retreat from October highs that puts the index in bear-market territ
+- [Claude Code Launches Experimental Code Mode](https://www.aitoolbox.hk/news/2026-11-22-claude-code-mode-experimental/) () - Claude Code's new Code Mode has the model write JavaScript to complete multi-step tool calls in one pass, supporting parallel execution and 
+- [Anthropic Mathematician Claims Claude Proof of the Riemann Hypothesis](https://www.aitoolbox.hk/news/2026-11-22-anthropic-mathematician-riemann-proof/) () - Mathematician Alpöge says the claimed proof also covers the generalized Riemann hypothesis, published as 14 Lean packages spanning over 250,
+- [OpenAI Ships GPT-Live-1.1 Voice Model on the API](https://www.aitoolbox.hk/news/2026-11-22-openai-gpt-live-1-1-api/) () - The full-duplex voice model defaults to 128K context and is exclusive to OpenAI's cloud. A new standby idle billing mode costs $0.02/minute 
+- [Qwen4 Max Fixes a Tornado Framework Bug in a Single Call](https://www.aitoolbox.hk/news/2026-11-22-qwen4-max-tornado-bug-fix/) () - Alibaba's flagship model landed on the Together inference platform with 1M context. Loading the entire Tornado repository - 650K tokens acro
+- [Browser Use 1.0: 24 Tools Consolidated Into One](https://www.aitoolbox.hk/news/2026-11-21-browser-use-1-0-one-tool/) () - Browser Use 1.0 replaces 24 discrete action tools with a single Python REPL plus CDP. Same-model benchmark scores rose 14-33 points while co
+- [Runway's Software Factory: Agents Now Land 38% of Merged PRs](https://www.aitoolbox.hk/news/2026-11-21-runway-software-factory-agent-prs/) () - Runway reports agents drove 38% of merged PRs in October - up from 0.1% in June - with monthly merges going from 2 to over 3,000, and first-
+- [Thinking Machines Lab Releases Laptop-Runnable Inkling 2 Mini](https://www.aitoolbox.hk/news/2026-11-21-inkling-2-mini-laptop-model/) () - A recurrent transformer whose middle 12 layers run 3 times per token. MoE total parameters 26.4B with 3.4B active, around 20GB - it runs on 
+- [METR Update: AI Task Time Horizon Doubles Every 3.6 Months](https://www.aitoolbox.hk/news/2026-11-21-metr-task-horizon-doubling/) () - Covering 15 models through GPT-6 Astra and Opus 5.5, the merged TH1.1+TH2 suite shows a 3.61-month doubling cycle; the TH2 verifiable subset
+- [Anthropic Slides 9% on Day Two, Nears $83 IPO Price](https://www.aitoolbox.hk/news/2026-11-21-anthropic-day-two-slide/) () - Shares closed at $88.30 on the second trading day, down 9%, with the Nasdaq now down 5% year-to-date. Asian stocks had their worst week sinc
 
 ## Sitemap
 
