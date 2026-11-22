@@ -466,6 +466,23 @@ def escape_html(text: str) -> str:
                 .replace('>', '&gt;')
                 .replace('"', '&quot;'))
 
+def _safe_write(path, content, tries: int = 5, delay: float = 0.4):
+    """Write with retry — AV/indexer briefly locks files right after a previous
+    pass wrote them (ERROR_SHARING_VIOLATION -> PermissionError). 2026-11-22:
+    builds started dying on random files (ko-fi, woocommerce, vryse-ai-review,
+    each run a different one) whenever Windows Defender scanned the just-written
+    page while the next build pass rewrote it. Retries resolve the race."""
+    global _time_mod
+    for attempt in range(tries):
+        try:
+            with open(path, 'w', encoding='utf-8') as f:
+                f.write(content)
+            return
+        except PermissionError:
+            if attempt == tries - 1:
+                raise
+            _time_mod.sleep(delay)
+
 def _serp_desc(text: str, limit: int = 155) -> str:
     """Truncate a meta description to the SERP budget (~155 chars), cutting at
     a word boundary. 2026-11-19: 514/667 pages shipped descriptions of 183-191
@@ -1496,6 +1513,7 @@ def build_ranking_page_en(cat_name: str, ranked: list) -> str:
         {"@type": "ListItem", "position": 1, "name": "Home", "item": f"{SITE_DOMAIN}/"},
         {"@type": "ListItem", "position": 2, "name": f"{cat_name} Rankings", "item": f"{SITE_DOMAIN}/rankings/{cat_slug}/"}
     ]}, ensure_ascii=False)
+    rk_og = get_og_image_url(ranked[0]['slug']) or f'{SITE_DOMAIN}/images/logo.png'
     hreflang = hreflang_tags(f'/rankings/{cat_slug}/', f'/rankings/{cat_slug}/')
     return f'''<!DOCTYPE html>
 <html lang="en">
@@ -1506,6 +1524,9 @@ def build_ranking_page_en(cat_name: str, ranked: list) -> str:
     <title>Top {n} {escape_html(cat_name)} Tools 2026 (Ranked) - {SITE_NAME}</title>
     <meta name="description" content="{escape_html(_serp_desc(f"The top {n} {cat_name} tools ranked by editor score: {ranked[0]['name']} leads at {rating_num(ranked[0]):.1f}/5. Full hands-on reviews for every listing, tie-broken by traffic."))}">
     <link rel="canonical" href="{SITE_DOMAIN}/rankings/{cat_slug}/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Top {n} {escape_html(cat_name)} Tools 2026 (Ranked)">
+    <meta property="og:image" content="{rk_og}">
 {hreflang}    <link rel="stylesheet" href="/css/style.css?{CSS_VERSION}">
     <script type="application/ld+json">{breadcrumb}</script>
     <script type="application/ld+json">{faq_json}</script>
@@ -2570,6 +2591,15 @@ def generate_sitemap_en(tools: list, articles: list, cat_slugs: list, alt_slugs:
         urls.append(f'    <url><loc>{SITE_DOMAIN}/alternatives/{s}/</loc><lastmod>{today}</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>')
     for u in (vs_urls or []):
         urls.append(f'    <url><loc>{u}</loc><lastmod>{today}</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>')
+    # 2026-11-22: rankings pages — one per category with >= RANKINGS_MIN_TOOLS tools
+    _cat_counts = {}
+    for _t in tools:
+        _c = _t.get('category', '')
+        if _c:
+            _cat_counts[_c] = _cat_counts.get(_c, 0) + 1
+    for _c, _n in _cat_counts.items():
+        if _n >= RANKINGS_MIN_TOOLS:
+            urls.append(f'    <url><loc>{SITE_DOMAIN}/rankings/{get_category_slug_en(_c)}/</loc><lastmod>{today}</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>')
     for t in tools:
         urls.append(f'    <url><loc>{SITE_DOMAIN}/tools/{t["slug"]}/</loc><lastmod>{today}</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>')
     for a in articles:
@@ -4053,8 +4083,7 @@ def build_all_en(target: str = 'all'):
             os.makedirs(dir_path, exist_ok=True)
             html = build_category_page_en(cat_name, tools_in_cat,
                                           cat_articles=articles_by_cat_slug.get(cat_slug))
-            with open(os.path.join(dir_path, 'index.html'), 'w', encoding='utf-8') as f:
-                f.write(html)
+            _safe_write(os.path.join(dir_path, 'index.html'), html)
             print(f'[OK] en/category/{cat_slug}/index.html')
 
         # 2026-11-18: 清理孤儿分类目录（分类收敛/改名后旧 slug 页面残留会
@@ -4075,8 +4104,7 @@ def build_all_en(target: str = 'all'):
         dir_path = os.path.join(OUT_DIR, 'category')
         os.makedirs(dir_path, exist_ok=True)
         html = build_category_index_en(tools_by_cat)
-        with open(os.path.join(dir_path, 'index.html'), 'w', encoding='utf-8') as f:
-            f.write(html)
+        _safe_write(os.path.join(dir_path, 'index.html'), html)
         print(f'[OK] en/category/index.html')
 
     # ── Rankings pages (2026-11-22: 借鉴 TAAFT leaderboard，数据驱动 Top 榜) ──
@@ -4095,8 +4123,7 @@ def build_all_en(target: str = 'all'):
             rdir = os.path.join(rank_dir, cslug_)
             os.makedirs(rdir, exist_ok=True)
             html = build_ranking_page_en(cat_name_, ranked)
-            with open(os.path.join(rdir, 'index.html'), 'w', encoding='utf-8') as f:
-                f.write(html)
+            _safe_write(os.path.join(rdir, 'index.html'), html)
             print(f'[OK] en/rankings/{cslug_}/index.html (Top {len(ranked)} of {len(ranked_all)})')
 
     # ── Article category pages (2026-11-18: fix 421 breadcrumb 404s) ─────────
@@ -4112,8 +4139,7 @@ def build_all_en(target: str = 'all'):
             dir_path = os.path.join(OUT_DIR, 'category', cat_slug_)
             os.makedirs(dir_path, exist_ok=True)
             html = build_article_category_page_en(cat_name_, lst_)
-            with open(os.path.join(dir_path, 'index.html'), 'w', encoding='utf-8') as f:
-                f.write(html)
+            _safe_write(os.path.join(dir_path, 'index.html'), html)
             print(f'[OK] en/category/{cat_slug_}/index.html (article guides, {len(lst_)})')
 
     # ── Tool pages ────────────────────────────────────────────────────────────
@@ -4125,8 +4151,7 @@ def build_all_en(target: str = 'all'):
             html = build_tool_page_en(tool, published_tools, articles,
                                       alt_slug=tool['slug'] if tool['slug'] in alt_set else '',
                                       vs_partners=vs_by_slug.get(tool['slug'], []))
-            with open(os.path.join(dir_path, 'index.html'), 'w', encoding='utf-8') as f:
-                f.write(html)
+            _safe_write(os.path.join(dir_path, 'index.html'), html)
             print(f'[OK] en/tools/{slug}/index.html')
 
     # ── Article pages ─────────────────────────────────────────────────────────
@@ -4136,8 +4161,7 @@ def build_all_en(target: str = 'all'):
             dir_path = os.path.join(OUT_DIR, 'articles', slug)
             os.makedirs(dir_path, exist_ok=True)
             html = build_article_page_en(article, articles, published_tools)
-            with open(os.path.join(dir_path, 'index.html'), 'w', encoding='utf-8') as f:
-                f.write(html)
+            _safe_write(os.path.join(dir_path, 'index.html'), html)
             print(f'[OK] en/articles/{slug}/index.html')
 
         # Article list with pagination
@@ -4157,16 +4181,14 @@ def build_all_en(target: str = 'all'):
             
             os.makedirs(dir_path, exist_ok=True)
             html = build_article_list_en(page_articles, p, total_pages)
-            with open(os.path.join(dir_path, 'index.html'), 'w', encoding='utf-8') as f:
-                f.write(html)
+            _safe_write(os.path.join(dir_path, 'index.html'), html)
             print(f'[OK] en/articles/{"index.html" if p==1 else f"page/{p}/index.html"}')
 
     # ── English homepage ──────────────────────────────────────────────────────
     if target in ('all', 'index'):
         os.makedirs(OUT_DIR, exist_ok=True)
         html = build_index_en(published_tools, articles)
-        with open(os.path.join(OUT_DIR, 'index.html'), 'w', encoding='utf-8') as f:
-            f.write(html)
+        _safe_write(os.path.join(OUT_DIR, 'index.html'), html)
         print(f'[OK] en/index.html')
 
     # ── Nav injection (EN only) ───────────────────────────────────────────────
@@ -4175,27 +4197,23 @@ def build_all_en(target: str = 'all'):
     # ── Sitemap ───────────────────────────────────────────────────────────────
     cat_slugs = [get_category_slug_en(c) for c in tools_by_cat.keys()]
     sitemap   = generate_sitemap_en(published_tools, articles, cat_slugs, alt_slugs, vs_urls)
-    with open(os.path.join(OUT_DIR, 'sitemap.xml'), 'w', encoding='utf-8') as f:
-        f.write(sitemap)
+    _safe_write(os.path.join(OUT_DIR, 'sitemap.xml'), sitemap)
     print(f'[OK] en/sitemap.xml ({len(published_tools)} tools + {len(articles)} articles)')
 
     # ── Search page (client-side index; noindex, not in sitemap) ──────────────
     search_dir = os.path.join(OUT_DIR, 'search')
     os.makedirs(search_dir, exist_ok=True)
-    with open(os.path.join(search_dir, 'index.html'), 'w', encoding='utf-8') as f:
-        f.write(build_search_page_en(published_tools, articles))
+    _safe_write(os.path.join(search_dir, 'index.html'), build_search_page_en(published_tools, articles))
     print(f'[OK] en/search/index.html ({len(published_tools)} tools + {len(articles)} articles indexed)')
 
     # ── llms.txt (regenerated on every build — counts/dates never drift) ──────
     llms_txt = generate_llms_txt_en(published_tools, articles, alt_slugs, vs_pairs)
-    with open(os.path.join(OUT_DIR, 'llms.txt'), 'w', encoding='utf-8') as f:
-        f.write(llms_txt)
+    _safe_write(os.path.join(OUT_DIR, 'llms.txt'), llms_txt)
     print(f'[OK] en/llms.txt ({len(published_tools)} tools / {len(articles)} articles)')
 
     # ── llms-full.txt (full content companion — tools + articles in one file) ─
     llms_full = generate_llms_full_txt_en(published_tools, articles)
-    with open(os.path.join(OUT_DIR, 'llms-full.txt'), 'w', encoding='utf-8') as f:
-        f.write(llms_full)
+    _safe_write(os.path.join(OUT_DIR, 'llms-full.txt'), llms_full)
     print(f'[OK] en/llms-full.txt ({len(published_tools)} tools / {len(articles)} articles, {len(llms_full)//1024} KB)')
 
     # ── About/Author trust-info count refresh (audit 2026-10-13 P1 fix) ───────
@@ -4203,8 +4221,7 @@ def build_all_en(target: str = 'all'):
     refresh_about_author_counts(len(published_tools), len(articles), _n_cats)
 
     # ── RSS feed (latest 30 dated articles; tools have no honest dates) ───────
-    with open(os.path.join(OUT_DIR, 'rss.xml'), 'w', encoding='utf-8') as f:
-        f.write(generate_rss_en(articles))
+    _safe_write(os.path.join(OUT_DIR, 'rss.xml'), generate_rss_en(articles))
     print(f'[OK] en/rss.xml (latest 30 of {len(articles)} articles)')
 
     # ── Alternatives pages ("{tool} alternatives", top 50 by visits) ──────────
@@ -4223,8 +4240,7 @@ def build_all_en(target: str = 'all'):
             continue
         adir = os.path.join(alt_dir, aslug)
         os.makedirs(adir, exist_ok=True)
-        with open(os.path.join(adir, 'index.html'), 'w', encoding='utf-8') as f:
-            f.write(build_alternatives_page_en(t0, cands))
+        _safe_write(os.path.join(adir, 'index.html'), build_alternatives_page_en(t0, cands))
         alt_built += 1
     # Remove stale alternatives dirs (e.g. after the selection strategy changes)
     # so the deployed set always matches the sitemap exactly.
@@ -4253,8 +4269,7 @@ def build_all_en(target: str = 'all'):
         pair_slug = f'{sa}-vs-{sb}'
         vdir = os.path.join(vs_dir, pair_slug)
         os.makedirs(vdir, exist_ok=True)
-        with open(os.path.join(vdir, 'index.html'), 'w', encoding='utf-8') as f:
-            f.write(build_vs_page_en(ta_, tb_))
+        _safe_write(os.path.join(vdir, 'index.html'), build_vs_page_en(ta_, tb_))
         vs_urls.append(f'{SITE_DOMAIN}/vs/{pair_slug}/')
     _vs_valid = {f'{sa}-vs-{sb}' for sa, sb in vs_pairs}
     for d in os.listdir(vs_dir):
@@ -4272,14 +4287,10 @@ def build_all_en(target: str = 'all'):
     print(f'[OK] en/vs/ ({len(vs_urls)} head-to-head pages)')
 
     # ── Contact + Submit pages (linked from every tool review) ────────────────
-    with open(os.path.join(OUT_DIR, 'contact.html'), 'w', encoding='utf-8') as f:
-        f.write(build_contact_page_en())
-    with open(os.path.join(OUT_DIR, 'submit.html'), 'w', encoding='utf-8') as f:
-        f.write(build_submit_page_en())
-    with open(os.path.join(OUT_DIR, 'privacy.html'), 'w', encoding='utf-8') as f:
-        f.write(build_privacy_page_en())
-    with open(os.path.join(OUT_DIR, 'terms.html'), 'w', encoding='utf-8') as f:
-        f.write(build_terms_page_en())
+    _safe_write(os.path.join(OUT_DIR, 'contact.html'), build_contact_page_en())
+    _safe_write(os.path.join(OUT_DIR, 'submit.html'), build_submit_page_en())
+    _safe_write(os.path.join(OUT_DIR, 'privacy.html'), build_privacy_page_en())
+    _safe_write(os.path.join(OUT_DIR, 'terms.html'), build_terms_page_en())
     print('[OK] en/contact.html + en/submit.html')
 
     # ── Favorites: client-side tool index + personal page (noindex) ───────────
@@ -4289,18 +4300,14 @@ def build_all_en(target: str = 'all'):
          'p': t.get('price', ''), 'c': t.get('color', '')}
         for t in published_tools
     ]
-    with open(os.path.join(OUT_DIR, 'js', 'tools-data.js'), 'w', encoding='utf-8') as f:
-        f.write('window.__ALL_TOOLS_EN__=' + json.dumps(tools_index, ensure_ascii=False, separators=(',', ':')) + ';')
-    with open(os.path.join(OUT_DIR, 'favorites.html'), 'w', encoding='utf-8') as f:
-        f.write(build_favorites_page_en())
+    _safe_write(os.path.join(OUT_DIR, 'js', 'tools-data.js'), 'window.__ALL_TOOLS_EN__=' + json.dumps(tools_index, ensure_ascii=False, separators=(',', ':')) + ';')
+    _safe_write(os.path.join(OUT_DIR, 'favorites.html'), build_favorites_page_en())
     best_dir = os.path.join(OUT_DIR, 'best')
     os.makedirs(best_dir, exist_ok=True)
-    with open(os.path.join(best_dir, 'index.html'), 'w', encoding='utf-8') as f:
-        f.write(build_best_page_en(published_tools))
+    _safe_write(os.path.join(best_dir, 'index.html'), build_best_page_en(published_tools))
     new_dir = os.path.join(OUT_DIR, 'new')
     os.makedirs(new_dir, exist_ok=True)
-    with open(os.path.join(new_dir, 'index.html'), 'w', encoding='utf-8') as f:
-        f.write(build_new_page_en(published_tools))
+    _safe_write(os.path.join(new_dir, 'index.html'), build_new_page_en(published_tools))
     print(f'[OK] en/js/tools-data.js ({len(tools_index)} tools) + en/favorites.html + en/best/ + en/new/')
 
     # ── IndexNow push ─────────────────────────────────────────────────────────
