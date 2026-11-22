@@ -22,6 +22,8 @@ SITE_DOMAIN_CN = "https://www.aitoollab.cn"
 SITE_LOGO    = f"{SITE_DOMAIN}/images/logo.png"
 CSS_VERSION  = f"v={datetime.now().strftime('%Y%m%d%H%M%S')}"  # cache busting (with seconds)
 
+# ─── Rankings pages / Article category pages ─────────────────────────────────
+RANKINGS_MIN_TOOLS = 3  # 分类工具数达到该值才生成 /rankings/<slug>/ 榜单页
 # ─── Article category pages (2026-11-18 治本 421 处面包屑 404) ────────────────
 # 文章分类达到该数量才生成 /category/<slug>/ 页面；不足的面包屑降级纯文本。
 MIN_ARTICLES_FOR_CATEGORY_PAGE = 3
@@ -1451,6 +1453,85 @@ def build_article_page_en(article: dict, all_articles: list, all_tools: list = N
 
 # ─── Category page ────────────────────────────────────────────────────────────
 
+
+def build_ranking_page_en(cat_name: str, ranked: list) -> str:
+    """分类排行榜页 /rankings/<cat-slug>/ — 2026-11-22 借鉴 TAAFT leaderboard。
+
+    诚实原则：排名与理由全部来自数据事实（editor score 降序、traffic 平局裁定），
+    不编造评测结论。分类工具数 >= RANKINGS_MIN_TOOLS 才生成（build_all_en 控制）。
+    """
+    cat_slug = get_category_slug_en(cat_name)
+    n = len(ranked)
+    today_disp = datetime.now().strftime('%d %b %Y').lstrip('0')
+
+    rows = ''
+    for i, t in enumerate(ranked, 1):
+        score = rating_num(t)
+        visits_raw = str(t.get('visits', '') or '').strip()
+        why = (f'Highest editor score in {escape_html(cat_name)} ({score:.1f}/5)'
+               if i == 1 else f'Editor score {score:.1f}/5' +
+               (f' · {escape_html(visits_raw)} monthly visits' if visits_raw else ''))
+        medal = {1: 'rk-gold', 2: 'rk-silver', 3: 'rk-bronze'}.get(i, 'rk-plain')
+        rows += f'''<a class="rk-row" href="/tools/{t["slug"]}/">
+                <span class="rk-badge {medal}">#{i}</span>
+                {tool_tile(t)}
+                <span class="rk-main">
+                    <span class="rk-name">{escape_html(t["name"])}</span>
+                    <span class="rk-why">{why}</span>
+                </span>
+                <span class="rk-meta">
+                    <span class="rk-score">{score:.1f}/5</span>
+                    <span class="rk-price">{escape_html(t.get("price",""))}</span>
+                </span>
+                <span class="rk-cta">Full review &rarr;</span>
+            </a>\n'''
+
+    faq_json = json.dumps({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+        {"@type": "Question", "name": f"How is the {cat_name} ranking determined?",
+         "acceptedAnswer": {"@type": "Answer", "text": f"Tools are ranked by our editor score (a 5-point rubric across capability, usability and value), highest first. Ties are broken by monthly traffic. Every listing links to a full hands-on review."}},
+        {"@type": "Question", "name": "Can a tool pay to rank higher?",
+         "acceptedAnswer": {"@type": "Answer", "text": "No. Rankings follow editor scores only; commissions never influence scores or ranking order."}}
+    ]}, ensure_ascii=False)
+    breadcrumb = json.dumps({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": f"{SITE_DOMAIN}/"},
+        {"@type": "ListItem", "position": 2, "name": f"{cat_name} Rankings", "item": f"{SITE_DOMAIN}/rankings/{cat_slug}/"}
+    ]}, ensure_ascii=False)
+    hreflang = hreflang_tags(f'/rankings/{cat_slug}/', f'/rankings/{cat_slug}/')
+    return f'''<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top {n} {escape_html(cat_name)} Tools 2026 (Ranked) - {SITE_NAME}</title>
+    <meta name="description" content="{escape_html(_serp_desc(f"The top {n} {cat_name} tools ranked by editor score: {ranked[0]['name']} leads at {rating_num(ranked[0]):.1f}/5. Full hands-on reviews for every listing, tie-broken by traffic."))}">
+    <link rel="canonical" href="{SITE_DOMAIN}/rankings/{cat_slug}/">
+{hreflang}    <link rel="stylesheet" href="/css/style.css?{CSS_VERSION}">
+    <script type="application/ld+json">{breadcrumb}</script>
+    <script type="application/ld+json">{faq_json}</script>
+{VERIFICATION_BLOCK}{GA_BLOCK}
+</head>
+<body>
+{header_html()}
+
+    <main class="article-container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="/">Home</a> &gt; <a href="/category/{cat_slug}/">{escape_html(cat_name)}</a> &gt; <span>Rankings</span>
+        </nav>
+        <h1 class="page-title">{escape_html(cat_name)} Rankings: Top {n} (2026)</h1>
+        <p class="page-sub">Ranked by editor score (capability, usability, value) &mdash; highest first, ties broken by monthly traffic. Updated {today_disp}. Rankings cannot be bought.</p>
+        <div class="rk-list">
+{rows}        </div>
+        <section class="cat-section">
+            <h2>How this {escape_html(cat_name)} ranking works</h2>
+            <p>Every tool in our catalog gets an editor score (a 5-point rubric across capability, usability and value) from hands-on testing, not vendor claims. This page sorts every {escape_html(cat_name)} tool we cover by that score. When scores tie, monthly traffic breaks the tie. Each entry links to a full review with pros, cons and current pricing &mdash; and the ranking is never for sale.</p>
+        </section>
+    </main>
+
+{footer_html()}
+</body>
+</html>'''
+
 def build_category_page_en(cat_name: str, tools: list, cat_articles: list = None) -> str:
     """工具分类页。2026-11-18 修复覆盖 bug：文章分类 slug 与工具分类冲突时
     （ai-image/ai-video/ai-development 等 10 个），本页被文章列表页整体覆盖、
@@ -1483,6 +1564,13 @@ def build_category_page_en(cat_name: str, tools: list, cat_articles: list = None
             {"@type":"ListItem","position":2,"name":cat_name,"item":f"{SITE_DOMAIN}/category/{cat_slug}/"},
         ]
     }
+
+    # 2026-11-22: 分类排行榜入口（该分类工具数达标时展示 Top 10 链接）
+    rank_link = ''
+    if len(tools) >= RANKINGS_MIN_TOOLS:
+        rank_link = (f'<a class="alt-see-all" href="/rankings/{cat_slug}/" '
+                     f'style="display:inline-block;margin-top:10px;">'
+                     f'Top {len(tools)} {escape_html(cat_name)} tools, ranked &rarr;</a>')
 
     # 2026-11-18: 冲突合并——该分类的文章指南区块（与文章分类页同一 al-card 样式）
     guides_block = ''
@@ -1604,6 +1692,7 @@ def build_category_page_en(cat_name: str, tools: list, cat_articles: list = None
         <div class="tool-grid" id="catGrid">
             {tool_cards}
         </div>
+        <div style="text-align:center;">{rank_link}</div>
 {guides_block}
     </main>
 
@@ -3990,6 +4079,26 @@ def build_all_en(target: str = 'all'):
             f.write(html)
         print(f'[OK] en/category/index.html')
 
+    # ── Rankings pages (2026-11-22: 借鉴 TAAFT leaderboard，数据驱动 Top 榜) ──
+    # 每分类一页 /rankings/<cat-slug>/；editor score 降序、traffic 平局裁定；
+    # 工具数 >= RANKINGS_MIN_TOOLS 才生成（避免薄页）。理由全部为数据事实。
+    if target in ('all', 'index'):
+        rank_dir = os.path.join(OUT_DIR, 'rankings')
+        os.makedirs(rank_dir, exist_ok=True)
+        for cat_name_, tools_in_cat in tools_by_cat.items():
+            if len(tools_in_cat) < RANKINGS_MIN_TOOLS:
+                continue
+            ranked_all = sorted(tools_in_cat,
+                                key=lambda t: (-rating_num(t), -visits_num(t.get('visits'))))
+            ranked = ranked_all[:15]  # 榜单上限 15：页面精炼 + 榜单稀缺性
+            cslug_ = get_category_slug_en(cat_name_)
+            rdir = os.path.join(rank_dir, cslug_)
+            os.makedirs(rdir, exist_ok=True)
+            html = build_ranking_page_en(cat_name_, ranked)
+            with open(os.path.join(rdir, 'index.html'), 'w', encoding='utf-8') as f:
+                f.write(html)
+            print(f'[OK] en/rankings/{cslug_}/index.html (Top {len(ranked)} of {len(ranked_all)})')
+
     # ── Article category pages (2026-11-18: fix 421 breadcrumb 404s) ─────────
     # Generated for article categories with >= MIN_ARTICLES_FOR_CATEGORY_PAGE
     # articles. Slugs never collide with tool categories (union is precomputed
@@ -4207,6 +4316,8 @@ def build_all_en(target: str = 'all'):
     all_urls += [f"{SITE_DOMAIN}/category/{get_category_slug_en(c)}/" for c in tools_by_cat]
     all_urls += [f"{SITE_DOMAIN}/category/{s}/" for s in sorted(ARTICLE_CATEGORY_PAGES)
                  if s not in {get_category_slug_en(c) for c in tools_by_cat}]
+    all_urls += [f"{SITE_DOMAIN}/rankings/{get_category_slug_en(c)}/" for c, lst in tools_by_cat.items()
+                 if len(lst) >= RANKINGS_MIN_TOOLS]
     all_urls += [f"{SITE_DOMAIN}/alternatives/{s}/" for s in alt_slugs]
     all_urls += vs_urls
 

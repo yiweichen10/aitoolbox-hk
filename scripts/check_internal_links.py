@@ -34,6 +34,7 @@ TOOLS_FILE = DATA / "tools_en.json"
 ARTICLES_FILE = DATA / "articles_en.json"
 
 SECTIONS = {"tools", "articles", "category", "vs", "alternatives", "search", "author",
+            "rankings",
             "css", "js", "images", "assets", "images", "favicon.ico"}
 
 # matches [text](/path/) markdown links
@@ -103,6 +104,11 @@ def validate_text(text, tool_slugs=None, art_slugs=None):
                 if not (BASE_DIR / "category" / slug / "index.html").is_file():
                     errs.append({"kind": "category", "href": href, "label": label,
                                  "reason": "category page not found: " + slug})
+            elif first == "rankings" and len(parts) >= 2:
+                slug = parts[1]
+                if not (BASE_DIR / "rankings" / slug / "index.html").is_file():
+                    errs.append({"kind": "rankings", "href": href, "label": label,
+                                 "reason": "rankings page not found: " + slug})
             continue
         # bare slug (no known section prefix)
         slug = first

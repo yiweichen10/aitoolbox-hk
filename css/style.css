@@ -4034,3 +4034,35 @@ img.tool-logo.ft-icon      { width: 56px; height: 56px; padding: 9px; border-rad
 .tool-list-container {
   padding: 0 max(24px, calc((100% - 1120px) / 2));
 }
+
+/* ── Rankings pages (/rankings/<cat>/) — 2026-11-22, v2 tokens, auto dark ── */
+.rk-list { display: flex; flex-direction: column; gap: 10px; max-width: 900px; margin: 0 auto; }
+.rk-row {
+  display: flex; align-items: center; gap: 14px;
+  background: var(--card-bg); border: 1px solid var(--line-color, rgba(128,140,160,.25));
+  border-radius: 12px; padding: 12px 16px; text-decoration: none;
+  transition: box-shadow .15s ease, transform .15s ease;
+}
+.rk-row:hover { box-shadow: 0 4px 14px rgba(0,0,0,.10); transform: translateY(-1px); }
+.rk-badge {
+  min-width: 42px; height: 42px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 15px; flex-shrink: 0;
+}
+.rk-gold   { background: linear-gradient(135deg,#f6d365,#fda085); color: #4a2c00; }
+.rk-silver { background: linear-gradient(135deg,#d7dbe4,#a7b0c0); color: #22252b; }
+.rk-bronze { background: linear-gradient(135deg,#e2b388,#b97b48); color: #33210d; }
+.rk-plain  { background: var(--card-bg); color: var(--text-muted,#64748b);
+             border: 1px solid var(--line-color, rgba(128,140,160,.25)); }
+.rk-main { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 3px; }
+.rk-name { font-weight: 700; font-size: 15px; color: var(--text-main); }
+.rk-why  { font-size: 12.5px; color: var(--text-muted,#64748b); }
+.rk-meta { text-align: right; flex-shrink: 0; display: flex; flex-direction: column; gap: 2px; }
+.rk-score { font-weight: 800; color: var(--accent-color); font-size: 15px; }
+.rk-price { font-size: 12px; color: var(--text-muted,#64748b); max-width: 160px; }
+.rk-cta   { font-size: 13px; color: var(--accent-color); white-space: nowrap; flex-shrink: 0; }
+@media (max-width: 640px) {
+  .rk-row { flex-wrap: wrap; }
+  .rk-meta { text-align: left; width: 100%; flex-direction: row; gap: 8px; }
+  .rk-cta { display: none; }
+}
