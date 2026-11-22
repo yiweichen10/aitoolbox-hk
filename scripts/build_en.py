@@ -384,7 +384,7 @@ SCHEMA_HOMEPAGE_BLOCK = '''    <!-- Schema: WebSite + SearchAction (AEO+GEO 2026
         "description": "AI Tool Lab is an independent AI tool review site featuring 110+ tested tools, monthly in-depth comparisons, all data sourced and verifiable.",
         "knowsAbout": ["AI tools", "AI models", "AI coding", "AI image generation", "AI video", "AI office", "AI chat", "AEO", "GEO"],
         "slogan": "Data-driven AI tool decisions",
-        "publishingPrinciples": "https://www.aitoolbox.hk/about.html",
+        "publishingPrinciples": "https://www.aitoolbox.hk/about",
         "actionableFeedbackPolicy": "All review data comes from public sources or author testing, every article cites sources, all verifiable.",
         "sameAs": [
             "https://github.com/yiweichen10/ai-toolbox"
@@ -592,18 +592,20 @@ def footer_html() -> str:
             <div class="footer-col">
                 <p class="footer-col-head">Explore</p>
                 <a href="/category/">All AI Tools</a>
+                <a href="/best/">Top Rated AI Tools</a>
+                <a href="/new/">Newly Added</a>
                 <a href="/articles/">Articles &amp; Guides</a>
                 <a href="/search/">Search</a>
                 <a href="/favorites">My Favorites</a>
             </div>
             <div class="footer-col">
                 <p class="footer-col-head">Participate</p>
-                <a href="/submit.html">Submit a Tool</a>
-                <a href="/contact.html">Contact &amp; Corrections</a>
+                <a href="/submit">Submit a Tool</a>
+                <a href="/contact">Contact &amp; Corrections</a>
             </div>
             <div class="footer-col">
                 <p class="footer-col-head">About</p>
-                <a href="/about.html">Methodology</a>
+                <a href="/about">Methodology</a>
                 <a href="/author/">Editorial Team</a>
                 <a href="/rss.xml">RSS Feed</a>
                 <a href="{SITE_DOMAIN_CN}/">中文版</a>
@@ -934,7 +936,7 @@ def build_tool_page_en(tool: dict, all_tools: list, all_articles: list = None, a
             f'<details style="margin-top:12px;font-size:12px;">'
             f'<summary style="cursor:pointer;color:var(--text-muted,#64748b);">Score breakdown</summary>'
             f'<div style="display:flex;flex-direction:column;gap:5px;margin-top:8px;">{_rows}</div>'
-            f'<a href="/about.html#scoring" style="display:block;margin-top:8px;font-size:11px;color:var(--text-muted,#64748b);">How this is scored &rarr;</a>'
+            f'<a href="/about#scoring" style="display:block;margin-top:8px;font-size:11px;color:var(--text-muted,#64748b);">How this is scored &rarr;</a>'
             f'</details>'
         )
     else:
@@ -970,8 +972,8 @@ def build_tool_page_en(tool: dict, all_tools: list, all_articles: list = None, a
             <div class="author-avatar">A</div>
             <div class="author-body">
                 <p class="author-label"><strong>About the reviewer</strong></p>
-                <p class="author-text">This {escape_html(name)} review was written by the <a href="/author/">AI Tool Lab Editorial Team</a>, based on real paid usage and testing. We spend $200+/month on AI tool subscriptions so you do not have to. Every claim in this review is verifiable — if you find an error, <a href="/contact.html?tool={slug}">report it</a> and we will fix it within 48 hours.</p>
-                <p class="author-meta">Last reviewed: {today_iso_author} · <a href="/about.html">Review methodology</a></p>
+                <p class="author-text">This {escape_html(name)} review was written by the <a href="/author/">AI Tool Lab Editorial Team</a>, based on real paid usage and testing. We spend $200+/month on AI tool subscriptions so you do not have to. Every claim in this review is verifiable — if you find an error, <a href="/contact?tool={slug}">report it</a> and we will fix it within 48 hours.</p>
+                <p class="author-meta">Last reviewed: {today_iso_author} · <a href="/about">Review methodology</a></p>
             </div>
         </div>
     </div>'''
@@ -1030,13 +1032,24 @@ def build_tool_page_en(tool: dict, all_tools: list, all_articles: list = None, a
                     {platform_chip}
                     <span class="td-chip td-chip-verified">✓ Independently reviewed</span>
                 </div>
+                <div class="td-keyfacts" aria-label="Key facts about {escape_html(name)}">
+                    <div class="kf-title">KEY FACTS</div>
+                    <div class="kf-grid">
+                        <div class="kf-item"><span class="kf-k">Price</span><span class="kf-v">{escape_html(tool.get('price', '—'))}</span></div>
+                        <div class="kf-item"><span class="kf-k">Free tier</span><span class="kf-v">{'Yes' if 'free' in str(tool.get('price', '')).lower() else 'No'}</span></div>
+                        <div class="kf-item"><span class="kf-k">Category</span><span class="kf-v">{escape_html(cat)}</span></div>
+                        <div class="kf-item"><span class="kf-k">Platforms</span><span class="kf-v">{escape_html(platform_short or tool.get('platform', 'Web'))}</span></div>
+                        <div class="kf-item"><span class="kf-k">Editor score</span><span class="kf-v">{escape_html(score_val)} / 5</span></div>
+                        <div class="kf-item"><span class="kf-k">Last updated</span><span class="kf-v">{date_disp}</span></div>
+                    </div>
+                </div>
             </div>
             <aside class="td-score-card">
                 <div class="td-score-label">EDITOR SCORE</div>
                 <div class="td-score-value">{escape_html(score_val)} / 5</div>
                 <div class="td-score-note{score_note_cls}">{score_note}</div>
                 <a class="td-visit-btn" href="{get_tool_link(tool, slug, 'en')[0]}" target="_blank" rel="{'nofollow noopener sponsored' if get_tool_link(tool, slug, 'en')[1] else 'noopener'}">Visit {escape_html(name)} →</a>
-                <a class="td-issue-link" href="/contact.html?tool={slug}" style="display:block;margin-top:10px;font-size:12px;color:var(--text-muted,#64748b);text-decoration:none;text-align:center;">Found an error? Report it</a>
+                <a class="td-issue-link" href="/contact?tool={slug}" style="display:block;margin-top:10px;font-size:12px;color:var(--text-muted,#64748b);text-decoration:none;text-align:center;">Found an error? Report it</a>
                 <div style="display:flex;justify-content:center;gap:8px;margin-top:10px;flex-wrap:wrap;">
                     <span class="tool-like" role="button" tabindex="0" data-slug="{slug}" aria-label="Like {escape_html(name)}" title="Found it useful? Give it a like">👍 <b class="tool-like-count">0</b></span>
                     <button type="button" class="tool-like" data-fav-slug="{slug}" aria-label="Save {escape_html(name)} to favorites" aria-pressed="false" title="Save this tool for later">☆ Save</button>
@@ -1189,25 +1202,33 @@ def build_article_page_en(article: dict, all_articles: list, all_tools: list = N
         </div>'''
 
     # Structured data
-    # 分类页不存在时，面包屑第2项不给 URL（Schema 允许 name-only 的 ListItem），
-    # 避免 JSON-LD 声明 404 目标。
+    # Google 要求：除最后一项外，每个 ListItem 必须有 item 字段（只有最后一项可省略）。
+    # 2026-11-21 修复 Search Console "Missing field 'item' (in 'itemListElement')"：
+    # 分类页不存在时不再输出 name-only 的中间项，而是去掉该级面包屑，
+    # 只保留 Home → Article（两项均带 item，且不引用 404 目标）。
     if linkable:
-        cat_li = {"@type":"ListItem","position":2,"name":cat,"item":f"{SITE_DOMAIN}/category/{cat_slug}/"}
+        breadcrumb_elements = [
+            {"@type":"ListItem","position":1,"name":"Home","item":f"{SITE_DOMAIN}/"},
+            {"@type":"ListItem","position":2,"name":cat,"item":f"{SITE_DOMAIN}/category/{cat_slug}/"},
+            {"@type":"ListItem","position":3,"name":title,"item":f"{SITE_DOMAIN}/articles/{slug}/"},
+        ]
     else:
-        cat_li = {"@type":"ListItem","position":2,"name":cat}
+        breadcrumb_elements = [
+            {"@type":"ListItem","position":1,"name":"Home","item":f"{SITE_DOMAIN}/"},
+            {"@type":"ListItem","position":2,"name":title,"item":f"{SITE_DOMAIN}/articles/{slug}/"},
+        ]
     breadcrumb_data = {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
-        "itemListElement": [
-            {"@type":"ListItem","position":1,"name":"Home","item":f"{SITE_DOMAIN}/"},
-            cat_li,
-            {"@type":"ListItem","position":3,"name":title,"item":f"{SITE_DOMAIN}/articles/{slug}/"},
-        ]
+        "itemListElement": breadcrumb_elements,
     }
     article_schema = {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": title,
+        # 2026-11-22: 补 image（Google Article 推荐/必查字段，GSC 会报 Missing field image）
+        # OG PNG 在构建末段统一生成（ensure_en_og_image 同款命名），此处用确定性 URL。
+        "image": [f'{SITE_DOMAIN}/images/og/{slug}-en-og.png'],
         "description": article.get('description',''),
         "datePublished": article_date,
         "dateModified":  _iso_date_for_schema(date_modified_raw),
@@ -1226,7 +1247,7 @@ def build_article_page_en(article: dict, all_articles: list, all_tools: list = N
             "logo": {"@type":"ImageObject","url":SITE_LOGO},
             "foundingDate": "2026-03-21",
             "slogan": "Data-driven AI tool decisions",
-            "publishingPrinciples": f"{SITE_DOMAIN}/about.html",
+            "publishingPrinciples": f"{SITE_DOMAIN}/about",
             "sameAs": ["https://github.com/yiweichen10/ai-toolbox"]
         },
         "mainEntityOfPage": {"@type":"WebPage","@id":f"{SITE_DOMAIN}/articles/{slug}/"}
@@ -1411,7 +1432,7 @@ def build_article_page_en(article: dict, all_articles: list, all_tools: list = N
                 {content_html}
                 <div class="author-note">
                     <p><strong>About the author:</strong> This article was written by the <a href="/author/">AI Tool Lab Editorial Team</a>, with 5+ years of paid AI tool testing experience and $200+ monthly subscription spend. All reviews are based on real paid long-term use.</p>
-                    <p><strong>Data statement:</strong> All data in this article cites its source and is verifiable. Found an error? Report it via our <a href="/contact.html">contact page</a>, we verify within 48 hours.</p>
+                    <p><strong>Data statement:</strong> All data in this article cites its source and is verifiable. Found an error? Report it via our <a href="/contact">contact page</a>, we verify within 48 hours.</p>
                 </div>
             </article>
             {toc_html}
@@ -2144,7 +2165,7 @@ def build_index_en(tools: list, articles: list) -> str:
         </div>
         <p class="hs-sub">Ranked by a published 4-factor rubric</p>
         {shortlist_rows}
-        <div class="hs-foot">Scores refreshed {datetime.now().strftime('%d %b %Y')} &middot; <a href="/about.html#scoring">How we rank</a></div>
+        <div class="hs-foot">Scores refreshed {datetime.now().strftime('%d %b %Y')} &middot; <a href="/about#scoring">How we rank</a></div>
     </aside>'''
 
     top_rated_html = '<ol style="list-style:none;padding:0;margin:0;">'
@@ -2247,7 +2268,7 @@ def build_index_en(tools: list, articles: list) -> str:
         "description": "AI Tool Lab is an independent AI tool review site featuring {total_tools}+ tested tools and {total_articles} in-depth articles. All reviews based on paid long-term usage. $200+/month testing budget.",
         "knowsAbout": ["AI tools", "AI models", "AI coding", "AI image generation", "AI video", "AI office", "AI chat", "AEO", "GEO"],
         "slogan": "Data-driven AI tool decisions",
-        "publishingPrinciples": "https://www.aitoolbox.hk/about.html",
+        "publishingPrinciples": "https://www.aitoolbox.hk/about",
         "actionableFeedbackPolicy": "All review data comes from public sources or author testing, every article cites sources, all verifiable.",
         "sameAs": [
             "https://github.com/yiweichen10/ai-toolbox"
@@ -2377,7 +2398,7 @@ def build_index_en(tools: list, articles: list) -> str:
         {trust_html}
 
         <div class="editorial-note">
-            <strong>EDITORIAL NOTE</strong> &middot; Review data comes from public sources or author testing on paid accounts. <a href="/about.html">Read our methodology and correction policy</a> &middot; Last updated {datetime.now().strftime('%d %b %Y')}.
+            <strong>EDITORIAL NOTE</strong> &middot; Review data comes from public sources or author testing on paid accounts. <a href="/about">Read our methodology and correction policy</a> &middot; Last updated {datetime.now().strftime('%d %b %Y')}.
         </div>
 
         <div class="main-layout">
@@ -2446,9 +2467,11 @@ def generate_sitemap_en(tools: list, articles: list, cat_slugs: list, alt_slugs:
         f'    <url><loc>{SITE_DOMAIN}/</loc><lastmod>{today}</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>',
         f'    <url><loc>{SITE_DOMAIN}/category/</loc><lastmod>{today}</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>',
         f'    <url><loc>{SITE_DOMAIN}/articles/</loc><lastmod>{today}</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>',
-        f'    <url><loc>{SITE_DOMAIN}/about.html</loc><lastmod>{today}</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>',
-        f'    <url><loc>{SITE_DOMAIN}/contact.html</loc><lastmod>{today}</lastmod><changefreq>monthly</changefreq><priority>0.4</priority></url>',
-        f'    <url><loc>{SITE_DOMAIN}/submit.html</loc><lastmod>{today}</lastmod><changefreq>monthly</changefreq><priority>0.4</priority></url>',
+        f'    <url><loc>{SITE_DOMAIN}/about</loc><lastmod>{today}</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>',
+        f'    <url><loc>{SITE_DOMAIN}/contact</loc><lastmod>{today}</lastmod><changefreq>monthly</changefreq><priority>0.4</priority></url>',
+        f'    <url><loc>{SITE_DOMAIN}/submit</loc><lastmod>{today}</lastmod><changefreq>monthly</changefreq><priority>0.4</priority></url>',
+        f'    <url><loc>{SITE_DOMAIN}/best/</loc><lastmod>{today}</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>',
+        f'    <url><loc>{SITE_DOMAIN}/new/</loc><lastmod>{today}</lastmod><changefreq>daily</changefreq><priority>0.6</priority></url>',
         f'    <url><loc>{SITE_DOMAIN}/privacy</loc><lastmod>{today}</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>',
         f'    <url><loc>{SITE_DOMAIN}/terms</loc><lastmod>{today}</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>',
     ]
@@ -2466,7 +2489,7 @@ def generate_sitemap_en(tools: list, articles: list, cat_slugs: list, alt_slugs:
 
     # 静态信任页(E-E-A-T 硬指标: About / Author) — 确保被 Google 发现
     static_trust_pages = [
-        (f'{SITE_DOMAIN}/about.html', '0.7', 'monthly'),
+        (f'{SITE_DOMAIN}/about', '0.7', 'monthly'),
         (f'{SITE_DOMAIN}/author/', '0.7', 'monthly'),
     ]
     for loc, prio, freq in static_trust_pages:
@@ -2601,7 +2624,7 @@ def generate_llms_txt_en(tools: list, articles: list, alt_slugs: list = None,
     out.append('- [Home](https://www.aitoolbox.hk/): featured, latest and hot AI tools')
     out.append(f'- [Category Overview](https://www.aitoolbox.hk/category/): all {len(cats_sorted)} category pages with a quick-reference table')
     out.append('- [Search](https://www.aitoolbox.hk/search/): instant search across all tools and articles')
-    out.append(f'- [Submit a tool](https://www.aitoolbox.hk/submit.html): free submissions, editor-tested before review; rankings cannot be bought')
+    out.append(f'- [Submit a tool](https://www.aitoolbox.hk/submit): free submissions, editor-tested before review; rankings cannot be bought')
     out.append(f'- [Articles](https://www.aitoolbox.hk/articles/): original hands-on reviews, comparisons and guides ({n_arts} articles)')
     out.append(f'- [Full content for AI models](https://www.aitoolbox.hk/llms-full.txt): llms-full.txt — every tool and article in one plain-text file')
     out.append('')
@@ -3220,7 +3243,7 @@ def build_contact_page_en() -> str:
     """contact.html — the author block on every tool page links here; it was a
     404 until 2026-11-17. One honest channel: the team email."""
     today_iso = datetime.now().strftime('%Y-%m-%d')
-    hreflang = hreflang_tags('/contact.html', '/contact.html')
+    hreflang = hreflang_tags('/contact', '/contact')
     return f'''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -3229,7 +3252,7 @@ def build_contact_page_en() -> str:
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact AI Tool Lab - {SITE_NAME}</title>
     <meta name="description" content="Reach the AI Tool Lab editorial team: factual corrections, tool submissions and general feedback. Corrections to factual errors are fixed within 48 hours.">
-    <link rel="canonical" href="{SITE_DOMAIN}/contact.html">
+    <link rel="canonical" href="{SITE_DOMAIN}/contact">
 {hreflang}    <link rel="stylesheet" href="/css/style.css?{CSS_VERSION}">
 {VERIFICATION_BLOCK}{GA_BLOCK}
 </head>
@@ -3253,12 +3276,12 @@ def build_contact_page_en() -> str:
                         </div></div></div>
                 <div class="td-faq-divider"></div>
                 <div class="td-faq-item"><h3>Tool submissions</h3>
-                    <div class="td-faq-a"><p>Use the <a href="/submit.html">submission page</a> so your entry carries
+                    <div class="td-faq-a"><p>Use the <a href="/submit">submission page</a> so your entry carries
                         everything our editors need. Submissions are free; rankings are not for sale.</p></div></div>
                 <div class="td-faq-divider"></div>
                 <div class="td-faq-item"><h3>Everything else</h3>
                     <div class="td-faq-a"><p>Feedback on the methodology, requests for comparisons, and partnership
-                        questions that do not involve buying rankings. See <a href="/about.html">about</a> for how
+                        questions that do not involve buying rankings. See <a href="/about">about</a> for how
                         we review and how the site is funded.</p></div></div>
             </div>
         </section>
@@ -3290,7 +3313,7 @@ def build_submit_page_en() -> str:
     """submit.html — free submissions only. The site's trust position is that
     rankings cannot be bought, so this page must never promise paid placement
     or guaranteed review dates."""
-    hreflang = hreflang_tags('/submit.html', '/submit.html')
+    hreflang = hreflang_tags('/submit', '/submit')
     return f'''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -3299,7 +3322,7 @@ def build_submit_page_en() -> str:
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Submit an AI Tool - {SITE_NAME}</title>
     <meta name="description" content="Submit your AI tool to AI Tool Lab for free. Every submission is editor-tested before review; rankings cannot be bought and are never for sale.">
-    <link rel="canonical" href="{SITE_DOMAIN}/submit.html">
+    <link rel="canonical" href="{SITE_DOMAIN}/submit">
 {hreflang}    <link rel="stylesheet" href="/css/style.css?{CSS_VERSION}">
 {VERIFICATION_BLOCK}{GA_BLOCK}
 </head>
@@ -3360,7 +3383,7 @@ def build_submit_page_en() -> str:
 def build_favorites_page_en() -> str:
     """favorites.html — personal, client-side-only page (localStorage).
     noindex: zero unique content, purely a user utility."""
-    hreflang = hreflang_tags('/favorites.html', '/favorites.html')
+    hreflang = hreflang_tags('/favorites', '/favorites')
     return f'''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -3404,10 +3427,121 @@ def build_favorites_page_en() -> str:
 </html>'''
 
 
+def build_best_page_en(tools_list) -> str:
+    """/best/ — Top Rated AI Tools (Top 50 by the public rubric). Targets
+    'best ai tools 2026'-class queries; every ranking auditable via Score
+    breakdown on each review page."""
+    today_disp = datetime.now().strftime('%d %b %Y').lstrip('0')
+    hreflang = hreflang_tags('/best/', '/best/')
+    ranked = sort_by_editorial_score(tools_list)[:50]
+    rows = ''
+    for i, t in enumerate(ranked, start=1):
+        s = _RUBRIC_SCORES.get(t.get('slug', ''), {})
+        total = s.get('total', '')
+        total_disp = f'{total:.1f}' if isinstance(total, (int, float)) else '&mdash;'
+        rows += (
+            f'<tr>'
+            f'<td class="rank">{i:02d}</td>'
+            f'<td class="toolcell">{tool_tile(t)}<a href="/tools/{t["slug"]}/">{escape_html(t["name"])}</a></td>'
+            f'<td class="cat">{escape_html(t.get("category", ""))}</td>'
+            f'<td class="price">{escape_html(t.get("price", ""))}</td>'
+            f'<td class="score">{rating_num(t):.1f}/5 <span class="rub">({total_disp})</span></td>'
+            f'</tr>\n'
+        )
+    return f'''<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Rated AI Tools 2026 - The 50 Best, Ranked by a Published Rubric | {SITE_NAME}</title>
+    <meta name="description" content="The 50 highest-rated AI tools on {SITE_NAME}, ranked by a transparent 4-factor scoring rubric (depth, completeness, popularity, freshness). No paid placements - every score is auditable.">
+    <link rel="canonical" href="{SITE_DOMAIN}/best/">
+{hreflang}    <link rel="stylesheet" href="/css/style.css?{CSS_VERSION}">
+{VERIFICATION_BLOCK}{GA_BLOCK}
+</head>
+<body>
+{header_html()}
+
+    <main class="cat-hub">
+        <h1 class="page-title">Top Rated AI Tools &mdash; Top 50</h1>
+        <p class="cat-intro">Ranked by our <a href="/about#scoring">published 4-factor rubric</a> (0&ndash;100): review depth, completeness, popularity and freshness. Updated daily &middot; Last ranked {today_disp}. Paid placements are not for sale.</p>
+
+        <section class="cat-section">
+            <table class="best-table">
+                <thead>
+                    <tr><th>#</th><th>Tool</th><th>Category</th><th>Price</th><th>Score</th></tr>
+                </thead>
+                <tbody>
+{rows}                </tbody>
+            </table>
+            <p class="best-note">Scores shown as star rating (rubric total). "Best" here means best-reviewed on this site &mdash; see <a href="/about#scoring">how we score</a> and each review's Score breakdown for the audit trail.</p>
+        </section>
+    </main>
+
+{footer_html()}
+    ''' + BACK_TO_TOP_BLOCK + DARK_MODE_BLOCK + '''
+</body>
+</html>'''
+
+
+def build_new_page_en(tools_list) -> str:
+    """/new/ — Newly Added tools, newest first (created_date; undated skipped)."""
+    today_disp = datetime.now().strftime('%d %b %Y').lstrip('0')
+    hreflang = hreflang_tags('/new/', '/new/')
+
+    def _added_key(t):
+        d = t.get('created_date') or t.get('last_verified') or ''
+        return d if isinstance(d, str) and d[:1].isdigit() else '0000-00-00'
+
+    fresh = sorted(tools_list, key=_added_key, reverse=True)
+    fresh = [t for t in fresh if _added_key(t) != '0000-00-00'][:60]
+    cards = ''
+    for t in fresh:
+        d = _added_key(t)
+        cards += (
+            f'<a class="new-card" href="/tools/{t["slug"]}/">'
+            f'{tool_tile(t)}'
+            f'<div class="new-info"><div class="new-name">{escape_html(t.get("name", ""))}</div>'
+            f'<div class="new-meta">{escape_html(t.get("category", ""))} &middot; {escape_html(t.get("price", ""))}</div></div>'
+            f'<span class="new-date">{escape_html(d)}</span>'
+            f'</a>\n'
+        )
+    return f'''<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newly Added AI Tools 2026 - Fresh Reviews This Month | {SITE_NAME}</title>
+    <meta name="description" content="The newest AI tools reviewed and scored on {SITE_NAME}, newest first. Every entry gets the same transparent 4-factor rubric - new does not mean unvetted.">
+    <link rel="canonical" href="{SITE_DOMAIN}/new/">
+{hreflang}    <link rel="stylesheet" href="/css/style.css?{CSS_VERSION}">
+{VERIFICATION_BLOCK}{GA_BLOCK}
+</head>
+<body>
+{header_html()}
+
+    <main class="cat-hub">
+        <h1 class="page-title">Newly Added AI Tools</h1>
+        <p class="cat-intro">Fresh reviews, newest first &middot; Updated daily, last on {today_disp}. New does not mean unvetted: every tool gets the same public scoring rubric.</p>
+
+        <section class="cat-section">
+            <div class="new-grid">
+{cards}            </div>
+        </section>
+    </main>
+
+{footer_html()}
+    ''' + BACK_TO_TOP_BLOCK + DARK_MODE_BLOCK + '''
+</body>
+</html>'''
+
+
 def build_privacy_page_en() -> str:
     """privacy.html — required trust/legal page (GA + affiliate + localStorage)."""
     today_iso = datetime.now().strftime('%Y-%m-%d')
-    hreflang = hreflang_tags('/privacy.html', '/privacy.html')
+    hreflang = hreflang_tags('/privacy', '/privacy')
     return f'''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -3469,7 +3603,7 @@ def build_privacy_page_en() -> str:
 def build_terms_page_en() -> str:
     """terms.html — required trust/legal page (AS-IS content, IP, affiliate, third-party links)."""
     today_iso = datetime.now().strftime('%Y-%m-%d')
-    hreflang = hreflang_tags('/terms.html', '/terms.html')
+    hreflang = hreflang_tags('/terms', '/terms')
     return f'''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -3497,16 +3631,16 @@ def build_terms_page_en() -> str:
             <p>Our reviews, scores, rubric and articles are copyright {SITE_NAME}. Tool names, logos and trademarks belong to their respective owners; we use them for identification and review purposes only, which does not imply endorsement by the vendor.</p>
 
             <h2>Third-party links and affiliates</h2>
-            <p>We link to external tool websites we do not control. Some are affiliate links (marked <code>rel="nofollow sponsored"</code>) that may earn us a commission. Commissions never influence our scores or rankings &mdash; see <a href="/about.html#scoring">the public scoring rubric</a>. We are not responsible for the content, pricing or practices of external sites.</p>
+            <p>We link to external tool websites we do not control. Some are affiliate links (marked <code>rel="nofollow sponsored"</code>) that may earn us a commission. Commissions never influence our scores or rankings &mdash; see <a href="/about#scoring">the public scoring rubric</a>. We are not responsible for the content, pricing or practices of external sites.</p>
 
             <h2>Acceptable use</h2>
             <p>You may quote or reference our content with attribution and a link. Bulk scraping, republishing full reviews, or automated abuse of the like feature is not permitted.</p>
 
             <h2>Submissions</h2>
-            <p>Submitting a tool is free and grants us a non-exclusive right to publish an editorial review of it. Submission does not guarantee inclusion, a positive score, or any ranking position. <a href="/submit.html">Details here</a>.</p>
+            <p>Submitting a tool is free and grants us a non-exclusive right to publish an editorial review of it. Submission does not guarantee inclusion, a positive score, or any ranking position. <a href="/submit">Details here</a>.</p>
 
             <h2>Liability</h2>
-            <p>To the maximum extent permitted by law, {SITE_NAME} is not liable for any loss arising from decisions made based on our content. If a fact is wrong, <a href="/contact.html">tell us</a> &mdash; verified errors are fixed within 48 hours.</p>
+            <p>To the maximum extent permitted by law, {SITE_NAME} is not liable for any loss arising from decisions made based on our content. If a fact is wrong, <a href="/contact">tell us</a> &mdash; verified errors are fixed within 48 hours.</p>
 
             <h2>Changes</h2>
             <p>These terms may be updated as the service evolves; the date above always reflects the current version. Questions: <a href="mailto:{CONTACT_EMAIL}">{CONTACT_EMAIL}</a>.</p>
@@ -4050,7 +4184,15 @@ def build_all_en(target: str = 'all'):
         f.write('window.__ALL_TOOLS_EN__=' + json.dumps(tools_index, ensure_ascii=False, separators=(',', ':')) + ';')
     with open(os.path.join(OUT_DIR, 'favorites.html'), 'w', encoding='utf-8') as f:
         f.write(build_favorites_page_en())
-    print(f'[OK] en/js/tools-data.js ({len(tools_index)} tools) + en/favorites.html')
+    best_dir = os.path.join(OUT_DIR, 'best')
+    os.makedirs(best_dir, exist_ok=True)
+    with open(os.path.join(best_dir, 'index.html'), 'w', encoding='utf-8') as f:
+        f.write(build_best_page_en(published_tools))
+    new_dir = os.path.join(OUT_DIR, 'new')
+    os.makedirs(new_dir, exist_ok=True)
+    with open(os.path.join(new_dir, 'index.html'), 'w', encoding='utf-8') as f:
+        f.write(build_new_page_en(published_tools))
+    print(f'[OK] en/js/tools-data.js ({len(tools_index)} tools) + en/favorites.html + en/best/ + en/new/')
 
     # ── IndexNow push ─────────────────────────────────────────────────────────
     cache_file = os.path.join(BASE_DIR, '.indexnow_en_pushed.json')

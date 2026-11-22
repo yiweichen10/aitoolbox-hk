@@ -1,0 +1,83 @@
+[
+ {
+  "name": "Copyleaks",
+  "slug": "copyleaks",
+  "url": "https://copyleaks.com/",
+  "category": "AI Writing",
+  "color": "#0F766E",
+  "platform": "Web + Google Docs / Office add-ons + LMS integrations + API",
+  "published": true,
+  "price": "Freemium - paid from ~$10/mo",
+  "description": "Enterprise-grade AI content detection and plagiarism checking for education and business, with LMS integrations, source-code plagiarism detection and multilingual support across 30+ languages.",
+  "tags": [
+   {
+    "text": "AI Detection"
+   },
+   {
+    "text": "Plagiarism"
+   },
+   {
+    "text": "Education"
+   },
+   {
+    "text": "Enterprise"
+   },
+   {
+    "text": "LMS"
+   },
+   {
+    "text": "Multilingual"
+   }
+  ],
+  "badge": {
+   "type": "new",
+   "text": "NEW"
+  },
+  "pros": [
+   "Deepest education-integration story: Canvas, Moodle, Blackboard and Google Docs add-ons",
+   "Unique source-code plagiarism detection, which no consumer detector offers",
+   "Strong multilingual coverage - 30+ languages, rare in this category",
+   "Institutional controls: repository-wide cross-comparison and audit trails"
+  ],
+  "cons": [
+   "Pricing is per-page credit based, which gets confusing versus flat subscriptions",
+   "Interface is enterprise-heavy for someone who just wants a quick check",
+   "AI detection accuracy, like all competitors, degrades on heavily edited AI text"
+  ],
+  "features": [
+   "AI content detection across 30+ languages",
+   "Classic plagiarism checking with repository cross-comparison",
+   "Source-code plagiarism detection",
+   "LMS integrations (Canvas, Moodle, Blackboard) and Google Docs / Office add-ons",
+   "Paraphrase detection layer",
+   "API and institutional admin controls",
+   "Audit trail and shareable reports"
+  ],
+  "faq": [
+   {
+    "question": "Who is Copyleaks for?",
+    "answer": "Schools, universities and companies running originality programs at scale. The LMS integrations are the giveaway: if your institution runs assignments through Canvas or Moodle, Copyleaks plugs directly into the grading flow, which consumer tools cannot do."
+   },
+   {
+    "question": "Does it really detect plagiarized source code?",
+    "answer": "Yes - this is its most distinctive feature. It compares code structure and logic rather than just strings, which matters for computer-science courses and for companies auditing contractor-delivered codebases. Few competitors even attempt this."
+   },
+   {
+    "question": "How is it priced versus GPTZero or Originality.ai?",
+    "answer": "Copyleaks sells page-based credits on subscriptions, with institutional and business tiers quoted on contact. For individual writers it feels pricier and more bureaucratic; for institutions with hundreds of students it usually prices better than per-seat tools."
+   },
+   {
+    "question": "Can it handle non-English text?",
+    "answer": "That is one of its strongest cards - AI detection and plagiarism across 30+ languages, which matters for international universities and multilingual content teams. Most consumer detectors are effectively English-first."
+   }
+  ],
+  "pricing_details": "Free trial scans to test the interface; paid plans are page-credit based, with individual tiers starting around $10/mo (billed annually) and institutional/business pricing quoted per volume. LMS integration and API availability vary by tier. Confirm current numbers on the official pricing page.",
+  "content": "## The Institutional Contender\n\nIf GPTZero is the classroom detector and Originality.ai is the publishing detector, Copyleaks is the one your university IT department already evaluated. It has been in the originality business longer than the AI-detection wave - it built its name on plagiarism checking for education - and it added AI content detection as the category exploded. That heritage shows in the product: where consumer tools optimize for a single paste-and-scan, Copyleaks optimizes for thousands of submissions flowing through institutional systems every semester.\n\nThe integration list is the moat. Canvas, Moodle and Blackboard plugins mean a teacher never leaves the grading flow. Google Docs and Office add-ons mean a corporate reviewer never leaves the document. For institutions, there is repository cross-comparison - every new submission is checked against everything previously scanned by the same account, which is how you catch the assignment-copied-from-last-semester problem that pure AI detectors miss entirely.\n\n## Two Capabilities Competitors Lack\n\nThe first is source-code plagiarism detection. Copyleaks compares code semantically - structure and logic, not just text lines - which makes it the default pick for computer-science departments and for companies auditing outsourced code. No consumer AI detector offers anything equivalent.\n\nThe second is serious multilingual coverage: AI detection across 30+ languages rather than English-with-asterisks. International universities and multilingual content agencies are underserved by English-first tools, and this is quietly a deciding factor in procurement decisions.\n\n## The Trade-Offs\n\nThe credit system is page-based rather than word-based, which constantly surprises people arriving from GPTZero or ZeroGPT - a 'page' is roughly 250 words, so long documents consume credits faster than you might model. The interface is built for administrators, not casual users; if you want a ten-second check, this is the wrong tool. And the accuracy caveat that applies to every detector applies here too: heavily edited AI text and template-driven human text both degrade scores, so institutional policies should treat detection reports as one input among several, never as automated verdicts.\n\nFor a fuller picture of the category, compare with our reviews of [GPTZero](/tools/gptzero/), [Originality.ai](/tools/originality-ai/) and the free-tier staple [ZeroGPT](/tools/zerogpt/). On the generation side of the arms race, [ChatGPT](/tools/chatgpt/) and [Claude](/tools/claude/) remain the dominant sources of the text being checked.",
+  "related": [
+   "gptzero",
+   "originality-ai",
+   "zerogpt",
+   "chatgpt"
+  ]
+ }
+]

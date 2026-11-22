@@ -18,7 +18,7 @@
 - [Home](https://www.aitoolbox.hk/): featured, latest and hot AI tools
 - [Category Overview](https://www.aitoolbox.hk/category/): all 22 category pages with a quick-reference table
 - [Search](https://www.aitoolbox.hk/search/): instant search across all tools and articles
-- [Submit a tool](https://www.aitoolbox.hk/submit.html): free submissions, editor-tested before review; rankings cannot be bought
+- [Submit a tool](https://www.aitoolbox.hk/submit): free submissions, editor-tested before review; rankings cannot be bought
 - [Articles](https://www.aitoolbox.hk/articles/): original hands-on reviews, comparisons and guides (232 articles)
 - [Full content for AI models](https://www.aitoolbox.hk/llms-full.txt): llms-full.txt — every tool and article in one plain-text file
 
@@ -91,8 +91,8 @@
 - [Mistral AI](https://www.aitoolbox.hk/tools/mistral-ai/): French AI lab behind the Mistral and Le Chat models, balancing open-source releases with a commercial API…
 - [DeepSeek V4](https://www.aitoolbox.hk/tools/deepseek-v4/): DeepSeek V4 is a frontier-level open-source AI model with a 1M context window and industry-leading coding…
 - [Grok 4.20](https://www.aitoolbox.hk/tools/grok/): xAI's flagship model, optimized for real-time truth, advanced reasoning, and record-low hallucination rates…
-- [ChatGPT](https://www.aitoolbox.hk/tools/chatgpt/): OpenAI's flagship AI assistant for text generation, coding, data analysis, and creative work. GPT-4o delivers…
 - [Kimi](https://www.aitoolbox.hk/tools/kimi/): Kimi is a free AI chat assistant with 2M token context length, excelling at document analysis with direct…
+- [ChatGPT](https://www.aitoolbox.hk/tools/chatgpt/): OpenAI's flagship AI assistant for text generation, coding, data analysis, and creative work. GPT-4o delivers…
 
 ### AI Productivity (11)
 - [Fireflies AI](https://www.aitoolbox.hk/tools/fireflies-ai/): Fireflies AI is an AI meeting notetaker whose bot, Fred, joins your Zoom, Google Meet, Microsoft Teams or…
@@ -148,7 +148,7 @@
 - [Durable](https://www.aitoolbox.hk/tools/durable/): Durable is an AI business builder that generates a full website in about 30 seconds from one prompt, then…
 - [10Web](https://www.aitoolbox.hk/tools/10web/): 10Web is an agentic AI website builder that generates a full WordPress site from a prompt, an existing URL or…
 - [Elementor](https://www.aitoolbox.hk/tools/elementor/): The WordPress page builder behind millions of sites, now bundling AI copy, images and CSS into every tier…
-- [Base44](https://www.aitoolbox.hk/tools/base44/): Wix-owned vibe-coding builder that turns a sentence into a working full-stack app - database, login, and…
+- [Carrd](https://www.aitoolbox.hk/tools/carrd/): A one-page site builder at $19 per year - the cheapest legitimate way to put a funnel, link-in-bio or product…
 
 ### AI Office (5)
 - [Intercom](https://www.aitoolbox.hk/tools/intercom/): Intercom is the AI-first customer service platform behind Fin, the support agent that answers tickets instead…
@@ -191,6 +191,8 @@
 
 ### Head-to-head comparisons (80 total)
 
+- [10Web vs Durable](https://www.aitoolbox.hk/vs/10web-vs-durable/): pricing and feature comparison
+- [10Web vs Webflow AI](https://www.aitoolbox.hk/vs/10web-vs-webflow-ai/): pricing and feature comparison
 - [Activepieces vs Flowise](https://www.aitoolbox.hk/vs/activepieces-vs-flowise/): pricing and feature comparison
 - [Activepieces vs Relevance AI](https://www.aitoolbox.hk/vs/activepieces-vs-relevance-ai/): pricing and feature comparison
 - [Aider vs Cline](https://www.aitoolbox.hk/vs/aider-vs-cline/): pricing and feature comparison
@@ -203,11 +205,10 @@
 - [Brand24 vs SparkToro](https://www.aitoolbox.hk/vs/brand24-vs-sparktoro/): pricing and feature comparison
 - [Brandwatch vs SparkToro](https://www.aitoolbox.hk/vs/brandwatch-vs-sparktoro/): pricing and feature comparison
 - [Buffer vs Semrush AI](https://www.aitoolbox.hk/vs/buffer-vs-semrush-ai/): pricing and feature comparison
-- [Carrd vs Durable](https://www.aitoolbox.hk/vs/carrd-vs-durable/): pricing and feature comparison
-- [Carrd vs Webflow AI](https://www.aitoolbox.hk/vs/carrd-vs-webflow-ai/): pricing and feature comparison
 - [ChatGPT vs Claude](https://www.aitoolbox.hk/vs/chatgpt-vs-claude/): pricing and feature comparison
 - [ChatGPT vs Gemini](https://www.aitoolbox.hk/vs/chatgpt-vs-gemini/): pricing and feature comparison
 - [ChatGPT vs Perplexity](https://www.aitoolbox.hk/vs/chatgpt-vs-perplexity/): pricing and feature comparison
+- [Claude vs Gemini](https://www.aitoolbox.hk/vs/claude-vs-gemini/): pricing and feature comparison
 - [Cline vs Warp](https://www.aitoolbox.hk/vs/cline-vs-warp/): pricing and feature comparison
 - [Clipdrop vs Krea 2](https://www.aitoolbox.hk/vs/clipdrop-vs-krea-2/): pricing and feature comparison
 - [Clipdrop vs Topaz Photo AI](https://www.aitoolbox.hk/vs/clipdrop-vs-topaz-photo-ai/): pricing and feature comparison
@@ -267,7 +268,6 @@
 - [Patreon vs Substack](https://www.aitoolbox.hk/vs/patreon-vs-substack/): pricing and feature comparison
 - [Peec AI vs Semrush](https://www.aitoolbox.hk/vs/peec-ai-vs-semrush/): pricing and feature comparison
 - [Relume vs Wix AI](https://www.aitoolbox.hk/vs/relume-vs-wix-ai/): pricing and feature comparison
-- [Runway vs Sora](https://www.aitoolbox.hk/vs/runway-vs-sora/): pricing and feature comparison
 - [Runway vs Veo](https://www.aitoolbox.hk/vs/runway-vs-veo/): pricing and feature comparison
 - [Sora vs Veo](https://www.aitoolbox.hk/vs/sora-vs-veo/): pricing and feature comparison
 - [Soundraw vs Wondercraft AI](https://www.aitoolbox.hk/vs/soundraw-vs-wondercraft-ai/): pricing and feature comparison

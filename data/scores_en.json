@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-21",
+ "generated_at": "2026-11-22",
  "rubric": {
   "description": "Transparent 4-factor editorial ranking score (0-100); displayed star = 1 + total/100*4",
   "weights": {
@@ -26,23 +26,23 @@
    "completeness": 6.28,
    "popularity": 3.75,
    "likes": 1,
-   "freshness": 6.49,
-   "total": 63.6
+   "freshness": 6.46,
+   "total": 63.5
   },
   "claude": {
    "depth": 7.94,
    "completeness": 5.93,
-   "popularity": 2.35,
-   "likes": 0,
-   "freshness": 6.49,
-   "total": 58.2
+   "popularity": 2.95,
+   "likes": 1,
+   "freshness": 6.46,
+   "total": 59.7
   },
   "midjourney": {
    "depth": 8.32,
    "completeness": 6.27,
    "popularity": 2.75,
    "likes": 0,
-   "freshness": 6.49,
+   "freshness": 6.46,
    "total": 61.4
   },
   "github-copilot": {
@@ -58,7 +58,7 @@
    "completeness": 6.19,
    "popularity": 1.5,
    "likes": 0,
-   "freshness": 6.49,
+   "freshness": 6.46,
    "total": 56.5
   },
   "cursor": {
@@ -66,8 +66,8 @@
    "completeness": 6.12,
    "popularity": 1.67,
    "likes": 0,
-   "freshness": 6.49,
-   "total": 57.1
+   "freshness": 6.46,
+   "total": 57.0
   },
   "kimi": {
    "depth": 7.93,
@@ -122,7 +122,7 @@
    "completeness": 6.12,
    "popularity": 3.12,
    "likes": 0,
-   "freshness": 6.49,
+   "freshness": 6.46,
    "total": 60.2
   },
   "pika": {
@@ -178,7 +178,7 @@
    "completeness": 6.73,
    "popularity": 3.07,
    "likes": 0,
-   "freshness": 6.49,
+   "freshness": 6.46,
    "total": 63.0
   },
   "heygen": {
@@ -658,15 +658,15 @@
    "completeness": 7.53,
    "popularity": 2.39,
    "likes": 0,
-   "freshness": 5.59,
-   "total": 41.2
+   "freshness": 5.56,
+   "total": 41.1
   },
   "gummysearch": {
    "depth": 2.74,
    "completeness": 6.73,
    "popularity": 1.0,
    "likes": 0,
-   "freshness": 5.62,
+   "freshness": 5.59,
    "total": 37.3
   },
   "synthesia": {
@@ -674,8 +674,8 @@
    "completeness": 7.66,
    "popularity": 2.61,
    "likes": 0,
-   "freshness": 5.74,
-   "total": 45.2
+   "freshness": 5.72,
+   "total": 45.1
   },
   "comfyui": {
    "depth": 3.97,
@@ -690,7 +690,7 @@
    "completeness": 8.53,
    "popularity": 1.0,
    "likes": 0,
-   "freshness": 5.79,
+   "freshness": 5.77,
    "total": 42.1
   },
   "replicate": {
@@ -698,23 +698,23 @@
    "completeness": 8.8,
    "popularity": 1.0,
    "likes": 0,
-   "freshness": 5.82,
-   "total": 48.3
+   "freshness": 5.79,
+   "total": 48.2
   },
   "copy.ai": {
    "depth": 2.96,
    "completeness": 8.51,
    "popularity": 3.07,
    "likes": 0,
-   "freshness": 5.85,
-   "total": 48.1
+   "freshness": 5.82,
+   "total": 48.0
   },
   "pictory": {
    "depth": 4.82,
    "completeness": 8.86,
    "popularity": 5.89,
    "likes": 0,
-   "freshness": 5.87,
+   "freshness": 5.85,
    "total": 62.5
   },
   "freepik-ai": {
@@ -722,39 +722,39 @@
    "completeness": 9.04,
    "popularity": 10.0,
    "likes": 0,
-   "freshness": 5.92,
-   "total": 75.7
+   "freshness": 5.9,
+   "total": 75.6
   },
   "krea-ai": {
    "depth": 5.74,
    "completeness": 8.81,
    "popularity": 5.19,
    "likes": 0,
-   "freshness": 5.92,
-   "total": 64.0
+   "freshness": 5.9,
+   "total": 63.9
   },
   "photoroom": {
    "depth": 6.61,
    "completeness": 9.13,
    "popularity": 3.87,
    "likes": 0,
-   "freshness": 5.95,
-   "total": 64.6
+   "freshness": 5.92,
+   "total": 64.5
   },
   "framer-ai": {
    "depth": 6.32,
    "completeness": 8.79,
    "popularity": 2.61,
    "likes": 0,
-   "freshness": 5.97,
-   "total": 59.6
+   "freshness": 5.95,
+   "total": 59.5
   },
   "devin-ai": {
    "depth": 7.37,
    "completeness": 8.3,
    "popularity": 6.32,
    "likes": 0,
-   "freshness": 6.0,
+   "freshness": 5.97,
    "total": 71.3
   },
   "v0-dev": {
@@ -762,15 +762,15 @@
    "completeness": 8.97,
    "popularity": 3.76,
    "likes": 0,
-   "freshness": 6.03,
-   "total": 61.9
+   "freshness": 6.0,
+   "total": 61.8
   },
   "open-router": {
    "depth": 6.15,
    "completeness": 9.04,
    "popularity": 5.01,
    "likes": 0,
-   "freshness": 6.05,
+   "freshness": 6.03,
    "total": 65.7
   },
   "invideo-ai": {
@@ -778,7 +778,7 @@
    "completeness": 9.13,
    "popularity": 7.62,
    "likes": 0,
-   "freshness": 6.08,
+   "freshness": 6.05,
    "total": 58.4
   },
   "flux": {
@@ -786,7 +786,7 @@
    "completeness": 8.72,
    "popularity": 7.05,
    "likes": 0,
-   "freshness": 6.1,
+   "freshness": 6.08,
    "total": 65.7
   },
   "mistral-ai": {
@@ -802,15 +802,15 @@
    "completeness": 8.77,
    "popularity": 9.56,
    "likes": 0,
-   "freshness": 6.15,
-   "total": 71.3
+   "freshness": 6.13,
+   "total": 71.2
   },
   "hugging-face": {
    "depth": 6.48,
    "completeness": 9.11,
    "popularity": 10.0,
    "likes": 0,
-   "freshness": 6.18,
+   "freshness": 6.15,
    "total": 79.7
   },
   "groq": {
@@ -834,7 +834,7 @@
    "completeness": 8.99,
    "popularity": 2.39,
    "likes": 0,
-   "freshness": 6.26,
+   "freshness": 6.23,
    "total": 59.4
   },
   "crew-ai": {
@@ -842,16 +842,16 @@
    "completeness": 8.64,
    "popularity": 2.39,
    "likes": 0,
-   "freshness": 6.28,
-   "total": 61.0
+   "freshness": 6.26,
+   "total": 60.9
   },
   "semrush-ai": {
    "depth": 8.82,
    "completeness": 8.46,
    "popularity": 10.0,
    "likes": 0,
-   "freshness": 6.31,
-   "total": 86.5
+   "freshness": 6.28,
+   "total": 86.4
   },
   "browser-use": {
    "depth": 5.85,
@@ -882,7 +882,7 @@
    "completeness": 9.13,
    "popularity": 6.94,
    "likes": 0,
-   "freshness": 6.41,
+   "freshness": 6.38,
    "total": 70.5
   },
   "play-ht": {
@@ -890,7 +890,7 @@
    "completeness": 9.13,
    "popularity": 7.62,
    "likes": 0,
-   "freshness": 6.44,
+   "freshness": 6.41,
    "total": 75.8
   },
   "jasper-chat": {
@@ -898,7 +898,7 @@
    "completeness": 9.12,
    "popularity": 10.0,
    "likes": 0,
-   "freshness": 6.46,
+   "freshness": 6.44,
    "total": 85.0
   },
   "frase": {
@@ -906,15 +906,15 @@
    "completeness": 9.55,
    "popularity": 6.94,
    "likes": 0,
-   "freshness": 6.49,
-   "total": 79.5
+   "freshness": 6.46,
+   "total": 79.4
   },
   "glean": {
    "depth": 9.02,
    "completeness": 8.74,
    "popularity": 8.42,
    "likes": 0,
-   "freshness": 6.51,
+   "freshness": 6.49,
    "total": 84.2
   },
   "relevance-ai": {
@@ -922,7 +922,7 @@
    "completeness": 8.84,
    "popularity": 5.89,
    "likes": 0,
-   "freshness": 6.54,
+   "freshness": 6.51,
    "total": 74.4
   },
   "aider": {
@@ -938,7 +938,7 @@
    "completeness": 9.06,
    "popularity": 6.94,
    "likes": 0,
-   "freshness": 6.59,
+   "freshness": 6.56,
    "total": 72.6
   },
   "flowise": {
@@ -946,7 +946,7 @@
    "completeness": 9.54,
    "popularity": 5.68,
    "likes": 0,
-   "freshness": 6.62,
+   "freshness": 6.59,
    "total": 76.1
   },
   "pinecone": {
@@ -954,23 +954,23 @@
    "completeness": 9.46,
    "popularity": 8.73,
    "likes": 0,
-   "freshness": 6.64,
-   "total": 82.1
+   "freshness": 6.62,
+   "total": 82.0
   },
   "deepgram": {
    "depth": 8.44,
    "completeness": 9.16,
    "popularity": 8.73,
    "likes": 0,
-   "freshness": 6.67,
-   "total": 84.3
+   "freshness": 6.64,
+   "total": 84.2
   },
   "ragflow": {
    "depth": 8.91,
    "completeness": 9.14,
    "popularity": 5.97,
    "likes": 0,
-   "freshness": 6.69,
+   "freshness": 6.67,
    "total": 79.0
   },
   "veed-io": {
@@ -978,15 +978,15 @@
    "completeness": 9.16,
    "popularity": 10.0,
    "likes": 0,
-   "freshness": 6.72,
-   "total": 82.3
+   "freshness": 6.69,
+   "total": 82.2
   },
   "cartesia": {
    "depth": 6.81,
    "completeness": 9.24,
    "popularity": 6.94,
    "likes": 0,
-   "freshness": 6.74,
+   "freshness": 6.72,
    "total": 74.4
   },
   "relume": {
@@ -994,7 +994,7 @@
    "completeness": 9.16,
    "popularity": 6.94,
    "likes": 0,
-   "freshness": 6.77,
+   "freshness": 6.74,
    "total": 77.0
   },
   "luma-dream-machine": {
@@ -1002,7 +1002,7 @@
    "completeness": 9.19,
    "popularity": 6.94,
    "likes": 0,
-   "freshness": 6.79,
+   "freshness": 6.77,
    "total": 76.7
   },
   "supabase": {
@@ -1010,23 +1010,23 @@
    "completeness": 9.47,
    "popularity": 6.32,
    "likes": 0,
-   "freshness": 6.82,
-   "total": 82.2
+   "freshness": 6.79,
+   "total": 82.1
   },
   "warp": {
    "depth": 9.49,
    "completeness": 9.53,
    "popularity": 6.94,
    "likes": 0,
-   "freshness": 6.85,
-   "total": 84.7
+   "freshness": 6.82,
+   "total": 84.6
   },
   "milvus": {
    "depth": 7.91,
    "completeness": 9.22,
    "popularity": 6.94,
    "likes": 0,
-   "freshness": 6.87,
+   "freshness": 6.85,
    "total": 78.4
   },
   "qdrant": {
@@ -1034,7 +1034,7 @@
    "completeness": 9.19,
    "popularity": 5.19,
    "likes": 0,
-   "freshness": 6.92,
+   "freshness": 6.9,
    "total": 75.2
   },
   "webflow-ai": {
@@ -1042,7 +1042,7 @@
    "completeness": 9.24,
    "popularity": 10.0,
    "likes": 0,
-   "freshness": 6.95,
+   "freshness": 6.92,
    "total": 90.6
   },
   "langgraph": {
@@ -1050,7 +1050,7 @@
    "completeness": 9.19,
    "popularity": 6.94,
    "likes": 0,
-   "freshness": 6.97,
+   "freshness": 6.95,
    "total": 85.8
   },
   "weaviate": {
@@ -1058,7 +1058,7 @@
    "completeness": 9.26,
    "popularity": 6.94,
    "likes": 0,
-   "freshness": 7.0,
+   "freshness": 6.97,
    "total": 80.9
   },
   "julius-ai": {
@@ -1066,7 +1066,7 @@
    "completeness": 9.19,
    "popularity": 9.56,
    "likes": 0,
-   "freshness": 7.03,
+   "freshness": 7.0,
    "total": 82.4
   },
   "looka": {
@@ -1090,7 +1090,7 @@
    "completeness": 9.38,
    "popularity": 10.0,
    "likes": 0,
-   "freshness": 7.1,
+   "freshness": 7.08,
    "total": 88.1
   },
   "kapwing": {
@@ -1098,7 +1098,7 @@
    "completeness": 9.38,
    "popularity": 10.0,
    "likes": 1,
-   "freshness": 7.13,
+   "freshness": 7.1,
    "total": 89.3
   },
   "soundraw": {
@@ -1106,7 +1106,7 @@
    "completeness": 9.69,
    "popularity": 6.94,
    "likes": 0,
-   "freshness": 7.15,
+   "freshness": 7.13,
    "total": 81.8
   },
   "aiva": {
@@ -1114,31 +1114,31 @@
    "completeness": 9.69,
    "popularity": 4.88,
    "likes": 0,
-   "freshness": 7.18,
-   "total": 77.1
+   "freshness": 7.15,
+   "total": 77.0
   },
   "wondercraft-ai": {
    "depth": 9.0,
    "completeness": 9.82,
    "popularity": 5.68,
    "likes": 0,
-   "freshness": 7.21,
-   "total": 81.1
+   "freshness": 7.18,
+   "total": 81.0
   },
   "topaz-photo-ai": {
    "depth": 8.9,
    "completeness": 9.69,
    "popularity": 6.94,
    "likes": 0,
-   "freshness": 7.23,
-   "total": 83.6
+   "freshness": 7.21,
+   "total": 83.5
   },
   "ollama": {
    "depth": 8.26,
    "completeness": 9.34,
    "popularity": 10.0,
    "likes": 0,
-   "freshness": 7.26,
+   "freshness": 7.23,
    "total": 88.1
   },
   "predis-ai": {
@@ -1146,7 +1146,7 @@
    "completeness": 9.15,
    "popularity": 7.26,
    "likes": 0,
-   "freshness": 7.28,
+   "freshness": 7.26,
    "total": 80.9
   },
   "metagpt": {
@@ -1162,7 +1162,7 @@
    "completeness": 9.26,
    "popularity": 10.0,
    "likes": 0,
-   "freshness": 7.33,
+   "freshness": 7.31,
    "total": 89.6
   },
   "chatpdf": {
@@ -1170,15 +1170,15 @@
    "completeness": 9.29,
    "popularity": 1.0,
    "likes": 0,
-   "freshness": 7.36,
-   "total": 63.1
+   "freshness": 7.33,
+   "total": 63.0
   },
   "raycast-ai": {
    "depth": 7.87,
    "completeness": 9.04,
    "popularity": 6.69,
    "likes": 0,
-   "freshness": 7.38,
+   "freshness": 7.36,
    "total": 77.9
   },
   "miro-ai": {
@@ -1186,31 +1186,31 @@
    "completeness": 9.5,
    "popularity": 10.0,
    "likes": 0,
-   "freshness": 7.41,
-   "total": 88.4
+   "freshness": 7.38,
+   "total": 88.3
   },
   "murf-ai": {
    "depth": 6.92,
    "completeness": 9.8,
    "popularity": 1.0,
    "likes": 0,
-   "freshness": 7.44,
-   "total": 62.4
+   "freshness": 7.41,
+   "total": 62.3
   },
   "cleanvoice": {
    "depth": 7.12,
    "completeness": 9.7,
    "popularity": 1.0,
    "likes": 0,
-   "freshness": 7.46,
-   "total": 62.9
+   "freshness": 7.44,
+   "total": 62.8
   },
   "voiceflow": {
    "depth": 6.91,
    "completeness": 10.0,
    "popularity": 1.0,
    "likes": 0,
-   "freshness": 7.49,
+   "freshness": 7.46,
    "total": 62.9
   },
   "fathom": {
@@ -1218,7 +1218,7 @@
    "completeness": 9.53,
    "popularity": 1.0,
    "likes": 0,
-   "freshness": 7.51,
+   "freshness": 7.49,
    "total": 63.7
   },
   "languagetool": {
@@ -1226,7 +1226,7 @@
    "completeness": 10.0,
    "popularity": 1.0,
    "likes": 0,
-   "freshness": 7.54,
+   "freshness": 7.51,
    "total": 67.5
   },
   "exa-ai": {
@@ -1234,7 +1234,7 @@
    "completeness": 10.0,
    "popularity": 1.0,
    "likes": 0,
-   "freshness": 7.56,
+   "freshness": 7.54,
    "total": 66.0
   },
   "elicit": {
@@ -1242,7 +1242,7 @@
    "completeness": 10.0,
    "popularity": 8.63,
    "likes": 0,
-   "freshness": 7.59,
+   "freshness": 7.56,
    "total": 86.1
   },
   "anythingllm": {
@@ -1250,15 +1250,15 @@
    "completeness": 10.0,
    "popularity": 1.0,
    "likes": 0,
-   "freshness": 7.62,
-   "total": 67.5
+   "freshness": 7.59,
+   "total": 67.4
   },
   "jenni-ai": {
    "depth": 8.21,
    "completeness": 10.0,
    "popularity": 10.0,
    "likes": 0,
-   "freshness": 7.64,
+   "freshness": 7.62,
    "total": 90.2
   },
   "aiprm": {
@@ -1266,15 +1266,15 @@
    "completeness": 10.0,
    "popularity": 1.0,
    "likes": 0,
-   "freshness": 7.67,
-   "total": 59.0
+   "freshness": 7.64,
+   "total": 58.9
   },
   "retool-ai": {
    "depth": 6.39,
    "completeness": 10.0,
    "popularity": 1.0,
    "likes": 0,
-   "freshness": 7.69,
+   "freshness": 7.67,
    "total": 61.4
   },
   "wix-ai": {
@@ -1282,15 +1282,15 @@
    "completeness": 10.0,
    "popularity": 10.0,
    "likes": 0,
-   "freshness": 7.72,
-   "total": 86.3
+   "freshness": 7.69,
+   "total": 86.2
   },
   "magnific-ai": {
    "depth": 6.64,
    "completeness": 10.0,
    "popularity": 1.0,
    "likes": 0,
-   "freshness": 7.74,
+   "freshness": 7.72,
    "total": 62.3
   },
   "gptzero": {
@@ -1298,23 +1298,23 @@
    "completeness": 10.0,
    "popularity": 10.0,
    "likes": 0,
-   "freshness": 7.77,
-   "total": 87.3
+   "freshness": 7.74,
+   "total": 87.2
   },
   "kaiber": {
    "depth": 8.87,
    "completeness": 10.0,
    "popularity": 8.06,
    "likes": 0,
-   "freshness": 7.79,
-   "total": 87.9
+   "freshness": 7.77,
+   "total": 87.8
   },
   "vidu-ai": {
    "depth": 9.08,
    "completeness": 10.0,
    "popularity": 10.0,
    "likes": 0,
-   "freshness": 7.82,
+   "freshness": 7.79,
    "total": 93.5
   },
   "seedance": {
@@ -1322,23 +1322,23 @@
    "completeness": 10.0,
    "popularity": 1.0,
    "likes": 0,
-   "freshness": 7.85,
-   "total": 73.0
+   "freshness": 7.82,
+   "total": 72.9
   },
   "fireflies-ai": {
    "depth": 9.69,
    "completeness": 10.0,
    "popularity": 8.06,
    "likes": 0,
-   "freshness": 7.87,
-   "total": 90.9
+   "freshness": 7.85,
+   "total": 90.8
   },
   "clipdrop": {
    "depth": 5.95,
    "completeness": 9.19,
    "popularity": 10.0,
    "likes": 0,
-   "freshness": 7.9,
+   "freshness": 7.87,
    "total": 80.6
   },
   "scalenut": {
@@ -1346,7 +1346,7 @@
    "completeness": 9.56,
    "popularity": 6.94,
    "likes": 0,
-   "freshness": 7.92,
+   "freshness": 7.9,
    "total": 86.5
   },
   "lets-enhance": {
@@ -1354,7 +1354,7 @@
    "completeness": 10.0,
    "popularity": 6.94,
    "likes": 0,
-   "freshness": 7.95,
+   "freshness": 7.92,
    "total": 73.6
   },
   "manus": {
@@ -1362,47 +1362,47 @@
    "completeness": 10.0,
    "popularity": 10.0,
    "likes": 0,
-   "freshness": 7.95,
-   "total": 89.6
+   "freshness": 7.92,
+   "total": 89.5
   },
   "goldfish": {
    "depth": 7.76,
    "completeness": 10.0,
    "popularity": 10.0,
    "likes": 0,
-   "freshness": 8.0,
-   "total": 89.2
+   "freshness": 7.97,
+   "total": 89.1
   },
   "genspark": {
    "depth": 8.5,
    "completeness": 10.0,
    "popularity": 10.0,
    "likes": 0,
-   "freshness": 8.03,
-   "total": 91.8
+   "freshness": 8.0,
+   "total": 91.7
   },
   "krea-2": {
    "depth": 8.04,
    "completeness": 10.0,
    "popularity": 9.74,
    "likes": 0,
-   "freshness": 8.05,
-   "total": 89.6
+   "freshness": 8.03,
+   "total": 89.5
   },
   "durable": {
    "depth": 6.43,
    "completeness": 9.43,
    "popularity": 9.43,
    "likes": 0,
-   "freshness": 8.08,
-   "total": 81.8
+   "freshness": 8.05,
+   "total": 81.7
   },
   "buffer": {
    "depth": 7.73,
    "completeness": 9.37,
    "popularity": 10.0,
    "likes": 0,
-   "freshness": 8.1,
+   "freshness": 8.08,
    "total": 87.6
   },
   "whop": {
@@ -1410,7 +1410,7 @@
    "completeness": 8.29,
    "popularity": 8.06,
    "likes": 0,
-   "freshness": 8.13,
+   "freshness": 8.1,
    "total": 74.0
   },
   "gumroad": {
@@ -1418,7 +1418,7 @@
    "completeness": 8.78,
    "popularity": 8.63,
    "likes": 0,
-   "freshness": 8.15,
+   "freshness": 8.13,
    "total": 74.9
   },
   "patreon": {
@@ -1426,16 +1426,16 @@
    "completeness": 8.7,
    "popularity": 10.0,
    "likes": 0,
-   "freshness": 8.18,
-   "total": 79.9
+   "freshness": 8.15,
+   "total": 79.8
   },
   "substack": {
    "depth": 5.95,
    "completeness": 8.73,
    "popularity": 10.0,
    "likes": 0,
-   "freshness": 8.21,
-   "total": 80.0
+   "freshness": 8.18,
+   "total": 79.9
   },
   "ko-fi": {
    "depth": 5.75,
@@ -1474,7 +1474,7 @@
    "completeness": 8.55,
    "popularity": 7.45,
    "likes": 0,
-   "freshness": 8.33,
+   "freshness": 8.31,
    "total": 71.4
   },
   "lemon-squeezy": {
@@ -1482,7 +1482,7 @@
    "completeness": 9.02,
    "popularity": 5.97,
    "likes": 0,
-   "freshness": 8.36,
+   "freshness": 8.33,
    "total": 62.5
   },
   "polar": {
@@ -1490,7 +1490,7 @@
    "completeness": 8.81,
    "popularity": 7.05,
    "likes": 0,
-   "freshness": 8.38,
+   "freshness": 8.36,
    "total": 67.3
   },
   "fourthwall": {
@@ -1498,7 +1498,7 @@
    "completeness": 8.8,
    "popularity": 7.26,
    "likes": 0,
-   "freshness": 8.41,
+   "freshness": 8.38,
    "total": 68.4
   },
   "payhip": {
@@ -1506,8 +1506,8 @@
    "completeness": 9.62,
    "popularity": 7.26,
    "likes": 0,
-   "freshness": 8.44,
-   "total": 73.5
+   "freshness": 8.41,
+   "total": 73.4
   },
   "paddle": {
    "depth": 6.02,
@@ -1522,23 +1522,23 @@
    "completeness": 8.09,
    "popularity": 7.26,
    "likes": 0,
-   "freshness": 8.49,
-   "total": 69.6
+   "freshness": 8.46,
+   "total": 69.5
   },
   "kit": {
    "depth": 4.42,
    "completeness": 9.06,
    "popularity": 8.63,
    "likes": 0,
-   "freshness": 8.51,
-   "total": 72.5
+   "freshness": 8.49,
+   "total": 72.4
   },
   "beacons-ai": {
    "depth": 4.98,
    "completeness": 9.06,
    "popularity": 7.26,
    "likes": 0,
-   "freshness": 8.54,
+   "freshness": 8.51,
    "total": 71.0
   },
   "etsy": {
@@ -1546,23 +1546,23 @@
    "completeness": 9.06,
    "popularity": 10.0,
    "likes": 0,
-   "freshness": 8.56,
-   "total": 77.2
+   "freshness": 8.54,
+   "total": 77.1
   },
   "fiverr": {
    "depth": 5.24,
    "completeness": 9.06,
    "popularity": 10.0,
    "likes": 0,
-   "freshness": 8.59,
-   "total": 78.9
+   "freshness": 8.56,
+   "total": 78.8
   },
   "promptbase": {
    "depth": 3.91,
    "completeness": 9.06,
    "popularity": 7.26,
    "likes": 0,
-   "freshness": 8.62,
+   "freshness": 8.59,
    "total": 67.4
   },
   "wirestock": {
@@ -1570,23 +1570,23 @@
    "completeness": 7.68,
    "popularity": 4.88,
    "likes": 0,
-   "freshness": 8.64,
-   "total": 64.3
+   "freshness": 8.62,
+   "total": 64.2
   },
   "amazon-kdp": {
    "depth": 4.63,
    "completeness": 9.06,
    "popularity": 1.0,
    "likes": 0,
-   "freshness": 8.67,
-   "total": 54.4
+   "freshness": 8.64,
+   "total": 54.3
   },
   "udemy": {
    "depth": 4.96,
    "completeness": 9.06,
    "popularity": 10.0,
    "likes": 0,
-   "freshness": 8.69,
+   "freshness": 8.67,
    "total": 78.0
   },
   "upwork": {
@@ -1594,7 +1594,7 @@
    "completeness": 9.06,
    "popularity": 10.0,
    "likes": 0,
-   "freshness": 8.72,
+   "freshness": 8.69,
    "total": 76.2
   },
   "redbubble": {
@@ -1602,7 +1602,7 @@
    "completeness": 7.86,
    "popularity": 10.0,
    "likes": 0,
-   "freshness": 8.74,
+   "freshness": 8.72,
    "total": 75.9
   },
   "skillshare": {
@@ -1610,7 +1610,7 @@
    "completeness": 7.86,
    "popularity": 1.0,
    "likes": 0,
-   "freshness": 8.77,
+   "freshness": 8.74,
    "total": 53.8
   },
   "buy-me-a-coffee": {
@@ -1618,31 +1618,31 @@
    "completeness": 6.47,
    "popularity": 8.63,
    "likes": 0,
-   "freshness": 8.79,
-   "total": 68.2
+   "freshness": 8.77,
+   "total": 68.1
   },
   "adobe-stock": {
    "depth": 4.92,
    "completeness": 7.68,
    "popularity": 10.0,
    "likes": 0,
-   "freshness": 8.82,
-   "total": 74.7
+   "freshness": 8.79,
+   "total": 74.6
   },
   "youtube": {
    "depth": 5.26,
    "completeness": 7.68,
    "popularity": 1.0,
    "likes": 0,
-   "freshness": 8.85,
-   "total": 53.4
+   "freshness": 8.82,
+   "total": 53.3
   },
   "amazon-associates": {
    "depth": 5.11,
    "completeness": 8.28,
    "popularity": 1.0,
    "likes": 0,
-   "freshness": 8.87,
+   "freshness": 8.85,
    "total": 54.4
   },
   "outlier": {
@@ -1682,7 +1682,7 @@
    "completeness": 7.68,
    "popularity": 10.0,
    "likes": 0,
-   "freshness": 9.0,
+   "freshness": 8.97,
    "total": 73.5
   },
   "distrokid": {
@@ -1882,15 +1882,15 @@
    "completeness": 10.0,
    "popularity": 8.63,
    "likes": 0,
-   "freshness": 9.64,
-   "total": 83.3
+   "freshness": 9.62,
+   "total": 83.2
   },
   "brandwatch": {
    "depth": 5.75,
    "completeness": 10.0,
    "popularity": 1.0,
    "likes": 0,
-   "freshness": 9.67,
+   "freshness": 9.64,
    "total": 62.1
   },
   "litmaps": {
@@ -1898,7 +1898,7 @@
    "completeness": 8.43,
    "popularity": 10.0,
    "likes": 0,
-   "freshness": 9.69,
+   "freshness": 9.67,
    "total": 80.0
   },
   "brand24": {
@@ -1906,15 +1906,15 @@
    "completeness": 9.62,
    "popularity": 10.0,
    "likes": 0,
-   "freshness": 9.72,
-   "total": 87.4
+   "freshness": 9.69,
+   "total": 87.3
   },
   "github-actions": {
    "depth": 6.09,
    "completeness": 10.0,
    "popularity": 10.0,
    "likes": 0,
-   "freshness": 9.74,
+   "freshness": 9.72,
    "total": 85.9
   },
   "gitlab": {
@@ -1922,7 +1922,7 @@
    "completeness": 10.0,
    "popularity": 10.0,
    "likes": 0,
-   "freshness": 9.77,
+   "freshness": 9.74,
    "total": 89.5
   },
   "circleci": {
@@ -1930,7 +1930,7 @@
    "completeness": 10.0,
    "popularity": 1.0,
    "likes": 0,
-   "freshness": 9.79,
+   "freshness": 9.77,
    "total": 63.2
   },
   "jenkins": {
@@ -1938,15 +1938,15 @@
    "completeness": 9.25,
    "popularity": 1.0,
    "likes": 0,
-   "freshness": 9.82,
-   "total": 62.9
+   "freshness": 9.79,
+   "total": 62.8
   },
   "bigcommerce": {
    "depth": 5.85,
    "completeness": 10.0,
    "popularity": 1.0,
    "likes": 0,
-   "freshness": 9.85,
+   "freshness": 9.82,
    "total": 62.7
   },
   "woocommerce": {
@@ -1954,23 +1954,23 @@
    "completeness": 10.0,
    "popularity": 1.0,
    "likes": 0,
-   "freshness": 9.87,
-   "total": 59.3
+   "freshness": 9.85,
+   "total": 59.2
   },
   "semrush": {
    "depth": 5.93,
    "completeness": 9.62,
    "popularity": 1.0,
    "likes": 0,
-   "freshness": 9.9,
-   "total": 62.2
+   "freshness": 9.87,
+   "total": 62.1
   },
   "elementor": {
    "depth": 5.22,
    "completeness": 9.62,
    "popularity": 1.0,
    "likes": 0,
-   "freshness": 9.92,
+   "freshness": 9.9,
    "total": 59.7
   },
   "helium-10": {
@@ -1978,7 +1978,7 @@
    "completeness": 9.62,
    "popularity": 10.0,
    "likes": 0,
-   "freshness": 9.95,
+   "freshness": 9.92,
    "total": 82.3
   },
   "spotify-for-creators": {
@@ -2268,6 +2268,86 @@
    "likes": 0,
    "freshness": 10.0,
    "total": 61.8
+  },
+  "originality-ai": {
+   "depth": 3.46,
+   "completeness": 8.13,
+   "popularity": 1.0,
+   "likes": 0,
+   "freshness": 5.0,
+   "total": 42.4
+  },
+  "nano-banana": {
+   "depth": 3.12,
+   "completeness": 7.7,
+   "popularity": 1.0,
+   "likes": 0,
+   "freshness": 5.0,
+   "total": 40.2
+  },
+  "zerogpt": {
+   "depth": 2.89,
+   "completeness": 7.02,
+   "popularity": 1.0,
+   "likes": 0,
+   "freshness": 5.0,
+   "total": 37.7
+  },
+  "hailuo-ai": {
+   "depth": 2.63,
+   "completeness": 7.56,
+   "popularity": 1.0,
+   "likes": 0,
+   "freshness": 5.0,
+   "total": 38.1
+  },
+  "copyleaks": {
+   "depth": 2.45,
+   "completeness": 7.75,
+   "popularity": 1.0,
+   "likes": 0,
+   "freshness": 5.0,
+   "total": 38.0
+  },
+  "prolific": {
+   "depth": 4.99,
+   "completeness": 8.65,
+   "popularity": 1.0,
+   "likes": 0,
+   "freshness": 10.0,
+   "total": 56.6
+  },
+  "whatnot": {
+   "depth": 5.04,
+   "completeness": 9.25,
+   "popularity": 1.0,
+   "likes": 0,
+   "freshness": 10.0,
+   "total": 58.3
+  },
+  "hedra": {
+   "depth": 4.35,
+   "completeness": 9.25,
+   "popularity": 1.0,
+   "likes": 0,
+   "freshness": 10.0,
+   "total": 55.9
+  },
+  "carrd": {
+   "depth": 4.56,
+   "completeness": 9.25,
+   "popularity": 1.0,
+   "likes": 0,
+   "freshness": 10.0,
+   "total": 56.6
+  },
+  "creatify": {
+   "depth": 4.46,
+   "completeness": 9.25,
+   "popularity": 1.0,
+   "likes": 0,
+   "freshness": 10.0,
+   "total": 56.2
   }
  }
 }

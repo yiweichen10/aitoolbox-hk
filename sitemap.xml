@@ -3,9 +3,9 @@
     <url><loc>https://www.aitoolbox.hk/</loc><lastmod>2026-11-22</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
     <url><loc>https://www.aitoolbox.hk/category/</loc><lastmod>2026-11-22</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
     <url><loc>https://www.aitoolbox.hk/articles/</loc><lastmod>2026-11-22</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
-    <url><loc>https://www.aitoolbox.hk/about.html</loc><lastmod>2026-11-22</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
-    <url><loc>https://www.aitoolbox.hk/contact.html</loc><lastmod>2026-11-22</lastmod><changefreq>monthly</changefreq><priority>0.4</priority></url>
-    <url><loc>https://www.aitoolbox.hk/submit.html</loc><lastmod>2026-11-22</lastmod><changefreq>monthly</changefreq><priority>0.4</priority></url>
+    <url><loc>https://www.aitoolbox.hk/about</loc><lastmod>2026-11-22</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+    <url><loc>https://www.aitoolbox.hk/contact</loc><lastmod>2026-11-22</lastmod><changefreq>monthly</changefreq><priority>0.4</priority></url>
+    <url><loc>https://www.aitoolbox.hk/submit</loc><lastmod>2026-11-22</lastmod><changefreq>monthly</changefreq><priority>0.4</priority></url>
     <url><loc>https://www.aitoolbox.hk/best/</loc><lastmod>2026-11-22</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
     <url><loc>https://www.aitoolbox.hk/new/</loc><lastmod>2026-11-22</lastmod><changefreq>daily</changefreq><priority>0.6</priority></url>
     <url><loc>https://www.aitoolbox.hk/privacy</loc><lastmod>2026-11-22</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
@@ -99,26 +99,26 @@
     <url><loc>https://www.aitoolbox.hk/vs/durable-vs-webflow-ai/</loc><lastmod>2026-11-22</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
     <url><loc>https://www.aitoolbox.hk/vs/fireflies-ai-vs-julius-ai/</loc><lastmod>2026-11-22</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
     <url><loc>https://www.aitoolbox.hk/vs/krea-2-vs-topaz-photo-ai/</loc><lastmod>2026-11-22</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
-    <url><loc>https://www.aitoolbox.hk/vs/carrd-vs-webflow-ai/</loc><lastmod>2026-11-22</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
     <url><loc>https://www.aitoolbox.hk/vs/clipdrop-vs-krea-2/</loc><lastmod>2026-11-22</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
     <url><loc>https://www.aitoolbox.hk/vs/julius-ai-vs-miro-ai/</loc><lastmod>2026-11-22</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
+    <url><loc>https://www.aitoolbox.hk/vs/10web-vs-webflow-ai/</loc><lastmod>2026-11-22</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
     <url><loc>https://www.aitoolbox.hk/vs/deepgram-vs-soundraw/</loc><lastmod>2026-11-22</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
     <url><loc>https://www.aitoolbox.hk/vs/elicit-vs-scite/</loc><lastmod>2026-11-22</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
     <url><loc>https://www.aitoolbox.hk/vs/deepgram-vs-wondercraft-ai/</loc><lastmod>2026-11-22</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
     <url><loc>https://www.aitoolbox.hk/vs/elicit-vs-litmaps/</loc><lastmod>2026-11-22</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
     <url><loc>https://www.aitoolbox.hk/vs/helium-10-vs-klaviyo/</loc><lastmod>2026-11-22</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
-    <url><loc>https://www.aitoolbox.hk/vs/looka-vs-wix-ai/</loc><lastmod>2026-11-22</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
-    <url><loc>https://www.aitoolbox.hk/vs/relume-vs-wix-ai/</loc><lastmod>2026-11-22</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
     <url><loc>https://www.aitoolbox.hk/vs/aider-vs-warp/</loc><lastmod>2026-11-22</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
-    <url><loc>https://www.aitoolbox.hk/vs/carrd-vs-durable/</loc><lastmod>2026-11-22</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
     <url><loc>https://www.aitoolbox.hk/vs/clipdrop-vs-topaz-photo-ai/</loc><lastmod>2026-11-22</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
     <url><loc>https://www.aitoolbox.hk/vs/litmaps-vs-scite/</loc><lastmod>2026-11-22</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
+    <url><loc>https://www.aitoolbox.hk/vs/looka-vs-wix-ai/</loc><lastmod>2026-11-22</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
     <url><loc>https://www.aitoolbox.hk/vs/manus-vs-metagpt/</loc><lastmod>2026-11-22</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
+    <url><loc>https://www.aitoolbox.hk/vs/relume-vs-wix-ai/</loc><lastmod>2026-11-22</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
     <url><loc>https://www.aitoolbox.hk/vs/soundraw-vs-wondercraft-ai/</loc><lastmod>2026-11-22</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
     <url><loc>https://www.aitoolbox.hk/vs/cline-vs-warp/</loc><lastmod>2026-11-22</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
     <url><loc>https://www.aitoolbox.hk/vs/fiverr-vs-patreon/</loc><lastmod>2026-11-22</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
     <url><loc>https://www.aitoolbox.hk/vs/fiverr-vs-substack/</loc><lastmod>2026-11-22</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
     <url><loc>https://www.aitoolbox.hk/vs/patreon-vs-substack/</loc><lastmod>2026-11-22</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
+    <url><loc>https://www.aitoolbox.hk/vs/10web-vs-durable/</loc><lastmod>2026-11-22</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
     <url><loc>https://www.aitoolbox.hk/vs/crowdin-vs-phrase/</loc><lastmod>2026-11-22</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
     <url><loc>https://www.aitoolbox.hk/vs/helium-10-vs-shopify/</loc><lastmod>2026-11-22</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
     <url><loc>https://www.aitoolbox.hk/vs/klaviyo-vs-shopify/</loc><lastmod>2026-11-22</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
@@ -143,9 +143,9 @@
     <url><loc>https://www.aitoolbox.hk/vs/deepseek-v4-vs-grok/</loc><lastmod>2026-11-22</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
     <url><loc>https://www.aitoolbox.hk/vs/flux-1-vs-midjourney/</loc><lastmod>2026-11-22</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
     <url><loc>https://www.aitoolbox.hk/vs/fal-ai-vs-open-router/</loc><lastmod>2026-11-22</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
+    <url><loc>https://www.aitoolbox.hk/vs/chatgpt-vs-claude/</loc><lastmod>2026-11-22</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
     <url><loc>https://www.aitoolbox.hk/vs/chatgpt-vs-perplexity/</loc><lastmod>2026-11-22</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
     <url><loc>https://www.aitoolbox.hk/vs/otterly-ai-vs-semrush/</loc><lastmod>2026-11-22</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
-    <url><loc>https://www.aitoolbox.hk/vs/chatgpt-vs-claude/</loc><lastmod>2026-11-22</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
     <url><loc>https://www.aitoolbox.hk/vs/dall-e-3-vs-midjourney/</loc><lastmod>2026-11-22</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
     <url><loc>https://www.aitoolbox.hk/vs/descript-vs-elevenlabs/</loc><lastmod>2026-11-22</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
     <url><loc>https://www.aitoolbox.hk/vs/peec-ai-vs-semrush/</loc><lastmod>2026-11-22</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
@@ -157,11 +157,11 @@
     <url><loc>https://www.aitoolbox.hk/vs/make-vs-zapier-ai/</loc><lastmod>2026-11-22</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
     <url><loc>https://www.aitoolbox.hk/vs/runway-vs-veo/</loc><lastmod>2026-11-22</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
     <url><loc>https://www.aitoolbox.hk/vs/bolt.new-vs-lovable/</loc><lastmod>2026-11-22</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
+    <url><loc>https://www.aitoolbox.hk/vs/claude-vs-gemini/</loc><lastmod>2026-11-22</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
     <url><loc>https://www.aitoolbox.hk/vs/cursor-vs-github-copilot/</loc><lastmod>2026-11-22</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
     <url><loc>https://www.aitoolbox.hk/vs/cursor-vs-lovable/</loc><lastmod>2026-11-22</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
     <url><loc>https://www.aitoolbox.hk/vs/gamma-vs-notion-ai/</loc><lastmod>2026-11-22</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
     <url><loc>https://www.aitoolbox.hk/vs/n8n-vs-zapier-ai/</loc><lastmod>2026-11-22</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
-    <url><loc>https://www.aitoolbox.hk/vs/runway-vs-sora/</loc><lastmod>2026-11-22</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
     <url><loc>https://www.aitoolbox.hk/tools/chatgpt/</loc><lastmod>2026-11-22</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
     <url><loc>https://www.aitoolbox.hk/tools/claude/</loc><lastmod>2026-11-22</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
     <url><loc>https://www.aitoolbox.hk/tools/midjourney/</loc><lastmod>2026-11-22</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
@@ -685,6 +685,6 @@
     <url><loc>https://www.aitoolbox.hk/articles/best-free-chatgpt-alternatives-2026/</loc><lastmod>2026-04-02</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
     <url><loc>https://www.aitoolbox.hk/articles/free-ai-image-generators-no-watermark/</loc><lastmod>2026-04-01</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
     <url><loc>https://www.aitoolbox.hk/articles/best-ai-tools-for-students-2026/</loc><lastmod>2026-03-31</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-    <url><loc>https://www.aitoolbox.hk/about.html</loc><lastmod>2026-11-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+    <url><loc>https://www.aitoolbox.hk/about</loc><lastmod>2026-11-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
     <url><loc>https://www.aitoolbox.hk/author/</loc><lastmod>2026-11-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>
