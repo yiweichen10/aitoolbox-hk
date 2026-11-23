@@ -103,7 +103,7 @@ def main() -> int:
                 'category': it.get('category', 'products'),
                 'source': it.get('source', ''),
                 'source_url': it.get('source_url', ''),
-                'published_at': it.get('published_at', ''),
+                'published_at': it.get('published_at') or day,
                 'commentary': t.get('commentary', ''),
             })
             have.add(it['id'])

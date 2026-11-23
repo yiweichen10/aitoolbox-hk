@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"><channel>
+<title>AI Tool Lab - AI News</title>
+<link>https://www.aitoolbox.hk/news/</link>
+<description>Daily AI news briefs with editorial analysis.</description>
+<lastBuildDate>Mon, 23 Nov 2026 02:15:01 GMT</lastBuildDate>
+<item>
+<title>Claude Code Launches Experimental Code Mode</title>
+<link>https://www.aitoolbox.hk/news/2026-11-22-claude-code-mode-experimental/</link>
+<guid isPermaLink="true">https://www.aitoolbox.hk/news/2026-11-22-claude-code-mode-experimental/</guid>
+<pubDate>Sun, 22 Nov 2026 00:00:00 +0800</pubDate>
+<description>Claude Code's new Code Mode has the model write JavaScript to complete multi-step tool calls in one pass, supporting parallel execution and output filtering. The experimental feature is off by default; early tests report 22-23% lower bills and up to 77% token reduction.</description>
+</item>
+<item>
+<title>Anthropic Mathematician Claims Claude Proof of the Riemann Hypothesis</title>
+<link>https://www.aitoolbox.hk/news/2026-11-22-anthropic-mathematician-riemann-proof/</link>
+<guid isPermaLink="true">https://www.aitoolbox.hk/news/2026-11-22-anthropic-mathematician-riemann-proof/</guid>
+<pubDate>Sun, 22 Nov 2026 00:00:00 +0800</pubDate>
+<description>Mathematician Alpöge says the claimed proof also covers the generalized Riemann hypothesis, published as 14 Lean packages spanning over 250,000 printed pages. Hours later, Stanford released a competing human-only draft by mathematician Masullo.</description>
+</item>
+<item>
+<title>OpenAI Ships GPT-Live-1.1 Voice Model on the API</title>
+<link>https://www.aitoolbox.hk/news/2026-11-22-openai-gpt-live-1-1-api/</link>
+<guid isPermaLink="true">https://www.aitoolbox.hk/news/2026-11-22-openai-gpt-live-1-1-api/</guid>
+<pubDate>Sun, 22 Nov 2026 00:00:00 +0800</pubDate>
+<description>The full-duplex voice model defaults to 128K context and is exclusive to OpenAI's cloud. A new standby idle billing mode costs $0.02/minute - 60% below the active rate of $0.05.</description>
+</item>
+<item>
+<title>Qwen4 Max Fixes a Tornado Framework Bug in a Single Call</title>
+<link>https://www.aitoolbox.hk/news/2026-11-22-qwen4-max-tornado-bug-fix/</link>
+<guid isPermaLink="true">https://www.aitoolbox.hk/news/2026-11-22-qwen4-max-tornado-bug-fix/</guid>
+<pubDate>Sun, 22 Nov 2026 00:00:00 +0800</pubDate>
+<description>Alibaba's flagship model landed on the Together inference platform with 1M context. Loading the entire Tornado repository - 650K tokens across 344 files - it produced a passing patch in 72 seconds for $0.69.</description>
+</item>
+<item>
+<title>Nasdaq 100 Suffers Worst Week Since the Pandemic: Down 10.4%</title>
+<link>https://www.aitoolbox.hk/news/2026-11-22-nasdaq-100-worst-week-since-pandemic/</link>
+<guid isPermaLink="true">https://www.aitoolbox.hk/news/2026-11-22-nasdaq-100-worst-week-since-pandemic/</guid>
+<pubDate>Sat, 21 Nov 2026 18:27:44 +0800</pubDate>
+<description>The Nasdaq 100 fell 5.6% on Friday, closing the week down 10.4% - a 20% retreat from October highs that puts the index in bear-market territory. Nvidia plummeted 14% on Friday amid reported SEC scrutiny of its accounting practices.</description>
+</item>
+<item>
+<title>Browser Use 1.0: 24 Tools Consolidated Into One</title>
+<link>https://www.aitoolbox.hk/news/2026-11-21-browser-use-1-0-one-tool/</link>
+<guid isPermaLink="true">https://www.aitoolbox.hk/news/2026-11-21-browser-use-1-0-one-tool/</guid>
+<pubDate>Sat, 21 Nov 2026 00:00:00 +0800</pubDate>
+<description>Browser Use 1.0 replaces 24 discrete action tools with a single Python REPL plus CDP. Same-model benchmark scores rose 14-33 points while costs fell to between 1/2.7 and 1/5.2 of previous levels.</description>
+</item>
+<item>
+<title>Runway's Software Factory: Agents Now Land 38% of Merged PRs</title>
+<link>https://www.aitoolbox.hk/news/2026-11-21-runway-software-factory-agent-prs/</link>
+<guid isPermaLink="true">https://www.aitoolbox.hk/news/2026-11-21-runway-software-factory-agent-prs/</guid>
+<pubDate>Sat, 21 Nov 2026 00:00:00 +0800</pubDate>
+<description>Runway reports agents drove 38% of merged PRs in October - up from 0.1% in June - with monthly merges going from 2 to over 3,000, and first-approval wait times down from 2.3 hours to 5 minutes.</description>
+</item>
+<item>
+<title>Thinking Machines Lab Releases Laptop-Runnable Inkling 2 Mini</title>
+<link>https://www.aitoolbox.hk/news/2026-11-21-inkling-2-mini-laptop-model/</link>
+<guid isPermaLink="true">https://www.aitoolbox.hk/news/2026-11-21-inkling-2-mini-laptop-model/</guid>
+<pubDate>Sat, 21 Nov 2026 00:00:00 +0800</pubDate>
+<description>A recurrent transformer whose middle 12 layers run 3 times per token. MoE total parameters 26.4B with 3.4B active, around 20GB - it runs on a 32GB Mac.</description>
+</item>
+<item>
+<title>METR Update: AI Task Time Horizon Doubles Every 3.6 Months</title>
+<link>https://www.aitoolbox.hk/news/2026-11-21-metr-task-horizon-doubling/</link>
+<guid isPermaLink="true">https://www.aitoolbox.hk/news/2026-11-21-metr-task-horizon-doubling/</guid>
+<pubDate>Sat, 21 Nov 2026 00:00:00 +0800</pubDate>
+<description>Covering 15 models through GPT-6 Astra and Opus 5.5, the merged TH1.1+TH2 suite shows a 3.61-month doubling cycle; the TH2 verifiable subset doubles in just 1.65 months.</description>
+</item>
+<item>
+<title>Anthropic Slides 9% on Day Two, Nears $83 IPO Price</title>
+<link>https://www.aitoolbox.hk/news/2026-11-21-anthropic-day-two-slide/</link>
+<guid isPermaLink="true">https://www.aitoolbox.hk/news/2026-11-21-anthropic-day-two-slide/</guid>
+<pubDate>Sat, 21 Nov 2026 00:00:00 +0800</pubDate>
+<description>Shares closed at $88.30 on the second trading day, down 9%, with the Nasdaq now down 5% year-to-date. Asian stocks had their worst week since 2020; SoftBank fell 14.5% in a day and Micron 12%.</description>
+</item>
+<item>
+<title>OpenHands Hands CVE Remediation to an Agent Pipeline</title>
+<link>https://www.aitoolbox.hk/news/2026-11-21-openhands-agent-cve-remediation/</link>
+<guid isPermaLink="true">https://www.aitoolbox.hk/news/2026-11-21-openhands-agent-cve-remediation/</guid>
+<pubDate>Sat, 21 Nov 2026 00:00:00 +0800</pubDate>
+<description>October set a record with 17,000 new CVEs. OpenHands now routes most fixes through agents: mirrors cut fixable criticals from 87 to 5 and highs from 1,997 to 188.</description>
+</item>
+<item>
+<title>MiniMax MIM Achieves First Practical Breaks on Multiple NIST Candidates</title>
+<link>https://www.aitoolbox.hk/news/2026-11-21-minimax-mim-nist-cryptanalysis/</link>
+<guid isPermaLink="true">https://www.aitoolbox.hk/news/2026-11-21-minimax-mim-nist-cryptanalysis/</guid>
+<pubDate>Sat, 21 Nov 2026 00:00:00 +0800</pubDate>
+<description>MiniMax's MIM delivered the first practical cryptanalysis breaks on several NIST candidate algorithms, solving 55 previously unsolved McEliece challenge instances - up to a 43,000x speedup over prior records.</description>
+</item>
+<item>
+<title>Gemini for Mac Adds Computer Control</title>
+<link>https://www.aitoolbox.hk/news/2026-11-20-gemini-mac-computer-use/</link>
+<guid isPermaLink="true">https://www.aitoolbox.hk/news/2026-11-20-gemini-mac-computer-use/</guid>
+<pubDate>Fri, 20 Nov 2026 00:00:00 +0800</pubDate>
+<description>Google shipped computer use for Gemini on Mac: multi-step tasks across desktop apps, local files and the web, running in background windows without occupying the cursor. Rolling out first to US subscribers.</description>
+</item>
+<item>
+<title>OpenAI Uses Codex to Auto-Investigate Performance Regressions</title>
+<link>https://www.aitoolbox.hk/news/2026-11-20-openai-performance-factory/</link>
+<guid isPermaLink="true">https://www.aitoolbox.hk/news/2026-11-20-openai-performance-factory/</guid>
+<pubDate>Fri, 20 Nov 2026 00:00:00 +0800</pubDate>
+<description>OpenAI's Performance Factory has Codex agents investigate and fix ChatGPT performance regressions: 1,700+ investigations and 600+ root causes over three months, with 70% spot-check accuracy.</description>
+</item>
+<item>
+<title>Perplexity Brain Writes Its Own Personal Skills</title>
+<link>https://www.aitoolbox.hk/news/2026-11-20-perplexity-brain-self-skills/</link>
+<guid isPermaLink="true">https://www.aitoolbox.hk/news/2026-11-20-perplexity-brain-self-skills/</guid>
+<pubDate>Fri, 20 Nov 2026 00:00:00 +0800</pubDate>
+<description>The Perplexity Brain agent automatically writes and updates personal skills from conversation history. In an 8-week randomized test, 72.9% of users gained new skills and tool-call failures dropped 11% at unchanged cost.</description>
+</item>
+<item>
+<title>Anthropic Rises 17% on Debut, Raises $81.3B in Largest IPO Ever</title>
+<link>https://www.aitoolbox.hk/news/2026-11-20-anthropic-largest-ipo-ever/</link>
+<guid isPermaLink="true">https://www.aitoolbox.hk/news/2026-11-20-anthropic-largest-ipo-ever/</guid>
+<pubDate>Fri, 20 Nov 2026 00:00:00 +0800</pubDate>
+<description>Anthropic's $81.34 billion raise tops SpaceX as the largest IPO in history, nearly 7x oversubscribed. Priced at $83, the stock opened up 34% and closed with a $1.27 trillion market cap.</description>
+</item>
+<item>
+<title>Google Opens Genie 4 World Model API</title>
+<link>https://www.aitoolbox.hk/news/2026-11-20-google-genie-4-api/</link>
+<guid isPermaLink="true">https://www.aitoolbox.hk/news/2026-11-20-google-genie-4-api/</guid>
+<pubDate>Fri, 20 Nov 2026 00:00:00 +0800</pubDate>
+<description>Google opened Genie 4 to developers: text- or image-generated interactive 720p 24fps worlds with 48kHz stereo audio and keyboard control, at about $6.05/minute with 120-second session limits.</description>
+</item>
+<item>
+<title>Stanford Benchmark Tracks AI-Written Court Filings</title>
+<link>https://www.aitoolbox.hk/news/2026-11-20-stanford-phantomdocket-court-filings/</link>
+<guid isPermaLink="true">https://www.aitoolbox.hk/news/2026-11-20-stanford-phantomdocket-court-filings/</guid>
+<pubDate>Fri, 20 Nov 2026 00:00:00 +0800</pubDate>
+<description>Stanford's PhantomDocket benchmark calibrates detectors using an AI-hallucination corpus: in 2026, 38% of Santa Clara County complaints showed AI traces, with self-represented filers rising from 19% to 72%.</description>
+</item>
+<item>
+<title>Amodei Pledges Not to Bow to Commercial or Political Pressure</title>
+<link>https://www.aitoolbox.hk/news/2026-11-20-amodei-ipo-safety-pledge/</link>
+<guid isPermaLink="true">https://www.aitoolbox.hk/news/2026-11-20-amodei-ipo-safety-pledge/</guid>
+<pubDate>Fri, 20 Nov 2026 00:00:00 +0800</pubDate>
+<description>In his IPO-day remarks, Amodei committed to slowing AI training and deployment whenever necessary until systems are provably safe and under human control, regardless of commercial or political pressure - saying going public strengthens that resolve.</description>
+</item>
+</channel></rss>

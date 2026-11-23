@@ -9,6 +9,7 @@ import os
 import re
 import time
 import argparse
+from urllib.parse import quote as url_quote
 from datetime import datetime
 
 # ─── Paths ────────────────────────────────────────────────────────────────────
@@ -596,7 +597,7 @@ def header_html(title_text: str = "AI Tool Lab") -> str:
                 <a href="/category/">Tools</a>
                 <a href="/best/">Top Rated</a>
                 <a href="/new/">New Tools</a>
-                <a href="/news/">News</a>
+                <a href="/news/">AI News</a>
                 <a href="/articles/">Articles</a>
                 <a href="/category/ai-chat/">AI Chat</a>
                 <a href="/category/ai-image/">AI Image</a>
@@ -2803,7 +2804,7 @@ def generate_llms_txt_en(tools: list, articles: list, alt_slugs: list = None,
     out.append('News index: https://www.aitoolbox.hk/news/')
     out.append('')
     for _it in load_news_en()[:10]:
-        _d = _it.get('published_at', '')[:10]
+        _d = _news_date(_it)
         out.append(f"- [{_it.get('title', '')}](https://www.aitoolbox.hk/news/{_it['slug']}/) ({_d}) - {_it.get('summary', '')[:140]}")
     out.append('')
     out.append('## Sitemap')
@@ -3563,11 +3564,182 @@ def build_favorites_page_en() -> str:
 
 
 NEWS_CATS = {
-    'models': ('Models', 'Model releases, benchmarks and capability jumps.'),
-    'products': ('Products', 'Tools, features and platform changes.'),
-    'industry': ('Industry', 'Funding, markets and policy moves.'),
-    'research': ('Research', 'Papers, benchmarks and safety findings.'),
+    'models': ('Models', 'Model releases, benchmarks and capability jumps.', '#6366f1'),
+    'products': ('Products', 'Tools, features and platform changes.', '#2563eb'),
+    'industry': ('Industry', 'Funding, markets and policy moves.', '#b45309'),
+    'research': ('Research', 'Papers, benchmarks and safety findings.', '#0f766e'),
 }
+
+NEWS_CAT_SEO = {
+    'models': "Daily AI model releases, open-weight launches, benchmark results and capability updates, each with a sourced brief and editorial analysis.",
+    'products': "Daily AI product and tool updates: new launches, feature changes, pricing shifts and platform moves, with the original source on every brief.",
+    'industry': "Daily AI industry news: funding, acquisitions, market moves and regulation, summarised with context on what changes for practitioners.",
+    'research': "Daily AI research briefs: papers, benchmarks, safety findings and technical reports, with a short explanation of why each result matters.",
+}
+
+NEWS_INDEX_DAYS = 30
+
+_NEWS_SHARE_JS = """
+function copyNewsLink() {
+  if (!navigator.clipboard) { return; }
+  navigator.clipboard.writeText(window.location.href).then(function () {
+    var t = document.getElementById('newsToast');
+    if (t) { t.classList.add('show'); setTimeout(function () { t.classList.remove('show'); }, 1800); }
+  });
+}
+"""
+
+_NEWS_FILTER_JS = """
+(function () {
+  var pills = document.querySelectorAll('.news-filter-pill');
+  var items = document.querySelectorAll('.news-item');
+  var blocks = document.querySelectorAll('.news-day-block');
+  if (!pills.length) { return; }
+  pills.forEach(function (pill) {
+    pill.addEventListener('click', function (e) {
+      e.preventDefault();
+      var f = pill.getAttribute('data-filter') || 'all';
+      pills.forEach(function (p) { p.classList.remove('active'); });
+      pill.classList.add('active');
+      items.forEach(function (item) {
+        item.style.display = (f === 'all' || item.getAttribute('data-category') === f) ? '' : 'none';
+      });
+      blocks.forEach(function (block) {
+        var visible = Array.prototype.some.call(block.querySelectorAll('.news-item'), function (x) {
+          return x.style.display !== 'none';
+        });
+        block.style.display = visible ? '' : 'none';
+      });
+    });
+  });
+})();
+"""
+
+
+def _news_date(it):
+    m = re.match(r'^(\d{4}-\d{2}-\d{2})-', str(it.get('slug', '')))
+    if m:
+        return m.group(1)
+    return str(it.get('published_at') or '')[:10] or 'undated'
+
+
+def _news_published(it):
+    return str(it.get('published_at') or _news_date(it))
+
+
+def _news_cat_key(it):
+    cat = str(it.get('category') or '')
+    return cat if cat in NEWS_CATS else 'products'
+
+
+def _news_cat(it):
+    return NEWS_CATS[_news_cat_key(it)]
+
+
+def _news_name_map(tools_list):
+    pairs = []
+    for t in tools_list or []:
+        nm = str(t.get('name') or '').strip()
+        sl = str(t.get('slug') or '').strip()
+        if len(nm) < 4 or not sl:
+            continue
+        pairs.append((escape_html(nm), sl))
+    pairs.sort(key=lambda x: -len(x[0]))
+    return pairs
+
+
+def _news_linkify(text, name_map):
+    s = escape_html(str(text or ''))
+    matches = []
+    for nm, sl in name_map:
+        start = 0
+        while True:
+            i = s.find(nm, start)
+            if i < 0:
+                break
+            matches.append((i, i + len(nm), sl))
+            start = i + len(nm)
+    matches.sort(key=lambda m: (m[0], -(m[1] - m[0])))
+    out, last = [], 0
+    for a, b, sl in matches:
+        if a < last:
+            continue
+        out.append(s[last:a])
+        out.append(f'<a href="/tools/{sl}/" class="news-inlink">{s[a:b]}</a>')
+        last = b
+    out.append(s[last:])
+    return ''.join(out)
+
+
+def _news_head(title, desc, canonical, hreflang='', schema=''):
+    return f'''<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{escape_html(title)}</title>
+    <meta name="description" content="{escape_html(_serp_desc(desc))}">
+    <link rel="canonical" href="{canonical}">
+{hreflang}    <meta property="og:type" content="website">
+    <meta property="og:title" content="{escape_html(title)}">
+    <meta property="og:description" content="{escape_html(_serp_desc(desc))}">
+    <link rel="stylesheet" href="/css/style.css?{CSS_VERSION}">
+{VERIFICATION_BLOCK}{GA_BLOCK}
+{schema}
+</head>
+<body data-page-type="news">
+'''
+
+
+def _news_share(path, title):
+    u = url_quote(SITE_DOMAIN + path)
+    t = url_quote(title)
+    return f'''            <div class="news-share">
+                <span>Share</span>
+                <button class="news-share-btn" onclick="copyNewsLink()">Copy link</button>
+                <a class="news-share-btn" href="https://twitter.com/intent/tweet?url={u}&amp;text={t}" target="_blank" rel="noopener">X</a>
+                <a class="news-share-btn" href="/news/rss.xml" target="_blank" rel="noopener">RSS</a>
+            </div>'''
+
+
+def _news_toast():
+    return '    <div id="newsToast" class="news-toast">Link copied</div>'
+
+
+def _news_cards(items, name_map, date_ctx=None):
+    return ''.join(_news_card(it, name_map, date_ctx) for it in items)
+
+
+def _news_card(it, name_map, date_ctx=None):
+    cat_key = _news_cat_key(it)
+    cat_label, _, color = NEWS_CATS[cat_key]
+    date = _news_date(it)
+    pub = _news_published(it)
+    tm = pub[11:16] if 'T' in pub else ''
+    time_suffix = ' ' + tm if tm else ''
+    slug = escape_html(str(it.get('slug', '')))
+    title_html = _news_linkify(it.get('title', ''), name_map)
+    summary = str(it.get('summary') or '').strip()
+    commentary = str(it.get('commentary') or '').strip()
+    summary_html = f'<p class="news-item-summary">{_news_linkify(summary, name_map)}</p>' if summary else ''
+    commentary_html = (
+        f'<div class="news-item-commentary"><span class="news-item-commentary-tag">Why</span>'
+        f'{_news_linkify(commentary, name_map)}</div>'
+    ) if commentary else ''
+    src = escape_html(str(it.get('source') or ''))
+    src_url = escape_html(str(it.get('source_url') or ''))
+    src_html = f'<span>Source: {src}</span>' if src else ''
+    read_html = f'<a href="{src_url}" target="_blank" rel="noopener nofollow">Read original &rarr;</a>' if src_url else ''
+    date_html = f'<a href="/news/{escape_html(date_ctx)}/" class="news-date-ctx">{escape_html(date_ctx)}</a>' if date_ctx else ''
+    return f'''            <article class="news-item" data-category="{cat_key}">
+                <i class="news-item-dot" style="background:{color}"></i>
+                <div class="news-item-meta"><span class="news-item-cat" style="color:{color}">{cat_label}</span><time datetime="{escape_html(pub)}">{escape_html(date)}{time_suffix}</time></div>
+                <h2 class="news-item-title"><a href="/news/{slug}/">{title_html}</a></h2>
+                {summary_html}
+                {commentary_html}
+                <div class="news-item-foot">{src_html}{read_html}{date_html}</div>
+            </article>'''
 
 
 def load_news_en():
@@ -3576,121 +3748,295 @@ def load_news_en():
         items = json.load(open(path, encoding='utf-8'))
     except Exception:
         return []
-    return sorted(items, key=lambda x: x.get('published_at', ''), reverse=True)
+    return sorted(items, key=lambda x: (_news_date(x), str(x.get('published_at') or '')), reverse=True)
 
 
-def _news_item_page(it, news_items):
-    cat_label, _ = NEWS_CATS.get(it.get('category', 'products'), ('Products', ''))
-    pub = it.get('published_at', '')[:10]
+def _news_day_label(d):
+    try:
+        dt = datetime.strptime(d, '%Y-%m-%d')
+        return dt.strftime('%b %d, %Y'), dt.strftime('%A')
+    except Exception:
+        return d, ''
+
+
+def _news_nav_row(prev_link='', next_link=''):
+    return f'''            <div class="news-nav-row">
+                {prev_link}{next_link}<a href="/news/" class="news-nav-btn news-nav-home">All news</a>
+            </div>'''
+
+
+def _news_item_page(it, news_items=None, tools_list=None):
+    name_map = _news_name_map(tools_list)
+    cat_key = _news_cat_key(it)
+    cat_label, cat_desc, color = NEWS_CATS[cat_key]
+    date = _news_date(it)
+    pub = _news_published(it)
+    title = str(it.get('title') or '')
+    summary = str(it.get('summary') or '').strip()
+    commentary = str(it.get('commentary') or '').strip()
+    canonical = f'{SITE_DOMAIN}/news/{it["slug"]}/'
     hreflang = hreflang_tags(f'/news/{it["slug"]}/', f'/news/{it["slug"]}/')
     news_schema = json.dumps({
         "@context": "https://schema.org",
         "@type": "NewsArticle",
-        "headline": it.get('title', ''),
-        "datePublished": it.get('published_at', ''),
-        "description": it.get('summary', ''),
+        "headline": title,
+        "datePublished": pub,
+        "description": summary,
+        "articleSection": cat_label,
         "publisher": {"@type": "Organization", "name": SITE_NAME},
     }, ensure_ascii=False)
-    return f'''<!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{escape_html(it.get('title', ''))} | {SITE_NAME} News</title>
-    <meta name="description" content="{escape_html(_serp_desc(it.get('summary', '')))}">
-    <link rel="canonical" href="{SITE_DOMAIN}/news/{it['slug']}/">
-{hreflang}    <meta property="og:type" content="article">
-    <meta property="og:title" content="{escape_html(it.get('title', ''))}">
-    <meta property="og:description" content="{escape_html(it.get('summary', '')[:150])}">
-    <link rel="stylesheet" href="/css/style.css?{CSS_VERSION}">
-{VERIFICATION_BLOCK}{GA_BLOCK}
-    <script type="application/ld+json">{news_schema}</script>
-</head>
-<body>
-{header_html()}
+    schema = f'    <script type="application/ld+json">{news_schema}</script>'
+    head = _news_head(
+        f'{title} | {SITE_NAME} News',
+        summary or cat_desc,
+        canonical,
+        hreflang,
+        schema,
+    )
+    ordered = sorted(news_items or [], key=lambda x: (_news_date(x), str(x.get('published_at') or '')), reverse=True)
+    idx = next((i for i, x in enumerate(ordered) if x.get('slug') == it.get('slug')), -1)
+    prev_link = ''
+    next_link = ''
+    if idx >= 0 and idx + 1 < len(ordered):
+        p = ordered[idx + 1]
+        prev_link = f'<a href="/news/{escape_html(p["slug"])}/" class="news-nav-btn">&larr; {escape_html(str(p.get("title") or "")[:42])}</a>'
+    if idx > 0:
+        n = ordered[idx - 1]
+        next_link = f'<a href="/news/{escape_html(n["slug"])}/" class="news-nav-btn">{escape_html(str(n.get("title") or "")[:42])} &rarr;</a>'
+    related = [x for x in ordered if x.get('slug') != it.get('slug') and _news_cat_key(x) == cat_key][:4]
+    related_html = ''
+    if related:
+        links = ''.join(
+            f'<a class="news-related-link" href="/news/{escape_html(x["slug"])}/">{escape_html(str(x.get("title") or "")[:70])}</a>'
+            for x in related
+        )
+        related_html = f'<section class="news-related"><h3>More in {cat_label}</h3><div>{links}</div></section>'
+    src = escape_html(str(it.get('source') or ''))
+    src_url = escape_html(str(it.get('source_url') or ''))
+    source_html = f'<a href="{src_url}" target="_blank" rel="noopener nofollow">{src or "Original source"} &rarr;</a>' if src_url else (src or 'Original source')
+    return head + f'''{header_html()}
 
     <nav class="breadcrumb td-breadcrumb" aria-label="Breadcrumb">
-        <a href="/">Home</a><span class="sep">/</span><a href="/news/">News</a><span class="sep">/</span><span>{escape_html(cat_label)}</span>
+        <a href="/">Home</a><span class="sep">/</span><a href="/news/">AI News</a><span class="sep">/</span><a href="/news/{escape_html(date)}/">{escape_html(date)}</a><span class="sep">/</span><span>{cat_label}</span>
     </nav>
 
-    <main class="cat-hub">
-        <article style="max-width:760px;margin:0 auto;">
-            <div class="td-chips" style="margin-bottom:14px;">
-                <span class="td-chip td-chip-neutral">{escape_html(cat_label)}</span>
-                <span class="td-chip td-chip-neutral">{escape_html(pub)}</span>
+    <main class="news-page news-detail-page">
+        <article class="news-detail">
+            <div class="news-detail-meta">
+                <span class="news-detail-cat" style="color:{color}">{cat_label}</span>
+                <time datetime="{escape_html(pub)}">{escape_html(date)}</time>
             </div>
-            <h1 class="page-title" style="text-align:left;font-size:34px;">{escape_html(it.get('title', ''))}</h1>
-            <p style="font-size:17px;line-height:1.7;color:var(--text-main,#0f172a);">{escape_html(it.get('summary', ''))}</p>
-
-            <section class="cat-section" style="margin-top:28px;">
-                <h2>Why it matters</h2>
-                <p style="line-height:1.8;">{escape_html(it.get('commentary', ''))}</p>
-            </section>
-
-            <p style="font-size:13px;color:var(--text-muted,#64748b);margin-top:24px;">
-                Source: <a href="{escape_html(it.get('source_url', ''))}" target="_blank" rel="nofollow noopener">{escape_html(it.get('source', ''))}</a>
-                &middot; <a href="/news/">&larr; All AI news</a>
-            </p>
+            <h1>{escape_html(title)}</h1>
+            {f'<p class="news-detail-summary">{_news_linkify(summary, name_map)}</p>' if summary else ''}
+            {f'<div class="news-detail-commentary"><span>Why it matters</span><p>{_news_linkify(commentary, name_map)}</p></div>' if commentary else ''}
+            <div class="news-detail-source">Source: {source_html}</div>
+            {related_html}
+            {_news_nav_row(prev_link, next_link)}
         </article>
     </main>
 
 {footer_html()}
+    {_news_toast()}
+    <script>{_NEWS_SHARE_JS}</script>
     ''' + BACK_TO_TOP_BLOCK + DARK_MODE_BLOCK + '''
 </body>
 </html>'''
 
 
-def build_news_list_page_en(news_items) -> str:
-    hreflang = hreflang_tags('/news/', '/news/')
+def build_news_list_page_en(news_items, tools_list=None):
+    name_map = _news_name_map(tools_list)
     groups = {}
     for it in news_items:
-        d = it.get('published_at', '')[:10]
-        groups.setdefault(d, []).append(it)
+        groups.setdefault(_news_date(it), []).append(it)
+    dates = sorted([d for d in groups if d != 'undated'], reverse=True)
+    if 'undated' in groups:
+        dates.append('undated')
+    index_dates = dates[:NEWS_INDEX_DAYS]
     sections = ''
-    for d in sorted(groups.keys(), reverse=True):
-        rows = ''
-        for it in groups[d]:
-            cat_label, _ = NEWS_CATS.get(it.get('category', 'products'), ('Products', ''))
-            rows += (
-                f'<a class="new-card" href="/news/{it["slug"]}/">'
-                f'<div class="new-info"><div class="new-name">{escape_html(it.get("title", ""))}</div>'
-                f'<div class="new-meta">{escape_html(it.get("summary", ""))[:110]}&hellip;</div></div>'
-                f'<span class="td-chip td-chip-neutral">{escape_html(cat_label)}</span>'
-                f'</a>\n'
-            )
-        sections += f'<h2 style="margin:32px 0 14px;">{escape_html(d)}</h2>\n<div class="new-grid">\n{rows}</div>\n'
-    return f'''<!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI News 2026 - Model Releases, Tools and Industry Moves | {SITE_NAME}</title>
-    <meta name="description" content="Daily AI news with editorial analysis: model releases, product launches, industry moves and research findings. Every item sourced and every briefing includes why it matters.">
-    <link rel="canonical" href="{SITE_DOMAIN}/news/">
-{hreflang}    <link rel="stylesheet" href="/css/style.css?{CSS_VERSION}">
-{VERIFICATION_BLOCK}{GA_BLOCK}
-</head>
-<body>
-{header_html()}
+    for d in index_dates:
+        label, weekday = _news_day_label(d)
+        cards = _news_cards(groups[d], name_map)
+        sections += f'''            <section class="news-day-block" id="d-{escape_html(d)}">
+                <h2 class="news-day-divider"><span>{escape_html(label)}</span><span class="wk">{escape_html(weekday)}</span><a href="/news/{escape_html(d)}/" class="news-day-more">{len(groups[d])} items &middot; day page</a></h2>
+                <div class="news-cards">{cards}</div>
+            </section>
+'''
+    pills = ''.join(
+        f'<a href="#all" class="news-filter-pill{" active" if k == "all" else ""}" data-filter="{k}">{v[0]}</a> '
+        for k, v in [('all', ('All', '', ''))] + list(NEWS_CATS.items())
+    )
+    cat_links = ''.join(
+        f'<a href="/news/{k}/" class="news-catnav-link">{v[0]}</a> '
+        for k, v in NEWS_CATS.items()
+    )
+    day_links = ''.join(
+        f'<a href="/news/{escape_html(d)}/" class="news-day-link"><span>{escape_html(_news_day_label(d)[0])}</span><span class="n">{len(groups[d])}</span></a> '
+        for d in dates[:14]
+    )
+    strip = ''.join(
+        f'<a href="#d-{escape_html(d)}">{escape_html(_news_day_label(d)[0].replace(",", ""))}</a> '
+        for d in index_dates[:14]
+    )
+    latest = news_items[0] if news_items else None
+    desc = (
+        f'{latest.get("title", "")}: {latest.get("summary", "")}'
+        if latest else
+        'Daily AI news with editorial analysis: model releases, product launches, industry moves and research findings.'
+    )
+    head = _news_head(
+        'AI News 2026 - Model Releases, Tools and Industry Moves',
+        desc,
+        f'{SITE_DOMAIN}/news/',
+        hreflang_tags('/news/', '/news/'),
+    )
+    return head + f'''{header_html()}
 
-    <main class="cat-hub">
-        <h1 class="page-title">AI News</h1>
-        <p class="cat-intro">Sourced daily briefs with editorial analysis &mdash; what happened, and why it matters. Updated daily.</p>
+    <nav class="breadcrumb td-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a><span class="sep">/</span><span>News</span>
+    </nav>
 
-        <section class="cat-section">
-            <div class="td-chips" style="margin-bottom:8px;">
-{''.join(f'<a class="td-chip td-chip-neutral" href="/news/?cat={k}">{v[0]}</a> ' for k, v in NEWS_CATS.items())}            </div>
-{sections}        </section>
+    <main class="news-page news-index-page">
+        <div class="news-header">
+            <div class="news-header-top">
+                <div>
+                    <h1 class="news-page-title">AI News</h1>
+                    <p class="news-page-date">{len(news_items)} briefs across {len(dates)} days &middot; updated daily</p>
+                </div>
+{_news_share('/news/', 'AI News')}
+            </div>
+            <div class="news-filter-bar">{pills}</div>
+        </div>
+        <div class="news-day-strip">{strip}</div>
+
+        <div class="news-layout">
+            <div class="news-feed">
+{sections}            </div>
+            <aside class="news-sidebar">
+                <div class="news-side-box"><h3 class="news-side-title">Browse by category</h3><div class="news-catnav">{cat_links}</div></div>
+                <div class="news-side-box"><h3 class="news-side-title">Date index</h3><div class="news-day-list">{day_links}</div></div>
+                <div class="news-side-box"><h3 class="news-side-title">About this feed</h3><p class="news-side-note">Sourced daily briefs with editorial analysis. Every item keeps its original source; outbound links are nofollow.</p></div>
+            </aside>
+        </div>
     </main>
 
 {footer_html()}
+    {_news_toast()}
+    <script>{_NEWS_SHARE_JS}</script><script>{_NEWS_FILTER_JS}</script>
     ''' + BACK_TO_TOP_BLOCK + DARK_MODE_BLOCK + '''
 </body>
 </html>'''
 
 
+def build_news_day_page_en(date, items, dates, tools_list=None):
+    name_map = _news_name_map(tools_list)
+    label, weekday = _news_day_label(date)
+    canonical = f'{SITE_DOMAIN}/news/{date}/'
+    hreflang = hreflang_tags(f'/news/{date}/', f'/news/{date}/')
+    desc = (items[0].get('summary') if items else '') or f'AI news briefs for {date}.'
+    head = _news_head(f'{date} AI News | {SITE_NAME}', desc, canonical, hreflang)
+    idx = dates.index(date) if date in dates else -1
+    older = f'<a href="/news/{escape_html(dates[idx+1])}/" class="news-nav-btn">&larr; {escape_html(dates[idx+1])}</a>' if 0 <= idx < len(dates) - 1 else ''
+    newer = f'<a href="/news/{escape_html(dates[idx-1])}/" class="news-nav-btn">{escape_html(dates[idx-1])} &rarr;</a>' if idx > 0 else ''
+    nav = _news_nav_row(older, newer)
+    cards = _news_cards(items, name_map)
+    return head + f'''{header_html()}
+
+    <nav class="breadcrumb td-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a><span class="sep">/</span><a href="/news/">AI News</a><span class="sep">/</span><span>{escape_html(date)}</span>
+    </nav>
+
+    <main class="news-page news-day-page">
+        <div class="news-header">
+            <div class="news-header-top">
+                <div><h1 class="news-page-title">{escape_html(label)} AI News</h1><p class="news-page-date">{len(items)} briefs &middot; {escape_html(weekday)}</p></div>
+{_news_share('/news/' + date + '/', date + ' AI News')}
+            </div>
+            {nav}
+        </div>
+        <div class="news-cards">{cards}</div>
+        {nav.replace('news-nav-row', 'news-nav-row news-nav-bottom')}
+    </main>
+
+{footer_html()}
+    {_news_toast()}
+    <script>{_NEWS_SHARE_JS}</script>
+    ''' + BACK_TO_TOP_BLOCK + DARK_MODE_BLOCK + '''
+</body>
+</html>'''
+
+
+def build_news_category_page_en(cat, items, dates, tools_list=None):
+    label, cat_desc, color = NEWS_CATS[cat]
+    name_map = _news_name_map(tools_list)
+    canonical = f'{SITE_DOMAIN}/news/{cat}/'
+    hreflang = hreflang_tags(f'/news/{cat}/', f'/news/{cat}/')
+    seo = NEWS_CAT_SEO.get(cat, cat_desc)
+    head = _news_head(f'{label} AI News - Daily {label} Briefs | {SITE_NAME}', seo, canonical, hreflang)
+    catnav = ''.join(
+        f'<a href="/news/{k}/" class="news-catnav-link{" active" if k == cat else ""}">{v[0]}</a> '
+        for k, v in NEWS_CATS.items()
+    )
+    cards = _news_cards(items, name_map)
+    return head + f'''{header_html()}
+
+    <nav class="breadcrumb td-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a><span class="sep">/</span><a href="/news/">AI News</a><span class="sep">/</span><span>{label}</span>
+    </nav>
+
+    <main class="news-page news-category-page">
+        <div class="news-header">
+            <div class="news-header-top">
+                <div><h1 class="news-page-title">{label} AI News</h1><p class="news-page-date">{len(items)} briefs &middot; {escape_html(cat_desc)}</p></div>
+{_news_share('/news/' + cat + '/', label + ' AI News')}
+            </div>
+            <div class="news-catnav">{catnav}</div>
+        </div>
+        <div class="news-cards">{cards}</div>
+        <div class="news-nav-row news-nav-bottom"><a href="/news/" class="news-nav-btn news-nav-home">All news</a></div>
+    </main>
+
+{footer_html()}
+    {_news_toast()}
+    <script>{_NEWS_SHARE_JS}</script>
+    ''' + BACK_TO_TOP_BLOCK + DARK_MODE_BLOCK + '''
+</body>
+</html>'''
+
+
+def build_news_rss_en(news_items):
+    now = datetime.utcnow().strftime('%a, %d %b %Y %H:%M:%S GMT')
+    parts = [
+        '<?xml version="1.0" encoding="UTF-8"?>',
+        '<rss version="2.0"><channel>',
+        f'<title>{escape_html(SITE_NAME)} - AI News</title>',
+        f'<link>{SITE_DOMAIN}/news/</link>',
+        '<description>Daily AI news briefs with editorial analysis.</description>',
+        f'<lastBuildDate>{now}</lastBuildDate>',
+    ]
+    for it in news_items[:30]:
+        date = _news_date(it)
+        pub = _news_published(it)
+        try:
+            dt = datetime.fromisoformat(pub)
+        except Exception:
+            try:
+                dt = datetime.strptime(date, '%Y-%m-%d')
+            except Exception:
+                dt = datetime.utcnow()
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=datetime.now().astimezone().tzinfo)
+        link = f'{SITE_DOMAIN}/news/{escape_html(str(it.get("slug") or ""))}/'
+        parts += [
+            '<item>',
+            f'<title>{escape_html(str(it.get("title") or ""))}</title>',
+            f'<link>{link}</link>',
+            f'<guid isPermaLink="true">{link}</guid>',
+            f'<pubDate>{escape_html(dt.strftime("%a, %d %b %Y %H:%M:%S %z"))}</pubDate>',
+            f'<description>{escape_html(str(it.get("summary") or ""))}</description>',
+            '</item>',
+        ]
+    parts += ['</channel></rss>']
+    return '\n'.join(parts) + '\n'
 def build_best_page_en(tools_list) -> str:
     """/best/ — Top Rated AI Tools (Top 50 by the public rubric). Targets
     'best ai tools 2026'-class queries; every ranking auditable via Score
@@ -4342,9 +4688,27 @@ def build_all_en(target: str = 'all'):
     # ── Sitemap ───────────────────────────────────────────────────────────────
     cat_slugs = [get_category_slug_en(c) for c in tools_by_cat.keys()]
     sitemap   = generate_sitemap_en(published_tools, articles, cat_slugs, alt_slugs, vs_urls)
+    _news_items_for_map = load_news_en()
+    _news_urls = [(f'{SITE_DOMAIN}/news/', _news_date(_news_items_for_map[0]) if _news_items_for_map else datetime.now().strftime('%Y-%m-%d'), 'daily', '0.8')]
+    _news_seen = {_news_urls[0][0]}
+    for _it in _news_items_for_map:
+        _u = f'{SITE_DOMAIN}/news/{_it["slug"]}/'
+        if _u not in _news_seen:
+            _news_urls.append((_u, _news_date(_it), 'weekly', '0.6'))
+            _news_seen.add(_u)
+    for _d in sorted({_news_date(x) for x in _news_items_for_map}, reverse=True):
+        _u = f'{SITE_DOMAIN}/news/{_d}/'
+        if _u not in _news_seen:
+            _news_urls.append((_u, _d, 'weekly', '0.5'))
+            _news_seen.add(_u)
+    for _cat in NEWS_CATS:
+        _u = f'{SITE_DOMAIN}/news/{_cat}/'
+        if _u not in _news_seen:
+            _news_urls.append((_u, _news_urls[0][1], 'daily', '0.5'))
+            _news_seen.add(_u)
     _news_extra = ''.join(
-        f"    <url><loc>{SITE_DOMAIN}/news/{it['slug']}/</loc><lastmod>{it.get('published_at','')[:10]}</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>\n"
-        for it in load_news_en()
+        f"    <url><loc>{_u}</loc><lastmod>{_lm}</lastmod><changefreq>{_cf}</changefreq><priority>{_pr}</priority></url>\n"
+        for _u, _lm, _cf, _pr in _news_urls
     )
     sitemap = sitemap.replace('</urlset>', _news_extra + '</urlset>')
     _safe_write(os.path.join(OUT_DIR, 'sitemap.xml'), sitemap)
@@ -4461,14 +4825,43 @@ def build_all_en(target: str = 'all'):
     news_items = load_news_en()
     news_dir = os.path.join(OUT_DIR, 'news')
     os.makedirs(news_dir, exist_ok=True)
-    with open(os.path.join(news_dir, 'index.html'), 'w', encoding='utf-8') as f:
-        f.write(build_news_list_page_en(news_items))
+    news_dates = sorted(
+        {_news_date(it) for it in news_items if _news_date(it) != 'undated'},
+        reverse=True,
+    )
+    news_groups = {}
+    for _it in news_items:
+        news_groups.setdefault(_news_date(_it), []).append(_it)
+    _safe_write(
+        os.path.join(news_dir, 'index.html'),
+        build_news_list_page_en(news_items, published_tools),
+    )
+    for _d in news_dates:
+        _day_dir = os.path.join(news_dir, _d)
+        os.makedirs(_day_dir, exist_ok=True)
+        _safe_write(
+            os.path.join(_day_dir, 'index.html'),
+            build_news_day_page_en(_d, news_groups[_d], news_dates, published_tools),
+        )
+    for _cat in NEWS_CATS:
+        _cat_items = [_it for _it in news_items if _news_cat_key(_it) == _cat]
+        if not _cat_items:
+            continue
+        _cat_dir = os.path.join(news_dir, _cat)
+        os.makedirs(_cat_dir, exist_ok=True)
+        _safe_write(
+            os.path.join(_cat_dir, 'index.html'),
+            build_news_category_page_en(_cat, _cat_items, news_dates, published_tools),
+        )
     for it in news_items:
         ipath = os.path.join(news_dir, it['slug'])
         os.makedirs(ipath, exist_ok=True)
-        with open(os.path.join(ipath, 'index.html'), 'w', encoding='utf-8') as f:
-            f.write(_news_item_page(it, news_items))
-    print(f'[OK] en/news/ ({len(news_items)} items)')
+        _safe_write(
+            os.path.join(ipath, 'index.html'),
+            _news_item_page(it, news_items, published_tools),
+        )
+    _safe_write(os.path.join(news_dir, 'rss.xml'), build_news_rss_en(news_items))
+    print(f'[OK] en/news/ ({len(news_items)} items, {len(news_dates)} day pages, {len(NEWS_CATS)} category pages)')
 
     # ── IndexNow push ─────────────────────────────────────────────────────────
     cache_file = os.path.join(BASE_DIR, '.indexnow_en_pushed.json')
@@ -4480,7 +4873,10 @@ def build_all_en(target: str = 'all'):
     all_urls = [f"{SITE_DOMAIN}/"]
     all_urls += [f"{SITE_DOMAIN}/tools/{t['slug']}/" for t in published_tools]
     all_urls += [f"{SITE_DOMAIN}/articles/{a['slug']}/" for a in articles]
+    all_urls += [f"{SITE_DOMAIN}/news/"]
     all_urls += [f"{SITE_DOMAIN}/news/{it['slug']}/" for it in load_news_en()]
+    all_urls += [f"{SITE_DOMAIN}/news/{d}/" for d in news_dates]
+    all_urls += [f"{SITE_DOMAIN}/news/{cat}/" for cat in NEWS_CATS]
     all_urls += [f"{SITE_DOMAIN}/category/{get_category_slug_en(c)}/" for c in tools_by_cat]
     all_urls += [f"{SITE_DOMAIN}/category/{s}/" for s in sorted(ARTICLE_CATEGORY_PAGES)
                  if s not in {get_category_slug_en(c) for c in tools_by_cat}]

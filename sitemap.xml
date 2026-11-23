@@ -716,23 +716,31 @@
     <url><loc>https://www.aitoolbox.hk/articles/best-ai-tools-for-students-2026/</loc><lastmod>2026-03-31</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
     <url><loc>https://www.aitoolbox.hk/about</loc><lastmod>2026-11-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
     <url><loc>https://www.aitoolbox.hk/author/</loc><lastmod>2026-11-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-    <url><loc>https://www.aitoolbox.hk/news/2026-11-22-nasdaq-100-worst-week-since-pandemic/</loc><lastmod>2026-11-21</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
-    <url><loc>https://www.aitoolbox.hk/news/2026-11-22-claude-code-mode-experimental/</loc><lastmod></lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
-    <url><loc>https://www.aitoolbox.hk/news/2026-11-22-anthropic-mathematician-riemann-proof/</loc><lastmod></lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
-    <url><loc>https://www.aitoolbox.hk/news/2026-11-22-openai-gpt-live-1-1-api/</loc><lastmod></lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
-    <url><loc>https://www.aitoolbox.hk/news/2026-11-22-qwen4-max-tornado-bug-fix/</loc><lastmod></lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
-    <url><loc>https://www.aitoolbox.hk/news/2026-11-21-browser-use-1-0-one-tool/</loc><lastmod></lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
-    <url><loc>https://www.aitoolbox.hk/news/2026-11-21-runway-software-factory-agent-prs/</loc><lastmod></lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
-    <url><loc>https://www.aitoolbox.hk/news/2026-11-21-inkling-2-mini-laptop-model/</loc><lastmod></lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
-    <url><loc>https://www.aitoolbox.hk/news/2026-11-21-metr-task-horizon-doubling/</loc><lastmod></lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
-    <url><loc>https://www.aitoolbox.hk/news/2026-11-21-anthropic-day-two-slide/</loc><lastmod></lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
-    <url><loc>https://www.aitoolbox.hk/news/2026-11-21-openhands-agent-cve-remediation/</loc><lastmod></lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
-    <url><loc>https://www.aitoolbox.hk/news/2026-11-21-minimax-mim-nist-cryptanalysis/</loc><lastmod></lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
-    <url><loc>https://www.aitoolbox.hk/news/2026-11-20-gemini-mac-computer-use/</loc><lastmod></lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
-    <url><loc>https://www.aitoolbox.hk/news/2026-11-20-openai-performance-factory/</loc><lastmod></lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
-    <url><loc>https://www.aitoolbox.hk/news/2026-11-20-perplexity-brain-self-skills/</loc><lastmod></lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
-    <url><loc>https://www.aitoolbox.hk/news/2026-11-20-anthropic-largest-ipo-ever/</loc><lastmod></lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
-    <url><loc>https://www.aitoolbox.hk/news/2026-11-20-google-genie-4-api/</loc><lastmod></lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
-    <url><loc>https://www.aitoolbox.hk/news/2026-11-20-stanford-phantomdocket-court-filings/</loc><lastmod></lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
-    <url><loc>https://www.aitoolbox.hk/news/2026-11-20-amodei-ipo-safety-pledge/</loc><lastmod></lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
+    <url><loc>https://www.aitoolbox.hk/news/</loc><lastmod>2026-11-22</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
+    <url><loc>https://www.aitoolbox.hk/news/2026-11-22-claude-code-mode-experimental/</loc><lastmod>2026-11-22</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
+    <url><loc>https://www.aitoolbox.hk/news/2026-11-22-anthropic-mathematician-riemann-proof/</loc><lastmod>2026-11-22</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
+    <url><loc>https://www.aitoolbox.hk/news/2026-11-22-openai-gpt-live-1-1-api/</loc><lastmod>2026-11-22</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
+    <url><loc>https://www.aitoolbox.hk/news/2026-11-22-qwen4-max-tornado-bug-fix/</loc><lastmod>2026-11-22</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
+    <url><loc>https://www.aitoolbox.hk/news/2026-11-22-nasdaq-100-worst-week-since-pandemic/</loc><lastmod>2026-11-22</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
+    <url><loc>https://www.aitoolbox.hk/news/2026-11-21-browser-use-1-0-one-tool/</loc><lastmod>2026-11-21</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
+    <url><loc>https://www.aitoolbox.hk/news/2026-11-21-runway-software-factory-agent-prs/</loc><lastmod>2026-11-21</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
+    <url><loc>https://www.aitoolbox.hk/news/2026-11-21-inkling-2-mini-laptop-model/</loc><lastmod>2026-11-21</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
+    <url><loc>https://www.aitoolbox.hk/news/2026-11-21-metr-task-horizon-doubling/</loc><lastmod>2026-11-21</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
+    <url><loc>https://www.aitoolbox.hk/news/2026-11-21-anthropic-day-two-slide/</loc><lastmod>2026-11-21</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
+    <url><loc>https://www.aitoolbox.hk/news/2026-11-21-openhands-agent-cve-remediation/</loc><lastmod>2026-11-21</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
+    <url><loc>https://www.aitoolbox.hk/news/2026-11-21-minimax-mim-nist-cryptanalysis/</loc><lastmod>2026-11-21</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
+    <url><loc>https://www.aitoolbox.hk/news/2026-11-20-gemini-mac-computer-use/</loc><lastmod>2026-11-20</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
+    <url><loc>https://www.aitoolbox.hk/news/2026-11-20-openai-performance-factory/</loc><lastmod>2026-11-20</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
+    <url><loc>https://www.aitoolbox.hk/news/2026-11-20-perplexity-brain-self-skills/</loc><lastmod>2026-11-20</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
+    <url><loc>https://www.aitoolbox.hk/news/2026-11-20-anthropic-largest-ipo-ever/</loc><lastmod>2026-11-20</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
+    <url><loc>https://www.aitoolbox.hk/news/2026-11-20-google-genie-4-api/</loc><lastmod>2026-11-20</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
+    <url><loc>https://www.aitoolbox.hk/news/2026-11-20-stanford-phantomdocket-court-filings/</loc><lastmod>2026-11-20</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
+    <url><loc>https://www.aitoolbox.hk/news/2026-11-20-amodei-ipo-safety-pledge/</loc><lastmod>2026-11-20</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
+    <url><loc>https://www.aitoolbox.hk/news/2026-11-22/</loc><lastmod>2026-11-22</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+    <url><loc>https://www.aitoolbox.hk/news/2026-11-21/</loc><lastmod>2026-11-21</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+    <url><loc>https://www.aitoolbox.hk/news/2026-11-20/</loc><lastmod>2026-11-20</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+    <url><loc>https://www.aitoolbox.hk/news/models/</loc><lastmod>2026-11-22</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
+    <url><loc>https://www.aitoolbox.hk/news/products/</loc><lastmod>2026-11-22</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
+    <url><loc>https://www.aitoolbox.hk/news/industry/</loc><lastmod>2026-11-22</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
+    <url><loc>https://www.aitoolbox.hk/news/research/</loc><lastmod>2026-11-22</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url>
 </urlset>
