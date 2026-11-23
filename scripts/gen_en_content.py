@@ -51,11 +51,8 @@ AEO_GEO_SUFFIX = """
 [BLUF — Bottom Line Up Front]
 The first line of body content must be a Markdown blockquote starting with "> Bottom line:" giving the core conclusion in 40-60 words. No "In this article we will explore..." filler. AI engines extract only the first 1-2 sentences as answers.
 
-[Expert/Authority Quote]
-The second line must be another Markdown blockquote quoting a real industry expert, official institution, or research report, with attribution. Real examples:
-> "The core value of a note tool isn't feature count—it's whether you can still open your notes ten years from now." —— Nick Milo, Obsidian community core contributor
-> "AI tool monthly fees aren't a cost—they're a fraction of your hourly rate. Picking the wrong tool wastes 5+ hours/week." —— Andrej Karpathy, 2026-03 X post
-Do not fabricate names or quotes. Use real public figures/institutions/reports. If no suitable quote, cite the author's own test records with "—— Author test record, YYYY-MM".
+[Expert/Authority Quote — VERIFIED SOURCES ONLY]
+The second line may be a Markdown blockquote quoting a real, verifiable industry expert or official report — BUT ONLY if you are certain the person/quote/source actually exists. A quote you cannot verify is WORSE than no quote: omit this line entirely rather than invent one. Never attribute a quote to a named individual (e.g. "Nick Milo, Obsidian contributor", "Andrej Karpathy, 2026-03 X post") unless you have actually seen that exact quote from that person. If you have no verified external quote, use the author's own hands-on finding instead: "—— Editor test record, YYYY-MM".
 
 [Question-Style H2 Headings]
 All H2 (## prefix) must be questions or question-oriented statements:
@@ -73,13 +70,19 @@ The first sentence of each paragraph must directly give the conclusion/answer (4
 [Short Paragraphs]
 2-3 sentences per paragraph for AI programmatic parsing. Paragraphs over 4 sentences must be split.
 
-[Sourced Statistics]
-The full content must include at least 3-5 statistics with sources:
-- Wrong: "many users"
-- Right: "1.2B monthly active users (source: Notion 2026 Q1 earnings)"
-- Wrong: "fast"
-- Right: "2.8s average response time (source: Author 2026-04 test, 50 runs averaged)"
-Data source priority: official earnings/Model Cards > industry associations > authoritative media > third-party data platforms > author tests. Do not fabricate data.
+[Sourced Statistics — ACCURACY OVER QUANTITY (2026-11-23 hard rule)]
+Use concrete, sourced numbers WHERE YOU HAVE A REAL SOURCE. NEVER invent a statistic to hit a quota. A prior audit of 81 citations found 63% were fabricated by this exact generation process, causing a serious trust problem. If you cannot name a real, verifiable source for a number, write the qualitative point WITHOUT the number instead. Zero invented statistics is acceptable; one fabricated statistic is not.
+
+THREE FORBIDDEN FABRICATION PATTERNS (all found in our own content — do not repeat):
+1. Invented institution + invented number: "A 2026 University of Waterloo study found 76%..." when no such study exists. Never name an institution + precise percentage unless you can point to the actual report.
+2. Real institution + wrong number: "McKinsey found data pros spend 42% of their week on data prep" when McKinsey's real figure is different. Right institution, wrong number is still fabrication.
+3. Real number + wrong attribution/year: "Instagram reported in 2026 that 3-5 hashtags get 12.6% more reach" when the 12.6% actually came from a 2019 blog. Do not attach a real statistic to the wrong source or year.
+
+BEFORE WRITING ANY statistic, ask: can I name the exact report/publication and does the number match it? If not — drop the number, keep the argument.
+Good (real, checkable): "2.8s average response time (source: Editor test record, 2026-04, 50 runs averaged)" — your own measured test is always safe.
+Good (no number needed): "Teams routinely spend more time editing existing copy than writing new material."
+Bad (fabricated): "A 2026 Gartner survey found 97% cost reduction" — no such Gartner figure exists.
+Data source priority: your own hands-on test records > official earnings/Model Cards > authoritative media > industry associations. When in doubt, prefer a qualitative statement over an unverifiable number.
 
 [FAQ Section]
 Content must end with "## Frequently Asked Questions (FAQ)" section, 3-5 real user questions, each answer 50-100 words, direct conclusion. No encyclopedic pseudo-FAQs like "What is X? X is a...". Write real user doubts.

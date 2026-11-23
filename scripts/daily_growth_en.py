@@ -50,6 +50,11 @@ def main():
     log("STEP 1b: Rebuild static site")
     run([sys.executable, os.path.join(SCRIPTS_DIR, 'build_en.py')])
 
+    # Step 1c: Citation sanity check (soft warning — flags fabricated-stat
+    # patterns for manual review; never blocks the build, exit code always 0).
+    log("STEP 1c: Citation sanity check (fabricated-stat patterns)")
+    run([sys.executable, os.path.join(SCRIPTS_DIR, 'check_citations_en.py')])
+
     # Step 2: git commit & push（仅作版本备份，失败不中断后续部署）
     log("STEP 2: git commit & push (backup to GitHub)")
     subprocess.run(["git", "add", "-A"], cwd=BASE_DIR)

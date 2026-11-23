@@ -263,7 +263,8 @@ STRUCTURE:
 - Body: 5–8 H2 sections with specific tool names, real prices, actual limitations
 - 1 comparison table (markdown)
 - 3–5 FAQ at end (question as H3, answer 40–70 words)
-- 1–2 external authority citations (link to official docs, reputable review sites like TechCrunch/G2, or research papers). GEO requirement — AI search engines trust content that cites external sources.
+- 1–2 external authority citations (link to official docs, reputable review sites like TechCrunch/G2, or research papers). GEO requirement — AI search engines trust content that cites external sources. ONLY cite sources you are certain exist and have actually checked; a fabricated citation destroys trust. If you cannot verify a real source, omit the citation rather than inventing one.
+- NEVER fabricate statistics: no invented "2026 <Institution> study found X%", no real institution with a wrong number, no real number attributed to the wrong source/year. Our 2026-11 audit found 63% of such claims were fabricated. If a number cannot be traced to a verifiable source, state the point qualitatively without a number. Your own hands-on test records (with date and sample size) are always safe to cite.
 - No "Conclusion" header — end with a direct recommendation paragraph
 
 SEO KEYWORD RULES (Google ranking depends on this):
