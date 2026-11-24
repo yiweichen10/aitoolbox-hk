@@ -22,7 +22,26 @@ SITE_NAME    = "AI Tool Lab"
 SITE_DOMAIN  = "https://www.aitoolbox.hk"
 SITE_DOMAIN_CN = "https://www.aitoollab.cn"
 SITE_LOGO    = f"{SITE_DOMAIN}/images/logo.png"
-CSS_VERSION  = f"v={datetime.now().strftime('%Y%m%d%H%M%S')}"  # cache busting (with seconds)
+# Cache-busting version derived from CSS FILE CONTENT, not build time.
+# (2026-11-24 fix) A time-based token changed on every build, forcing all
+# 1700+ HTML pages to hash differently and wrangler to re-upload ~800 files
+# on every deploy — wasting bandwidth and triggering CF upload timeouts.
+# Content hash => HTML only changes when CSS actually changes => true
+# incremental deploys (images and unchanged pages stay "already uploaded").
+def _css_version():
+    import hashlib
+    h = hashlib.sha256()
+    css_dir = os.path.join(BASE_DIR, 'css')
+    if os.path.isdir(css_dir):
+        for name in sorted(os.listdir(css_dir)):
+            p = os.path.join(css_dir, name)
+            if os.path.isfile(p):
+                h.update(name.encode('utf-8'))
+                with open(p, 'rb') as fh:
+                    h.update(fh.read())
+    return 'v=' + h.hexdigest()[:10]
+
+CSS_VERSION  = _css_version()
 
 # ─── Rankings pages / Article category pages ─────────────────────────────────
 RANKINGS_MIN_TOOLS = 3  # 分类工具数达到该值才生成 /rankings/<slug>/ 榜单页
@@ -501,6 +520,20 @@ def _serp_desc(text: str, limit: int = 155) -> str:
     return cut
 
 
+def _social_desc(text: str, limit: int = 150) -> str:
+    """SERP-safe snippet for og/twitter: prefer a complete first sentence,
+    fall back to a word boundary. Avoids mid-word cuts and dangling
+    fragments like 'Built for' that raw [:150] slicing used to ship."""
+    s = re.sub(r'\s+', ' ', str(text or '')).strip()
+    if len(s) <= limit:
+        return s
+    window = s[:limit]
+    ends = [m.end() for m in re.finditer(r'[.!?](?=\s|$)', window)]
+    if ends and ends[-1] >= int(limit * 0.6):
+        return window[:ends[-1]].rstrip()
+    return _serp_desc(s, limit)
+
+
 def plain_text_for_schema(text: str) -> str:
     """Strip Markdown/HTML so JSON-LD schema text stays clean prose.
     """
@@ -594,9 +627,9 @@ def header_html(title_text: str = "AI Tool Lab") -> str:
                 <span class="header-tagline">Independent reviews</span>
             </a>
             <nav class="header-nav">
-                <a href="/category/">Tools</a>
+                <a href="/tools/">Tools</a>
                 <a href="/best/">Top Rated</a>
-                <a href="/new/">New Tools</a>
+                <a href="/new/">Latest Reviews</a>
                 <a href="/news/">AI News</a>
                 <a href="/articles/">Articles</a>
                 <a href="/category/ai-chat/">AI Chat</a>
@@ -619,9 +652,10 @@ def footer_html() -> str:
             </div>
             <div class="footer-col">
                 <p class="footer-col-head">Explore</p>
-                <a href="/category/">All AI Tools</a>
+                <a href="/tools/">All AI Tools</a>
+                <a href="/category/">Browse Categories</a>
                 <a href="/best/">Top Rated AI Tools</a>
-                <a href="/new/">Newly Added</a>
+                <a href="/new/">Latest Reviews</a>
                 <a href="/articles/">Articles &amp; Guides</a>
                 <a href="/news/">AI News</a>
                 <a href="/search/">Search</a>
@@ -1027,13 +1061,13 @@ def build_tool_page_en(tool: dict, all_tools: list, all_articles: list = None, a
     <link rel="canonical" href="{SITE_DOMAIN}/tools/{slug}/">
 {hreflang}    <meta property="og:type" content="article">
     <meta property="og:title" content="{escape_html(name)} Review 2026 - {SITE_NAME}">
-    <meta property="og:description" content="{escape_html(tool['description'][:150])}">
+    <meta property="og:description" content="{escape_html(_social_desc(tool['description'], 150))}">
     <meta property="og:url" content="{SITE_DOMAIN}/tools/{slug}/">
     {'<meta property="og:image" content="' + og_image + '">' if og_image else ''}
     <meta property="og:site_name" content="{SITE_NAME}">
     <meta name="twitter:card" content="{'summary_large_image' if og_image else 'summary'}">
     <meta name="twitter:title" content="{escape_html(name)} Review 2026 - {SITE_NAME}">
-    <meta name="twitter:description" content="{escape_html(tool['description'][:120])}">
+    <meta name="twitter:description" content="{escape_html(_social_desc(tool['description'], 120))}">
     {'<meta name="twitter:image" content="' + og_image + '">' if og_image else ''}
     <link rel="stylesheet" href="/css/style.css?{CSS_VERSION}">
     <script type="application/ld+json">{breadcrumb_json}</script>
@@ -1933,13 +1967,17 @@ def build_article_list_en(articles: list, current_page: int = 1, total_pages: in
         pagination_html = f'<nav class="pagination" aria-label="Pagination">{"".join(links)}</nav>'
 
     hreflang = hreflang_tags('/articles/', '/articles/')
+    # Pagination duplicates the first page's content (canonical already points
+    # to /articles/). Tell crawlers not to index deeper pages but keep following
+    # their links so every article remains discoverable.
+    robots_meta = '    <meta name="robots" content="noindex,follow">\n' if current_page > 1 else ''
     return f'''<!DOCTYPE html>
 <html lang="en">
 <head>
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Tool Articles & Guides 2026 - {SITE_NAME}</title>
+{robots_meta}    <title>AI Tool Articles & Guides 2026 - {SITE_NAME}</title>
     <meta name="description" content="In-depth AI tool reviews, comparisons, and guides. Updated daily with practical advice for using AI to save time and make money.">
     <link rel="canonical" href="{SITE_DOMAIN}/articles/">
 {hreflang}    <link rel="stylesheet" href="/css/style.css?{CSS_VERSION}">
@@ -2583,6 +2621,7 @@ def generate_sitemap_en(tools: list, articles: list, cat_slugs: list, alt_slugs:
     today = datetime.now().strftime('%Y-%m-%d')
     urls  = [
         f'    <url><loc>{SITE_DOMAIN}/</loc><lastmod>{today}</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>',
+        f'    <url><loc>{SITE_DOMAIN}/tools/</loc><lastmod>{today}</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>',
         f'    <url><loc>{SITE_DOMAIN}/category/</loc><lastmod>{today}</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>',
         f'    <url><loc>{SITE_DOMAIN}/articles/</loc><lastmod>{today}</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>',
         f'    <url><loc>{SITE_DOMAIN}/about</loc><lastmod>{today}</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>',
@@ -2750,7 +2789,10 @@ def generate_llms_txt_en(tools: list, articles: list, alt_slugs: list = None,
     out.append('## Core Pages (priority crawl)')
     out.append('')
     out.append('- [Home](https://www.aitoolbox.hk/): featured, latest and hot AI tools')
+    out.append(f'- [All Tools](https://www.aitoolbox.hk/tools/): flat catalog of all {n_tools} tools with search and price filters')
     out.append(f'- [Category Overview](https://www.aitoolbox.hk/category/): all {len(cats_sorted)} category pages with a quick-reference table')
+    out.append('- [Top Rated](https://www.aitoolbox.hk/best/): top tools ranked by the public scoring rubric')
+    out.append('- [Recently Reviewed](https://www.aitoolbox.hk/new/): newly listed and re-checked tool reviews, newest first')
     out.append('- [Search](https://www.aitoolbox.hk/search/): instant search across all tools and articles')
     out.append(f'- [Submit a tool](https://www.aitoolbox.hk/submit): free submissions, editor-tested before review; rankings cannot be bought')
     out.append(f'- [Articles](https://www.aitoolbox.hk/articles/): original hands-on reviews, comparisons and guides ({n_arts} articles)')
@@ -2817,14 +2859,16 @@ def generate_llms_txt_en(tools: list, articles: list, alt_slugs: list = None,
     return '\n'.join(out) + '\n'
 
 
-def generate_llms_full_txt_en(tools: list, articles: list) -> str:
+def generate_llms_full_txt_en(tools: list, articles: list, news_items: list = None) -> str:
     """llms-full.txt (llmstxt.org companion) — extended site content for AI
     models that read the whole brief in one request: every tool with full
     description/price/rating/pros/cons, every article with description,
     heading outline and the content lead (markdown tables included — pricing
-    comparisons are the site's most-cited asset). Target size ~1 MB."""
+    comparisons are the site's most-cited asset), plus the latest AI news
+    briefs with their editorial commentary. Target size ~1 MB."""
     today_iso = datetime.now().strftime('%Y-%m-%d')
-    n_tools, n_arts = len(tools), len(articles)
+    news_items = news_items or []
+    n_tools, n_arts, n_news = len(tools), len(articles), len(news_items)
 
     merged = {}
     for t in tools:
@@ -2858,7 +2902,7 @@ def generate_llms_full_txt_en(tools: list, articles: list) -> str:
     cats_sorted = sorted(merged.items(), key=lambda kv: -len(kv[1]['tools']))
 
     out = ['# AI Tool Box (aitoolbox.hk) — Full Content', '']
-    out.append(f'> Extended companion to llms.txt: complete content for all {n_tools} AI tools and {n_arts} articles. A curated AI tool directory & review platform with editor-tested reviews covering features, pricing, pros/cons and use cases. Updated daily.')
+    out.append(f'> Extended companion to llms.txt: complete content for all {n_tools} AI tools, {n_arts} articles and the latest {n_news} AI news briefs. A curated AI tool directory & review platform with editor-tested reviews covering features, pricing, pros/cons and use cases. Updated daily.')
     out.append('')
     out.append('<!-- llms-full.txt — full content for AI models (llmstxt.org spec) -->')
     out.append(f'<!-- Regenerated by scripts/build_en.py on every build -->')
@@ -2916,6 +2960,29 @@ def generate_llms_full_txt_en(tools: list, articles: list) -> str:
         if lead:
             out.append(lead)
         out.append('')
+
+    if news_items:
+        out.append('## AI News (latest briefs with editorial analysis)')
+        out.append('')
+        out.append('Index: https://www.aitoolbox.hk/news/ · RSS: https://www.aitoolbox.hk/news/rss.xml')
+        out.append('')
+        for it in news_items[:20]:
+            slug = it.get('slug', '')
+            cat_label = NEWS_CATS.get(_news_cat_key(it), ('Products',))[0]
+            out.append(f"### {it.get('title', '')}")
+            out.append(
+                f"URL: https://www.aitoolbox.hk/news/{slug}/ · Published: {_news_date(it)} "
+                f"· Category: {cat_label} · Source: {it.get('source', '')}"
+            )
+            summary = _clean(it.get('summary', ''))
+            if summary:
+                out.append(summary)
+            commentary = _clean(it.get('commentary', ''))
+            if commentary:
+                out.append('Why it matters: ' + commentary)
+            if it.get('source_url'):
+                out.append('Original source: ' + str(it['source_url']))
+            out.append('')
     return '\n'.join(out) + '\n'
 
 
@@ -3684,6 +3751,11 @@ def _news_head(title, desc, canonical, hreflang='', schema=''):
 {hreflang}    <meta property="og:type" content="website">
     <meta property="og:title" content="{escape_html(title)}">
     <meta property="og:description" content="{escape_html(_serp_desc(desc))}">
+    <meta property="og:image" content="{SITE_DOMAIN}/images/og/news-en-og.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{escape_html(title)}">
+    <meta name="twitter:description" content="{escape_html(_serp_desc(desc))}">
+    <meta name="twitter:image" content="{SITE_DOMAIN}/images/og/news-en-og.png">
     <link rel="stylesheet" href="/css/style.css?{CSS_VERSION}">
 {VERIFICATION_BLOCK}{GA_BLOCK}
 {schema}
@@ -4065,7 +4137,7 @@ def build_best_page_en(tools_list) -> str:
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Top Rated AI Tools 2026 - The 50 Best, Ranked by a Published Rubric | {SITE_NAME}</title>
-    <meta name="description" content="The 50 highest-rated AI tools on {SITE_NAME}, ranked by a transparent 4-factor scoring rubric (depth, completeness, popularity, freshness). No paid placements - every score is auditable.">
+    <meta name="description" content="{escape_html(_serp_desc(f"The 50 highest-rated AI tools on {SITE_NAME}, ranked by a transparent 4-factor rubric. No paid placements - every score is auditable."))}">
     <link rel="canonical" href="{SITE_DOMAIN}/best/">
 {hreflang}    <link rel="stylesheet" href="/css/style.css?{CSS_VERSION}">
 {VERIFICATION_BLOCK}{GA_BLOCK}
@@ -4095,26 +4167,220 @@ def build_best_page_en(tools_list) -> str:
 </html>'''
 
 
+def build_tools_index_en(tools_list, tools_by_cat) -> str:
+    """Flat, searchable catalog of every published tool at /tools/.
+
+    CN has a dedicated all-tools index while EN previously only had the
+    category hub. This page mirrors CN's information architecture (all tools
+    in one place, grouped by category) but uses EN cards, tokens and FAQ/ItemList
+    schema so it also works as a GEO entry point.
+    """
+    today_iso = datetime.now().strftime('%Y-%m-%d')
+    today_disp = datetime.now().strftime('%d %b %Y').lstrip('0')
+    total = len(tools_list)
+    type_counts = {'free': 0, 'freemium': 0, 'paid': 0}
+    for _t in tools_list:
+        type_counts[price_type(_t.get('price', ''))] += 1
+
+    merged = {}
+    for cat_name, tools in tools_by_cat.items():
+        s = get_category_slug_en(cat_name)
+        if s not in merged:
+            merged[s] = {'display': cat_name, 'tools': list(tools)}
+        else:
+            merged[s]['tools'].extend(tools)
+    cats = sorted(merged.items(), key=lambda kv: (-len(kv[1]['tools']), kv[1]['display'].lower()))
+
+    jump_links = []
+    sections = []
+    item_list = []
+    pos = 0
+    for slug, v in cats:
+        label = v['display']
+        count = len(v['tools'])
+        jump_links.append(
+            f'<a href="#cat-{escape_html(slug)}" class="tools-jump-link">'
+            f'{escape_html(label)} <span>{count}</span></a>'
+        )
+        cards = ''
+        for t in sort_by_editorial_score(v['tools']):
+            pt = price_type(t.get('price', ''))
+            search_blob = ' '.join(str(t.get(k) or '') for k in ('name', 'description', 'category', 'price')).lower()
+            cards += f'''<a href="/tools/{t['slug']}/" class="tool-card" data-type="{pt}" data-search="{escape_html(search_blob)}">
+                {tool_tile(t)}
+                <div class="tool-info">
+                    <div class="tool-title-row"><h3>{escape_html(t['name'])}</h3>{status_chip(t)}</div>
+                    <p>{escape_html(t.get('description', ''))}</p>
+                    <div class="tool-meta-row"><span>{rating_num(t):.1f}</span><span>{escape_html(t.get('price', ''))}</span></div>
+                </div>
+            </a>\n'''
+            pos += 1
+            item_list.append({
+                "@type": "ListItem",
+                "position": pos,
+                "name": t.get('name', ''),
+                "url": f"{SITE_DOMAIN}/tools/{t['slug']}/",
+            })
+        sections.append(f'''            <section class="tools-group" id="cat-{escape_html(slug)}">
+                <div class="tools-group-head">
+                    <h2>{escape_html(label)} <span class="tools-count">{count} tools</span></h2>
+                    <a href="/category/{escape_html(slug)}/" class="tools-group-link">View category &rarr;</a>
+                </div>
+                <div class="tool-grid">
+{cards}                </div>
+            </section>
+''')
+
+    faq_items = [
+        {
+            "@type": "Question",
+            "name": "How many AI tools are listed?",
+            "acceptedAnswer": {"@type": "Answer", "text": f"We currently review {total} AI tools across {len(cats)} categories. The catalog is updated daily."},
+        },
+        {
+            "@type": "Question",
+            "name": "Which tools have a free plan?",
+            "acceptedAnswer": {"@type": "Answer", "text": f"{type_counts['free']} tools are fully free and {type_counts['freemium']} offer a free tier. Use the Free filter above to narrow the list."},
+        },
+        {
+            "@type": "Question",
+            "name": "How are these tools ranked?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Every tool is scored with the same public four-factor rubric covering capability, value, ease of use and transparency. Paid placement does not change a score or ranking."},
+        },
+    ]
+    faq_json = json.dumps({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faq_items}, ensure_ascii=False)
+    itemlist_json = json.dumps({"@context": "https://schema.org", "@type": "ItemList", "numberOfItems": total, "itemListElement": item_list}, ensure_ascii=False)
+    breadcrumb_json = json.dumps({
+        "@context": "https://schema.org", "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": f"{SITE_DOMAIN}/"},
+            {"@type": "ListItem", "position": 2, "name": "All Tools", "item": f"{SITE_DOMAIN}/tools/"},
+        ],
+    }, ensure_ascii=False)
+
+    desc = (
+        f"Browse all {total} AI tools reviewed by {SITE_NAME} in 2026. "
+        f"Search and filter by price, compare ratings, and find the right tool across {len(cats)} categories."
+    )
+    hreflang = hreflang_tags('/tools/', '/tools/')
+    return f'''<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All AI Tools 2026 - {total} Reviewed Tools by Category | {SITE_NAME}</title>
+    <meta name="description" content="{escape_html(_serp_desc(desc))}">
+    <meta name="keywords" content="all AI tools,AI tools list,AI tool directory,AI tools 2026,free AI tools">
+    <link rel="canonical" href="{SITE_DOMAIN}/tools/">
+{hreflang}    <meta property="og:type" content="website">
+    <meta property="og:title" content="All AI Tools 2026 - {SITE_NAME}">
+    <meta property="og:description" content="{escape_html(_serp_desc(desc))}">
+    <link rel="stylesheet" href="/css/style.css?{CSS_VERSION}">
+{VERIFICATION_BLOCK}{GA_BLOCK}
+    <script type="application/ld+json">{breadcrumb_json}</script>
+    <script type="application/ld+json">{itemlist_json}</script>
+    <script type="application/ld+json">{faq_json}</script>
+</head>
+<body data-page-type="tools-index">
+{header_html()}
+
+    <nav class="breadcrumb td-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a><span class="sep">/</span><span>All Tools</span>
+    </nav>
+
+    <main class="tools-page">
+        <div class="tools-header">
+            <h1 class="page-title">All AI Tools</h1>
+            <p class="tools-intro">{total} tools across {len(cats)} categories &middot; {type_counts['free']} free &middot; {type_counts['freemium']} freemium &middot; Updated {today_disp}</p>
+            <div class="tools-toolbar">
+                <label class="tools-search">
+                    <input id="toolsSearch" type="search" placeholder="Search {total} tools by name, use case or price..." aria-label="Search all AI tools">
+                </label>
+                <div class="tools-filters">
+                    <button class="tools-filter-pill active" data-filter="all">All tools</button>
+                    <button class="tools-filter-pill" data-filter="free">Free</button>
+                    <button class="tools-filter-pill" data-filter="freemium">Freemium</button>
+                    <button class="tools-filter-pill" data-filter="paid">Paid</button>
+                </div>
+            </div>
+            <div class="tools-jump">
+{''.join(jump_links)}            </div>
+        </div>
+
+        <div class="tools-sections">
+{''.join(sections)}        </div>
+
+        <section class="tools-faq">
+            <h2>Frequently asked questions</h2>
+            <div class="tools-faq-item"><h3>How many AI tools are listed?</h3><p>We currently review {total} AI tools across {len(cats)} categories. The catalog is updated daily.</p></div>
+            <div class="tools-faq-item"><h3>Which tools have a free plan?</h3><p>{type_counts['free']} tools are fully free and {type_counts['freemium']} offer a free tier. Use the Free filter above to narrow the list.</p></div>
+            <div class="tools-faq-item"><h3>How are these tools ranked?</h3><p>Every tool is scored with the same public four-factor rubric covering capability, value, ease of use and transparency. Paid placement does not change a score or ranking.</p></div>
+        </section>
+    </main>
+
+{footer_html()}
+    ''' + BACK_TO_TOP_BLOCK + DARK_MODE_BLOCK + '''
+    <script>
+    (function () {{
+        var input = document.getElementById('toolsSearch');
+        var pills = document.querySelectorAll('.tools-filter-pill');
+        var cards = document.querySelectorAll('.tools-page .tool-card');
+        var groups = document.querySelectorAll('.tools-group');
+        var jumps = document.querySelectorAll('.tools-jump-link');
+        var filter = 'all';
+        function apply() {{
+            var q = (input && input.value || '').trim().toLowerCase();
+            cards.forEach(function (card) {{
+                var type = card.getAttribute('data-type');
+                var hay = card.getAttribute('data-search') || '';
+                var ok = (filter === 'all' || type === filter) && (!q || hay.indexOf(q) !== -1);
+                card.style.display = ok ? '' : 'none';
+            }});
+            groups.forEach(function (group) {{
+                var any = Array.prototype.some.call(group.querySelectorAll('.tool-card'), function (c) {{ return c.style.display !== 'none'; }});
+                group.style.display = any ? '' : 'none';
+                var jump = document.querySelector('.tools-jump-link[href="#' + group.id + '"]');
+                if (jump) jump.style.display = any ? '' : 'none';
+            }});
+        }}
+        if (input) input.addEventListener('input', apply);
+        pills.forEach(function (pill) {{
+            pill.addEventListener('click', function () {{
+                pills.forEach(function (p) {{ p.classList.remove('active'); }});
+                pill.classList.add('active');
+                filter = pill.getAttribute('data-filter') || 'all';
+                apply();
+            }});
+        }});
+    }})();
+    </script>
+</body>
+</html>'''
+
 def build_new_page_en(tools_list) -> str:
-    """/new/ — Newly Added tools, newest first (created_date; undated skipped)."""
+    """/new/ — Recently listed or re-checked tool reviews, newest first."""
     today_disp = datetime.now().strftime('%d %b %Y').lstrip('0')
     hreflang = hreflang_tags('/new/', '/new/')
 
-    def _added_key(t):
-        d = t.get('created_date') or t.get('last_verified') or ''
-        return d if isinstance(d, str) and d[:1].isdigit() else '0000-00-00'
+    def _date_info(t):
+        for key, label in (('created_date', 'Added'), ('last_verified', 'Re-checked')):
+            d = t.get(key)
+            if isinstance(d, str) and d[:1].isdigit():
+                return d[:10], label
+        return '', ''
 
-    fresh = sorted(tools_list, key=_added_key, reverse=True)
-    fresh = [t for t in fresh if _added_key(t) != '0000-00-00'][:60]
+    fresh = sorted(tools_list, key=lambda t: _date_info(t)[0] or '0000-00-00', reverse=True)
+    fresh = [t for t in fresh if _date_info(t)[0]][:60]
     cards = ''
     for t in fresh:
-        d = _added_key(t)
+        d, kind = _date_info(t)
         cards += (
             f'<a class="new-card" href="/tools/{t["slug"]}/">'
             f'{tool_tile(t)}'
             f'<div class="new-info"><div class="new-name">{escape_html(t.get("name", ""))}</div>'
             f'<div class="new-meta">{escape_html(t.get("category", ""))} &middot; {escape_html(t.get("price", ""))}</div></div>'
-            f'<span class="new-date">{escape_html(d)}</span>'
+            f'<span class="new-date">{kind} &middot; {escape_html(d)}</span>'
             f'</a>\n'
         )
     return f'''<!DOCTYPE html>
@@ -4123,8 +4389,8 @@ def build_new_page_en(tools_list) -> str:
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Newly Added AI Tools 2026 - Fresh Reviews This Month | {SITE_NAME}</title>
-    <meta name="description" content="The newest AI tools reviewed and scored on {SITE_NAME}, newest first. Every entry gets the same transparent 4-factor rubric - new does not mean unvetted.">
+    <title>Recently Reviewed AI Tools 2026 - New and Re-checked Listings | {SITE_NAME}</title>
+    <meta name="description" content="The AI tools we listed or re-checked most recently, newest first. Every review uses the same transparent 4-factor rubric, whether the tool is new to us or not.">
     <link rel="canonical" href="{SITE_DOMAIN}/new/">
 {hreflang}    <link rel="stylesheet" href="/css/style.css?{CSS_VERSION}">
 {VERIFICATION_BLOCK}{GA_BLOCK}
@@ -4133,8 +4399,8 @@ def build_new_page_en(tools_list) -> str:
 {header_html()}
 
     <main class="cat-hub">
-        <h1 class="page-title">Newly Added AI Tools</h1>
-        <p class="cat-intro">Fresh reviews, newest first &middot; Updated daily, last on {today_disp}. New does not mean unvetted: every tool gets the same public scoring rubric.</p>
+        <h1 class="page-title">Recently Reviewed AI Tools</h1>
+        <p class="cat-intro">Newly listed and re-checked, newest first &middot; Updated daily, last on {today_disp}. Every tool gets the same public scoring rubric, whether it just landed or was reviewed again.</p>
 
         <section class="cat-section">
             <div class="new-grid">
@@ -4160,7 +4426,7 @@ def build_privacy_page_en() -> str:
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - {SITE_NAME}</title>
     <meta name="description" content="How {SITE_NAME} handles data: Google Analytics traffic measurement, anonymous tool-like tokens in localStorage, affiliate links, and your privacy choices.">
-    <link rel="canonical" href="{SITE_DOMAIN}/privacy.html">
+    <link rel="canonical" href="{SITE_DOMAIN}/privacy">
 {hreflang}    <link rel="stylesheet" href="/css/style.css?{CSS_VERSION}">
 {VERIFICATION_BLOCK}{GA_BLOCK}
 </head>
@@ -4222,7 +4488,7 @@ def build_terms_page_en() -> str:
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terms of Use - {SITE_NAME}</title>
     <meta name="description" content="Terms of use for {SITE_NAME}: informational service, no warranty, intellectual property, affiliate disclosure and third-party links.">
-    <link rel="canonical" href="{SITE_DOMAIN}/terms.html">
+    <link rel="canonical" href="{SITE_DOMAIN}/terms">
 {hreflang}    <link rel="stylesheet" href="/css/style.css?{CSS_VERSION}">
 {VERIFICATION_BLOCK}{GA_BLOCK}
 </head>
@@ -4686,7 +4952,14 @@ def build_all_en(target: str = 'all'):
     inject_global_nav_en()
 
     # ── Sitemap ───────────────────────────────────────────────────────────────
-    cat_slugs = [get_category_slug_en(c) for c in tools_by_cat.keys()]
+    # 2026-11-23: article-only category pages were generated + submitted via
+    # IndexNow but never made it into the sitemap (only tool categories were
+    # passed). Union both sets, dedupe, so every built /category/<slug>/ page
+    # is discoverable from the sitemap too.
+    cat_slugs = list(dict.fromkeys(
+        [get_category_slug_en(c) for c in tools_by_cat.keys()]
+        + sorted(ARTICLE_CATEGORY_PAGES)
+    ))
     sitemap   = generate_sitemap_en(published_tools, articles, cat_slugs, alt_slugs, vs_urls)
     _news_items_for_map = load_news_en()
     _news_urls = [(f'{SITE_DOMAIN}/news/', _news_date(_news_items_for_map[0]) if _news_items_for_map else datetime.now().strftime('%Y-%m-%d'), 'daily', '0.8')]
@@ -4726,9 +4999,9 @@ def build_all_en(target: str = 'all'):
     print(f'[OK] en/llms.txt ({len(published_tools)} tools / {len(articles)} articles)')
 
     # ── llms-full.txt (full content companion — tools + articles in one file) ─
-    llms_full = generate_llms_full_txt_en(published_tools, articles)
+    llms_full = generate_llms_full_txt_en(published_tools, articles, load_news_en())
     _safe_write(os.path.join(OUT_DIR, 'llms-full.txt'), llms_full)
-    print(f'[OK] en/llms-full.txt ({len(published_tools)} tools / {len(articles)} articles, {len(llms_full)//1024} KB)')
+    print(f'[OK] en/llms-full.txt ({len(published_tools)} tools / {len(articles)} articles / {len(load_news_en())} news briefs, {len(llms_full)//1024} KB)')
 
     # ── About/Author trust-info count refresh (audit 2026-10-13 P1 fix) ───────
     _n_cats = len({get_category_slug_en(t.get('category', '')) for t in published_tools})
@@ -4816,6 +5089,11 @@ def build_all_en(target: str = 'all'):
     ]
     _safe_write(os.path.join(OUT_DIR, 'js', 'tools-data.js'), 'window.__ALL_TOOLS_EN__=' + json.dumps(tools_index, ensure_ascii=False, separators=(',', ':')) + ';')
     _safe_write(os.path.join(OUT_DIR, 'favorites.html'), build_favorites_page_en())
+    # Flat all-tools index (CN parity: /tools/ lists every tool in one place)
+    tools_dir = os.path.join(OUT_DIR, 'tools')
+    os.makedirs(tools_dir, exist_ok=True)
+    _safe_write(os.path.join(tools_dir, 'index.html'), build_tools_index_en(published_tools, tools_by_cat))
+
     best_dir = os.path.join(OUT_DIR, 'best')
     os.makedirs(best_dir, exist_ok=True)
     _safe_write(os.path.join(best_dir, 'index.html'), build_best_page_en(published_tools))
@@ -4873,6 +5151,7 @@ def build_all_en(target: str = 'all'):
     all_urls = [f"{SITE_DOMAIN}/"]
     all_urls += [f"{SITE_DOMAIN}/tools/{t['slug']}/" for t in published_tools]
     all_urls += [f"{SITE_DOMAIN}/articles/{a['slug']}/" for a in articles]
+    all_urls += [f"{SITE_DOMAIN}/tools/"]
     all_urls += [f"{SITE_DOMAIN}/news/"]
     all_urls += [f"{SITE_DOMAIN}/news/{it['slug']}/" for it in load_news_en()]
     all_urls += [f"{SITE_DOMAIN}/news/{d}/" for d in news_dates]
