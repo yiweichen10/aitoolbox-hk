@@ -21654,5 +21654,339 @@
     ],
     "content": "Hunter.io is the email-data layer behind most freelance lead-gen offers: type a domain, get the professional addresses behind it, verify they will not bounce, and - since 2025 - send the outreach sequences from the same dashboard. Seven million users later, the pitch is still the same two promises: emails that land, and a seat price of zero no matter how many teammates join. Prices below are from the official page ([hunter.io/pricing](https://hunter.io/pricing), checked 2026-11-23).\n\n## What The Plans Actually Cost\n\n| Plan | Monthly | Annual (per mo) | Credits | Sequence recipients |\n|------|---------|----------------|---------|--------------------|\n| Free | $0 | $0 | 50/mo | 500 |\n| Starter | $49 | $34 ($408/yr) | 2,000/mo (or 24,000/yr upfront) | 2,500 |\n| Growth | $149 | $104 ($1,248/yr) | 10,000/mo (or 120,000/yr) | 5,000 |\n| Scale | $299 | $209 ($2,508/yr) | 25,000/mo (or 300,000/yr) | 15,000 |\n\nOne credit = one email found, one verification, or one domain search. Every plan - including Free - carries unlimited team members, API and MCP access, the Discover database with an AI Assistant, and browser/Sheets/CRM integrations. Add-ons stack on the side: extra connected email accounts from $10/mo, custom domains from $6/mo, Inbox Protection from $7.50/mo. Credits reset monthly and never roll over; annual billing pays the whole year's credits upfront.\n\n## Money Angle\n\n1. **Lead-gen as a service runs on credits.** The freelance offer: \"I'll build you a verified list of 500 decision-makers in your niche.\" At Starter's 2,000 monthly credits that costs under $34 in tooling and sells for $300-1,000 depending on niche and verification depth - the [lead enrichment comparison](/articles/best-ai-lead-enrichment-tools-2026-apollo-vs-lusha-vs-zoominfo-vs-clay/) maps the bigger versions of that stack.\n2. **The free plan is a product feature.** API and MCP on the $0 tier means you can wire email-finding into a client dashboard or a [Browse.ai](/tools/browse-ai/) monitoring pipeline and charge for the workflow, not the tool.\n3. **Sequences close the loop.** Connect 1-20 email accounts (3 on Starter), write with the AI assistant, rotate inboxes, A/B test subject lines - a solo operator runs the whole [cold email](/articles/best-ai-cold-email-tools-2026-instantly-vs-smartlead-vs-lemlist-vs-woodpecker/) motion without a separate sender subscription, until volume says otherwise.\n4. **Recruiting sourcing, same meters.** Candidate outreach runs on the identical credits - agencies bill sourcing the same way they bill lead lists.\n5. **Signals is a quiet retention engine.** The dashboard flags when saved leads change jobs or companies post signals worth acting on - \"your lead just moved to a new company\" emails are the easiest touch a freelancer can sell.\n\n## What It Really Costs\n\n| Item | Cost | Notes |\n|------|------|-------|\n| Credits | The whole economy | 1 = one find, verify or domain search; no rollover |\n| Extra email accounts | From $10/mo each | Beyond the 1-20 included |\n| Inbox Protection | From $7.50/mo | Add-on for deliverability monitoring |\n| Custom domains | From $6/mo | Per email account, for rotation |\n| Yearly billing | Credits upfront | 24,000 at once on Starter - budget accordingly |\n\n## The Honest Cons\n\n- **Credits burn on mistakes.** A mis-typed domain or a hard-to-verify corporate domain can eat several lookups; the credit math only works with targeting discipline.\n- **No rollover, either mode.** Monthly resets wipe unused credits; annual billing dumps a year at once - an idle month is a wasted month on both.\n- **Sequences are capped and shallower than specialists.** 500-15,000 recipients per sequence trails dedicated senders like [Instantly](/tools/instantly-ai/) or [Smartlead](/tools/smartlead/) on inbox rotation depth and deliverability tooling.\n- **Data coverage varies by region.** Small companies and some markets return sparse results - test your niche on the free 50 before buying anything.\n- **AI usage is metered separately.** Discover AI searches (30-900/mo) are their own quota next to credits.\n\n## Hunter vs The Field\n\n| Option | Entry price | Angle | Fit |\n|--------|------------|-------|-----|\n| Hunter Free/Starter | $0 / $34 annual | Email finding + verification + sending | Freelancers and small sales teams |\n| [Apollo](/tools/apollo/) | Free + $49/mo | Big B2B database + outbound | Database-first prospecting |\n| [Clay](/tools/clay/) | $167/mo Launch | Waterfall enrichment workbench | Agency-grade data orchestration |\n| [Instantly](/tools/instantly-ai/) | $47/mo | Sending-first, unlimited accounts | High-volume cold email |\n| [Smartlead](/tools/smartlead/) | $39/mo | Sender-focused with rotation | Deliverability-heavy campaigns |\n\n## Bottom Line\n\nHunter.io is the honest entry point into paid prospecting: the free tier is genuinely usable, the paid tiers scale by credits instead of seats, and the data has earned its reputation over a decade. It stops being enough when your volume or deliverability needs outgrow its sequences - and by then, the credit-burning habits you built here are exactly what the pricier stacks reward. Start free, upgrade to Starter when prospecting becomes weekly, and treat every credit like it has a customer's name on it.",
     "published": true
+  },
+  {
+    "name": "Respondent",
+    "slug": "respondent",
+    "url": "https://www.respondent.io/",
+    "category": "AI Income",
+    "price": "Free to join · sessions pay $50-$250",
+    "last_verified": "2026-11-24",
+    "rating": "3.6",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "color": "#2C6BED",
+    "platform": "Web app (participant dashboard + researcher platform); remote and in-person studies in 150+ countries",
+    "description": "Respondent pays real people $50-$400+ per research session - interviews, focus groups, diary studies and AI training work for labs like Anthropic. What the pay actually looks like, how screening gates the money, and where it beats survey walls.",
+    "pricing_details": "Verified on respondent.io (homepage + become-a-participant page), 2026-11-24. Participant side: free to join, never a fee. Most sessions pay $50-$250 depending on length and seniority; senior B2B roles regularly pay $400+. Focus groups: $75-$200 online, $100-$300 in person; online surveys and short interviews $50-$150. Payment via Tremendous within 5-7 business days after the session is verified. Typical volume: 1-3 invitations/month. Panel: 4.3M+ identity-verified participants across 150+ countries, 100+ languages. Researcher side is quote-based (pay per recruited participant plus platform fee) - the monetization angle here is the participant side.",
+    "tags": [
+      {
+        "text": "Paid Research"
+      },
+      {
+        "text": "Focus Groups"
+      },
+      {
+        "text": "AI Training Work"
+      },
+      {
+        "text": "Free to join",
+        "type": "free"
+      }
+    ],
+    "features": [
+      "Identity-verified panel of 4.3M+ people across 150+ countries, recruited and screened by the platform itself",
+      "Sessions pay $50-$250 as standard; senior B2B roles regularly clear $400+ per interview",
+      "Five formats - interviews, focus groups, surveys, diary studies and unmoderated usability tests, remote or in person",
+      "AI training & evaluation studies (model red-teaming, expert human feedback) sit alongside brand and UX research",
+      "Payouts through Tremendous land 5-7 business days after the session is verified - nothing to chase"
+    ],
+    "pros": [
+      "Effective hourly pay crushes survey sites: a $150 interview for 45 minutes beats any rewards app",
+      "Zero participant fees, and the incentive is guaranteed once you complete the session",
+      "Research clients include Anthropic, Microsoft, Dropbox, GoDaddy and Stripe, so expert and AI-training studies are common",
+      "Fewer, better invitations - 1-3 matched studies a month instead of dozens of low-fit surveys"
+    ],
+    "cons": [
+      "Invitation-driven income: with 1-3 matches a month this is a $50-$500 top-up, not a paycheck",
+      "Screening is strict - government ID, selfie, phone and work-email checks gate the better-paying studies",
+      "Payouts wait 5-7 business days for verification and route through Tremendous, slower than instant test platforms",
+      "Most high-rate studies want B2B professionals; general consumers mostly see $50-$150 offers"
+    ],
+    "faq": [
+      {
+        "question": "How much can I actually earn per month on Respondent?",
+        "answer": "Treat it as a top-up, not a salary. Most participants get 1-3 invitations a month and complete one or two. At the official $50-$250 range that is roughly $75-$500 a month for ordinary professionals, more if you fit senior B2B niches - finance, product management, healthcare - where sessions pay $400+. People who stack it with [Prolific](/tools/prolific/) for volume and [UserTesting](/tools/usertesting/) for quick unmoderated tests report steadier combined income."
+      },
+      {
+        "question": "Is Respondent legit, and how do payouts work?",
+        "answer": "It has been recruiting research participants since 2016, rates 4.6/5 on G2 from 400+ reviews (figure from Respondent's own site), and never asks participants to pay. Once your session is verified, the incentive is sent through Tremendous within 5-7 business days and you pick the payout method there. Every researcher and study is vetted before it reaches the panel."
+      },
+      {
+        "question": "What kinds of studies pay the most?",
+        "answer": "Focus groups and in-person sessions ($100-$300), senior B2B interviews ($400+), and increasingly AI training and evaluation work - red-teaming models or giving expert human feedback. Generic consumer surveys and short interviews pay the least ($50-$150). Keeping your work email verified and profile current matters because matching runs on your background, not luck."
+      }
+    ],
+    "content": "Most paid-research advice stops at survey walls that pay $3 an hour. Respondent is the other end of the market: a recruitment platform that charges researchers real money for verified participants - and passes a serious slice of that to you. The panel counts 4.3M+ identity-verified people across 150+ countries, it has been running since 2016, and the client list on its own site includes Anthropic, Microsoft, Dropbox, GoDaddy and Stripe. That last part matters, because one of those client categories is new: AI labs buying human feedback, red-teaming and expert evaluation sessions.\n\n## What the pay actually looks like\n\nThe official numbers from the participant page: most sessions pay $50-$250 depending on length and seniority, senior B2B roles regularly pay $400+, focus groups run $75-$200 online and $100-$300 in person, and online surveys or short interviews pay $50-$150. Payment goes through Tremendous 5-7 business days after the session is verified. There is no fee to join and - per the platform's own FAQ - you will never be asked to pay to participate.\n\nRun the hourly math and the pitch is obvious: a 45-minute interview at $150 is about $200 an hour. The catch is volume. Most participants get 1-3 invitations a month, because the matching model only invites you when your background actually fits the screener. Fewer shots, bigger shots.\n\n## How the screening gate works\n\nSign-up takes about 90 seconds, but the real gate is verification: government ID with a selfie, a SIM-issued phone number, a work email with a verified domain, and LinkedIn for professionals. The platform claims over 50 fraud signals checked at sign-up and under 1% reported fraud across the panel. Researchers see your ratings and history; copy-pasted or AI-written screener answers get flagged. In practice, a verified work email and a complete professional profile are the two things that separate people who get the $400 interviews from people who get the $50 surveys.\n\n## Making money with it\n\n- **Professionals earn the premium.** Product managers, finance leads, nurses, developers: one senior interview a month is $400+. The recent-studies feed on the participant page reads like a B2B salary board - pricing decisions, finance software, clinical tools.\n- **AI training work is growing.** Respondent now lists AI training & evaluation as a first-class research method - expert feedback and red-teaming sessions. For steady hours in that same lane, dedicated AI-lab platforms like [Outlier](/tools/outlier/) and [Mercor](/tools/mercor/) pay weekly; Respondent sessions pay more per hour but arrive irregularly.\n- **Stack it as a portfolio.** The realistic setup is Respondent for the fat sessions, [Prolific](/tools/prolific/) for academic micro-studies near its £6/$8 hourly floor, [UserTesting](/tools/usertesting/) for $10 unmoderated tests on demand, and [User Interviews](/tools/user-interviews/) as a second invitation pipeline. Keep the profiles synced and answer invitations fast - a typical study fills in about a day and a half.\n- **On the other side of the table**, freelancers who run client discovery use the researcher platform to recruit verified users for usability tests and interviews - cost is quoted per study, and the verification layer is what you are buying.\n\n## Respondent vs the alternatives\n\nAgainst [Prolific](/tools/prolific/): Prolific is academic, higher-frequency, lower per-session, with hard minimum pay floors. Respondent is fewer-but-fatter, skewed to industry research. Against [UserTesting](/tools/usertesting/): UserTesting is instant, unmoderated and capped around $10 a test; Respondent is moderated, slower and worth several times more per hour. Against AI-lab gig work ([Mercor](/tools/mercor/), [Outlier](/tools/outlier/)): those are weekly engagements; Respondent is one-off sessions. They overlap less than you would think, which is exactly why stacking works. For the full income-tool map, see [how to use AI to make money online in 2026](/articles/how-to-use-ai-to-make-money-online-2026/) and [the best AI tools for freelancers](/articles/best-ai-tools-for-freelancers-2026/).\n\n## Honest limitations\n\nInvitations gate everything - if your profile does not fit a paying niche, income stays near zero no matter how good the rates are. Verification means handing over ID and a selfie, which privacy-minded people skip. Sessions are usually recorded. And payout timing (5-7 business days after verification) means this never feels like a paycheck - it is a recurring bonus. For anyone with a professional background and a work email, the effective hourly rate still makes it one of the best [side-income platforms](/articles/how-to-use-ai-to-make-money-online-2026/) you can join free. Start at the participant sign-up on respondent.io and let the matching model decide what you are worth.",
+    "published": true
+  },
+  {
+    "name": "SparkLoop",
+    "slug": "sparkloop",
+    "url": "https://www.sparkloop.app/",
+    "category": "AI Marketing",
+    "price": "Free core · Referral add-on $2,000/yr",
+    "last_verified": "2026-11-24",
+    "rating": "3.4",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "color": "#F7B32B",
+    "platform": "Web app; two-click integration with 25+ email platforms including beehiiv, Kit, Ghost and Substack",
+    "description": "SparkLoop pays you to recommend other newsletters and puts yours in front of paid, engagement-screened audiences - the growth loop behind a lot of six-figure email businesses. Its 2026 pricing flip to a free core changes who should use it.",
+    "pricing_details": "Verified on sparkloop.app/pricing, 2026-11-24. The current pricing page lists three products under 'INCLUDED FREE': Paid Recommendations (earn money for subscribers you refer), Partner Programs (get recommended by other newsletters, pay only for engaged subscribers) and free mutual Recommendations. The only priced item: Newsletter Referral Programs (reward-based viral sharing) at $2,000/year as an add-on. Two-click no-code integration with 25+ email platforms. Partner Program payouts are quote-based; Paid Recommendation earnings per referred subscriber are set inside the network.",
+    "tags": [
+      {
+        "text": "Newsletter Growth"
+      },
+      {
+        "text": "Paid Recommendations"
+      },
+      {
+        "text": "Referral Programs"
+      },
+      {
+        "text": "Free to start",
+        "type": "free"
+      }
+    ],
+    "features": [
+      "Paid Recommendations: embed a recommendation unit and earn for every engaged subscriber you send to other newsletters",
+      "Partner Programs: get recommended by established newsletters and pay only for subscribers who engage",
+      "Free mutual recommendations with 25+ email platforms supported through two-click, no-code setup",
+      "Newsletter Referral Programs add-on ($2,000/yr): reward-based viral loops with automatic reward fulfilment",
+      "Post-opt-in widget, in-email recommendation sections and a dashboard that tracks engaged subscribers, not raw clicks"
+    ],
+    "pros": [
+      "The core loop is free in 2026 - you can get paid to recommend instead of paying a SaaS fee for the privilege",
+      "Pays per engaged subscriber rather than per click, which pushes partners toward audiences that actually stick",
+      "Cross-platform pool beats the walled-garden recommendation systems each newsletter tool runs natively",
+      "Two-click setup works with beehiiv, Kit, Ghost, Substack and 20+ other platforms"
+    ],
+    "cons": [
+      "Per-subscriber payouts are modest - single-digit dollars - so recommendation income only matters with real list size",
+      "The Referral Programs add-on costs $2,000/year, a hard sell for lists under a few thousand subscribers",
+      "Partner Programs pricing is quote-based, so budgeting paid subscriber growth requires a sales conversation",
+      "Recommendation quality depends on network match - a mismatched partner costs you churn later"
+    ],
+    "faq": [
+      {
+        "question": "Is SparkLoop really free now?",
+        "answer": "As of November 2026 the pricing page lists Paid Recommendations, Partner Programs and free mutual recommendations under 'INCLUDED FREE', with only the Newsletter Referral Programs add-on priced at $2,000/year. The model flipped: instead of charging every newsletter a subscription, SparkLoop monetizes inside the paid-recommendation marketplace where money changes hands between newsletters."
+      },
+      {
+        "question": "How much can I earn recommending other newsletters?",
+        "answer": "Paid Recommendations pays per engaged subscriber you refer, at rates set inside the network - typically single-digit dollars per subscriber in most niches. A 5,000-subscriber list referring 50 engaged readers a month earns beer money, not rent. It compounds though: those payouts stack on the same list that also earns sponsorships and [beehiiv](/tools/beehiiv/) ad-network revenue."
+      },
+      {
+        "question": "Do I need a big list to start?",
+        "answer": "No - recommendations monetize what you send, and free mutual recommendations trade exposure evenly between similar-size lists. But the paid features flip with scale: buying subscribers through Partner Programs and the $2,000/year referral add-on only pay back when a subscriber is worth more than they cost, which usually means thousands of subscribers or strong sponsor rates first."
+      }
+    ],
+    "content": "Newsletter growth has a boring truth: the fastest compounding channel is other people's newsletters. SparkLoop is the recommendation network that wires that channel up - it sits between your list and thousands of others, swaps recommendations for free, sells you engaged subscribers when you want to buy growth, and since its 2026 pricing flip, even pays you for the subscribers you send outward.\n\n## The pricing flip: free core, one paid add-on\n\nThe current pricing page is unusual. Paid Recommendations, Partner Programs and free mutual recommendations all sit under 'INCLUDED FREE'. The only priced item is the Newsletter Referral Programs add-on - reward-based viral loops where readers earn gifts for referring friends - at $2,000 a year. That is a meaningful shift: the recommendation network itself is now the free on-ramp, and SparkLoop's revenue comes from the marketplace where newsletters pay each other (and it) for engaged subscribers.\n\n## Two ways to earn, one way to buy growth\n\n**Earn:** embed the Paid Recommendations unit in your emails or post-signup flow. Every engaged subscriber you refer to a paying newsletter earns you a payout set inside the network. Free Recommendations does the same trade without money - you recommend similar-size newsletters, they recommend you back, and both lists grow.\n\n**Buy:** Partner Programs puts your newsletter inside other people's signup flows, and you pay per engaged subscriber delivered, not per click. Pricing is quote-based, so treat it like an ad channel with a sales call attached.\n\n## Making money with SparkLoop\n\n- **Grow the asset that pays three ways.** A bigger list raises your sponsorship rates, your [beehiiv](/tools/beehiiv/) ad-network revenue, and - if you charge for content - conversions to a paid tier. On [Ghost](/tools/ghost/) you keep 100% of subscription revenue; on Substack a 10% cut goes to the platform, which is exactly the gap a few hundred bought subscribers can close.\n- **Recommendation income as a floor.** Payouts are single-digit dollars per engaged subscriber, but they arrive whether or not you publish a banger that week. Niche newsletters (finance, AI, local business) see the best rates.\n- **Sell growth as a service.** Agencies and freelancers run SparkLoop partner campaigns for clients' newsletters and charge $500-$2,000/month to manage them - the tool does the delivery, you own the strategy and reporting. There is no public rate card to point clients at, which is a feature when you are the one quoting.\n- **The $2,000 referral add-on is a calculator, not a default.** If a subscriber is worth $30+ a year to you (sponsorships plus products) and the loop adds even 100 extra subscribers, it pays. Below that, skip it.\n\n## SparkLoop vs the native options\n\nEvery major platform now ships its own recommendation system - [beehiiv](/tools/beehiiv/) has Boosts, [Kit](/tools/kit/) runs its creator recommendation network, [Substack](/tools/substack/) and [Ghost](/tools/ghost/) have built-in recommendation graphs. The difference is scope: native systems only trade inside their own platform, while SparkLoop's pool is cross-platform, which matters if your stack is mixed or you want paid payouts rather than exposure swaps. If you are all-in on one ESP, compare native numbers first - and see [how AI tools fit into online income in 2026](/articles/how-to-use-ai-to-make-money-online-2026/) for where newsletters sit in the bigger stack.\n\n## Honest limitations\n\nRecommendation earnings are a floor, not a living - the money is in what the grown list earns, not in the payouts themselves. Bought subscribers churn harder than organic ones if partner matching is sloppy. The $2,000/year add-on is priced for businesses, not hobbies. And quote-based Partner Program pricing means you cannot plan a budget from a webpage - you have to talk to sales. Start free, measure engaged-subscriber quality for a quarter, then decide whether paid growth deserves budget. Check the current terms at sparkloop.app/pricing before signing anything - this pricing flipped once already.",
+    "published": true
+  },
+  {
+    "name": "Fireworks AI",
+    "slug": "fireworks-ai",
+    "url": "https://fireworks.ai/",
+    "category": "AI API",
+    "price": "Pay per token · from $0.05/1M input",
+    "last_verified": "2026-11-24",
+    "rating": "3.7",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "color": "#FF4E00",
+    "platform": "API (OpenAI-compatible), serverless + on-demand GPUs, enterprise VPC/sovereign deployments",
+    "description": "Fireworks AI serves open models like Kimi K3, GLM 5.3 and DeepSeek V4.1 at production speed, with Batch at half price, Spot at -30% and prompt caching that bills inputs at half or less. Where it lands against Together, OpenRouter and Groq for client work.",
+    "pricing_details": "Verified on fireworks.ai/pricing, 2026-11-24. Serverless, billed per token, prepaid credits, no subscription. Per 1M tokens input/output: Kimi K3 $3/$15; Kimi K3.1 Pro $2/$10; Qwen 3.8 Max $2/$6; GLM 5.3 $1.40/$4.40; DeepSeek V4.1 Flash $0.30/$1.20; GPT OSS 120B $0.15/$0.60; GLM 5.3 Flash $0.15/$0.50; NVIDIA Nemotron 3.5 Lightning 30B $0.05/$0.20. Modes: Priority +25%; Batch -50% (input and output); Spot -30% best-effort; Fast mode 100+ tok/s. Cached input billed at half price or less, no write fee, cache hit rates up to 99.6%. Embeddings from $0.008/1M. GPUs on demand: H100/H200 $8/hr, B200 $13/hr, B300 $15/hr, GB300 $20/hr (per-minute billing, idle scales to zero after 1h). Reserved Throughput with SLA; Sovereign (your cloud) contract-based. US-only serverless +50% premium on select models; region-restricted deployments 1.5x. Zero data retention by default; SOC 2 Type II, ISO 27001/27701/42001, HIPAA with BAA.",
+    "tags": [
+      {
+        "text": "LLM Inference"
+      },
+      {
+        "text": "Open Models"
+      },
+      {
+        "text": "GPU Cloud"
+      },
+      {
+        "text": "Pay per token"
+      }
+    ],
+    "features": [
+      "Serverless inference billed per token across Kimi K3, GLM 5.3, DeepSeek V4.1 Flash, Qwen 3.8 Max, GPT OSS 120B and more",
+      "Five serving modes on the same endpoint: Standard, Priority (+25%), Fast, Batch (-50%) and Spot (-30%)",
+      "Prompt caching bills cached input at half price or less, with cache hit rates up to 99.6% on agent-style workloads",
+      "On-demand GPUs from $8/hr (H100/H200) to $13-$20/hr (B200/GB300), scaling to zero after an hour idle",
+      "Zero data retention by default, SOC 2 Type II, ISO 27001/27701/42001 and HIPAA with a BAA"
+    ],
+    "pros": [
+      "Batch mode at half price is the cheapest legitimate route for bulk evaluation, tagging and content pipelines",
+      "One rate card covers serving and training - the same GPU prices bill per second for inference and per hour for fine-tuning",
+      "Compliance surface (zero retention by default, SOC 2, HIPAA BAA) matches enterprise requirements most consumer APIs skip",
+      "OpenAI-compatible endpoints make switching from [Together AI](/tools/together-ai/) or self-hosting a base-URL change"
+    ],
+    "cons": [
+      "No standing free tier - usage draws down prepaid credits, so experimentation has a real (if tiny) cost",
+      "Open-weights models only: no first-party GPT, Claude or Gemini models on the platform",
+      "US-only serverless costs a 50% premium on select models, and region-restricted deployments bill at 1.5x",
+      "Token rates move with the market - last quarter's cheapest model is not necessarily this quarter's"
+    ],
+    "faq": [
+      {
+        "question": "Is there a free tier?",
+        "answer": "No standing free tier: you prepay credits and every request draws them down. The floor is NVIDIA Nemotron 3.5 Lightning 30B at $0.05 per 1M input and $0.20 per 1M output tokens - roughly 2,000 full-page summaries for a dollar - so a month of testing stays in pocket-change territory even without free credits."
+      },
+      {
+        "question": "Fireworks vs Together AI vs OpenRouter - which one for client work?",
+        "answer": "All three serve open models at similar token prices - GLM 5.3 lands at $1.40/$4.40 per 1M on both Fireworks and [Together AI](/tools/together-ai/). Fireworks differentiates on serving modes: Batch at -50% and Spot at -30% cut costs for pipelines that tolerate delay or retries, and Reserved Throughput adds an SLA when traffic firms up. [OpenRouter](/tools/open-router/) is the better aggregator when you want hundreds of models behind one key; Fireworks is the better engine when one model carries your product."
+      },
+      {
+        "question": "Can I serve my own fine-tuned model?",
+        "answer": "Yes - that is half the pitch. Upload LoRA adapters to run on serverless, or deploy dedicated models on on-demand GPUs (H100 at $8/hr, scaling to zero when idle). The Training API bills fine-tuning by GPU-hour from the same rate card, so you can tune a niche model and serve it without changing vendors."
+      }
+    ],
+    "content": "The AI API market has two tiers: the first-party giants (OpenAI, Anthropic, Google) and the open-model platforms that serve Kimi, GLM, DeepSeek and friends at a fraction of the price. Fireworks AI sits in the second tier with a clear pitch - the same open models everyone sells, but with serving modes that cut real bills by 30-50% and GPU economics that go all the way down to bare metal.\n\n## The rate card in plain terms\n\nEverything bills per token against prepaid credits - no subscription. Highlights per 1M tokens (input/output): Kimi K3 at $3/$15, Kimi K3.1 Pro at $2/$10, Qwen 3.8 Max at $2/$6, GLM 5.3 at $1.40/$4.40, DeepSeek V4.1 Flash at $0.30/$1.20, GPT OSS 120B at $0.15/$0.60, GLM 5.3 Flash at $0.15/$0.50, and NVIDIA Nemotron 3.5 Lightning 30B at $0.05/$0.20. Embeddings start at $0.008 per 1M input tokens.\n\nThe modes are where it gets interesting. Priority costs 25% more to jump the queue at peak. Batch takes 50% off both input and output for jobs that can wait. Spot takes 30% off on best-effort capacity you can retry. Prompt caching bills cached input at half price or less with no write fee, and the docs claim hit rates up to 99.6% on agentic workloads where the same context turns over and over. If you outgrow shared serverless, on-demand GPUs bill per minute - H100 and H200 at $8/hour, B200 at $13, B300 at $15, GB300 at $20 - and idle deployments scale to zero after an hour. Reserved Throughput buys an SLA by the minute; Sovereign puts Fireworks inside your own cloud.\n\n## Where the savings actually come from\n\nA realistic agent workload - 20M input and 4M output tokens a month on DeepSeek V4.1 Flash - costs about $10.80 standard. Move the background half to Batch and cache the repeated system context, and the same workload lands meaningfully lower without changing a line of product code. On premium models the spread is bigger: GLM 5.3 at $1.40/$4.40 becomes $0.70/$2.20 under Batch. That is the whole game: Fireworks does not win on sticker price (Together's is near-identical), it wins on how little of the sticker you end up paying.\n\n## Making money with Fireworks\n\n- **Client AI features on retainer.** A customer-support summarizer burning 10M input and 4M output tokens a month on GLM 5.3 Flash costs roughly $3.50. Charge $200-$500 a month for the feature and the margin does the selling - the risk is not inference cost, it is your dev time. The same math powers the pricing tables in [the LLM API price comparison](/articles/best-llm-api-pricing-2026-openai-gpt-6-vs-claude-opus-5-5-vs-gemini-4-vs-deepseek-compared/).\n- **Fine-tune-and-serve for verticals.** Take a client's domain data, LoRA-tune a small model, serve it on serverless - the single-vendor loop keeps margins honest because training and serving share one rate card.\n- **Batch products nobody prices.** Lead scoring, content tagging, document pipelines: Batch mode's flat 50% cut turns barely-profitable data services into obviously-profitable ones.\n\n## Fireworks vs the field\n\n[Together AI](/tools/together-ai/) is the closest twin - comparable prices, bigger model catalog, similar API. Fireworks counters with Batch/Spot modes and more flexible GPU reservations. [OpenRouter](/tools/open-router/) is an aggregator, not an engine - ideal for experimentation across hundreds of models, weaker when one model needs production tuning. [Groq](/tools/groq/) owns ultra-low latency on a smaller model set. [fal-ai](/tools/fal-ai/) covers the image/video side of the house, and [Replicate](/tools/replicate/) remains the model-zoo play for hobby-scale deploys. The full landscape is mapped in [the AI API platform comparison](/articles/best-ai-api-platforms-2026-openai-vs-anthropic-vs-gemini-vs-deepseek/).\n\n## Honest limitations\n\nNo first-party frontier models: if a client's workload needs GPT-class reasoning or Claude's writing, Fireworks is not the vendor - route that traffic elsewhere. No free tier means every experiment bills something. Dedicated deployments assume you can operate an API product. And rates move often enough that you should re-check the pricing page each quarter before renewing client quotes. For teams shipping on open models at volume, though, the Batch-plus-caching combination is the best cost lever in this tier. Verify current rates at fireworks.ai/pricing.",
+    "published": true
+  },
+  {
+    "name": "HappyScribe",
+    "slug": "happyscribe",
+    "url": "https://www.happyscribe.com/",
+    "category": "AI Translation",
+    "price": "Free · Pro from $19/mo annual",
+    "last_verified": "2026-11-24",
+    "rating": "3.5",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "color": "#0FA98D",
+    "platform": "Web app, AI Notetaker (Meet/Zoom/Teams), mobile app, YouTube/Vimeo/Drive integrations, API + MCP on paid plans",
+    "description": "HappyScribe turns audio and video into transcripts, subtitles and translations in 150+ languages, with human proofreading from $2 a minute. The recording side is free and unlimited - the freelance captioning math that makes it a money tool is inside.",
+    "pricing_details": "Verified on happyscribe.com/pricing, 2026-11-24. Free $0: unlimited Notetaker/mobile/browser recordings (45-min cap each, 30-day history), one-time 10 upload minutes for transcription/subtitles/translation, 3 AI Chat files/mo, watermarked MP4 export. Basic $17/mo monthly or $8.50/mo annual (save 50%): 120 min/mo uploads on monthly or 1,440 min/yr on annual, 90-min recordings, extra credits $0.20/min, 1 seat. Pro $29/$19 annual: 600 min/mo or 7,200 min/yr, unlimited recording length, unlimited AI Chat, 3 seats (extra $29/mo or $19/mo annual), 15+ export formats (SRT/VTT/STL/FCPXML/EDL), advanced AI models (ChatGPT, Claude, Mistral, GLM). Business $89/$59: 6,000 min/mo or 72,000/yr, 5 seats, roles/permissions, unlimited style guides and glossaries. Top-up credits ($0.20/min) never expire; plan minutes reset each cycle. AI speech-to-text 150+ languages; AI translation 80+ languages. Human services add-on from $2.00/min ($1.90/min on Business), advertised 99% accuracy, 4h+ delivery, 60+ languages. SOC 2 Type 2, GDPR; API and MCP on paid tiers.",
+    "tags": [
+      {
+        "text": "Transcription"
+      },
+      {
+        "text": "Subtitles"
+      },
+      {
+        "text": "AI Translation"
+      },
+      {
+        "text": "Free plan",
+        "type": "free"
+      }
+    ],
+    "features": [
+      "AI transcription and subtitles in 150+ languages, AI translation in 80+, with automatic speaker detection",
+      "Unlimited free recordings on every plan: AI Notetaker for Meet, Zoom and Teams plus mobile and browser recorders",
+      "Human proofreading add-on from $2.00/min ($1.90 on Business): advertised 99% accuracy, delivery in 4h+, 60+ languages",
+      "Pro exports cover 15+ formats including SRT, VTT, STL, FCPXML and watermark-free burned-in MP4",
+      "API and MCP server on paid tiers, plus YouTube, Vimeo, Drive, Box, Dropbox and Zapier (5,000+ apps) integrations"
+    ],
+    "pros": [
+      "Recording minutes are free and unlimited on every plan - only uploaded files burn credits",
+      "Top-up credits at $0.20/min never expire, so burst months do not force a plan upgrade",
+      "Human services from $2/min with 4h+ delivery undercut traditional transcription agencies",
+      "One workspace covers transcription, subtitles, translation and meeting notes instead of three stacked tools"
+    ],
+    "cons": [
+      "The free plan's 10 upload minutes are one-time, not monthly - after that, uploads require a paid plan",
+      "Plan minutes reset each cycle with no rollover; only topped-up credits persist",
+      "AI translation needs a human pass for client-facing output, especially outside major language pairs",
+      "Seat counts are recommendations rather than hard limits, but consistently exceeding them triggers a plan conversation"
+    ],
+    "faq": [
+      {
+        "question": "Is the free plan enough for real work?",
+        "answer": "For recordings, yes: unlimited Notetaker, mobile and browser recordings up to 45 minutes each, transcribed free. For uploaded files, no - you get 10 minutes once, then uploads need a paid plan (Basic from $8.50/mo annual). Freelancers testing the captioning market should spend the free minutes on one real client sample before committing."
+      },
+      {
+        "question": "How good is the AI translation?",
+        "answer": "80+ languages share the same credit pool as transcription, and output is usable for subtitles and internal content in major pairs. For client-facing material, either budget a proofreading pass or use the human subtitle-translation service from $2.00/min - that is what the 99%-accuracy, 4-hour-delivery tier exists for."
+      },
+      {
+        "question": "Can I actually make money with it?",
+        "answer": "Yes, and the math is boring but real: charge $1-$5 per video minute for captioning while your AI cost runs $0.20/min or less on a plan, polish the output, keep the spread. The same arbitrage works for podcast transcripts, course subtitles and YouTube multilingual tracks - see [the transcription tools comparison](/articles/best-ai-transcription-tools-2026-fireflies-vs-otter-vs-krisp-vs-fathom-vs-tldv/) for where it sits against meeting-notes tools."
+      }
+    ],
+    "content": "Transcription tools mostly split into two camps: meeting-notes bots that transcribe your calendar, and production tools that turn uploaded audio into billable deliverables. HappyScribe does both, but the money is in the second camp - transcripts, subtitles and translations in 150+ languages, with a human-proofreading tier that ships in four hours.\n\n## Pricing without the marketing gloss\n\nThe key distinction: recordings are free and unlimited on every plan, uploads are what you pay for. The free plan gives unlimited Notetaker and mobile recordings (45 minutes each) plus a one-time 10 upload minutes - not monthly, once. Basic costs $17/mo monthly or $8.50/mo annual and buys 120 upload minutes a month (1,440 minutes a year on annual billing). Pro is $29/$19 with 600 minutes a month, unlimited AI Chat, three seats and every export format including STL and FCPXML for broadcast workflows. Business is $89/$59 with 6,000 minutes a month and five seats. Extra credits cost $0.20/min and never expire; plan minutes reset each cycle without rollover.\n\nThe human services tier is the sleeper product: professional proofreading from $2.00/min ($1.90 on Business), advertised at 99% accuracy with 4h+ delivery in 60+ languages. Traditional agencies charge several times that.\n\n## The freelance money angle\n\n- **Captioning services.** Market rates on freelance platforms run $1-$5 per video minute for captions and subtitles; your AI cost on HappyScribe is $0.20/min or less inside a plan. The workflow - upload, auto-generate, fix names and punctuation, export SRT - is about 15 minutes of work per 30-minute video. Ten small YouTube clients a month is a real side income.\n- **YouTube multilingual tracks.** Creators now upload multiple audio/subtitle languages; translating existing subtitles through the 80+ language engine is minutes of work per video. Pair it with [Rask AI](/tools/rask-ai/) when a client wants full voice dubbing rather than text subtitles.\n- **Meeting-notes as a productized service.** The free unlimited Notetaker means you can run client calls through it at zero marginal cost - consultants and VAs resell structured summaries as part of retainer packages.\n- **Agency math.** Business at $59/mo annual with five seats, shared glossaries and style guides fits a small subtitling team; anything a client needs broadcast-grade goes to the human tier at $2/min and gets marked up.\n\n## How it compares\n\n[Rask AI](/tools/rask-ai/) owns voice dubbing and lip-sync - different deliverable. [DeepL](/tools/deepl/) translates text but does not transcribe. [Descript](/tools/descript/) is an editor first, with transcription as one feature. [Fireflies AI](/tools/fireflies-ai/) and [Otter AI](/tools/otter.ai/) are meeting-notes tools without serious subtitle workflows. HappyScribe is the only one of the group where the subtitle deliverable itself is the product, with a human tier attached. For the wider field, see [the AI transcription comparison](/articles/best-ai-transcription-tools-2026-fireflies-vs-otter-vs-krisp-vs-fathom-vs-tldv/) and [the dubbing tools breakdown](/articles/best-ai-video-dubbing-tools-2026-rask-ai-vs-heygen-vs-elevenlabs-vs-papercup/) - and if voice cloning is the goal, [ElevenLabs](/tools/elevenlabs/) is the specialist.\n\n## Honest limitations\n\nThe free upload allowance being one-time (not monthly) makes the free plan a demo, not a workstation. Accent-heavy audio still needs manual cleanup regardless of the 150+ language claim. Translation quality swings by language pair - treat the AI output as a first pass for anything client-facing. Plan minutes vanish at each renewal, so annual billing (which hands over the year's minutes upfront) is the sensible default for steady workloads. Check current rates at happyscribe.com/pricing - the plan structure was reworked recently and may shift again. For a transcription-adjacent income play, the captioning angle in [this guide](/articles/how-to-use-ai-to-make-money-online-2026/) pairs well with it.",
+    "published": true
+  },
+  {
+    "name": "Squarespace",
+    "slug": "squarespace",
+    "url": "https://www.squarespace.com/",
+    "category": "AI Website Builder",
+    "price": "From $12/mo annual · AI credits included",
+    "last_verified": "2026-11-24",
+    "rating": "3.2",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "color": "#222222",
+    "platform": "Hosted web platform, iOS/Android apps, Design Intelligence AI, built-in commerce and email campaigns",
+    "description": "Squarespace rebuilt its plans around AI credits in 2026 - Basic, Core and Advanced at $12-36 a month with selling on every tier. What the credits actually buy, where the 2% fee bites, and when a client site belongs on Squarespace instead of Wix or WordPress.",
+    "pricing_details": "Verified on squarespace.com/pricing, 2026-11-24. 14-day free trial. Three plans: Basic $19/mo monthly or $12/mo annual - 2 contributors, 10 one-time AI credits, 2% online store transaction fee; Core $27/$17 - unlimited contributors, 20 AI credits/mo, no transaction fees, free year of Google Workspace email, advanced discounts/lead capture, automated taxes and shipping; Advanced $36/$25 - 120 AI credits/mo, reserved cart and countdown timer, high-traffic checkout, no fees on digital content and memberships. Annual billing saves up to 36% and includes one year of free domain registration. All plans include built-in AI tools, secure hosting, unlimited bandwidth and selling functionality.",
+    "tags": [
+      {
+        "text": "Website Builder"
+      },
+      {
+        "text": "E-commerce"
+      },
+      {
+        "text": "Client Sites"
+      },
+      {
+        "text": "Free trial",
+        "type": "free"
+      }
+    ],
+    "features": [
+      "Three plans in 2026: Basic $12/mo annual, Core $17, Advanced $25 - all with hosting, SSL and selling features",
+      "Built-in AI on every plan: Design Intelligence layouts, copy generation and image tools metered by credits",
+      "AI credits scale by tier - 10 one-time on Basic, 20/month on Core, 120/month on Advanced",
+      "Commerce included everywhere: Basic carries a 2% transaction fee; Core and Advanced carry none",
+      "Free custom domain for year one on annual billing; 14-day free trial on every plan"
+    ],
+    "pros": [
+      "Design defaults still lead the hosted-builder market - sites look custom without a designer's invoice",
+      "All-in-one billing (hosting, domain, commerce, email) removes the WordPress plugin-maintenance treadmill from client work",
+      "Core at $17/mo annual with zero transaction fees is a strong deal for small stores and service businesses",
+      "Advanced's 120 AI credits/month support real content workflows, not just a one-time page generation"
+    ],
+    "cons": [
+      "Basic's 10 AI credits are one-time - nearly nothing for a real build, so AI-assisted work effectively starts at Core",
+      "Vendor lock-in is real: no self-hosting, limited export, and designs do not move to another platform",
+      "The 2% transaction fee on Basic quietly taxes small stores until they upgrade to Core",
+      "The AI generates competent pages, not brand-level design - custom work still needs [Framer AI](/tools/framer-ai/) or a hired designer"
+    ],
+    "faq": [
+      {
+        "question": "Squarespace or Wix AI in 2026?",
+        "answer": "Wix's AI builder interviews you and assembles a full site in minutes; Squarespace's Design Intelligence works inside better design defaults and lands closer to custom-agency results with less cleanup. Pick [Wix AI](/tools/wix-ai/) for speed and the widest feature net, Squarespace for polished brand sites and simple commerce. The full field is compared in [our AI website builder breakdown](/articles/best-ai-website-builders-2026-wix-vs-10web-vs-durable-vs-framer/)."
+      },
+      {
+        "question": "Can I sell on the Basic plan?",
+        "answer": "Yes - selling is included on every plan now. The catch is the 2% transaction fee on online store orders. At $1,000 in monthly sales that is $20/month, which already exceeds the $5/month gap between Basic ($12) and Core ($17) - so Core pays for itself almost immediately once the store is real."
+      },
+      {
+        "question": "Are the AI credits enough to build a full site?",
+        "answer": "On Basic, no - 10 one-time credits cover a taste of layout or copy generation, not a complete build. Core's 20/month handles steady small tasks; Advanced's 120/month sustains weekly content generation. Treat the AI as an accelerator inside a template-driven workflow, not as an autopilot."
+      }
+    ],
+    "content": "Squarespace spent years as the design-forward website builder that AI tools kept failing to imitate. In 2026 it flipped the script: the entire plan structure now runs on AI credits, with selling features on every tier. The result is a builder that is simultaneously more AI-native and more commerce-friendly than the one most people remember.\n\n## The 2026 plans, decoded\n\nThree tiers, verified on the official pricing page. Basic: $19/mo monthly or $12/mo annual, 2 contributors, 10 one-time AI credits, and a 2% fee on online store transactions. Core ($27/$17): unlimited contributors, 20 AI credits a month, zero transaction fees, a free year of Google Workspace email, advanced discount and lead-capture tools, automated taxes. Advanced ($36/$25): 120 AI credits a month, reserved cart, countdown timer, high-traffic checkout, and no fees on digital content or memberships. Annual billing saves up to 36% and includes the first year of a custom domain. Every plan gets a 14-day free trial.\n\nRead the structure honestly and it is a nudge toward Core: the 2% fee on Basic means a store doing $1,000/month pays $20 in fees - more than the $5 monthly gap to Core. The AI credit ladder points the same direction; 10 one-time credits on Basic are a demo, while Advanced's 120/month can sustain weekly content generation.\n\n## What the AI actually does\n\nDesign Intelligence generates layouts, writes on-brand copy and handles image editing inside Squarespace's template system. The honest assessment: it accelerates the template path rather than replacing design judgment. You get competent, coherent pages fast - closer to 'custom agency' than Wix's interview-style builder produces, but not a substitute for a designer when the brief is genuinely custom. That is a different pitch from [Durable](/tools/durable/), which generates a full site in minutes with less polish, or [Webflow AI](/tools/webflow-ai/), which targets professionals who want code-level control.\n\n## Making money with it\n\n- **Client sites for local businesses.** The classic play: charge $500-$3,000 per build on a $17/month Core plan, then $50-$150/month for care plans. Squarespace's all-in-one hosting means you inherit none of the WordPress update treadmill - the maintenance you sell is content and edits, not security patches.\n- **Digital products and memberships.** Advanced's zero-fee policy on digital content and memberships makes it a quiet alternative to creator platforms for selling courses or gated content - compare against [Shopify](/tools/shopify/) when physical inventory enters the picture.\n- **Fast landing funnels.** For pure one-page funnels, [Carrd](/tools/carrd/) at $19/year undercuts it badly - Squarespace earns its keep when the client needs more than one page.\n\n## Honest limitations\n\nLock-in is the big one: no self-hosting, limited export, and designs that do not travel to another platform - a decade of client work on Squarespace is a decade of Squarespace subscriptions. Template flexibility sits below Webflow for custom layouts. Renewal prices rise off the promotional annual rate. And the AI, while genuinely useful, is metered - heavy AI users are buying Advanced whether they like it or not. For the full builder field including [Wix AI](/tools/wix-ai/) and [Framer AI](/tools/framer-ai/), see [the 2026 website builder comparison](/articles/best-ai-website-builders-2026-wix-vs-10web-vs-durable-vs-framer/). Verify current pricing at squarespace.com/pricing - this plan structure is new in 2026 and has already changed once.",
+    "published": true
   }
 ]
