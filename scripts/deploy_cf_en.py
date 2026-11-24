@@ -52,12 +52,26 @@ def prepare() -> tuple[int, int]:
         else:
             missing.append(name)
 
+    # 2026-11-24: only ship real web assets. Backups/logs/scripts/DS_Store
+    # in source dirs were being copied to the server and wasting upload
+    # slots (7 stale .bak files found in css/ + js/).
+    SKIP_SUFFIXES = ('.bak', '.tmp', '.log', '.py', '.pyc', '.swp', '.orig')
+    SKIP_NAMES = {'.DS_Store', 'Thumbs.db', 'desktop.ini'}
+
+    def _ignore(dirname, names):
+        return [n for n in names
+                if n in SKIP_NAMES
+                or n.endswith(SKIP_SUFFIXES)
+                or (n.startswith('.') and (Path(dirname) / n).is_file())]
+
     files = 0
     for d in DIRS:
         src = ROOT / d
         if src.is_dir():
-            shutil.copytree(src, OUT / d, dirs_exist_ok=True)
-            files += sum(1 for _ in src.rglob("*") if _.is_file())
+            shutil.copytree(src, OUT / d, dirs_exist_ok=True, ignore=_ignore)
+            files += sum(1 for _ in src.rglob("*")
+                         if _.is_file() and not _.name.endswith(SKIP_SUFFIXES)
+                         and _.name not in SKIP_NAMES)
         else:
             missing.append(d + "/")
 
