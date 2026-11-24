@@ -44,8 +44,8 @@ def main():
     log("STEP 1: Recompute 5-factor ranking scores")
     run([sys.executable, os.path.join(SCRIPTS_DIR, 'score_tools_en.py')])
 
-    log("STEP 1a2: Translate CN news -> EN")
-    run([sys.executable, os.path.join(SCRIPTS_DIR, 'news_translate_from_cn.py')])
+    log("STEP 1a2: Verify EN news in sync (agent translation already merged)")
+    run([sys.executable, os.path.join(SCRIPTS_DIR, 'news_translate_from_cn.py'), '--check'])
 
     log("STEP 1b: Rebuild static site")
     run([sys.executable, os.path.join(SCRIPTS_DIR, 'build_en.py')])

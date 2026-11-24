@@ -1,170 +1,241 @@
 #!/usr/bin/env python3
-"""news_translate_from_cn.py — translate the CN site's daily news into EN.
+"""news_translate_from_cn.py — agent-driven EN news sync, no paid API.
 
-Reads the CN site's data/news_YYYY-MM-DD.json files (already quality-gated by
-the CN pipeline), translates title/summary/commentary via DeepSeek, and merges
-into data/news_en.json keyed by CN item id.
+The translation is done by the WorkBuddy agent itself (zero API cost). This
+script only handles the deterministic parts:
 
-Pipeline order (daily_growth_en.py): this script -> score -> build -> deploy.
-Skips ids already present. Unlike the old SiliconFlow version, a missing key or
-a failed translation is a hard error (exit 1): silently skipping used to leave
-the EN news section stale without anybody noticing.
+  python scripts/news_translate_from_cn.py --prepare [days]
+      Scan the CN site's data/news_YYYY-MM-DD.json files, skip ids already in
+      data/news_en.json, and write data/_news_pending_en.json.
 
-Usage:
-  python scripts/news_translate_from_cn.py [days]   # default: latest 3 CN days
+  (agent step, in the conversation)
+      Read data/_news_pending_en.json, translate title/summary/commentary into
+      natural English, and write data/_news_translated_en.json as a JSON array
+      of {"id", "title", "summary", "commentary"} objects. Keep every fact,
+      number, company name and URL exactly as stated; summary <= 60 words,
+      commentary <= 80 words. Never invent facts.
+
+  python scripts/news_translate_from_cn.py --merge
+      Validate the agent output against the pending batch (exact id match,
+      non-empty fields, length limits), then merge into data/news_en.json.
+      Both work files are archived under data/_news_agent_archive/ on success.
+
+  python scripts/news_translate_from_cn.py --check
+      Exit 1 if a pending batch or a leftover translated file exists, i.e. the
+      agent step has not been completed. Used by daily_growth_en.py so a stale
+      news section can never pass unnoticed.
 """
 from __future__ import annotations
 
 import json
 import os
 import re
+import shutil
 import sys
-import urllib.request
+from datetime import datetime
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CN_DIR = os.path.join(BASE_DIR, '..', 'seo-site', 'data')
-OUT_PATH = os.path.join(BASE_DIR, 'data', 'news_en.json')
+DATA_DIR = os.path.join(BASE_DIR, 'data')
+OUT_PATH = os.path.join(DATA_DIR, 'news_en.json')
+PENDING_PATH = os.path.join(DATA_DIR, '_news_pending_en.json')
+TRANSLATED_PATH = os.path.join(DATA_DIR, '_news_translated_en.json')
+ARCHIVE_DIR = os.path.join(DATA_DIR, '_news_agent_archive')
+
+MAX_SUMMARY_WORDS = 60
+MAX_COMMENTARY_WORDS = 80
 
 
-def _read_env(path: str) -> dict:
-    env = {}
-    if not os.path.isfile(path):
-        return env
-    for line in open(path, encoding='utf-8'):
-        line = line.strip()
-        if line and not line.startswith('#') and '=' in line:
-            k, v = line.split('=', 1)
-            env[k.strip()] = v.strip().strip('"').strip("'")
-    return env
+def _load_json(path):
+    with open(path, encoding='utf-8') as f:
+        return json.load(f)
 
 
-# Config precedence: process env > EN .env > CN .env (shared data is allowed;
-# the key lives only in the CN .env, which is the one site that has one).
-_cfg = {}
-for _p in (os.path.join(os.path.dirname(CN_DIR), '.env'),
-           os.path.join(BASE_DIR, '.env')):
-    _cfg.update(_read_env(_p))
-
-API_KEY = os.getenv('DEEPSEEK_API_KEY') or _cfg.get('DEEPSEEK_API_KEY', '')
-API_BASE = (os.getenv('DEEPSEEK_BASE_URL') or _cfg.get('DEEPSEEK_BASE_URL')
-            or 'https://api.deepseek.com/v1').rstrip('/')
-MODEL = os.getenv('DEEPSEEK_MODEL') or _cfg.get('DEEPSEEK_MODEL') or 'deepseek-v4-flash'
-API_URL = API_BASE + '/chat/completions'
-
-DAYS = int(sys.argv[1]) if len(sys.argv) > 1 else 3
+def _write_json(path, obj):
+    tmp = path + '.tmp'
+    with open(tmp, 'w', encoding='utf-8') as f:
+        json.dump(obj, f, ensure_ascii=False, indent=1)
+    os.replace(tmp, path)
 
 
-def chat(prompt: str, user_msg: str) -> str:
-    body = json.dumps({
-        "model": MODEL,
-        "messages": [
-            {"role": "system", "content": prompt},
-            {"role": "user", "content": user_msg},
-        ],
-        "temperature": 0.3,
-        "max_tokens": 1500,
-    }).encode('utf-8')
-    req = urllib.request.Request(API_URL, data=body, headers={
-        "Authorization": f"Bearer {API_KEY}",
-        "Content-Type": "application/json",
-    })
-    with urllib.request.urlopen(req, timeout=120) as r:
-        d = json.loads(r.read().decode('utf-8'))
-    return d['choices'][0]['message']['content'].strip()
-
-
-def translate_item(it: dict) -> dict | None:
-    sysmsg = (
-        "You are a translator for an English AI-news site. Translate the given "
-        "Chinese AI-news brief into natural English JSON. Keep every fact, number, "
-        "company name and URL exactly as stated — never add or invent facts. "
-        "Return ONLY a JSON object with keys: title, summary, commentary. "
-        "summary <= 60 words; commentary <= 80 words."
-    )
-    user_msg = json.dumps({
-        "title": it.get('title', ''),
-        "summary": it.get('summary', ''),
-        "commentary": it.get('commentary', ''),
-    }, ensure_ascii=False)
-    last = ''
-    for attempt in range(2):
-        try:
-            raw = chat(sysmsg, user_msg)
-            m = re.search(r'\{.*\}', raw, re.S)
-            if m:
-                return json.loads(m.group())
-            last = 'no JSON object in response'
-        except Exception as e:
-            last = f'{type(e).__name__}: {e}'
-        if attempt == 0:
-            print(f"  retry {it.get('id', '?')}: {last[:160]}", flush=True)
-    print(f"  ERROR translate {it.get('id', '?')}: {last[:300]}", flush=True)
-    return None
-
-
-def slugify(text: str, date_iso: str) -> str:
-    s = re.sub(r'[^a-z0-9]+', '-', text.lower()).strip('-')[:60]
-    return f"{date_iso}-{s}"
-
-
-def main() -> int:
-    if not API_KEY:
-        print("[news][ERROR] DEEPSEEK_API_KEY not found in env / EN .env / CN .env "
-              "— EN news sync aborted (refusing to silently serve stale news)")
-        return 1
-
-    try:
-        en = json.load(open(OUT_PATH, encoding='utf-8'))
-    except Exception:
-        en = []
-    have = {it['id'] for it in en}
-
+def _cn_files(days: int):
     files = sorted(f for f in os.listdir(CN_DIR)
                    if re.match(r'news_\d{4}-\d{2}-\d{2}\.json$', f))
-    days = files[-DAYS:]
-    if not days:
+    return files[-days:] if days > 0 else []
+
+
+def cmd_prepare(days: int) -> int:
+    if os.path.exists(TRANSLATED_PATH):
+        print(f"[news][ERROR] leftover {os.path.basename(TRANSLATED_PATH)} — "
+              "merge it first (or remove it deliberately) before preparing a new batch")
+        return 1
+
+    en = _load_json(OUT_PATH) if os.path.exists(OUT_PATH) else []
+    have = {it['id'] for it in en}
+    files = _cn_files(days)
+    if not files:
         print("[news][ERROR] no CN news_YYYY-MM-DD.json files found")
         return 1
 
-    added = 0
-    errors = 0
-    for fname in days:
+    items = []
+    for fname in files:
         day = fname[5:15]
-        cn = json.load(open(os.path.join(CN_DIR, fname), encoding='utf-8'))
-        for it in cn:
+        for it in _load_json(os.path.join(CN_DIR, fname)):
             if it.get('id') in have:
                 continue
-            t = translate_item(it)
-            if not t:
-                errors += 1
-                continue
-            en.append({
+            items.append({
                 'id': it['id'],
-                'slug': slugify(t.get('title', 'ai-news'), day),
-                'title': t.get('title', ''),
-                'summary': t.get('summary', ''),
+                'day': day,
+                'title': it.get('title', ''),
+                'summary': it.get('summary', ''),
+                'commentary': it.get('commentary', ''),
                 'category': it.get('category', 'products'),
                 'source': it.get('source', ''),
                 'source_url': it.get('source_url', ''),
                 'published_at': it.get('published_at') or day,
-                'commentary': t.get('commentary', ''),
             })
-            have.add(it['id'])
-            added += 1
-            print(f"  + {it['id']} {t.get('title', '')[:60]}", flush=True)
 
-    if errors:
-        print(f"[news][ERROR] {errors} item(s) failed to translate — "
-              "no partial data written; fix and rerun")
+    if not items:
+        if os.path.exists(PENDING_PATH):
+            os.remove(PENDING_PATH)
+        print(f"[news] no pending items (scanned {files[0][5:15]}..{files[-1][5:15]}); "
+              f"EN news already has {len(en)} items")
+        return 0
+
+    _write_json(PENDING_PATH, {
+        'generated_at': datetime.now().astimezone().isoformat(timespec='seconds'),
+        'cn_days': [f[5:15] for f in files],
+        'count': len(items),
+        'items': items,
+    })
+    print(f"[news] PENDING {len(items)} item(s) -> {PENDING_PATH}")
+    print("[news] NEXT: agent translates title/summary/commentary into English, "
+          f"writes {TRANSLATED_PATH}, then runs --merge")
+    for it in items:
+        print(f"  - {it['id']} {it['title'][:56]}")
+    return 0
+
+
+def cmd_merge() -> int:
+    if not os.path.exists(PENDING_PATH):
+        print(f"[news][ERROR] no pending batch at {PENDING_PATH}; run --prepare first")
+        return 1
+    if not os.path.exists(TRANSLATED_PATH):
+        print(f"[news][ERROR] no agent output at {TRANSLATED_PATH}; "
+              "agent must translate the pending batch first")
         return 1
 
-    if added:
-        en.sort(key=lambda x: x.get('published_at', ''), reverse=True)
-        with open(OUT_PATH, 'w', encoding='utf-8') as f:
-            json.dump(en, f, ensure_ascii=False, indent=1)
-    print(f"[news] added {added} items -> data/news_en.json (total {len(en)}); "
-          f"scanned CN days: {days[0]}..{days[-1]}")
+    batch = _load_json(PENDING_PATH)
+    pending = batch['items']
+    translated = _load_json(TRANSLATED_PATH)
+    if not isinstance(translated, list):
+        print("[news][ERROR] translated file must be a JSON array")
+        return 1
+
+    by_id = {}
+    for i, t in enumerate(translated):
+        if not isinstance(t, dict) or not t.get('id'):
+            print(f"[news][ERROR] translated[{i}] missing id")
+            return 1
+        if t['id'] in by_id:
+            print(f"[news][ERROR] duplicate translated id {t['id']}")
+            return 1
+        by_id[t['id']] = t
+
+    expected = {it['id'] for it in pending}
+    missing = sorted(expected - set(by_id))
+    extra = sorted(set(by_id) - expected)
+    if missing or extra:
+        print(f"[news][ERROR] id mismatch — missing={missing} unexpected={extra}")
+        return 1
+
+    errors = []
+    for it in pending:
+        t = by_id[it['id']]
+        for k in ('title', 'summary', 'commentary'):
+            v = t.get(k)
+            if not isinstance(v, str) or not v.strip():
+                errors.append(f"{it['id']}: {k} is empty or not a string")
+        for k, limit in (('summary', MAX_SUMMARY_WORDS),
+                         ('commentary', MAX_COMMENTARY_WORDS)):
+            v = t.get(k)
+            if isinstance(v, str) and len(v.split()) > limit:
+                errors.append(f"{it['id']}: {k} has {len(v.split())} words (limit {limit})")
+    if errors:
+        print("[news][ERROR] agent output failed validation:")
+        for e in errors:
+            print("  " + e)
+        print("[news] fix the translated file and rerun --merge (nothing was written)")
+        return 1
+
+    en = _load_json(OUT_PATH) if os.path.exists(OUT_PATH) else []
+    have = {it['id'] for it in en}
+    added = 0
+    for it in pending:
+        if it['id'] in have:
+            continue
+        t = by_id[it['id']]
+        title = t['title'].strip()
+        s = re.sub(r'[^a-z0-9]+', '-', title.lower()).strip('-')[:60]
+        en.append({
+            'id': it['id'],
+            'slug': f"{it['day']}-{s}",
+            'title': title,
+            'summary': t['summary'].strip(),
+            'category': it['category'],
+            'source': it['source'],
+            'source_url': it['source_url'],
+            'published_at': it['published_at'],
+            'commentary': t['commentary'].strip(),
+        })
+        have.add(it['id'])
+        added += 1
+        print(f"  + {it['id']} {title[:60]}")
+
+    en.sort(key=lambda x: x.get('published_at', ''), reverse=True)
+    _write_json(OUT_PATH, en)
+
+    stamp = datetime.now().strftime('%Y%m%d-%H%M%S')
+    dest = os.path.join(ARCHIVE_DIR, stamp)
+    os.makedirs(dest, exist_ok=True)
+    shutil.move(PENDING_PATH, os.path.join(dest, os.path.basename(PENDING_PATH)))
+    shutil.move(TRANSLATED_PATH, os.path.join(dest, os.path.basename(TRANSLATED_PATH)))
+
+    print(f"[news] merged {added} item(s) -> data/news_en.json (total {len(en)}); "
+          f"batch archived to {os.path.relpath(dest, BASE_DIR)}")
     return 0
+
+
+def cmd_check() -> int:
+    problems = []
+    if os.path.exists(PENDING_PATH):
+        n = _load_json(PENDING_PATH).get('count', '?')
+        problems.append(f"pending batch not translated ({n} item(s))")
+    if os.path.exists(TRANSLATED_PATH):
+        problems.append("translated file not merged")
+    if problems:
+        print("[news][ERROR] " + "; ".join(problems))
+        print("[news] agent translation must be finished before build/deploy")
+        return 1
+    print("[news] sync clean — no pending agent translation")
+    return 0
+
+
+def main() -> int:
+    args = sys.argv[1:]
+    # Back-compat: a bare number used to mean "days" (the API mode is gone).
+    if args and args[0].isdigit():
+        args = ['--prepare'] + args
+    mode = args[0] if args else '--check'
+    if mode == '--prepare':
+        days = int(args[1]) if len(args) > 1 else 3
+        return cmd_prepare(days)
+    if mode == '--merge':
+        return cmd_merge()
+    if mode == '--check':
+        return cmd_check()
+    print(f"[news][ERROR] unknown mode {mode!r}; use --prepare [days] / --merge / --check")
+    return 2
 
 
 if __name__ == '__main__':

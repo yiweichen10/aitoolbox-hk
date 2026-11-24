@@ -43,6 +43,33 @@ def _css_version():
 
 CSS_VERSION  = _css_version()
 
+# Stable "content date" for all page-level "updated/verified" stamps.
+# (2026-11-24) Using datetime.now() here made every page's HTML change at
+# midnight => full re-upload. Derive from actual data instead: only changes
+# when content genuinely updates. Computed lazily (data loaded in main()).
+_CONTENT_DATE_CACHE = None
+def _content_date() -> str:
+    global _CONTENT_DATE_CACHE
+    if _CONTENT_DATE_CACHE is None:
+        dates = []
+        for fn, keys in (('tools_en.json', ('dateModified',)),
+                         ('articles_en.json', ('dateModified', 'date')),
+                         ('news_en.json', ('published_at',))):
+            fp = os.path.join(DATA_DIR, fn)
+            if not os.path.isfile(fp):
+                continue
+            try:
+                with open(fp, encoding='utf-8') as f:
+                    for item in json.load(f):
+                        for k in keys:
+                            v = item.get(k)
+                            if isinstance(v, str) and len(v) >= 10 and v[:4].isdigit():
+                                dates.append(v[:10])
+            except Exception:
+                pass
+        _CONTENT_DATE_CACHE = max(dates) if dates else datetime.now().strftime('%Y-%m-%d')
+    return _CONTENT_DATE_CACHE
+
 # ─── Rankings pages / Article category pages ─────────────────────────────────
 RANKINGS_MIN_TOOLS = 3  # 分类工具数达到该值才生成 /rankings/<slug>/ 榜单页
 # ─── Article category pages (2026-11-18 治本 421 处面包屑 404) ────────────────
@@ -1525,7 +1552,7 @@ def build_ranking_page_en(cat_name: str, ranked: list) -> str:
     """
     cat_slug = get_category_slug_en(cat_name)
     n = len(ranked)
-    today_disp = datetime.now().strftime('%d %b %Y').lstrip('0')
+    today_disp = datetime.strptime(_content_date(), '%Y-%m-%d').strftime('%d %b %Y').lstrip('0')
 
     rows = ''
     for i, t in enumerate(ranked, 1):
@@ -2028,7 +2055,7 @@ def build_category_index_en(tools_by_cat: dict) -> str:
     cats = sorted(merged.items(), key=lambda kv: len(kv[1]['tools']), reverse=True)
     total_cats = len(cats)
     total_tools = sum(len(v['tools']) for v in merged.values())
-    today_iso = datetime.now().strftime('%Y-%m-%d')
+    today_iso = _content_date()
 
     # Typical use cases per category family — lets AI answer "which tools for X"
     category_scenes = {
@@ -2660,8 +2687,32 @@ def generate_sitemap_en(tools: list, articles: list, cat_slugs: list, alt_slugs:
         f'    <url><loc>{SITE_DOMAIN}/privacy</loc><lastmod>{today}</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>',
         f'    <url><loc>{SITE_DOMAIN}/terms</loc><lastmod>{today}</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>',
     ]
+    # Use real review/creation dates instead of stamping every page with today.
+    # A sitemap where hundreds of URLs "change" daily trains crawlers to ignore
+    # lastmod and hides genuinely fresh content.
+    def _tool_lastmod(t):
+        for key in ('last_verified', 'aeo_geo_updated', 'created_date'):
+            v = t.get(key)
+            if isinstance(v, str) and re.match(r'^\d{4}-\d{2}-\d{2}', v):
+                return v[:10]
+        return today
+
+    # Category pages roll up the newest item in that category (tool or article).
+    cat_lm = {}
+    for _t in tools:
+        _cs = get_category_slug_en(_t.get('category', ''))
+        if _cs:
+            _d = _tool_lastmod(_t)
+            if _d > cat_lm.get(_cs, ''):
+                cat_lm[_cs] = _d
+    for _a in articles:
+        _cs = get_category_slug_en(_a.get('category', ''))
+        _d = str(_a.get('date') or '')[:10]
+        if _cs and re.match(r'^\d{4}-\d{2}-\d{2}', _d) and _d > cat_lm.get(_cs, ''):
+            cat_lm[_cs] = _d
+
     for cs in cat_slugs:
-        urls.append(f'    <url><loc>{SITE_DOMAIN}/category/{cs}/</loc><lastmod>{today}</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>')
+        urls.append(f'    <url><loc>{SITE_DOMAIN}/category/{cs}/</loc><lastmod>{cat_lm.get(cs, today)}</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>')
     for s in (alt_slugs or []):
         urls.append(f'    <url><loc>{SITE_DOMAIN}/alternatives/{s}/</loc><lastmod>{today}</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>')
     for u in (vs_urls or []):
@@ -2674,17 +2725,7 @@ def generate_sitemap_en(tools: list, articles: list, cat_slugs: list, alt_slugs:
             _cat_counts[_c] = _cat_counts.get(_c, 0) + 1
     for _c, _n in _cat_counts.items():
         if _n >= RANKINGS_MIN_TOOLS:
-            urls.append(f'    <url><loc>{SITE_DOMAIN}/rankings/{get_category_slug_en(_c)}/</loc><lastmod>{today}</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>')
-    # Use the tool's real review/creation date instead of stamping every tool
-    # page with today — a sitemap where 300 URLs "change" daily trains crawlers
-    # to ignore lastmod, and hides genuinely fresh content.
-    def _tool_lastmod(t):
-        for key in ('last_verified', 'aeo_geo_updated', 'created_date'):
-            v = t.get(key)
-            if isinstance(v, str) and re.match(r'^\d{4}-\d{2}-\d{2}', v):
-                return v[:10]
-        return today
-
+            urls.append(f'    <url><loc>{SITE_DOMAIN}/rankings/{get_category_slug_en(_c)}/</loc><lastmod>{cat_lm.get(get_category_slug_en(_c), today)}</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>')
     for t in tools:
         urls.append(f'    <url><loc>{SITE_DOMAIN}/tools/{t["slug"]}/</loc><lastmod>{_tool_lastmod(t)}</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>')
     for a in articles:
@@ -2780,7 +2821,7 @@ def generate_llms_txt_en(tools: list, articles: list, alt_slugs: list = None,
     Regenerated on EVERY build so counts, dates and URLs never drift stale
     (the 2026-11-16 audit found counts off by one and every link missing its
     trailing slash vs the sitemap)."""
-    today_iso = datetime.now().strftime('%Y-%m-%d')
+    today_iso = _content_date()
     n_tools, n_arts = len(tools), len(articles)
 
     merged = {}
@@ -2903,7 +2944,7 @@ def generate_llms_full_txt_en(tools: list, articles: list, news_items: list = No
     heading outline and the content lead (markdown tables included — pricing
     comparisons are the site's most-cited asset), plus the latest AI news
     briefs with their editorial commentary. Target size ~1 MB."""
-    today_iso = datetime.now().strftime('%Y-%m-%d')
+    today_iso = _content_date()
     news_items = news_items or []
     n_tools, n_arts, n_news = len(tools), len(articles), len(news_items)
 
@@ -3300,7 +3341,7 @@ def build_alternatives_page_en(tool: dict, candidates: list) -> str:
     cat_slug = get_category_slug_en(cat)
     alt_og_img = get_og_image_url(slug) or f'{SITE_DOMAIN}/images/logo.png'
     n = len(candidates)
-    today_iso = datetime.now().strftime('%Y-%m-%d')
+    today_iso = _content_date()
     rating = re.sub(r'[^\d.]', '', str(tool.get('rating', '')))
 
     def _brief(text, limit=120):
@@ -3482,7 +3523,7 @@ MARQUEE_VS_PAIRS = [
 def build_contact_page_en() -> str:
     """contact.html — the author block on every tool page links here; it was a
     404 until 2026-11-17. One honest channel: the team email."""
-    today_iso = datetime.now().strftime('%Y-%m-%d')
+    today_iso = _content_date()
     hreflang = hreflang_tags('/contact', '/contact')
     return f'''<!DOCTYPE html>
 <html lang="en">
@@ -4150,7 +4191,7 @@ def build_best_page_en(tools_list) -> str:
     """/best/ — Top Rated AI Tools (Top 50 by the public rubric). Targets
     'best ai tools 2026'-class queries; every ranking auditable via Score
     breakdown on each review page."""
-    today_disp = datetime.now().strftime('%d %b %Y').lstrip('0')
+    today_disp = datetime.strptime(_content_date(), '%Y-%m-%d').strftime('%d %b %Y').lstrip('0')
     hreflang = hreflang_tags('/best/', '/best/')
     ranked = sort_by_editorial_score(tools_list)[:50]
     rows = ''
@@ -4212,8 +4253,8 @@ def build_tools_index_en(tools_list, tools_by_cat) -> str:
     in one place, grouped by category) but uses EN cards, tokens and FAQ/ItemList
     schema so it also works as a GEO entry point.
     """
-    today_iso = datetime.now().strftime('%Y-%m-%d')
-    today_disp = datetime.now().strftime('%d %b %Y').lstrip('0')
+    today_iso = _content_date()
+    today_disp = datetime.strptime(_content_date(), '%Y-%m-%d').strftime('%d %b %Y').lstrip('0')
     total = len(tools_list)
     type_counts = {'free': 0, 'freemium': 0, 'paid': 0}
     for _t in tools_list:
@@ -4397,7 +4438,7 @@ def build_tools_index_en(tools_list, tools_by_cat) -> str:
 
 def build_new_page_en(tools_list) -> str:
     """/new/ — Recently listed or re-checked tool reviews, newest first."""
-    today_disp = datetime.now().strftime('%d %b %Y').lstrip('0')
+    today_disp = datetime.strptime(_content_date(), '%Y-%m-%d').strftime('%d %b %Y').lstrip('0')
     hreflang = hreflang_tags('/new/', '/new/')
 
     def _date_info(t):
@@ -4453,7 +4494,7 @@ def build_new_page_en(tools_list) -> str:
 
 def build_privacy_page_en() -> str:
     """privacy.html — required trust/legal page (GA + affiliate + localStorage)."""
-    today_iso = datetime.now().strftime('%Y-%m-%d')
+    today_iso = _content_date()
     hreflang = hreflang_tags('/privacy', '/privacy')
     return f'''<!DOCTYPE html>
 <html lang="en">
@@ -4515,7 +4556,7 @@ def build_privacy_page_en() -> str:
 
 def build_terms_page_en() -> str:
     """terms.html — required trust/legal page (AS-IS content, IP, affiliate, third-party links)."""
-    today_iso = datetime.now().strftime('%Y-%m-%d')
+    today_iso = _content_date()
     hreflang = hreflang_tags('/terms', '/terms')
     return f'''<!DOCTYPE html>
 <html lang="en">
@@ -4578,7 +4619,7 @@ def build_vs_page_en(a: dict, b: dict) -> str:
     pa, pb = a.get('price', ''), b.get('price', '')
     ca, cb = a.get('category', ''), b.get('category', '')
     cat_slug = get_category_slug_en(ca)
-    today_iso = datetime.now().strftime('%Y-%m-%d')
+    today_iso = _content_date()
     og_img = get_og_image_url(slug_a := a.get('slug', '')) or f'{SITE_DOMAIN}/images/logo.png'
     higher_name = na if rating_num(a) >= rating_num(b) else nb
     free_side = ''
