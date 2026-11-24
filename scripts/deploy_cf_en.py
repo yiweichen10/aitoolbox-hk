@@ -59,10 +59,10 @@ def prepare() -> tuple[int, int]:
     SKIP_NAMES = {'.DS_Store', 'Thumbs.db', 'desktop.ini'}
 
     def _ignore(dirname, names):
+        # Pure string checks only — a stat() per entry is slow under sandbox
+        # file monitoring with 1800+ files.
         return [n for n in names
-                if n in SKIP_NAMES
-                or n.endswith(SKIP_SUFFIXES)
-                or (n.startswith('.') and (Path(dirname) / n).is_file())]
+                if n in SKIP_NAMES or n.endswith(SKIP_SUFFIXES) or n.startswith('.')]
 
     files = 0
     for d in DIRS:

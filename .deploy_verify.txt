@@ -1,0 +1,37 @@
+OUT            C:\Users\27040\WorkBuddy\20260321092139\seo-site-en\_deploy_cf
+ROOT_FILES     19/19
+DIR_FILES      1624
+TOTAL_FILES    1792  (CF Pages 免费上限 20000)
+TOTAL_SIZE     84.0 MB
+BIGGEST_FILE   1.15 MB  llms-full.txt  (CF 单文件上限 25 MiB)
+AUTH_MODE      wrangler_oauth（本地已登录态）
+WRANGLER       C:\Users\27040\.workbuddy-ai\binaries\node\versions\22.22.2-6\wrangler.CMD
+RUN C:\Users\27040\.workbuddy-ai\binaries\node\versions\22.22.2-6\wrangler.CMD pages deploy C:\Users\27040\WorkBuddy\20260321092139\seo-site-en\_deploy_cf ...
+DEPLOY attempt 1: FAILED (exit 1, transient network)
+  Common causes:
+    - No internet connection or network connectivity problems
+    - Firewall or VPN blocking the request
+    - Network proxy configuration issues
+  
+  Please check your network connection and try again.
+
+
+[31mX [41;31m[[41;97mERROR[41;31m][0m [1mfetch failed[0m
+
+
+🪵  Logs were written to "C:\Users\27040\AppData\Roaming\xdg.config\.wrangler\logs\wrangler-2026-11-24_00-50-30_944.log"
+retrying in 20s ...
+Uploading... (1003/1788)
+Uploading... (1265/1788)
+Uploading... (1526/1788)
+Uploading... (1788/1788)
+✨ Success! Uploaded 785 files (1003 already uploaded) (39.38 sec)
+
+✨ Uploading _headers
+✨ Uploading _redirects
+✨ Uploading Functions bundle
+🌎 Deploying...
+✨ Deployment complete! Take a peek over at https://e373f821.aitoolbox-hk.pages.dev
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mProxy environment variables detected. We'll use your proxy for fetch requests.[0m
+DEPLOY attempt 2: OK
+exit=0

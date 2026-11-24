@@ -2,12 +2,16 @@
 """news_translate_from_cn.py — translate the CN site's daily news into EN.
 
 Reads the CN site's data/news_YYYY-MM-DD.json files (already quality-gated by
-the CN pipeline), translates title/summary/commentary via SiliconFlow
-(DeepSeek), and merges into data/news_en.json keyed by CN item id.
+the CN pipeline), translates title/summary/commentary via DeepSeek, and merges
+into data/news_en.json keyed by CN item id.
 
 Pipeline order (daily_growth_en.py): this script -> score -> build -> deploy.
-Skips ids already present. If SILICONFLOW_API_KEY is unset, exits 0 without
-touching data (news section keeps serving the last synced items).
+Skips ids already present. Unlike the old SiliconFlow version, a missing key or
+a failed translation is a hard error (exit 1): silently skipping used to leave
+the EN news section stale without anybody noticing.
+
+Usage:
+  python scripts/news_translate_from_cn.py [days]   # default: latest 3 CN days
 """
 from __future__ import annotations
 
@@ -21,11 +25,33 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CN_DIR = os.path.join(BASE_DIR, '..', 'seo-site', 'data')
 OUT_PATH = os.path.join(BASE_DIR, 'data', 'news_en.json')
 
-API_KEY = os.getenv("SILICONFLOW_API_KEY", "")
-API_URL = "https://api.siliconflow.cn/v1/chat/completions"
-MODEL = "deepseek-ai/DeepSeek-V4-Pro"
 
-DAYS = int(sys.argv[1]) if len(sys.argv) > 1 else 1  # default: latest CN day
+def _read_env(path: str) -> dict:
+    env = {}
+    if not os.path.isfile(path):
+        return env
+    for line in open(path, encoding='utf-8'):
+        line = line.strip()
+        if line and not line.startswith('#') and '=' in line:
+            k, v = line.split('=', 1)
+            env[k.strip()] = v.strip().strip('"').strip("'")
+    return env
+
+
+# Config precedence: process env > EN .env > CN .env (shared data is allowed;
+# the key lives only in the CN .env, which is the one site that has one).
+_cfg = {}
+for _p in (os.path.join(os.path.dirname(CN_DIR), '.env'),
+           os.path.join(BASE_DIR, '.env')):
+    _cfg.update(_read_env(_p))
+
+API_KEY = os.getenv('DEEPSEEK_API_KEY') or _cfg.get('DEEPSEEK_API_KEY', '')
+API_BASE = (os.getenv('DEEPSEEK_BASE_URL') or _cfg.get('DEEPSEEK_BASE_URL')
+            or 'https://api.deepseek.com/v1').rstrip('/')
+MODEL = os.getenv('DEEPSEEK_MODEL') or _cfg.get('DEEPSEEK_MODEL') or 'deepseek-v4-flash'
+API_URL = API_BASE + '/chat/completions'
+
+DAYS = int(sys.argv[1]) if len(sys.argv) > 1 else 3
 
 
 def chat(prompt: str, user_msg: str) -> str:
@@ -36,6 +62,7 @@ def chat(prompt: str, user_msg: str) -> str:
             {"role": "user", "content": user_msg},
         ],
         "temperature": 0.3,
+        "max_tokens": 1500,
     }).encode('utf-8')
     req = urllib.request.Request(API_URL, data=body, headers={
         "Authorization": f"Bearer {API_KEY}",
@@ -59,13 +86,20 @@ def translate_item(it: dict) -> dict | None:
         "summary": it.get('summary', ''),
         "commentary": it.get('commentary', ''),
     }, ensure_ascii=False)
-    try:
-        raw = chat(sysmsg, user_msg)
-        m = re.search(r'\{.*\}', raw, re.S)
-        return json.loads(m.group()) if m else None
-    except Exception as e:
-        print(f"  translate failed: {e}")
-        return None
+    last = ''
+    for attempt in range(2):
+        try:
+            raw = chat(sysmsg, user_msg)
+            m = re.search(r'\{.*\}', raw, re.S)
+            if m:
+                return json.loads(m.group())
+            last = 'no JSON object in response'
+        except Exception as e:
+            last = f'{type(e).__name__}: {e}'
+        if attempt == 0:
+            print(f"  retry {it.get('id', '?')}: {last[:160]}", flush=True)
+    print(f"  ERROR translate {it.get('id', '?')}: {last[:300]}", flush=True)
+    return None
 
 
 def slugify(text: str, date_iso: str) -> str:
@@ -75,8 +109,9 @@ def slugify(text: str, date_iso: str) -> str:
 
 def main() -> int:
     if not API_KEY:
-        print("[news] SILICONFLOW_API_KEY not set — skipping (existing EN news kept)")
-        return 0
+        print("[news][ERROR] DEEPSEEK_API_KEY not found in env / EN .env / CN .env "
+              "— EN news sync aborted (refusing to silently serve stale news)")
+        return 1
 
     try:
         en = json.load(open(OUT_PATH, encoding='utf-8'))
@@ -84,8 +119,15 @@ def main() -> int:
         en = []
     have = {it['id'] for it in en}
 
-    days = sorted(f for f in os.listdir(CN_DIR) if re.match(r'news_\d{4}-\d{2}-\d{2}\.json$', f))[-DAYS:]
+    files = sorted(f for f in os.listdir(CN_DIR)
+                   if re.match(r'news_\d{4}-\d{2}-\d{2}\.json$', f))
+    days = files[-DAYS:]
+    if not days:
+        print("[news][ERROR] no CN news_YYYY-MM-DD.json files found")
+        return 1
+
     added = 0
+    errors = 0
     for fname in days:
         day = fname[5:15]
         cn = json.load(open(os.path.join(CN_DIR, fname), encoding='utf-8'))
@@ -94,6 +136,7 @@ def main() -> int:
                 continue
             t = translate_item(it)
             if not t:
+                errors += 1
                 continue
             en.append({
                 'id': it['id'],
@@ -108,12 +151,19 @@ def main() -> int:
             })
             have.add(it['id'])
             added += 1
-            print(f"  + {it['id']} {t.get('title', '')[:60]}")
+            print(f"  + {it['id']} {t.get('title', '')[:60]}", flush=True)
+
+    if errors:
+        print(f"[news][ERROR] {errors} item(s) failed to translate — "
+              "no partial data written; fix and rerun")
+        return 1
 
     if added:
         en.sort(key=lambda x: x.get('published_at', ''), reverse=True)
-        json.dump(en, open(OUT_PATH, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
-    print(f"[news] added {added} items -> data/news_en.json (total {len(en)})")
+        with open(OUT_PATH, 'w', encoding='utf-8') as f:
+            json.dump(en, f, ensure_ascii=False, indent=1)
+    print(f"[news] added {added} items -> data/news_en.json (total {len(en)}); "
+          f"scanned CN days: {days[0]}..{days[-1]}")
     return 0
 
 

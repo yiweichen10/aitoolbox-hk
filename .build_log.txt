@@ -1,7 +1,7 @@
 
 [VALIDATE] Checking internal links (all forms)...
 [VALIDATE] OK — all internal links resolve.
-[EN] 291 published tools, 232 articles
+[EN] 301 published tools, 234 articles
 [OK] en/category/ai-chat/index.html
 [OK] en/category/ai-image/index.html
 [OK] en/category/ai-coding/index.html
@@ -15,6 +15,7 @@
 [OK] en/category/ai-productivity/index.html
 [OK] en/category/ai-development/index.html
 [OK] en/category/ai-automation/index.html
+[OK] en/category/ai-research/index.html
 [OK] en/category/ai-e-commerce/index.html
 [OK] en/category/ai-agents/index.html
 [OK] en/category/ai-marketing/index.html
@@ -22,7 +23,6 @@
 [OK] en/category/market-research/index.html
 [OK] en/category/ai-api/index.html
 [OK] en/category/ai-website-builder/index.html
-[OK] en/category/ai-research/index.html
 [OK] en/category/ai-income/index.html
 [OK] en/category/index.html
 [OK] en/rankings/ai-chat/index.html (Top 11 of 11)
@@ -32,25 +32,26 @@
 [OK] en/rankings/ai-video/index.html (Top 15 of 28)
 [OK] en/rankings/ai-audio/index.html (Top 14 of 14)
 [OK] en/rankings/ai-design/index.html (Top 12 of 12)
-[OK] en/rankings/ai-search/index.html (Top 8 of 8)
+[OK] en/rankings/ai-search/index.html (Top 7 of 7)
 [OK] en/rankings/ai-writing/index.html (Top 15 of 17)
-[OK] en/rankings/ai-translation/index.html (Top 6 of 6)
+[OK] en/rankings/ai-translation/index.html (Top 7 of 7)
 [OK] en/rankings/ai-productivity/index.html (Top 11 of 11)
 [OK] en/rankings/ai-development/index.html (Top 15 of 20)
-[OK] en/rankings/ai-automation/index.html (Top 10 of 10)
+[OK] en/rankings/ai-automation/index.html (Top 11 of 11)
+[OK] en/rankings/ai-research/index.html (Top 5 of 5)
 [OK] en/rankings/ai-e-commerce/index.html (Top 11 of 11)
 [OK] en/rankings/ai-agents/index.html (Top 10 of 10)
-[OK] en/rankings/ai-marketing/index.html (Top 12 of 12)
-[OK] en/rankings/ai-seo/index.html (Top 7 of 7)
+[OK] en/rankings/ai-marketing/index.html (Top 14 of 14)
+[OK] en/rankings/ai-seo/index.html (Top 8 of 8)
 [OK] en/rankings/market-research/index.html (Top 5 of 5)
-[OK] en/rankings/ai-website-builder/index.html (Top 6 of 6)
-[OK] en/rankings/ai-research/index.html (Top 4 of 4)
-[OK] en/rankings/ai-income/index.html (Top 15 of 57)
+[OK] en/rankings/ai-api/index.html (Top 4 of 4)
+[OK] en/rankings/ai-website-builder/index.html (Top 7 of 7)
+[OK] en/rankings/ai-income/index.html (Top 15 of 59)
 [OK] en/category/ai-advertising/index.html (article guides, 3)
 [OK] en/category/ai-data/index.html (article guides, 3)
 [OK] en/category/ai-finance/index.html (article guides, 3)
 [OK] en/category/ai-guide/index.html (article guides, 4)
-[OK] en/category/ai-infrastructure/index.html (article guides, 18)
+[OK] en/category/ai-infrastructure/index.html (article guides, 20)
 [OK] en/category/ai-photo/index.html (article guides, 4)
 [OK] en/category/ai-product-analytics/index.html (article guides, 3)
 [OK] en/category/ai-review/index.html (article guides, 4)
@@ -349,6 +350,18 @@
 [OK] en/tools/hedra/index.html
 [OK] en/tools/carrd/index.html
 [OK] en/tools/creatify/index.html
+[OK] en/tools/together-ai/index.html
+[OK] en/tools/phantombuster/index.html
+[OK] en/tools/mangools/index.html
+[OK] en/tools/circle/index.html
+[OK] en/tools/hunter-io/index.html
+[OK] en/tools/respondent/index.html
+[OK] en/tools/sparkloop/index.html
+[OK] en/tools/fireworks-ai/index.html
+[OK] en/tools/happyscribe/index.html
+[OK] en/tools/squarespace/index.html
+[OK] en/articles/best-embedding-api-pricing-2026-openai-vs-voyage-vs-cohere-vs-jina/index.html
+[OK] en/articles/best-ai-video-generation-api-pricing-2026-veo-vs-sora-vs-runway-vs-kling-vs-luma/index.html
 [OK] en/articles/best-ocr-api-pricing-2026-google-document-ai-vs-aws-textract-vs-azure-vs-mistral/index.html
 [OK] en/articles/best-tts-api-pricing-2026-elevenlabs-vs-cartesia-vs-openai-vs-deepgram/index.html
 [OK] en/articles/best-ai-image-generation-api-pricing-2026-gpt-image-2-6-vs-flux-3-vs-imagen-4-vs-stable-diffusion-3-5/index.html
@@ -536,7 +549,12 @@
 [OK] en/articles/best-ai-seo-tools-niche-sites-2026/index.html
 [OK] en/articles/best-ai-coding-assistants-2026/index.html
 [OK] en/articles/kling-ai-review-vs-sora-luma-2026/index.html
-[OK] en/articles/best-ai-video-generators-2026/index.html
+[OK] en/articles/best-ai-video-generators-2026/index.htmlC:\Users\27040\WorkBuddy\20260321092139\seo-site-en\scripts\build_en.py:4055: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  now = datetime.utcnow().strftime('%a, %d %b %Y %H:%M:%S GMT')
+[OG] 301 tools, 234 articles
+
+[OG] Done — 0 generated, 535 skipped, 0 failed
+
 [OK] en/articles/best-ai-tools-b2b-marketing-2026/index.html
 [OK] en/articles/best-ai-tools-for-faceless-youtube-channels-2026/index.html
 [OK] en/articles/best-ai-tools-for-podcasters-2026/index.html
@@ -606,23 +624,20 @@
 [OK] en/articles/page/23/index.html
 [OK] en/articles/page/24/index.html
 [OK] en/index.html
-[OK] en/sitemap.xml (291 tools + 232 articles)
-[OK] en/search/index.html (291 tools + 232 articles indexed)
-[OK] en/llms.txt (291 tools / 232 articles)
-[OK] en/llms-full.txt (291 tools / 232 articles, 1132 KB)
+[OK] en/sitemap.xml (301 tools + 234 articles)
+[OK] en/search/index.html (301 tools + 234 articles indexed)
+[OK] en/llms.txt (301 tools / 234 articles)
+[OK] en/llms-full.txt (301 tools / 234 articles / 19 news briefs, 1166 KB)
 [OK] refresh trust-info tokens in about.html (WARNING residual markers: ['June 2026'])
 [OK] refresh trust-info tokens in author\index.html (clean)
-[OK] en/rss.xml (latest 30 of 232 articles)
+[OK] en/rss.xml (latest 30 of 234 articles)
 [OK] en/alternatives/ (50 pages from top 50 tools)
 [OK] en/vs/ (80 head-to-head pages)
 [OK] en/contact.html + en/submit.html
-[OK] en/news/ (19 items)
-[EN] IndexNow: no new URLs to push (728 total, all pushed)
+[OK] en/news/ (19 items, 3 day pages, 4 category pages)
+[EN] IndexNow: no new URLs to push (750 total, all pushed)
 
-[EN] Done! 291 tools + 232 articles built under /
+[EN] Done! 301 tools + 234 articles built under /
 
 [BUILD] Generating OG images...
-[OG] 291 tools, 232 articles
-
-[OG] Done — 0 generated, 523 skipped, 0 failed
 [BUILD] OG images generation completed.

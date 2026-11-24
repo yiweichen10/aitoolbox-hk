@@ -670,7 +670,8 @@ def footer_html() -> str:
                 <p class="footer-col-head">About</p>
                 <a href="/about">Methodology</a>
                 <a href="/author/">Editorial Team</a>
-                <a href="/rss.xml">RSS Feed</a>
+                <a href="/rss.xml">Article RSS</a>
+                <a href="/news/rss.xml">AI News RSS</a>
                 <a href="{SITE_DOMAIN_CN}/">中文版</a>
             </div>
             <div class="footer-col">
@@ -2616,8 +2617,9 @@ def build_index_en(tools: list, articles: list, news_items: list = None) -> str:
                 </div>
                 <div class="sidebar-widget">
                     <h4>Stay updated</h4>
-                    <p style="font-size:13px;color:var(--text-muted);margin-bottom:12px;">New AI tools reviewed daily. {total_tools}+ tools and counting.</p>
-                    <a href="/articles/" style="display:block;text-align:center;padding:10px;background:var(--brand-blue);color:#fff;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;">Read latest reviews →</a>
+                    <p style="font-size:13px;color:var(--text-muted);margin-bottom:12px;">New AI tools and news briefs daily. {total_tools}+ tools and counting.</p>
+                    <a href="/news/" style="display:block;text-align:center;padding:10px;background:var(--brand-blue);color:#fff;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;margin-bottom:8px;">Latest AI News →</a>
+                    <a href="/articles/" style="display:block;text-align:center;padding:10px;background:var(--body-bg);border:1px solid var(--border-subtle);color:var(--text-main);border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;">Read latest reviews →</a>
                 </div>
             </aside>
         </div>
@@ -2673,8 +2675,18 @@ def generate_sitemap_en(tools: list, articles: list, cat_slugs: list, alt_slugs:
     for _c, _n in _cat_counts.items():
         if _n >= RANKINGS_MIN_TOOLS:
             urls.append(f'    <url><loc>{SITE_DOMAIN}/rankings/{get_category_slug_en(_c)}/</loc><lastmod>{today}</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>')
+    # Use the tool's real review/creation date instead of stamping every tool
+    # page with today — a sitemap where 300 URLs "change" daily trains crawlers
+    # to ignore lastmod, and hides genuinely fresh content.
+    def _tool_lastmod(t):
+        for key in ('last_verified', 'aeo_geo_updated', 'created_date'):
+            v = t.get(key)
+            if isinstance(v, str) and re.match(r'^\d{4}-\d{2}-\d{2}', v):
+                return v[:10]
+        return today
+
     for t in tools:
-        urls.append(f'    <url><loc>{SITE_DOMAIN}/tools/{t["slug"]}/</loc><lastmod>{today}</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>')
+        urls.append(f'    <url><loc>{SITE_DOMAIN}/tools/{t["slug"]}/</loc><lastmod>{_tool_lastmod(t)}</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>')
     for a in articles:
         pub = a.get('date', today)
         urls.append(f'    <url><loc>{SITE_DOMAIN}/articles/{a["slug"]}/</loc><lastmod>{pub}</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>')
