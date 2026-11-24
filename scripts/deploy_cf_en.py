@@ -43,11 +43,18 @@ def prepare() -> tuple[int, int]:
     # 代价：源里已删除的旧文件会在 _deploy_cf 中残留，需要时手动清理一次。
     OUT.mkdir(parents=True, exist_ok=True)
 
+    def _needs_copy(src: Path, dst: Path) -> bool:
+        # Incremental: only copy when target is missing or source is newer.
+        # Under sandbox file monitoring, blindly re-copying 1800 files costs
+        # minutes; skipping unchanged files makes prepare ~0s.
+        return not dst.is_file() or src.stat().st_mtime > dst.stat().st_mtime
+
     copied, missing = 0, []
     for name in ROOT_FILES:
         src = ROOT / name
         if src.is_file():
-            shutil.copy2(src, OUT / name)
+            if _needs_copy(src, OUT / name):
+                shutil.copy2(src, OUT / name)
             copied += 1
         else:
             missing.append(name)
@@ -68,10 +75,18 @@ def prepare() -> tuple[int, int]:
     for d in DIRS:
         src = ROOT / d
         if src.is_dir():
-            shutil.copytree(src, OUT / d, dirs_exist_ok=True, ignore=_ignore)
-            files += sum(1 for _ in src.rglob("*")
-                         if _.is_file() and not _.name.endswith(SKIP_SUFFIXES)
-                         and _.name not in SKIP_NAMES)
+            for root, dirs, names in os.walk(src):
+                rel = os.path.relpath(root, src)
+                dst_dir = OUT / d if rel == '.' else OUT / d / rel
+                for name in names:
+                    if name in SKIP_NAMES or name.endswith(SKIP_SUFFIXES) or name.startswith('.'):
+                        continue
+                    sf = Path(root) / name
+                    df = dst_dir / name
+                    if _needs_copy(sf, df):
+                        dst_dir.mkdir(parents=True, exist_ok=True)
+                        shutil.copy2(sf, df)
+                    files += 1
         else:
             missing.append(d + "/")
 
