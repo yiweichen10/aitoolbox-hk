@@ -1029,7 +1029,10 @@ def build_tool_page_en(tool: dict, all_tools: list, all_articles: list = None, a
     </div>'''
 
     # Author trust block (GEO — EEAT signals for AI engines)
-    today_iso_author = datetime.now().strftime('%Y-%m-%d')
+    # Use the tool's real content date, NOT build time. A build-time date
+    # changed every single day => every tool page re-hashed => wrangler
+    # re-uploaded all 300+ tool pages on every daily build.
+    today_iso_author = tool.get('dateModified') or date_mod or tool.get('datePublished') or datetime.now().strftime('%Y-%m-%d')
     author_block = f'''<div class="author-block">
         <div class="author-block-inner">
             <div class="author-avatar">A</div>
@@ -2261,7 +2264,7 @@ def build_category_index_en(tools_by_cat: dict) -> str:
 
 # ─── Homepage ─────────────────────────────────────────────────────────────────
 
-def build_index_en(tools: list, articles: list) -> str:
+def build_index_en(tools: list, articles: list, news_items: list = None) -> str:
     # Tool cards (top 12 by visits, fallback to first 12)
     def parse_visits(v):
         v = str(v).replace('K','000').replace('M','000000').replace(',','')
@@ -2373,6 +2376,28 @@ def build_index_en(tools: list, articles: list) -> str:
             </div>
             <p class="summary">{escape_html(a.get('description',''))}</p>
         </article>\n'''
+
+    # Latest AI News strip — CN homepage has a "latest releases" block; EN
+    # previously only surfaced news through the nav. Pull the newest briefs
+    # from the shared news dataset so the homepage stays current each build.
+    news_cards = ''
+    for it in (news_items or [])[:5]:
+        _cat_label, _, _cat_color = _news_cat(it)
+        news_cards += f'''<a class="home-news-item" href="/news/{escape_html(it['slug'])}/">
+            <span class="home-news-cat" style="color:{_cat_color}">{escape_html(_cat_label)}</span>
+            <h3>{escape_html(it.get('title', ''))}</h3>
+            <p>{escape_html(_serp_desc(it.get('summary', ''), 120))}</p>
+            <time datetime="{escape_html(_news_published(it))}">{escape_html(_news_date(it))}</time>
+        </a>\n'''
+    news_section = f'''                <section style="margin-top:40px;">
+                    <h2 style="margin-bottom:20px;">Latest AI News</h2>
+                    <div class="home-news-grid">
+{news_cards}                    </div>
+                    <div style="text-align:center;margin-top:24px;">
+                        <a href="/news/" class="action-btn">All AI News →</a>
+                    </div>
+                </section>
+''' if news_cards else ''
 
     # Homepage schema — dynamically generated with current counts
     total_tools = len(tools)
@@ -2569,7 +2594,7 @@ def build_index_en(tools: list, articles: list) -> str:
                     </div>
                 </section>
 
-                <section style="margin-top:40px;">
+{news_section}                <section style="margin-top:40px;">
                     <h2 style="margin-bottom:20px;">Latest Research</h2>
                     <div class="article-list">
                         {article_cards}
@@ -4944,7 +4969,7 @@ def build_all_en(target: str = 'all'):
     # ── English homepage ──────────────────────────────────────────────────────
     if target in ('all', 'index'):
         os.makedirs(OUT_DIR, exist_ok=True)
-        html = build_index_en(published_tools, articles)
+        html = build_index_en(published_tools, articles, load_news_en())
         _safe_write(os.path.join(OUT_DIR, 'index.html'), html)
         print(f'[OK] en/index.html')
 
