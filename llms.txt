@@ -158,7 +158,7 @@
 - [Brandwatch](https://www.aitoolbox.hk/tools/brandwatch/): Enterprise consumer intelligence with a 1.4-1.7 trillion-conversation archive and Iris AI anomaly alerts…
 - [Exploding Topics](https://www.aitoolbox.hk/tools/exploding-topics/): Trend-discovery engine (Semrush-owned) scoring 1.1M+ rising topics, products, and startups with 12-month…
 - [SparkToro](https://www.aitoolbox.hk/tools/sparktoro/): Audience research from Rand Fishkin (Moz's co-founder): describe your audience in a sentence and get the…
-- [GummySearch](https://www.aitoolbox.hk/tools/gummysearch/): A high-intent Reddit research tool that finds profitable opportunities by tracking niche community pain…
+- [Glimpse](https://www.aitoolbox.hk/tools/glimpse/): A layer on top of Google Trends that turns the 0-100 index into absolute search volumes, growth rates and…
 
 ### AI Office (5)
 - [Intercom](https://www.aitoolbox.hk/tools/intercom/): Intercom is the AI-first customer service platform behind Fin, the support agent that answers tickets instead…
@@ -177,8 +177,8 @@
 ### AI API (5)
 - [OpenRouter](https://www.aitoolbox.hk/tools/open-router/): Unified API gateway that gives you access to 200+ AI models through a single endpoint. Monetization angle…
 - [fal](https://www.aitoolbox.hk/tools/fal-ai/): Pay-per-use API for 1,000+ generative media models - one key, one bill, and no monthly minimum, so the gap…
-- [Fireworks AI](https://www.aitoolbox.hk/tools/fireworks-ai/): Fireworks AI serves open models like Kimi K3, GLM 5.3 and DeepSeek V4.1 at production speed, with Batch at…
 - [Together AI](https://www.aitoolbox.hk/tools/together-ai/): One OpenAI-compatible API serving 200+ open models - GLM, DeepSeek, Kimi, Qwen, gpt-oss - billed per token…
+- [Fireworks AI](https://www.aitoolbox.hk/tools/fireworks-ai/): Fireworks AI serves open models like Kimi K3, GLM 5.3 and DeepSeek V4.1 at production speed, with Batch at…
 - [Cerebras Inference](https://www.aitoolbox.hk/tools/cerebras/): Inference on wafer-scale chips - the fastest measured tokens per second on the market, with a deliberately…
 
 ## Alternatives & Head-to-Head Comparisons
@@ -209,8 +209,8 @@
 - [Anyword vs Writesonic](https://www.aitoolbox.hk/vs/anyword-vs-writesonic/): pricing and feature comparison
 - [Bolt.new vs Lovable](https://www.aitoolbox.hk/vs/bolt.new-vs-lovable/): pricing and feature comparison
 - [Brand24 vs Brandwatch](https://www.aitoolbox.hk/vs/brand24-vs-brandwatch/): pricing and feature comparison
-- [Brand24 vs Glimpse](https://www.aitoolbox.hk/vs/brand24-vs-glimpse/): pricing and feature comparison
-- [Brandwatch vs Glimpse](https://www.aitoolbox.hk/vs/brandwatch-vs-glimpse/): pricing and feature comparison
+- [Brand24 vs SparkToro](https://www.aitoolbox.hk/vs/brand24-vs-sparktoro/): pricing and feature comparison
+- [Brandwatch vs SparkToro](https://www.aitoolbox.hk/vs/brandwatch-vs-sparktoro/): pricing and feature comparison
 - [Buffer vs Semrush AI](https://www.aitoolbox.hk/vs/buffer-vs-semrush-ai/): pricing and feature comparison
 - [ChatGPT vs Claude](https://www.aitoolbox.hk/vs/chatgpt-vs-claude/): pricing and feature comparison
 - [ChatGPT vs Gemini](https://www.aitoolbox.hk/vs/chatgpt-vs-gemini/): pricing and feature comparison
@@ -232,15 +232,14 @@
 - [Durable vs Webflow AI](https://www.aitoolbox.hk/vs/durable-vs-webflow-ai/): pricing and feature comparison
 - [Elicit vs Litmaps](https://www.aitoolbox.hk/vs/elicit-vs-litmaps/): pricing and feature comparison
 - [Elicit vs Scite](https://www.aitoolbox.hk/vs/elicit-vs-scite/): pricing and feature comparison
+- [Etsy vs Patreon](https://www.aitoolbox.hk/vs/etsy-vs-patreon/): pricing and feature comparison
+- [Etsy vs Substack](https://www.aitoolbox.hk/vs/etsy-vs-substack/): pricing and feature comparison
 - [Exa AI vs Genspark](https://www.aitoolbox.hk/vs/exa-ai-vs-genspark/): pricing and feature comparison
 - [Exa AI vs Glean](https://www.aitoolbox.hk/vs/exa-ai-vs-glean/): pricing and feature comparison
-- [fal vs Fireworks AI](https://www.aitoolbox.hk/vs/fal-ai-vs-fireworks-ai/): pricing and feature comparison
 - [fal vs OpenRouter](https://www.aitoolbox.hk/vs/fal-ai-vs-open-router/): pricing and feature comparison
+- [fal vs Together AI](https://www.aitoolbox.hk/vs/fal-ai-vs-together-ai/): pricing and feature comparison
 - [Fireflies AI vs Julius AI](https://www.aitoolbox.hk/vs/fireflies-ai-vs-julius-ai/): pricing and feature comparison
 - [Fireflies AI vs Miro AI](https://www.aitoolbox.hk/vs/fireflies-ai-vs-miro-ai/): pricing and feature comparison
-- [Fireworks AI vs OpenRouter](https://www.aitoolbox.hk/vs/fireworks-ai-vs-open-router/): pricing and feature comparison
-- [Fiverr vs Patreon](https://www.aitoolbox.hk/vs/fiverr-vs-patreon/): pricing and feature comparison
-- [Fiverr vs Substack](https://www.aitoolbox.hk/vs/fiverr-vs-substack/): pricing and feature comparison
 - [Flowise vs Relevance AI](https://www.aitoolbox.hk/vs/flowise-vs-relevance-ai/): pricing and feature comparison
 - [Flux.1 vs Midjourney](https://www.aitoolbox.hk/vs/flux-1-vs-midjourney/): pricing and feature comparison
 - [Gamma vs Intercom](https://www.aitoolbox.hk/vs/gamma-vs-intercom/): pricing and feature comparison
@@ -270,12 +269,13 @@
 - [Manus vs MetaGPT](https://www.aitoolbox.hk/vs/manus-vs-metagpt/): pricing and feature comparison
 - [Manus vs Voiceflow](https://www.aitoolbox.hk/vs/manus-vs-voiceflow/): pricing and feature comparison
 - [MetaGPT vs Voiceflow](https://www.aitoolbox.hk/vs/metagpt-vs-voiceflow/): pricing and feature comparison
-- [Otterly.AI vs Profound](https://www.aitoolbox.hk/vs/otterly-ai-vs-profound/): pricing and feature comparison
+- [OpenRouter vs Together AI](https://www.aitoolbox.hk/vs/open-router-vs-together-ai/): pricing and feature comparison
 - [Otterly.AI vs Semrush](https://www.aitoolbox.hk/vs/otterly-ai-vs-semrush/): pricing and feature comparison
+- [Otterly.AI vs Surfer SEO](https://www.aitoolbox.hk/vs/otterly-ai-vs-surfer-seo/): pricing and feature comparison
 - [Patreon vs Substack](https://www.aitoolbox.hk/vs/patreon-vs-substack/): pricing and feature comparison
-- [Profound vs Semrush](https://www.aitoolbox.hk/vs/profound-vs-semrush/): pricing and feature comparison
 - [Relume vs Wix AI](https://www.aitoolbox.hk/vs/relume-vs-wix-ai/): pricing and feature comparison
 - [Runway vs Veo](https://www.aitoolbox.hk/vs/runway-vs-veo/): pricing and feature comparison
+- [Semrush vs Surfer SEO](https://www.aitoolbox.hk/vs/semrush-vs-surfer-seo/): pricing and feature comparison
 - [Sora vs Veo](https://www.aitoolbox.hk/vs/sora-vs-veo/): pricing and feature comparison
 - [Soundraw vs Wondercraft AI](https://www.aitoolbox.hk/vs/soundraw-vs-wondercraft-ai/): pricing and feature comparison
 
