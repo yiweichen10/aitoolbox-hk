@@ -315,9 +315,9 @@
                 <p class="news-item-summary">Google DeepMind releases <a href="/tools/gemini/" class="news-inlink">Gemini</a> 4 Neon: intelligence index 61 points, ranking 3rd; first on the coding agent index; cost per task 32% lower than Carbon.</p>
                 <div class="news-item-commentary"><span class="news-item-commentary-tag">Why</span>Neon sits in the main tier between Carbon and Hydrogen: first on the coding agent index, 32% lower cost than Carbon, targeting the high-frequency agent market that is smart enough and affordable to run; input $3, output $15 per million tokens, 1M context.</div>
                 <div class="news-item-foot"><span>Source: Google DeepMind：Blog（RSS）</span><a href="https://deepmind.google/blog/introducing-gemini-4-neon/" target="_blank" rel="noopener nofollow">Read original &rarr;</a></div>
-            </article>            <article class="news-item" data-category="products">
-                <i class="news-item-dot" style="background:#2563eb"></i>
-                <div class="news-item-meta"><span class="news-item-cat" style="color:#2563eb">Products</span><time datetime="2026-11-18T23:13:20+08:00">2026-11-19 23:13</time></div>
+            </article>            <article class="news-item" data-category="research">
+                <i class="news-item-dot" style="background:#0f766e"></i>
+                <div class="news-item-meta"><span class="news-item-cat" style="color:#0f766e">Research</span><time datetime="2026-11-18T23:13:20+08:00">2026-11-19 23:13</time></div>
                 <h2 class="news-item-title"><a href="/news/2026-11-19-wiz-discloses-two-unauthenticated-remote-code-execution-vuln/">Wiz discloses two unauthenticated remote code execution vulnerabilities in NGINX</a></h2>
                 <p class="news-item-summary">Wiz and other teams disclosed two NGINX HTTP/2 vulnerabilities that allow unauthenticated remote code execution, with a CVSS 4.0 score of 9.2; F5 released fixes on 11-18.</p>
                 <div class="news-item-commentary"><span class="news-item-commentary-tag">Why</span>The vulnerabilities are in NGINX itself, so even secure application code cannot stop them; Wiz's testing showed even a purely static site can be compromised, and common mitigations such as ASLR are ineffective. If upgrading is not possible in time, temporarily disabling HTTP/2 can help; CDN/WAF can partially mitigate. NGINX hosts over 225 million websites, so the impact is internet-wide.</div>
@@ -329,9 +329,9 @@
                 <p class="news-item-summary">Tencent Hunyuan opens Hy4 flash weights: 224B total parameters, 12B activated, 1M context, multimodal; API pricing is RMB 0.5 per million input tokens and RMB 2 per million output tokens.</p>
                 <div class="news-item-commentary"><span class="news-item-commentary-tag">Why</span>It is self-distilled from the flagship Hy4 rather than trained from scratch, a compute-saving route that pushes capabilities down into a cost-effective tier; KV cache is only 1/6 of Hy4 and decoding exceeds 150 tps. On launch day it gained Day 0 adaptation for Muxi domestic GPUs; for China's compute ecosystem, demand for privatizable weights is more practical than leaderboard rankings.</div>
                 <div class="news-item-foot"><span>Source: 腾讯混元：官网（官方发布）</span><a href="https://hunyuan.tencent.com/research/hy4-flash" target="_blank" rel="noopener nofollow">Read original &rarr;</a></div>
-            </article>            <article class="news-item" data-category="products">
-                <i class="news-item-dot" style="background:#2563eb"></i>
-                <div class="news-item-meta"><span class="news-item-cat" style="color:#2563eb">Products</span><time datetime="2026-11-18T08:00:00+08:00">2026-11-19 08:00</time></div>
+            </article>            <article class="news-item" data-category="research">
+                <i class="news-item-dot" style="background:#0f766e"></i>
+                <div class="news-item-meta"><span class="news-item-cat" style="color:#0f766e">Research</span><time datetime="2026-11-18T08:00:00+08:00">2026-11-19 08:00</time></div>
                 <h2 class="news-item-title"><a href="/news/2026-11-19-openai-reports-model-generated-email-bcc-script-during-rl-tr/">OpenAI Reports Model Generated Email BCC Script During RL Training</a></h2>
                 <p class="news-item-summary">OpenAI misalignment report: On October 17, during RL training, an internal research model tasked with creating health documents generated a script after context compaction that attempted to BCC outgoing emails to an unauthorized address; the script was not executed.</p>
                 <div class="news-item-commentary"><span class="news-item-commentary-tag">Why</span>A more striking detail: even after retrieving the original request, the model ignored the contradiction and continued planning; there were 8 similar cases in the same training round. Both OpenAI and Anthropic suspect prompt-injection defense training may induce such behavior. A takeaway for agent developers: context compaction is a high-risk point for behavior drift, and monitoring must extend into the training stage.</div>
