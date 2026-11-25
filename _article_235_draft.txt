@@ -1,0 +1,112 @@
+LLM Fine-Tuning Pricing 2026: Together vs Fireworks vs Vertex vs Predibase Compared
+
+Fine-tuning the same Llama 3.3 70B model on the same 10 million tokens costs $60.90 on Together AI and $201.60 on Google Cloud — a 3.3x spread for identical weights, identical data, identical arithmetic. The 2026 market adds a stranger wrinkle: OpenAI has stopped selling fine-tuning to new customers outright, turning a rate comparison into an availability comparison first. Fine-tuning pricing now splits three ways: token-billed open-weight platforms (Together, Fireworks, Predibase), Google's per-count Vertex meter, and a first-party incumbent winding its own program down. This guide prices every rate card still open to new buyers, works the bills at three dataset sizes, and flags the cost that actually decides ROI — the inference premium you pay long after training ends.
+
+## LLM Fine-Tuning Pricing at a Glance
+
+All rates are official published prices checked in November 2026 against vendor pricing pages and independent trackers. "Training" means supervised fine-tuning (SFT) billed per 1M training tokens, where training tokens = dataset tokens × epochs. "Catch" is the footnote that changes the math.
+
+| Provider | Model / bracket | Training $/1M | Fine-tuned inference | Catch |
+|---|---|---|---|---|
+| Together AI | Llama 3.1 8B (LoRA) | $0.34 | base serverless rate | failed jobs refunded in full |
+| Together AI | Llama 3.3 70B (LoRA) | $2.03 | base serverless rate | validation tokens billed |
+| Fireworks AI | up to 16B (LoRA SFT) | $0.50 | same as base model | DPO doubles every rate |
+| Fireworks AI | 16.1B–80B (LoRA SFT) | $3.00 | same as base model | a 27B pays the 70B rate |
+| Fireworks AI | over 300B (LoRA SFT) | $10.00 | same as base model | full-param runs at $20.00 |
+| Google Vertex | Gemini 3.5 Flash | $10.00 | base rate (global region) | billed per 1,000 counts |
+| Google Vertex | Gemini 3.5 Flash Lite | $3.00 | base rate (global region) | non-global regions 1.5x |
+| Google Vertex | Llama 3.1 8B | $0.67 | base deployment rate | open-model menu is short |
+| Predibase | up to 16B (LoRA SFT) | $0.50 | $0.20/1M (8B class) | 100 adapters per base model |
+| Predibase | 70B class (LoRA SFT) | $3–4.00 | $0.80/1M (70B class) | RFT jumps to $10–20 |
+| Mistral | Mistral Small | $2.00 | ~1.5x base rate | weights exportable |
+| Mistral | Mistral Large class | $8–9.00 | ~1.5x base rate | EU residency on every job |
+| OpenAI | gpt-4.1-mini | $5.00 | $0.80 / $3.20 (2x base) | closed to new customers |
+| OpenAI | gpt-4.1 | $25.00 | $3.00 / $12.00 (1.5x base) | serving ends 2027-01-14 |
+
+Three patterns stand out. Open weights own the cheap end: an 8B LoRA run bills $0.34–$0.67 per million tokens depending on platform, and a 70B run spans $2.03 to $6.72. First-party closed models carry roughly ten times that rate. The inference column is where vendors truly diverge — OpenAI marks up tuned serving 1.5–2x, while Together, Fireworks and Google serve a tuned model at the base rate. Anyone who already runs hosted LLM inference through [Together AI](/tools/together-ai/) or its peers should read the serving column before the training column; that is the piece most rate-card summaries bury.
+
+## OpenAI Closed the Door; Azure Is Selling What OpenAI Won't
+
+OpenAI's deprecation timeline is the defining fine-tuning event of 2026. Organizations that never ran a tuning job were blocked from creating one on May 7, 2026; accounts without fine-tuned inference in the trailing 60 days lost access on July 2; every remaining customer loses the ability to start new training jobs on January 6, 2027. Serving continues for existing tuned models until each base model retires — gpt-4.1 and gpt-4.1-mini stop serving on January 14, 2027, and the o4-mini and gpt-4.1-nano endpoints already went dark on October 23, 2026.
+
+The openai fine-tuning cost card still on the books: $25 per 1M training tokens for gpt-4.1, $5 for gpt-4.1-mini, $3 for gpt-4o-mini — with batch inference at half price for tuned models. Treat those numbers as grandfathered inventory, not a plan.
+
+The escape hatch is Microsoft. Azure OpenAI still sells fine-tuning to new projects: GPT-4.1-mini trains at $2.50 per 1M tokens on Developer deployments ($5.50 on Data Zone), while hosting runs $1.70 per hour per deployment — about $1,241 per month for an endpoint that idles around the clock. Train 10M tokens on Data Zone for $55 and one month of idle hosting costs 22.6x the training run; delete deployments you are not serving against. Azure's model lifecycle does not sync with OpenAI's first-party shutdown, so availability needs a per-region check before anything gets planned around it.
+
+Anthropic never sold first-party tuning at all: Claude fine-tuning exists only through AWS Bedrock as LoRA adapters, reported at $9 per 1M training tokens for the Haiku 4.5 class, and the trained adapter stays inside your AWS account.
+
+## Together AI: The Price Floor for Open Weights
+
+Together AI fine-tuning cost leads every card in this comparison: $0.34 per 1M training tokens for a Llama 3.1 8B LoRA run, $1.05 for Qwen3.5 27B, $2.03 for Llama 3.3 70B. The $0.48 figure floating around older trackers is stale — Together cut 8B training rates during the fall. Full-parameter runs price roughly 10–12% above LoRA on the same models ($0.38 and $2.24 per 1M), so method choice barely moves the bill.
+
+Two policy details matter as much as the rates. Failed jobs are refunded in full, and a job cancelled mid-run bills only for completed steps — on an hourly-GPU platform, the same failure would bill the wall-clock time. Together also bills validation tokens (validation set size × number of evaluations), and with packing disabled, training tokens compute as dataset length × maximum sequence length, so short examples padded to full length still bill at full length. Turn packing on or pad deliberately before uploading. Tuned models serve at the base serverless rate with no markup, and weights export means the exit door stays open.
+
+## Fireworks AI: Bracket Pricing With a Parameter Trap
+
+[Fireworks AI](/tools/fireworks-ai/) prices by parameter bracket rather than per model. LoRA SFT runs $0.50 per 1M tokens up to 16B, $3.00 for 16.1B–80B, $6.00 for 80B–300B, and $10.00 above 300B. DPO doubles every rate; full-parameter SFT bills at the DPO price. The trap sits in the second bracket: a 27B model pays the same $3.00 as a 70B one, which is why the same Qwen-class run costs 3x more here than on Together.
+
+Below 16B, the lora fine-tuning cost is simply $0.50 per 1M, and Fireworks serves every tuned model at the base model's price — zero serving markup. Its Serverless Training API attaches LoRA jobs to a shared, always-on trainer pool with no provisioning and no idle cost; a DeepSeek V4.1 Flash run bills $4.98 per 1M trained tokens on that path. One timely break: Muse Glimmer 30B SFT is free through the UI and the training API until November 30. Fireworks publishes all of it on a single pricing page, which is more than most of this market manages.
+
+## Google Vertex AI: Training by the Count, Serving at Base Rate
+
+Vertex prices tuning in training counts rather than raw tokens: $0.01 per 1,000 counts works out to $10 per 1M training tokens for Gemini 3.5 Flash, and $3 per 1M for 3.5 Flash Lite and 3.1 Flash Lite. The gemini fine-tuning cost quirk runs the other way from OpenAI's markup — a tuned endpoint on the global region serves at the exact base-model rate, and only Gemini 3-class endpoints in non-global regions carry a 1.5x premium.
+
+Anyone weighing vertex ai fine-tuning cost against the open-weight cards should read the lifecycle page first: the 2.5 generation (2.5 Pro at $25/1M, 2.5 Flash at $5/1M) retired on October 20, 2026, so the numbers quoted for them in older posts are museum pieces. Vertex also tunes open models — Llama 3.1 8B at $0.67 per 1M, Gemma 3 4B at $1.14, Llama 3.3 70B at $6.72 — and one caution on the meter: Google bills per 1,000 counts, which does not guarantee 1 count = 1 token on every model. Check the invoice line, not the marketing table.
+
+## Predibase: Pay for Adapters, Then for GPU Seconds
+
+Predibase, acquired by Rubrik in 2025, runs a two-meter model. Training bills per token: LoRA SFT at $0.50 per 1M up to 16B and $3–4.00 for the 70B class, Turbo LoRA at $1.00/$6.00, and reinforcement fine-tuning (RFT GRPO) at $10–20 per 1M — a 20x jump over supervised runs, so reach for RL only when a reward function genuinely beats labeled examples. Serving is where it diverges from everyone above: the LoRAX engine hosts up to 100 adapters per base model on shared GPUs at no extra hosting fee, a free shared endpoint gives 1M tokens per day (10M per month) for testing, and dedicated endpoint pricing bills per GPU-second with scale-to-zero, so an idle endpoint stops charging — the opposite of Azure's always-on $1,241/month line. Teams maintaining dozens of task-specific tunes (classification heads, format enforcers, tone adapters) get the best economics here. It is an ML-engineer's platform, not a console toy; budget real evaluation time before committing.
+
+## Mistral: The Only First-Party That Hands Back the Weights
+
+Mistral's La Plateforme tunes Mistral Small at about $2 per 1M training tokens and Large-class models at $8–9, with tuned inference running roughly 1.5x the base rate — a middle ground between OpenAI's markup and Google's zero. Two things separate the program: EU data residency on every job, and weight export, meaning you can pull the tuned weights out and self-host them, which no other first-party program permits. Mistral has also offered one free tuning job per account, enough for a proof of concept. Since Mistral Large 4's weights shipped under an open license in late October, the self-host path through [Ollama](/tools/ollama/) costs nothing outside the API entirely.
+
+## Worked Bills: Three Dataset Sizes, Real Dollars
+
+Hosted fine-tuning bills dataset tokens × epochs. A 10M-token dataset trained for 3 epochs bills 30M training tokens. The table runs that arithmetic at list prices read in late October and November 2026.
+
+| Model class | Together AI (LoRA) | Fireworks (LoRA) | Google Vertex | OpenAI |
+|---|---|---|---|---|
+| Llama 3.1 8B | $10.20 | $15.00 | $20.10 | not sellable |
+| Qwen 27–32B class | $31.50 | $90.00 | $197.10 | not sellable |
+| Llama 3.3 70B | $60.90 | $90.00 | $201.60 | not sellable |
+| Gemini 3.5 Flash (SFT) | — | — | $300.00 | — |
+| gpt-4.1-mini (grandfathered) | — | — | — | $150.00 |
+
+The spread is the story. The same 70B run costs 3.3x more on Vertex than on Together, and the 27–32B row exposes the worst bracket distortion: Fireworks charges a 27B model the 70B rate, while Together's per-model pricing charges Qwen 27B less than half. Epochs multiply everything — moving from 3 to 5 epochs adds two-thirds to every number above. And OpenAI's $150 mini run is only purchasable by grandfathered accounts, a reminder that the cheapest closed-model fine-tune is one you can no longer start.
+
+## The Fine-Tuned Inference Premium Decides ROI
+
+Training is a one-time bill; serving is forever. This is the fine-tuning pricing decision that outlives the run. OpenAI marks up tuned inference 1.5–2x over base (gpt-4.1-mini: $0.80/$3.20 tuned versus $0.40/$1.60 base), with batch mode halving it back down. Google serves global-region tuned endpoints at base rate; Fireworks and Together do the same for open-weight tunes; Mistral sits at roughly 1.5x. The premium exists because a provider must hold your custom weights in serving capacity; platforms with multi-adapter serving (LoRAX-style) avoid it by packing many tunes onto shared GPUs.
+
+Run the break-even before booking the training job. A tuned gpt-4.1-mini replacing base gpt-4o for a fixed task saves roughly 88% per request; a tuned 8B open model replacing any frontier API saves 90%+ per request before quality trade-offs. Against those savings, a $10–$60 training run amortizes inside the first hour of production traffic. The math only fails at low volume: under roughly 10M tokens per month, data preparation and evaluation effort rarely pay back, and the fine-tuned inference premium plus labor will exceed whatever per-request savings you banked.
+
+## RAG vs Fine-Tuning Cost: Where the Line Sits
+
+The rag vs fine-tuning cost question resolves on a simple split: new or fast-changing knowledge belongs in retrieval, fixed format/style/classification behavior belongs in weights. A RAG stack pays ongoing embedding, storage and search bills — the embedding rate cards and the [vector database](/articles/best-vector-databases-2026-pinecone-vs-qdrant-vs-weaviate-vs-zilliz-milvus/) comparison cover that side in detail — while fine-tuning pays once for training and then only for inference. The hidden cost on the tuning side is labor: curated 500–1,000-example datasets routinely take 10–100x the API training cost in human time, and production rollouts should budget 3–5 training runs for dataset and hyperparameter iteration. If a task needs citations, source linking or weekly knowledge updates, no training budget fixes it — build retrieval first. If the task is stable JSON extraction or tone enforcement at 100M+ tokens per month, tuning wins on cost per successful request.
+
+## Frequently Asked Questions
+
+### How Much Does It Cost to Fine-Tune an LLM in 2026?
+
+An 8B open-weight model on a 10M-token dataset (3 epochs) costs $10–$20 on hosted APIs: $10.20 on Together AI, $15.00 on Fireworks or Predibase, $20.10 on Vertex. The same job on a 70B model runs $60.90–$201.60. First-party closed models cost more: $150 for gpt-4.1-mini (grandfathered accounts only) and $300 for Gemini 3.5 Flash at the same 30M training tokens. Together AI fine-tuning cost defines the floor; Google's Gemini card defines the convenience ceiling.
+
+### Why Did OpenAI Stop Offering Fine-Tuning to New Customers?
+
+OpenAI's deprecation page phases the program out: no new training jobs for never-tuned organizations since May 7, 2026, a 60-day-recency cutoff since July 2, and a full stop for all remaining customers on January 6, 2027. Tuned models keep serving until their base model retires — January 14, 2027 for the gpt-4.1 family. No official rationale has been published; the practical read is that retrieval and prompting cover most demand, and the openai fine-tuning cost of maintaining per-customer weights in production no longer justified the surface area. Azure OpenAI continues selling fine-tuning independently.
+
+### What Is the Cheapest Fine-Tuning API?
+
+Together AI at $0.34 per 1M training tokens for an 8B LoRA run, with Fireworks and Predibase at $0.50. On closed models, Gemini 3.5 Flash Lite at $3 per 1M is the cheapest first-party option still open to everyone. The cheapest fine-tuning api label hides the serving question, though — Together, Fireworks and Google all serve tuned models at base rate, so the training bill genuinely is the whole training bill. Any provider marking up tuned inference (OpenAI, Mistral) should get that markup multiplied by your monthly volume before the comparison ends.
+
+### Do Fine-Tuned Models Cost More Per Token Than the Base Model?
+
+On OpenAI, yes — tuned inference runs 1.5–2x base rates, halved in batch mode. On Together, Fireworks and Google's global tuned endpoints, no — base rate. Mistral lands in between at roughly 1.5x. The premium exists because providers load your custom weights into dedicated serving capacity; LoRAX-style multi-adapter serving avoids it by packing many tunes onto shared GPUs.
+
+### Is Fine-Tuning Cheaper Than RAG?
+
+Different meters. RAG pays ongoing embedding, storage and search costs but updates instantly and cites sources; fine-tuning pays $10–$300 once, then serves at (ideally) base rate with no citations. For knowledge that changes weekly, retrieval wins on total cost of ownership because retraining on every update costs more than re-indexing. For stable format or classification tasks at high volume, tuning wins because shorter prompts and fewer tokens per request compound monthly.
+
+## The Bottom Line
+
+Fine-tuning pricing in 2026 rewards two habits: training open weights on per-token platforms, and reading the serving column before the training column. Together AI owns the price floor and refunds failed runs; Fireworks is clean below 16B and punitive between 16B and 80B; Vertex is the only first-party program open to everyone; Predibase is the multi-adapter play; Mistral exports weights; OpenAI is a countdown timer. And if anyone declares fine-tuning dead because one vendor exited, note that the open-weight platforms ran 2026's most active tuning quarter while OpenAI's door was closing. For the base-model rates these tuned models replace, see the [LLM API pricing comparison](/articles/best-llm-api-pricing-2026-openai-gpt-6-vs-claude-opus-5-5-vs-gemini-4-vs-deepseek-compared/); for the retrieval path that competes with tuning, start with the [embedding pricing guide](/articles/best-embedding-api-pricing-2026-openai-vs-voyage-vs-cohere-vs-jina/).
