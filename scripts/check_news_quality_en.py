@@ -6,7 +6,7 @@
 - FAIL（硬伤）：空标题 / 空摘要 / 中文标题 / 分类缺失或非法 / 缺 source 或 source_url /
   缺 commentary（当期必填）/ 发布日期超窗 / 同批 id 重复。
 - WARN（提示，不阻断）：摘要 >70 词或 <12 词、标题尾部标点、空话词、
-  评注 <30 词或复述摘要、标题含 HTML 实体残留。
+  评注 <25 词或复述摘要、标题含 HTML 实体残留。
 
 用法：
   python scripts/check_news_quality_en.py --today            # 只查当日候选（含明细）

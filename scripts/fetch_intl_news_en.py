@@ -293,7 +293,7 @@ def run(day, limit, force, audit_only):
             if bad:
                 rejected.append((name, it.get("title", "")[:50], bad))
                 continue
-            it["summary"] = it["summary"][:900]  # 原始素材上限，Agent 再浓缩到 <=60 词
+            it["summary"] = it["summary"][:900]  # 原始素材上限，Agent 再浓缩到 <=70 词（门禁硬线）
             all_candidates.append(it)
 
     print(f"\n[news-en] 上游合计 {len(all_candidates)} 条合格 / {len(rejected)} 条被字段契约拒收")
