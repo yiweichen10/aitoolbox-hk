@@ -1,0 +1,82 @@
+[
+ {
+  "id": "20261125-001",
+  "title": "Yale’s Sonnenfeld: Nvidia is a ‘detriment’ to U.S. industrial might — not a champion",
+  "summary": "Yale's Jeffrey Sonnenfeld warns that what the market cheered Monday, Jensen Huang's White House–backed return as Nvidia's CEO and board member, could prove a giant mistake, exposing the directors to \"historic\" personal liability from a growing pile of lawsuits and raising the question of whether the country is celebrating a company that has helped put advanced chips in its adversaries' hands.",
+  "category": "industry",
+  "source": "TechCrunch AI (RSS)",
+  "source_url": "https://techcrunch.com/2026/11/24/yales-sonnenfeld-nvidia-is-a-detriment-to-u-s-industrial-might-not-a-champion/",
+  "published_at": "2026-11-25T08:12:02+08:00",
+  "commentary": ""
+ },
+ {
+  "id": "20261125-002",
+  "title": "Meet Facebook’s Your Algorithm: How Meta Turns Plain-Language Preferences Into Ranking",
+  "summary": "Meta's engineering team explains how Facebook's Your Algorithm turns plain-language interests into ranking signals for Feed and Reels, using LLM validation, 4 retrieval sources, layered filtering and a fine-tuned LLM reranker. The post Meet Facebook’s Your Algorithm: How Meta Turns Plain-Language Preferences Into Ranking appeared first on MarkTechPost .",
+  "category": "research",
+  "source": "MarkTechPost (RSS)",
+  "source_url": "https://www.marktechpost.com/2026/11/24/meta-facebook-your-algorithm-llm-recommendations/",
+  "published_at": "2026-11-25T07:06:17+08:00",
+  "commentary": ""
+ },
+ {
+  "id": "20261125-003",
+  "title": "Anthropic turns Claude Artifacts into standalone desktop apps for macOS and Windows",
+  "summary": "Anthropic now lets you install Claude Artifacts as desktop apps on Mac and Windows, and a free account is enough. You build one in chat without writing code, and it can add menu bar items, send notifications, and create transparent windows. The article Anthropic turns Claude Artifacts into standalone desktop apps for macOS and Windows appeared first on The Decoder .",
+  "category": "products",
+  "source": "The Decoder (RSS)",
+  "source_url": "https://the-decoder.com/anthropic-turns-claude-artifacts-into-standalone-desktop-apps-for-macos-and-windows/",
+  "published_at": "2026-11-25T04:42:29+08:00",
+  "commentary": ""
+ },
+ {
+  "id": "20261125-004",
+  "title": "What's going on with the Riemann hypothesis?",
+  "summary": "A new AI-assisted proof seems to be solid, but we're not sure what it tells us.",
+  "category": "research",
+  "source": "Ars Technica AI (RSS)",
+  "source_url": "https://arstechnica.com/ai/2026/11/whats-going-on-with-the-riemann-hypothesis/",
+  "published_at": "2026-11-25T04:34:53+08:00",
+  "commentary": ""
+ },
+ {
+  "id": "20261125-005",
+  "title": "Jensen Huang reportedly tells Nvidia staff it’s ‘not true’ Trump got him rehired",
+  "summary": "Nvidia CEO Jensen Huang apologized to staff during his first all-hands since returning to the company, while attempting to distance himself from the narrative that the White House and tech leaders helped him get his job back, according to reports from Bloomberg, The New York Times, and The Handbasket's Marisa Kabas. During the meeting, Huang […]",
+  "category": "products",
+  "source": "The Verge AI (RSS)",
+  "source_url": "https://www.theverge.com/tech/1041571/jensen-huang-all-hands-nvidia-apology",
+  "published_at": "2026-11-25T04:02:03+08:00",
+  "commentary": ""
+ },
+ {
+  "id": "20261125-006",
+  "title": "Raising the stakes for enterprise networks with AI modernization",
+  "summary": "Enterprise networks are under severe strain. As companies rush to deploy artificial intelligence, the technology is quickly becoming the biggest source of demand on the network. Now, agentic AI is adding to the load. Tasks conducted by AI agents generate an estimated 450% more network traffic than the same tasks done by human workers. As…",
+  "category": "industry",
+  "source": "MIT Tech Review AI (RSS)",
+  "source_url": "https://www.technologyreview.com/2026/11/24/1148091/raising-the-stakes-for-enterprise-networks-with-ai-modernization/",
+  "published_at": "2026-11-24T23:15:16+08:00",
+  "commentary": ""
+ },
+ {
+  "id": "20261125-007",
+  "title": "GPT-6 models demonstrate intrinsic protein-design capabilities",
+  "summary": "GPT-6 models design protein structures and sequences using reasoning and code. Lab tests found evidence of binding across five targets.",
+  "category": "models",
+  "source": "OpenAI Blog (RSS)",
+  "source_url": "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities",
+  "published_at": "2026-11-24T21:00:00+08:00",
+  "commentary": ""
+ },
+ {
+  "id": "20261125-008",
+  "title": "Finding faster quantum algorithms with agents and formal verification",
+  "summary": "Using agent teams and formal verification to improve quantum algorithms for fusion and chemistry.",
+  "category": "research",
+  "source": "Google DeepMind Blog (RSS)",
+  "source_url": "https://deepmind.google/blog/finding-faster-quantum-algorithms-with-agents-and-formal-verification/",
+  "published_at": "2026-11-24T00:59:40+08:00",
+  "commentary": ""
+ }
+]
