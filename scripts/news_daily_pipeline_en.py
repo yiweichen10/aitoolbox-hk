@@ -125,9 +125,11 @@ def step_merge(args):
     merged = sorted(by_id.values(),
                     key=lambda x: (str(x.get("published_at") or ""), str(x.get("id") or "")),
                     reverse=True)
-    # 备份（保留最近 1 份，避免无限增长）
+    # 备份：固定名覆盖式保留最近 1 份（避免无限增长）。
+    # 切勿用 STORE_PATH + f".bak-{day}"：那种命名不以 .bak 结尾，会绕过
+    # .gitignore 的 *.bak 规则被永久入库，且每天一个新文件无限累积（2026-11-25 踩坑）。
     if os.path.exists(STORE_PATH):
-        bak = STORE_PATH + f".bak-{day}"
+        bak = STORE_PATH + ".bak"
         with open(bak, "w", encoding="utf-8") as f:
             json.dump(store, f, ensure_ascii=False, indent=1)
         print(f"  → 备份 {os.path.basename(bak)}")

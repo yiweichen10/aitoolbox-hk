@@ -18,6 +18,8 @@ data/_pricing_index_snapshot.json
 data/_pricing_index_history.json
 # Backup files — never commit
 *.bak
+# news 合并备份的历史命名（.bak-<date>，曾误入库；现统一为覆盖式 news_en.json.bak）
+data/news_en.json.bak-*
 
 # Content exports — generated, never commit
 exports/
