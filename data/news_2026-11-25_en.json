@@ -1,82 +1,62 @@
 [
  {
   "id": "20261125-001",
-  "title": "Yale’s Sonnenfeld: Nvidia is a ‘detriment’ to U.S. industrial might — not a champion",
-  "summary": "Yale's Jeffrey Sonnenfeld warns that what the market cheered Monday, Jensen Huang's White House–backed return as Nvidia's CEO and board member, could prove a giant mistake, exposing the directors to \"historic\" personal liability from a growing pile of lawsuits and raising the question of whether the country is celebrating a company that has helped put advanced chips in its adversaries' hands.",
-  "category": "industry",
-  "source": "TechCrunch AI (RSS)",
-  "source_url": "https://techcrunch.com/2026/11/24/yales-sonnenfeld-nvidia-is-a-detriment-to-u-s-industrial-might-not-a-champion/",
-  "published_at": "2026-11-25T08:12:02+08:00",
-  "commentary": ""
- },
- {
-  "id": "20261125-002",
-  "title": "Meet Facebook’s Your Algorithm: How Meta Turns Plain-Language Preferences Into Ranking",
-  "summary": "Meta's engineering team explains how Facebook's Your Algorithm turns plain-language interests into ranking signals for Feed and Reels, using LLM validation, 4 retrieval sources, layered filtering and a fine-tuned LLM reranker. The post Meet Facebook’s Your Algorithm: How Meta Turns Plain-Language Preferences Into Ranking appeared first on MarkTechPost .",
+  "title": "Meta details LLM pipeline behind Facebook Your Algorithm ranking",
+  "summary": "Meta detailed the engineering behind Your Algorithm, which lets Facebook users type interests for Feed and Reels. Each typed interest drives four retrieval sources, and a fine-tuned LLM reranker outputs only items to remove, which Meta says beat a general-purpose model on speed and reliability. The system passed no user metrics.",
   "category": "research",
   "source": "MarkTechPost (RSS)",
   "source_url": "https://www.marktechpost.com/2026/11/24/meta-facebook-your-algorithm-llm-recommendations/",
   "published_at": "2026-11-25T07:06:17+08:00",
-  "commentary": ""
+  "commentary": "The interesting choice is the reranker's output: returning a short removal list is cheaper than scoring every candidate, a pragmatic cost trade-off that keeps an LLM inside a latency-sensitive ranking loop. For users, the appeal is explicit control over an opaque feed, but Meta published no engagement or accuracy figures, so the design is verifiable while its effect on recommendations is not."
  },
  {
-  "id": "20261125-003",
-  "title": "Anthropic turns Claude Artifacts into standalone desktop apps for macOS and Windows",
-  "summary": "Anthropic now lets you install Claude Artifacts as desktop apps on Mac and Windows, and a free account is enough. You build one in chat without writing code, and it can add menu bar items, send notifications, and create transparent windows. The article Anthropic turns Claude Artifacts into standalone desktop apps for macOS and Windows appeared first on The Decoder .",
+  "id": "20261125-002",
+  "title": "Anthropic lets users install Claude Artifacts as macOS and Windows apps",
+  "summary": "Anthropic began beta-testing installation of Claude Artifacts as macOS and Windows apps, requiring the latest Claude desktop client. Installed apps can call OS APIs, connectors and Claude itself to add menu bar items, transparent windows and notifications. A free account is enough, and Apple Developer accounts can build standalone apps.",
   "category": "products",
   "source": "The Decoder (RSS)",
   "source_url": "https://the-decoder.com/anthropic-turns-claude-artifacts-into-standalone-desktop-apps-for-macos-and-windows/",
   "published_at": "2026-11-25T04:42:29+08:00",
-  "commentary": ""
+  "commentary": "Shipping chat artifacts as installable apps narrows the gap between a prompt and a usable tool: the same artifact can now persist in the dock and touch native OS surfaces. The free-account requirement is the more consequential detail, since it puts small utility apps within reach of anyone already using Claude at no cost. Developers should note the beta limit and Apple's signing hurdle for true standalone binaries."
  },
  {
-  "id": "20261125-004",
-  "title": "What's going on with the Riemann hypothesis?",
-  "summary": "A new AI-assisted proof seems to be solid, but we're not sure what it tells us.",
-  "category": "research",
-  "source": "Ars Technica AI (RSS)",
-  "source_url": "https://arstechnica.com/ai/2026/11/whats-going-on-with-the-riemann-hypothesis/",
-  "published_at": "2026-11-25T04:34:53+08:00",
-  "commentary": ""
- },
- {
-  "id": "20261125-005",
-  "title": "Jensen Huang reportedly tells Nvidia staff it’s ‘not true’ Trump got him rehired",
-  "summary": "Nvidia CEO Jensen Huang apologized to staff during his first all-hands since returning to the company, while attempting to distance himself from the narrative that the White House and tech leaders helped him get his job back, according to reports from Bloomberg, The New York Times, and The Handbasket's Marisa Kabas. During the meeting, Huang […]",
+  "id": "20261125-003",
+  "title": "Jensen Huang apologizes to Nvidia staff, denies Trump helped reinstate him",
+  "summary": "Nvidia CEO Jensen Huang apologized to staff in his first all-hands since returning, calling claims that Trump directly secured his reinstatement completely untrue. He said politics played no role and acknowledged violating the company's code of conduct, adding that he is in therapy daily. Huang resigned on November 12 and was reinstated Monday.",
   "category": "products",
   "source": "The Verge AI (RSS)",
   "source_url": "https://www.theverge.com/tech/1041571/jensen-huang-all-hands-nvidia-apology",
   "published_at": "2026-11-25T04:02:03+08:00",
-  "commentary": ""
+  "commentary": "For Nvidia employees and investors, the all-hands was an attempt to close a credibility gap: a return backed by political pressure would complicate a company already under an accounting probe. Huang's admission of a code-of-conduct breach and daily therapy is unusually personal for a CEO, but it does not settle the governance question ahead of his December 1 congressional testimony."
  },
  {
-  "id": "20261125-006",
-  "title": "Raising the stakes for enterprise networks with AI modernization",
-  "summary": "Enterprise networks are under severe strain. As companies rush to deploy artificial intelligence, the technology is quickly becoming the biggest source of demand on the network. Now, agentic AI is adding to the load. Tasks conducted by AI agents generate an estimated 450% more network traffic than the same tasks done by human workers. As…",
+  "id": "20261125-004",
+  "title": "AI agents generate 450% more network traffic than human workers",
+  "summary": "A report sponsored by Tata Communications says tasks run by AI agents generate an estimated 450 percent more network traffic than the same tasks done by people. As inference moves on-premises for lower latency, as few as half of enterprises believe their networks can handle AI's bandwidth demands. The report points to network-as-a-service and AI observability as responses.",
   "category": "industry",
   "source": "MIT Tech Review AI (RSS)",
   "source_url": "https://www.technologyreview.com/2026/11/24/1148091/raising-the-stakes-for-enterprise-networks-with-ai-modernization/",
   "published_at": "2026-11-24T23:15:16+08:00",
-  "commentary": ""
+  "commentary": "The 450 percent figure is the number network planners should scrutinize, because it reframes agent deployments as an infrastructure decision rather than a software one. If inference must sit near users to meet latency needs, years of cloud-first consolidation get partly undone. Note the caveat: this is vendor-sponsored custom content, not independent research, so treat the estimate as directional."
  },
  {
-  "id": "20261125-007",
-  "title": "GPT-6 models demonstrate intrinsic protein-design capabilities",
-  "summary": "GPT-6 models design protein structures and sequences using reasoning and code. Lab tests found evidence of binding across five targets.",
+  "id": "20261125-005",
+  "title": "GPT-6 models design proteins using reasoning and code, study reports",
+  "summary": "OpenAI reported that GPT-6 models can design protein structures and sequences using reasoning and code, without specialized biology models. In wet-lab tests, 35 of 322 designed minibinders bound across five targets, a 10.9 percent hit rate. On MotifBench the models scored 43.7 percent versus 27.8 percent for specialized approaches.",
   "category": "models",
   "source": "OpenAI Blog (RSS)",
   "source_url": "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities",
   "published_at": "2026-11-24T21:00:00+08:00",
-  "commentary": ""
+  "commentary": "The 10.9 percent wet-lab hit rate is the reality check against the headline claim: general reasoning models can generate binders, but specialized models still supply sequences and screening. For protein engineers, the useful signal is the MotifBench gap over dedicated tools, which suggests a general model can substitute in early design. Treat the binding count as proof of concept, not a production yield."
  },
  {
-  "id": "20261125-008",
-  "title": "Finding faster quantum algorithms with agents and formal verification",
-  "summary": "Using agent teams and formal verification to improve quantum algorithms for fusion and chemistry.",
+  "id": "20261125-006",
+  "title": "DeepMind agent teams cut quantum algorithm costs using Lean proofs",
+  "summary": "DeepMind used teams of Gemini 4 agents to optimize quantum algorithms, proving each circuit correct with the Lean theorem prover and open-sourcing the library. For inertial confinement fusion, agents cut computing cost 11.8-fold and memory from 5,650 to 4,338 error-corrected qubits. They also found a 290-fold speedup for arcsin and 2.5-fold for Cytochrome P450 simulations.",
   "category": "research",
   "source": "Google DeepMind Blog (RSS)",
   "source_url": "https://deepmind.google/blog/finding-faster-quantum-algorithms-with-agents-and-formal-verification/",
   "published_at": "2026-11-24T00:59:40+08:00",
-  "commentary": ""
+  "commentary": "The method's value is less any single speedup than the proof step: Lean verification makes agent-proposed circuits checkable when hardware cannot test them. That turns AI search into something quantum researchers can trust without waiting for fault-tolerant machines. The 290-fold arcsin gain is an arithmetic routine, not an end-to-end application, so the leap to drug design still depends on resources no early error-corrected computer can supply."
  }
 ]

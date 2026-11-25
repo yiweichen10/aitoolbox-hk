@@ -5,18 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2026-11-22 AI News | AI Tool Lab</title>
-    <meta name="description" content="Claude Code's new Code Mode has the model write JavaScript to complete multi-step tool calls in one pass, supporting parallel execution and output">
+    <meta name="description" content="Alibaba's flagship model landed on the Together inference platform with 1M context. Loading the entire Tornado repository - 650K tokens across 344 files">
     <link rel="canonical" href="https://www.aitoolbox.hk/news/2026-11-22/">
     <link rel="alternate" hreflang="zh-CN" href="https://www.aitoollab.cn/news/2026-11-22/">
     <link rel="alternate" hreflang="en"    href="https://www.aitoolbox.hk/news/2026-11-22/">
     <link rel="alternate" hreflang="x-default" href="https://www.aitoolbox.hk/news/2026-11-22/">
     <meta property="og:type" content="website">
     <meta property="og:title" content="2026-11-22 AI News | AI Tool Lab">
-    <meta property="og:description" content="Claude Code's new Code Mode has the model write JavaScript to complete multi-step tool calls in one pass, supporting parallel execution and output">
+    <meta property="og:description" content="Alibaba's flagship model landed on the Together inference platform with 1M context. Loading the entire Tornado repository - 650K tokens across 344 files">
     <meta property="og:image" content="https://www.aitoolbox.hk/images/og/news-en-og.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="2026-11-22 AI News | AI Tool Lab">
-    <meta name="twitter:description" content="Claude Code's new Code Mode has the model write JavaScript to complete multi-step tool calls in one pass, supporting parallel execution and output">
+    <meta name="twitter:description" content="Alibaba's flagship model landed on the Together inference platform with 1M context. Loading the entire Tornado repository - 650K tokens across 344 files">
     <meta name="twitter:image" content="https://www.aitoolbox.hk/images/og/news-en-og.png">
     <link rel="stylesheet" href="/css/style.css?v=4b0ba46467">
     <meta name="yandex-verification" content="5ae78527ec9bcb4b" />
@@ -78,20 +78,13 @@
                 <a href="/news/2026-11-21/" class="news-nav-btn">&larr; 2026-11-21</a><a href="/news/2026-11-23/" class="news-nav-btn">2026-11-23 &rarr;</a><a href="/news/" class="news-nav-btn news-nav-home">All news</a>
             </div>
         </div>
-        <div class="news-cards">            <article class="news-item" data-category="products">
-                <i class="news-item-dot" style="background:#2563eb"></i>
-                <div class="news-item-meta"><span class="news-item-cat" style="color:#2563eb">Products</span><time datetime="2026-11-22">2026-11-22</time></div>
-                <h2 class="news-item-title"><a href="/news/2026-11-22-claude-code-mode-experimental/"><a href="/tools/claude-code/" class="news-inlink">Claude Code</a> Launches Experimental Code Mode</a></h2>
-                <p class="news-item-summary"><a href="/tools/claude-code/" class="news-inlink">Claude Code</a>'s new Code Mode has the model write JavaScript to complete multi-step tool calls in one pass, supporting parallel execution and output filtering. The experimental feature is off by default; early tests report 22-23% lower bills and up to 77% token reduction.</p>
-                <div class="news-item-commentary"><span class="news-item-commentary-tag">Why</span>The savings come not from a smarter model but from fixing who organizes the tool loop: tool definitions re-sent every turn dropped from 16 to 3, and intermediate outputs no longer enter the context window. The trade-off is supervision granularity - in Auto mode the classifier only reviews the whole code block and never sees runtime values, so scheduling power moves down to the model while oversight gets coarser.</div>
-                <div class="news-item-foot"><span>Source: 36Kr: AI Frontline</span><a href="https://www.36kr.com/p/4075148096066440" target="_blank" rel="noopener nofollow">Read original &rarr;</a></div>
-            </article>            <article class="news-item" data-category="research">
-                <i class="news-item-dot" style="background:#0f766e"></i>
-                <div class="news-item-meta"><span class="news-item-cat" style="color:#0f766e">Research</span><time datetime="2026-11-22">2026-11-22</time></div>
-                <h2 class="news-item-title"><a href="/news/2026-11-22-anthropic-mathematician-riemann-proof/">Anthropic Mathematician Claims <a href="/tools/claude/" class="news-inlink">Claude</a> Proof of the Riemann Hypothesis</a></h2>
-                <p class="news-item-summary">Mathematician Alpöge says the claimed proof also covers the generalized Riemann hypothesis, published as 14 Lean packages spanning over 250,000 printed pages. Hours later, Stanford released a competing human-only draft by mathematician Masullo.</p>
-                <div class="news-item-commentary"><span class="news-item-commentary-tag">Why</span>Lean formalization makes a quarter-million-page proof machine-checkable line by line for the first time - but whether the problem statement was correctly translated into code still relies on expert spot-checks, and that will remain the long-running controversy around AI mathematical proofs. Meanwhile, the human draft had its questionable points found by other AI-assisted reviewers within eight hours. The two routes checking each other is more notable than who proved it first.</div>
-                <div class="news-item-foot"><span>Source: The Decoder: AI News (RSS)</span><a href="https://the-decoder.com/hours-after-anthropic-claims-a-claude-proof-of-the-riema" target="_blank" rel="noopener nofollow">Read original &rarr;</a></div>
+        <div class="news-cards">            <article class="news-item" data-category="models">
+                <i class="news-item-dot" style="background:#6366f1"></i>
+                <div class="news-item-meta"><span class="news-item-cat" style="color:#6366f1">Models</span><time datetime="2026-11-22">2026-11-22</time></div>
+                <h2 class="news-item-title"><a href="/news/2026-11-22-qwen4-max-tornado-bug-fix/">Qwen4 Max Fixes a Tornado Framework Bug in a Single Call</a></h2>
+                <p class="news-item-summary">Alibaba's flagship model landed on the Together inference platform with 1M context. Loading the entire Tornado repository - 650K tokens across 344 files - it produced a passing patch in 72 seconds for $0.69.</p>
+                <div class="news-item-commentary"><span class="news-item-commentary-tag">Why</span>The demo matters because of the 'zero retrieval' part: with the full 344 files in context, the model located the bug on its own and cited a prior iostream precedent the report hadn't mentioned - the same one the maintainer's fix referenced. This is the first demonstration that whole-repo repair via 1M context is viable, and with cache replay down to about 3 cents, the commercial math for long context finally closes.</div>
+                <div class="news-item-foot"><span>Source: Together AI Research &amp; Product Blog (RSS)</span><a href="https://www.together.ai/blog/qwen4-max" target="_blank" rel="noopener nofollow">Read original &rarr;</a></div>
             </article>            <article class="news-item" data-category="models">
                 <i class="news-item-dot" style="background:#6366f1"></i>
                 <div class="news-item-meta"><span class="news-item-cat" style="color:#6366f1">Models</span><time datetime="2026-11-22">2026-11-22</time></div>
@@ -99,13 +92,20 @@
                 <p class="news-item-summary">The full-duplex voice model defaults to 128K context and is exclusive to OpenAI's cloud. A new standby idle billing mode costs $0.02/minute - 60% below the active rate of $0.05.</p>
                 <div class="news-item-commentary"><span class="news-item-commentary-tag">Why</span>The real cost driver for voice agents is idle waiting, and standby pricing at 40% of the active rate meaningfully reshapes the bill structure for always-on outbound-call businesses. But the 1.1 accent and transcription improvements are all self-reported with zero benchmark scores, and deep reasoning is outsourced to a separately-billed backend text model - the voice layer got cheaper, but the total bill may not follow.</div>
                 <div class="news-item-foot"><span>Source: MarkTechPost (RSS)</span><a href="https://www.marktechpost.com/2026/11/21/openai-gpt-live-1-1-api-standby-mode/" target="_blank" rel="noopener nofollow">Read original &rarr;</a></div>
-            </article>            <article class="news-item" data-category="models">
-                <i class="news-item-dot" style="background:#6366f1"></i>
-                <div class="news-item-meta"><span class="news-item-cat" style="color:#6366f1">Models</span><time datetime="2026-11-22">2026-11-22</time></div>
-                <h2 class="news-item-title"><a href="/news/2026-11-22-qwen4-max-tornado-bug-fix/">Qwen4 Max Fixes a Tornado Framework Bug in a Single Call</a></h2>
-                <p class="news-item-summary">Alibaba's flagship model landed on the Together inference platform with 1M context. Loading the entire Tornado repository - 650K tokens across 344 files - it produced a passing patch in 72 seconds for $0.69.</p>
-                <div class="news-item-commentary"><span class="news-item-commentary-tag">Why</span>The demo matters because of the 'zero retrieval' part: with the full 344 files in context, the model located the bug on its own and cited a prior iostream precedent the report hadn't mentioned - the same one the maintainer's fix referenced. This is the first demonstration that whole-repo repair via 1M context is viable, and with cache replay down to about 3 cents, the commercial math for long context finally closes.</div>
-                <div class="news-item-foot"><span>Source: Together AI Research &amp; Product Blog (RSS)</span><a href="https://www.together.ai/blog/qwen4-max" target="_blank" rel="noopener nofollow">Read original &rarr;</a></div>
+            </article>            <article class="news-item" data-category="research">
+                <i class="news-item-dot" style="background:#0f766e"></i>
+                <div class="news-item-meta"><span class="news-item-cat" style="color:#0f766e">Research</span><time datetime="2026-11-22">2026-11-22</time></div>
+                <h2 class="news-item-title"><a href="/news/2026-11-22-anthropic-mathematician-riemann-proof/">Anthropic Mathematician Claims <a href="/tools/claude/" class="news-inlink">Claude</a> Proof of the Riemann Hypothesis</a></h2>
+                <p class="news-item-summary">Mathematician Alpöge says the claimed proof also covers the generalized Riemann hypothesis, published as 14 Lean packages spanning over 250,000 printed pages. Hours later, Stanford released a competing human-only draft by mathematician Masullo.</p>
+                <div class="news-item-commentary"><span class="news-item-commentary-tag">Why</span>Lean formalization makes a quarter-million-page proof machine-checkable line by line for the first time - but whether the problem statement was correctly translated into code still relies on expert spot-checks, and that will remain the long-running controversy around AI mathematical proofs. Meanwhile, the human draft had its questionable points found by other AI-assisted reviewers within eight hours. The two routes checking each other is more notable than who proved it first.</div>
+                <div class="news-item-foot"><span>Source: The Decoder: AI News (RSS)</span><a href="https://the-decoder.com/hours-after-anthropic-claims-a-claude-proof-of-the-riema" target="_blank" rel="noopener nofollow">Read original &rarr;</a></div>
+            </article>            <article class="news-item" data-category="products">
+                <i class="news-item-dot" style="background:#2563eb"></i>
+                <div class="news-item-meta"><span class="news-item-cat" style="color:#2563eb">Products</span><time datetime="2026-11-22">2026-11-22</time></div>
+                <h2 class="news-item-title"><a href="/news/2026-11-22-claude-code-mode-experimental/"><a href="/tools/claude-code/" class="news-inlink">Claude Code</a> Launches Experimental Code Mode</a></h2>
+                <p class="news-item-summary"><a href="/tools/claude-code/" class="news-inlink">Claude Code</a>'s new Code Mode has the model write JavaScript to complete multi-step tool calls in one pass, supporting parallel execution and output filtering. The experimental feature is off by default; early tests report 22-23% lower bills and up to 77% token reduction.</p>
+                <div class="news-item-commentary"><span class="news-item-commentary-tag">Why</span>The savings come not from a smarter model but from fixing who organizes the tool loop: tool definitions re-sent every turn dropped from 16 to 3, and intermediate outputs no longer enter the context window. The trade-off is supervision granularity - in Auto mode the classifier only reviews the whole code block and never sees runtime values, so scheduling power moves down to the model while oversight gets coarser.</div>
+                <div class="news-item-foot"><span>Source: 36Kr: AI Frontline</span><a href="https://www.36kr.com/p/4075148096066440" target="_blank" rel="noopener nofollow">Read original &rarr;</a></div>
             </article>            <article class="news-item" data-category="industry">
                 <i class="news-item-dot" style="background:#b45309"></i>
                 <div class="news-item-meta"><span class="news-item-cat" style="color:#b45309">Industry</span><time datetime="2026-11-21T18:27:44+08:00">2026-11-22 18:27</time></div>

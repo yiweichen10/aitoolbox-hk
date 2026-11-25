@@ -63,7 +63,7 @@
     <main class="news-page news-category-page">
         <div class="news-header">
             <div class="news-header-top">
-                <div><h1 class="news-page-title">Research AI News</h1><p class="news-page-date">4 briefs &middot; Papers, benchmarks and safety findings.</p></div>
+                <div><h1 class="news-page-title">Research AI News</h1><p class="news-page-date">6 briefs &middot; Papers, benchmarks and safety findings.</p></div>
             <div class="news-share">
                 <span>Share</span>
                 <button class="news-share-btn" onclick="copyNewsLink()">Copy link</button>
@@ -75,6 +75,20 @@
         </div>
         <div class="news-cards">            <article class="news-item" data-category="research">
                 <i class="news-item-dot" style="background:#0f766e"></i>
+                <div class="news-item-meta"><span class="news-item-cat" style="color:#0f766e">Research</span><time datetime="2026-11-25T07:06:17+08:00">2026-11-25 07:06</time></div>
+                <h2 class="news-item-title"><a href="/news/2026-11-25-meta-details-llm-pipeline-behind-facebook-your-algorithm-ran/">Meta details LLM pipeline behind Facebook Your Algorithm ranking</a></h2>
+                <p class="news-item-summary">Meta detailed the engineering behind Your Algorithm, which lets Facebook users type interests for Feed and Reels. Each typed interest drives four retrieval sources, and a fine-tuned LLM reranker outputs only items to remove, which Meta says beat a general-purpose model on speed and reliability. The system passed no user metrics.</p>
+                <div class="news-item-commentary"><span class="news-item-commentary-tag">Why</span>The interesting choice is the reranker's output: returning a short removal list is cheaper than scoring every candidate, a pragmatic cost trade-off that keeps an LLM inside a latency-sensitive ranking loop. For users, the appeal is explicit control over an opaque feed, but Meta published no engagement or accuracy figures, so the design is verifiable while its effect on recommendations is not.</div>
+                <div class="news-item-foot"><span>Source: MarkTechPost (RSS)</span><a href="https://www.marktechpost.com/2026/11/24/meta-facebook-your-algorithm-llm-recommendations/" target="_blank" rel="noopener nofollow">Read original &rarr;</a></div>
+            </article>            <article class="news-item" data-category="research">
+                <i class="news-item-dot" style="background:#0f766e"></i>
+                <div class="news-item-meta"><span class="news-item-cat" style="color:#0f766e">Research</span><time datetime="2026-11-24T00:59:40+08:00">2026-11-25 00:59</time></div>
+                <h2 class="news-item-title"><a href="/news/2026-11-25-deepmind-agent-teams-cut-quantum-algorithm-costs-using-lean-/">DeepMind agent teams cut quantum algorithm costs using Lean proofs</a></h2>
+                <p class="news-item-summary">DeepMind used teams of <a href="/tools/gemini/" class="news-inlink">Gemini</a> 4 agents to optimize quantum algorithms, proving each circuit correct with the Lean theorem prover and open-sourcing the library. For inertial confinement fusion, agents cut computing cost 11.8-fold and memory from 5,650 to 4,338 error-corrected qubits. They also found a 290-fold speedup for arcsin and 2.5-fold for Cytochrome P450 simulations.</p>
+                <div class="news-item-commentary"><span class="news-item-commentary-tag">Why</span>The method's value is less any single speedup than the proof step: Lean verification makes agent-proposed circuits checkable when hardware cannot test them. That turns AI search into something quantum researchers can trust without waiting for fault-tolerant machines. The 290-fold arcsin gain is an arithmetic routine, not an end-to-end application, so the leap to drug design still depends on resources no early error-corrected computer can supply.</div>
+                <div class="news-item-foot"><span>Source: Google DeepMind Blog (RSS)</span><a href="https://deepmind.google/blog/finding-faster-quantum-algorithms-with-agents-and-formal-verification/" target="_blank" rel="noopener nofollow">Read original &rarr;</a></div>
+            </article>            <article class="news-item" data-category="research">
+                <i class="news-item-dot" style="background:#0f766e"></i>
                 <div class="news-item-meta"><span class="news-item-cat" style="color:#0f766e">Research</span><time datetime="2026-11-22">2026-11-22</time></div>
                 <h2 class="news-item-title"><a href="/news/2026-11-22-anthropic-mathematician-riemann-proof/">Anthropic Mathematician Claims <a href="/tools/claude/" class="news-inlink">Claude</a> Proof of the Riemann Hypothesis</a></h2>
                 <p class="news-item-summary">Mathematician Alpöge says the claimed proof also covers the generalized Riemann hypothesis, published as 14 Lean packages spanning over 250,000 printed pages. Hours later, Stanford released a competing human-only draft by mathematician Masullo.</p>
@@ -83,17 +97,17 @@
             </article>            <article class="news-item" data-category="research">
                 <i class="news-item-dot" style="background:#0f766e"></i>
                 <div class="news-item-meta"><span class="news-item-cat" style="color:#0f766e">Research</span><time datetime="2026-11-21">2026-11-21</time></div>
-                <h2 class="news-item-title"><a href="/news/2026-11-21-metr-task-horizon-doubling/">METR Update: AI Task Time Horizon Doubles Every 3.6 Months</a></h2>
-                <p class="news-item-summary">Covering 15 models through GPT-6 Astra and Opus 5.5, the merged TH1.1+TH2 suite shows a 3.61-month doubling cycle; the TH2 verifiable subset doubles in just 1.65 months.</p>
-                <div class="news-item-commentary"><span class="news-item-commentary-tag">Why</span>The doubling cycle is an extrapolation, not a promise: 3.61 months is based on TH tasks, and the 1.65-month verifiable subset may be inflated by task-mix effects. What deserves attention is not 'when does it hit 200 hours' but that models still trail human experts in domains with high lifecycle costs and weak fast-feedback loops - the framing is shifting from raw capability to cost and judgment.</div>
-                <div class="news-item-foot"><span>Source: METR Research</span><a href="https://metr.org/blog/2026-11-20-q4-2026-capability-update/" target="_blank" rel="noopener nofollow">Read original &rarr;</a></div>
-            </article>            <article class="news-item" data-category="research">
-                <i class="news-item-dot" style="background:#0f766e"></i>
-                <div class="news-item-meta"><span class="news-item-cat" style="color:#0f766e">Research</span><time datetime="2026-11-21">2026-11-21</time></div>
                 <h2 class="news-item-title"><a href="/news/2026-11-21-minimax-mim-nist-cryptanalysis/">MiniMax MIM Achieves First Practical Breaks on Multiple NIST Candidates</a></h2>
                 <p class="news-item-summary">MiniMax's MIM delivered the first practical cryptanalysis breaks on several NIST candidate algorithms, solving 55 previously unsolved McEliece challenge instances - up to a 43,000x speedup over prior records.</p>
                 <div class="news-item-commentary"><span class="news-item-commentary-tag">Why</span>Cryptanalysis is an ideal agent testbed: binary success, attack scripts either run or fail, no room for hallucination. MIM releases traces and proofs-of-concept but not the model itself - internal research models remain the moat. No need to panic about deployed standards, but NIST candidates falling one after another shows the safety margin is thinner than assumed.</div>
                 <div class="news-item-foot"><span>Source: MiniMax Blog</span><a href="https://www.minimax.io/blog/practical-cryptanalysis-with-minimaxs-latest-interna" target="_blank" rel="noopener nofollow">Read original &rarr;</a></div>
+            </article>            <article class="news-item" data-category="research">
+                <i class="news-item-dot" style="background:#0f766e"></i>
+                <div class="news-item-meta"><span class="news-item-cat" style="color:#0f766e">Research</span><time datetime="2026-11-21">2026-11-21</time></div>
+                <h2 class="news-item-title"><a href="/news/2026-11-21-metr-task-horizon-doubling/">METR Update: AI Task Time Horizon Doubles Every 3.6 Months</a></h2>
+                <p class="news-item-summary">Covering 15 models through GPT-6 Astra and Opus 5.5, the merged TH1.1+TH2 suite shows a 3.61-month doubling cycle; the TH2 verifiable subset doubles in just 1.65 months.</p>
+                <div class="news-item-commentary"><span class="news-item-commentary-tag">Why</span>The doubling cycle is an extrapolation, not a promise: 3.61 months is based on TH tasks, and the 1.65-month verifiable subset may be inflated by task-mix effects. What deserves attention is not 'when does it hit 200 hours' but that models still trail human experts in domains with high lifecycle costs and weak fast-feedback loops - the framing is shifting from raw capability to cost and judgment.</div>
+                <div class="news-item-foot"><span>Source: METR Research</span><a href="https://metr.org/blog/2026-11-20-q4-2026-capability-update/" target="_blank" rel="noopener nofollow">Read original &rarr;</a></div>
             </article>            <article class="news-item" data-category="research">
                 <i class="news-item-dot" style="background:#0f766e"></i>
                 <div class="news-item-meta"><span class="news-item-cat" style="color:#0f766e">Research</span><time datetime="2026-11-20">2026-11-20</time></div>

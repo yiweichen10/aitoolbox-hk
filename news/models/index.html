@@ -66,7 +66,7 @@
     <main class="news-page news-category-page">
         <div class="news-header">
             <div class="news-header-top">
-                <div><h1 class="news-page-title">Models AI News</h1><p class="news-page-date">6 briefs &middot; Model releases, benchmarks and capability jumps.</p></div>
+                <div><h1 class="news-page-title">Models AI News</h1><p class="news-page-date">7 briefs &middot; Model releases, benchmarks and capability jumps.</p></div>
             <div class="news-share">
                 <span>Share</span>
                 <button class="news-share-btn" onclick="copyNewsLink()">Copy link</button>
@@ -78,6 +78,13 @@
         </div>
         <div class="news-cards">            <article class="news-item" data-category="models">
                 <i class="news-item-dot" style="background:#6366f1"></i>
+                <div class="news-item-meta"><span class="news-item-cat" style="color:#6366f1">Models</span><time datetime="2026-11-24T21:00:00+08:00">2026-11-25 21:00</time></div>
+                <h2 class="news-item-title"><a href="/news/2026-11-25-gpt-6-models-design-proteins-using-reasoning-and-code-study-/">GPT-6 models design proteins using reasoning and code, study reports</a></h2>
+                <p class="news-item-summary">OpenAI reported that GPT-6 models can design protein structures and sequences using reasoning and code, without specialized biology models. In wet-lab tests, 35 of 322 designed minibinders bound across five targets, a 10.9 percent hit rate. On MotifBench the models scored 43.7 percent versus 27.8 percent for specialized approaches.</p>
+                <div class="news-item-commentary"><span class="news-item-commentary-tag">Why</span>The 10.9 percent wet-lab hit rate is the reality check against the headline claim: general reasoning models can generate binders, but specialized models still supply sequences and screening. For protein engineers, the useful signal is the MotifBench gap over dedicated tools, which suggests a general model can substitute in early design. Treat the binding count as proof of concept, not a production yield.</div>
+                <div class="news-item-foot"><span>Source: OpenAI Blog (RSS)</span><a href="https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities" target="_blank" rel="noopener nofollow">Read original &rarr;</a></div>
+            </article>            <article class="news-item" data-category="models">
+                <i class="news-item-dot" style="background:#6366f1"></i>
                 <div class="news-item-meta"><span class="news-item-cat" style="color:#6366f1">Models</span><time datetime="2026-11-22T17:41:37+08:00">2026-11-23 17:41</time></div>
                 <h2 class="news-item-title"><a href="/news/2026-11-23-aa-evaluation-gpt-6-2-more-concise-but-less-transparent/">AA Evaluation: GPT-6.2 More Concise but Less Transparent</a></h2>
                 <p class="news-item-summary">AA personality benchmark: both GPT-6.2 models give answers 34–40% shorter, admitting uncertainty falls to 24 and 51, and transparency at 41 and 57 trails <a href="/tools/claude/" class="news-inlink">Claude</a>'s 81 and 90.</p>
@@ -86,17 +93,17 @@
             </article>            <article class="news-item" data-category="models">
                 <i class="news-item-dot" style="background:#6366f1"></i>
                 <div class="news-item-meta"><span class="news-item-cat" style="color:#6366f1">Models</span><time datetime="2026-11-22">2026-11-22</time></div>
-                <h2 class="news-item-title"><a href="/news/2026-11-22-openai-gpt-live-1-1-api/">OpenAI Ships GPT-Live-1.1 Voice Model on the API</a></h2>
-                <p class="news-item-summary">The full-duplex voice model defaults to 128K context and is exclusive to OpenAI's cloud. A new standby idle billing mode costs $0.02/minute - 60% below the active rate of $0.05.</p>
-                <div class="news-item-commentary"><span class="news-item-commentary-tag">Why</span>The real cost driver for voice agents is idle waiting, and standby pricing at 40% of the active rate meaningfully reshapes the bill structure for always-on outbound-call businesses. But the 1.1 accent and transcription improvements are all self-reported with zero benchmark scores, and deep reasoning is outsourced to a separately-billed backend text model - the voice layer got cheaper, but the total bill may not follow.</div>
-                <div class="news-item-foot"><span>Source: MarkTechPost (RSS)</span><a href="https://www.marktechpost.com/2026/11/21/openai-gpt-live-1-1-api-standby-mode/" target="_blank" rel="noopener nofollow">Read original &rarr;</a></div>
-            </article>            <article class="news-item" data-category="models">
-                <i class="news-item-dot" style="background:#6366f1"></i>
-                <div class="news-item-meta"><span class="news-item-cat" style="color:#6366f1">Models</span><time datetime="2026-11-22">2026-11-22</time></div>
                 <h2 class="news-item-title"><a href="/news/2026-11-22-qwen4-max-tornado-bug-fix/">Qwen4 Max Fixes a Tornado Framework Bug in a Single Call</a></h2>
                 <p class="news-item-summary">Alibaba's flagship model landed on the Together inference platform with 1M context. Loading the entire Tornado repository - 650K tokens across 344 files - it produced a passing patch in 72 seconds for $0.69.</p>
                 <div class="news-item-commentary"><span class="news-item-commentary-tag">Why</span>The demo matters because of the 'zero retrieval' part: with the full 344 files in context, the model located the bug on its own and cited a prior iostream precedent the report hadn't mentioned - the same one the maintainer's fix referenced. This is the first demonstration that whole-repo repair via 1M context is viable, and with cache replay down to about 3 cents, the commercial math for long context finally closes.</div>
                 <div class="news-item-foot"><span>Source: Together AI Research &amp; Product Blog (RSS)</span><a href="https://www.together.ai/blog/qwen4-max" target="_blank" rel="noopener nofollow">Read original &rarr;</a></div>
+            </article>            <article class="news-item" data-category="models">
+                <i class="news-item-dot" style="background:#6366f1"></i>
+                <div class="news-item-meta"><span class="news-item-cat" style="color:#6366f1">Models</span><time datetime="2026-11-22">2026-11-22</time></div>
+                <h2 class="news-item-title"><a href="/news/2026-11-22-openai-gpt-live-1-1-api/">OpenAI Ships GPT-Live-1.1 Voice Model on the API</a></h2>
+                <p class="news-item-summary">The full-duplex voice model defaults to 128K context and is exclusive to OpenAI's cloud. A new standby idle billing mode costs $0.02/minute - 60% below the active rate of $0.05.</p>
+                <div class="news-item-commentary"><span class="news-item-commentary-tag">Why</span>The real cost driver for voice agents is idle waiting, and standby pricing at 40% of the active rate meaningfully reshapes the bill structure for always-on outbound-call businesses. But the 1.1 accent and transcription improvements are all self-reported with zero benchmark scores, and deep reasoning is outsourced to a separately-billed backend text model - the voice layer got cheaper, but the total bill may not follow.</div>
+                <div class="news-item-foot"><span>Source: MarkTechPost (RSS)</span><a href="https://www.marktechpost.com/2026/11/21/openai-gpt-live-1-1-api-standby-mode/" target="_blank" rel="noopener nofollow">Read original &rarr;</a></div>
             </article>            <article class="news-item" data-category="models">
                 <i class="news-item-dot" style="background:#6366f1"></i>
                 <div class="news-item-meta"><span class="news-item-cat" style="color:#6366f1">Models</span><time datetime="2026-11-21">2026-11-21</time></div>

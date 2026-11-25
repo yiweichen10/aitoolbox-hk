@@ -9,7 +9,7 @@
 - 线上域名 https://www.aitoolbox.hk。
 
 ## 链路
-  fetch → gate → merge → build → deploy → verify
+  fetch → gate → merge → build → deploy → verify → backup
 其中 gate 之后有一段**判断**不是确定性代码，脚本串不了，必须 Agent 做：
   - 同日/跨天「同事件」去重裁定
   - 标题主体核对（上游标题张冠李戴 / 标题党）
@@ -17,12 +17,17 @@
 所以流程切成两段：
   1) --until gate    （采集 + 硬门禁；首次必然因缺 commentary 中止，这是设计如此）
   2) Agent 提炼候选文件（就地改 data/news_<day>_en.json，保持 JSON 合法）
-  3) --from gate     （门禁复检 → 合并 → 构建 → 部署 → 线上验收）
+  3) --from gate     （门禁复检 → 合并 → 构建 → 部署 → 线上验收 → git 版本备份）
+
+backup 步骤是非阻塞的：commit/push 失败只 WARN，不把已上线链路判为失败。
+此前本链路不入库，靠 daily_growth_en.py（09:02）git add -A 顺带提交；
+若那条自动化暂停/失败，快讯数据就无 git 版本备份，故在此自带一份。
 
 ## 用法
   python scripts/news_daily_pipeline_en.py                 # 全链路（适合 Agent 已提炼完时）
   python scripts/news_daily_pipeline_en.py --until gate    # 只跑采集 + 门禁
-  python scripts/news_daily_pipeline_en.py --from gate     # 门禁复检 + 后半段
+  python scripts/news_daily_pipeline_en.py --from gate     # 门禁复检 + 后半段（含 backup）
+  python scripts/news_daily_pipeline_en.py --from verify --until verify  # 只重跑线上验收
   python scripts/news_daily_pipeline_en.py --dry-run       # 只打印计划
 
 ## 第一原则：禁止兜底（沿用中文站 2026-09-14 用户拍板）
@@ -47,7 +52,7 @@ DATA_DIR = os.path.join(BASE_DIR, "data")
 STORE_PATH = os.path.join(DATA_DIR, "news_en.json")
 CST = timezone(timedelta(hours=8))
 SITE = "https://www.aitoolbox.hk"
-STEPS = ["fetch", "gate", "merge", "build", "deploy", "verify"]
+STEPS = ["fetch", "gate", "merge", "build", "deploy", "verify", "backup"]
 
 
 def _py():
@@ -149,7 +154,8 @@ def step_verify(args):
     day = args.date
     items = json.load(open(_daily_path(day), encoding="utf-8"))
     n = len(items)
-    titles = [it["title"] for it in items[:3]]
+    # 校验全部条目标题（原先只取前 3 条，第 4 条起只能靠期次页计数兜底）。
+    titles = [it["title"] for it in items]
 
     def get(url):
         req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 news-pipeline-en-verify"})
@@ -168,9 +174,15 @@ def step_verify(args):
                 errors.append(f"/news/ HTTP {code}")
             if day not in idx:
                 errors.append(f"/news/ 不含本期日期 {day}")
+            # build_en._news_linkify 会把标题中匹配到工具名的词包成
+            # <a href="/tools/{slug}/" class="news-inlink">词</a>（如 Claude、Nvidia），
+            # 纯文本标题片段因此不连续。比对前先把这类锚点还原成纯文本副本，
+            # 消除渲染层内链造成的假阴性；只用于比对，不改线上页面/数据。
+            idx_plain = re.sub(r'<a href="/tools/[^"]*" class="news-inlink">(.*?)</a>',
+                               r'\1', idx)
             for t in titles:
-                if t[:40] not in idx:
-                    errors.append(f"/news/ 不含最新标题片段：{t[:40]!r}")
+                if t[:40] not in idx_plain:
+                    errors.append(f"/news/ 不含本期标题片段：{t[:40]!r}")
             code, page = get(f"{SITE}/news/{day}/")
             if code != 200:
                 errors.append(f"/news/{day}/ HTTP {code}")
@@ -189,6 +201,43 @@ def step_verify(args):
     print(f"  → 线上验收通过：{SITE}/news/{day}/ （{n} 条，标题命中）")
 
 
+def step_backup(args):
+    """版本备份：把本期产物 commit & push 到 GitHub，非阻塞。
+
+    背景：本链路此前不入库，靠 daily_growth_en.py（09:02）的 git add -A 顺带提交。
+    一旦 daily build 暂停/失败，快讯数据就一直无版本备份。这里自带一份，
+    失败只 WARN 不中断——上线已由 deploy+verify 确认，git 只是可恢复性兜底。
+
+    注意：git 属外部动作，但 push 到自有仓库 main 属于项目既有的版本备份惯例
+    （daily_growth_en.py 同款），非公开发布，故纳入自动化链路。
+    """
+    def git(*argv):
+        return subprocess.run(["git", *argv], cwd=BASE_DIR, capture_output=True,
+                              text=True, encoding="utf-8", errors="replace")
+
+    try:
+        git("add", "-A")
+        staged = git("diff", "--cached", "--quiet")
+        if staged.returncode == 0:
+            print("  → git 无改动，跳过 commit")
+            return
+        day = args.date
+        msg = f"News briefs {day} (EN)"
+        c = git("commit", "-m", msg)
+        if c.returncode != 0:
+            print(f"  ⚠ git commit 失败（非阻塞，不影响上线）：{(c.stderr or c.stdout).strip()[-300:]}")
+            return
+        print(f"  → git commit OK：{msg}")
+        p = git("push", "origin", "main")
+        if p.returncode != 0:
+            print(f"  ⚠ git push 失败（非阻塞，不影响上线）：{(p.stderr or p.stdout).strip()[-300:]}")
+            return
+        print("  → git push OK（版本备份完成）")
+    except Exception as e:
+        # 非阻塞：任何异常都只告警，绝不让它把已上线的链路判为失败
+        print(f"  ⚠ git 备份异常（非阻塞，不影响上线）：{e}")
+
+
 STEP_FN = {
     "fetch": step_fetch,
     "gate": step_gate,
@@ -196,6 +245,7 @@ STEP_FN = {
     "build": step_build,
     "deploy": step_deploy,
     "verify": step_verify,
+    "backup": step_backup,
 }
 
 
