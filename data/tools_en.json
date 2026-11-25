@@ -22590,5 +22590,340 @@
     "published": true,
     "dateModified": "2026-03-21",
     "datePublished": "2026-03-21"
+  },
+  {
+    "name": "Cerebras Inference",
+    "slug": "cerebras",
+    "url": "https://www.cerebras.ai/",
+    "category": "AI API",
+    "price": "Pay-as-you-go from $0.35/M tokens",
+    "last_verified": "2026-11-25",
+    "rating": "3.3",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "color": "#F26539",
+    "platform": "OpenAI-compatible REST API, SDKs (Python/JS), Playground, partner access via OpenRouter, AWS Marketplace, Hugging Face, Vercel",
+    "description": "Inference on wafer-scale chips - the fastest measured tokens per second on the market, with a deliberately tiny self-serve catalog. What the speed actually buys you, why input costs run about twice Groq's, and when a latency-obsessed product justifies the premium.",
+    "pricing_details": "Verified on cerebras.ai/pricing, 2026-11-25. Self-serve is pay-as-you-go, no subscription: gpt-oss-120b ~3,000 tok/s claimed at $0.35/M input and $0.75/M output; Qwen 3.8 27B ~1,850 tok/s at $0.99/M input and $1.49/M output. One-time $5 promotional credit after adding a card, expires 30 days after activation; API and Playground access pause when credits run out until you buy PayGo credits - no permanent free tier. Enterprise: dedicated capacity, custom model weights and fine-tuning, priced by agreement. Cached tokens bill at the standard input rate (no discount) but do not count against uncached rate-limit buckets. Third-party checks: Artificial Analysis measured 1,347 tok/s on gpt-oss-120b vs 338 on Groq; blended market price for Cerebras gpt-oss-120b was $0.23/M in October 2026. Cerebras Code subscriptions ($50 and $200/mo) have been listed as sold out at times.",
+    "tags": [
+      {
+        "text": "Inference API"
+      },
+      {
+        "text": "Low latency"
+      },
+      {
+        "text": "Open models"
+      },
+      {
+        "text": "No subscription",
+        "type": "free"
+      }
+    ],
+    "features": [
+      "gpt-oss-120b at ~3,000 tok/s claimed ($0.35/$0.75 per 1M tokens) - the fastest publicly benchmarked host of this model",
+      "Qwen 3.8 27B at ~1,850 tok/s ($0.99/$1.49 per 1M), multimodal with up to 10 images per request",
+      "OpenAI-compatible API: switching is a base-URL and key change, no SDK rewrite",
+      "Automatic prompt caching with 5-minute guaranteed TTL; cache hits raise effective throughput instead of cutting price",
+      "Enterprise track adds dedicated capacity, custom weights and fine-tuning by agreement; partners OpenRouter, AWS, Hugging Face and Vercel carry the same models"
+    ],
+    "pros": [
+      "Measured speed is in a class of its own - roughly four times Groq's throughput on gpt-oss-120b, and it turns long agent chains from minutes into seconds",
+      "No subscription or monthly minimum - token billing only, which suits spiky side-project usage",
+      "Cache-hits bypass the rate limiter even though they are billed at list price, a real win for tool-heavy agent fleets whose bottleneck is TPM",
+      "Clean OpenAI-compatible surface: evaluation costs an afternoon, not a sprint"
+    ],
+    "cons": [
+      "Two models on the self-serve tier - no Kimi, DeepSeek or GLM frontier checkpoints; anything beyond gpt-oss-120b and Qwen 3.8 27B needs enterprise talks",
+      "Input price runs about twice Groq's on the shared tier, and cached tokens get zero discount (Groq bills cached input at half price)",
+      "No permanent free tier: the $5 starter credit expires in 30 days and access pauses once it is gone",
+      "Claimed and measured speeds diverge (3,000 vs 1,347 tok/s) because marketing figures exclude time-to-first-token"
+    ],
+    "faq": [
+      {
+        "question": "Is Cerebras actually faster than Groq?",
+        "answer": "On the same model, yes, by a wide margin. Artificial Analysis timed gpt-oss-120b at 1,347 tok/s with 0.65s to first token on Cerebras against 338 tok/s on Groq. Groq's counters are price: half-price cached input and a larger model menu. If your workload is batch generation, the speed premium rarely pays for itself; if it is a chatty agent loop, it usually does."
+      },
+      {
+        "question": "Is there a free tier?",
+        "answer": "No permanent one. You get a one-time $5 credit after adding a payment method, it expires 30 days after activation, and API access stops once credits are exhausted until you buy PayGo credits. For a true free lane, run the same open models on [Together AI](/tools/together-ai/) (Ternary Bonsai free) or via [OpenRouter](/tools/open-router/) free models."
+      },
+      {
+        "question": "Which models can I actually use?",
+        "answer": "Self-serve: gpt-oss-120b and Qwen 3.8 27B, both Apache-licensed. The dedicated enterprise catalog spans GLM, Kimi, DeepSeek and Llama 4 variants by agreement. Through partners you can reach Cerebras-powered models from Hugging Face, AWS Marketplace or Vercel without a direct account."
+      }
+    ],
+    "content": "Cerebras builds wafer-scale chips - each one a whole silicon wafer instead of a reticle-sized GPU die - and rents them out through an OpenAI-compatible inference API. The pitch is narrow and honest: when the model's thinking speed is your product's user experience, nothing measured so far is faster. On gpt-oss-120b the company claims about 3,000 tokens per second; the strictest independent measurement still lands at 1,347 tok/s with 0.65s to first token, roughly four times what Groq serves on the identical checkpoint.\n\n## Pricing, straight up\n\nSelf-serve billing is pure pay-as-you-go with no subscription. gpt-oss-120b costs $0.35 per million input tokens and $0.75 per million output at a claimed ~3,000 tok/s. Qwen 3.8 27B runs $0.99/$1.49 at ~1,850 tok/s and accepts up to 10 images per request. Every new account gets a one-time $5 credit after adding a card; it expires 30 days after activation, and API access pauses when credits run dry until you buy PayGo credits. There is no permanent free tier. Enterprise capacity, custom weights and fine-tuning are quote-only. One detail that matters for cost planning: cached input tokens bill at full list price - Groq discounts them 50% - but they skip your uncached rate-limit bucket, so a tool-heavy agent with big repeated system prompts gets throughput headroom rather than savings.\n\n## Where the money angle actually lives\n\nThe buyers making money on Cerebras are people whose product breaks when tokens arrive slowly. A freelance AI developer building customer-facing agent tools can price the project on outcomes and eat the inference premium, because a response loop that takes 40 seconds on a GPU host takes 10 here - and users stay. Agencies shipping voice or chat copilots use the speed headroom to run tighter retry-and-verify loops, which cuts their cost per accepted answer even at a higher per-token rate. Coding-tool builders treat it as infrastructure for the /tools/openai-codex/ and /tools/cursor/ generation of products where agent latency is the churn driver. If your workload is offline summarization or data labeling, none of this applies - batch discounts on GPU hosts beat wafer-scale speed every time.\n\n## The honest trade-offs\n\nThe self-serve catalog is two models deep. No Kimi K3, no DeepSeek, no GLM 5.3 - the checkpoints that dominate open-weight chatter in late 2026 live on [Together AI](/tools/together-ai/) and [Fireworks AI](/tools/fireworks-ai/) instead. Input pricing sits around twice Groq's on the shared tier, so the speed premium is real, not marketing fog. Speed claims deserve the same skepticism you apply everywhere: 3,000 tok/s is a docs figure, 1,347 is what a stopwatch sees including the wait before the first token. For the full rate-card math against GPU hosts, see [our LLM API pricing breakdown](/articles/best-llm-api-pricing-2026-openai-gpt-6-vs-claude-opus-5-5-vs-gemini-4-vs-deepseek-compared/), and for where a narrow-catalog speed specialist fits against multi-model platforms, read [the API platform comparison](/articles/best-ai-api-platforms-2026-openai-vs-anthropic-vs-gemini-vs-deepseek/).",
+    "published": true
+  },
+  {
+    "name": "Granola",
+    "slug": "granola",
+    "url": "https://www.granola.ai/",
+    "category": "AI Productivity",
+    "price": "Free · Business $14/user/mo",
+    "last_verified": "2026-11-25",
+    "rating": "3.4",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "color": "#E3A455",
+    "platform": "Mac, Windows, iOS, Android and Apple Watch apps; MCP server; API on paid tiers; integrations with Notion, HubSpot, Attio, Affinity, Slack and Zapier",
+    "description": "The meeting notepad that never sends a bot to your calls - it captures device audio, merges your typed notes with the transcript and drafts the follow-up. How consultants and agencies turn faster follow-ups into billable hours, and where the free tier quietly runs out.",
+    "pricing_details": "Verified on granola.ai/pricing, 2026-11-25. Basic: $0 - AI meeting notes, 30-day meeting history, AI chat across meetings (auto model), shared folders, note templates, voice typing in any app, multi-language support, per-user opt-out of model training. Business: $14/user/mo - unlimited notes and history, advanced AI thinking models, pre-meeting briefs, follow-up email drafts, integrations (Attio, Notion, HubSpot, Affinity, Zapier, Slack), MCP integration (personal and public workspace notes), API access, centralized billing. Enterprise: $35/user/mo - everything in Business plus SSO (50+ seat workspaces), SCIM, HIPAA-compliant workspaces, audit API, org-wide admin controls and training opt-out. All plans: bot-free device-audio capture, audio deleted after transcription, SOC 2 Type II, DPA available. Granola contributes 1.5% of subscriptions to Stripe Climate.",
+    "tags": [
+      {
+        "text": "Meeting Notes"
+      },
+      {
+        "text": "No meeting bot"
+      },
+      {
+        "text": "Consultants"
+      },
+      {
+        "text": "Free plan",
+        "type": "free"
+      }
+    ],
+    "features": [
+      "Bot-free capture: Granola records device audio locally instead of joining the call as a visible participant",
+      "Hybrid notes: your typed bullets get merged with the AI transcript, so summaries carry your emphasis, not a model's guess",
+      "Chat with one meeting or across your whole history; advanced reasoning models on Business",
+      "Follow-up machinery on Business: pre-meeting briefs, drafted follow-up emails, templates in your own voice",
+      "MCP server and API on paid tiers feed meeting knowledge into Claude, ChatGPT, Zapier and CRM workflows"
+    ],
+    "pros": [
+      "No bot joins the call - sensitive client meetings stay off third-party bots, and there is no 'recorded by Otter' banner in the participant list",
+      "The typed-notes-plus-transcript merge produces summaries that read like a sharp human wrote them, which matters when notes go to clients",
+      "Follow-up email drafts and pre-meeting briefs attack the two hours consultants actually lose every week",
+      "SOC 2 Type II, HIPAA on Enterprise, audio deleted after transcription - procurement conversations go smoother than with most AI note tools"
+    ],
+    "cons": [
+      "The free tier's 30-day history limit makes it a trial, not an archive - notes vanish unless you pay",
+      "No CRM integrations, API or MCP below the $14 Business tier, so the automation story is paid-only",
+      "Device-audio capture depends on your hardware setup; audio-only phone calls and bad rooms degrade transcript quality",
+      "Per-user pricing accumulates: an eight-person team pays $112/mo, and free-tier alternatives like Fathom soften the comparison"
+    ],
+    "faq": [
+      {
+        "question": "Granola vs Otter or Fathom - which one should I pay for?",
+        "answer": "Different capture philosophies. Otter and Fireflies send a bot that joins the call and transcribe everything for a whole team; Granola stays on your device and blends the transcript with what you typed. Pick Granola for client-facing consulting work where a visible bot is a problem, Otter or [Fathom](/tools/fathom/) for team-wide call archives. The field is compared in [our meeting assistant breakdown](/articles/ai-meeting-assistants-2026-otter-vs-fireflies-vs-fathom/)."
+      },
+      {
+        "question": "Does everyone on the call need to know Granola is running?",
+        "answer": "Ethically yes, and legally often. Granola ships a feature that posts an automatic consent message at the meeting start, and its docs recommend asking permission before transcribing. Audio is deleted after transcription, each user controls model-training opt-out, and Enterprise admins can force it off workspace-wide."
+      },
+      {
+        "question": "Can I push notes into Claude, ChatGPT or my CRM?",
+        "answer": "Yes, on paid tiers. The Business plan includes an MCP server (so Claude, ChatGPT and other MCP clients can read your last 30 days of personal notes plus public workspace notes) and API access. Business-tier integrations cover Attio, HubSpot, Notion, Affinity, Slack and Zapier; Enterprise makes MCP and API scope admin-configurable."
+      }
+    ],
+    "content": "Granola approached the meeting-notes problem from a direction the bot-first tools never took: instead of sending a recorder into your Zoom call, it listens to device audio on your own machine and merges what the transcript heard with what you typed. The result is a summary that keeps your emphasis - the deal terms you underlined, the objection you flagged - instead of a model flattening everything to equal weight. Brex rebuilt its meeting culture on it, which tells you the target user: people whose notes are work product, not just memory.\n\n## Pricing, verified this month\n\nBasic is $0: AI meeting notes, 30 days of history, AI chat across meetings, shared folders, templates, voice typing in any app, multi-language capture, and a per-user opt-out of model training. Business is $14/user/mo and adds unlimited history, advanced reasoning models, pre-meeting briefs, follow-up email drafts, integrations with Attio, Notion, HubSpot, Affinity, Zapier and Slack, the MCP server and API access. Enterprise is $35/user/mo with SSO for 50+ seat workspaces, SCIM, HIPAA-compliant workspaces, an audit API and org-wide admin controls. Every plan captures audio on-device with no visible bot, deletes the audio after transcription and carries SOC 2 Type II.\n\n## Where the money angle lives\n\nThe people who earn their subscription back in week one are consultants, coaches and agency account managers - roles where a same-day follow-up is the difference between closing and stalling. A $150/hr solo consultant who reclaims two hours a week on notes and follow-ups pays for a year of Business plans in saved time each month. The sharper play is the automation chain: on Business, the MCP server lets Claude or ChatGPT read your meeting history, so 'draft the proposal from Tuesday's call' becomes one prompt, and the API feeds client-meeting summaries straight into HubSpot. Agencies package that as a deliverable - 'every call summarized, logged and actioned within an hour' - and bill it as service, not software. For solo operators weighing tools, [our freelancer stack guide](/articles/best-ai-tools-for-freelancers-2026/) shows where it sits next to transcription-first rivals like [Otter](/tools/otter.ai/) and [Fireflies](/tools/fireflies-ai/).\n\n## The honest trade-offs\n\nThe 30-day history on the free tier makes Granola a rental, not an archive - pay or lose your notes. The features that justify the $14 (briefs, follow-ups, CRM sync, MCP) are all locked behind Business, so the free plan is really a 30-day trial with nicer manners. Capture quality tracks your hardware: a good mic and a quiet room produce clean transcripts, while audio-only phone calls and open offices degrade them, and there is no bot fallback to paper over a bad setup. And per-seat pricing adds up quietly - an eight-person team pays $112/mo, which is the moment someone asks why [Fathom](/tools/fathom/) is free for the same transcript.",
+    "published": true
+  },
+  {
+    "name": "Glimpse",
+    "slug": "glimpse",
+    "url": "https://meetglimpse.com/",
+    "category": "Market Research",
+    "price": "Free 10 lookups/mo · Pro $99",
+    "last_verified": "2026-11-25",
+    "rating": "3.2",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "color": "#10B981",
+    "platform": "Chrome extension (also Edge, Opera, Brave, Vivaldi); web dashboard; Google Sheets export; API on Enterprise",
+    "description": "A layer on top of Google Trends that turns the 0-100 index into absolute search volumes, growth rates and 12-month forecasts. How niche-site builders, sellers and agencies monetize trend data - and why the pricing page is hidden behind a signup wall.",
+    "pricing_details": "Verified via meetglimpse.com and a third-party capture of the in-app upgrade screen (August 2026), 2026-11-25. There is no public pricing page. Free: 10 lookups per month with full data on each. Pro: $99/mo - 100 lookups, 25 tracked keywords, 10 exports/mo, about 24 trend alerts/mo, Google Sheets export, People-Also-Search data, discovery capped at 12 trends per category. Expert: $299/mo - 500 lookups, 50 exports, unlimited alerts, bulk tracking, the full 1M+ trend database with growth, volume and brand filters. Enterprise: quote-only - unlimited lookups/keywords/exports, CSV import, API access, custom dashboards, invoicing. Annual billing gives two months free. The free plan and the $99 entry point are confirmed by Glimpse's own software guides; tier names and limits above come from the third-party capture and may have shifted.",
+    "tags": [
+      {
+        "text": "Trend Research"
+      },
+      {
+        "text": "Google Trends"
+      },
+      {
+        "text": "Niche Sites"
+      },
+      {
+        "text": "Free plan",
+        "type": "free"
+      }
+    ],
+    "features": [
+      "Absolute search volume on any Google Trends query - real monthly searches back to 2004, updated in real time, replacing the 0-100 index",
+      "12-month demand forecasts (company claims 87% accuracy) plus seasonality panels and one-click channel breakdowns across TikTok, Reddit, YouTube and LinkedIn",
+      "Trend alerts: track keywords and get notified when one spikes or collapses before competitors notice",
+      "Discovery mode surfaces fast-rising topics per category, with the full 1M+ trend database reserved for Expert",
+      "One-click export to Google Sheets; forecasts and lookups feed client-ready reports"
+    ],
+    "pros": [
+      "Built on Google Trends data, so the underlying signal is the same one Google's own systems see - no modeled panel estimates to argue with",
+      "Absolute volumes plus growth rates answer the question every niche-site builder asks: is this topic rising, peaking or dead",
+      "Forecast and seasonality views time launches and content calendars months ahead of the spike",
+      "Sheets export turns research into a client deliverable in one click"
+    ],
+    "cons": [
+      "The free tier is one research session, not a workflow - ten lookups evaporate in an hour of real work",
+      "No public pricing page, and Pro's 12-trends-per-category discovery cap pushes serious users to $299 Expert",
+      "No API below Enterprise, so programmatic trend monitoring is a sales-call conversation",
+      "Browser support excludes Firefox and Safari, and search interest still says nothing about purchase intent - validation needs other data"
+    ],
+    "faq": [
+      {
+        "question": "Is Glimpse free to use?",
+        "answer": "Partly. The free plan gives 10 lookups per month with full data on each - enough to research one topic thoroughly, not enough for ongoing work. Paid access starts at $99/mo (Pro, 100 lookups) and $299/mo (Expert, 500 lookups plus the full trend database), with annual billing giving two months free."
+      },
+      {
+        "question": "Glimpse or Exploding Topics - which do I need?",
+        "answer": "They answer different questions. Exploding Topics curates a trend database for you and shows what is rising across categories; Glimpse researches any keyword you type with absolute volume and forecasts on Google's own data. Curated discovery on a budget points to [Exploding Topics](/tools/exploding-topics/); research depth on topics you already suspect points to Glimpse. Both appear in [our market research tools comparison](/articles/best-ai-market-research-tools-2026-gummysearch-vs-perplexity-vs-consensus-vs-chatgpt/)."
+      },
+      {
+        "question": "Why is there no public pricing page?",
+        "answer": "Glimpse gates its plans behind signup - the upgrade screen only appears inside the product after you create an account. A third-party capture of that screen in August 2026 documented the tiers above; the free plan and the $99 starting point are confirmed by Glimpse's own guides, but treat the exact tier limits as subject to change."
+      }
+    ],
+    "content": "Google Trends tells you a topic scores 73 out of 100. It never tells you that 73 means 190,000 searches a month, or whether the slope next quarter is up and to the right or a cliff. Glimpse is the browser extension that fixes exactly that: same Google Trends interface you know, overlaid with absolute search volumes back to 2004, growth rates, 12-month forecasts, seasonality panels and alerts. Because it rides on Google's own data rather than a keyword-tool panel, the numbers carry different weight than modeled estimates from third-party SEO suites.\n\n## Pricing, and the missing pricing page\n\nThere is no public pricing page - plans appear only inside the product after signup. Free covers 10 lookups a month with full data on each. Pro runs $99/mo for 100 lookups, 25 tracked keywords, about 24 alerts, 10 exports and discovery capped at 12 rising trends per category. Expert is $299/mo: 500 lookups, unlimited alerts, bulk tracking and the full 1M+ trend database. Enterprise adds API access, custom dashboards and invoicing by quote. Annual billing gives two months free. The free plan and the $99 entry are confirmed on Glimpse's own guides; the tier structure comes from an August 2026 capture of the in-app upgrade screen, so verify limits inside your own account before budgeting.\n\n## How people make money with it\n\nNiche-site builders use the forecast and growth-rate panels to publish into topics months before they peak - the difference between ranking a page into a rising wave versus a dead pond. E-commerce sellers read seasonality panels to time product launches and ad calendars, and the channel breakdown shows whether a rising topic is a TikTok thing or a Reddit thing, which decides where the content budget goes. Agencies sell it directly: a quarterly trend report built from Glimpse exports is a one-hour deliverable that justifies a retainer line, and at $99/mo the subscription pays for itself with one client. Content operators time evergreen refreshes to seasonal spikes - the homepage's own examples (pickleball, mouth tape) were flagged years before they peaked. For the broader research stack, pair it with community listening via [GummySearch](/tools/gummysearch/) and audience data from [SparkToro](/tools/sparktoro/), and see [our keyword research comparison](/articles/best-ai-keyword-research-tools-2026-ahrefs-vs-semrush-vs-moz-vs-keyword-planner/) for where trend data beats volume data.\n\n## The honest trade-offs\n\nTen free lookups is a taste, not a tool - one research session spends them. The Pro tier's discovery cap (12 trends per category) is the upsell hinge; the advertised 1M+ trend database exists only at $299. No API below Enterprise means programmatic monitoring is a sales conversation. Browser support covers Chrome and its Chromium relatives only. And the deepest limitation is conceptual: search interest measures curiosity, not wallets. A topic can trend and never convert - cross-check demand with community pain points and purchase signals before betting a quarter of budget on a rising line.",
+    "published": true
+  },
+  {
+    "name": "Google Stitch",
+    "slug": "stitch",
+    "url": "https://stitch.google.com/",
+    "category": "AI Design",
+    "price": "Free · daily credit limit",
+    "last_verified": "2026-11-25",
+    "rating": "3.4",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "color": "#4285F4",
+    "platform": "Web app (Google account required, 18+, Gemini-available countries); exports to Figma; code export HTML/CSS, Tailwind, React, Vue, Angular, Flutter, SwiftUI; MCP server",
+    "description": "Google Labs' free AI design canvas - prompts and sketches in, high-fidelity UI out, with Figma handoff and front-end code. Why freelancers are selling one-hour design sprints with it, and the Labs-experiment risk nobody should ignore.",
+    "pricing_details": "Verified via stitch.google.com and Google's Stitch FAQ (relayed through documented third-party sources), 2026-11-25. Free of charge, no paid tier as of November 2026. Usage runs on a daily credit pool per Google account that resets at midnight UTC; a Google forum representative put the pool at 400 credits in September 2026 (visible in settings, subject to change - Google has adjusted limits repeatedly since 2025). Manual canvas edits and all exports cost nothing; AI actions spend credits per an official December 2025 breakdown: rapid agent screen 1, pro or redesigned screen 3, interactive screen first generation 3, each interactive edit 1. No way to buy extra credits. Access: Google account, 18+, countries where Gemini is available. AI Ultra subscribers get priority access to the Stitch Loop waitlist.",
+    "tags": [
+      {
+        "text": "UI Design"
+      },
+      {
+        "text": "Figma export"
+      },
+      {
+        "text": "Code export"
+      },
+      {
+        "text": "Free",
+        "type": "free"
+      }
+    ],
+    "features": [
+      "Text, sketch or screenshot to high-fidelity UI in seconds, powered by Gemini models inside Google Labs",
+      "Paste-to-Figma export with auto-layout, named layers and editable text - the handoff designers actually want",
+      "Code export to HTML/CSS, Tailwind, React, Vue, Angular, Flutter and SwiftUI - a mockup arrives as a developer starting point",
+      "Stitch 2.0 (March 2026): infinite canvas where every generation stays as a comparable iteration, multi-screen design agent, voice input, portable DESIGN.md design-system file",
+      "MCP server and SDK so coding agents like Claude Code can read and apply your designs"
+    ],
+    "pros": [
+      "Zero cost with a real credit budget - 400 daily credits covers a warm-up session of several screens plus edits, a quota paid tools would charge $20+/mo for",
+      "Figma export quality leads the category: auto-layout and named layers mean cleanup, not redraw",
+      "Multi-framework code export turns design decisions into scaffolding developers can bill against immediately",
+      "Stitch 2.0's iteration canvas fits real design work: compare three directions side by side instead of overwriting one prompt"
+    ],
+    "cons": [
+      "It is a Labs experiment - no SLA, credit limits have changed twice since 2025, and Google can reprice or shut it down without notice",
+      "Daily cap with no purchase option: run out mid-project and you wait for the midnight UTC reset",
+      "Output skews generic Google-Material style; distinctive brand identity still requires a human pass",
+      "Accessibility gaps show up in reviews - contrast, touch-target sizes and ARIA labels need an audit before anything ships"
+    ],
+    "faq": [
+      {
+        "question": "Is Google Stitch really free?",
+        "answer": "Yes - Google's FAQ states it is provided free of charge, and as of November 2026 there is no paid tier or way to buy extra credits. Usage runs on a daily credit pool (400 per account as of September 2026, per a Google forum representative) that resets at midnight UTC. Check the settings page in Stitch for your current balance, because Google has adjusted the limits before."
+      },
+      {
+        "question": "Can Stitch replace Figma?",
+        "answer": "No - and it is not trying to. Treat it as the upstream accelerator: generate three directions in ten minutes, export the winner to Figma via paste-to-Figma, and do brand, polish and accessibility work there. For AI inside Figma itself, see [Figma AI](/tools/figma-ai/); for code-first generation, compare [v0 by Vercel](/tools/v0-dev/)."
+      },
+      {
+        "question": "What happens if Google changes or kills it?",
+        "answer": "Export early and often - designs leave through Figma export and code export at no credit cost, so nothing you like is trapped. The realistic posture is to treat Stitch output as disposable drafts and keep your source of truth in Figma or code, not on the Stitch canvas."
+      }
+    ],
+    "content": "Google Stitch turned 'vibe design' into a free utility: describe a screen in plain English, paste a sketch or a screenshot, and Gemini renders a high-fidelity UI in seconds. Every generation can leave the canvas two ways - as a Figma file with auto-layout and named layers, or as front-end code in HTML/CSS, Tailwind, React, Flutter, SwiftUI and more. The March 2026 Stitch 2.0 rebuild added an infinite canvas where each generation stays as a separate iteration (compare three directions side by side instead of overwriting), a design agent that reasons across multi-screen projects, voice input, and an MCP server that lets coding agents read your designs.\n\n## Pricing: free, with an asterisk\n\nStitch is free of charge per Google's own FAQ, with no paid tier as of November 2026. The real cost is the daily credit pool tied to your Google account: 400 credits as of September 2026 per a Google forum representative, resetting at midnight UTC, visible in settings. Google has changed the pool shape twice since 2025, so treat 400 as directional and check your own counter. Manual canvas edits and every export cost nothing; credits buy AI actions (rapid screen 1, pro or redesigned screen 3, interactive edit 1 per the official December 2025 breakdown). Access needs a Google account, age 18+, in countries where Gemini is available.\n\n## How people make money with it\n\nFreelancers sell speed. A landing-page design set that took a day now takes an hour, which means 'wireframes, high-fidelity designs and a coded handoff' becomes a fixed-price Fiverr or Upwork package with real margin. Founders prototype investor demos at zero cost - a clickable, plausible app screen beats another slide. Agencies run paid 0-to-1 design sprints: prompts and sketches in a morning workshop, three directions exported to Figma by lunch, the client's designer keeps final control. Developers use the code export as billable scaffolding - hand the Flutter or React output to the client, then charge for the real build on top. For positioning against the rest of the field, see [the UI/UX design tool comparison](/articles/best-ai-ui-ux-design-tools-2026-v0-vs-bolt-vs-figma-ai-vs-uizard/) and [the design tools guide for non-designers](/articles/best-ai-design-tools-non-designers-2026/).\n\n## The honest trade-offs\n\nThis is a Labs experiment wearing a product's clothes: no SLA, credit limits that have shifted twice, and Google's demonstrated willingness to reprice or retire experiments without ceremony. The daily cap cannot be bought past - heavy sessions belong early in the UTC day. Output leans generic Material style; a distinctive brand identity still needs human hands. Reviews consistently flag accessibility gaps - contrast ratios, touch-target sizes, missing ARIA labels - so run an audit before anything ships. And multi-step UX logic (conditional flows, state) remains beyond it; that work still lives in Figma or code.",
+    "published": true
+  },
+  {
+    "name": "Profound",
+    "slug": "profound",
+    "url": "https://www.tryprofound.com/",
+    "category": "AI SEO",
+    "price": "Trial free · Enterprise custom",
+    "last_verified": "2026-11-25",
+    "rating": "3.5",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "color": "#7C3AED",
+    "platform": "Web platform; agent analytics integrations (GA, Adobe, Akamai, Cloudflare, Fastly, Netlify, Vercel, AWS, GCP, WordPress); API, exports and SSO on Enterprise",
+    "description": "The enterprise GEO platform that tracks how ChatGPT, Gemini and Perplexity describe and cite your brand, with a Prompt Volumes dataset no rival matches. How agencies turn AI-visibility data into retainers - and why the accessible tiers only cover a fraction of the product.",
+    "pricing_details": "Verified on tryprofound.com/pricing, 2026-11-25. Official page lists two doors. Trial: free - 50 unique prompts run daily for 7 days across ChatGPT, Gemini and Google AI Overviews, one language/region, Agent Analytics with unlimited domains, Agents and Sheets included, no exports, API or SSO. Enterprise: custom quote - up to 9 answer engines (adds Perplexity, Google AI Mode, Microsoft Copilot, DeepSeek, Anthropic Claude, Exa), tailored prompt tracking, full Prompt Volumes dataset, Agents at scale, CSV/JSON exports, all-time history, SSO/SAML, SOC 2, dedicated Slack support, unlimited seats. Third-party reviews (June 2026) also documented self-serve Starter $99/mo annual (ChatGPT only, 50 prompts, 1 seat) and Growth $399/mo (3 engines, 100 prompts, 3 seats), both annual-billing only; reported Enterprise contracts run $2,000-5,000+/mo. Treat the self-serve tiers as unconfirmed current - today's official page shows only Trial and Enterprise.",
+    "tags": [
+      {
+        "text": "GEO"
+      },
+      {
+        "text": "AI Visibility"
+      },
+      {
+        "text": "Enterprise"
+      },
+      {
+        "text": "Free trial",
+        "type": "free"
+      }
+    ],
+    "features": [
+      "Runs structured prompts across AI engines daily and tracks where your brand appears, which sources get cited, sentiment and competitor share",
+      "Agent Analytics attributes AI-sourced traffic across your domains via CDN and analytics integrations (Cloudflare, Fastly, GA, Vercel and more) - included even in the trial",
+      "Prompt Volumes: panel data on the real questions people ask AI engines, with regional and demographic breakdowns - a dataset no rival currently matches",
+      "AI Marketer agent drafts the content fixes, and Profound Agents/Sheets run recurring workflows at scale",
+      "Enterprise-grade procurement: SSO/SAML, SOC 2, audit trails, dedicated Slack, unlimited seats"
+    ],
+    "pros": [
+      "The deepest AI-visibility dataset on the market - competitors are compared against it, and citedaily's June 2026 review calls it the platform with the most data",
+      "Prompt Volumes answers what nobody else can: what people actually ask AI engines, by region and demographic",
+      "Agent Analytics works in the free trial with unlimited domains, so attribution value is testable before any contract",
+      "Enterprise credibility (SOC 2, SSO, dedicated support) clears the procurement bar at brands like Ramp, Target and Samsung"
+    ],
+    "cons": [
+      "Everything it is known for - multi-engine tracking, full Prompt Volumes, API, Agents - sits behind a custom Enterprise quote reportedly in the $2,000-5,000+/mo range",
+      "Self-serve tiers documented in June 2026 covered 1-3 engines only, and annual billing left no monthly escape hatch",
+      "A 7-day trial is short against the 1-3 months teams realistically need before the data is trustworthy enough to act on",
+      "G2 reviewers have documented citation counts diverging from manual ChatGPT spot-checks - validate during the trial, not after the annual contract"
+    ],
+    "faq": [
+      {
+        "question": "Is Profound worth it for a small site?",
+        "answer": "Almost never. The accessible tiers are narrow (ChatGPT-only at the documented $99 Starter) while the headline features need an Enterprise quote in the low thousands per month. A small site that wants multi-engine monitoring for $29 should start with [Otterly.AI](/tools/otterly-ai/) or [Peec AI](/tools/peec-ai/), and the whole field is laid out in [our AI search visibility comparison](/articles/ai-search-visibility-tools-2026-profound-vs-peec-vs-scrunch-vs-otterly/)."
+      },
+      {
+        "question": "What is Prompt Volumes and why does it matter?",
+        "answer": "An opt-in panel dataset of the real questions people type into AI engines, broken down by region and demographic. Other GEO tools tell you how your brand appears for prompts you chose; Prompt Volumes shows the demand side - which questions exist at all and how big they are. The full searches panel is Enterprise-only."
+      },
+      {
+        "question": "What does the free trial actually include?",
+        "answer": "50 unique prompts run daily for 7 days across ChatGPT, Gemini and Google AI Overviews, in one language and region, with Agent Analytics on unlimited domains, plus Agents, Sheets and analytics integrations. No exports, API or SSO, and prompts are a recommended set you cannot customize on Trial."
+      }
+    ],
+    "content": "When a buyer asks ChatGPT 'which X should I use' and your brand never appears, that is traffic you cannot see in any analytics suite. Profound built the measurement layer for that problem: structured prompts run daily across AI engines, tracking where your brand shows up, which sources get cited, how sentiment shifts, and which competitors own which questions. Its Agent Analytics then connects the dots to actual traffic through CDN and analytics integrations. The customer list is the enterprise proof - Ramp, DocuSign, Target, Walmart, Samsung and Figma by the company's own account, on a Series C raised in early 2026.\n\n## Pricing: two doors, a narrow middle\n\nThe official page today offers a free Trial and a custom Enterprise plan, nothing in between. Trial: 50 unique prompts run daily for 7 days across ChatGPT, Gemini and Google AI Overviews, one language and region, Agent Analytics on unlimited domains, Agents and Sheets included - but no exports, API or SSO, and you cannot customize the prompt set. Enterprise is quote-only: up to 9 answer engines (adding Perplexity, Copilot, Claude, DeepSeek and Google AI Mode), tailored prompt plans, the full Prompt Volumes dataset, Agents at scale, CSV/JSON exports, all-time history, SSO/SAML and SOC 2, with unlimited seats. Third-party reviews from June 2026 documented self-serve Starter at $99/mo annual (ChatGPT only, 50 prompts, one seat) and Growth at $399/mo (three engines, 100 prompts, three seats); reported Enterprise contracts run $2,000-5,000+ per month. Verify current tiers on the official page - the self-serve grid may have moved.\n\n## How agencies make money with it\n\nGEO retainers are the monetization story. The pattern that works: run the free trial on a prospect's brand, walk into the pitch meeting with data they have never seen (how ChatGPT misdescribes their product, which competitor owns their category questions), and price the fix as a monthly retainer at $1,500-5,000 - one client covers the Enterprise seat cost with margin. Inside the retainer, Prompt Volumes drives the content roadmap (real question demand, not keyword guesses), Agent Analytics proves AI-sourced traffic growth in quarterly reports, and Agents/Sheets automate the re-measurement. Smaller shops without enterprise clients replicate the service with [Otterly.AI](/tools/otterly-ai/) at $29-189/mo or [Peec AI](/tools/peec-ai/), monitoring breadth for the price of one Profound day. For the full field including Scrunch, read [our AI search visibility comparison](/articles/ai-search-visibility-tools-2026-profound-vs-peec-vs-scrunch-vs-otterly/).\n\n## The honest trade-offs\n\nThe product everyone benchmarks lives behind a quote - accessible tiers cover a fraction of the engines, and June 2026's annual-only billing removed the monthly escape hatch. The 7-day trial is short against the 1-3 months realistic teams need before acting on the data, and G2 reviewers have documented citation counts diverging from manual ChatGPT spot-checks - validate before the annual commitment. If you need broad engine coverage at low cost rather than the deepest dataset, rivals beat it on price; if you need to prove AI-visibility ROI to a board, nothing else has the data depth.",
+    "published": true
   }
 ]
