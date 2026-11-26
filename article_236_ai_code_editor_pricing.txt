@@ -1,0 +1,106 @@
+AI Code Editor Pricing 2026: Cursor vs Copilot vs Windsurf vs Claude Code
+
+On June 1, 2026, GitHub retired Copilot premium requests and moved every monthly plan to usage-based AI credits, then raised the legacy model multipliers for annual subscribers in the same announcement: one Claude Opus 4.7 request went from burning 3 premium requests to 27. That single line item captures what happened to AI code editor pricing this year. Windsurf's editor became Devin Desktop on June 2, with API-priced overages on daily and weekly quotas. Cursor now sells its editor inside The X Subscription, flat plans replaced by a four-tier weekly pool. Anthropic kept Claude Code on subscriptions, then added monthly API credits that — read the footnote — cannot be spent inside Claude Code itself. Sticker prices barely moved; the meters underneath them were rebuilt from scratch. This guide decodes all four rate cards as they stand in late November 2026, translates the included-usage pools into comparable terms, and works three developer profiles into realistic monthly bills.
+
+## AI Code Editor Pricing at a Glance (November 2026)
+
+Every figure comes from the vendors' own pricing pages and documentation, checked in late November 2026. Included usage is deliberately hard to compare: Cursor publishes pool multipliers but no dollar value, Copilot publishes dollar values, Devin Desktop publishes quotas in neither, and Anthropic expresses limits as ratios of a base you must experience to understand.
+
+| Tool | Entry paid plan | Included usage mechanics | Frontier model access | The catch |
+|---|---|---|---|---|
+| Cursor | Premium $30/mo | weekly pool at 4x the Plus base; Grok 4.7 and Composer 2.5 included | third-party models at API list price, prepaid | legacy Pro $20 plans still renew; pool also feeds Grok chat, image and video tools |
+| GitHub Copilot | Pro $10/mo | $10 base + $5 flex credits ($15/mo at 1 credit = $0.01) | any listed model, deducted per token at published API rates | completions stay free; agent requests no longer auto-downgrade to cheap models |
+| Windsurf → Devin Desktop | Pro $20/mo | daily and weekly quotas, dollar value unpublished | full frontier menu from Pro upward | renamed June 2026; legacy $15 Pro plans are price-locked forever |
+| Claude Code | Claude Pro $20/mo | 5-hour and weekly limits at 1x base, shared with Claude chat | Opus requires Max or Ultra | Max and Ultra's $100–200 monthly API credits cannot pay for Claude Code |
+| Cline / Aider | $0 + your API key | no pool — raw provider rates | whatever model you key in | the vendor margin disappears; the token meter does not |
+
+Three patterns matter more than any single number. The market re-anchored its entry price: $10–30 now buys a metered pool, not an unmetered seat — the flat-rate editor died the moment agents started burning $200 of tokens in an afternoon. Every vendor also sells frontier-model usage separately from the subscription — Cursor at API list price from prepaid credit, Copilot beyond its credit allotment, Devin Desktop beyond quota, Claude through an API account subscription credits never reach. Grandfathering is real money: legacy Windsurf Pro at $15 and legacy Cursor Pro at $20 are the two best deals still standing.
+
+## Why Every Editor Killed the Flat Subscription
+
+Flat-rate pricing survived exactly as long as AI coding meant autocomplete, which costs cents per seat per month. What replaced it — agents that read a repository, plan multi-file changes, and retry on failure — costs dollars per hour at frontier-model rates, and a flat $20 plan turns every power user into a loss leader. Hence 2026's great re-metering: Windsurf swapped prompt credits for daily and weekly quotas with API-priced overage in March; GitHub followed on June 1, explaining that premium request units could not survive agents making hundreds of model calls per session; Cursor's restructure rode in with the X subscription integration; Anthropic steered heavy users from $20 Pro to $100 Max to $200 Ultra. Running frontier agents on a flat $20 was never sustainable; the scandal lives in the footnotes, which is where this guide stays.
+
+## Cursor Pricing Plans: The X Subscription Tiers Explained
+
+Cursor's pricing page now sells the editor inside The X Subscription, one purchase covering Cursor, Grok, and X. The ladder as of November 2026: Free at $0 with limited usage; Plus at $8, running Grok models only and bundling a stack of X social perks — a social-media subscription with an editor attached; Premium at $30 with 4x the Plus pool, cloud agents, Bugbot code review, and third-party model access; Super at $100 with 15x and priority capacity at peak times; Ultra at $200 with 50x. Teams seats run $30, $100, or $200 per person matching the tier, and annual billing discounts every level (Premium $300/year, Ultra $2,000). The pool refreshes weekly rather than monthly — one heavy Tuesday does not sink the month.
+
+### What Happened to Cursor's $20 Pro Plan?
+
+It still exists — for existing subscribers. Cursor's documentation classifies Pro $20, Pro+, and the old Ultra as legacy plans that keep working with their original two-pool setup and on-demand usage. New signups start at Premium $30, making the effective entry price of a serious Cursor subscription 50% higher than what most comparison posts still quote.
+
+### Is the Cursor Ultra Plan Worth $200?
+
+Only if you run agents in parallel. Cursor positions Ultra — 50x the Plus pool, earliest access to new models — for developers running several agents or automations at once, a workload 2019 called unusual and 2026 calls Tuesday. If your day is one active agent plus a lot of Tab, Super at $100 already includes priority access, and Premium at $30 covers most solo developers. The finer trap is model choice: the included pool covers Grok 4.7, Grok 4.6, Grok 4.5, and Composer 2.5 only. A $200 Ultra plan does not include a single Claude or GPT token — third-party models bill at API list price from a separate prepaid balance. If your workflow is Claude-heavy, price that prepaid spend before assuming Cursor beats [Claude Code](/tools/claude-code/) on its own plans.
+
+## GitHub Copilot Pricing After the June 2026 Credit Switch
+
+GitHub Copilot pricing looks untouched at first glance — Pro $10, Pro+ $39, Business $19 per seat, Enterprise $39 per seat — and the sameness is the point. What changed on June 1, 2026 is what those prices buy. Premium request units are gone, replaced by GitHub AI Credits where 1 credit equals $0.01, deducted per token (input, output, and cached) at each model's published API rate.
+
+### How Copilot AI Credits Work
+
+Each plan now ships with a dollar-denominated allotment plus a flex bonus: Copilot Pro includes $10 base + $5 flex ($15 of usage for $10), Pro+ includes $39 + $31 ($70 of usage for $39), and the new Max plan — introduced May 12, 2026 — includes $100 + $100 ($200 of usage for $100). Completions and Next Edit remain included on every plan and burn no credits; Copilot's code review feature burns credits and GitHub Actions minutes. Business and Enterprise customers get an organization-wide credit pool, so light users subsidize heavy ones, plus budget caps at the org, cost-center, and user level. When credits run dry, overage bills at API rates only if a budget allows it — otherwise usage blocks until the monthly reset. One behavioral change deserves its own warning: the old auto-downgrade to cheaper models after exhausting your allotment is gone — Copilot now stops, or bills, instead of quietly degrading.
+
+### The Annual-Plan Trap: 27x Multipliers on Legacy Subscriptions
+
+Annual Copilot Pro and Pro+ subscribers keep legacy premium-request billing until their term expires — at which point they drop to Copilot Free. Before that expiry, June 1 raised the model multipliers on those legacy plans: Claude Opus 4.7 went from 3x to 27x, Claude Sonnet 4.6 from 1x to 9x, GPT-5.4 from 1x to 6x, and Gemini 3.1 Pro from 1x to 6x. GitHub's documentation frames this as a transition mechanic; a subscriber running Opus on an annual plan experiences it as a 9x price increase on the identical model, midway through a contract. It is the ugliest corner of AI code editor pricing in 2026, and it is avoidable: monthly plans moved to credits with more included usage at the same price, so switching to monthly — or keeping frontier work on the Sonnet-class tier — beats waiting out the contract.
+
+## Windsurf Pricing Now Lives on Devin.ai
+
+windsurf.com/pricing today lands on Devin's rate card: Cognition acquired Windsurf in July 2025, shipped Windsurf 2.0 with Devin built in during April 2026, and renamed the editor Devin Desktop on June 2, 2026. Windsurf pricing questions now resolve to five plans: Free at $0 with a light quota but unlimited inline edits and Tab completions; Pro at $20 with larger quotas, the full frontier model menu, and Devin Cloud agents; Max at $200 for heavy users; Teams at $80/month plus $40 per full development seat; Enterprise by quote. The quota mechanics changed back in March: daily and weekly allowances auto-refresh, deduction is token-based, free models draw nothing, and anything over quota bills at API list price.
+
+Two legacy details are worth real money. Original Windsurf Pro subscribers still renew at $15, legacy Teams seats at $30 — Cognition price-locked them rather than force-migrating anyone. And the free tier is more usable than most: unlimited inline edits and Tab mean a completions-first developer can run Devin Desktop at $0 indefinitely, paying only when agents run. Our [Windsurf](/tools/windsurf/) page tracks the editor and the [Devin](/tools/devin-ai/) page tracks the agent line it merged into.
+
+### Is Devin Desktop Cheaper Than Cursor?
+
+On sticker, yes — Pro $20 against Premium $30. On metered reality, unknowable: neither vendor publishes a dollar value for its included quota, so the honest test is burn-rate on your own repository. Both meter overage at API list price, both include first-party models in the pool, and both favor burst users — a few heavy agent runs per week — over steady all-day use. Live in agents all day and both push you toward the $200 tier, where the Copilot Max comparison below gets hard to ignore.
+
+## Claude Code Pricing: Subscription Limits Versus API Bills
+
+Claude Code pricing runs on the Claude subscription ladder: Free (no Claude Code access), Pro at $20 monthly or $17 monthly billed $200 annually, Max at $100, Ultra at $200, Team seats, and Enterprise at $20/seat plus usage at API rates.
+
+### Is Claude Code Included in Claude Pro?
+
+Yes, and the limits are the fine print. Pro carries 5-hour and weekly usage limits, shared across the Claude chat apps and Claude Code everywhere it runs, including IDE plugins — an afternoon of Claude chat in the browser draws on the same budget as your evening coding session. Anthropic publishes no message count, but third-party trackers peg Pro at roughly 45 agent turns per five-hour window; run /status inside Claude Code to see your actual allocation. For a solo developer coding one or two focused hours a day, Pro remains the best value on this list. The weekly wall is what you are buying around, not the price.
+
+### Max, Ultra, or Raw API?
+
+Max at $100 buys 5x Pro usage every five hours and weekly, plus $100/month in Claude Platform API credits. Ultra at $200 buys 10x weekly usage, removes the 5-hour ceiling for verified accounts, and adds $200/month in credits. Team plans mix and match: standard seats at $20–25, premium seats at $100–125 with 5x usage. The footnote that surprises everyone: those monthly credits work on the Claude Platform — build work, API calls, automation — and cannot be spent inside Claude Code or the Claude apps. Raw API is the fourth path, right for CI pipelines and spiky usage: a vacation week costs $0 on API billing and full price on a subscription. Rough mapping from community cost models: under an hour of daily use lands on Pro, an all-day habit lands on Max, parallel agents land on Ultra, automation lands on API keys.
+
+## Three Developer Profiles, Three Different Winners
+
+The same dollar lands very differently depending on how you code. All figures are published monthly prices.
+
+| Profile | Cursor | Copilot | Devin Desktop | Claude Code |
+|---|---|---|---|---|
+| Autocomplete-first solo dev | Free tier covers it | Pro $10 — $15 of credits mostly unspent | Free tier covers it | skip the add-on; free Claude chat covers light use |
+| Daily agent user (1–2 h/day) | Premium $30, 4x pool | Pro+ $39, $70 of credits | Pro $20 quotas | Pro $20 — watch the weekly wall |
+| Heavy / parallel agents | Ultra $200, 50x pool | Max $100, $200 of credits | Max $200 | Ultra $200, no 5-hour ceiling |
+| Team of five | Teams, from $150/mo ($30/seat) | Business $95/mo, pooled credits | Teams $280/mo ($80 + 5 × $40) | Team, 5 premium seats from $500/mo |
+
+The honest way to think about AI coding assistant cost in late 2026 is sticker plus expected overage, and the heavy tier is where the arithmetic turns decisive. In the Cursor vs Copilot question at the top end, Copilot Max publishes its value plainly — $100 for $200 of credit-equivalent usage — while Cursor's $200 Ultra buys a pool valued only in multipliers, and Claude's $200 Ultra buys ceiling removal rather than more published dollars. Teams face a similar split: Copilot Business's pooled credits are the only arrangement where five light users subsidize one heavy one, and Claude's premium seats are the only one where a single seat gets agent-grade 5x usage without touching an org pool.
+
+## Frequently Asked Questions
+
+### What Is the Cheapest AI Code Editor With Agent Features?
+
+On sticker, Devin Desktop Pro and Claude Pro tie at $20, with Copilot Pro at $10 the cheapest entry overall — but $15 of credits evaporates fast at frontier-model rates. The genuinely cheapest agentic path is bring-your-own-key tooling: [Cline](/tools/cline/) and [Aider](/tools/aider/) are free, run on raw provider rates, and add no margin of their own. You trade a subscription for a variable API bill — cheaper only if you actually use less.
+
+### Is Cursor Pro Still $20 a Month?
+
+For subscribers who already had it, yes — legacy Pro plans keep renewing at $20 with their original usage structure. New subscribers cannot buy it; the entry tier is now Premium at $30.
+
+### What Happened to Copilot Premium Requests?
+
+GitHub replaced premium request units with AI credits on June 1, 2026. Monthly subscribers migrated automatically, with more included usage at the same price. Annual subscribers keep premium-request billing until their term ends — with sharply raised multipliers on frontier models — and drop to Copilot Free at expiry unless they re-subscribe monthly.
+
+### Does Claude Code Pricing Include API Credits?
+
+Max and Ultra include $100 and $200 per month respectively in Claude Platform API credits, but Anthropic's terms exclude Claude Code and the Claude apps from spending them. The credits apply to platform API work only; Claude Code usage is governed by the plan's 5-hour and weekly limits.
+
+### Are There Cursor Alternatives Without Usage Pools?
+
+Open-weight model routing is the main escape hatch: pair a free bring-your-own-key editor with open models served at wholesale rates and no subscription at all. The trade is that API bills are still a meter — just one you control directly. For what those tokens cost at list price, see the [LLM API pricing comparison](/articles/best-llm-api-pricing-2026-openai-gpt-6-vs-claude-opus-5-5-vs-gemini-4-vs-deepseek-compared/).
+
+## The Bottom Line
+
+AI code editor pricing in 2026 is no longer a subscription decision; it is a metering decision, and every vendor rebuilt the meter this year while keeping the sticker roughly still. Pick by profile: completions-first developers pay $10 for Copilot Pro and stop there; daily agent users get the best value from Devin Desktop Pro at $20, or Claude Pro at $20 if their hours fit the windows; all-day frontier-agent work belongs on Copilot Max — $200 of published usage for $100 — or Claude Ultra at $200; five-seat teams should look hard at Copilot Business's pooled credits before pricing per-seat pools elsewhere. Existing subscribers hold the best cards: legacy Windsurf Pro at $15, legacy Cursor Pro at $20, and legacy Copilot annual plans, with a multiplier audit before renewal. The vendors kept every entry price and rebuilt everything underneath — compare the meters, not the stickers. For the product rather than the bill, our [Cursor AI review](/articles/cursor-ai-review-2026/) covers the editor experience, and the [Cursor](/tools/cursor/) and [GitHub Copilot](/tools/github-copilot/) pages track each vendor's card as it changes.
