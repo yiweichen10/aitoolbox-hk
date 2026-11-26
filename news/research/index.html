@@ -63,7 +63,7 @@
     <main class="news-page news-category-page">
         <div class="news-header">
             <div class="news-header-top">
-                <div><h1 class="news-page-title">Research AI News</h1><p class="news-page-date">8 briefs &middot; Papers, benchmarks and safety findings.</p></div>
+                <div><h1 class="news-page-title">Research AI News</h1><p class="news-page-date">11 briefs &middot; Papers, benchmarks and safety findings.</p></div>
             <div class="news-share">
                 <span>Share</span>
                 <button class="news-share-btn" onclick="copyNewsLink()">Copy link</button>
@@ -74,6 +74,27 @@
             <div class="news-catnav"><a href="/news/models/" class="news-catnav-link">Models</a> <a href="/news/products/" class="news-catnav-link">Products</a> <a href="/news/industry/" class="news-catnav-link">Industry</a> <a href="/news/research/" class="news-catnav-link active">Research</a> </div>
         </div>
         <div class="news-cards">            <article class="news-item" data-category="research">
+                <i class="news-item-dot" style="background:#0f766e"></i>
+                <div class="news-item-meta"><span class="news-item-cat" style="color:#0f766e">Research</span><time datetime="2026-11-26T00:47:14+08:00">2026-11-26 00:47</time></div>
+                <h2 class="news-item-title"><a href="/news/2026-11-26-rusi-researcher-details-why-militaries-target-cloud-data-cen/">RUSI researcher details why militaries target cloud data centers</a></h2>
+                <p class="news-item-summary">RUSI researcher Joseph Jarnecki told an Ars Live discussion that cloud sites running battlefield management, HR and resource management can become military objectives under international law. He cited this year's strikes on Amazon facilities in the Gulf and Russia-Ukraine drone exchanges, putting Gulf data-center investment at over 100 times Iranian drone cost. Ukraine moved government data abroad after the 2022 invasion.</p>
+                <div class="news-item-commentary"><span class="news-item-commentary-tag">Why</span>The strategic issue is not the building but what runs inside it: one facility can host battlefield software alongside hospitals and banks, making legal protection hard to apply. Cheap munitions against concentrated, cross-border infrastructure give attackers disproportionate leverage, and outages can reach customers far from the conflict. For cloud providers, resilience planning now has to include geography and jurisdiction, not just hardware redundancy and backup power.</div>
+                <div class="news-item-foot"><span>Source: Ars Technica AI (RSS)</span><a href="https://arstechnica.com/gadgets/2026/11/ars-live-recap-dont-expect-military-attacks-on-data-centers-to-stop/" target="_blank" rel="noopener nofollow">Read original &rarr;</a></div>
+            </article>            <article class="news-item" data-category="research">
+                <i class="news-item-dot" style="background:#0f766e"></i>
+                <div class="news-item-meta"><span class="news-item-cat" style="color:#0f766e">Research</span><time datetime="2026-11-25T13:42:05+08:00">2026-11-26 13:42</time></div>
+                <h2 class="news-item-title"><a href="/news/2026-11-26-hku-and-bytedance-seed-open-source-laminar-async-rl-post-tra/">HKU and ByteDance Seed open-source Laminar async RL post-training framework</a></h2>
+                <p class="news-item-summary">HKU and ByteDance Seed released Laminar, an Apache-2.0 framework that decouples rollout, buffering, training and weight sync for agent RL. On SWE-bench Verified, Qwen3-Coder-30B-A3B rose from 46.6% to 52.2%; matching the baseline's 51.4% took 46% fewer samples and 71% fewer GPU-hours. Tests scaled to 1,024 H800 GPUs.</p>
+                <div class="news-item-commentary"><span class="news-item-commentary-tag">Why</span>Async RL has mostly been a systems problem disguised as a research one: long, skewed rollouts leave GPUs idle while the batch waits for the slowest trajectory. Laminar's value is the decomposition, with separate loops and a weight relay that lets replicas update without a global barrier, rather than a new training algorithm. The caveats matter for adopters: the headline comparison uses different GPU models, vLLM is the only inference backend, and per-step checkpointing is unfinished.</div>
+                <div class="news-item-foot"><span>Source: MarkTechPost (RSS)</span><a href="https://www.marktechpost.com/2026/11/24/bytedance-seed-laminar-async-rl-post-training-framework/" target="_blank" rel="noopener nofollow">Read original &rarr;</a></div>
+            </article>            <article class="news-item" data-category="research">
+                <i class="news-item-dot" style="background:#0f766e"></i>
+                <div class="news-item-meta"><span class="news-item-cat" style="color:#0f766e">Research</span><time datetime="2026-11-24T21:07:53+08:00">2026-11-26 21:07</time></div>
+                <h2 class="news-item-title"><a href="/news/2026-11-26-deepmind-pairs-gemini-with-mass-spectrometry-tools-in-antigr/">DeepMind pairs <a href="/tools/gemini/" class="news-inlink">Gemini</a> with mass spectrometry tools in Antigravity skills</a></h2>
+                <p class="news-item-summary">DeepMind's Mass Spec Skills let Antigravity agents chain formula search, PubChem lookups and fragment checks to identify molecules from tandem mass spectra. On 100 catalogued compounds, <a href="/tools/gemini/" class="news-inlink">Gemini</a> 3.8 Flash, <a href="/tools/gemini/" class="news-inlink">Gemini</a> 4 Argon and <a href="/tools/gemini/" class="news-inlink">Gemini</a> 4 Carbon reached about 97% exact identification with the skills, versus under 4% offline; token use fell nearly fourfold on Flash. Spectral libraries alone annotate only about 5% of measured spectra.</p>
+                <div class="news-item-commentary"><span class="news-item-commentary-tag">Why</span>The gain comes from orchestration, not a smarter model: the agent calls established tools in the order a chemist would, then checks whether proposed structures could actually produce the observed fragments. That is why the lightweight model matched frontier ones and token costs fell. For labs, the immediate use is triage of the roughly 95% of spectra that reference libraries leave unannotated. The limits are concrete too: mirror-image molecules and novel natural products still need NMR, ion mobility or retention-time evidence.</div>
+                <div class="news-item-foot"><span>Source: Google DeepMind Blog (RSS)</span><a href="https://deepmind.google/blog/interpreting-mass-spectra-with-google-antigravity/" target="_blank" rel="noopener nofollow">Read original &rarr;</a></div>
+            </article>            <article class="news-item" data-category="research">
                 <i class="news-item-dot" style="background:#0f766e"></i>
                 <div class="news-item-meta"><span class="news-item-cat" style="color:#0f766e">Research</span><time datetime="2026-11-25T07:06:17+08:00">2026-11-25 07:06</time></div>
                 <h2 class="news-item-title"><a href="/news/2026-11-25-meta-details-llm-pipeline-behind-facebook-your-algorithm-ran/">Meta details LLM pipeline behind Facebook Your Algorithm ranking</a></h2>

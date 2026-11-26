@@ -1,0 +1,82 @@
+[
+ {
+  "id": "20261126-001",
+  "title": "S&P puts Nvidia AA rating on negative watch over key-man risk",
+  "summary": "S&P Global Ratings placed Nvidia's AA issuer and senior unsecured ratings on negative watch, citing weak executive oversight, no succession plan and reliance on CEO Jensen Huang. The review should conclude within 90 days and could cut the rating to AA-, the fourth-highest grade. Nvidia backstops 25% of a $500 billion AI infrastructure financing package, and a downgrade would likely prompt lenders to demand larger guarantees.",
+  "category": "industry",
+  "source": "TechCrunch AI (RSS)",
+  "source_url": "https://techcrunch.com/2026/11/25/sp-considers-nvidia-credit-downgrade-over-governance-and-key-man-risks/",
+  "published_at": "2026-11-26T06:44:32+08:00",
+  "commentary": "For suppliers and startups that borrow against Nvidia's credit, the review matters more than the rating itself: a one-notch cut would make their debt pricier and could force more collateral. It turns a boardroom succession dispute into financing terms for the AI buildout, with the $500 billion backstop as the channel. Investors now have a concrete reason to watch governance disclosures alongside chip demand."
+ },
+ {
+  "id": "20261126-002",
+  "title": "Google's My Channel patent outlines personalized AI video feeds from user data",
+  "summary": "Google's My Channel patent, filed in May and published last week, was rejected but could be refiled. It describes prompts built from viewing history, demographics, IP addresses, GPS data and live news, fed to an LLM on Google servers to generate personalized videos. The filing also covers avatars made from users' own photos, videos and audio, casting them as characters inside the generated content.",
+  "category": "products",
+  "source": "The Verge AI (RSS)",
+  "source_url": "https://www.theverge.com/entertainment/1042221/google-my-channel-ai-video-patent",
+  "published_at": "2026-11-26T05:51:26+08:00",
+  "commentary": "The rejected filing still shows where Google sees an opportunity: engagement through synthetic content built around each viewer's own data. For advertisers, prompts grounded in location, age and viewing history are highly targetable; for regulators, turning a person's face and voice into recurring characters raises consent and likeness questions that current AI rules barely address. Whether or not the patent is granted, it sketches a business model whose raw material is personal context rather than stories."
+ },
+ {
+  "id": "20261126-003",
+  "title": "US chip and anti-distillation curbs slow DeepSeek, Moonshot and Alibaba",
+  "summary": "The Information reports that since September, curbs on remote access to Nvidia chips abroad and stronger anti-distillation defenses from OpenAI and Anthropic have delayed Chinese AI projects. DeepSeek researchers estimate their gap to top US models could widen from three to six months to nine. Moonshot AI canceled a $150 million Blackwell chip deal in Indonesia, while MiniMax, MiHoYo and Alibaba lean more heavily on domestic silicon.",
+  "category": "products",
+  "source": "The Decoder (RSS)",
+  "source_url": "https://the-decoder.com/us-chip-access-curbs-and-anti-distillation-measures-are-reportedly-already-slowing-chinese-ai-labs/",
+  "published_at": "2026-11-26T04:51:02+08:00",
+  "commentary": "Export controls were framed as a hardware bottleneck, but the pressure point is shifting to model outputs: reasoning traces and token streams are now treated as strategic assets. The reported deal cancellation shows the cost landing in procurement plans, not just benchmarks. For labs outside the US, the trade-off is steeper: rent compute through intermediaries, accept slower domestic chips, or invest in their own training data. Each path raises the price of catching up."
+ },
+ {
+  "id": "20261126-004",
+  "title": "RUSI researcher details why militaries target cloud data centers",
+  "summary": "RUSI researcher Joseph Jarnecki told an Ars Live discussion that cloud sites running battlefield management, HR and resource management can become military objectives under international law. He cited this year's strikes on Amazon facilities in the Gulf and Russia-Ukraine drone exchanges, putting Gulf data-center investment at over 100 times Iranian drone cost. Ukraine moved government data abroad after the 2022 invasion.",
+  "category": "research",
+  "source": "Ars Technica AI (RSS)",
+  "source_url": "https://arstechnica.com/gadgets/2026/11/ars-live-recap-dont-expect-military-attacks-on-data-centers-to-stop/",
+  "published_at": "2026-11-26T00:47:14+08:00",
+  "commentary": "The strategic issue is not the building but what runs inside it: one facility can host battlefield software alongside hospitals and banks, making legal protection hard to apply. Cheap munitions against concentrated, cross-border infrastructure give attackers disproportionate leverage, and outages can reach customers far from the conflict. For cloud providers, resilience planning now has to include geography and jurisdiction, not just hardware redundancy and backup power."
+ },
+ {
+  "id": "20261126-005",
+  "title": "AI-drafted requests and data brokers strain US public records offices",
+  "summary": "US public records offices face a surge from data brokers and chatbot-written requests. Federal agencies received a record 1.7 million FOIA requests last year; one analysis found at least 29% of Education Department requests in July were partly AI-written, twice as long, with 83% demanding long lists. Startups have raised over $100 million to turn filings into sales signals, while Pennsylvania appeals are projected at 6,000 this year.",
+  "category": "industry",
+  "source": "MIT Tech Review AI (RSS)",
+  "source_url": "https://www.technologyreview.com/2026/11/25/1149702/ai-is-straining-americas-open-records-systems/",
+  "published_at": "2026-11-25T18:00:00+08:00",
+  "commentary": "Transparency systems were built for a handful of citizens and a few companies, not machine-generated volume at near-zero cost. The burden falls on small clerks' offices with no extra staff, so the practical result is delay. Lawmakers are responding with restrictions that may also catch reporters and researchers, while agencies adopt AI to screen and redact the same requests. The trade-off is real: either fund the disclosure infrastructure or narrow who gets to use it."
+ },
+ {
+  "id": "20261126-006",
+  "title": "HKU and ByteDance Seed open-source Laminar async RL post-training framework",
+  "summary": "HKU and ByteDance Seed released Laminar, an Apache-2.0 framework that decouples rollout, buffering, training and weight sync for agent RL. On SWE-bench Verified, Qwen3-Coder-30B-A3B rose from 46.6% to 52.2%; matching the baseline's 51.4% took 46% fewer samples and 71% fewer GPU-hours. Tests scaled to 1,024 H800 GPUs.",
+  "category": "research",
+  "source": "MarkTechPost (RSS)",
+  "source_url": "https://www.marktechpost.com/2026/11/24/bytedance-seed-laminar-async-rl-post-training-framework/",
+  "published_at": "2026-11-25T13:42:05+08:00",
+  "commentary": "Async RL has mostly been a systems problem disguised as a research one: long, skewed rollouts leave GPUs idle while the batch waits for the slowest trajectory. Laminar's value is the decomposition, with separate loops and a weight relay that lets replicas update without a global barrier, rather than a new training algorithm. The caveats matter for adopters: the headline comparison uses different GPU models, vLLM is the only inference backend, and per-step checkpointing is unfinished."
+ },
+ {
+  "id": "20261126-007",
+  "title": "DeepMind pairs Gemini with mass spectrometry tools in Antigravity skills",
+  "summary": "DeepMind's Mass Spec Skills let Antigravity agents chain formula search, PubChem lookups and fragment checks to identify molecules from tandem mass spectra. On 100 catalogued compounds, Gemini 3.8 Flash, Gemini 4 Argon and Gemini 4 Carbon reached about 97% exact identification with the skills, versus under 4% offline; token use fell nearly fourfold on Flash. Spectral libraries alone annotate only about 5% of measured spectra.",
+  "category": "research",
+  "source": "Google DeepMind Blog (RSS)",
+  "source_url": "https://deepmind.google/blog/interpreting-mass-spectra-with-google-antigravity/",
+  "published_at": "2026-11-24T21:07:53+08:00",
+  "commentary": "The gain comes from orchestration, not a smarter model: the agent calls established tools in the order a chemist would, then checks whether proposed structures could actually produce the observed fragments. That is why the lightweight model matched frontier ones and token costs fell. For labs, the immediate use is triage of the roughly 95% of spectra that reference libraries leave unannotated. The limits are concrete too: mirror-image molecules and novel natural products still need NMR, ion mobility or retention-time evidence."
+ },
+ {
+  "id": "20261126-008",
+  "title": "Amateur astronomers use Codex and Astra to flag exoplanet candidates",
+  "summary": "OpenAI engineer Kevin Bond used Codex to search about 100,000 Kepler stars, flagging over 200 signals including 10 known planets; a SETI Institute astronomer independently found the same two candidates, one a dip every 13.8 days. Separately, Ethan Byrd used Astra on data from roughly 19 million stars and produced 49 candidates, sending his strongest to NASA's TESS team for analysis.",
+  "category": "models",
+  "source": "OpenAI Blog (RSS)",
+  "source_url": "https://openai.com/index/searching-for-distant-planets-with-astra",
+  "published_at": "2026-11-24T19:00:00+08:00",
+  "commentary": "The result is not a new planet but a reproducible workflow: an agent compared published detection methods, combined them into a pipeline and cross-checked its own candidates. That let two amateurs revisit archives already mined for obvious transits and hand professionals a shorter list. The bottleneck has moved from pattern matching to confirmation, which can take months or years of follow-up observations, so the value of these tools depends on how well their candidates survive independent scrutiny."
+ }
+]

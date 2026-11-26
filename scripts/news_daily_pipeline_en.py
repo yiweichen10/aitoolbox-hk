@@ -36,6 +36,7 @@ backup 步骤是非阻塞的：commit/push 失败只 WARN，不把已上线链�
 from __future__ import annotations
 
 import argparse
+import html
 import json
 import os
 import re
@@ -180,11 +181,16 @@ def step_verify(args):
             # <a href="/tools/{slug}/" class="news-inlink">词</a>（如 Claude、Nvidia），
             # 纯文本标题片段因此不连续。比对前先把这类锚点还原成纯文本副本，
             # 消除渲染层内链造成的假阴性；只用于比对，不改线上页面/数据。
-            idx_plain = re.sub(r'<a href="/tools/[^"]*" class="news-inlink">(.*?)</a>',
-                               r'\1', idx)
+            # 同理，build 会对 HTML 特殊字符做转义（如 2026-11-26 标题里的
+            # "S&P" → "S&amp;P"，撇号 → "&#39;"），JSON 里是未转义的原文，
+            # 故锚点还原后再 html.unescape 页面与标题，避免转义造成的假阴性
+            # （2026-11-26 首轮 verify 即因此误报 S&P 标题缺失）。
+            idx_plain = html.unescape(re.sub(r'<a href="/tools/[^"]*" class="news-inlink">(.*?)</a>',
+                                             r'\1', idx))
             for t in titles:
-                if t[:40] not in idx_plain:
-                    errors.append(f"/news/ 不含本期标题片段：{t[:40]!r}")
+                t_plain = html.unescape(t)
+                if t_plain[:40] not in idx_plain:
+                    errors.append(f"/news/ 不含本期标题片段：{t_plain[:40]!r}")
             code, page = get(f"{SITE}/news/{day}/")
             if code != 200:
                 errors.append(f"/news/{day}/ HTTP {code}")

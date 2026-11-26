@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HKU and ByteDance Seed open-source Laminar async RL post-training framework | AI Tool Lab News</title>
+    <meta name="description" content="HKU and ByteDance Seed released Laminar, an Apache-2.0 framework that decouples rollout, buffering, training and weight sync for agent RL. On SWE-bench">
+    <link rel="canonical" href="https://www.aitoolbox.hk/news/2026-11-26-hku-and-bytedance-seed-open-source-laminar-async-rl-post-tra/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="HKU and ByteDance Seed open-source Laminar async RL post-training framework | AI Tool Lab News">
+    <meta property="og:description" content="HKU and ByteDance Seed released Laminar, an Apache-2.0 framework that decouples rollout, buffering, training and weight sync for agent RL. On SWE-bench">
+    <meta property="og:image" content="https://www.aitoolbox.hk/images/og/news-en-og.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="HKU and ByteDance Seed open-source Laminar async RL post-training framework | AI Tool Lab News">
+    <meta name="twitter:description" content="HKU and ByteDance Seed released Laminar, an Apache-2.0 framework that decouples rollout, buffering, training and weight sync for agent RL. On SWE-bench">
+    <meta name="twitter:image" content="https://www.aitoolbox.hk/images/og/news-en-og.png">
+    <link rel="stylesheet" href="/css/style.css?v=4b0ba46467">
+    <meta name="yandex-verification" content="5ae78527ec9bcb4b" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FKEXWVFYV0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FKEXWVFYV0');
+</script>
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "x7bqqir44k");
+</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "HKU and ByteDance Seed open-source Laminar async RL post-training framework", "datePublished": "2026-11-25T13:42:05+08:00", "description": "HKU and ByteDance Seed released Laminar, an Apache-2.0 framework that decouples rollout, buffering, training and weight sync for agent RL. On SWE-bench Verified, Qwen3-Coder-30B-A3B rose from 46.6% to 52.2%; matching the baseline's 51.4% took 46% fewer samples and 71% fewer GPU-hours. Tests scaled to 1,024 H800 GPUs.", "articleSection": "Research", "publisher": {"@type": "Organization", "name": "AI Tool Lab"}}</script>
+</head>
+<body data-page-type="news">
+    <header class="header">
+        <div class="header-inner">
+            <a href="/" class="brand-link">
+                <div class="site-brand"><span class="brand-mark" aria-hidden="true"></span>AI Tool Lab</div>
+                <span class="header-tagline">Independent reviews</span>
+            </a>
+            <nav class="header-nav">
+                <a href="/tools/">Tools</a>
+                <a href="/best/">Top Rated</a>
+                <a href="/new/">Latest Reviews</a>
+                <a href="/news/">AI News</a>
+                <a href="/articles/">Articles</a>
+                <a href="/category/ai-chat/">AI Chat</a>
+                <a href="/category/ai-image/">AI Image</a>
+                <a href="/category/ai-coding/">AI Coding</a>
+                <a href="/category/ai-video/">AI Video</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="breadcrumb td-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a><span class="sep">/</span><a href="/news/">AI News</a><span class="sep">/</span><a href="/news/2026-11-26/">2026-11-26</a><span class="sep">/</span><span>Research</span>
+    </nav>
+
+    <main class="news-page news-detail-page">
+        <article class="news-detail">
+            <div class="news-detail-meta">
+                <span class="news-detail-cat" style="color:#0f766e">Research</span>
+                <time datetime="2026-11-25T13:42:05+08:00">2026-11-26</time>
+            </div>
+            <h1>HKU and ByteDance Seed open-source Laminar async RL post-training framework</h1>
+            <p class="news-detail-summary">HKU and ByteDance Seed released Laminar, an Apache-2.0 framework that decouples rollout, buffering, training and weight sync for agent RL. On SWE-bench Verified, Qwen3-Coder-30B-A3B rose from 46.6% to 52.2%; matching the baseline's 51.4% took 46% fewer samples and 71% fewer GPU-hours. Tests scaled to 1,024 H800 GPUs.</p>
+            <div class="news-detail-commentary"><span>Why it matters</span><p>Async RL has mostly been a systems problem disguised as a research one: long, skewed rollouts leave GPUs idle while the batch waits for the slowest trajectory. Laminar's value is the decomposition, with separate loops and a weight relay that lets replicas update without a global barrier, rather than a new training algorithm. The caveats matter for adopters: the headline comparison uses different GPU models, vLLM is the only inference backend, and per-step checkpointing is unfinished.</p></div>
+            <div class="news-detail-source">Source: <a href="https://www.marktechpost.com/2026/11/24/bytedance-seed-laminar-async-rl-post-training-framework/" target="_blank" rel="noopener nofollow">MarkTechPost (RSS) &rarr;</a></div>
+            <section class="news-related"><h3>More in Research</h3><div><a class="news-related-link" href="/news/2026-11-26-rusi-researcher-details-why-militaries-target-cloud-data-cen/">RUSI researcher details why militaries target cloud data centers</a><a class="news-related-link" href="/news/2026-11-26-deepmind-pairs-gemini-with-mass-spectrometry-tools-in-antigr/">DeepMind pairs Gemini with mass spectrometry tools in Antigravity skil</a><a class="news-related-link" href="/news/2026-11-25-meta-details-llm-pipeline-behind-facebook-your-algorithm-ran/">Meta details LLM pipeline behind Facebook Your Algorithm ranking</a><a class="news-related-link" href="/news/2026-11-25-deepmind-agent-teams-cut-quantum-algorithm-costs-using-lean-/">DeepMind agent teams cut quantum algorithm costs using Lean proofs</a></div></section>
+                        <div class="news-nav-row">
+                <a href="/news/2026-11-26-deepmind-pairs-gemini-with-mass-spectrometry-tools-in-antigr/" class="news-nav-btn">&larr; DeepMind pairs Gemini with mass spectromet</a><a href="/news/2026-11-26-ai-drafted-requests-and-data-brokers-strain-us-public-record/" class="news-nav-btn">AI-drafted requests and data brokers strai &rarr;</a><a href="/news/" class="news-nav-btn news-nav-home">All news</a>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-cols">
+            <div class="footer-col footer-brand">
+                <p class="footer-logo">AI Tool Lab</p>
+                <p class="footer-tagline">Independent AI tool reviews. Transparent scoring. Rankings cannot be bought.</p>
+            </div>
+            <div class="footer-col">
+                <p class="footer-col-head">Explore</p>
+                <a href="/tools/">All AI Tools</a>
+                <a href="/category/">Browse Categories</a>
+                <a href="/best/">Top Rated AI Tools</a>
+                <a href="/new/">Latest Reviews</a>
+                <a href="/articles/">Articles &amp; Guides</a>
+                <a href="/news/">AI News</a>
+                <a href="/search/">Search</a>
+                <a href="/favorites">My Favorites</a>
+            </div>
+            <div class="footer-col">
+                <p class="footer-col-head">Participate</p>
+                <a href="/submit">Submit a Tool</a>
+                <a href="/contact">Contact &amp; Corrections</a>
+            </div>
+            <div class="footer-col">
+                <p class="footer-col-head">About</p>
+                <a href="/about">Methodology</a>
+                <a href="/author/">Editorial Team</a>
+                <a href="/rss.xml">Article RSS</a>
+                <a href="/news/rss.xml">AI News RSS</a>
+                <a href="https://www.aitoollab.cn/">中文版</a>
+            </div>
+            <div class="footer-col">
+                <p class="footer-col-head">Legal</p>
+                <a href="/privacy">Privacy Policy</a>
+                <a href="/terms">Terms of Use</a>
+            </div>
+        </div>
+        <p class="footer-meta">Copyright 2026 AI Tool Lab &middot; Updated daily &middot; Some outbound tool links may be affiliate links &mdash; commissions never influence scores or rankings.</p>
+    </footer>
+        <div id="newsToast" class="news-toast">Link copied</div>
+    <script>
+function copyNewsLink() {
+  if (!navigator.clipboard) { return; }
+  navigator.clipboard.writeText(window.location.href).then(function () {
+    var t = document.getElementById('newsToast');
+    if (t) { t.classList.add('show'); setTimeout(function () { t.classList.remove('show'); }, 1800); }
+  });
+}
+</script>
+    <button id="backToTop" aria-label="Back to top">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+         stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+</button>
+<script>
+document.addEventListener("DOMContentLoaded",function(){var b=document.getElementById("backToTop");if(!b)return;var s=function(){if(window.scrollY>400){b.classList.add("visible")}else{b.classList.remove("visible")}};window.addEventListener("scroll",s,{passive:true});s();b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"})});});
+</script>
+<script src="/js/tts-reader.js?v=20261118" defer></script>
+<script src="/js/likes.js?v=20261121" defer></script>
+<script src="/js/favorites.js?v=20261121" defer></script><button id="darkModeToggle" class="dark-toggle-fab" aria-label="Toggle dark mode" title="Dark mode">◐</button>
+<script>
+(function(){
+    var btn = document.getElementById('darkModeToggle');
+    if (!btn) return;
+    var dark = localStorage.getItem('darkMode') === 'true';
+    function apply(d) {
+        document.documentElement.setAttribute('data-theme', d ? 'dark' : '');
+        btn.textContent = d ? '◑' : '◐';
+        localStorage.setItem('darkMode', d);
+    }
+    apply(dark);
+    btn.addEventListener('click', function(){
+        dark = !dark;
+        apply(dark);
+    });
+})();
+</script>
+</body>
+</html>

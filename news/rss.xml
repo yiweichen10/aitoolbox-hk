@@ -3,7 +3,63 @@
 <title>AI Tool Lab - AI News</title>
 <link>https://www.aitoolbox.hk/news/</link>
 <description>Daily AI news briefs with editorial analysis.</description>
-<lastBuildDate>Thu, 26 Nov 2026 00:42:01 GMT</lastBuildDate>
+<lastBuildDate>Thu, 26 Nov 2026 00:47:19 GMT</lastBuildDate>
+<item>
+<title>S&amp;P puts Nvidia AA rating on negative watch over key-man risk</title>
+<link>https://www.aitoolbox.hk/news/2026-11-26-s-p-puts-nvidia-aa-rating-on-negative-watch-over-key-man-ris/</link>
+<guid isPermaLink="true">https://www.aitoolbox.hk/news/2026-11-26-s-p-puts-nvidia-aa-rating-on-negative-watch-over-key-man-ris/</guid>
+<pubDate>Thu, 26 Nov 2026 06:44:32 +0800</pubDate>
+<description>S&amp;P Global Ratings placed Nvidia's AA issuer and senior unsecured ratings on negative watch, citing weak executive oversight, no succession plan and reliance on CEO Jensen Huang. The review should conclude within 90 days and could cut the rating to AA-, the fourth-highest grade. Nvidia backstops 25% of a $500 billion AI infrastructure financing package, and a downgrade would likely prompt lenders to demand larger guarantees.</description>
+</item>
+<item>
+<title>Google's My Channel patent outlines personalized AI video feeds from user data</title>
+<link>https://www.aitoolbox.hk/news/2026-11-26-google-s-my-channel-patent-outlines-personalized-ai-video-fe/</link>
+<guid isPermaLink="true">https://www.aitoolbox.hk/news/2026-11-26-google-s-my-channel-patent-outlines-personalized-ai-video-fe/</guid>
+<pubDate>Thu, 26 Nov 2026 05:51:26 +0800</pubDate>
+<description>Google's My Channel patent, filed in May and published last week, was rejected but could be refiled. It describes prompts built from viewing history, demographics, IP addresses, GPS data and live news, fed to an LLM on Google servers to generate personalized videos. The filing also covers avatars made from users' own photos, videos and audio, casting them as characters inside the generated content.</description>
+</item>
+<item>
+<title>US chip and anti-distillation curbs slow DeepSeek, Moonshot and Alibaba</title>
+<link>https://www.aitoolbox.hk/news/2026-11-26-us-chip-and-anti-distillation-curbs-slow-deepseek-moonshot-a/</link>
+<guid isPermaLink="true">https://www.aitoolbox.hk/news/2026-11-26-us-chip-and-anti-distillation-curbs-slow-deepseek-moonshot-a/</guid>
+<pubDate>Thu, 26 Nov 2026 04:51:02 +0800</pubDate>
+<description>The Information reports that since September, curbs on remote access to Nvidia chips abroad and stronger anti-distillation defenses from OpenAI and Anthropic have delayed Chinese AI projects. DeepSeek researchers estimate their gap to top US models could widen from three to six months to nine. Moonshot AI canceled a $150 million Blackwell chip deal in Indonesia, while MiniMax, MiHoYo and Alibaba lean more heavily on domestic silicon.</description>
+</item>
+<item>
+<title>RUSI researcher details why militaries target cloud data centers</title>
+<link>https://www.aitoolbox.hk/news/2026-11-26-rusi-researcher-details-why-militaries-target-cloud-data-cen/</link>
+<guid isPermaLink="true">https://www.aitoolbox.hk/news/2026-11-26-rusi-researcher-details-why-militaries-target-cloud-data-cen/</guid>
+<pubDate>Thu, 26 Nov 2026 00:47:14 +0800</pubDate>
+<description>RUSI researcher Joseph Jarnecki told an Ars Live discussion that cloud sites running battlefield management, HR and resource management can become military objectives under international law. He cited this year's strikes on Amazon facilities in the Gulf and Russia-Ukraine drone exchanges, putting Gulf data-center investment at over 100 times Iranian drone cost. Ukraine moved government data abroad after the 2022 invasion.</description>
+</item>
+<item>
+<title>AI-drafted requests and data brokers strain US public records offices</title>
+<link>https://www.aitoolbox.hk/news/2026-11-26-ai-drafted-requests-and-data-brokers-strain-us-public-record/</link>
+<guid isPermaLink="true">https://www.aitoolbox.hk/news/2026-11-26-ai-drafted-requests-and-data-brokers-strain-us-public-record/</guid>
+<pubDate>Wed, 25 Nov 2026 18:00:00 +0800</pubDate>
+<description>US public records offices face a surge from data brokers and chatbot-written requests. Federal agencies received a record 1.7 million FOIA requests last year; one analysis found at least 29% of Education Department requests in July were partly AI-written, twice as long, with 83% demanding long lists. Startups have raised over $100 million to turn filings into sales signals, while Pennsylvania appeals are projected at 6,000 this year.</description>
+</item>
+<item>
+<title>HKU and ByteDance Seed open-source Laminar async RL post-training framework</title>
+<link>https://www.aitoolbox.hk/news/2026-11-26-hku-and-bytedance-seed-open-source-laminar-async-rl-post-tra/</link>
+<guid isPermaLink="true">https://www.aitoolbox.hk/news/2026-11-26-hku-and-bytedance-seed-open-source-laminar-async-rl-post-tra/</guid>
+<pubDate>Wed, 25 Nov 2026 13:42:05 +0800</pubDate>
+<description>HKU and ByteDance Seed released Laminar, an Apache-2.0 framework that decouples rollout, buffering, training and weight sync for agent RL. On SWE-bench Verified, Qwen3-Coder-30B-A3B rose from 46.6% to 52.2%; matching the baseline's 51.4% took 46% fewer samples and 71% fewer GPU-hours. Tests scaled to 1,024 H800 GPUs.</description>
+</item>
+<item>
+<title>DeepMind pairs Gemini with mass spectrometry tools in Antigravity skills</title>
+<link>https://www.aitoolbox.hk/news/2026-11-26-deepmind-pairs-gemini-with-mass-spectrometry-tools-in-antigr/</link>
+<guid isPermaLink="true">https://www.aitoolbox.hk/news/2026-11-26-deepmind-pairs-gemini-with-mass-spectrometry-tools-in-antigr/</guid>
+<pubDate>Tue, 24 Nov 2026 21:07:53 +0800</pubDate>
+<description>DeepMind's Mass Spec Skills let Antigravity agents chain formula search, PubChem lookups and fragment checks to identify molecules from tandem mass spectra. On 100 catalogued compounds, Gemini 3.8 Flash, Gemini 4 Argon and Gemini 4 Carbon reached about 97% exact identification with the skills, versus under 4% offline; token use fell nearly fourfold on Flash. Spectral libraries alone annotate only about 5% of measured spectra.</description>
+</item>
+<item>
+<title>Amateur astronomers use Codex and Astra to flag exoplanet candidates</title>
+<link>https://www.aitoolbox.hk/news/2026-11-26-amateur-astronomers-use-codex-and-astra-to-flag-exoplanet-ca/</link>
+<guid isPermaLink="true">https://www.aitoolbox.hk/news/2026-11-26-amateur-astronomers-use-codex-and-astra-to-flag-exoplanet-ca/</guid>
+<pubDate>Tue, 24 Nov 2026 19:00:00 +0800</pubDate>
+<description>OpenAI engineer Kevin Bond used Codex to search about 100,000 Kepler stars, flagging over 200 signals including 10 known planets; a SETI Institute astronomer independently found the same two candidates, one a dip every 13.8 days. Separately, Ethan Byrd used Astra on data from roughly 19 million stars and produced 49 candidates, sending his strongest to NASA's TESS team for analysis.</description>
+</item>
 <item>
 <title>Meta details LLM pipeline behind Facebook Your Algorithm ranking</title>
 <link>https://www.aitoolbox.hk/news/2026-11-25-meta-details-llm-pipeline-behind-facebook-your-algorithm-ran/</link>
@@ -157,61 +213,5 @@
 <guid isPermaLink="true">https://www.aitoolbox.hk/news/2026-11-21-browser-use-1-0-one-tool/</guid>
 <pubDate>Sat, 21 Nov 2026 00:00:00 +0800</pubDate>
 <description>Browser Use 1.0 replaces 24 discrete action tools with a single Python REPL plus CDP. Same-model benchmark scores rose 14-33 points while costs fell to between 1/2.7 and 1/5.2 of previous levels.</description>
-</item>
-<item>
-<title>Amodei Pledges Not to Bow to Commercial or Political Pressure</title>
-<link>https://www.aitoolbox.hk/news/2026-11-20-amodei-ipo-safety-pledge/</link>
-<guid isPermaLink="true">https://www.aitoolbox.hk/news/2026-11-20-amodei-ipo-safety-pledge/</guid>
-<pubDate>Fri, 20 Nov 2026 00:00:00 +0800</pubDate>
-<description>In his IPO-day remarks, Amodei committed to slowing AI training and deployment whenever necessary until systems are provably safe and under human control, regardless of commercial or political pressure - saying going public strengthens that resolve.</description>
-</item>
-<item>
-<title>Stanford Benchmark Tracks AI-Written Court Filings</title>
-<link>https://www.aitoolbox.hk/news/2026-11-20-stanford-phantomdocket-court-filings/</link>
-<guid isPermaLink="true">https://www.aitoolbox.hk/news/2026-11-20-stanford-phantomdocket-court-filings/</guid>
-<pubDate>Fri, 20 Nov 2026 00:00:00 +0800</pubDate>
-<description>Stanford's PhantomDocket benchmark calibrates detectors using an AI-hallucination corpus: in 2026, 38% of Santa Clara County complaints showed AI traces, with self-represented filers rising from 19% to 72%.</description>
-</item>
-<item>
-<title>Google Opens Genie 4 World Model API</title>
-<link>https://www.aitoolbox.hk/news/2026-11-20-google-genie-4-api/</link>
-<guid isPermaLink="true">https://www.aitoolbox.hk/news/2026-11-20-google-genie-4-api/</guid>
-<pubDate>Fri, 20 Nov 2026 00:00:00 +0800</pubDate>
-<description>Google opened Genie 4 to developers: text- or image-generated interactive 720p 24fps worlds with 48kHz stereo audio and keyboard control, at about $6.05/minute with 120-second session limits.</description>
-</item>
-<item>
-<title>Anthropic Rises 17% on Debut, Raises $81.3B in Largest IPO Ever</title>
-<link>https://www.aitoolbox.hk/news/2026-11-20-anthropic-largest-ipo-ever/</link>
-<guid isPermaLink="true">https://www.aitoolbox.hk/news/2026-11-20-anthropic-largest-ipo-ever/</guid>
-<pubDate>Fri, 20 Nov 2026 00:00:00 +0800</pubDate>
-<description>Anthropic's $81.34 billion raise tops SpaceX as the largest IPO in history, nearly 7x oversubscribed. Priced at $83, the stock opened up 34% and closed with a $1.27 trillion market cap.</description>
-</item>
-<item>
-<title>Perplexity Brain Writes Its Own Personal Skills</title>
-<link>https://www.aitoolbox.hk/news/2026-11-20-perplexity-brain-self-skills/</link>
-<guid isPermaLink="true">https://www.aitoolbox.hk/news/2026-11-20-perplexity-brain-self-skills/</guid>
-<pubDate>Fri, 20 Nov 2026 00:00:00 +0800</pubDate>
-<description>The Perplexity Brain agent automatically writes and updates personal skills from conversation history. In an 8-week randomized test, 72.9% of users gained new skills and tool-call failures dropped 11% at unchanged cost.</description>
-</item>
-<item>
-<title>OpenAI Uses Codex to Auto-Investigate Performance Regressions</title>
-<link>https://www.aitoolbox.hk/news/2026-11-20-openai-performance-factory/</link>
-<guid isPermaLink="true">https://www.aitoolbox.hk/news/2026-11-20-openai-performance-factory/</guid>
-<pubDate>Fri, 20 Nov 2026 00:00:00 +0800</pubDate>
-<description>OpenAI's Performance Factory has Codex agents investigate and fix ChatGPT performance regressions: 1,700+ investigations and 600+ root causes over three months, with 70% spot-check accuracy.</description>
-</item>
-<item>
-<title>Gemini for Mac Adds Computer Control</title>
-<link>https://www.aitoolbox.hk/news/2026-11-20-gemini-mac-computer-use/</link>
-<guid isPermaLink="true">https://www.aitoolbox.hk/news/2026-11-20-gemini-mac-computer-use/</guid>
-<pubDate>Fri, 20 Nov 2026 00:00:00 +0800</pubDate>
-<description>Google shipped computer use for Gemini on Mac: multi-step tasks across desktop apps, local files and the web, running in background windows without occupying the cursor. Rolling out first to US subscribers.</description>
-</item>
-<item>
-<title>DeepMind Releases Gemini 4 Neon</title>
-<link>https://www.aitoolbox.hk/news/2026-11-19-deepmind-releases-gemini-4-neon/</link>
-<guid isPermaLink="true">https://www.aitoolbox.hk/news/2026-11-19-deepmind-releases-gemini-4-neon/</guid>
-<pubDate>Thu, 19 Nov 2026 05:35:43 +0800</pubDate>
-<description>Google DeepMind releases Gemini 4 Neon: intelligence index 61 points, ranking 3rd; first on the coding agent index; cost per task 32% lower than Carbon.</description>
 </item>
 </channel></rss>
