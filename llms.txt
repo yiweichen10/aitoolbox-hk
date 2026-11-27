@@ -22,7 +22,7 @@
 - [Recently Reviewed](https://www.aitoolbox.hk/new/): newly listed and re-checked tool reviews, newest first
 - [Search](https://www.aitoolbox.hk/search/): instant search across all tools and articles
 - [Submit a tool](https://www.aitoolbox.hk/submit): free submissions, editor-tested before review; rankings cannot be bought
-- [Articles](https://www.aitoolbox.hk/articles/): original hands-on reviews, comparisons and guides (236 articles)
+- [Articles](https://www.aitoolbox.hk/articles/): original hands-on reviews, comparisons and guides (237 articles)
 - [Full content for AI models](https://www.aitoolbox.hk/llms-full.txt): llms-full.txt — every tool and article in one plain-text file
 
 ## Important Tool Pages (top 5 by rating per category, 316 tools total)
@@ -279,8 +279,9 @@
 - [Sora vs Veo](https://www.aitoolbox.hk/vs/sora-vs-veo/): pricing and feature comparison
 - [Soundraw vs Wondercraft AI](https://www.aitoolbox.hk/vs/soundraw-vs-wondercraft-ai/): pricing and feature comparison
 
-## Important Article Pages (236 total, latest 16 by date)
+## Important Article Pages (237 total, latest 16 by date)
 
+- [SMS API Pricing 2026: Twilio vs Telnyx vs Vonage vs Bird](https://www.aitoolbox.hk/articles/best-sms-api-pricing-2026-twilio-vs-telnyx-vs-vonage-vs-bird/): Sending 50,000 US OTP verifications through Twilio Verify costs about $3,115 per month at list price — eight…
 - [AI Code Editor Pricing 2026: Cursor vs Copilot vs Windsurf vs Claude Code](https://www.aitoolbox.hk/articles/best-ai-code-editor-pricing-2026-cursor-vs-copilot-vs-windsurf-vs-claude-code/): On June 1, 2026, GitHub retired Copilot premium requests and moved every monthly plan to usage-based AI…
 - [LLM Fine-Tuning Pricing 2026: Together vs Fireworks vs Vertex vs Predibase Compared](https://www.aitoolbox.hk/articles/best-llm-fine-tuning-pricing-2026-together-vs-fireworks-vs-vertex-vs-predibase/): Fine-tuning the same Llama 3.3 70B model on the same 10 million tokens costs $60.90 on Together AI and…
 - [Embedding API Pricing 2026: OpenAI vs Voyage vs Cohere vs Jina Compared](https://www.aitoolbox.hk/articles/best-embedding-api-pricing-2026-openai-vs-voyage-vs-cohere-vs-jina/): The same 1 billion tokens costs $20 to embed on OpenAI and $150 on Google — a 7.5x spread for mathematically…
@@ -296,12 +297,11 @@
 - [How to Use AI at Work in 2026: A Step-by-Step Daily Workflow](https://www.aitoolbox.hk/articles/how-to-use-ai-at-work-2026/): A step-by-step AI workflow for a real working day: plan with ChatGPT, draft with Claude, handle email and…
 - [Serverless Functions Pricing in 2026: AWS Lambda vs Cloudflare Workers vs Vercel vs Deno Deploy](https://www.aitoolbox.hk/articles/best-serverless-functions-pricing-2026-aws-lambda-vs-cloudflare-workers-vs-vercel-vs-deno-deploy/): Serverless functions pricing compared across AWS Lambda, Cloudflare Workers, Vercel, and Deno Deploy…
 - [Static Hosting Pricing in 2026: Netlify vs Vercel vs Cloudflare Pages vs GitHub Pages](https://www.aitoolbox.hk/articles/best-static-hosting-pricing-2026-netlify-vs-vercel-vs-cloudflare-pages-vs-github-pages/): Static hosting pricing compared for 2026: Netlify credit plans, Vercel Flat Rate CDN tiers, Cloudflare Pages'…
-- [LLM API Pricing Compared in 2026: GPT-6 Astra vs Claude Opus 5.5 vs Gemini 4 vs DeepSeek](https://www.aitoolbox.hk/articles/best-llm-api-pricing-2026-openai-gpt-6-vs-claude-opus-5-5-vs-gemini-4-vs-deepseek-compared/): GPT-6 Astra bills $10/$50, Opus 5.5 $4/$20, Gemini 4 Carbon doubles to $4/$20 on December 1, DeepSeek V4-Pro…
 
 ## Update Frequency
 
 - Tool database: updated daily (316 tools listed)
-- Articles: new original reviews published regularly (236 total)
+- Articles: new original reviews published regularly (237 total)
 - Ratings/pricing: recalibrated continuously
 
 ## AI News (daily briefs with editorial analysis)
