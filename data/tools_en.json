@@ -23260,5 +23260,339 @@
     ],
     "content": "Meshy turns text prompts and reference images into textured 3D models, and it is the tool that moved AI 3D from demo footage into production pipelines. Image-to-3D, auto-rigging and a 500+ animation library mean an indie developer can go from concept art to a walking, animated character in an afternoon - work that either costs $50-200 per model from a freelance artist or weeks of learning Blender.\n\n## What the plans actually cost\n\nVerified on the official pricing page, 2026-11-26. Free gives 100 credits a month - roughly 10 assets - with downloads capped at 10 Meshy 6 Lite models and a CC BY 4.0 license, meaning anything you generate is public and attribution is required. Pro costs $20/mo (monthly or annual) with 1,000 credits, up to 100 assets, a private commercial license, unlimited downloads, 10 concurrent tasks and API access. Premium is $40/mo with 3,000 credits and 300 assets; Ultra is $100/mo with 8,000 credits and 800 assets; Studio at $70/mo adds 5,500 shared team credits plus $10 per seat. Enterprise is custom with SAML SSO and full API. One timing note: a Black Friday promotion runs November 23 - December 2, 2026 and temporarily cuts yearly prices by up to half, so verify current prices before budgeting.\n\n## Where the money angle sits\n\nThree commercial uses dominate. Indie game development is the biggest: Steam's indie economics reward shipping fast, and Meshy covers the prop-and-environment layer - crates, weapons, foliage, furniture - at near-zero marginal cost, while [Steam Direct](/tools/steam-direct/) handles the storefront. Asset packs are the second: artists generate themed sets (dungeon pieces, sci-fi props, stylized animals), polish them, and sell repeatedly on CG marketplaces - [Creative Market](/tools/creative-market/) is one channel - where a pack priced $20-60 sells without further marginal cost. The third is client visualization: product mockups, real-estate staging previews and AR prototypes generated from client photos through multi-view image-to-3D, a service agencies now bill for that did not exist three years ago.\n\n## The honest drawbacks\n\nGenerated meshes usually need a retopology pass before close-up production use - clean topology is not what AI generation produces, and 'game-ready' is an overstatement for hero assets. The free tier's CC BY 4.0 license is a real constraint: commercial products built on free-tier assets inherit a public, attribution-required license, which most studios refuse. Credits burn on failed attempts at the same rate as successes, so experimental prompting has a real cost, and the API keeps assets only 3 days on Pro. Complex organic characters and precision hard-surface parts remain outside its range - [Spline](/tools/spline-ai/) covers interactive 3D design on the web side, and [Luma AI](/tools/luma-ai/) takes the capture-to-3D route with real-world scenes. Our [3D modeling tools comparison](/articles/best-ai-3d-modeling-tools-2026-meshy-vs-spline-vs-luma-vs-kaedim-vs-masterpiece/) maps the full field.\n\n## Bottom line\n\nFor indie teams and asset sellers, Meshy is the best value-per-credit in AI 3D right now, and the credit meter is the only ceiling that matters. For production-critical characters, budget for a human retopo pass regardless of which tool you pick. Current plans sit on the [Meshy pricing page](https://www.meshy.ai/pricing).",
     "published": true
+  },
+  {
+    "name": "Google Flow",
+    "slug": "google-flow",
+    "url": "https://labs.google/flow",
+    "category": "AI Video",
+    "price": "Free 50 credits/day · Pro $19.99/mo",
+    "last_verified": "2026-11-27",
+    "rating": "4.2",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "color": "#1A73E8",
+    "platform": "Web app at labs.google/flow; requires a Google account; quotas and 4K upscaling follow Google AI subscription tiers",
+    "description": "Google's AI filmmaking workspace built on Veo 3.1 - prompt-to-clip with native audio, scene stitching and credit plans that ride on Google AI subscriptions.",
+    "pricing_details": "Cross-checked 2026-11-27 against two independent 2026 trackers (their own validation dates 2026-10-31 and 2026-10); official Flow pages block automated access, so figures carry that caveat. Free: 50 credits/day, no rollover, video generation throttled during peak hours (~UTC 14:00-17:00). Google AI Plus $4.99/mo (permanently reduced from $7.99 in June 2026): +200 credits/mo, 2x free quota. Google AI Pro $19.99/mo: +1,000 credits/mo (4x free quota), 5TB storage, full Flow experience, no 4K upscaling. Google AI Ultra: $99.99/mo with 10,000 credits/mo (5x) or $199.99/mo with 25,000 credits/mo (20x), both with 4K upscaling and 20TB storage. Generation costs inside Flow: Veo 3.1 Lite 10 credits, Fast 20 credits, Quality 100 credits per 8-second clip; Ultra subscribers pay half. Fast and Quality modes are scheduled for removal from Flow on December 5, 2026; Veo Extend was removed November 5, 2026. The Veo API bills separately per second (~$0.05/s Lite 720p, ~$0.40/s Standard 1080p) and never mixes with Flow credits. Monthly credits do not roll over; eligible Workspace Business plans include Flow with 50 daily credits at no extra cost.",
+    "tags": [
+      {
+        "text": "Veo 3.1"
+      },
+      {
+        "text": "Native audio"
+      },
+      {
+        "text": "Free daily credits",
+        "type": "free"
+      },
+      {
+        "text": "Scenebuilder"
+      }
+    ],
+    "features": [
+      "Text-to-video and image-to-video on Veo 3.1 with native audio - dialogue, ambience and sound effects generate inside the clip",
+      "Scenebuilder stitches 8-second shots into longer sequences with editing, extensions and camera controls",
+      "Ingredients-to-video reuses characters, objects and styles across shots for visual continuity",
+      "Flow credits bundle with Google AI plans, pairing Gemini access and 5-20TB storage with video quota in one subscription",
+      "Agent mode drafts and refines whole sequences from a natural-language brief"
+    ],
+    "pros": [
+      "The cheapest legal route to Veo 3.1 quality: 50 free credits a day against roughly $0.40/second on the Veo API",
+      "Native audio removes the separate sound-design step most competitors still require",
+      "Pro at $19.99 bundles 1,000 monthly credits with 5TB storage and Gemini access - the bundle beats buying the pieces separately",
+      "Daily free credits let you test shot ideas before paying for any plan"
+    ],
+    "cons": [
+      "Per-generation credit costs are not published on official pages - budgeting depends on tracker data",
+      "Monthly credits never roll over, and free accounts get throttled during peak hours",
+      "Region restrictions bite: video editing of uploaded footage is unavailable in the EEA, Switzerland and the UK, and Flow is not offered in every country that sells Google AI Pro",
+      "Feature churn without notice - Veo Extend removed November 2026, Fast and Quality modes leaving December 5, 2026"
+    ],
+    "faq": [
+      {
+        "question": "Is Google Flow free to use?",
+        "answer": "Yes at a basic level: every Google account gets 50 credits a day with no subscription, though video generation can stall during peak hours and daily credits never accumulate. Subscriptions add monthly allowances - $4.99 (200 credits), $19.99 (1,000) and Ultra at $99.99/$199.99 (10,000/25,000). Daily and monthly credits are separate pools and both expire."
+      },
+      {
+        "question": "How do Flow credits compare to the Veo API?",
+        "answer": "They are two billing systems that never mix. Flow credits come bundled with Google AI subscriptions; the Veo API bills per second (roughly $0.05/s for Lite 720p, $0.40/s for Standard 1080p). Programmatic volume for an app belongs on the API; hands-on filmmaking stretches further on Flow credits. The trade-offs are mapped in our video generation API pricing guide."
+      },
+      {
+        "question": "Can I monetize videos made in Flow?",
+        "answer": "Creators route Flow clips into YouTube revenue, short-form ads and client b-roll, and Google's terms do not claim ownership of generated output. Platform disclosure rules still apply - YouTube requires labeling realistic synthetic media - so check the terms attached to your plan and label content where the platform requires it."
+      }
+    ],
+    "content": "Google Flow is Google's AI filmmaking workspace at labs.google/flow - the product that turned Veo 3.1 from an API curiosity into a tool anyone can drive with prompts. You describe shots, it generates 8-second clips with dialogue and sound effects baked in, and Scenebuilder stitches them into longer cuts. For faceless channel operators and short-form ad makers, it is the cheapest legal route to Veo-quality footage without API plumbing.\n\n## What the plans actually cost\n\nFlow has no standalone subscription - it rides on Google's AI plans. Cross-checked against two independent 2026 trackers (their latest validation 2026-10-31) because the official pages block automated checks. Free accounts get 50 credits per day, no rollover, and lose video generation during peak hours (roughly UTC 14:00-17:00). Google AI Plus at $4.99/mo (permanently cut from $7.99 in June 2026) adds 200 monthly credits. Google AI Pro at $19.99/mo adds 1,000 monthly credits, 5TB storage and the full Flow experience. Ultra splits into two tiers: $99.99/mo with 10,000 credits and $199.99/mo with 25,000, both adding 4K upscaling and 20TB. Credit math per generation: Veo 3.1 Lite costs 10 credits, Fast 20, Quality runs 100 credits for an 8-second clip, and Ultra subscribers pay half. Two caveats worth planning around: monthly credits never roll over, and Fast plus Quality modes are scheduled to leave Flow on December 5, 2026. The Veo API bills separately per second (about $0.40/s for 1080p Standard), so app credits and API spend never mix.\n\n## Where the money angle sits\n\nThree monetization routes show up repeatedly. Faceless YouTube is the biggest - native audio means a clip ships complete with dialogue and sound effects, and the [faceless channel playbook](/articles/best-ai-tools-for-faceless-youtube-channels-2026/) works with [YouTube](/tools/youtube/) revenue or [X creator payouts](/tools/x-creator-rewards/). Short-form ads are the second: agencies generate 5-8 variations of a 15-second spot, test them, and keep the winners - [Opus Clip](/tools/opus-clip/) handles the re-cutting side. The third is b-roll for client videos where licensed stock footage would run $50-200 per clip. Compare the field in our [video generator comparison](/articles/best-ai-video-generators-2026-sora-vs-runway-vs-pika-vs-kling/) and the [API pricing breakdown](/articles/best-ai-video-generation-api-pricing-2026-veo-vs-sora-vs-runway-vs-kling-vs-luma/) if you need raw output at scale.\n\n## The honest drawbacks\n\nThe credit meter is opaque by Google's own silence - official pages publish monthly totals but not per-generation costs, so the numbers above come from trackers. Region restrictions bite: Flow is not available in every country that sells Google AI Pro, VPN workarounds trip \"unusual activity\" blocks, and video editing of uploaded footage is missing in the EEA, Switzerland and the UK. English prompts produce the best results, non-subscribers get throttled at peak hours, and features vanish quietly - Veo Extend was removed on November 5, 2026. Against [Sora](/tools/sora/) the clips are shorter, and [Runway](/tools/runway/) still owns fine-grained editing controls, while [Kling AI](/tools/kling-ai/) undercuts Pro pricing for pure volume generation. [Veo](/tools/veo/) itself remains the engine every rival gets measured against.\n\n## Bottom line\n\nFlow is the easiest way to put Veo 3.1 to work, and $19.99 of Pro credits covers roughly 50-100 finished clips per month depending on model choice - enough for a small channel or an ad-testing rotation. Pay Ultra only when 4K or 25,000 credits are line items in a real budget. The official entry point lives at [labs.google/flow](https://labs.google/flow).",
+    "published": true
+  },
+  {
+    "name": "LTX Studio",
+    "slug": "ltx-studio",
+    "url": "https://ltx.studio/",
+    "category": "AI Video",
+    "price": "Free 800 credits · Paid from $12/mo",
+    "last_verified": "2026-11-27",
+    "rating": "4.0",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "color": "#7C3AED",
+    "platform": "Web app; project-based workspace with MP4 export; Enterprise adds SSO, SOC2 compliance and custom model training",
+    "description": "Script-to-storyboard-to-video workspace from Lightricks - one subscription hosts Veo 3.1, Kling, Seedance and FLUX models; built for pitch decks and narrative channels.",
+    "pricing_details": "Verified on ltx.studio/pricing, 2026-11-27. Free: $0 with 800 one-time credits, personal-use license only (no business, marketing or paid work). Lite: $15/mo monthly or $12/mo billed yearly ($144) with 8,000 credits/mo, image and video upscales, editing tools, no watermark - license still personal-use. Standard: $35/mo ($28/mo yearly, $336) with 28,000 credits/mo plus 28,800 computing seconds/mo for the first 3 months, commercial use license, AI storyboards, pitch decks, dubbing, captions, credit top-ups, and guest models (Nano Banana 2 and Pro, FLUX.2 Pro, Kling 2.6 and 3.0 Pro, Seedance 2.0, ChatGPT Images 2.0). Pro: $125/mo ($100/mo yearly, $1,200) with 110,000 credits/mo, Veo 3.1 / Veo 3.1 Fast / Veo 3.1 Lite, 3 collaborators per project, on-demand top-ups. Enterprise: custom - custom LTX-2.3 model training, unlimited collaborators, SSO, SOC2/ISO/GDPR, centralized billing. The pricing page carried Black Friday promotional banners at verification time (50%-off messaging), so treat promotional prices as temporary; yearly billing saves ~20% versus monthly in standard conditions. Lightricks reserves the right to update or replace available models at any time.",
+    "tags": [
+      {
+        "text": "Storyboards"
+      },
+      {
+        "text": "Pitch decks"
+      },
+      {
+        "text": "Free tier",
+        "type": "free"
+      },
+      {
+        "text": "Multi-model hub"
+      }
+    ],
+    "features": [
+      "Script-to-storyboard pipeline: feed a logline or treatment, get shot-by-shot boards with characters and locations",
+      "Multi-model hosting - LTX-2.5/2.3 native plus Veo 3.1 (Pro), Kling 2.6/3.0, Seedance 2.0, FLUX.2 Pro, Nano Banana 2 and ChatGPT Images 2.0 under one subscription",
+      "Audio-to-video generation and video-to-video control, with SDR-to-HDR enhancement",
+      "Flows: node-based automation for chaining generation steps into repeatable pipelines",
+      "Pitch decks, AI storyboards, dubbing and captions built in - pre-production through export in one workspace"
+    ],
+    "pros": [
+      "One subscription replaces five: Standard's guest models cover image and video generation across rival engines",
+      "Pitch deck and storyboard outputs sell concepts to clients before production spend - a service you can bill for",
+      "Commercial license starts at Standard, with dubbing and captions cutting the multi-language finishing cost",
+      "Free tier gives 800 credits to learn the workspace before committing"
+    ],
+    "cons": [
+      "Free and Lite licenses are personal-use only - monetized channels and client work need Standard",
+      "Credit burn on multi-shot scenes adds up fast, and per-generation costs show in-app rather than published",
+      "The model lineup churns - Veo 3.1 lives only on Pro and Lightricks can swap models at any time",
+      "The storyboard-to-edit workspace has a learning curve that single-prompt tools do not"
+    ],
+    "faq": [
+      {
+        "question": "Can I use the free LTX Studio plan for client work?",
+        "answer": "No. Free and Lite carry a personal-use license that explicitly bars business, marketing or paid work. Commercial rights start at Standard ($35/mo monthly, $28/mo billed yearly). Budget for Standard if any money touches the output - that includes monetized YouTube uploads."
+      },
+      {
+        "question": "Do I need Pro to access Veo 3.1?",
+        "answer": "Yes - Veo 3.1, Fast and Lite sit behind the Pro tier ($125/mo, $100/mo yearly). Standard covers Kling 2.6/3.0, Seedance 2.0, Nano Banana 2, FLUX.2 Pro and ChatGPT Images 2.0. If Veo quality is the reason you are subscribing, that is a Pro decision."
+      },
+      {
+        "question": "How do LTX Studio credits work?",
+        "answer": "Credits refill monthly on paid plans (Free gets 800 one-time). Generation costs vary by model and settings and are shown before each render in-app. Standard adds 28,800 bonus computing seconds per month for the first 3 months, and top-ups can be purchased on Standard and above."
+      }
+    ],
+    "content": "LTX Studio, from Lightricks, is the AI video tool built for projects that have a script, not just a prompt. You feed it a logline or a full treatment, it builds a storyboard with shots, characters and locations, then generates the footage - and it now hosts rival models under one roof (Veo 3.1, Kling 3.0, Seedance 2.0, FLUX.2 Pro, Nano Banana 2), so one subscription covers what used to take five. That hub positioning is the pitch: one workspace from script to export.\n\n## What the plans actually cost\n\nVerified on ltx.studio/pricing, 2026-11-27. Free gives 800 credits one-time - enough to learn the workspace, but the license is personal-use only, which bars client work and monetized channels. Lite costs $15/mo monthly or $12/mo billed yearly ($144) with 8,000 credits/mo, no watermarks and editing tools - still a personal license. Standard at $35/mo ($28 yearly, $336) is the working tier: 28,000 credits/mo, commercial use license, AI storyboards, pitch decks, dubbing and captions, plus guest models (Nano Banana 2 and Pro, FLUX.2 Pro, Kling 2.6/3.0, Seedance 2.0, ChatGPT Images 2.0) and purchasable top-ups. Pro at $125/mo ($100 yearly, $1,200) reaches 110,000 credits, adds Veo 3.1/Fast/Lite and 3 collaborators per project. Enterprise is custom with SSO, SOC2 compliance and custom LTX model training. The page carried Black Friday banners at verification, so treat the 50%-off messaging as temporary.\n\n## Where the money angle sits\n\nThe strongest commercial play is pre-production selling: agencies and freelancers generate storyboards and pitch decks from a client brief, sell the concept for $500-2,000 before anyone commits to production spend - the pitch deck generator exists for exactly this. Faceless storytelling channels are second: Standard's commercial license covers monetized uploads, and the [faceless channel guide](/articles/best-ai-tools-for-faceless-youtube-channels-2026/) maps the workflow. Third is multi-model arbitrage - Standard's guest models mean hero shots can route through [Kling AI](/tools/kling-ai/) or [Seedance](/tools/seedance/) without separate subscriptions, and image models like [FLUX](/tools/flux-1/) and [Nano Banana](/tools/nano-banana/) sit in the same credits pool. Dubbing and captions built in cut the [video editing](/articles/best-ai-video-editing-tools-2026-descript-vs-capcut-vs-opus-clip-vs-invideo-ai/) tail cost on multi-language client work.\n\n## The honest drawbacks\n\nThe free tier's personal-use license is a trap for anyone monetizing content - commercial rights start at Standard. Credit burn on multi-shot scenes adds up fast, and per-generation costs are shown in-app rather than published, so monthly budgets need trial and error. The model lineup churns: Veo 3.1 lives only on Pro, and Lightricks reserves the right to swap models at any time, which can strand a workflow built around one engine. LTX's own 2.5 model generates fast and cheap but trails [Veo](/tools/veo/) on realism for hero shots - comparing it with [Runway](/tools/runway/) in our [video generator comparison](/articles/best-ai-video-generation-tools-2026-runway-vs-pika-vs-kling-vs-luma/) is worth 20 minutes before you commit. The storyboard-to-edit workspace also has a learning curve that single-prompt tools do not.\n\n## Bottom line\n\nFor anyone selling video concepts or producing commercial content, Standard's $28-35 with 28,000 credits is the entry ticket, and Pro earns its price when Veo access and collaborators matter. Skip Lite if money touches the output - the license will not cover it. Current plans sit on the [LTX Studio pricing page](https://ltx.studio/pricing).",
+    "published": true
+  },
+  {
+    "name": "Delphi",
+    "slug": "delphi",
+    "url": "https://www.delphi.ai/",
+    "category": "AI Income",
+    "price": "Free to create · Paid from $5k/yr",
+    "last_verified": "2026-11-27",
+    "rating": "3.8",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "color": "#F59E0B",
+    "platform": "Web app; embeds on your own website, product, community or Slack; API on Scaler+ tier; WhatsApp and text on Immortal",
+    "description": "AI clone platform: train on your content, then answer voice calls, texts and questions in your style around the clock. Free on their network; your own channels start at $5k/yr.",
+    "pricing_details": "Verified on the official pricing page (delphi.ai/pricing), 2026-11-27. Free: $0 - create a Delphi that lives on the Delphi network where anyone can find and talk to it. Scaler: $5,000/year (all paid plans are annual; no monthly option listed) - 10 integrations, pro voice calls, 12M training words, actions and developer platform, Slack, product recommendations. Scaler + API: $10,000/year - everything in Scaler plus API access, SSO, 60-day custom onboarding support, 20M training words, unlimited integrations, priority support. Immortal: tailored pricing for public figures and celebrities - white-glove experience, text and WhatsApp, custom applications, unlimited training words, advanced mind architecture, dedicated account strategist. Content and data ownership stays with the user on every tier. Upgrades from Scaler to Scaler + API are available in-app.",
+    "tags": [
+      {
+        "text": "AI clone"
+      },
+      {
+        "text": "Voice calls"
+      },
+      {
+        "text": "Free tier",
+        "type": "free"
+      },
+      {
+        "text": "Creator monetization"
+      }
+    ],
+    "features": [
+      "Clones train on your videos, books, podcasts and writings - up to 12M words on Scaler, 20M on Scaler + API, unlimited on Immortal",
+      "Voice calls in your style - pro-grade call quality on Scaler, WhatsApp and text channels on Immortal",
+      "Embeds on your own website, product, community or Slack instead of living only on Delphi's network",
+      "Product recommendations turn conversations into course, coaching and gear sales",
+      "Actions and developer platform route clone conversations into calendars, CRM and payment flows"
+    ],
+    "pros": [
+      "Scales 1:1 expert time into unlimited conversations without diluting the brand",
+      "Product recommendations and actions make the clone a sales channel, not a chatbot",
+      "The API tier gives agencies everything needed to build clones into client products",
+      "You own your content and data on every tier"
+    ],
+    "cons": [
+      "$5,000/year entry with no monthly option - roughly $420/mo of new revenue needed just to break even",
+      "Free-tier clones live on Delphi's network, where discovery depends on their traffic rather than yours",
+      "Thin training data produces an uncanny clone that damages trust instead of building it",
+      "Regulated advice - health, finance, legal - carries real liability when a clone answers confidently and wrong"
+    ],
+    "faq": [
+      {
+        "question": "How is a paid Delphi different from the free one?",
+        "answer": "A free Delphi lives on Delphi's network, where people find and talk to it. Paid plans (Scaler from $5k/year, Scaler + API at $10k) take your clone to your own channels - website, product, community, Slack - with integrations, pro voice calls and far higher training limits. The official FAQ frames it exactly this way."
+      },
+      {
+        "question": "Can agencies build clones for clients with Delphi?",
+        "answer": "Yes, and it is one of the stronger business models on the platform. The $5k entry pushes solo creators out and gives agencies room to charge $10-30k per white-glove build plus retainers. Scaler + API adds the API access, SSO and onboarding support that client deployments need."
+      },
+      {
+        "question": "What training data does a Delphi clone need?",
+        "answer": "Everything that captures how you think: videos, podcasts, books, articles, course material. Scaler's ceiling is 12M training words (20M on Scaler + API). Quality beats volume - thin or off-hand content produces generic answers that stop sounding like you."
+      }
+    ],
+    "content": "Delphi clones you. Feed it your videos, books, podcasts and writings (12 million words on the paid tier), and it answers voice calls, texts and questions in your voice and judgment, around the clock. The free tier puts your clone on Delphi's network; the paid plans - and this is the notable part - start at $5,000 a year, positioning Delphi as B2B infrastructure for coaches, executives and experts who already monetize their time.\n\n## What the plans actually cost\n\nVerified on the official pricing page, 2026-11-27. Free: create a Delphi and it lives on the Delphi network where anyone can find and talk to it. Scaler costs $5,000/year (all plans are annual - no monthly option is listed): 10 integrations, pro voice calls, 12M training words, actions and developer platform, Slack, and product recommendations. Scaler + API runs $10,000/year and adds API access, SSO, 20M training words, unlimited integrations and 60-day onboarding support. Immortal is tailored pricing for public figures - white-glove build, WhatsApp, custom applications, unlimited training. You keep ownership of your content and data on every tier.\n\n## Where the money angle sits\n\nThe direct play is selling access to yourself at scale. A consultant charging $300/hour can sell maybe 20 hours a week; a Delphi clone answers thousands of conversations without diluting the brand - [Patreon](/tools/patreon/), [Circle](/tools/circle/) and [Skool](/tools/skool/) communities bolt it on as a 24/7 expert-in-residence perk. Product recommendations are built in, so the clone can sell your courses and gear the way [Stan Store](/tools/stan-store/) or [Kajabi](/tools/kajabi/) funnels do. The second, quieter business is agency work: at a $5k floor, agencies white-glove clones for executives, authors and founders and charge $10-30k per build plus retainer - the pricing effectively filters out solo creators and filters in agencies. A third angle is lead generation: a free network clone answers prospect questions and routes the serious ones to paid calls, similar to how [Chatbase](/tools/chatbase/) turns support into sales flows.\n\n## The honest drawbacks\n\nThe $5,000/year floor is the whole story: there is no $50/mo tier, so a creator needs roughly $420/month of new revenue just to break even - that math rules Delphi out for hobbyists. The free tier keeps your clone inside Delphi's network, where discovery depends on their traffic rather than yours. Voice clones need serious training material to sound like you; thin input produces an uncanny assistant that erodes trust instead of building it. And regulated advice - health, finance, legal - carries real liability when a clone answers confidently and wrong. [HeyGen](/tools/heygen/) covers the video-avatar version of this problem; Delphi is the conversational one.\n\n## Bottom line\n\nDelphi is a strong bet for two profiles: experts already selling their time at high rates, and agencies adding clone-building to their service menu. For a creator with a small audience, the free network tier is a lead-generation experiment, not a business. Current plans sit on the [Delphi pricing page](https://www.delphi.ai/pricing).",
+    "published": true
+  },
+  {
+    "name": "Undermind",
+    "slug": "undermind",
+    "url": "https://www.undermind.ai/",
+    "category": "AI Research",
+    "price": "Free plan · Pro from $16/mo",
+    "last_verified": "2026-11-27",
+    "rating": "4.3",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "color": "#10B981",
+    "platform": "Web app; agent connections for Claude, ChatGPT and other AI tools; shared team workspaces",
+    "description": "Deep-search AI agent for scientific literature: clarifying questions, thousands of papers read per query, every citation verified. Used by GSK scientists and nine US national labs.",
+    "pricing_details": "The official pricing page routes to the homepage, so figures are cross-checked against 2026 reviews quoting the official academic/industry pricing toggle (checked 2026-11-27; verify the toggle in-app before paying). Free: $0 - standard rate limits, core AI models, deep search, cited reports, shared workspaces, agent connections. Pro (billed annually): $16/mo academic, $60/mo industry - 10x limits, latest AI models, full-text analysis, unlimited workspaces and paper library. Team: $15/person/mo academic, $60/person/mo industry - central billing, member management, priority support. Enterprise: custom - SSO, admin console, custom SLA. The academic/industry split is the key detail: companies pay roughly 4x the student rate. No monthly billing option is documented for Pro in the sources quoting the official page.",
+    "tags": [
+      {
+        "text": "Literature search"
+      },
+      {
+        "text": "Verified citations"
+      },
+      {
+        "text": "Free tier",
+        "type": "free"
+      },
+      {
+        "text": "Agent integrations"
+      }
+    ],
+    "features": [
+      "Deep search agent reads thousands of papers per query and returns ranked, relevance-explained results",
+      "Clarifying questions before each search steer the agent toward the actual research goal",
+      "Tailored writing delivers cited reports and custom tables with every citation verified against real publications",
+      "Paper monitoring sends alerts when new relevant work is published",
+      "Agent connections let Claude, ChatGPT and other AI tools call Undermind's search directly"
+    ],
+    "pros": [
+      "Finds papers that keyword search and generic chatbots miss - built for narrow, technical questions",
+      "Every claim links to a real publication, so the deliverable survives editorial and peer review",
+      "Academic pricing ($16/mo Pro) against industry $60 keeps it reachable for students and freelancers",
+      "The free tier includes deep search, reports and workspaces - not a crippled demo"
+    ],
+    "cons": [
+      "Pro is annual-only in documented pricing, and the academic/industry split means companies pay roughly 4x ($16 vs $60)",
+      "Scholarly literature only - no market sizing, consumer sentiment or general web coverage",
+      "Free-tier rate limits are real but not spelled out publicly, so heavy users upgrade fast",
+      "Agent connections route queries through third-party AI systems - a consideration for confidential R&D"
+    ],
+    "faq": [
+      {
+        "question": "How is Undermind different from Elicit or Consensus?",
+        "answer": "Depth versus speed. Undermind runs long, multi-step searches and reads thousands of papers per question; [Elicit](/tools/elicit/) is stronger at structured extraction across many papers at once, and [Consensus](/tools/consensus/) gives fast evidence-based yes/no answers. For a narrow technical question where keyword search fails, Undermind digs deeper."
+      },
+      {
+        "question": "Is the free plan actually usable?",
+        "answer": "Yes - it includes deep search, cited reports, shared workspaces and agent connections under standard rate limits, designed for exploratory research. Expect to hit limits on heavy use; Pro raises limits 10x and adds full-text analysis."
+      },
+      {
+        "question": "Why is industry pricing so much higher?",
+        "answer": "The official pricing splits academic and industry users: Pro is $16/mo academic versus $60/mo industry, both billed annually. The academic rate targets students and researchers; companies pay the standard B2B rate. Check the academic/industry toggle on the official page before paying."
+      }
+    ],
+    "content": "Undermind is a deep-search agent for scientific literature - you describe a research goal, it asks clarifying questions, then reads thousands of papers and returns ranked, relevant results with every citation verified against real publications. Where [Perplexity](/tools/perplexity/) answers general questions fast, Undermind grinds through the long tail of a narrow technical question. The client list explains the positioning: over 1,000 GSK scientists and nine US Department of Energy national labs use it.\n\n## What the plans actually cost\n\nThe official pricing page routes to the homepage, so figures are cross-checked against 2026 reviews that quote the official academic/industry pricing toggle (verified 2026-11-27). Free: $0 with standard rate limits, core AI models, deep search, cited reports, shared workspaces and agent connections. Pro is billed annually and split by user type: $16/mo for academic users, $60/mo for industry - companies pay roughly 4x. Pro raises limits 10x and adds the latest models, full-text analysis, and unlimited workspaces and paper libraries. Team adds central billing, member management and priority support at $15/person/mo academic or $60/person/mo industry. Enterprise is custom with SSO and admin controls. Confirm the academic/industry toggle in-app before paying - it is the one detail that changes the invoice.\n\n## Where the money angle sits\n\nFreelance research services are the direct route: systematic literature reviews sell for $200-800 a job on [Upwork](/tools/upwork/) and [Fiverr](/tools/fiverr/), and a tool that compresses two weeks of screening into an afternoon changes the hourly math - the $16 academic Pro tier pays for itself on one gig. Grad students and consultants use it for grant background sections and due-diligence memos. Content agencies in health, finance and B2B tech niches sell evidence-backed articles where client-facing citations matter; the verified-citation design means the deliverable survives editorial review. The [literature review tools comparison](/articles/best-ai-literature-review-tools-2026-elicit-vs-scite-vs-researchrabbit-vs-litmaps/) maps where Undermind sits against [Elicit](/tools/elicit/) and [SciSpace](/tools/scispace/).\n\n## The honest drawbacks\n\nTwo pricing quirks: Pro is annual-only in the documented pricing (no monthly option), and the academic/industry split prices a company at $60 where a student pays $16. Undermind only covers scholarly literature - for market sizing, consumer sentiment or general web research, [Perplexity](/tools/perplexity/) and [Exa](/tools/exa-ai/) remain the right tools, and our [market research comparison](/articles/best-ai-market-research-tools-2026-gummysearch-vs-perplexity-vs-consensus-vs-chatgpt/) covers that ground. Free-tier rate limits are real but not spelled out publicly, so heavy users should expect to upgrade quickly. Agent connections to Claude and ChatGPT mean queries flow through third-party systems - fine for published science, worth thinking about for confidential R&D. Against [Consensus](/tools/consensus/) it trades speed for depth, and [Scite](/tools/scite/) owns citation-context analysis.\n\n## Bottom line\n\nFor deep, narrow literature questions - the kind keyword search and generic chatbots handle badly - Undermind is the strongest agent available, and the free tier is genuinely usable for exploratory work. Academic Pro at $16/mo is an easy purchase for anyone paid to read papers. Current plans sit on [undermind.ai](https://www.undermind.ai/).",
+    "published": true
+  },
+  {
+    "name": "CodeRabbit",
+    "slug": "coderabbit",
+    "url": "https://www.coderabbit.ai/",
+    "category": "AI Development",
+    "price": "From $24/user/mo · 14-day trial",
+    "last_verified": "2026-11-27",
+    "rating": "4.1",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "color": "#F97316",
+    "platform": "GitHub, GitLab, Bitbucket, Azure DevOps; CLI; IDE extensions; MCP and API access; Slack integration on Team+",
+    "description": "AI code reviewer for pull requests, CLI and IDE loops - learns from feedback, one-click fixes, triage queues and security monitoring. From $24/user/mo with a 14-day trial.",
+    "pricing_details": "Verified on coderabbit.ai/pricing, 2026-11-27. Essentials: $24/user/mo - 1 connected repo, 5 reviews/hour, 5 MCP connections, agentic review across PR/CLI/IDE/agent loops, learning from feedback, chat, pre-merge checks, slop detection, 1-click fixes, Jira/Linear integration, API + MCP. Team: $48/user/mo - 5 repos, 8 reviews/hour, 10 MCP, unit-test generation, finishing touches, post-merge actions, triage (priority PR queue, review guidance, triage rules, Slack), change stack chat, 10 custom pre-merge checks. Advanced: $72/user/mo - 10 repos, 10 reviews/hour, 15 MCP, security-informed prioritization, blast radius audit, architecture impact review, continuous security monitoring (severity/exploitability/reachability), security merge blocking, 20 custom checks. Enterprise: custom - 20 repos, 12 reviews/hour, multi-org management, RBAC/SSO/audit logs, admin API, self-hosted deployment, support SLA. All paid plans include a 14-day free trial; the page lists no permanent free plan and no annual discount. Overages are purchasable with budget caps. Two usage-based add-ons live outside plans: Deep Scan (whole-codebase security sweep) and Agent (Slack-driven task automation).",
+    "tags": [
+      {
+        "text": "Code review"
+      },
+      {
+        "text": "PR automation"
+      },
+      {
+        "text": "Security scanning"
+      },
+      {
+        "text": "14-day trial"
+      }
+    ],
+    "features": [
+      "Agentic code review across PRs, CLI, IDE and agent loops with 1-click fixes and pre-merge checks",
+      "Learns from your feedback and supports chat with the reviewer on any diff",
+      "Slop detection flags low-effort AI-generated code before it merges",
+      "Triage queues, unit-test generation and post-merge actions on Team and above",
+      "Security layer on Advanced: blast-radius audits, continuous monitoring and security-based merge blocking"
+    ],
+    "pros": [
+      "Review latency drops from hours to minutes - the 14-day trial proves it on your own codebase",
+      "Triage queues prioritize what a senior reviewer would actually look at first",
+      "MCP and API access slots the reviewer into existing agent workflows",
+      "Deep Scan productizes whole-codebase security audits you can bill to clients"
+    ],
+    "cons": [
+      "Per-user pricing stacks fast: five developers on Team cost $240/mo, ten on Advanced $720/mo",
+      "Repo allowances are tight (Essentials covers one repo) and hourly review caps throttle busy merge days",
+      "No permanent free plan or annual discount listed on the current pricing page",
+      "Week-one noise on unfamiliar codebases and niche frameworks while the agent learns"
+    ],
+    "faq": [
+      {
+        "question": "Is there a free version of CodeRabbit?",
+        "answer": "The current pricing page lists no permanent free plan - paid tiers start at $24/user/mo, all with a 14-day free trial. CodeRabbit was known for a free open-source tier earlier; if you maintain an OSS repo, verify your repo's status on the site before planning around it."
+      },
+      {
+        "question": "How is CodeRabbit different from Copilot or Cursor?",
+        "answer": "They cover different halves of the loop. [GitHub Copilot](/tools/github-copilot/) and [Cursor](/tools/cursor/) write code; CodeRabbit reviews what gets written - in the PR, with learning from your feedback and security checks. Most teams run both: a writing assistant plus a review layer."
+      },
+      {
+        "question": "What is CodeRabbit Deep Scan?",
+        "answer": "A separate usage-based product that sweeps an entire codebase like a security engineer - findings ranked by exploitability with fix guidance. It fits fixed-price audit engagements on inherited or acquired codebases, complementing the per-PR review."
+      }
+    ],
+    "content": "CodeRabbit is an AI code reviewer that sits in your pull requests - it reviews every diff, learns from your feedback, and applies one-click fixes. Where [GitHub Copilot](/tools/github-copilot/) writes code and [Claude Code](/tools/claude-code/) drives the terminal, CodeRabbit is the second pair of eyes that never gets tired of reading diffs. For freelancers and agencies, that second pair of eyes is billable time recovered.\n\n## What the plans actually cost\n\nVerified on coderabbit.ai/pricing, 2026-11-27. Essentials costs $24/user/mo with 1 connected repo, 5 reviews per hour and 5 MCP connections. Team at $48/user/mo raises that to 5 repos and 8 reviews/hour, adding unit-test generation, triage queues (prioritized PR reviews with Slack integration), change-stack chat and post-merge actions. Advanced at $72/user/mo goes to 10 repos, 10 reviews/hour, plus the security layer: risk-prioritized findings, blast-radius audits, continuous security monitoring and security-based merge blocking. Enterprise is custom - 20 repos, SSO, RBAC, admin API, self-hosted deployment and support SLAs. Every paid plan carries a 14-day free trial; the current page lists no permanent free plan and no annual discount. Two usage-based add-ons live outside the plans: Deep Scan (whole-codebase security sweep) and Agent (Slack-driven task automation).\n\n## Where the money angle sits\n\nThe math that matters is review hours. An agency with five developers on Team spends $240/mo and typically recovers 3-6 hours per developer per week of review back-and-forth - at contract rates the subscription pays for itself in the first week. Solo contractors use Essentials to ship client work with a reviewer attached, and sell \"senior review included\" as a differentiator. Deep Scan opens a productized audit: a fixed-price security sweep of an acquired or inherited codebase, billed to the client. Open-source maintainers get review coverage without burnout - note the current page no longer lists a permanent OSS free tier, so verify your repo's status before planning around it. Pairs well with [Aider](/tools/aider/) and [Cline](/tools/cline/) workflows where AI-generated code needs a review layer, and our [coding assistants comparison](/articles/best-ai-coding-assistants-2026/) maps the full stack.\n\n## The honest drawbacks\n\nPer-user pricing stacks fast: five developers on Team is $240/mo, ten on Advanced is $720/mo. Repo allowances are tight - Essentials covers one repo, which rules out contractors juggling several client codebases unless they upgrade. Hourly review caps (5-12 per hour by tier) throttle busy merge days, and overages are usage-priced. No annual discount is published, and the free-for-open-source arrangement that made CodeRabbit popular is not on the current page. Review quality on niche frameworks and internal DSLs produces noise - the agent learns from feedback, but week one on an unfamiliar codebase needs patience. When the reviewed code is itself AI-generated at volume, [Cursor](/tools/cursor/) or [Windsurf](/tools/windsurf/) workflows surface issues CodeRabbit then re-flags - some overlap is inherent.\n\n## Bottom line\n\nCodeRabbit is the easiest yes in AI dev tooling for teams whose bottleneck is review latency: the 14-day trial settles the question on your real codebase. Solo devs with one repo should weigh $24/mo against their actual review backlog. Current plans sit on the [CodeRabbit pricing page](https://www.coderabbit.ai/pricing).",
+    "published": true
   }
 ]

@@ -1,6 +1,6 @@
 # AI Tool Box (aitoolbox.hk)
 
-> A curated AI tool directory & review platform for Hong Kong and global English-speaking users. Currently lists 311 AI tools across 22 categories (AI Income, AI Video, AI Image, AI Development, AI Writing, AI Marketing, AI Audio, AI Design, AI Coding, AI Productivity, AI Chat, AI Automation, AI E-commerce, AI Agents, AI SEO, AI Search, AI Translation, AI Website Builder, Market Research, AI Office, AI Research, AI API), with editor-tested reviews covering features, pricing, pros/cons and use cases. The site is updated daily.
+> A curated AI tool directory & review platform for Hong Kong and global English-speaking users. Currently lists 316 AI tools across 22 categories (AI Income, AI Video, AI Image, AI Development, AI Writing, AI Marketing, AI Audio, AI Design, AI Coding, AI Productivity, AI Chat, AI Automation, AI E-commerce, AI Agents, AI SEO, AI Search, AI Translation, AI Website Builder, AI Research, Market Research, AI Office, AI API), with editor-tested reviews covering features, pricing, pros/cons and use cases. The site is updated daily.
 
 <!-- llms.txt — machine-readable site description for AI models -->
 <!-- Spec: https://llmstxt.org -->
@@ -16,7 +16,7 @@
 ## Core Pages (priority crawl)
 
 - [Home](https://www.aitoolbox.hk/): featured, latest and hot AI tools
-- [All Tools](https://www.aitoolbox.hk/tools/): flat catalog of all 311 tools with search and price filters
+- [All Tools](https://www.aitoolbox.hk/tools/): flat catalog of all 316 tools with search and price filters
 - [Category Overview](https://www.aitoolbox.hk/category/): all 22 category pages with a quick-reference table
 - [Top Rated](https://www.aitoolbox.hk/best/): top tools ranked by the public scoring rubric
 - [Recently Reviewed](https://www.aitoolbox.hk/new/): newly listed and re-checked tool reviews, newest first
@@ -25,16 +25,16 @@
 - [Articles](https://www.aitoolbox.hk/articles/): original hands-on reviews, comparisons and guides (236 articles)
 - [Full content for AI models](https://www.aitoolbox.hk/llms-full.txt): llms-full.txt — every tool and article in one plain-text file
 
-## Important Tool Pages (top 5 by rating per category, 311 tools total)
+## Important Tool Pages (top 5 by rating per category, 316 tools total)
 
-### AI Income (59)
+### AI Income (60)
 - [Substack](https://www.aitoolbox.hk/tools/substack/): Substack is a newsletter platform with billing built in - you write posts, they go out by email and live on…
 - [Patreon](https://www.aitoolbox.hk/tools/patreon/): Patreon is a membership billing system for creators - you set up tiers ($5 for bonus posts, $15 for a private…
 - [Fiverr](https://www.aitoolbox.hk/tools/fiverr/): The biggest fixed-price freelance marketplace where you sell services - AI automation builds, video editing…
 - [Udemy](https://www.aitoolbox.hk/tools/udemy/): The world's biggest online course marketplace: publish free, teach 70M+ students, and earn 97% on students…
 - [Etsy](https://www.aitoolbox.hk/tools/etsy/): The marketplace where you can sell digital products - templates, printables, wall art - to 80M+ existing…
 
-### AI Video (28)
+### AI Video (30)
 - [Vidu AI](https://www.aitoolbox.hk/tools/vidu-ai/): Vidu is the AI video generator that wins on one specific thing most models are bad at: keeping the same…
 - [Kapwing](https://www.aitoolbox.hk/tools/kapwing/): Browser-based video and content editor that cuts, captions, resizes, and generates short-form social clips in…
 - [Kaiber](https://www.aitoolbox.hk/tools/kaiber/): Kaiber is the AI video platform that musicians and artists actually use, because it started with the one…
@@ -48,7 +48,7 @@
 - [Freepik AI](https://www.aitoolbox.hk/tools/freepik-ai/): Freepik AI design suite built into the world's biggest stock asset library. Generates images, removes…
 - [Let's Enhance](https://www.aitoolbox.hk/tools/lets-enhance/): Let's Enhance is a browser-based AI tool that upscales and cleans images. It takes a blurry, low-resolution…
 
-### AI Development (21)
+### AI Development (22)
 - [LM Studio](https://www.aitoolbox.hk/tools/lm-studio/): LM Studio is a free desktop app that runs open-weight LLMs - Llama, Qwen, DeepSeek, Gemma, Mistral - entirely…
 - [GitLab](https://www.aitoolbox.hk/tools/gitlab/): The DevSecOps platform that puts repos, CI/CD, security scanning and deployment in one app - a serious pick…
 - [Ollama](https://www.aitoolbox.hk/tools/ollama/): Ollama is a free, open-source runtime that pulls open-weight models - Llama, Qwen, DeepSeek, Gemma, Mistral…
@@ -153,6 +153,13 @@
 - [Elementor](https://www.aitoolbox.hk/tools/elementor/): The WordPress page builder behind millions of sites, now bundling AI copy, images and CSS into every tier…
 - [Carrd](https://www.aitoolbox.hk/tools/carrd/): A one-page site builder at $19 per year - the cheapest legitimate way to put a funnel, link-in-bio or product…
 
+### AI Research (6)
+- [Elicit](https://www.aitoolbox.hk/tools/elicit/): Elicit is an AI research assistant for academic literature - it searches 138 million papers and 545,000…
+- [Scite](https://www.aitoolbox.hk/tools/scite/): Scite analyzes 1.6B+ citation statements to label every citation as supporting, contrasting or mentioning -…
+- [Litmaps](https://www.aitoolbox.hk/tools/litmaps/): Litmaps turns a seed paper into a visual citation map and alerts you when new work connects to it. Sell…
+- [Consensus](https://www.aitoolbox.hk/tools/consensus/): A search engine that answers questions with what peer-reviewed research actually says - every claim tied to…
+- [SciSpace](https://www.aitoolbox.hk/tools/scispace/): AI research agent over a 280M+ paper corpus: chat with PDFs, run literature reviews and systematic reviews…
+
 ### Market Research (6)
 - [Brand24](https://www.aitoolbox.hk/tools/brand24/): Brand24 tracks your brand across 25M+ social, news, blog, forum and review sources with AI sentiment, anomaly…
 - [Brandwatch](https://www.aitoolbox.hk/tools/brandwatch/): Enterprise consumer intelligence with a 1.4-1.7 trillion-conversation archive and Iris AI anomaly alerts…
@@ -166,13 +173,6 @@
 - [Comet](https://www.aitoolbox.hk/tools/comet/): Comet is an AI-powered task manager that uses natural language processing to organize your day. It…
 - [Gamma](https://www.aitoolbox.hk/tools/gamma/): Gamma is an AI-powered presentation tool that creates professional slides automatically. Perfect for quick…
 - [Zendesk](https://www.aitoolbox.hk/tools/zendesk/): Zendesk is the support desk more than 170,000 companies already run. The money is in the setup, the…
-
-### AI Research (5)
-- [Elicit](https://www.aitoolbox.hk/tools/elicit/): Elicit is an AI research assistant for academic literature - it searches 138 million papers and 545,000…
-- [Scite](https://www.aitoolbox.hk/tools/scite/): Scite analyzes 1.6B+ citation statements to label every citation as supporting, contrasting or mentioning -…
-- [Litmaps](https://www.aitoolbox.hk/tools/litmaps/): Litmaps turns a seed paper into a visual citation map and alerts you when new work connects to it. Sell…
-- [Consensus](https://www.aitoolbox.hk/tools/consensus/): A search engine that answers questions with what peer-reviewed research actually says - every claim tied to…
-- [SciSpace](https://www.aitoolbox.hk/tools/scispace/): AI research agent over a 280M+ paper corpus: chat with PDFs, run literature reviews and systematic reviews…
 
 ### AI API (5)
 - [OpenRouter](https://www.aitoolbox.hk/tools/open-router/): Unified API gateway that gives you access to 200+ AI models through a single endpoint. Monetization angle…
@@ -230,8 +230,8 @@
 - [DeepSeek V4 vs Mistral AI](https://www.aitoolbox.hk/vs/deepseek-v4-vs-mistral-ai/): pricing and feature comparison
 - [Descript vs ElevenLabs](https://www.aitoolbox.hk/vs/descript-vs-elevenlabs/): pricing and feature comparison
 - [Durable vs Webflow AI](https://www.aitoolbox.hk/vs/durable-vs-webflow-ai/): pricing and feature comparison
-- [Elicit vs Litmaps](https://www.aitoolbox.hk/vs/elicit-vs-litmaps/): pricing and feature comparison
 - [Elicit vs Scite](https://www.aitoolbox.hk/vs/elicit-vs-scite/): pricing and feature comparison
+- [Elicit vs Undermind](https://www.aitoolbox.hk/vs/elicit-vs-undermind/): pricing and feature comparison
 - [Etsy vs Patreon](https://www.aitoolbox.hk/vs/etsy-vs-patreon/): pricing and feature comparison
 - [Etsy vs Substack](https://www.aitoolbox.hk/vs/etsy-vs-substack/): pricing and feature comparison
 - [Exa AI vs Genspark](https://www.aitoolbox.hk/vs/exa-ai-vs-genspark/): pricing and feature comparison
@@ -260,7 +260,6 @@
 - [Klaviyo vs Shopify](https://www.aitoolbox.hk/vs/klaviyo-vs-shopify/): pricing and feature comparison
 - [Krea 2 vs Topaz Photo AI](https://www.aitoolbox.hk/vs/krea-2-vs-topaz-photo-ai/): pricing and feature comparison
 - [Leonardo AI vs Midjourney](https://www.aitoolbox.hk/vs/leonardo-ai-vs-midjourney/): pricing and feature comparison
-- [Litmaps vs Scite](https://www.aitoolbox.hk/vs/litmaps-vs-scite/): pricing and feature comparison
 - [LM Studio vs Ollama](https://www.aitoolbox.hk/vs/lm-studio-vs-ollama/): pricing and feature comparison
 - [Lokalise vs Phrase](https://www.aitoolbox.hk/vs/lokalise-vs-phrase/): pricing and feature comparison
 - [Looka vs Relume](https://www.aitoolbox.hk/vs/looka-vs-relume/): pricing and feature comparison
@@ -275,6 +274,7 @@
 - [Patreon vs Substack](https://www.aitoolbox.hk/vs/patreon-vs-substack/): pricing and feature comparison
 - [Relume vs Wix AI](https://www.aitoolbox.hk/vs/relume-vs-wix-ai/): pricing and feature comparison
 - [Runway vs Veo](https://www.aitoolbox.hk/vs/runway-vs-veo/): pricing and feature comparison
+- [Scite vs Undermind](https://www.aitoolbox.hk/vs/scite-vs-undermind/): pricing and feature comparison
 - [Semrush vs Surfer SEO](https://www.aitoolbox.hk/vs/semrush-vs-surfer-seo/): pricing and feature comparison
 - [Sora vs Veo](https://www.aitoolbox.hk/vs/sora-vs-veo/): pricing and feature comparison
 - [Soundraw vs Wondercraft AI](https://www.aitoolbox.hk/vs/soundraw-vs-wondercraft-ai/): pricing and feature comparison
@@ -300,7 +300,7 @@
 
 ## Update Frequency
 
-- Tool database: updated daily (311 tools listed)
+- Tool database: updated daily (316 tools listed)
 - Articles: new original reviews published regularly (236 total)
 - Ratings/pricing: recalibrated continuously
 
