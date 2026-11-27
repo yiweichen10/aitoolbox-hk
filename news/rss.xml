@@ -3,7 +3,63 @@
 <title>AI Tool Lab - AI News</title>
 <link>https://www.aitoolbox.hk/news/</link>
 <description>Daily AI news briefs with editorial analysis.</description>
-<lastBuildDate>Thu, 26 Nov 2026 02:03:26 GMT</lastBuildDate>
+<lastBuildDate>Fri, 27 Nov 2026 00:45:52 GMT</lastBuildDate>
+<item>
+<title>Sakana AI releases Namazu Small 30B reasoning model built on Nemotron 3 Nano</title>
+<link>https://www.aitoolbox.hk/news/2026-11-27-sakana-ai-releases-namazu-small-30b-reasoning-model-built-on/</link>
+<guid isPermaLink="true">https://www.aitoolbox.hk/news/2026-11-27-sakana-ai-releases-namazu-small-30b-reasoning-model-built-on/</guid>
+<pubDate>Fri, 27 Nov 2026 06:06:40 +0800</pubDate>
+<description>Sakana AI built Namazu Small, a 30B-A3B reasoning model, on NVIDIA's Nemotron 3 Nano pretrained base using its own continued pretraining and post-training. Across 25 benchmarks it averages 60.1, beating the 120B Nemotron 3 Super at 56.2 and the Nano baseline at 50.2. BrowseComp reaches 73.5 versus 36.1, while SimpleQA Verified falls to 6.8.</description>
+</item>
+<item>
+<title>Nvidia pauses server shipments to Malaysia, Singapore, Thailand and Indonesia</title>
+<link>https://www.aitoolbox.hk/news/2026-11-27-nvidia-pauses-server-shipments-to-malaysia-singapore-thailan/</link>
+<guid isPermaLink="true">https://www.aitoolbox.hk/news/2026-11-27-nvidia-pauses-server-shipments-to-malaysia-singapore-thailan/</guid>
+<pubDate>Fri, 27 Nov 2026 04:03:54 +0800</pubDate>
+<description>Citing a Wall Street Journal report, Nvidia told manufacturing partners including Dell and Super Micro to pause server shipments to Malaysia, Singapore, Thailand and Indonesia for an unspecified period while it checks compliance with U.S. export rules. Those markets became a route for remote access to Nvidia chips from China; the Institute for Progress estimates such data centers supply about 24% of China's AI computing power.</description>
+</item>
+<item>
+<title>Scott Aaronson says AI math proofs matter more than the Riemann result</title>
+<link>https://www.aitoolbox.hk/news/2026-11-27-scott-aaronson-says-ai-math-proofs-matter-more-than-the-riem/</link>
+<guid isPermaLink="true">https://www.aitoolbox.hk/news/2026-11-27-scott-aaronson-says-ai-math-proofs-matter-more-than-the-riem/</guid>
+<pubDate>Fri, 27 Nov 2026 03:31:46 +0800</pubDate>
+<description>Scott Aaronson, a complexity theorist and former OpenAI researcher, argues that AI's math breakthroughs matter less for their results than for the capability they demonstrate. He highlights OpenAI proofs that add matching lower bounds to faster matrix multiplication and Fourier transform algorithms, showing where speedups stop. He says he now believes a proof of P ≠ NP is near and claims AI labs hold undisclosed cryptography bombshells.</description>
+</item>
+<item>
+<title>OpenAI patches billing bug that changed GPT-6.2 usage limits</title>
+<link>https://www.aitoolbox.hk/news/2026-11-27-openai-patches-billing-bug-that-changed-gpt-6-2-usage-limits/</link>
+<guid isPermaLink="true">https://www.aitoolbox.hk/news/2026-11-27-openai-patches-billing-bug-that-changed-gpt-6-2-usage-limits/</guid>
+<pubDate>Fri, 27 Nov 2026 01:28:56 +0800</pubDate>
+<description>A billing bug during the GPT-6.2 rollout gave subscribers incorrect discounts, OpenAI Codex engineer Thibault Sottiaux said. After the fix, Astra users reach usage limits 40% faster and Sol users 25% faster than last week, though quotas still last longer than on GPT-6. Go, Plus, Pro and Business subscribers get an extra saved reset; Business users also receive free Fast Mode through year-end, with no retroactive charges.</description>
+</item>
+<item>
+<title>Grand Theft Auto VI sold $3.79B on day one without generative AI</title>
+<link>https://www.aitoolbox.hk/news/2026-11-27-grand-theft-auto-vi-sold-3-79b-on-day-one-without-generative/</link>
+<guid isPermaLink="true">https://www.aitoolbox.hk/news/2026-11-27-grand-theft-auto-vi-sold-3-79b-on-day-one-without-generative/</guid>
+<pubDate>Fri, 27 Nov 2026 00:00:00 +0800</pubDate>
+<description>Grand Theft Auto VI earned $3.79 billion in day-one retail sales and became the highest-rated game on Metacritic after a 13-year wait, according to TechCrunch. Rockstar built it without generative AI, with about 5,000 people working for more than a decade and 30,000 distinct nonplayable characters. Its launch coincided with Anthropic's record $81.3 billion IPO.</description>
+</item>
+<item>
+<title>42 state AGs seek to block Character.AI chat sale in bankruptcy</title>
+<link>https://www.aitoolbox.hk/news/2026-11-27-42-state-ags-seek-to-block-character-ai-chat-sale-in-bankrup/</link>
+<guid isPermaLink="true">https://www.aitoolbox.hk/news/2026-11-27-42-state-ags-seek-to-block-character-ai-chat-sale-in-bankrup/</guid>
+<pubDate>Thu, 26 Nov 2026 17:54:40 +0800</pubDate>
+<description>A bipartisan coalition of 42 state attorneys general is seeking to block Character.AI from auctioning user chat histories during Chapter 11 bankruptcy. The proposed sale covers more than 21 million U.S. accounts, including over 2.1 million registered to minors, with no requirement that a buyer honor existing privacy policies or let users delete data. Character.AI filed for bankruptcy in October.</description>
+</item>
+<item>
+<title>TheoPhysEval finds AI agents solve 49 of 50 physics problems</title>
+<link>https://www.aitoolbox.hk/news/2026-11-27-theophyseval-finds-ai-agents-solve-49-of-50-physics-problems/</link>
+<guid isPermaLink="true">https://www.aitoolbox.hk/news/2026-11-27-theophyseval-finds-ai-agents-solve-49-of-50-physics-problems/</guid>
+<pubDate>Wed, 25 Nov 2026 20:00:28 +0800</pubDate>
+<description>TheoPhysEval gives AI agents 50 unpublished, research-level theoretical physics problems that a world expert typically needs about a day to solve. GPT-6-Astra running in Codex answered 49 of 50 correctly after a single human prompt, at less than $3 of compute per correct answer. Removing web search and background papers changed accuracy only slightly, which the authors read as evidence of memorized literature.</description>
+</item>
+<item>
+<title>OpenAI and Cisco open-source Shirudo for live Linux defense</title>
+<link>https://www.aitoolbox.hk/news/2026-11-27-openai-and-cisco-open-source-shirudo-for-live-linux-defense/</link>
+<guid isPermaLink="true">https://www.aitoolbox.hk/news/2026-11-27-openai-and-cisco-open-source-shirudo-for-live-linux-defense/</guid>
+<pubDate>Tue, 24 Nov 2026 22:16:53 +0800</pubDate>
+<description>OpenAI and Cisco released Shirudo, a BSD-2-Clause eBPF runtime that lets approved AI agents deploy signed, temporary shields on running Linux systems while permanent patches are tested. A Codex-generated guard blocked a Java4Shell exploit against Elasticsearch 9.5.5 without a restart. Shields require a patched bpf-next kernel and TPM 2.0 attestation, and the project remains pre-release.</description>
+</item>
 <item>
 <title>S&amp;P puts Nvidia AA rating on negative watch over key-man risk</title>
 <link>https://www.aitoolbox.hk/news/2026-11-26-s-p-puts-nvidia-aa-rating-on-negative-watch-over-key-man-ris/</link>
@@ -157,61 +213,5 @@
 <guid isPermaLink="true">https://www.aitoolbox.hk/news/2026-11-22-claude-code-mode-experimental/</guid>
 <pubDate>Sun, 22 Nov 2026 00:00:00 +0800</pubDate>
 <description>Claude Code's new Code Mode has the model write JavaScript to complete multi-step tool calls in one pass, supporting parallel execution and output filtering. The experimental feature is off by default; early tests report 22-23% lower bills and up to 77% token reduction.</description>
-</item>
-<item>
-<title>Nasdaq 100 Suffers Worst Week Since the Pandemic: Down 10.4%</title>
-<link>https://www.aitoolbox.hk/news/2026-11-22-nasdaq-100-worst-week-since-pandemic/</link>
-<guid isPermaLink="true">https://www.aitoolbox.hk/news/2026-11-22-nasdaq-100-worst-week-since-pandemic/</guid>
-<pubDate>Sat, 21 Nov 2026 18:27:44 +0800</pubDate>
-<description>The Nasdaq 100 fell 5.6% on Friday, closing the week down 10.4% - a 20% retreat from October highs that puts the index in bear-market territory. Nvidia plummeted 14% on Friday amid reported SEC scrutiny of its accounting practices.</description>
-</item>
-<item>
-<title>MiniMax MIM Achieves First Practical Breaks on Multiple NIST Candidates</title>
-<link>https://www.aitoolbox.hk/news/2026-11-21-minimax-mim-nist-cryptanalysis/</link>
-<guid isPermaLink="true">https://www.aitoolbox.hk/news/2026-11-21-minimax-mim-nist-cryptanalysis/</guid>
-<pubDate>Sat, 21 Nov 2026 00:00:00 +0800</pubDate>
-<description>MiniMax's MIM delivered the first practical cryptanalysis breaks on several NIST candidate algorithms, solving 55 previously unsolved McEliece challenge instances - up to a 43,000x speedup over prior records.</description>
-</item>
-<item>
-<title>OpenHands Hands CVE Remediation to an Agent Pipeline</title>
-<link>https://www.aitoolbox.hk/news/2026-11-21-openhands-agent-cve-remediation/</link>
-<guid isPermaLink="true">https://www.aitoolbox.hk/news/2026-11-21-openhands-agent-cve-remediation/</guid>
-<pubDate>Sat, 21 Nov 2026 00:00:00 +0800</pubDate>
-<description>October set a record with 17,000 new CVEs. OpenHands now routes most fixes through agents: mirrors cut fixable criticals from 87 to 5 and highs from 1,997 to 188.</description>
-</item>
-<item>
-<title>Anthropic Slides 9% on Day Two, Nears $83 IPO Price</title>
-<link>https://www.aitoolbox.hk/news/2026-11-21-anthropic-day-two-slide/</link>
-<guid isPermaLink="true">https://www.aitoolbox.hk/news/2026-11-21-anthropic-day-two-slide/</guid>
-<pubDate>Sat, 21 Nov 2026 00:00:00 +0800</pubDate>
-<description>Shares closed at $88.30 on the second trading day, down 9%, with the Nasdaq now down 5% year-to-date. Asian stocks had their worst week since 2020; SoftBank fell 14.5% in a day and Micron 12%.</description>
-</item>
-<item>
-<title>METR Update: AI Task Time Horizon Doubles Every 3.6 Months</title>
-<link>https://www.aitoolbox.hk/news/2026-11-21-metr-task-horizon-doubling/</link>
-<guid isPermaLink="true">https://www.aitoolbox.hk/news/2026-11-21-metr-task-horizon-doubling/</guid>
-<pubDate>Sat, 21 Nov 2026 00:00:00 +0800</pubDate>
-<description>Covering 15 models through GPT-6 Astra and Opus 5.5, the merged TH1.1+TH2 suite shows a 3.61-month doubling cycle; the TH2 verifiable subset doubles in just 1.65 months.</description>
-</item>
-<item>
-<title>Thinking Machines Lab Releases Laptop-Runnable Inkling 2 Mini</title>
-<link>https://www.aitoolbox.hk/news/2026-11-21-inkling-2-mini-laptop-model/</link>
-<guid isPermaLink="true">https://www.aitoolbox.hk/news/2026-11-21-inkling-2-mini-laptop-model/</guid>
-<pubDate>Sat, 21 Nov 2026 00:00:00 +0800</pubDate>
-<description>A recurrent transformer whose middle 12 layers run 3 times per token. MoE total parameters 26.4B with 3.4B active, around 20GB - it runs on a 32GB Mac.</description>
-</item>
-<item>
-<title>Runway's Software Factory: Agents Now Land 38% of Merged PRs</title>
-<link>https://www.aitoolbox.hk/news/2026-11-21-runway-software-factory-agent-prs/</link>
-<guid isPermaLink="true">https://www.aitoolbox.hk/news/2026-11-21-runway-software-factory-agent-prs/</guid>
-<pubDate>Sat, 21 Nov 2026 00:00:00 +0800</pubDate>
-<description>Runway reports agents drove 38% of merged PRs in October - up from 0.1% in June - with monthly merges going from 2 to over 3,000, and first-approval wait times down from 2.3 hours to 5 minutes.</description>
-</item>
-<item>
-<title>Browser Use 1.0: 24 Tools Consolidated Into One</title>
-<link>https://www.aitoolbox.hk/news/2026-11-21-browser-use-1-0-one-tool/</link>
-<guid isPermaLink="true">https://www.aitoolbox.hk/news/2026-11-21-browser-use-1-0-one-tool/</guid>
-<pubDate>Sat, 21 Nov 2026 00:00:00 +0800</pubDate>
-<description>Browser Use 1.0 replaces 24 discrete action tools with a single Python REPL plus CDP. Same-model benchmark scores rose 14-33 points while costs fell to between 1/2.7 and 1/5.2 of previous levels.</description>
 </item>
 </channel></rss>

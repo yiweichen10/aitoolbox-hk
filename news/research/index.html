@@ -63,7 +63,7 @@
     <main class="news-page news-category-page">
         <div class="news-header">
             <div class="news-header-top">
-                <div><h1 class="news-page-title">Research AI News</h1><p class="news-page-date">11 briefs &middot; Papers, benchmarks and safety findings.</p></div>
+                <div><h1 class="news-page-title">Research AI News</h1><p class="news-page-date">14 briefs &middot; Papers, benchmarks and safety findings.</p></div>
             <div class="news-share">
                 <span>Share</span>
                 <button class="news-share-btn" onclick="copyNewsLink()">Copy link</button>
@@ -74,6 +74,27 @@
             <div class="news-catnav"><a href="/news/models/" class="news-catnav-link">Models</a> <a href="/news/products/" class="news-catnav-link">Products</a> <a href="/news/industry/" class="news-catnav-link">Industry</a> <a href="/news/research/" class="news-catnav-link active">Research</a> </div>
         </div>
         <div class="news-cards">            <article class="news-item" data-category="research">
+                <i class="news-item-dot" style="background:#0f766e"></i>
+                <div class="news-item-meta"><span class="news-item-cat" style="color:#0f766e">Research</span><time datetime="2026-11-27T06:06:40+08:00">2026-11-27 06:06</time></div>
+                <h2 class="news-item-title"><a href="/news/2026-11-27-sakana-ai-releases-namazu-small-30b-reasoning-model-built-on/">Sakana AI releases Namazu Small 30B reasoning model built on Nemotron 3 Nano</a></h2>
+                <p class="news-item-summary">Sakana AI built Namazu Small, a 30B-A3B reasoning model, on NVIDIA's Nemotron 3 Nano pretrained base using its own continued pretraining and post-training. Across 25 benchmarks it averages 60.1, beating the 120B Nemotron 3 Super at 56.2 and the Nano baseline at 50.2. BrowseComp reaches 73.5 versus 36.1, while SimpleQA Verified falls to 6.8.</p>
+                <div class="news-item-commentary"><span class="news-item-commentary-tag">Why</span>For teams weighing open models, the result shows post-training can matter more than raw scale: a 30B model tuned for web research and long documents outperformed a four-times-larger Nemotron on Sakana's suite. The tradeoff is clear. Search-heavy tasks improve sharply, but closed-book knowledge regresses, so buyers should match the model to retrieval-heavy workflows rather than treat the headline average as universal.</div>
+                <div class="news-item-foot"><span>Source: MarkTechPost (RSS)</span><a href="https://www.marktechpost.com/2026/11/26/sakana-ai-namazu-small-30b-nemotron-3-nano/" target="_blank" rel="noopener nofollow">Read original &rarr;</a></div>
+            </article>            <article class="news-item" data-category="research">
+                <i class="news-item-dot" style="background:#0f766e"></i>
+                <div class="news-item-meta"><span class="news-item-cat" style="color:#0f766e">Research</span><time datetime="2026-11-25T20:00:28+08:00">2026-11-27 20:00</time></div>
+                <h2 class="news-item-title"><a href="/news/2026-11-27-theophyseval-finds-ai-agents-solve-49-of-50-physics-problems/">TheoPhysEval finds AI agents solve 49 of 50 physics problems</a></h2>
+                <p class="news-item-summary">TheoPhysEval gives AI agents 50 unpublished, research-level theoretical physics problems that a world expert typically needs about a day to solve. GPT-6-Astra running in Codex answered 49 of 50 correctly after a single human prompt, at less than $3 of compute per correct answer. Removing web search and background papers changed accuracy only slightly, which the authors read as evidence of memorized literature.</p>
+                <div class="news-item-commentary"><span class="news-item-commentary-tag">Why</span>A 49-of-50 score on verifiable calculations says more about agents as research assistants than about autonomous discovery: the problems are hard but have checkable answers, and near-identical results without web access point to training-data recall. Theoretical physicists gain a tool for routine derivations, yet the paper explicitly notes that agent-led breakthroughs remain absent. Benchmarks like this make that gap measurable instead of rhetorical.</div>
+                <div class="news-item-foot"><span>Source: Ars Technica AI (RSS)</span><a href="https://arstechnica.com/ai/2026/11/ai-can-do-the-calculations-physicists-are-figuring-out-what-comes-next/" target="_blank" rel="noopener nofollow">Read original &rarr;</a></div>
+            </article>            <article class="news-item" data-category="research">
+                <i class="news-item-dot" style="background:#0f766e"></i>
+                <div class="news-item-meta"><span class="news-item-cat" style="color:#0f766e">Research</span><time datetime="2026-11-24T22:16:53+08:00">2026-11-27 22:16</time></div>
+                <h2 class="news-item-title"><a href="/news/2026-11-27-openai-and-cisco-open-source-shirudo-for-live-linux-defense/">OpenAI and Cisco open-source Shirudo for live Linux defense</a></h2>
+                <p class="news-item-summary">OpenAI and Cisco released Shirudo, a BSD-2-Clause eBPF runtime that lets approved AI agents deploy signed, temporary shields on running Linux systems while permanent patches are tested. A Codex-generated guard blocked a Java4Shell exploit against Elasticsearch 9.5.5 without a restart. Shields require a patched bpf-next kernel and TPM 2.0 attestation, and the project remains pre-release.</p>
+                <div class="news-item-commentary"><span class="news-item-commentary-tag">Why</span>Shirudo attacks the patch window, when a known exploit and a legitimate request can share the same kernel path. Requiring signed, TPM-attested shields and operator approval offers a middle ground between blocking a service and leaving it exposed. The steep requirements, including a patched kernel, limit early adoption to teams that control their infrastructure and can validate a shield against real workloads.</div>
+                <div class="news-item-foot"><span>Source: MarkTechPost (RSS)</span><a href="https://www.marktechpost.com/2026/11/24/openai-cisco-shirudo-ebpf-linux-runtime/" target="_blank" rel="noopener nofollow">Read original &rarr;</a></div>
+            </article>            <article class="news-item" data-category="research">
                 <i class="news-item-dot" style="background:#0f766e"></i>
                 <div class="news-item-meta"><span class="news-item-cat" style="color:#0f766e">Research</span><time datetime="2026-11-26T00:47:14+08:00">2026-11-26 00:47</time></div>
                 <h2 class="news-item-title"><a href="/news/2026-11-26-rusi-researcher-details-why-militaries-target-cloud-data-cen/">RUSI researcher details why militaries target cloud data centers</a></h2>
