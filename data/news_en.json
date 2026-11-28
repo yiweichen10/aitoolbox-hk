@@ -1,5 +1,49 @@
 [
  {
+  "id": "20261128-001",
+  "title": "OpenAI countersues Apple over trade secret theft and supplier coercion",
+  "summary": "OpenAI filed a countersuit in a California court on Friday, accusing Apple of stealing trade secrets and coercing shared suppliers. The complaint says a former OpenAI employee brought product plans to Apple after returning there. Apple sued OpenAI in summer over alleged employee poaching. OpenAI closed its $6.4 billion acquisition of Jony Ive's io studio and is building its own devices.",
+  "category": "products",
+  "source": "The Decoder (RSS)",
+  "source_url": "https://the-decoder.com/openai-countersues-apple-over-trade-secret-theft-and-alleged-coercion-of-shared-suppliers/",
+  "published_at": "2026-11-28T03:38:37+08:00",
+  "commentary": "The case shifts an employee-poaching dispute into supply-chain territory, where OpenAI claims Apple used leverage over shared manufacturers to constrain a future hardware rival. For suppliers, that turns a private contract decision into potential evidence in court. The timing also exposes how quickly a two-year ChatGPT-on-iPhone partnership can invert once both companies compete for the same device market.",
+  "slug": "2026-11-28-openai-countersues-apple-over-trade-secret-theft-and-supplie"
+ },
+ {
+  "id": "20261128-002",
+  "title": "Banned Nvidia Blackwell chips found in Shanghai data center, Bloomberg reports",
+  "summary": "Two Chinese companies installed Nvidia Blackwell chips at a Shanghai data center linked to Alice Huang, Bloomberg reports, citing regulatory filings. Shanghai Shuoyao pledged a GB300-NVL72 rack as collateral for a 96 million yuan ($14 million) loan; Shanghai Kezhan listed a GB200 server at the same site. Bloomberg traced the rack to Gigabyte through a serial number in a warranty database. Exporting the chips without a US license is banned.",
+  "category": "products",
+  "source": "The Decoder (RSS)",
+  "source_url": "https://the-decoder.com/banned-nvidia-blackwell-chips-turn-up-in-a-shanghai-data-center-linked-to-alice-huang-bloomberg-reports/",
+  "published_at": "2026-11-28T02:27:02+08:00",
+  "commentary": "The evidence here is unusually documentary: loan collateral records and a warranty database serial, not just intelligence estimates. That makes the finding harder for suppliers to wave away and raises the compliance bar for anyone financing or insuring high-end server racks. For export-control enforcement, the lesson is that secondary paperwork can expose hardware long after it leaves the factory.",
+  "slug": "2026-11-28-banned-nvidia-blackwell-chips-found-in-shanghai-data-center-"
+ },
+ {
+  "id": "20261128-003",
+  "title": "nexos.ai platform routes 200+ models through one governed AI gateway",
+  "summary": "nexos.ai says its AI Adoption Platform routes requests for more than 200 models through a single gateway that applies per-team budgets, access rules and audit logs. Smart Router selects models by cost, quality and latency; caching and context compression reduce token spend. The company cites SOC 2 Type 2, ISO 27001 and ISO 42001 certification, GDPR compliance, European hosting and zero data retention.",
+  "category": "research",
+  "source": "MarkTechPost (RSS)",
+  "source_url": "https://www.marktechpost.com/2026/11/26/nexos-ai-ai-gateway-200-models-governance/",
+  "published_at": "2026-11-27T11:43:35+08:00",
+  "commentary": "A single gateway that already carries budget and audit controls changes the buying decision for enterprise AI: procurement can approve one layer instead of reviewing every model vendor separately. That convenience comes with concentration risk, since routing quality and provider fallbacks become a shared point of failure. Certifications and European hosting matter here because compliance teams, not developers, often decide whether such a platform gets adopted.",
+  "slug": "2026-11-28-nexos-ai-platform-routes-200-models-through-one-governed-ai-"
+ },
+ {
+  "id": "20261128-004",
+  "title": "Tencent open-sources DFly2 drafter that reuses the target model's sparse KV cache",
+  "summary": "Tencent open-sourced DFly2, a 0.85-billion-parameter, five-layer drafter for sparse-attention models. Each draft layer reuses the target's KV cache and top-k indexer picks, adding no draft KV memory. Serving tests on DeepSeek-V4.1-Flash at 64K context show up to 81% higher throughput at matched per-user speed; greedy decoding speedup reaches 2.97x on H20 GPUs.",
+  "category": "research",
+  "source": "MarkTechPost (RSS)",
+  "source_url": "https://www.marktechpost.com/2026/11/26/tencent-dfly2-speculative-decoding-sparse-models/",
+  "published_at": "2026-11-27T11:31:30+08:00",
+  "commentary": "Memory is the real bottleneck in long-context serving, so a drafter that borrows the target's cache rather than building its own attacks cost at the right layer. The tradeoff is specificity: DFly2 depends on sparse indexers in the target model, and its smallest gains appear on Tencent's own Hy4 flash. Teams running dense models or short contexts will see little of that 81% headline number.",
+  "slug": "2026-11-28-tencent-open-sources-dfly2-drafter-that-reuses-the-target-mo"
+ },
+ {
   "id": "20261127-001",
   "title": "Sakana AI releases Namazu Small 30B reasoning model built on Nemotron 3 Nano",
   "summary": "Sakana AI built Namazu Small, a 30B-A3B reasoning model, on NVIDIA's Nemotron 3 Nano pretrained base using its own continued pretraining and post-training. Across 25 benchmarks it averages 60.1, beating the 120B Nemotron 3 Super at 56.2 and the Nano baseline at 50.2. BrowseComp reaches 73.5 versus 36.1, while SimpleQA Verified falls to 6.8.",
@@ -97,6 +141,17 @@
   "published_at": "2026-11-26T04:51:02+08:00",
   "commentary": "Export controls were framed as a hardware bottleneck, but the pressure point is shifting to model outputs: reasoning traces and token streams are now treated as strategic assets. The reported deal cancellation shows the cost landing in procurement plans, not just benchmarks. For labs outside the US, the trade-off is steeper: rent compute through intermediaries, accept slower domestic chips, or invest in their own training data. Each path raises the price of catching up.",
   "slug": "2026-11-26-us-chip-and-anti-distillation-curbs-slow-deepseek-moonshot-a"
+ },
+ {
+  "id": "20261128-005",
+  "title": "OpenAI says heavy ChatGPT users may hit limits sooner as it merges Chat and Work",
+  "summary": "OpenAI began rolling out a unified Chat and Work experience in ChatGPT to a small group of Pro subscribers, Thibault Sottiaux said. The two surfaces share one usage meter; OpenAI says most users should not see more frequent resets, though a small fraction of heavy users may hit limits sooner. Instant-model conversations stay unlimited and do not count toward the shared allowance, which OpenAI plans to extend in December.",
+  "category": "industry",
+  "source": "TechCrunch AI (RSS)",
+  "source_url": "https://techcrunch.com/2026/11/25/openai-says-heavy-chatgpt-users-may-hit-limits-sooner-as-it-merges-chat-and-work/",
+  "published_at": "2026-11-26T04:03:27+08:00",
+  "commentary": "Combining two interfaces into one quota pool makes the subscription simpler to navigate but quietly reprices the heaviest users, who lose separate buffers even if their total usage is unchanged. Keeping Instant unlimited preserves a fallback for routine work and may blunt the backlash. The December expansion will show whether unified workflows justify tighter reasoning-model access for paying subscribers.",
+  "slug": "2026-11-28-openai-says-heavy-chatgpt-users-may-hit-limits-sooner-as-it-"
  },
  {
   "id": "20261126-004",

@@ -3,7 +3,42 @@
 <title>AI Tool Lab - AI News</title>
 <link>https://www.aitoolbox.hk/news/</link>
 <description>Daily AI news briefs with editorial analysis.</description>
-<lastBuildDate>Sat, 28 Nov 2026 00:48:04 GMT</lastBuildDate>
+<lastBuildDate>Sat, 28 Nov 2026 00:52:45 GMT</lastBuildDate>
+<item>
+<title>OpenAI countersues Apple over trade secret theft and supplier coercion</title>
+<link>https://www.aitoolbox.hk/news/2026-11-28-openai-countersues-apple-over-trade-secret-theft-and-supplie/</link>
+<guid isPermaLink="true">https://www.aitoolbox.hk/news/2026-11-28-openai-countersues-apple-over-trade-secret-theft-and-supplie/</guid>
+<pubDate>Sat, 28 Nov 2026 03:38:37 +0800</pubDate>
+<description>OpenAI filed a countersuit in a California court on Friday, accusing Apple of stealing trade secrets and coercing shared suppliers. The complaint says a former OpenAI employee brought product plans to Apple after returning there. Apple sued OpenAI in summer over alleged employee poaching. OpenAI closed its $6.4 billion acquisition of Jony Ive's io studio and is building its own devices.</description>
+</item>
+<item>
+<title>Banned Nvidia Blackwell chips found in Shanghai data center, Bloomberg reports</title>
+<link>https://www.aitoolbox.hk/news/2026-11-28-banned-nvidia-blackwell-chips-found-in-shanghai-data-center-/</link>
+<guid isPermaLink="true">https://www.aitoolbox.hk/news/2026-11-28-banned-nvidia-blackwell-chips-found-in-shanghai-data-center-/</guid>
+<pubDate>Sat, 28 Nov 2026 02:27:02 +0800</pubDate>
+<description>Two Chinese companies installed Nvidia Blackwell chips at a Shanghai data center linked to Alice Huang, Bloomberg reports, citing regulatory filings. Shanghai Shuoyao pledged a GB300-NVL72 rack as collateral for a 96 million yuan ($14 million) loan; Shanghai Kezhan listed a GB200 server at the same site. Bloomberg traced the rack to Gigabyte through a serial number in a warranty database. Exporting the chips without a US license is banned.</description>
+</item>
+<item>
+<title>nexos.ai platform routes 200+ models through one governed AI gateway</title>
+<link>https://www.aitoolbox.hk/news/2026-11-28-nexos-ai-platform-routes-200-models-through-one-governed-ai-/</link>
+<guid isPermaLink="true">https://www.aitoolbox.hk/news/2026-11-28-nexos-ai-platform-routes-200-models-through-one-governed-ai-/</guid>
+<pubDate>Fri, 27 Nov 2026 11:43:35 +0800</pubDate>
+<description>nexos.ai says its AI Adoption Platform routes requests for more than 200 models through a single gateway that applies per-team budgets, access rules and audit logs. Smart Router selects models by cost, quality and latency; caching and context compression reduce token spend. The company cites SOC 2 Type 2, ISO 27001 and ISO 42001 certification, GDPR compliance, European hosting and zero data retention.</description>
+</item>
+<item>
+<title>Tencent open-sources DFly2 drafter that reuses the target model's sparse KV cache</title>
+<link>https://www.aitoolbox.hk/news/2026-11-28-tencent-open-sources-dfly2-drafter-that-reuses-the-target-mo/</link>
+<guid isPermaLink="true">https://www.aitoolbox.hk/news/2026-11-28-tencent-open-sources-dfly2-drafter-that-reuses-the-target-mo/</guid>
+<pubDate>Fri, 27 Nov 2026 11:31:30 +0800</pubDate>
+<description>Tencent open-sourced DFly2, a 0.85-billion-parameter, five-layer drafter for sparse-attention models. Each draft layer reuses the target's KV cache and top-k indexer picks, adding no draft KV memory. Serving tests on DeepSeek-V4.1-Flash at 64K context show up to 81% higher throughput at matched per-user speed; greedy decoding speedup reaches 2.97x on H20 GPUs.</description>
+</item>
+<item>
+<title>OpenAI says heavy ChatGPT users may hit limits sooner as it merges Chat and Work</title>
+<link>https://www.aitoolbox.hk/news/2026-11-28-openai-says-heavy-chatgpt-users-may-hit-limits-sooner-as-it-/</link>
+<guid isPermaLink="true">https://www.aitoolbox.hk/news/2026-11-28-openai-says-heavy-chatgpt-users-may-hit-limits-sooner-as-it-/</guid>
+<pubDate>Thu, 26 Nov 2026 04:03:27 +0800</pubDate>
+<description>OpenAI began rolling out a unified Chat and Work experience in ChatGPT to a small group of Pro subscribers, Thibault Sottiaux said. The two surfaces share one usage meter; OpenAI says most users should not see more frequent resets, though a small fraction of heavy users may hit limits sooner. Instant-model conversations stay unlimited and do not count toward the shared allowance, which OpenAI plans to extend in December.</description>
+</item>
 <item>
 <title>Sakana AI releases Namazu Small 30B reasoning model built on Nemotron 3 Nano</title>
 <link>https://www.aitoolbox.hk/news/2026-11-27-sakana-ai-releases-namazu-small-30b-reasoning-model-built-on/</link>
@@ -178,40 +213,5 @@
 <guid isPermaLink="true">https://www.aitoolbox.hk/news/2026-11-23-aa-evaluation-gpt-6-2-more-concise-but-less-transparent/</guid>
 <pubDate>Sun, 22 Nov 2026 17:41:37 +0800</pubDate>
 <description>AA personality benchmark: both GPT-6.2 models give answers 34–40% shorter, admitting uncertainty falls to 24 and 51, and transparency at 41 and 57 trails Claude's 81 and 90.</description>
-</item>
-<item>
-<title>FT investigation reveals Megaspeed chip transshipment network</title>
-<link>https://www.aitoolbox.hk/news/2026-11-23-ft-investigation-reveals-megaspeed-chip-transshipment-networ/</link>
-<guid isPermaLink="true">https://www.aitoolbox.hk/news/2026-11-23-ft-investigation-reveals-megaspeed-chip-transshipment-networ/</guid>
-<pubDate>Sun, 22 Nov 2026 08:47:52 +0800</pubDate>
-<description>An FT investigation alleges that some Nvidia chips at Megaspeed were suspected of being transshipped to China: its Malaysian subsidiary declared about $4.6 billion in imports from Aivres over one year, implicating Hu Xiaowei and Century Huatong, both subject to US and UK sanctions.</description>
-</item>
-<item>
-<title>Qwen4 Max Fixes a Tornado Framework Bug in a Single Call</title>
-<link>https://www.aitoolbox.hk/news/2026-11-22-qwen4-max-tornado-bug-fix/</link>
-<guid isPermaLink="true">https://www.aitoolbox.hk/news/2026-11-22-qwen4-max-tornado-bug-fix/</guid>
-<pubDate>Sun, 22 Nov 2026 00:00:00 +0800</pubDate>
-<description>Alibaba's flagship model landed on the Together inference platform with 1M context. Loading the entire Tornado repository - 650K tokens across 344 files - it produced a passing patch in 72 seconds for $0.69.</description>
-</item>
-<item>
-<title>OpenAI Ships GPT-Live-1.1 Voice Model on the API</title>
-<link>https://www.aitoolbox.hk/news/2026-11-22-openai-gpt-live-1-1-api/</link>
-<guid isPermaLink="true">https://www.aitoolbox.hk/news/2026-11-22-openai-gpt-live-1-1-api/</guid>
-<pubDate>Sun, 22 Nov 2026 00:00:00 +0800</pubDate>
-<description>The full-duplex voice model defaults to 128K context and is exclusive to OpenAI's cloud. A new standby idle billing mode costs $0.02/minute - 60% below the active rate of $0.05.</description>
-</item>
-<item>
-<title>Anthropic Mathematician Claims Claude Proof of the Riemann Hypothesis</title>
-<link>https://www.aitoolbox.hk/news/2026-11-22-anthropic-mathematician-riemann-proof/</link>
-<guid isPermaLink="true">https://www.aitoolbox.hk/news/2026-11-22-anthropic-mathematician-riemann-proof/</guid>
-<pubDate>Sun, 22 Nov 2026 00:00:00 +0800</pubDate>
-<description>Mathematician Alpöge says the claimed proof also covers the generalized Riemann hypothesis, published as 14 Lean packages spanning over 250,000 printed pages. Hours later, Stanford released a competing human-only draft by mathematician Masullo.</description>
-</item>
-<item>
-<title>Claude Code Launches Experimental Code Mode</title>
-<link>https://www.aitoolbox.hk/news/2026-11-22-claude-code-mode-experimental/</link>
-<guid isPermaLink="true">https://www.aitoolbox.hk/news/2026-11-22-claude-code-mode-experimental/</guid>
-<pubDate>Sun, 22 Nov 2026 00:00:00 +0800</pubDate>
-<description>Claude Code's new Code Mode has the model write JavaScript to complete multi-step tool calls in one pass, supporting parallel execution and output filtering. The experimental feature is off by default; early tests report 22-23% lower bills and up to 77% token reduction.</description>
 </item>
 </channel></rss>
