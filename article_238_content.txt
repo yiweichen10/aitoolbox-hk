@@ -1,0 +1,124 @@
+Translation API Pricing 2026: Azure vs Google vs Amazon vs DeepL
+
+Translating one million source characters into five languages costs $50 on Azure, $75 on Amazon, $90 on Google, and about $136 on DeepL at current rates.
+
+That 2.7x spread — for the same class of neural machine translation — is the published reality of translation API pricing in November 2026, and none of the four vendors makes the arithmetic easy to check. Google multiplies your bill by the number of target languages, Amazon expires its free allowance after twelve months, DeepL just retired the API plan most of its customers signed up for, and Azure — the cheapest of the four — buries a standing fee for custom models that can outcost the translations themselves. This guide prices all four engines on identical workloads, then walks through the billing rules that decide what you actually pay, because the sticker rate is the least interesting number on the page.
+
+## Translation API Pricing at a Glance
+
+Every rate below comes from the vendor's own pricing page or developer documentation, checked in late November 2026. Azure's S1 numbers are the East US USD retail list; DeepL's Growth overage is $27.50 per million on the USD price list (€22 in the EU store).
+
+| Vendor | Standard text (per 1M chars) | Document translation | Custom translation | Free allowance | Allowance permanence |
+|---|---|---|---|---|---|
+| Azure AI Translator | $10 | $15 per 1M chars; images $8 per 1K | $40 per 1M + $10/model/month hosting | 2M chars/month | Permanent |
+| Amazon Translate | $15 | $15 per 1M (real-time DOCX $30) | $60 per 1M (Active Custom) | 2M chars/month | First 12 months only |
+| Google Cloud Translation | $20 | $0.08 per page (NMT) | $80 per 1M, tiered down to $30 | 500K chars/month | Permanent |
+| DeepL API | ~$25–27.50 | 50K-char minimum per Office/PDF file | None (glossaries only) | 500K/month + one-time 1M | Free tier permanent; Developer credit never resets |
+| LibreTranslate (self-host) | $0 license | $0 | Retrain Argos models yourself | Unlimited | As long as you run the server |
+
+Three observations before the fine print. Azure Translator pricing is the lowest list rate in the market at $10 per million characters, and it has been since Microsoft repriced in 2025. Amazon Translate pricing sits in the middle at $15, matching its batch and real-time text rates. Google Cloud Translation pricing is the highest of the three hyperscalers at $20 for the NMT engine — and $80 if you touch a custom AutoML model. DeepL API pricing is the outlier: legacy Pro subscribers keep the $25 per million rate they signed at, while new customers land on a rebuilt plan structure with a $27.50 per million overage and a bundled yearly allowance.
+
+## The Billing Rules That Decide Your Bill
+
+The per-character sticker is a fraction of the story. Four mechanics move the real number.
+
+**The multi-language multiplier.** Azure, Amazon, and Google all bill characters per target language, and Google states it explicitly: a 5,000-character batch request with two target languages is metered at 10,000 characters. Five languages means five times the source volume on the invoice. DeepL is no escape — the API bills the source text of every request, so five targets equal five paid requests. Anyone budgeting a multilingual product should multiply first and rate-shop second.
+
+**Everything you send counts.** All four engines bill Unicode code points, which means spaces, punctuation, and markup are not free. Google's documentation is blunt: you pay for every character in a request, including characters that end up untranslated. DeepL extends this to documents — all content in an uploaded file counts toward billed characters, even passages the engine never touches. DeepL does offer one genuine discount here: with `tag_handling=html`, markup is excluded from billing, so web content costs only its visible text.
+
+**Failed work is billed unevenly.** Google only charges for operations that return successful translations. Azure and Amazon bill each request that executes. DeepL rejects same-language requests outright with an HTTP 400, so a configuration bug cannot silently burn quota there — the same bug against the other three is a paid round trip.
+
+**Real-time limits force batching.** Amazon caps a single real-time request at 10,000 bytes, so bulk content runs through its asynchronous batch jobs — same $15 rate, different plumbing. Google's default per-minute quota can throttle a large backfill until you request an increase.
+
+## Free Tiers: Permanent Versus Expiring
+
+The free allowances look interchangeable and are not. Azure's F0 tier grants 2 million characters every month with no expiration — enough to run a small app's translation permanently at zero cost. Amazon offers the same 2 million per month, but only for the first twelve months of the account; after that the bill starts at full rate with no warning banner on the pricing page. Google grants 500,000 characters monthly as a $10 credit, shared across its Basic and Advanced products, permanently. DeepL's free API tier is 500,000 characters monthly, and its new Developer plan adds a one-time 1 million character credit that never resets.
+
+The practical takeaway: a translation API free tier covers a weekend project on every platform, but only Azure's survives contact with a real user base, and Amazon's expires at the exact moment an app gains traction. Set a calendar reminder twelve months after enabling AWS if you go that route.
+
+## Worked Bills: Translation API Pricing at Real Volume
+
+The table below prices identical monthly workloads at list rates, with free tiers applied where they exist. DeepL assumes the Growth plan: 12 million characters per year bundled (about 1 million per month in steady use), then the $27.50 per million overage, plus the plan's base fee of roughly €23.80/month billed annually (about $26, per two independent trackers — DeepL does not print the monthly fee without an interactive signup flow).
+
+| Monthly workload | Azure | Amazon | Google | DeepL |
+|---|---|---|---|---|
+| 500K chars, one target | $0 (F0 covers it) | $0 year one, then $7.50 | $0 | $0 (Free tier) |
+| 1M source × 5 targets = 5M billed | $50 | $75 | $90 | ~$136 (Growth) |
+| 10M chars, one target | $100 | $150 | $190 | ~$274 (Growth) |
+| 50M chars, one target | $500 | $750 | $990 | ~$1,374 (Growth cap) |
+
+The math behind each row is worth walking through, because the differences compound.
+
+At 500,000 characters per month, every vendor is free — but the permanence differs, as covered above. Amazon's number turns into $7.50 the day the twelve-month clock runs out.
+
+At five million billed characters (one million source times five languages), the 2.7x spread from the opening lands exactly: Azure 5M × $10 = $50; Amazon 5M × $15 = $75; Google (5M − 500K free) × $20 = $90; DeepL Growth = 1M bundled + 4M × $27.50 = $110 overage + $26 base = $136. A legacy DeepL Pro subscriber pays $125 plus a small monthly base fee — cheaper than Growth, which is precisely why DeepL stopped selling that plan to new customers.
+
+At ten million characters monthly, single target: Azure $100, Amazon $150, Google $190 (after its 500,000-character credit), and DeepL Growth runs 1M bundled + 9M × $27.50 = $247.50, plus base — about $274. The legacy Pro rate yields $255. At this volume the cheapest option saves you $174 per month against the most expensive, which is $2,088 a year for identical engine-class output.
+
+At fifty million characters monthly, Azure pay-as-you-go costs $500 against DeepL's $1,374 — and note DeepL's plan caps usage at exactly 50 million per month, so this row is its ceiling before an Enterprise contract. Azure's commitment tiers only start making sense further up: a $2,055 monthly pack covering 250 million characters works out to $8.22 per million, a rate worth considering around 250M+/month, not below.
+
+One more volume trap: translation cost per million characters assumes clean input. HTML attributes, JSON keys, and whitespace sent to any of these APIs are billed as content. Strip or minimize markup before dispatch, and on DeepL enable HTML tag handling — a sloppy payload routinely adds 10–20% to the bill in the field.
+
+## Documents and Custom Engines
+
+Text rates get the attention, but document pipelines and customized engines are where bills diverge hardest.
+
+Google prices documents per page — $0.08 per page on the NMT engine, $0.25 per page with a custom model, for DOCX, PPT, and PDF formats, with pages averaging no more than 4,000 characters. For a typical manual, that undercuts character-priced rivals; for image-heavy PDFs it can cut either way.
+
+Azure's document translation runs $15 per million characters, with image documents at $8 per thousand images. Its custom engine costs $40 per million characters, plus $10 for training per million source-and-target characters (capped at $300 per training run) — and then $10 per model per region per month in hosting. That hosting line is the standing fee that never sleeps: five custom models hosted in two regions cost $100 every month before a single character is translated. Google charges nothing to host a trained AutoML model, only $45 per hour of training time, capped at $300 per job.
+
+Amazon takes a third approach: Active Custom Translation at $60 per million characters applies your parallel data at runtime with no training job and no hosting fee. Terminology lists (CSV files that force specific renderings of brand terms) are free on every AWS plan.
+
+DeepL has no custom engine at all — [its tool page](/tools/deepl/) covers the glossary and style-rule story in detail, because that is the whole customization surface: 2,000 glossaries on Growth, 1 on Developer, plus style rules. That is usually enough for terminology consistency and never enough for domain adaptation. And its document pricing carries the 50,000-character minimum: every DOCX, PPTX, XLSX, PDF, and a dozen other binary formats bill a minimum of 50,000 characters per file regardless of actual length. A one-page cover letter costs $1.25–1.38. Text-like formats (TXT, HTML, XLIFF, JSON, Markdown) bill exact characters with no minimum, so batch small binary files through a different vendor or merge them first. If your pipeline is document-heavy, our [OCR API pricing](/articles/best-ocr-api-pricing-2026-google-document-ai-vs-aws-textract-vs-azure-vs-mistral/) breakdown covers the extraction side of the same problem.
+
+## The LLM Wildcard
+
+The most underpriced translation engine of 2026 may not be a translation API. Google's own pricing page now lists a TextTranslation (LLM) product at $10 per million input characters plus $10 per million output — roughly $20 per million source characters at the usual 1:1 ratio, priced to match its NMT engine rather than undercut it. Its adaptive variant, which steers output with your translation memory, runs $25 in and $25 out — a 2.5x premium for adaptation.
+
+Third-party arithmetic is more aggressive. A November 2026 analysis by ZeroRaised worked small LLMs (Claude Haiku-class, gpt-5-nano-tier) out to well under $1 per million characters — an order of magnitude below every dedicated API — provided you cache every result and accept that quality control, glossary handling, and format stability are now your job rather than a feature flag. Our [LLM API pricing](/articles/best-llm-api-pricing-2026-openai-gpt-6-vs-claude-opus-5-5-vs-gemini-4-vs-deepseek-compared/) guide has the raw token rates to run your own comparison.
+
+The honest position: for bulk strings and user-generated content, dedicated NMT engines remain the cheaper and more predictable purchase. For marketing copy, support replies, and anything where tone carries the meaning, an LLM produces output NMT cannot reach. A serious machine translation API comparison in 2026 prices both routes and routes content between them — which is more engineering than most teams want, and exactly why the NMT incumbents still sell $137 five-language runs.
+
+The zero-cost exit is self-hosting. LibreTranslate, built on Argos Translate, is AGPL-licensed with no per-character charge — you pay for a server, and quality trails all four hosted engines on most language pairs. For high-volume, low-glamour internal content, it is a real option.
+
+## Choosing by Workload
+
+Runtime user-generated content at scale: Azure. The $10 list rate, the permanent 2 million free characters, and no hosting fees make it the default for chat, reviews, and ticket translation. Revisit commitment tiers only past 250 million monthly.
+
+Quality-sensitive European language pairs: DeepL. The vendor's blind tests claim professional translators preferred its output over Google's 3:1 — vendor-conducted research, weigh it accordingly — but the post-editing savings on EN–DE, EN–FR, and EN–ES content are widely replicated in translator community practice. New customers should model the Growth plan at $27.50 per million overage, not the retired $25.
+
+Already committed to AWS: $15 per million is a fair price and the batch plumbing is solid. Just treat the free tier as a trial, not a tier — it dies at month twelve.
+
+Document-heavy pipelines: Google's per-page pricing or Azure's $15 per million. Avoid DeepL for many small binary files; the 50,000-character minimum turns short documents into five-figure character charges.
+
+Data governance: DeepL's current API plans promise no training on your data, and Google states its translations are not used for training. Amazon's documentation reserves the right to use service input to improve its models unless you opt out — the only default-in among the four. Azure keeps text translation out of storage. If data residency drives the decision, verify region support before pricing, not after.
+
+The voice side of localization has its own economics; we covered [speech-to-text API pricing](/articles/best-speech-to-text-api-pricing-2026-deepgram-vs-assemblyai-vs-openai-vs-elevenlabs/) and [text-to-speech API pricing](/articles/best-tts-api-pricing-2026-elevenlabs-vs-cartesia-vs-openai-vs-deepgram/) separately, and the same vendor-rankings-flip-every-quarter pattern holds there.
+
+## Frequently Asked Questions
+
+### What is the cheapest translation API in 2026?
+
+Azure AI Translator, at $10 per million characters on the S1 pay-as-you-go tier (East US list price). Its F0 tier adds 2 million free characters monthly with no expiration. Amazon is $15, Google $20 for NMT, and DeepL's overage runs $25–27.50 per million depending on plan. Below roughly 500,000 characters monthly, all four can be run at zero cost — Azure's allowance is the only one that never expires.
+
+### Is DeepL API Pro discontinued?
+
+For new signups, yes. DeepL stopped selling the API Pro plan — a small monthly base fee plus $25 per million characters — and the old API Free structure; existing subscribers keep their terms, while new customers choose Developer (a one-time 1 million character credit), Growth (12 million characters per year, 50 million/month cap, $27.50 per million overage), or a custom Enterprise contract.
+
+### How does Google Translate API pricing handle multiple target languages?
+
+It multiplies. Billed characters equal source characters times the number of target languages, for both text and document translation, on NMT and custom models alike. The LLM-based TextTranslation product bills input and output separately — $10 per million each — so its effective rate lands near the NMT sticker when output length mirrors the source.
+
+### Do translation APIs bill characters that never get translated?
+
+Yes, with narrow exceptions. All four engines count whitespace and markup as billable characters, Google bills every character in a request including untranslated ones, and DeepL counts all content in an uploaded document. Google waives charges for operations that fail outright, DeepL rejects same-language requests before billing, and DeepL's HTML tag handling excludes markup from the count.
+
+### Is DeepL worth it over Google Translate?
+
+For European language pairs where output feeds humans — contracts, manuals, marketing — most practitioners find DeepL needs less post-editing, which is the real cost line: at $25–27.50 per million characters, one saved hour of editor time offsets roughly 15 million characters of price premium over Google. For broad language coverage (Google serves 130+ languages to DeepL's ~30), high-volume UGC, or tight budgets, Google and Azure win. The DeepL vs Google Translate decision is a quality-per-pair decision, not a leaderboard.
+
+## The Bottom Line on Translation API Pricing
+
+The list prices rank in a stable order — Azure $10, Amazon $15, Google $20, DeepL $25–27.50 per million characters — and at low volume the ranking is irrelevant, because a translation API free tier on any platform covers small workloads at $0. What separates a $50 five-language month from a $136 one is the fine print: whether the free allowance expires, whether custom models carry standing hosting fees, whether documents bill by page or character with minimums, and whether your payload ships markup as billable text.
+
+Two structural shifts deserve watching into 2027. DeepL's plan rebuild quietly raised the effective rate for new customers while keeping legacy subscribers at $25 — a two-tier market inside one vendor. And Google hedging its own NMT engine with an LLM product priced at parity suggests the incumbents see generative models coming for the quality-sensitive segment from below. Reprice your translation stack quarterly; this market has moved twice in the last twelve months, and both moves were on the vendor's initiative.
