@@ -23594,5 +23594,335 @@
     ],
     "content": "CodeRabbit is an AI code reviewer that sits in your pull requests - it reviews every diff, learns from your feedback, and applies one-click fixes. Where [GitHub Copilot](/tools/github-copilot/) writes code and [Claude Code](/tools/claude-code/) drives the terminal, CodeRabbit is the second pair of eyes that never gets tired of reading diffs. For freelancers and agencies, that second pair of eyes is billable time recovered.\n\n## What the plans actually cost\n\nVerified on coderabbit.ai/pricing, 2026-11-27. Essentials costs $24/user/mo with 1 connected repo, 5 reviews per hour and 5 MCP connections. Team at $48/user/mo raises that to 5 repos and 8 reviews/hour, adding unit-test generation, triage queues (prioritized PR reviews with Slack integration), change-stack chat and post-merge actions. Advanced at $72/user/mo goes to 10 repos, 10 reviews/hour, plus the security layer: risk-prioritized findings, blast-radius audits, continuous security monitoring and security-based merge blocking. Enterprise is custom - 20 repos, SSO, RBAC, admin API, self-hosted deployment and support SLAs. Every paid plan carries a 14-day free trial; the current page lists no permanent free plan and no annual discount. Two usage-based add-ons live outside the plans: Deep Scan (whole-codebase security sweep) and Agent (Slack-driven task automation).\n\n## Where the money angle sits\n\nThe math that matters is review hours. An agency with five developers on Team spends $240/mo and typically recovers 3-6 hours per developer per week of review back-and-forth - at contract rates the subscription pays for itself in the first week. Solo contractors use Essentials to ship client work with a reviewer attached, and sell \"senior review included\" as a differentiator. Deep Scan opens a productized audit: a fixed-price security sweep of an acquired or inherited codebase, billed to the client. Open-source maintainers get review coverage without burnout - note the current page no longer lists a permanent OSS free tier, so verify your repo's status before planning around it. Pairs well with [Aider](/tools/aider/) and [Cline](/tools/cline/) workflows where AI-generated code needs a review layer, and our [coding assistants comparison](/articles/best-ai-coding-assistants-2026/) maps the full stack.\n\n## The honest drawbacks\n\nPer-user pricing stacks fast: five developers on Team is $240/mo, ten on Advanced is $720/mo. Repo allowances are tight - Essentials covers one repo, which rules out contractors juggling several client codebases unless they upgrade. Hourly review caps (5-12 per hour by tier) throttle busy merge days, and overages are usage-priced. No annual discount is published, and the free-for-open-source arrangement that made CodeRabbit popular is not on the current page. Review quality on niche frameworks and internal DSLs produces noise - the agent learns from feedback, but week one on an unfamiliar codebase needs patience. When the reviewed code is itself AI-generated at volume, [Cursor](/tools/cursor/) or [Windsurf](/tools/windsurf/) workflows surface issues CodeRabbit then re-flags - some overlap is inherent.\n\n## Bottom line\n\nCodeRabbit is the easiest yes in AI dev tooling for teams whose bottleneck is review latency: the 14-day trial settles the question on your real codebase. Solo devs with one repo should weigh $24/mo against their actual review backlog. Current plans sit on the [CodeRabbit pricing page](https://www.coderabbit.ai/pricing).",
     "published": true
+  },
+  {
+    "name": "Serper",
+    "slug": "serper",
+    "url": "https://serper.dev/",
+    "category": "AI API",
+    "price": "$50 for 50k queries · 2,500 free",
+    "last_verified": "2026-11-28",
+    "rating": "4.4",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "color": "#3B82F6",
+    "platform": "REST API (POST to google.serper.dev); 9 endpoints (search, images, news, maps/places, videos, shopping, scholar, patents, autocomplete); works with Python/Node/cURL, no SDK required",
+    "description": "Google Search API returning structured JSON in 1-2 seconds at roughly $1 per 1,000 queries - the data layer behind AI SEO tools, rank trackers and agent workflows. Resell it as dashboards, GEO audits and keyword services.",
+    "pricing_details": "Verification note 2026-11-28: official homepage (serper.dev) read this run - confirms 2,500 free queries for new accounts, no-card signup, and the prepaid-pack model; the site's /pricing path returned 404 and the pack grid lives behind the dashboard. Pack grid cross-checked against four independent pricing trackers checked within the last two weeks (websearchapi.space 2026-11-14, serpstracker.com 2026-11-16, datacircle.dev 2026-11-24, trendsmcp.ai 2026-08): Free $0 = 2,500 queries once. Starter $50 = 50,000 credits ($1.00/1k, 50 QPS). Standard $375 = 500,000 ($0.75/1k, 100 QPS). Scale $1,250 = 2.5M ($0.50/1k, 200 QPS). Ultimate $3,750 = 12.5M ($0.30/1k, 300 QPS). No monthly plans; credits expire 6 months after purchase; 7-day refund unless >20% of credits used; prices exclude sales tax/VAT; one account per customer (no stacking free grants).",
+    "tags": [
+      {
+        "text": "SERP API"
+      },
+      {
+        "text": "Pay-as-you-go"
+      },
+      {
+        "text": "2,500 free queries"
+      },
+      {
+        "text": "No subscription"
+      }
+    ],
+    "features": [
+      "Google SERP as JSON in 1-2 seconds: organic results, answer boxes, People Also Ask, knowledge graph and related searches",
+      "Nine endpoints on one API key: search, images, news, maps and places, videos, shopping, scholar, patents, autocomplete",
+      "Country, language and city-level location targeting for local SERP work",
+      "Prepaid packs from $50 with rate limits from 50 to 300 queries per second and no monthly commitment",
+      "2,500 free queries on signup with no credit card"
+    ],
+    "pros": [
+      "Cheapest live Google data we track: $1.00 per 1,000 at entry and $0.30 at scale, against SerpApi's $25 per 1,000 on its starter plan",
+      "No subscription - top up when a client project needs it, and credits run six months",
+      "One key covers nine Google verticals, so autocomplete alone feeds a keyword research tool without a second vendor",
+      "Fast enough for agent loops (50-300 QPS by tier) and already the default SERP backend in many AI SEO stacks"
+    ],
+    "cons": [
+      "Credits expire after six months - a $50 pack that sits unused ages out, which punishes sporadic projects",
+      "No monthly plans and no cache: every repeated query re-bills, so heavy daily rank tracking means re-buying packs constantly",
+      "The /pricing path returns a 404 and the pack grid sits behind dashboard signup - weak transparency for a data product",
+      "Google-only coverage: Bing, DuckDuckGo or Yandex projects need a second vendor"
+    ],
+    "faq": [
+      {
+        "question": "Is Serper free?",
+        "answer": "New accounts get 2,500 queries free with no card - that is a one-time grant, not a monthly allowance. After that you buy prepaid packs starting at $50 for 50,000 queries, and unused credits expire six months after purchase."
+      },
+      {
+        "question": "How does Serper compare to SerpApi?",
+        "answer": "On raw price Serper wins by a wide margin - $1.00 per 1,000 queries on the entry pack against SerpApi's $25 per 1,000 on its starter plan. SerpApi wins on engine coverage, locations, cached results and its Legal Shield. For Google-only JSON at volume, Serper is the value pick; for multi-engine compliance-sensitive work, SerpApi still earns its price."
+      },
+      {
+        "question": "What can I build with Serper that makes money?",
+        "answer": "Three proven shapes: a daily rank tracker (1,000 keywords costs about $30/month in credits and bills at $100-300), GEO audits that check how AI engines describe a client, and keyword research tools built on the autocomplete endpoint. Agencies resell all three as white-label services on top of pennies of API cost."
+      }
+    ],
+    "content": "Serper is a Google Search API that returns structured JSON - organic results, answer boxes, People Also Ask, knowledge panels - in one to two seconds, at prices that undercut every SERP API we track. Where [Tavily](/tools/tavily/) and [Exa](/tools/exa-ai/) sell AI-optimized search for LLM grounding, Serper sells raw Google data, which is why it has become the default backend for AI SEO tools, rank trackers and agent workflows. If you can code a loop, you can resell what it returns.\n\n## What the plans actually cost\n\nThe official homepage (read 2026-11-28) leads with 2,500 free queries for new accounts and no monthly plans - Serper sells prepaid credit packs. Four independent pricing trackers checked within the last two weeks agree on the grid: Starter $50 for 50,000 queries ($1.00 per 1,000, 50 queries/second), Standard $375 for 500,000 ($0.75, 100 QPS), Scale $1,250 for 2.5M ($0.50, 200 QPS) and Ultimate $3,750 for 12.5M ($0.30, 300 QPS). Credits expire six months after purchase, refunds follow a 7-day window with under 20% of credits used, and prices exclude tax. One caveat from this run: the site's /pricing path returns a 404 and the pack grid lives behind the dashboard, so treat the dashboard as the final word.\n\n## Where the money angle sits\n\nThe margin math is the pitch. A daily rank tracker for 1,000 keywords burns about 30,000 queries a month - roughly $30 in Starter credits - and agencies bill that dashboard at $100-300/mo. AI SEO consultants run GEO audits: thousands of AI-answer checks per client for pennies of API cost. Product people wrap the autocomplete endpoint into keyword research tools and charge subscriptions on top. If you already resell [OpenRouter](/tools/open-router/) tokens into chat products, Serper slots in the same way: raw inputs at cost, services on top. Our [search API pricing comparison](/articles/ai-search-api-pricing-2026-tavily-vs-exa-vs-brave-vs-serpapi/) maps where it beats Tavily, Exa and Brave - and where it does not.\n\n## The honest drawbacks\n\nThe six-month expiry is the real cost of the cheap rate: a $50 pack that sits unused ages out, so sporadic projects effectively pay more than the sticker price. There is no cache and no monthly plan - re-checking the same 5,000 keywords re-bills every query, forever. Google-only coverage means Bing, DuckDuckGo or Yandex projects need a second vendor. And for AI grounding work where you want LLM-ready chunks and citations, [Perplexity](/tools/perplexity/) or Tavily remain better fits - Serper returns Google's page, not an answer.\n\n## Bottom line\n\nSerper is the cheapest way to put live Google data behind a product or a client service, and the 2,500 free queries settle the question in an afternoon. Buy the smallest pack that fits six months of usage and re-evaluate at renewal. The current packs sit on the [Serper site](https://serper.dev/) - note the full grid is behind the dashboard.",
+    "published": true
+  },
+  {
+    "name": "Koala AI",
+    "slug": "koala",
+    "url": "https://koala.sh/",
+    "category": "AI Writing",
+    "price": "Free 5k words · Paid from $15/mo",
+    "last_verified": "2026-11-28",
+    "rating": "4.3",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "color": "#16A34A",
+    "platform": "Web app; one-click publishing to WordPress, Shopify, Webflow, Ghost + webhooks (Zapier/Make); API and MCP access",
+    "description": "One-click SEO article writer built for affiliate site owners - live Amazon data, real-time SERP analysis and your Search Console data go into every draft. The classic tool for niche-site operators who publish at volume and monetize with ads and affiliate links.",
+    "pricing_details": "Verified on koala.sh/pricing, 2026-11-28 (Black Friday countdown active on page; annual billing saves 40% vs monthly). Starter: $15/mo billed annually ($180/yr; $25 monthly) - 540,000 words/year on the GPT-6 Luna baseline, 6,000 credits/year, KoalaImages, bulk writing mode, limited file uploads, API + MCP. Professional: $29/mo annual ($348/yr; $49 monthly) - 1.2M words, 12,000 credits, Article Editor with AI chat edits and SEO score, KoalaLinks internal linking up to 50 sites, KoalaMagnets, Deep Research, Search Console + Analytics dashboard. Boost: $59/mo annual ($708/yr; $99 monthly) - 3M words, 30,000 credits, uncapped Brand DNA agent, Content Calendar Autopilot, 2x faster bulk. Volume tiers (all Boost features): Growth $107/mo annual - 6M words, 3 brands. Elite $210 - 12M words, 7 brands. Advanced $300 - 18M words, 12 brands. Scale I $450 - 30M words, 20 brands, 3x bulk speed. Scale II $750 - 60M words, 40 brands. Scale III $1,200 - 120M words, 75 brands. Free: one-time 5,000 words + 25 credits, no card. Extra brand slot $29/mo each, up to 10. Word count basis: GPT-6 Luna; GPT-6.1 Sol and Claude Sonnet 5.5 count 2x, Claude Opus 5.5 counts 3x.",
+    "tags": [
+      {
+        "text": "Affiliate SEO"
+      },
+      {
+        "text": "Bulk articles"
+      },
+      {
+        "text": "Live Amazon data"
+      },
+      {
+        "text": "Brand DNA"
+      }
+    ],
+    "features": [
+      "One-click long-form drafts with automatic entity coverage against the pages currently ranking for your keyword",
+      "Live Amazon data for roundups and single-product reviews - real reviews, prices and specs, not hallucinated ones",
+      "Brand DNA reads your site once, then every draft follows your voice, services and existing pages",
+      "KoalaLinks places internal links across up to 50 sites; Search Console dashboard with striking-distance keywords on Professional",
+      "Bulk mode, one-click publishing to WordPress/Shopify/Webflow/Ghost, plus API and MCP access on paid plans"
+    ],
+    "pros": [
+      "Purpose-built for affiliate sites: Amazon integration and entity-aware outlines skip hours of manual SERP work",
+      "Annual pricing is aggressive at 40% off - the $15/mo entry tier undercuts Jasper and Surfer comfortably",
+      "Testimonials on the pricing page are niche-site operators with traffic and revenue numbers, not enterprise logos",
+      "MCP server included with every paid plan, so your own AI assistant can run keyword and SERP research on plan credits"
+    ],
+    "cons": [
+      "Output still reads AI-generated without human editing - scaled-content abuse policies make zero-edit publishing a real risk",
+      "Word allowances are annual grants, not monthly - burn the year's quota by March and you wait for renewal or upgrade",
+      "Word counting is model-dependent: Claude Sonnet 5.5 burns 2x and Claude Opus 5.5 burns 3x, which surprises budget planners",
+      "The free tier is a one-time 5,000 words rather than a rolling monthly allowance, so there is no long free runway to evaluate quality"
+    ],
+    "faq": [
+      {
+        "question": "Is Koala AI good for affiliate niche sites?",
+        "answer": "It was built for that exact use case. Live Amazon data feeds product roundups, outlines mirror current ranking pages, and internal linking is automatic. The operators quoted on the pricing page (Fatstacks, Minted Empire) run niche sites for a living. Drafts still need editing, original images and a human pass before publishing - treat Koala as the first 80%."
+      },
+      {
+        "question": "How does Koala compare to Jasper or ChatGPT?",
+        "answer": "Versus [Jasper](/tools/jasper/), Koala is cheaper at entry and has SERP and keyword data baked into drafting instead of separate add-ons. Versus raw [ChatGPT](/tools/chatgpt/), Koala runs per-article SERP analysis, pulls live Amazon listings and handles internal linking and WordPress publishing - things a chat window does not do."
+      },
+      {
+        "question": "What does the word limit actually mean?",
+        "answer": "Counts are quoted against the GPT-6 Luna baseline. If you generate with GPT-6.1 Sol or Claude Sonnet 5.5, every word counts double; Claude Opus 5.5 counts triple. A 540,000-word Starter allowance becomes roughly 270,000 words on Sonnet - plan your model choice around the allowance, not the other way round."
+      }
+    ],
+    "content": "Koala AI is the article factory behind a large share of current affiliate niche sites: one click turns a keyword into a long-form draft with entity coverage against the pages now ranking, live Amazon product data for roundups, and internal links placed automatically. Where [Jasper](/tools/jasper/) and [Writesonic](/tools/writesonic/) sell copywriting breadth, Koala sells publishable SEO drafts at volume - and the testimonials on its pricing page come from niche-site operators with revenue screenshots.\n\n## What the plans actually cost\n\nVerified on koala.sh/pricing, 2026-11-28 (Black Friday countdown on the page; annual billing saves 40%). Starter: $15/mo billed annually ($180/yr; $25 monthly) - 540,000 words/year on the GPT-6 Luna baseline, 6,000 credits, KoalaImages, bulk mode, API and MCP. Professional: $29/mo annual ($348/yr) - 1.2M words, 12,000 credits, Article Editor with SEO scoring, KoalaLinks internal linking for up to 50 sites, Deep Research, Search Console + Analytics dashboard. Boost: $59/mo annual ($708/yr) - 3M words, 30,000 credits, uncapped Brand DNA agent, Content Calendar Autopilot, 2x faster bulk. Volume tiers climb from Growth $107/mo (6M words, 3 brands) to Scale III $1,200/mo (120M words, 75 brands). A one-time free tier grants 5,000 words and 25 credits without a card. Word counts shift with the model: Claude Sonnet 5.5 burns 2x, Claude Opus 5.5 burns 3x.\n\n## Where the money angle sits\n\nThis is the tool for programmatic niche sites. At Professional, 1.2M words/year is roughly 800-1,200 published articles - enough to stock several sites - for $348 a year; ad and affiliate revenue on one site that ranks covers that many times over. The live Amazon data (real reviews, prices, specs) is what makes product roundups credible instead of hallucinated. A second income stream: draft-for-hire services on [Fiverr](/tools/fiverr/) and [Upwork](/tools/upwork/), where Koala produces the first 80% and you edit the last 20%. Plan the keyword side first with [our niche-site SEO stack](/articles/best-ai-seo-tools-niche-sites-2026/) and the [keyword research comparison](/articles/best-ai-keyword-research-tools-2026-ahrefs-vs-semrush-vs-moz-vs-keyword-planner/) - content spend only pays when keywords were picked right.\n\n## The honest drawbacks\n\nDrafts need human editing. Publishing Koala output raw is how sites get hit by scaled-content abuse policies - the successful operators edit, add original photos and cut weak sections. The word allowance is annual, not monthly: burn through 540k words by March on Starter and you wait for renewal. Model multipliers surprise people - writing with Opus at 3x burns a Starter plan in months. And the free tier is a one-time taste, not a rolling plan, so there is no long runway to judge output quality on your niche before paying.\n\n## Bottom line\n\nKoala is the clearest yes among AI writers for affiliate publishers: cheap at entry, deep on SEO data, and proven by operator revenue screenshots rather than enterprise logos. Start with the free 5,000 words, edit ruthlessly, and upgrade to Professional only once a site earns. Current plans sit on the [Koala pricing page](https://koala.sh/pricing).",
+    "published": true
+  },
+  {
+    "name": "Kittl",
+    "slug": "kittl",
+    "url": "https://www.kittl.com/",
+    "category": "AI Design",
+    "price": "Free plan · Pro from €12/mo",
+    "last_verified": "2026-11-28",
+    "rating": "4.2",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "color": "#EA580C",
+    "platform": "Web app (browser-based editor); 10,000+ templates; AI image and video models; mockup generator; print-ready exports",
+    "description": "Browser design studio built for print-on-demand sellers - vector-friendly templates, AI image generation, bulk mockups and print-ready exports in one place. The fastest route from idea to a sellable listing on Etsy, Merch on Demand or Redbubble.",
+    "pricing_details": "Verified on kittl.com/pricing, 2026-11-28. Prices displayed in EUR on the page we read (a currency toggle exists; no USD figures were shown). Free: EUR 0 - one-time 100 AI tokens (up to ~20 images or 1 video), 5 saved projects, 500 MB storage, standard exports, unlimited bulk mockups, full commercial license. Pro: EUR 15/mo monthly or EUR 12/mo annual - 2,000 tokens/mo plus daily bonus tokens, unlimited projects, 10 GB, high-resolution exports, premium HD image and video models, AI upscaler and background remover, brand kit. Expert: EUR 35 monthly / EUR 26 annual - 6,000 tokens/mo, 200 bonus daily tokens, 100 GB. Max: EUR 65 monthly / EUR 32.50 annual for the first year (Black Friday 50% off with code BF2026; renews EUR 48/mo billed annually) - 12,000 tokens/mo, 600 bonus daily tokens, 1 TB. Token consumption published per model; at Expert roughly 600 Seedream 5.0 Lite images, 250 Nano Banana 2 images, 120 Nano Banana 2 4K images or 37 Veo 3.1 videos per month. Black Friday promo banner live at verification (limited-time).",
+    "tags": [
+      {
+        "text": "Print on demand"
+      },
+      {
+        "text": "Bulk mockups"
+      },
+      {
+        "text": "AI images"
+      },
+      {
+        "text": "Commercial license"
+      }
+    ],
+    "features": [
+      "Vector editor with curved text, effects and print-ready exports including transparent PNG at high resolution",
+      "AI generation across dozens of models (Nano Banana 2, FLUX 3, Seedream 5.5, Veo 3.1, Kling) under one token balance",
+      "Unlimited bulk mockup generation on every plan, including Free",
+      "Full commercial license on all tiers - designs made on the free plan can be sold",
+      "10,000+ premium templates and AI workflows from Pro upward"
+    ],
+    "pros": [
+      "Built for POD: mockups, transparent exports and commercial rights ship on the free plan, so a first Etsy shop costs EUR 0",
+      "Token math is published per model - you can plan a month of Seedream images or Veo videos on Expert before paying",
+      "One subscription replaces a raster editor, an AI image tool and a mockup generator",
+      "Bulk mockups turn one design into a full listing set in minutes"
+    ],
+    "cons": [
+      "Prices display in EUR by default - USD cards see different totals at checkout, and the page we read showed no USD figures",
+      "The free plan is a one-time 100-token grant, effectively a demo; ongoing work needs Pro at minimum",
+      "Video token burn is steep, and the Max first-year discount renews at EUR 48/mo - read the renewal line before clicking",
+      "Browser-only: no offline mode, and large artboards with many vector layers lag on older machines"
+    ],
+    "faq": [
+      {
+        "question": "Can I sell designs made on the Kittl free plan?",
+        "answer": "Yes. Kittl grants a full commercial license on every plan including Free, and mockups are unlimited even there. The practical limits are export resolution and the one-time 100 AI tokens - enough for a first batch of listings, not for ongoing catalog work."
+      },
+      {
+        "question": "How does Kittl compare to Canva?",
+        "answer": "Kittl targets print-on-demand and vector work: curved text, print exports, transparent backgrounds and bulk mockups. Canva is broader marketing design with a bigger template library but weaker POD specifics. Many sellers run both - Canva for social posts, Kittl for products. See also [Recraft](/tools/recraft/) if vector-first AI generation matters more than templates."
+      },
+      {
+        "question": "What are AI tokens and how far do they go?",
+        "answer": "Each model consumes tokens at a published rate. On Expert (6,000 tokens/mo) that is roughly 600 Seedream 5.0 Lite images, 250 Nano Banana 2 images, 120 Nano Banana 2 4K images, or 37 Veo 3.1 videos per month. Daily bonus tokens (200 on Expert, 600 on Max) sit on top of the monthly grant."
+      }
+    ],
+    "content": "Kittl is a browser design studio built around print-on-demand work: vector-friendly templates, curved text, AI image generation from dozens of models, bulk mockups and print-ready exports in one tab. Where [Canva AI](/tools/canva-ai/) aims at marketing teams and [Recraft](/tools/recraft/) at vector-first AI, Kittl aims at the seller who wants a design on an [Etsy](/tools/etsy/) listing tonight - and it grants a full commercial license on every plan, including the free one.\n\n## What the plans actually cost\n\nVerified on kittl.com/pricing, 2026-11-28 - note the page prices in EUR (a currency toggle exists; the figures below are the EUR we read). Free: EUR 0 with a one-time 100 AI tokens (up to about 20 images), 5 saved projects, 500 MB storage, standard exports, full commercial license and unlimited bulk mockups. Pro: EUR 15/mo monthly or EUR 12/mo annual - 2,000 tokens/mo plus daily bonus tokens, unlimited projects, 10 GB, high-resolution exports, premium models, brand kit. Expert: EUR 35 monthly / EUR 26 annual - 6,000 tokens/mo, 200 daily bonus tokens, 100 GB. Max: EUR 65 monthly / EUR 32.50 annual for the first year (Black Friday 50% off, code BF2026; renews EUR 48/mo) - 12,000 tokens/mo, 600 daily bonus tokens, 1 TB. Token spending is published per model: Expert covers roughly 600 Seedream 5.0 Lite images, 250 Nano Banana 2 images or 37 Veo 3.1 videos per month.\n\n## Where the money angle sits\n\nPOD sellers are the obvious fit, and the free plan works as a first-shop studio: 20 sellable designs plus unlimited mockups for EUR 0, pushed to [Printify](/tools/printify/), [Printful](/tools/printful/), [Redbubble](/tools/redbubble/) or [Amazon Merch on Demand](/tools/amazon-merch-on-demand/). Expert at EUR 26/mo annual is the working volume tier - 1,200 images/mo is a full seasonal catalog refresh. The second angle is service work: logo and brand kits for local businesses (see our [logo tool comparison](/articles/best-ai-logo-design-tools-2026-looka-vs-tailor-brands-vs-logomaster-vs-designhill/)) or listing design packs sold to other POD sellers. Template-plus-AI beats a blank artboard when the client has EUR 200, not EUR 2,000.\n\n## The honest drawbacks\n\nThe free plan is a demo, not a workspace: 100 tokens is one afternoon of generation, and 500 MB storage fills in a week. EUR-default pricing means USD cards see different totals at checkout, and the page we read showed no USD figures - budget with the EUR rates. Video token burn is steep, and the Max discount is first-year only (renews at EUR 48/mo). It is browser-only with no offline mode, and heavy artboards lag on older machines. For photo manipulation and product-photo cleanup, [Photoroom](/tools/photoroom/) still wins - Kittl's strength is graphic and typographic POD work.\n\n## Bottom line\n\nKittl is the fastest route from idea to sellable POD listing, and the commercial license on Free makes trying it a EUR 0 decision. Work on the free plan until token limits bite, then Expert annual is the sensible home. Current plans sit on the [Kittl pricing page](https://www.kittl.com/pricing).",
+    "published": true
+  },
+  {
+    "name": "Guidde",
+    "slug": "guidde",
+    "url": "https://www.guidde.com/",
+    "category": "AI Productivity",
+    "price": "Free 25 videos · Pro from $19/creator",
+    "last_verified": "2026-11-28",
+    "rating": "4.3",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "color": "#7C3AED",
+    "platform": "Chrome extension and Edge add-on; web + desktop capture; Slack, Gmail, Zoom, Google Drive, OneDrive, Salesforce integrations; SCORM export; MCP connector and Claude agent skill export",
+    "description": "Capture any workflow once and Guidde turns it into a narrated how-to video with numbered steps, captions and a shareable link. Agencies sell onboarding packs built with it; support teams deflect tickets with it.",
+    "pricing_details": "Verified on guidde.com/pricing, 2026-11-28 (annual billing shown; monthly in parentheses). Free: $0 per creator/mo - up to 25 how-to videos, recorded voiceover, shareable links, transitions and soundtracks, screen walkthrough with cursor effects, no card required. Pro: $19/creator/mo annual ($29 monthly) - unlimited how-to videos, watermark removal, brand kit, MP4/GIF/PPT/PDF export, PII blurring, content review and version control. Business: $39/creator/mo annual ($59 monthly) - everything in Pro plus unlimited text-to-voice (400+ voices, 50+ languages), web + desktop capture, PDF/PPT/Doc-to-video conversion, interactive demos, video analytics (180 days), up to 5 creators per workspace. Enterprise: custom pricing - unlimited recordings, uploads and premium voices, Guidde Ask (Q&A across the video library), multi-language translation, magic PII redaction, SSO/SCIM (Okta, Microsoft, OneLogin), content review and version control. Paid add-ons at unpublished prices: premium voices, voice cloning, virtual avatar, automatic translation, Guidde Me in-app guidance (Broadcast), MCP connector. Voice cloning, avatars and translation require Business or Enterprise.",
+    "tags": [
+      {
+        "text": "SOP videos"
+      },
+      {
+        "text": "Onboarding"
+      },
+      {
+        "text": "AI voiceover"
+      },
+      {
+        "text": "Ticket deflection"
+      }
+    ],
+    "features": [
+      "Browser and desktop capture converts clicks into step-by-step videos with AI voiceover in 50+ languages",
+      "Magic Mic transcribes natural speech during capture and turns it into the narration automatically",
+      "Interactive demos let viewers click through hotspots, and every interaction lands in analytics",
+      "Converts PDFs, PPTs and Docs into videos; exports MP4, GIF, PPT and PDF from Pro upward",
+      "Guidde Ask answers questions from your video library; MCP connector and Claude agent skill export feed AI assistants"
+    ],
+    "pros": [
+      "Cheapest credible entry in AI documentation: unlimited videos at $19/creator with the watermark removed",
+      "Sells as a service - onboarding and training packs for software clients are a real agency line item",
+      "The free plan's 25 videos cover one complete product support top-ten, no card required",
+      "Exports a documented process as a Claude agent skill, so playbooks execute instead of just playing"
+    ],
+    "cons": [
+      "Business caps workspaces at 5 creators - larger teams are pushed into Enterprise pricing with a sales call",
+      "The 25-video free cap is lifetime, not monthly, so evaluation pressure is real",
+      "Voice cloning, avatars, translation and MCP are paid add-ons at prices the page never prints",
+      "Screen-capture format limits reach: cinematic demos with presenters still need Synthesia or HeyGen"
+    ],
+    "faq": [
+      {
+        "question": "What is Guidde used for?",
+        "answer": "How-to videos, SOPs and onboarding documentation. Record a workflow once; Guidde structures the steps, writes the narration and hosts a shareable page. Support teams embed guiddes in ticket replies to deflect repeat questions, and agencies package them as client training material."
+      },
+      {
+        "question": "Is there a free plan?",
+        "answer": "Yes - 25 how-to videos with recorded voiceover and share links, no credit card. The lifetime cap is the catch: once the 25 are used, you need Pro at $19/creator/mo (annual) for unlimited videos and watermark removal."
+      },
+      {
+        "question": "How is Guidde different from Loom or Scribe?",
+        "answer": "Loom records raw video and leaves the structure to you. Scribe makes screenshot-based step guides without narration. Guidde sits between them: structured steps, AI voiceover, captions, interactive click-through demos and analytics. Our [process documentation comparison](/articles/best-ai-process-documentation-tools-2026-scribe-vs-tango-vs-guidde-vs-trainual/) covers the full field."
+      }
+    ],
+    "content": "Guidde records your screen once and hands back a structured how-to video: numbered steps, AI voiceover, captions, a shareable link and click-through interactive demos. Screenshot guides and raw recordings both miss something - Guidde occupies the middle ground with narrated, step-structured documentation at $19 a creator, and our [process documentation comparison](/articles/best-ai-process-documentation-tools-2026-scribe-vs-tango-vs-guidde-vs-trainual/) already counts it among the four tools that matter.\n\n## What the plans actually cost\n\nVerified on guidde.com/pricing, 2026-11-28 (annual billing shown, monthly in parentheses). Free: $0 - up to 25 how-to videos, recorded voiceover, share links, transitions and screen walkthroughs, no card required. Pro: $19/creator/mo annual ($29 monthly) - unlimited videos, watermark removal, brand kit, MP4/GIF/PPT/PDF export, PII blurring, version control. Business: $39/creator/mo annual ($59 monthly) - everything in Pro plus unlimited text-to-voice (400+ voices, 50+ languages), PDF/PPT/Doc-to-video conversion, interactive demos, 180-day analytics, workspaces up to 5 creators. Enterprise: custom - Guidde Ask across your video library, multi-language translation, magic PII redaction, SSO/SCIM. Premium voices, voice cloning, avatars and the MCP connector are paid add-ons whose prices the page does not print.\n\n## Where the money angle sits\n\nAgencies sell this. A fixed-price onboarding and training pack - 15-25 narrated videos covering a client's core workflows - is a $1,500-5,000 product that takes a week in Guidde; the free 25-video tier covers exactly one such pack. Support leads embed guiddes in ticket replies and watch deflection in the analytics. SaaS teams convert their help PDFs into videos on Business without touching a video editor. The newer angle is agents: a guidde exports as a Claude agent skill, so documented processes execute rather than just play. Freelancers on [Fiverr](/tools/fiverr/) and [Upwork](/tools/upwork/) list SOP documentation as a standalone gig - Guidde is the production line behind it.\n\n## The honest drawbacks\n\nBusiness caps workspaces at 5 creators - a 12-person support team is Enterprise pricing with a sales call attached. The 25-video free cap is lifetime, not monthly, so you evaluate fast or pay. Add-on pricing opacity is a pattern: voice cloning, avatars, translation and MCP all cost extra at unpublished rates. Capture-only format limits reach - cinematic product demos with presenters still need [Synthesia](/tools/synthesia/) or [HeyGen](/tools/heygen/), and long-form editing needs [Descript](/tools/descript/). Voiceovers in 50+ languages work for internal docs but still read synthetic on public marketing pages.\n\n## Bottom line\n\nGuidde is the cheapest credible way to turn tribal knowledge into narrated, structured video documentation, and small enough to try on the free tier in one afternoon. Teams past five creators should get the Enterprise quote before committing to Business. Current plans sit on the [Guidde pricing page](https://www.guidde.com/pricing).",
+    "published": true
+  },
+  {
+    "name": "Metricool",
+    "slug": "metricool",
+    "url": "https://metricool.com/",
+    "category": "AI Marketing",
+    "price": "Free 1 brand · Starter from $20/mo",
+    "last_verified": "2026-11-28",
+    "rating": "4.3",
+    "badge": {
+      "type": "new",
+      "text": "NEW"
+    },
+    "color": "#4F46E5",
+    "platform": "Web app + mobile; Facebook, Instagram, TikTok, YouTube, LinkedIn, Threads, Bluesky, Twitch, Google Business Profile; Facebook/Google/TikTok Ads; Canva, Google Drive, Looker Studio, API via Zapier/Make; MCP server",
+    "description": "Social media planner and analytics dashboard covering 10+ networks plus ad accounts in one calendar view. Freelance social managers run client portfolios on it - the per-brand pricing maps directly to retainer billing.",
+    "pricing_details": "Verified on metricool.com/pricing/, 2026-11-28 (USD tab, monthly billing; annual saves up to 24%). Free: $0 - 1 brand, 20 scheduled posts/mo, 5 competitor profiles, 30 days of analytics history, AI social media assistant, Metricool MCP. Starter: $20/mo (5 brands) or $36/mo (10 brands) - unlimited content publishing (Fair Use Policy applies), up to 100 competitor profiles, LinkedIn connection, PDF/PPT reports, multiple link-in-bio, unlimited analytics history, Google Drive and Canva integration, Flows add-on access. Advanced: $53/mo (15 brands), $85/mo (25 brands), $159/mo (50 brands) - team and client management, role management, post approval system, complete X analytics, customizable report templates, Looker Studio connector, Metricool API (Zapier/Make). Custom: white label, dedicated account manager, custom AI assistant credits. X/Twitter access is a paid add-on at an unpublished price. Prices exclude VAT.",
+    "tags": [
+      {
+        "text": "Social media"
+      },
+      {
+        "text": "Competitor tracking"
+      },
+      {
+        "text": "Client reporting"
+      },
+      {
+        "text": "Ads dashboard"
+      }
+    ],
+    "features": [
+      "Plan, schedule and auto-publish to 10+ networks from one calendar with best-time-to-post suggestions",
+      "Competitor tracking up to 100 profiles plus unlimited analytics history from Starter upward",
+      "PDF/PPT client reports and a Looker Studio connector for branded dashboards",
+      "Facebook, Google and TikTok Ads metrics shown beside organic data in the same report",
+      "AI social assistant and MCP server, plus Metricool API for Zapier and Make automation"
+    ],
+    "pros": [
+      "Per-brand pricing mirrors agency reality: $36/mo covers 10 client brands under one login",
+      "The free plan is usable forever for a single brand - rare in this category",
+      "Competitor analysis and best-time data give client reports substance beyond scheduled posts",
+      "Ad account reporting in the same view kills the month-end spreadsheet ritual"
+    ],
+    "cons": [
+      "X/Twitter sits behind a paid add-on whose price is not printed on the pricing page",
+      "'Unlimited' scheduling is subject to a Fair Use Policy - bulk publishers should read it before scaling",
+      "Approval workflows are serviceable but thinner than Sprout-class platforms; larger teams will feel the ceiling",
+      "Interface density: calendar, analytics, ads and competitor data live in one app, and new managers need a week to learn it"
+    ],
+    "faq": [
+      {
+        "question": "Is Metricool really free?",
+        "answer": "Yes - one brand, 20 scheduled posts per month and 30 days of analytics history, forever, with no card. That covers a single own-brand project. Client work needs Starter at $20/mo for 5 brands or $36/mo for 10."
+      },
+      {
+        "question": "How does Metricool compare to Buffer or Hootsuite?",
+        "answer": "Buffer is a cleaner pure scheduler; Metricool adds competitor tracking, ad reporting and deeper analytics at a similar price point. Hootsuite costs multiples for fewer brands. Our [social media management comparison](/articles/best-ai-social-media-management-tools-2026-hootsuite-vs-buffer-vs-sprout-social-vs-later/) breaks down the full field."
+      },
+      {
+        "question": "Can I manage client accounts from one login?",
+        "answer": "Yes - brands are the unit of management. Starter handles 5-10 brands; Advanced adds team and client management, roles and a post approval system for 15-50 brands. White labeling of the whole dashboard is available on the Custom plan."
+      }
+    ],
+    "content": "Metricool is a social media planner and analytics dashboard that covers 10+ networks, competitor tracking and Facebook/Google/TikTok ad accounts in one calendar view. Where [Buffer](/tools/buffer/) is a straightforward scheduler and [Brand24](/tools/brand24/) is listening, Metricool is the portfolio tool freelance social managers run client retainers on - its per-brand pricing mirrors how those retainers are actually billed.\n\n## What the plans actually cost\n\nVerified on metricool.com/pricing/, 2026-11-28 (USD tab, monthly billing; annual saves up to 24%). Free: $0 forever - 1 brand, 20 scheduled posts/mo, 5 competitor profiles, 30-day analytics history, AI social assistant, MCP access. Starter: $20/mo for 5 brands or $36/mo for 10 - unlimited publishing under a Fair Use Policy, up to 100 competitor profiles, LinkedIn, PDF/PPT reports, link-in-bio pages, unlimited analytics history. Advanced: $53/mo for 15 brands, $85 for 25, $159 for 50 - team and client management, roles, post approval workflow, full X analytics, custom report templates, Looker Studio connector, API via Zapier/Make. Custom: white label, dedicated manager, custom AI credits. X/Twitter access is a paid add-on at an unpublished price. Prices exclude VAT.\n\n## Where the money angle sits\n\nThe brand math is the pitch: 10 client brands on Starter costs $36/mo - less than one retainer hour. Freelancers pitch competitor-analysis reports (100 profiles tracked) as the reason their retainer beats a scheduler-only rival. Advanced's approval workflow and Looker Studio connector let a two-person shop run 25 brands without drowning in month-end spreadsheets; white label on Custom turns the whole dashboard into your agency's product. Ad reporting in the same view means the Facebook Ads line item gets reported beside organic reach - clients see one report and you look twice as organized. Creators pair it with [vidIQ](/tools/vidiq/) on YouTube and [Predis AI](/tools/predis-ai/) for content generation. Context: our [social listening comparison](/articles/best-ai-social-listening-tools-2026-brand24-vs-mention-vs-youscan-vs-brandwatch/) shows where listening specialists still beat built-in monitoring.\n\n## The honest drawbacks\n\nX/Twitter behind an add-on with an unpublished price is the kind of thing that surprises you at checkout. The Fair Use Policy caps what 'unlimited' means - bulk-publishing hundreds of posts per brand should read it first. Approval workflows are serviceable but thinner than Sprout-class platforms; teams above roughly 10 people will feel the ceiling. And the interface crams calendar, analytics, ads and competitor data into one dense app - new social managers need a week before it feels fast. Instagram grid previews and some network-specific features trail the native tools.\n\n## Bottom line\n\nMetricool is the practical pick for client-based social work: the free plan covers one brand forever, and $36/mo covers ten. Test the free tier with your own brand for a month, then move to Starter before any client signs. Current plans sit on the [Metricool pricing page](https://metricool.com/pricing/).",
+    "published": true
   }
 ]
